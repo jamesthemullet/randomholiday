@@ -1,7 +1,8 @@
 # RandomHoliday — Build Plan
 
-## Current Phase: Phase 2 — Design System & Core Components
-## Last Completed: Phase 1 — Project Scaffold ✅
+## Current Phase: Phase 3 — Holiday Recommendation Engine
+
+## Last Completed: Phase 2 — Design System & Core Components ✅
 
 ---
 
@@ -24,22 +25,23 @@
 
 ---
 
-## Phase 2: Design System & Core Components 🚧 IN PROGRESS
+## Phase 2: Design System & Core Components ✅ COMPLETE
 
 Sub-steps:
-- [ ] Design tokens verified in tokens.css (colours, spacing, typography, breakpoints) ← NEXT
-- [ ] Button component (Button.tsx + Button.module.css) — variants: primary, secondary, ghost, danger; sizes: sm, md, lg; accessible
-- [ ] Card component (Card.tsx + Card.module.css) — with hover animation
-- [ ] Input component (Input.tsx + Input.module.css) — text, with label + error state
-- [ ] Slider component (Slider.tsx + Slider.module.css) — accessible range input
-- [ ] Select component (Select.tsx + Select.module.css) — accessible dropdown
-- [ ] Badge component (Badge.tsx + Badge.module.css) — colour variants
-- [ ] Modal component (Modal.tsx + Modal.module.css) — focus trap, ESC close, ARIA
-- [ ] Loading spinner (Spinner.tsx + Spinner.module.css) — CSS animation, palm tree SVG
-- [ ] Destination card with flip animation (DestinationCard.tsx + .module.css)
-- [ ] Layout shell: Header, Main, Footer (each with own .module.css)
-- [ ] Dark mode toggle component
-- [ ] Unit tests for all components (100% coverage)
+
+- [x] Design tokens verified in tokens.css (colours, spacing, typography, breakpoints)
+- [x] Button component (Button.tsx + Button.module.css) — variants: primary, secondary, ghost, danger; sizes: sm, md, lg; accessible
+- [x] Card component (Card.tsx + Card.module.css) — with hover animation
+- [x] Input component (Input.tsx + Input.module.css) — text, with label + error state
+- [x] Slider component (Slider.tsx + Slider.module.css) — accessible range input
+- [x] Select component (Select.tsx + Select.module.css) — accessible dropdown
+- [x] Badge component (Badge.tsx + Badge.module.css) — colour variants
+- [x] Modal component (Modal.tsx + Modal.module.css) — focus trap, ESC close, ARIA
+- [x] Loading spinner (Spinner.tsx + Spinner.module.css) — CSS animation, globe SVG
+- [x] Destination card with flip animation (DestinationCard.tsx + .module.css)
+- [x] Layout shell: Header, Main, Footer (each with own .module.css)
+- [x] Dark mode toggle component
+- [x] Unit tests for all components (100% coverage — 135 tests, 100% lines/branches/functions/statements)
 
 ---
 

@@ -1,0 +1,121 @@
+.scene {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.scene:focus-visible {
+  outline: 3px solid var(--color-border-focus);
+  outline-offset: 4px;
+  border-radius: var(--radius-xl);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius-xl);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  backface-visibility: hidden;
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-turquoise-dark) 100%);
+  color: var(--color-white);
+}
+
+.image {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.frontContent {
+  padding: var(--space-4);
+}
+
+.backContent {
+  padding: var(--space-5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  overflow-y: auto;
+}
+
+.name {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: inherit;
+  margin: 0;
+}
+
+.country {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.climate {
+  font-size: var(--text-sm);
+  opacity: 0.85;
+  margin: 0;
+}
+
+.description {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  opacity: 0.9;
+  margin: 0;
+}
+
+.activities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.activities li {
+  padding: var(--space-1) var(--space-2);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+}
+
+.selectBtn {
+  margin-top: auto;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-yellow);
+  color: var(--color-grey-900);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.selectBtn:hover {
+  background-color: var(--color-yellow-dark);
+}
