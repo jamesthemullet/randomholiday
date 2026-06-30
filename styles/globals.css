@@ -90,6 +90,11 @@ select {
   top: var(--space-4);
 }
 
+/* Prevent body scroll when modal is open */
+body[data-modal-open] {
+  overflow: hidden;
+}
+
 /* Visually hidden (accessible) */
 .sr-only {
   position: absolute;
