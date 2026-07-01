@@ -48,7 +48,7 @@ Sub-steps:
 ## Phase 3: Holiday Recommendation Engine (pure logic, /lib)
 
 - [x] Destination database JSON (55 destinations across 6 continents, full TypeScript types)
-- [ ] Distance calculator (great-circle / haversine formula)
+- [x] Distance calculator (great-circle / haversine formula)
 - [ ] Budget calculator (flight estimate + hotel + spending money)
 - [ ] Filter engine (hard filters: budget, distance)
 - [ ] Scoring algorithm (weights: style match, season match, budget, distance)
