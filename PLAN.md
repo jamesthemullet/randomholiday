@@ -51,7 +51,8 @@ Sub-steps:
 - [x] Distance calculator (great-circle / haversine formula)
 - [x] Budget calculator (flight tiers + hotel + daily spending, 36 tests, 100% coverage)
 - [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
-- [ ] Scoring algorithm (weights: style match, season match, budget, distance)
+- [x] Scoring algorithm (weights: style match, season match, budget, distance) — 35 tests, 100% coverage
+- [ ] Recommendation engine (combines filter + scoring + randomisation) + tests
 - [ ] 100% unit test coverage for all /lib
 
 ---
