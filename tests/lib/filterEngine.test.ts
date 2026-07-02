@@ -10,17 +10,16 @@ const LONDON: { lat: number; lng: number } = { lat: 51.5074, lng: -0.1278 }
 
 function makeDestination(overrides: Partial<Destination> & { id: string }): Destination {
   return {
-    id: overrides.id,
-    name: overrides.name ?? overrides.id,
+    name: overrides.id,
     country: 'Testland',
     countryCode: 'TL',
-    coordinates: overrides.coordinates ?? { lat: 0, lng: 0 },
-    continent: overrides.continent ?? 'Europe',
+    coordinates: { lat: 0, lng: 0 },
+    continent: 'Europe',
     description: 'A test destination.',
     climate: 'temperate',
-    travelStyles: overrides.travelStyles ?? ['city'],
+    travelStyles: ['city'],
     bestMonths: [6, 7, 8],
-    estimatedCosts: overrides.estimatedCosts ?? {
+    estimatedCosts: {
       flightFromEurope: 100,
       hotelPerNight: 80,
       dailySpending: 50,
@@ -106,27 +105,27 @@ describe('filterDestinations', () => {
   // ── validation ──────────────────────────────────────────────────────────────
 
   it('throws when maxDistanceKm is negative', () => {
-    expect(() =>
-      filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: -1 })
-    ).toThrow('maxDistanceKm must be non-negative')
+    expect(() => filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: -1 })).toThrow(
+      'maxDistanceKm must be non-negative'
+    )
   })
 
   it('throws when maxBudgetPerPerson is negative', () => {
-    expect(() =>
-      filterDestinations(ALL, { ...DEFAULT_PARAMS, maxBudgetPerPerson: -1 })
-    ).toThrow('maxBudgetPerPerson must be non-negative')
+    expect(() => filterDestinations(ALL, { ...DEFAULT_PARAMS, maxBudgetPerPerson: -1 })).toThrow(
+      'maxBudgetPerPerson must be non-negative'
+    )
   })
 
   it('throws when nights is negative', () => {
-    expect(() =>
-      filterDestinations(ALL, { ...DEFAULT_PARAMS, nights: -1 })
-    ).toThrow('nights must be non-negative')
+    expect(() => filterDestinations(ALL, { ...DEFAULT_PARAMS, nights: -1 })).toThrow(
+      'nights must be non-negative'
+    )
   })
 
   it('throws when groupSize is less than 1', () => {
-    expect(() =>
-      filterDestinations(ALL, { ...DEFAULT_PARAMS, groupSize: 0 })
-    ).toThrow('groupSize must be at least 1')
+    expect(() => filterDestinations(ALL, { ...DEFAULT_PARAMS, groupSize: 0 })).toThrow(
+      'groupSize must be at least 1'
+    )
   })
 
   // ── empty input ─────────────────────────────────────────────────────────────
