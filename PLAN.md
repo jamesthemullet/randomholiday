@@ -50,7 +50,7 @@ Sub-steps:
 - [x] Destination database JSON (55 destinations across 6 continents, full TypeScript types)
 - [x] Distance calculator (great-circle / haversine formula)
 - [x] Budget calculator (flight tiers + hotel + daily spending, 36 tests, 100% coverage)
-- [ ] Filter engine (hard filters: budget, distance)
+- [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
 - [ ] Scoring algorithm (weights: style match, season match, budget, distance)
 - [ ] 100% unit test coverage for all /lib
 
