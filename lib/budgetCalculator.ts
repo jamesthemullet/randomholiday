@@ -1,52 +1,94 @@
-import type { EstimatedCosts } from './destinations'
+import type { Destination } from './destinations'
 
-export interface TripParams {
+export type FlightTier = 'short-haul' | 'medium-haul' | 'long-haul' | 'ultra-long-haul'
+
+export interface BudgetParams {
+  destination: Destination
+  /** Great-circle distance from origin to destination in kilometres */
+  distanceKm: number
   /** Number of nights at the destination */
   nights: number
-  /** Number of people travelling together */
-  travelers: number
+  /** Total number of travellers */
+  groupSize: number
 }
 
 export interface BudgetBreakdown {
-  /** Round-trip flight cost for the whole group */
-  flightCost: number
-  /** Total accommodation cost for the whole group */
-  hotelCost: number
-  /** Total daily spending money for the whole group */
-  spendingCost: number
-  /** flightCost + hotelCost + spendingCost */
+  flightTier: FlightTier
+  /** Round-trip flight cost per person in USD */
+  flightCostPerPerson: number
+  /** Hotel cost per night in USD (whole group shares one booking) */
+  hotelCostPerNight: number
+  /** Daily spending per person in USD (food, transport, activities) */
+  dailySpendingPerPerson: number
+  nights: number
+  groupSize: number
+  /** flightCostPerPerson × groupSize */
+  totalFlightCost: number
+  /** hotelCostPerNight × nights */
+  totalHotelCost: number
+  /** dailySpendingPerPerson × groupSize × nights */
+  totalDailySpending: number
+  /** Sum of all costs */
   totalCost: number
-  /** totalCost divided evenly across travelers */
-  costPerPerson: number
+  /** totalCost / groupSize */
+  perPersonCost: number
 }
 
-/** Hotel rooms are priced for double occupancy, so two travelers share one room */
-const TRAVELERS_PER_ROOM = 2
+// Distance thresholds (km) defining each flight tier
+const TIER_THRESHOLDS = {
+  SHORT: 1500,
+  MEDIUM: 4000,
+  LONG: 8000,
+} as const
 
-/**
- * Estimates the full cost of a trip to a destination for a group of
- * travelers, broken down by flights, hotel, and daily spending money.
- */
-export function calculateBudget(costs: EstimatedCosts, trip: TripParams): BudgetBreakdown {
-  const rooms = Math.ceil(trip.travelers / TRAVELERS_PER_ROOM)
-
-  const flightCost = costs.flightFromEurope * trip.travelers
-  const hotelCost = costs.hotelPerNight * trip.nights * rooms
-  const spendingCost = costs.dailySpending * trip.nights * trip.travelers
-  const totalCost = flightCost + hotelCost + spendingCost
-  const costPerPerson = totalCost / trip.travelers
-
-  return { flightCost, hotelCost, spendingCost, totalCost, costPerPerson }
+// Round-trip flight cost per person in USD for each tier
+const FLIGHT_COSTS: Record<FlightTier, number> = {
+  'short-haul': 120,
+  'medium-haul': 350,
+  'long-haul': 700,
+  'ultra-long-haul': 1100,
 }
 
-/**
- * Returns true if the estimated per-person cost of the trip is at or below
- * the given budget.
- */
-export function isWithinBudget(
-  costs: EstimatedCosts,
-  trip: TripParams,
-  maxBudgetPerPerson: number
-): boolean {
-  return calculateBudget(costs, trip).costPerPerson <= maxBudgetPerPerson
+export function getFlightTier(distanceKm: number): FlightTier {
+  if (distanceKm <= TIER_THRESHOLDS.SHORT) return 'short-haul'
+  if (distanceKm <= TIER_THRESHOLDS.MEDIUM) return 'medium-haul'
+  if (distanceKm <= TIER_THRESHOLDS.LONG) return 'long-haul'
+  return 'ultra-long-haul'
+}
+
+export function estimateFlightCostPerPerson(distanceKm: number): number {
+  return FLIGHT_COSTS[getFlightTier(distanceKm)]
+}
+
+export function calculateBudget(params: BudgetParams): BudgetBreakdown {
+  const { destination, distanceKm, nights, groupSize } = params
+
+  if (distanceKm < 0) throw new Error('distanceKm must be non-negative')
+  if (nights < 0) throw new Error('nights must be non-negative')
+  if (groupSize < 1) throw new Error('groupSize must be at least 1')
+
+  const flightTier = getFlightTier(distanceKm)
+  const flightCostPerPerson = FLIGHT_COSTS[flightTier]
+  const hotelCostPerNight = destination.estimatedCosts.hotelPerNight
+  const dailySpendingPerPerson = destination.estimatedCosts.dailySpending
+
+  const totalFlightCost = flightCostPerPerson * groupSize
+  const totalHotelCost = hotelCostPerNight * nights
+  const totalDailySpending = dailySpendingPerPerson * groupSize * nights
+  const totalCost = totalFlightCost + totalHotelCost + totalDailySpending
+  const perPersonCost = totalCost / groupSize
+
+  return {
+    flightTier,
+    flightCostPerPerson,
+    hotelCostPerNight,
+    dailySpendingPerPerson,
+    nights,
+    groupSize,
+    totalFlightCost,
+    totalHotelCost,
+    totalDailySpending,
+    totalCost,
+    perPersonCost,
+  }
 }
