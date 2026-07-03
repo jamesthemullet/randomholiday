@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.2 — Wizard step 1 — departure city autocomplete input ✅
+## Last Completed: Task 4.3 — Wizard step 2 — budget slider ✅
 
-## Next: Task 4.3 — Wizard step 2 — budget slider
+## Next: Task 4.4 — Wizard step 3 — travel dates picker
 
 ---
 
@@ -63,7 +63,8 @@ Sub-steps:
 
 - [x] Landing page: hero with animated globe SVG, tagline, gradient background
 - [x] Multi-step wizard form — step 1: departure city autocomplete input
-- [ ] Multi-step wizard form — remaining steps: budget > dates > travel style > distance > group size
+- [x] Multi-step wizard form — step 2: budget slider
+- [ ] Multi-step wizard form — remaining steps: dates > travel style > distance > group size
 - [ ] Results page: animated reveal of top 3 destinations, Shuffle button
 - [ ] Destination detail modal: photos, weather, cost breakdown, activities, affiliate links
 - [ ] Save trip (Pro feature, upsell prompt)

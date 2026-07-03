@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${inter.variable}`}>
+      <body className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
         <a href="#main-content" className="skip-to-main">
           Skip to main content
         </a>
