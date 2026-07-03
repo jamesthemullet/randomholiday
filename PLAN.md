@@ -1,8 +1,10 @@
 # RandomHoliday — Build Plan
 
-## Current Phase: Phase 3 — Holiday Recommendation Engine
+## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Phase 2 — Design System & Core Components ✅
+## Last Completed: Phase 3 — Holiday Recommendation Engine ✅
+
+## Next: Task 4.1 — Landing page hero (animated SVG globe, tagline, CTA)
 
 ---
 
@@ -45,15 +47,15 @@ Sub-steps:
 
 ---
 
-## Phase 3: Holiday Recommendation Engine (pure logic, /lib)
+## Phase 3: Holiday Recommendation Engine ✅ COMPLETE (pure logic, /lib)
 
 - [x] Destination database JSON (55 destinations across 6 continents, full TypeScript types)
 - [x] Distance calculator (great-circle / haversine formula)
 - [x] Budget calculator (flight tiers + hotel + daily spending, 36 tests, 100% coverage)
 - [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
 - [x] Scoring algorithm (weights: style match, season match, budget, distance) — 35 tests, 100% coverage
-- [ ] Recommendation engine (combines filter + scoring + randomisation) + tests
-- [ ] 100% unit test coverage for all /lib
+- [x] Recommendation engine (combines filter + scoring + randomisation, weighted pool sampling) — 16 tests, 100% coverage
+- [x] 100% unit test coverage for all /lib (verified via `yarn vitest run --coverage`: 100% statements/branches/functions/lines)
 
 ---
 
