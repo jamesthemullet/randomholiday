@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.4 — Wizard step 3 — travel dates picker ✅
+## Last Completed: Task 4.5 — Wizard step 4 — travel style selector ✅
 
-## Next: Task 4.5 — Wizard step 4 — travel style selector
+## Next: Task 4.6 — Wizard step 5 — max distance + group size
 
 ---
 
@@ -65,7 +65,8 @@ Sub-steps:
 - [x] Multi-step wizard form — step 1: departure city autocomplete input
 - [x] Multi-step wizard form — step 2: budget slider
 - [x] Multi-step wizard form — step 3: travel dates picker
-- [ ] Multi-step wizard form — remaining steps: travel style > distance > group size
+- [x] Multi-step wizard form — step 4: travel style selector
+- [ ] Multi-step wizard form — step 5: max distance + group size
 - [ ] Results page: animated reveal of top 3 destinations, Shuffle button
 - [ ] Destination detail modal: photos, weather, cost breakdown, activities, affiliate links
 - [ ] Save trip (Pro feature, upsell prompt)
