@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.6 — Wizard step 5 — max distance + group size ✅
+## Last Completed: Task 4.7 — Results page — animated reveal of top 3 destinations + Shuffle button ✅
 
-## Next: Task 4.7 — Results page — animated reveal of top 3 destinations + Shuffle button
+## Next: Task 4.8 — Destination detail modal — photos placeholder, cost breakdown, things to do
 
 ---
 
@@ -67,7 +67,7 @@ Sub-steps:
 - [x] Multi-step wizard form — step 3: travel dates picker
 - [x] Multi-step wizard form — step 4: travel style selector
 - [x] Multi-step wizard form — step 5: max distance + group size
-- [ ] Results page: animated reveal of top 3 destinations, Shuffle button
+- [x] Results page: animated reveal of top 3 destinations, Shuffle button
 - [ ] Destination detail modal: photos, weather, cost breakdown, activities, affiliate links
 - [ ] Save trip (Pro feature, upsell prompt)
 - [ ] Share button (social sharing)
