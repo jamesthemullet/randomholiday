@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Phase 3 — Holiday Recommendation Engine ✅
+## Last Completed: Task 4.1 — Landing page hero ✅
 
-## Next: Task 4.1 — Landing page hero (animated SVG globe, tagline, CTA)
+## Next: Task 4.2 — Wizard step 1 — departure city autocomplete input
 
 ---
 
@@ -61,7 +61,7 @@ Sub-steps:
 
 ## Phase 4: Main UI Flow
 
-- [ ] Landing page: hero with animated globe SVG, tagline, gradient background
+- [x] Landing page: hero with animated globe SVG, tagline, gradient background
 - [ ] Multi-step wizard form: departure > budget > dates > travel style > distance > group size
 - [ ] Results page: animated reveal of top 3 destinations, Shuffle button
 - [ ] Destination detail modal: photos, weather, cost breakdown, activities, affiliate links
