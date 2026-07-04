@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.7b — Wired wizard steps + results into an actual flow: /discover route (DiscoverWizard container) → /results route (reads query params, runs recommendation engine, renders ResultsReveal) ✅
+## Last Completed: Task 4.8 — Destination detail modal (DestinationDetailModal component: photo placeholder, cost breakdown, things to do), wired to the results page's "Select Destination" button ✅
 
-## Next: Task 4.8 — Destination detail modal — photos placeholder, cost breakdown, things to do
+## Next: Task 4.9 — Save trip (Pro upsell prompt) + Share button
 
 ---
 
@@ -69,7 +69,7 @@ Sub-steps:
 - [x] Multi-step wizard form — step 5: max distance + group size
 - [x] Results page: animated reveal of top 3 destinations, Shuffle button
 - [x] Wire wizard steps + results into a working flow: /discover route (step state + navigation) → /results route (query params → recommendation engine → ResultsReveal)
-- [ ] Destination detail modal: photos, weather, cost breakdown, activities, affiliate links
+- [x] Destination detail modal: photos placeholder, cost breakdown, things to do (weather and affiliate links come later, in Phases 5 and 6)
 - [ ] Save trip (Pro feature, upsell prompt)
 - [ ] Share button (social sharing)
 

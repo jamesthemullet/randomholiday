@@ -1,0 +1,151 @@
+import { describe, it, expect, vi } from 'vitest'
+import { render, screen } from '@testing-library/react'
+import { DestinationDetailModal } from '@/components/DestinationDetailModal'
+import type { Destination } from '@/lib/destinations'
+
+function makeDestination(overrides: Partial<Destination> = {}): Destination {
+  return {
+    id: 'bali-indonesia',
+    name: 'Bali',
+    country: 'Indonesia',
+    countryCode: 'ID',
+    coordinates: { lat: -8.3405, lng: 115.092 },
+    continent: 'Asia',
+    description: 'A lush island paradise.',
+    climate: 'tropical',
+    travelStyles: ['beach', 'adventure'],
+    bestMonths: [4, 5, 6],
+    estimatedCosts: { flightFromEurope: 600, hotelPerNight: 60, dailySpending: 40 },
+    activities: ['Surfing', 'Temple hopping'],
+    currency: 'IDR',
+    visa: 'on-arrival',
+    ...overrides,
+  }
+}
+
+describe('DestinationDetailModal', () => {
+  it('renders nothing when destination is null', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={null}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
+
+  it('renders nothing when isOpen is false', () => {
+    render(
+      <DestinationDetailModal
+        isOpen={false}
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
+
+  it('renders the destination name and country as the dialog title', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.getByRole('heading', { name: 'Bali, Indonesia' })).toBeInTheDocument()
+  })
+
+  it('renders the description', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.getByText('A lush island paradise.')).toBeInTheDocument()
+  })
+
+  it('renders a photo placeholder', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.getByText('Photos coming soon')).toBeInTheDocument()
+  })
+
+  it('renders a cost breakdown with flights, hotel, daily spending, and total', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    // short-haul flight: $120 * 2 travellers = $240
+    expect(screen.getByText('Flights (2 travellers)')).toBeInTheDocument()
+    expect(screen.getByText('$240')).toBeInTheDocument()
+    // hotel: $60 * 5 nights = $300
+    expect(screen.getByText('Hotel (5 nights)')).toBeInTheDocument()
+    expect(screen.getByText('$300')).toBeInTheDocument()
+    // daily spending: $40 * 2 * 5 = $400
+    expect(screen.getByText('Daily spending')).toBeInTheDocument()
+    expect(screen.getByText('$400')).toBeInTheDocument()
+    // total: 240 + 300 + 400 = $940, per person = $470
+    expect(screen.getByText('Total ($470 per person)')).toBeInTheDocument()
+    expect(screen.getByText('$940')).toBeInTheDocument()
+  })
+
+  it('singularises the traveller label for a group size of 1', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={1}
+      />
+    )
+    expect(screen.getByText('Flights (1 traveller)')).toBeInTheDocument()
+  })
+
+  it('renders things to do from destination activities', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.getByRole('heading', { name: 'Things to do' })).toBeInTheDocument()
+    expect(screen.getByText('Surfing')).toBeInTheDocument()
+    expect(screen.getByText('Temple hopping')).toBeInTheDocument()
+  })
+})
