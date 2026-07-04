@@ -6,7 +6,7 @@ import type { DestinationScore, ScoreParams } from './scoringEngine'
 
 export interface RecommendationParams
   extends FilterParams, Pick<ScoreParams, 'travelMonth' | 'weights'> {
-  /** Number of recommendations to return. Defaults to 3. */
+  /** Number of recommendations to return. Defaults to 1. */
   count?: number
   /** How many of the top-scored candidates to randomly sample from. Defaults to 10. */
   poolSize?: number
@@ -43,7 +43,7 @@ export function getRecommendations(
   params: RecommendationParams
 ): RecommendationResult {
   const {
-    count = 3,
+    count = 1,
     poolSize = 10,
     random = Math.random,
     travelMonth,

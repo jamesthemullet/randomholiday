@@ -1,0 +1,16 @@
+.wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.empty {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.link {
+  color: var(--color-accent-primary);
+  font-weight: var(--font-medium);
+}
