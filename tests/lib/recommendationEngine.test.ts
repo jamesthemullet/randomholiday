@@ -186,11 +186,11 @@ describe('getRecommendations', () => {
     expect(result.recommendations).toEqual([])
   })
 
-  it('defaults count to 3 and poolSize to 10', () => {
+  it('defaults count to 1 and poolSize to 10', () => {
     const many = [PARIS, NEW_YORK, TOKYO, SYDNEY, OVER_BUDGET]
     const result = getRecommendations(many, GENEROUS_PARAMS)
 
-    expect(result.recommendations.length).toBeLessThanOrEqual(3)
+    expect(result.recommendations.length).toBeLessThanOrEqual(1)
   })
 
   it('uses Math.random by default without throwing', () => {

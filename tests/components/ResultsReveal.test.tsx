@@ -37,47 +37,30 @@ function makeScore(overrides: Partial<DestinationScore> = {}): DestinationScore 
 }
 
 describe('ResultsReveal', () => {
-  it('renders a heading naming the number of matches', () => {
-    const recommendations = [
-      makeScore({ destination: makeDestination({ id: 'a', name: 'Bali' }) }),
-      makeScore({ destination: makeDestination({ id: 'b', name: 'Lisbon' }) }),
-      makeScore({ destination: makeDestination({ id: 'c', name: 'Kyoto' }) }),
-    ]
-    render(<ResultsReveal recommendations={recommendations} onShuffle={vi.fn()} />)
-    expect(screen.getByRole('heading', { name: 'Your Top 3 Matches' })).toBeInTheDocument()
+  it('renders a heading for the match', () => {
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(screen.getByRole('heading', { name: 'Your Match' })).toBeInTheDocument()
   })
 
-  it('uses singular heading when exactly one match', () => {
-    render(<ResultsReveal recommendations={[makeScore()]} onShuffle={vi.fn()} />)
-    expect(screen.getByRole('heading', { name: 'Your Top Match' })).toBeInTheDocument()
-  })
-
-  it('renders a DestinationCard for each recommendation', () => {
-    const recommendations = [
-      makeScore({ destination: makeDestination({ id: 'a', name: 'Bali' }) }),
-      makeScore({ destination: makeDestination({ id: 'b', name: 'Lisbon' }) }),
-    ]
-    render(<ResultsReveal recommendations={recommendations} onShuffle={vi.fn()} />)
+  it('renders a DestinationCard for the recommendation', () => {
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
     expect(screen.getAllByText('Bali').length).toBeGreaterThan(0)
-    expect(screen.getAllByText('Lisbon').length).toBeGreaterThan(0)
   })
 
-  it('renders a rounded match percentage badge per destination', () => {
-    render(
-      <ResultsReveal recommendations={[makeScore({ totalScore: 87.6 })]} onShuffle={vi.fn()} />
-    )
+  it('renders a rounded match percentage badge', () => {
+    render(<ResultsReveal recommendation={makeScore({ totalScore: 87.6 })} onShuffle={vi.fn()} />)
     expect(screen.getByText('88% match')).toBeInTheDocument()
   })
 
   it('calls onShuffle when the Shuffle button is clicked', () => {
     const onShuffle = vi.fn()
-    render(<ResultsReveal recommendations={[makeScore()]} onShuffle={onShuffle} />)
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={onShuffle} />)
     fireEvent.click(screen.getByRole('button', { name: 'Shuffle' }))
     expect(onShuffle).toHaveBeenCalledOnce()
   })
 
-  it('shows an empty state message when there are no recommendations', () => {
-    render(<ResultsReveal recommendations={[]} onShuffle={vi.fn()} />)
+  it('shows an empty state message when there is no recommendation', () => {
+    render(<ResultsReveal recommendation={null} onShuffle={vi.fn()} />)
     expect(
       screen.getByText(
         'No destinations matched your search. Try adjusting your budget or distance.'
@@ -90,7 +73,7 @@ describe('ResultsReveal', () => {
     const onSelect = vi.fn()
     render(
       <ResultsReveal
-        recommendations={[makeScore({ destination: makeDestination({ id: 'kyoto-japan' }) })]}
+        recommendation={makeScore({ destination: makeDestination({ id: 'kyoto-japan' }) })}
         onShuffle={vi.fn()}
         onSelect={onSelect}
       />
@@ -101,7 +84,7 @@ describe('ResultsReveal', () => {
   })
 
   it('does not render a select button when onSelect is not provided', () => {
-    render(<ResultsReveal recommendations={[makeScore()]} onShuffle={vi.fn()} />)
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
     fireEvent.click(screen.getByRole('button', { name: /bali/i }))
     expect(screen.queryByRole('button', { name: 'Select Destination' })).not.toBeInTheDocument()
   })
@@ -114,8 +97,8 @@ describe('ResultsReveal', () => {
     })
 
     const { ResultsReveal: ReducedMotionResultsReveal } = await import('@/components/ResultsReveal')
-    render(<ReducedMotionResultsReveal recommendations={[makeScore()]} onShuffle={vi.fn()} />)
-    expect(screen.getByRole('heading', { name: 'Your Top Match' })).toBeInTheDocument()
+    render(<ReducedMotionResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(screen.getByRole('heading', { name: 'Your Match' })).toBeInTheDocument()
 
     vi.doUnmock('framer-motion')
     vi.resetModules()

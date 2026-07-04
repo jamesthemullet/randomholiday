@@ -38,13 +38,15 @@ export function ResultsClient() {
     }
   }, [searchParams])
 
-  const [recommendations, setRecommendations] = useState<DestinationScore[]>(() =>
-    filterParams ? getRecommendations(destinations, filterParams).recommendations : []
+  const [recommendation, setRecommendation] = useState<DestinationScore | null>(() =>
+    filterParams
+      ? (getRecommendations(destinations, filterParams).recommendations[0] ?? null)
+      : null
   )
 
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
-    setRecommendations(getRecommendations(destinations, filterParams).recommendations)
+    setRecommendation(getRecommendations(destinations, filterParams).recommendations[0] ?? null)
   }, [filterParams])
 
   if (!filterParams) {
@@ -60,7 +62,7 @@ export function ResultsClient() {
 
   return (
     <main id="main-content" className={styles.wrapper}>
-      <ResultsReveal recommendations={recommendations} onShuffle={handleShuffle} />
+      <ResultsReveal recommendation={recommendation} onShuffle={handleShuffle} />
     </main>
   )
 }
