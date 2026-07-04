@@ -8,7 +8,9 @@ import type { TravelStyle } from '@/lib/destinations'
 import { departureCities } from '@/lib/departureCities'
 import { getRecommendations } from '@/lib/recommendationEngine'
 import type { DestinationScore } from '@/lib/scoringEngine'
+import { calculateDistance } from '@/lib/distanceCalculator'
 import { ResultsReveal } from '@/components/ResultsReveal'
+import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
 
 export function ResultsClient() {
@@ -43,11 +45,24 @@ export function ResultsClient() {
       ? (getRecommendations(destinations, filterParams).recommendations[0] ?? null)
       : null
   )
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
 
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
     setRecommendation(getRecommendations(destinations, filterParams).recommendations[0] ?? null)
   }, [filterParams])
+
+  const handleSelect = useCallback(() => {
+    setIsDetailModalOpen(true)
+  }, [])
+
+  const distanceKm = useMemo(
+    () =>
+      filterParams && recommendation
+        ? calculateDistance(filterParams.origin, recommendation.destination.coordinates)
+        : 0,
+    [filterParams, recommendation]
+  )
 
   if (!filterParams) {
     return (
@@ -62,7 +77,19 @@ export function ResultsClient() {
 
   return (
     <main id="main-content" className={styles.wrapper}>
-      <ResultsReveal recommendation={recommendation} onShuffle={handleShuffle} />
+      <ResultsReveal
+        recommendation={recommendation}
+        onShuffle={handleShuffle}
+        onSelect={handleSelect}
+      />
+      <DestinationDetailModal
+        isOpen={isDetailModalOpen}
+        onClose={() => setIsDetailModalOpen(false)}
+        destination={recommendation?.destination ?? null}
+        distanceKm={distanceKm}
+        nights={filterParams.nights}
+        groupSize={filterParams.groupSize}
+      />
     </main>
   )
 }

@@ -1,0 +1,105 @@
+.photoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 160px;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+  color: var(--color-text-inverse);
+  background: linear-gradient(
+    135deg,
+    var(--color-turquoise) 0%,
+    var(--color-ocean) 60%,
+    var(--color-coral) 100%
+  );
+}
+
+.photoPlaceholderText {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.description {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-6);
+}
+
+.section {
+  margin-bottom: var(--space-6);
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.costList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.costRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.costRow dt {
+  font-size: var(--text-sm);
+}
+
+.costRow dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.totalRow {
+  border-bottom: none;
+  padding-top: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.totalRow dt {
+  font-weight: var(--font-semibold);
+}
+
+.totalRow dd {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-accent-primary);
+}
+
+.activities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.activities li {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+}
