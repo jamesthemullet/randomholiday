@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.8 — Destination detail modal (DestinationDetailModal component: photo placeholder, cost breakdown, things to do), wired to the results page's "Select Destination" button ✅
+## Last Completed: Task 4.9 — Save trip (Pro upsell prompt) + Share button (TripActions component), wired into the destination detail modal ✅
 
-## Next: Task 4.9 — Save trip (Pro upsell prompt) + Share button
+## Next: Phase 5 — API Integration, starting with Task 5.1: Amadeus API route handler
 
 ---
 
@@ -70,8 +70,7 @@ Sub-steps:
 - [x] Results page: animated reveal of top 3 destinations, Shuffle button
 - [x] Wire wizard steps + results into a working flow: /discover route (step state + navigation) → /results route (query params → recommendation engine → ResultsReveal)
 - [x] Destination detail modal: photos placeholder, cost breakdown, things to do (weather and affiliate links come later, in Phases 5 and 6)
-- [ ] Save trip (Pro feature, upsell prompt)
-- [ ] Share button (social sharing)
+- [x] Save trip (Pro feature, upsell prompt) + Share button (native share sheet with clipboard fallback), via TripActions component in the destination detail modal
 
 ---
 

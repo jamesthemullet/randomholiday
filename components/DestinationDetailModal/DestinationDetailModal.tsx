@@ -4,6 +4,7 @@ import React from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { Modal } from '@/components/Modal'
+import { TripActions } from '@/components/TripActions'
 import styles from './DestinationDetailModal.module.css'
 
 export interface DestinationDetailModalProps {
@@ -89,6 +90,8 @@ export function DestinationDetailModal({
           ))}
         </ul>
       </section>
+
+      <TripActions destinationName={`${destination.name}, ${destination.country}`} />
     </Modal>
   )
 }
