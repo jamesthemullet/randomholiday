@@ -45,6 +45,18 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
           <div className={styles.frontContent}>
             <h3 className={styles.name}>{name}</h3>
             <p className={styles.country}>{country}</p>
+            {onSelect && (
+              <button
+                type="button"
+                className={styles.selectBtn}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onSelect()
+                }}
+              >
+                Select Destination
+              </button>
+            )}
           </div>
         </div>
 
