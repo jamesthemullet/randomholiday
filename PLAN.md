@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.9 — Save trip (Pro upsell prompt) + Share button (TripActions component), wired into the destination detail modal ✅
+## Last Completed: Task 5.1 — Amadeus API route handler (/api/amadeus/flight-price) with static fallback ✅
 
-## Next: Phase 5 — API Integration, starting with Task 5.1: Amadeus API route handler
+## Next: Task 5.2 — Unsplash API route handler (destination photos) + static fallback
 
 ---
 
@@ -76,7 +76,7 @@ Sub-steps:
 
 ## Phase 5: API Integration
 
-- [ ] Amadeus API route handler (flight prices + destination inspiration)
+- [x] Amadeus API route handler (flight prices) — `/api/amadeus/flight-price`, live Amadeus Flight Offers Search with a static estimate fallback (via `estimateFlightCostPerPerson`) when credentials are missing or the request fails
 - [ ] Unsplash API route handler (destination photos)
 - [ ] OpenWeatherMap API route handler (seasonal weather)
 - [ ] Graceful fallbacks when APIs unavailable
