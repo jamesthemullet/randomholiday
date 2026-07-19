@@ -40,12 +40,12 @@ function makeDestination(overrides: Partial<Destination> & { id: string }): Dest
 }
 
 /**
- * Paris (~341 km from London). Short-haul flight cost: $120.
+ * Paris (~341 km from London). flightFromEurope: $100.
  * Budget for 7 nights, 2 people:
- *   flights: 120 × 2 = 240
+ *   flights: 100 × 2 = 200
  *   hotel:   80 × 7  = 560
  *   daily:   50 × 2 × 7 = 700
- *   total:   1500   → perPerson: 750
+ *   total:   1460   → perPerson: 730
  */
 const PARIS = makeDestination({
   id: 'paris',
@@ -57,12 +57,12 @@ const PARIS = makeDestination({
 })
 
 /**
- * Tokyo (~9 560 km from London). Ultra-long-haul flight cost: $1 100.
+ * Tokyo (~9 560 km from London). flightFromEurope: $800.
  * Budget for 7 nights, 2 people:
- *   flights: 1100 × 2  = 2 200
+ *   flights: 800 × 2   = 1 600
  *   hotel:   200 × 7   = 1 400
  *   daily:   120 × 2 × 7 = 1 680
- *   total:   5 280  → perPerson: 2 640
+ *   total:   4 680  → perPerson: 2 340
  */
 const TOKYO = makeDestination({
   id: 'tokyo',
@@ -143,8 +143,8 @@ describe('calculateBudgetScore', () => {
   })
 
   it('returns close to 1 when cost is far under budget', () => {
-    // Paris perPerson cost ~750; budget of 7500 leaves 90% headroom
-    expect(calculateBudgetScore(PARIS, 341, 7500, 7, 2)).toBeCloseTo(0.9, 1)
+    // Paris perPerson cost ~730; budget of 7300 leaves 90% headroom
+    expect(calculateBudgetScore(PARIS, 341, 7300, 7, 2)).toBeCloseTo(0.9, 1)
   })
 
   it('returns 0 when cost exceeds the budget', () => {
@@ -152,7 +152,7 @@ describe('calculateBudgetScore', () => {
   })
 
   it('returns 0 when cost exactly equals the budget', () => {
-    expect(calculateBudgetScore(PARIS, 341, 750, 7, 2)).toBe(0)
+    expect(calculateBudgetScore(PARIS, 341, 730, 7, 2)).toBe(0)
   })
 })
 
@@ -222,7 +222,7 @@ describe('scoreDestination', () => {
   it('returns a totalScore of 100 for a perfect match', () => {
     const result = scoreDestination(PARIS, {
       ...DEFAULT_PARAMS,
-      maxBudgetPerPerson: 750,
+      maxBudgetPerPerson: 730,
       maxDistanceKm: 341,
       travelStyles: ['city'],
       travelMonth: 5,

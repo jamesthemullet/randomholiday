@@ -32,12 +32,12 @@ function makeDestination(overrides: Partial<Destination> & { id: string }): Dest
 }
 
 /**
- * Paris (~341 km from London). Short-haul flight cost: $120.
+ * Paris (~341 km from London). flightFromEurope: $100.
  * Budget for 7 nights, 2 people:
- *   flights: 120 × 2 = 240
+ *   flights: 100 × 2 = 200
  *   hotel:   80 × 7  = 560
  *   daily:   50 × 2 × 7 = 700
- *   total:   1500   → perPerson: 750
+ *   total:   1460   → perPerson: 730
  */
 const PARIS = makeDestination({
   id: 'paris',
@@ -48,12 +48,12 @@ const PARIS = makeDestination({
 })
 
 /**
- * New York (~5 570 km from London). Long-haul flight cost: $700.
+ * New York (~5 570 km from London). flightFromEurope: $600.
  * Budget for 7 nights, 2 people:
- *   flights: 700 × 2  = 1 400
+ *   flights: 600 × 2  = 1 200
  *   hotel:   150 × 7  = 1 050
  *   daily:   100 × 2 × 7 = 1 400
- *   total:   3 850  → perPerson: 1 925
+ *   total:   3 650  → perPerson: 1 825
  */
 const NEW_YORK = makeDestination({
   id: 'new-york',
@@ -64,12 +64,12 @@ const NEW_YORK = makeDestination({
 })
 
 /**
- * Tokyo (~9 560 km from London). Ultra-long-haul flight cost: $1 100.
+ * Tokyo (~9 560 km from London). flightFromEurope: $800.
  * Budget for 7 nights, 2 people:
- *   flights: 1100 × 2  = 2 200
+ *   flights: 800 × 2   = 1 600
  *   hotel:   200 × 7   = 1 400
  *   daily:   120 × 2 × 7 = 1 680
- *   total:   5 280  → perPerson: 2 640
+ *   total:   4 680  → perPerson: 2 340
  */
 const TOKYO = makeDestination({
   id: 'tokyo',
@@ -79,7 +79,7 @@ const TOKYO = makeDestination({
   estimatedCosts: { flightFromEurope: 800, hotelPerNight: 200, dailySpending: 120 },
 })
 
-/** A beach-only destination close to London (Malaga, ~2 000 km, medium-haul) */
+/** A beach-only destination close to London (Malaga, ~2 000 km). perPerson (7n/2pax): 885 */
 const MALAGA = makeDestination({
   id: 'malaga',
   name: 'Malaga',
@@ -166,8 +166,8 @@ describe('filterDestinations', () => {
   // ── budget filter ───────────────────────────────────────────────────────────
 
   it('removes destinations that exceed maxBudgetPerPerson', () => {
-    // Paris per-person for 7n/2pax: (120×2 + 80×7 + 50×2×7) / 2 = 750
-    // New York:                      (700×2 + 150×7 + 100×2×7) / 2 = 1 925
+    // Paris per-person for 7n/2pax: (100×2 + 80×7 + 50×2×7) / 2 = 730
+    // New York:                      (600×2 + 150×7 + 100×2×7) / 2 = 1 825
     // Set budget to 800 to pass Paris but fail New York (and Tokyo)
     const result = filterDestinations([PARIS, NEW_YORK], {
       ...DEFAULT_PARAMS,
@@ -178,20 +178,20 @@ describe('filterDestinations', () => {
   })
 
   it('keeps destinations exactly at the budget limit', () => {
-    // Paris per-person: 750 — set budget to exactly 750
+    // Paris per-person: 730 — set budget to exactly 730
     const result = filterDestinations([PARIS], {
       ...DEFAULT_PARAMS,
-      maxBudgetPerPerson: 750,
+      maxBudgetPerPerson: 730,
     })
     expect(result.passed.map((d) => d.id)).toEqual(['paris'])
     expect(result.removedByBudget).toHaveLength(0)
   })
 
   it('removes destinations one cent above the budget limit', () => {
-    // Paris per-person: 750 — set budget to 749
+    // Paris per-person: 730 — set budget to 729
     const result = filterDestinations([PARIS], {
       ...DEFAULT_PARAMS,
-      maxBudgetPerPerson: 749,
+      maxBudgetPerPerson: 729,
     })
     expect(result.passed).toHaveLength(0)
     expect(result.removedByBudget.map((d) => d.id)).toEqual(['paris'])
@@ -275,7 +275,7 @@ describe('filterDestinations', () => {
 
   it('applies all three filters in sequence', () => {
     // Distance: Tokyo (~9 560 km) passes maxDistanceKm 10 000; New York (~5 570 km) passes.
-    // Budget (7n/2pax): Paris ~750, Malaga ~1085, New York ~1925, Tokyo ~2640.
+    // Budget (7n/2pax): Paris ~730, Malaga ~885, New York ~1825, Tokyo ~2340.
     //   → maxBudgetPerPerson 1200 removes New York and Tokyo; Paris and Malaga pass.
     // Style ['city']: Paris (city+culture) passes; Malaga (beach only) → removedByStyle.
     const result = filterDestinations(ALL, {
@@ -302,25 +302,25 @@ describe('filterDestinations', () => {
   // ── groupSize and nights affect budget ──────────────────────────────────────
 
   it('reflects higher group size in per-person cost calculation', () => {
-    // With 1 person Paris cost = (120×1 + 80×7 + 50×1×7) / 1 = 120+560+350 = 1030
-    // With 2 people = (120×2 + 80×7 + 50×2×7) / 2 = (240+560+700)/2 = 750
+    // With 1 person Paris cost = (100×1 + 80×7 + 50×1×7) / 1 = 100+560+350 = 1010
+    // With 2 people = (100×2 + 80×7 + 50×2×7) / 2 = (200+560+700)/2 = 730
     const solo = filterDestinations([PARIS], {
       ...DEFAULT_PARAMS,
       groupSize: 1,
-      maxBudgetPerPerson: 1100, // 1030 per-person for 1 pax, so 1100 passes
+      maxBudgetPerPerson: 1100, // 1010 per-person for 1 pax, so 1100 passes
     })
     expect(solo.passed.map((d) => d.id)).toContain('paris')
 
     const couple = filterDestinations([PARIS], {
       ...DEFAULT_PARAMS,
       groupSize: 2,
-      maxBudgetPerPerson: 700, // below the 750 per-person for 2pax
+      maxBudgetPerPerson: 700, // below the 730 per-person for 2pax
     })
     expect(couple.passed).toHaveLength(0)
   })
 
   it('reflects longer trip duration in per-person cost', () => {
-    // For 1 night Paris (1pax): 120 + 80 + 50 = 250 → well within 500
+    // For 1 night Paris (1pax): 100 + 80 + 50 = 230 → well within 500
     const shortTrip = filterDestinations([PARIS], {
       ...DEFAULT_PARAMS,
       nights: 1,
@@ -329,7 +329,7 @@ describe('filterDestinations', () => {
     })
     expect(shortTrip.passed).toHaveLength(1)
 
-    // For 20 nights (1pax): 120 + 80×20 + 50×20 = 120+1600+1000 = 2720 → exceeds 500
+    // For 20 nights (1pax): 100 + 80×20 + 50×20 = 100+1600+1000 = 2700 → exceeds 500
     const longTrip = filterDestinations([PARIS], {
       ...DEFAULT_PARAMS,
       nights: 20,

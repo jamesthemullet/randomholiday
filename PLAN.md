@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 4.9 — Save trip (Pro upsell prompt) + Share button (TripActions component), wired into the destination detail modal ✅
+## Last Completed: Task 5.1 — Flight price API route (/api/flight-price) using static estimate ✅
 
-## Next: Phase 5 — API Integration, starting with Task 5.1: Amadeus API route handler
+## Next: Task 5.2 — Unsplash API route handler (destination photos) + static fallback
 
 ---
 
@@ -76,7 +76,7 @@ Sub-steps:
 
 ## Phase 5: API Integration
 
-- [ ] Amadeus API route handler (flight prices + destination inspiration)
+- [x] Flight price API route handler — `/api/flight-price`, returns a static estimate (via `estimateFlightCostPerPerson`). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
 - [ ] Unsplash API route handler (destination photos)
 - [ ] OpenWeatherMap API route handler (seasonal weather)
 - [ ] Graceful fallbacks when APIs unavailable

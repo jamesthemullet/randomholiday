@@ -105,18 +105,18 @@ describe('DestinationDetailModal', () => {
         groupSize={2}
       />
     )
-    // short-haul flight: $120 * 2 travellers = $240
+    // flightFromEurope: $600 * 2 travellers = $1200
     expect(screen.getByText('Flights (2 travellers)')).toBeInTheDocument()
-    expect(screen.getByText('$240')).toBeInTheDocument()
+    expect(screen.getByText('$1,200')).toBeInTheDocument()
     // hotel: $60 * 5 nights = $300
     expect(screen.getByText('Hotel (5 nights)')).toBeInTheDocument()
     expect(screen.getByText('$300')).toBeInTheDocument()
     // daily spending: $40 * 2 * 5 = $400
     expect(screen.getByText('Daily spending')).toBeInTheDocument()
     expect(screen.getByText('$400')).toBeInTheDocument()
-    // total: 240 + 300 + 400 = $940, per person = $470
-    expect(screen.getByText('Total ($470 per person)')).toBeInTheDocument()
-    expect(screen.getByText('$940')).toBeInTheDocument()
+    // total: 1200 + 300 + 400 = $1,900, per person = $950
+    expect(screen.getByText('Total ($950 per person)')).toBeInTheDocument()
+    expect(screen.getByText('$1,900')).toBeInTheDocument()
   })
 
   it('singularises the traveller label for a group size of 1', () => {

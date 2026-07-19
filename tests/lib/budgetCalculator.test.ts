@@ -104,9 +104,9 @@ describe('calculateBudget', () => {
     expect(result.flightTier).toBe('short-haul')
   })
 
-  it('returns the correct flightCostPerPerson for short-haul', () => {
+  it('uses the destination flightFromEurope as flightCostPerPerson', () => {
     const result = calculateBudget(baseParams)
-    expect(result.flightCostPerPerson).toBe(120)
+    expect(result.flightCostPerPerson).toBe(300)
   })
 
   it('reflects destination hotelCostPerNight', () => {
@@ -120,9 +120,9 @@ describe('calculateBudget', () => {
   })
 
   it('calculates totalFlightCost as flightCostPerPerson × groupSize', () => {
-    // 120 × 2 = 240
+    // 300 × 2 = 600
     const result = calculateBudget(baseParams)
-    expect(result.totalFlightCost).toBe(240)
+    expect(result.totalFlightCost).toBe(600)
   })
 
   it('calculates totalHotelCost as hotelPerNight × nights', () => {
@@ -138,15 +138,15 @@ describe('calculateBudget', () => {
   })
 
   it('calculates totalCost as sum of all three cost lines', () => {
-    // 240 + 700 + 700 = 1640
+    // 600 + 700 + 700 = 2000
     const result = calculateBudget(baseParams)
-    expect(result.totalCost).toBe(1640)
+    expect(result.totalCost).toBe(2000)
   })
 
   it('calculates perPersonCost as totalCost / groupSize', () => {
-    // 1640 / 2 = 820
+    // 2000 / 2 = 1000
     const result = calculateBudget(baseParams)
-    expect(result.perPersonCost).toBe(820)
+    expect(result.perPersonCost).toBe(1000)
   })
 
   it('passes nights and groupSize through to the breakdown', () => {
@@ -157,45 +157,45 @@ describe('calculateBudget', () => {
 
   it('handles a solo traveller (groupSize 1)', () => {
     const result = calculateBudget({ ...baseParams, groupSize: 1 })
-    // flightCost 120×1=120, hotel 100×7=700, daily 50×1×7=350 → total 1170
-    expect(result.totalCost).toBe(1170)
-    expect(result.perPersonCost).toBe(1170)
+    // flightCost 300×1=300, hotel 100×7=700, daily 50×1×7=350 → total 1350
+    expect(result.totalCost).toBe(1350)
+    expect(result.perPersonCost).toBe(1350)
   })
 
   it('handles a large group (groupSize 10)', () => {
     const result = calculateBudget({ ...baseParams, groupSize: 10 })
-    // flights: 120×10=1200, hotel: 100×7=700, daily: 50×10×7=3500 → total 5400
-    expect(result.totalFlightCost).toBe(1200)
+    // flights: 300×10=3000, hotel: 100×7=700, daily: 50×10×7=3500 → total 7200
+    expect(result.totalFlightCost).toBe(3000)
     expect(result.totalHotelCost).toBe(700)
     expect(result.totalDailySpending).toBe(3500)
-    expect(result.totalCost).toBe(5400)
-    expect(result.perPersonCost).toBe(540)
+    expect(result.totalCost).toBe(7200)
+    expect(result.perPersonCost).toBe(720)
   })
 
   it('handles 0 nights (day trip)', () => {
     const result = calculateBudget({ ...baseParams, nights: 0 })
-    // hotel: 0, daily: 0, flights: 240 → total 240
+    // hotel: 0, daily: 0, flights: 600 → total 600
     expect(result.totalHotelCost).toBe(0)
     expect(result.totalDailySpending).toBe(0)
-    expect(result.totalCost).toBe(240)
+    expect(result.totalCost).toBe(600)
   })
 
-  it('uses medium-haul tier for 2500 km', () => {
+  it('labels the flight tier from distanceKm without changing the destination-based cost', () => {
     const result = calculateBudget({ ...baseParams, distanceKm: 2500 })
     expect(result.flightTier).toBe('medium-haul')
-    expect(result.flightCostPerPerson).toBe(350)
+    expect(result.flightCostPerPerson).toBe(300)
   })
 
-  it('uses long-haul tier for 6000 km', () => {
+  it('labels long-haul tier for 6000 km', () => {
     const result = calculateBudget({ ...baseParams, distanceKm: 6000 })
     expect(result.flightTier).toBe('long-haul')
-    expect(result.flightCostPerPerson).toBe(700)
+    expect(result.flightCostPerPerson).toBe(300)
   })
 
-  it('uses ultra-long-haul tier for 15000 km', () => {
+  it('labels ultra-long-haul tier for 15000 km', () => {
     const result = calculateBudget({ ...baseParams, distanceKm: 15000 })
     expect(result.flightTier).toBe('ultra-long-haul')
-    expect(result.flightCostPerPerson).toBe(1100)
+    expect(result.flightCostPerPerson).toBe(300)
   })
 
   it('reflects destination costs from an expensive destination', () => {
@@ -204,12 +204,12 @@ describe('calculateBudget', () => {
       estimatedCosts: { flightFromEurope: 1200, hotelPerNight: 400, dailySpending: 150 },
     }
     const result = calculateBudget({ ...baseParams, destination: expensive, distanceKm: 12000 })
-    // ultra-long-haul: 1100×2=2200 flights, 400×7=2800 hotel, 150×2×7=2100 daily → 7100
-    expect(result.totalFlightCost).toBe(2200)
+    // flightFromEurope: 1200×2=2400 flights, 400×7=2800 hotel, 150×2×7=2100 daily → 7300
+    expect(result.totalFlightCost).toBe(2400)
     expect(result.totalHotelCost).toBe(2800)
     expect(result.totalDailySpending).toBe(2100)
-    expect(result.totalCost).toBe(7100)
-    expect(result.perPersonCost).toBe(3550)
+    expect(result.totalCost).toBe(7300)
+    expect(result.perPersonCost).toBe(3650)
   })
 
   describe('input validation', () => {
