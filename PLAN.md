@@ -2,7 +2,7 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 5.1 — Amadeus API route handler (/api/amadeus/flight-price) with static fallback ✅
+## Last Completed: Task 5.1 — Flight price API route (/api/flight-price) using static estimate ✅
 
 ## Next: Task 5.2 — Unsplash API route handler (destination photos) + static fallback
 
@@ -76,7 +76,7 @@ Sub-steps:
 
 ## Phase 5: API Integration
 
-- [x] Amadeus API route handler (flight prices) — `/api/amadeus/flight-price`, live Amadeus Flight Offers Search with a static estimate fallback (via `estimateFlightCostPerPerson`) when credentials are missing or the request fails
+- [x] Flight price API route handler — `/api/flight-price`, returns a static estimate (via `estimateFlightCostPerPerson`). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
 - [ ] Unsplash API route handler (destination photos)
 - [ ] OpenWeatherMap API route handler (seasonal weather)
 - [ ] Graceful fallbacks when APIs unavailable

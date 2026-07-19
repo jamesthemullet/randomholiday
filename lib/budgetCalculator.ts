@@ -68,7 +68,7 @@ export function calculateBudget(params: BudgetParams): BudgetBreakdown {
   if (groupSize < 1) throw new Error('groupSize must be at least 1')
 
   const flightTier = getFlightTier(distanceKm)
-  const flightCostPerPerson = FLIGHT_COSTS[flightTier]
+  const flightCostPerPerson = destination.estimatedCosts.flightFromEurope
   const hotelCostPerNight = destination.estimatedCosts.hotelPerNight
   const dailySpendingPerPerson = destination.estimatedCosts.dailySpending
 
