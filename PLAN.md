@@ -77,8 +77,7 @@ Sub-steps:
 ## Phase 5: API Integration
 
 - [x] Flight price API route handler — `/api/flight-price`, returns a static estimate (via `estimateFlightCostPerPerson`). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
-- [x] Destination photos — self-hosted static images in `/public/destinations/<id>.jpg`, no external API/copyright risk; falls back to a placeholder when a destination has no photo yet
-- [ ] Bulk-fetch destination photos from Pexels API (free, permissive license) into `/public/destinations/` — blocked on a `PEXELS_API_KEY`, see GitHub issue
+- [x] Destination photos — self-hosted static images in `/public/destinations/<id>.jpg`, no external API/copyright risk; falls back to a placeholder when a destination has no photo yet (photos being added manually)
 - [ ] OpenWeatherMap API route handler (seasonal weather)
 - [ ] Graceful fallbacks when APIs unavailable
 - [ ] RAISE GITHUB ISSUE: "API Keys Required"
