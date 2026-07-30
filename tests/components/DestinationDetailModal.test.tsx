@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import type { Destination } from '@/lib/destinations'
 
@@ -80,7 +80,7 @@ describe('DestinationDetailModal', () => {
     expect(screen.getByText('A lush island paradise.')).toBeInTheDocument()
   })
 
-  it('renders a photo placeholder', () => {
+  it('renders the destination photo with the expected local path', () => {
     render(
       <DestinationDetailModal
         isOpen
@@ -91,7 +91,25 @@ describe('DestinationDetailModal', () => {
         groupSize={2}
       />
     )
+    const img = screen.getByRole('img')
+    expect(img).toHaveAttribute('src', '/destinations/bali-indonesia.jpg')
+    expect(img).toHaveAttribute('alt', 'Bali, Indonesia')
+  })
+
+  it('falls back to a photo placeholder when the image fails to load', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    fireEvent.error(screen.getByRole('img'))
     expect(screen.getByText('Photos coming soon')).toBeInTheDocument()
+    expect(screen.queryByRole('img')).not.toBeInTheDocument()
   })
 
   it('renders a cost breakdown with flights, hotel, daily spending, and total', () => {

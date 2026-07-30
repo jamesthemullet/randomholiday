@@ -19,6 +19,7 @@ export interface DestinationCardProps {
 
 export function DestinationCard({ destination, onSelect }: DestinationCardProps) {
   const [isFlipped, setIsFlipped] = useState(false)
+  const [imageFailed, setImageFailed] = useState(false)
   const { name, country, imageUrl, climate, description, activities } = destination
 
   const cardClasses = [styles.card]
@@ -41,7 +42,14 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
     >
       <div className={cardClasses.join(' ')}>
         <div className={styles.front} aria-hidden={isFlipped}>
-          {imageUrl && <img src={imageUrl} alt={`${name}, ${country}`} className={styles.image} />}
+          {imageUrl && !imageFailed && (
+            <img
+              src={imageUrl}
+              alt={`${name}, ${country}`}
+              className={styles.image}
+              onError={() => setImageFailed(true)}
+            />
+          )}
           <div className={styles.frontContent}>
             <h3 className={styles.name}>{name}</h3>
             <p className={styles.country}>{country}</p>
