@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import type { DestinationScore } from '@/lib/scoringEngine'
+import { getDestinationImagePath } from '@/lib/destinationImage'
 import { DestinationCard } from '@/components/DestinationCard'
 import { Badge } from '@/components/Badge'
 import { Button } from '@/components/Button'
@@ -49,7 +50,10 @@ export function ResultsReveal({ recommendation, onShuffle, onSelect }: ResultsRe
             {Math.round(recommendation.totalScore)}% match
           </Badge>
           <DestinationCard
-            destination={recommendation.destination}
+            destination={{
+              ...recommendation.destination,
+              imageUrl: getDestinationImagePath(recommendation.destination.id),
+            }}
             onSelect={onSelect ? () => onSelect(recommendation.destination.id) : undefined}
           />
         </motion.div>

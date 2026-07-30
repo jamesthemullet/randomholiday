@@ -1,8 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
+import { getDestinationImagePath } from '@/lib/destinationImage'
 import { Modal } from '@/components/Modal'
 import { TripActions } from '@/components/TripActions'
 import styles from './DestinationDetailModal.module.css'
@@ -30,27 +31,42 @@ export function DestinationDetailModal({
   nights,
   groupSize,
 }: DestinationDetailModalProps) {
+  const [imageFailed, setImageFailed] = useState(false)
+
+  useEffect(() => {
+    setImageFailed(false)
+  }, [destination?.id])
+
   if (!destination) return null
 
   const budget = calculateBudget({ destination, distanceKm, nights, groupSize })
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={`${destination.name}, ${destination.country}`}>
-      <div className={styles.photoPlaceholder} aria-hidden="true">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        >
-          <rect x="3" y="5" width="18" height="14" rx="2" />
-          <circle cx="8.5" cy="10" r="1.5" />
-          <path d="M21 15l-5-5-9 9" />
-        </svg>
-        <span className={styles.photoPlaceholderText}>Photos coming soon</span>
-      </div>
+      {imageFailed ? (
+        <div className={styles.photoPlaceholder} aria-hidden="true">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          >
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <circle cx="8.5" cy="10" r="1.5" />
+            <path d="M21 15l-5-5-9 9" />
+          </svg>
+          <span className={styles.photoPlaceholderText}>Photos coming soon</span>
+        </div>
+      ) : (
+        <img
+          src={getDestinationImagePath(destination.id)}
+          alt={`${destination.name}, ${destination.country}`}
+          className={styles.photo}
+          onError={() => setImageFailed(true)}
+        />
+      )}
 
       <p className={styles.description}>{destination.description}</p>
 

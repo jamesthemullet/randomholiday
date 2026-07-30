@@ -66,6 +66,14 @@ describe('DestinationCard', () => {
     expect(screen.queryByRole('img')).not.toBeInTheDocument()
   })
 
+  it('hides the image if it fails to load', () => {
+    render(
+      <DestinationCard destination={{ ...baseDest, imageUrl: 'https://example.com/bali.jpg' }} />
+    )
+    fireEvent.error(screen.getByRole('img'))
+    expect(screen.queryByRole('img')).not.toBeInTheDocument()
+  })
+
   it('renders climate on back when provided', () => {
     render(<DestinationCard destination={{ ...baseDest, climate: 'Tropical' }} />)
     fireEvent.click(screen.getByRole('button'))

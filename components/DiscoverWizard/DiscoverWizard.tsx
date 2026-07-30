@@ -5,34 +5,31 @@ import { useRouter } from 'next/navigation'
 import { DepartureAutocomplete } from '@/components/DepartureAutocomplete'
 import type { DepartureCity } from '@/lib/departureCities'
 import { BudgetSlider } from '@/components/BudgetSlider'
-import { TravelDatesPicker, getDateRangeError, getTripNights } from '@/components/TravelDatesPicker'
+import { TravelTimingStep } from '@/components/TravelTimingStep'
 import { TravelStyleSelector } from '@/components/TravelStyleSelector'
 import type { TravelStyle } from '@/lib/destinations'
 import { TripScopeStep } from '@/components/TripScopeStep'
 import { Button } from '@/components/Button'
 import styles from './DiscoverWizard.module.css'
 
-const STEP_LABELS = ['Departure', 'Budget', 'Dates', 'Style', 'Distance & group']
+const STEP_LABELS = ['Departure', 'Budget', 'When', 'Style', 'Distance & group']
 
 export function buildResultsQuery(params: {
   city: DepartureCity
   budget: number
-  startDate: string
-  endDate: string
+  month: number
+  nights: number
   travelStyles: TravelStyle[]
   maxDistance: number
   groupSize: number
 }): string {
-  const nights = getTripNights(params.startDate, params.endDate) ?? 1
-  const travelMonth = new Date(params.startDate).getMonth() + 1
-
   const query = new URLSearchParams({
     originId: params.city.id,
     budget: String(params.budget),
     distance: String(params.maxDistance),
-    nights: String(nights),
+    nights: String(params.nights),
     groupSize: String(params.groupSize),
-    month: String(travelMonth),
+    month: String(params.month),
   })
   if (params.travelStyles.length > 0) {
     query.set('styles', params.travelStyles.join(','))
@@ -47,28 +44,25 @@ export function DiscoverWizard() {
   const [cityQuery, setCityQuery] = useState('')
   const [city, setCity] = useState<DepartureCity | null>(null)
   const [budget, setBudget] = useState(1500)
-  const [startDate, setStartDate] = useState('')
-  const [endDate, setEndDate] = useState('')
+  const [month, setMonth] = useState<number | null>(null)
+  const [nights, setNights] = useState(7)
   const [travelStyles, setTravelStyles] = useState<TravelStyle[]>([])
   const [maxDistance, setMaxDistance] = useState(10000)
   const [groupSize, setGroupSize] = useState(2)
 
-  const dateError = getDateRangeError(startDate, endDate)
-  const canProceed = [city !== null, true, Boolean(startDate && endDate && !dateError), true, true][
-    step
-  ]
+  const canProceed = [city !== null, true, month !== null, true, true][step]
 
   const isLastStep = step === STEP_LABELS.length - 1
 
   const handleNext = () => {
     if (!canProceed) return
     if (isLastStep) {
-      if (!city) return
+      if (!city || month === null) return
       const query = buildResultsQuery({
         city,
         budget,
-        startDate,
-        endDate,
+        month,
+        nights,
         travelStyles,
         maxDistance,
         groupSize,
@@ -105,12 +99,11 @@ export function DiscoverWizard() {
         )}
         {step === 1 && <BudgetSlider value={budget} onChange={setBudget} />}
         {step === 2 && (
-          <TravelDatesPicker
-            startDate={startDate}
-            endDate={endDate}
-            onStartDateChange={setStartDate}
-            onEndDateChange={setEndDate}
-            minDate={new Date().toISOString().slice(0, 10)}
+          <TravelTimingStep
+            month={month}
+            onMonthChange={setMonth}
+            nights={nights}
+            onNightsChange={setNights}
           />
         )}
         {step === 3 && <TravelStyleSelector selected={travelStyles} onChange={setTravelStyles} />}
