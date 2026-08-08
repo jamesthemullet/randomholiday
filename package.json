@@ -18,6 +18,14 @@
     "e2e:ui": "playwright test --ui",
     "prepare": "husky"
   },
+  "resolutions": {
+    "nanoid": "^3.3.17",
+    "js-yaml": "^4.3.1",
+    "undici": "^7.29.0",
+    "brace-expansion": "^5.0.9",
+    "postcss": "^8.5.18",
+    "sharp": "^0.35.0"
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
