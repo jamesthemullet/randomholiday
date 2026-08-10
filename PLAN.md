@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 5.2 — Destination photos via self-hosted static images (/public/destinations), graceful "coming soon" fallback when a photo is missing ✅
+## Last Completed: Task 5.3 — OpenWeatherMap API route handler (`/api/weather`), live current conditions when `OPENWEATHER_API_KEY` is set, static seasonal estimate (by climate + month + hemisphere) otherwise ✅
 
-## Next: Task 5.3 — OpenWeatherMap API route handler (seasonal weather)
+## Next: Task 5.4 — Graceful fallbacks when APIs unavailable
 
 ---
 
@@ -78,7 +78,7 @@ Sub-steps:
 
 - [x] Flight price API route handler — `/api/flight-price`, returns a static estimate (via `estimateFlightCostPerPerson`). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
 - [x] Destination photos — self-hosted static images in `/public/destinations/<id>.jpg`, no external API/copyright risk; falls back to a placeholder when a destination has no photo yet (photos being added manually)
-- [ ] OpenWeatherMap API route handler (seasonal weather)
+- [x] OpenWeatherMap API route handler (seasonal weather)
 - [ ] Graceful fallbacks when APIs unavailable
 - [ ] RAISE GITHUB ISSUE: "API Keys Required"
 
