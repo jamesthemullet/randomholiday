@@ -6,6 +6,8 @@ interface OpenWeatherResponse {
   weather?: { description?: string }[]
 }
 
+const LIVE_WEATHER_TIMEOUT_MS = 5000
+
 function parseNumberParam(value: string | null): number | null {
   if (value === null) return null
   const parsed = Number(value)
@@ -59,7 +61,8 @@ async function fetchLiveWeather(
 ): Promise<{ source: 'live'; tempC: number; description: string } | null> {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey}`,
+      { signal: AbortSignal.timeout(LIVE_WEATHER_TIMEOUT_MS) }
     )
     if (!response.ok) return null
 
