@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 4 — Main UI Flow
 
-## Last Completed: Task 5.3 — OpenWeatherMap API route handler (`/api/weather`), live current conditions when `OPENWEATHER_API_KEY` is set, static seasonal estimate (by climate + month + hemisphere) otherwise ✅
+## Last Completed: Task 5.4 — Graceful fallback when the live weather API hangs: `/api/weather`'s OpenWeatherMap fetch now aborts after 5s via `AbortSignal.timeout` and falls back to the static seasonal estimate, instead of blocking the response indefinitely ✅
 
-## Next: Task 5.4 — Graceful fallbacks when APIs unavailable
+## Next: Task 5.5 — RAISE GITHUB ISSUE: "API Keys Required"
 
 ---
 
@@ -79,7 +79,7 @@ Sub-steps:
 - [x] Flight price API route handler — `/api/flight-price`, returns a static estimate (via `estimateFlightCostPerPerson`). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
 - [x] Destination photos — self-hosted static images in `/public/destinations/<id>.jpg`, no external API/copyright risk; falls back to a placeholder when a destination has no photo yet (photos being added manually)
 - [x] OpenWeatherMap API route handler (seasonal weather)
-- [ ] Graceful fallbacks when APIs unavailable
+- [x] Graceful fallbacks when APIs unavailable — live weather fetch now has a bounded timeout, so a hung upstream request falls back to the static estimate instead of blocking
 - [ ] RAISE GITHUB ISSUE: "API Keys Required"
 
 ---

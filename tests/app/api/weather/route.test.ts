@@ -108,4 +108,31 @@ describe('GET /api/weather', () => {
 
     expect(body.source).toBe('static')
   })
+
+  it('passes an abort signal to the live fetch so a hung request cannot block the response', async () => {
+    vi.stubEnv('OPENWEATHER_API_KEY', 'test-key')
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ main: { temp: 26.4 }, weather: [{ description: 'clear sky' }] }),
+    })
+    vi.stubGlobal('fetch', fetchMock)
+
+    await GET(new Request(`${BASE_URL}?${VALID_QUERY}`))
+
+    const [, options] = fetchMock.mock.calls[0]
+    expect(options.signal).toBeInstanceOf(AbortSignal)
+  })
+
+  it('falls back to the static estimate when the live fetch is aborted (e.g. by the timeout signal)', async () => {
+    vi.stubEnv('OPENWEATHER_API_KEY', 'test-key')
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockRejectedValue(new DOMException('The operation was aborted', 'TimeoutError'))
+    )
+
+    const response = await GET(new Request(`${BASE_URL}?${VALID_QUERY}`))
+    const body = await response.json()
+
+    expect(body.source).toBe('static')
+  })
 })
