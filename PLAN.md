@@ -1,10 +1,10 @@
 # RandomHoliday — Build Plan
 
-## Current Phase: Phase 4 — Main UI Flow
+## Current Phase: Phase 6 — Monetisation Layer
 
-## Last Completed: Task 5.4 — Graceful fallback when the live weather API hangs: `/api/weather`'s OpenWeatherMap fetch now aborts after 5s via `AbortSignal.timeout` and falls back to the static seasonal estimate, instead of blocking the response indefinitely ✅
+## Last Completed: Task 5.5 — Raised GitHub issue #27 "API Keys Required", documenting the one live key the app can use (`OPENWEATHER_API_KEY`) and the architectural decisions to skip Amadeus and Unsplash ✅
 
-## Next: Task 5.5 — RAISE GITHUB ISSUE: "API Keys Required"
+## Next: Task 6.1 — Add Booking.com affiliate link helper + inject into destination modal
 
 ---
 
@@ -80,7 +80,7 @@ Sub-steps:
 - [x] Destination photos — self-hosted static images in `/public/destinations/<id>.jpg`, no external API/copyright risk; falls back to a placeholder when a destination has no photo yet (photos being added manually)
 - [x] OpenWeatherMap API route handler (seasonal weather)
 - [x] Graceful fallbacks when APIs unavailable — live weather fetch now has a bounded timeout, so a hung upstream request falls back to the static estimate instead of blocking
-- [ ] RAISE GITHUB ISSUE: "API Keys Required"
+- [x] RAISE GITHUB ISSUE: "API Keys Required" (#27)
 
 ---
 
