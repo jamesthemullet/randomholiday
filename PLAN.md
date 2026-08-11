@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 6 — Monetisation Layer
 
-## Last Completed: Task 5.5 — Raised GitHub issue #27 "API Keys Required", documenting the one live key the app can use (`OPENWEATHER_API_KEY`) and the architectural decisions to skip Amadeus and Unsplash ✅
+## Last Completed: Task 6.1 — Added Booking.com affiliate link helper (`lib/affiliateLinks.ts`) and injected a "Find hotels on Booking.com" link into the destination detail modal ✅
 
-## Next: Task 6.1 — Add Booking.com affiliate link helper + inject into destination modal
+## Next: Task 6.2 — Add Skyscanner affiliate link helper + inject into destination modal
 
 ---
 
@@ -86,7 +86,7 @@ Sub-steps:
 
 ## Phase 6: Monetisation Layer
 
-- [ ] Affiliate link injection — Booking.com (hotels)
+- [x] Affiliate link injection — Booking.com (hotels)
 - [ ] Affiliate link injection — Skyscanner (flights)
 - [ ] Pro tier UI (feature gates, upgrade prompts)
 - [ ] Pricing page
