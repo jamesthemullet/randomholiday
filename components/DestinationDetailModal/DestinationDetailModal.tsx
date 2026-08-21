@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { getDestinationImagePath } from '@/lib/destinationImage'
+import { getBookingAffiliateUrl } from '@/lib/affiliateLinks'
 import { Modal } from '@/components/Modal'
 import { TripActions } from '@/components/TripActions'
 import styles from './DestinationDetailModal.module.css'
@@ -40,6 +41,12 @@ export function DestinationDetailModal({
   if (!destination) return null
 
   const budget = calculateBudget({ destination, distanceKm, nights, groupSize })
+  const bookingUrl = getBookingAffiliateUrl({
+    city: destination.name,
+    country: destination.country,
+    groupSize,
+    affiliateId: process.env.NEXT_PUBLIC_BOOKING_AFFILIATE_ID,
+  })
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={`${destination.name}, ${destination.country}`}>
@@ -94,6 +101,14 @@ export function DestinationDetailModal({
             <dd>{currencyFormatter.format(budget.totalCost)}</dd>
           </div>
         </dl>
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          className={styles.bookingLink}
+        >
+          Find hotels on Booking.com
+        </a>
       </section>
 
       <section aria-labelledby="things-to-do-heading" className={styles.section}>

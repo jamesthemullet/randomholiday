@@ -151,6 +151,26 @@ describe('DestinationDetailModal', () => {
     expect(screen.getByText('Flights (1 traveller)')).toBeInTheDocument()
   })
 
+  it('renders a Booking.com hotel search link scoped to the destination and group size', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={3}
+      />
+    )
+    const link = screen.getByRole('link', { name: 'Find hotels on Booking.com' })
+    const url = new URL(link.getAttribute('href') ?? '')
+    expect(url.origin + url.pathname).toBe('https://www.booking.com/searchresults.html')
+    expect(url.searchParams.get('ss')).toBe('Bali, Indonesia')
+    expect(url.searchParams.get('group_adults')).toBe('3')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer sponsored')
+  })
+
   it('renders things to do from destination activities', () => {
     render(
       <DestinationDetailModal
