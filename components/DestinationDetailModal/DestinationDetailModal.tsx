@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { getDestinationImagePath } from '@/lib/destinationImage'
-import { getBookingAffiliateUrl } from '@/lib/affiliateLinks'
+import { getBookingAffiliateUrl, getSkyscannerAffiliateUrl } from '@/lib/affiliateLinks'
 import { Modal } from '@/components/Modal'
 import { TripActions } from '@/components/TripActions'
 import styles from './DestinationDetailModal.module.css'
@@ -46,6 +46,11 @@ export function DestinationDetailModal({
     country: destination.country,
     groupSize,
     affiliateId: process.env.NEXT_PUBLIC_BOOKING_AFFILIATE_ID,
+  })
+  const skyscannerUrl = getSkyscannerAffiliateUrl({
+    countryCode: destination.countryCode,
+    groupSize,
+    affiliateId: process.env.NEXT_PUBLIC_SKYSCANNER_AFFILIATE_ID,
   })
 
   return (
@@ -101,14 +106,24 @@ export function DestinationDetailModal({
             <dd>{currencyFormatter.format(budget.totalCost)}</dd>
           </div>
         </dl>
-        <a
-          href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className={styles.bookingLink}
-        >
-          Find hotels on Booking.com
-        </a>
+        <div className={styles.affiliateLinks}>
+          <a
+            href={skyscannerUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className={styles.affiliateLink}
+          >
+            Find flights on Skyscanner
+          </a>
+          <a
+            href={bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className={styles.affiliateLink}
+          >
+            Find hotels on Booking.com
+          </a>
+        </div>
       </section>
 
       <section aria-labelledby="things-to-do-heading" className={styles.section}>
