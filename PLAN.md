@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 6 — Monetisation Layer
 
-## Last Completed: Task 6.2 — Added Skyscanner affiliate link helper (`getSkyscannerAffiliateUrl` in `lib/affiliateLinks.ts`) and injected a "Find flights on Skyscanner" link into the destination detail modal ✅
+## Last Completed: Task 6.3 — Added Pro tier feature gating (`isProUnlocked` in `lib/proTier.ts`) and reusable `UpgradePrompt` / `ProGate` components ✅
 
-## Next: Task 6.3 — Add Pro tier feature gating + upgrade prompt components
+## Next: Task 6.4 — Add pricing page
 
 ---
 
@@ -88,7 +88,7 @@ Sub-steps:
 
 - [x] Affiliate link injection — Booking.com (hotels)
 - [x] Affiliate link injection — Skyscanner (flights)
-- [ ] Pro tier UI (feature gates, upgrade prompts)
+- [x] Pro tier UI (feature gates, upgrade prompts)
 - [ ] Pricing page
 - [ ] Stripe checkout + webhook handler scaffold
 - [ ] AdSense placeholder components
