@@ -171,6 +171,27 @@ describe('DestinationDetailModal', () => {
     expect(link).toHaveAttribute('rel', 'noopener noreferrer sponsored')
   })
 
+  it('renders a Skyscanner flight search link scoped to the destination country and group size', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={3}
+      />
+    )
+    const link = screen.getByRole('link', { name: 'Find flights on Skyscanner' })
+    const url = new URL(link.getAttribute('href') ?? '')
+    expect(url.origin + url.pathname).toBe(
+      'https://www.skyscanner.net/transport/flights/everywhere/id/'
+    )
+    expect(url.searchParams.get('adults')).toBe('3')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer sponsored')
+  })
+
   it('renders things to do from destination activities', () => {
     render(
       <DestinationDetailModal
