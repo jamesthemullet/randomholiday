@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 6 — Monetisation Layer
 
-## Last Completed: Task 6.3 — Added Pro tier feature gating (`isProUnlocked` in `lib/proTier.ts`) and reusable `UpgradePrompt` / `ProGate` components ✅
+## Last Completed: Task 6.4 — Added pricing page (`/pricing`) with `PricingPlans` component comparing Free vs Pro tiers ✅
 
-## Next: Task 6.4 — Add pricing page
+## Next: Task 6.5 — Add Stripe checkout + webhook handler scaffold
 
 ---
 
@@ -89,7 +89,7 @@ Sub-steps:
 - [x] Affiliate link injection — Booking.com (hotels)
 - [x] Affiliate link injection — Skyscanner (flights)
 - [x] Pro tier UI (feature gates, upgrade prompts)
-- [ ] Pricing page
+- [x] Pricing page
 - [ ] Stripe checkout + webhook handler scaffold
 - [ ] AdSense placeholder components
 - [ ] RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required"
