@@ -1,0 +1,75 @@
+# Site Audit
+
+Living checklist maintained by the `/full-audit` skill. Findings are appended, never rewritten;
+check an item off (`- [x]`) once you've fixed it and it won't be touched again. Re-running the
+audit adds new findings to the bottom of each section and leaves checked items alone.
+
+## Run log
+
+- 2026-09-02 — initial audit: 34 findings (2 test coverage, 2 e2e config, 6 a11y, 3 performance,
+  4 SEO, 4 responsive/UX, 3 security, 2 roadmap alignment, 8 code quality). CI on `main` confirmed
+  currently red (coverage gate + DarkModeToggle suite).
+
+## 1. Test coverage — unit gaps and e2e
+
+- [ ] `yarn test:coverage` currently fails outright: all 10 tests in `tests/components/DarkModeToggle.test.tsx` throw `TypeError: Cannot read properties of undefined (reading 'clear')` on `localStorage.clear()` in `beforeEach`, because `tests/setup.ts` doesn't polyfill `localStorage` for the current Node/vitest/jsdom combo (Node logs `ExperimentalWarning: localStorage is not available because --localstorage-file was not provided`). The run aborts before the coverage report stage — no `coverage/` directory is produced. (found: 2026-09-02)
+- [ ] Even with `DarkModeToggle.test.tsx` excluded, coverage is 86.16% statements / 86.12% branches / 90.32% functions / 85.6% lines against a 100% threshold in `vitest.config.ts`, so the coverage gate fails regardless of the DarkModeToggle crash. Below-100% files: `components/Card/Card.tsx` (66.66%, keyboard Enter/Space handler at lines 19-21 untested), `components/DestinationCard/DestinationCard.tsx` (88.23% lines, image `onError` fallback at lines 61-62 untested), `components/DiscoverWizard/DiscoverWizard.tsx` (0% — no test file exists at all for step navigation, `canProceed` gating, or the final `router.push('/results?...')` call). (found: 2026-09-02)
+- [ ] `vitest.config.ts`'s `coverage.include` is `['lib/**', 'components/**']` only — the entire `app/` tree (`app/api/flight-price/route.ts`, `app/api/weather/route.ts`, `app/discover/page.tsx`, `app/results/page.tsx`, `app/results/ResultsClient.tsx`, `app/page.tsx`, `app/pricing/page.tsx`) is excluded from both the report and the 100% gate, so route-handler and page-level regressions (e.g. `ResultsClient.tsx` has zero tests today) aren't caught by coverage even though the threshold nominally reads 100%. (found: 2026-09-02)
+- [ ] `e2e/` directory does not exist even though `playwright.config.ts` sets `testDir: './e2e'` — confirmed via `ls e2e` (no such directory) and zero `.spec.ts` files anywhere in the repo. `yarn e2e` currently runs 0 specs; CI's `e2e-tests` job effectively does nothing. (found: 2026-09-02)
+- [ ] Add `e2e/discover-wizard.spec.ts`: drive the landing page → `/discover`, complete all 5 wizard steps (departure autocomplete, budget slider, month select, travel style, distance/group size), submit, and assert navigation to `/results` with the expected query string. Covers `components/DiscoverWizard/DiscoverWizard.tsx`, which has no test file at all today. (found: 2026-09-02)
+- [ ] Add `e2e/results-shuffle.spec.ts`: navigate directly to a `/results?...` URL, assert a recommendation renders, click "Shuffle", and assert the displayed destination can change. Covers `app/results/ResultsClient.tsx`, which has zero tests today. (found: 2026-09-02)
+- [ ] Add `e2e/destination-detail-modal.spec.ts`: open the modal from `/results`, assert the cost breakdown renders, assert the Skyscanner/Booking.com affiliate links are present and correctly formed, click "Save trip" and assert the Pro upsell appears, click "Share" and assert the clipboard/share fallback. Component-level RTL tests exist for these pieces in isolation but nothing exercises the real end-to-end flow. (found: 2026-09-02)
+- [ ] Add `e2e/dark-mode-persistence.spec.ts`: toggle dark mode, reload the page, assert `data-theme="dark"` persists via real browser `localStorage`. Independently valuable given the underlying unit suite for this component is currently broken and provides zero signal (see the first item in this section). Note: this flow is currently unreachable in the live app — see the "Header/DarkModeToggle never rendered" finding in section 5 — so this spec depends on that being fixed first. (found: 2026-09-02)
+
+## 2. Accessibility
+
+- [ ] `/` (Hero): axe `color-contrast` (serious) on `.Hero_cta__FxM8U` ("Find My Holiday" button) — coral background (`--color-coral: #ff6b6b` in `styles/tokens.css:7`) with white text falls below the WCAG AA 4.5:1 threshold for normal-size text. (found: 2026-09-02)
+- [ ] `/results`: axe `nested-interactive` (serious) on `.DestinationCard_scene__8th0Z` — the flip-card's outer clickable scene contains nested interactive controls, which is invalid ARIA/HTML and can produce unpredictable keyboard/screen-reader behavior. (found: 2026-09-02)
+- [ ] `/results`: axe `aria-hidden-focus` (serious) on `.DestinationCard_front__rQhHQ` — an `aria-hidden` element contains a focusable descendant, so keyboard focus can land on content hidden from assistive tech. (found: 2026-09-02)
+- [ ] `/results` and destination detail modal: axe `color-contrast` (serious) on multiple elements — `.Button_secondary__kYMEY` button text, `.Badge_badge__Jd6Bq` (the match-percentage badge), `.DestinationDetailModal_totalRow__A23iz > dd` (the total price), both `.DestinationDetailModal_affiliateLink___17Ua` links (Skyscanner/Booking.com), and the `TripActions` secondary button text. Six distinct contrast failures across the results/modal flow. (found: 2026-09-02)
+- [ ] `/results`: axe `page-has-heading-one` (moderate) — the page has no `<h1>` (the "Your Match" text is not marked up as a heading). (found: 2026-09-02)
+- [ ] Destination detail modal has no weather section at all despite `app/api/weather/route.ts` existing — see roadmap finding in section 7; noting here because it means "seasonal weather fetch" (an audit-listed flow to check) currently has nothing to test for a11y or otherwise. (found: 2026-09-02)
+
+## 3. Performance
+
+- [ ] `next.config.mjs` is an empty `NextConfig` object (`const nextConfig = {}`) — no image optimization config, no bundle analysis, no experimental optimizations configured. Not urgent on its own, but worth revisiting once real destination photos replace the current 404'd placeholders (`GET /destinations/cancun-mexico.jpg 404` observed live), since `next/image` defaults will matter once real image weight exists. (found: 2026-09-02)
+- [ ] `/results` destination card: `components/DestinationCard/DestinationCard.module.css:2` sets `.scene { aspect-ratio: 3 / 4; }` with `width: 100%`. On `/results`, the card renders at near-full content width (~610px in a 1280px viewport), producing an aspect-ratio-forced height of ~810px — but the front-face content (`frontContent`) only fills the top ~150px, leaving roughly 600px of empty gradient background before the "Select Destination" button at the very bottom. This forces an unnecessary scroll and wastes layout/paint area on every results view. Likely designed for a smaller card in a multi-column grid rather than a single full-width card. (found: 2026-09-02)
+- [ ] No Lighthouse/Core Web Vitals run was performed this pass (would require Chrome Lighthouse panel or CLI, out of scope for this session's tooling) — flagging as a gap in audit coverage itself, not a finding about the app. Recommend running `next build` + Lighthouse manually before the next audit pass to get real LCP/CLS/INP numbers. (found: 2026-09-02)
+
+## 4. SEO / metadata
+
+- [ ] No `robots.txt` — confirmed via `GET /robots.txt` → 404 and no `app/robots.ts`. PLAN.md Phase 9 lists this as not-yet-done, which matches. (found: 2026-09-02)
+- [ ] No `sitemap.xml` — confirmed via `GET /sitemap.xml` → 404 and no `app/sitemap.ts`. Matches PLAN.md Phase 9. (found: 2026-09-02)
+- [ ] `app/layout.tsx` metadata has `og:title`/`og:description`/`og:type` and `twitter:card`/`twitter:title`/`twitter:description`, but no `og:image` or `twitter:image` — shared links will render without a preview image on Slack/Twitter/iMessage etc. (found: 2026-09-02)
+- [ ] No canonical URL (`metadataBase`/`alternates.canonical`) set in `app/layout.tsx`'s metadata export. Low priority pre-launch, but worth adding alongside the sitemap work in Phase 9. (found: 2026-09-02)
+
+## 5. Responsive / UX
+
+- [ ] `/results`: the match-percentage badge overlaps the destination name. `components/ResultsReveal/ResultsReveal.module.css:22-27` absolutely positions `.matchBadge` at `top: var(--space-3); left: var(--space-3)` over `.cardWrapper`, which collides with the destination name rendered inside `DestinationCard`'s `.frontContent` (also top-left aligned with `padding: var(--space-4)`). The "72% match" pill visually cuts through the "Cancun" heading text. (found: 2026-09-02)
+- [ ] **`Header` and `DarkModeToggle` components exist but are never rendered anywhere in the live app.** `grep -rn "Header|DarkModeToggle" app/` returns zero matches, and `app/layout.tsx` renders only the skip-to-main link and `{children}` — no header/nav wrapper. Confirmed live: no header, no nav, no dark-mode toggle visible on `/`, `/discover`, `/results`, or `/pricing`. This directly contradicts PLAN.md Phase 2 lines 44-45, which mark "Layout shell: Header, Main, Footer" and "Dark mode toggle component" as complete — the components exist and are unit-tested, but are dead code from the live app's perspective. Also means there is currently no way to navigate back to `/` from `/discover`, `/results`, or `/pricing` short of the browser back button. (found: 2026-09-02)
+- [ ] `components/ProGate/ProGate.tsx` and `components/UpgradePrompt/UpgradePrompt.tsx` are fully implemented and unit-tested but never imported by any page — `TripActions.tsx` reimplements its own inline "Pro" upsell message (lines 60-67) instead of using them. Worth a decision: wire them into the actual paywall flow, or remove as unused scaffolding. (found: 2026-09-02)
+- [ ] No keyboard-only path exists to reach `/discover` or `/pricing` from `/` other than the single "Find My Holiday" CTA and typing the URL directly — a consequence of the missing header/nav (see above), not a separate bug. (found: 2026-09-02)
+
+## 6. Security
+
+- [ ] `next.config.mjs` has no security response headers configured (no CSP, HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, or `Permissions-Policy`). Not urgent today (no user auth or sensitive data handling yet), but should land before or alongside the Stripe/AdSense work in Phase 6, since third-party scripts will increase XSS surface. (found: 2026-09-02)
+- [ ] When Stripe checkout work begins (PLAN.md task 6.5), bake in webhook signature verification (`stripe.webhooks.constructEvent` against the raw request body) and a check that `STRIPE_SECRET_KEY` is never referenced from a `'use client'` file, as part of that same PR. No Stripe code exists yet (confirmed via repo-wide grep), so this is a forward-looking checklist item, not a current defect. (found: 2026-09-02)
+- [ ] `app/api/weather/route.ts:63-64` interpolates the OpenWeather API key directly into the request URL's query string. No injection risk in practice (`lat`/`lng` are validated as in-range numbers before use, and `apiKey` comes from `process.env`), but worth a comment/guard that upstream error bodies are never logged verbatim server-side, since that could otherwise leak the key into logs. (found: 2026-09-02)
+
+## 7. Roadmap alignment
+
+- [ ] PLAN.md lines 3-7 (header block) is silent on the fact that CI on `main` is currently failing (coverage gate + `DarkModeToggle` suite crash — see section 1), which undercuts the "Phase 1-5 COMPLETE" framing those phases carry above it. (found: 2026-09-02)
+- [ ] PLAN.md line 46 and line 58 both claim "100% coverage" for Phase 2/3 — this is currently false; see section 1 for the actual numbers and root cause (`DarkModeToggle` localStorage crash + several partially-covered files). (found: 2026-09-02)
+- [ ] PLAN.md line 16 ("Playwright setup" ✅) is technically true (config exists) but reads as more complete than reality — no `e2e/` directory or specs exist, and CI's e2e job fails with "No tests found" on every run. See section 1. (found: 2026-09-02)
+- [ ] PLAN.md line 52 states "55 destinations across 6 continents" — actual count in `lib/destinations.ts` is 56. Minor/cosmetic, but worth a one-line fix next time that file is touched. (found: 2026-09-02)
+- [ ] PLAN.md line 17 describes Husky pre-commit hooks running lint + typecheck + lint-staged; the actual `.husky/pre-commit` invokes `npx lint-staged` and `npm run typecheck`, not `yarn` — inconsistent with the project's yarn-only convention (the CI workflow itself is all-yarn). (found: 2026-09-02)
+- [ ] PLAN.md Phase 2 lines 44-45 mark "Layout shell: Header, Main, Footer" and "Dark mode toggle component" as complete, but neither is actually wired into the live app — see the detailed finding in section 5. This is the most user-visible roadmap/reality gap found this pass. (found: 2026-09-02)
+
+## 8. Code quality
+
+- [ ] `app/results/ResultsClient.tsx:28` casts `stylesParam.split(',') as TravelStyle[]` with no runtime validation — a malformed or stale `?styles=` query value would silently pass invalid style strings into `getRecommendations` instead of being caught. Fix: filter the split array against the known `TravelStyle` values before casting. (found: 2026-09-02)
+- [ ] `components/Modal/Modal.tsx:25` uses `modalRef.current!` (the only non-null assertion in the codebase). Provably safe today, but an early-return guard (`if (!modalRef.current) return`) would remove the `!` entirely. (found: 2026-09-02)
+- [ ] `app/api/flight-price/route.ts` and `app/api/weather/route.ts` each hand-roll their own "parse query param to a validated number, else 400 JSON" logic (`weather/route.ts:11-15`'s `parseNumberParam` vs. `flight-price/route.ts:12-15`'s inline `Number(...)` + `Number.isFinite` check) instead of sharing a helper. Low priority given each route is short, but worth a shared `lib` helper if either route grows. (found: 2026-09-02)
+- [ ] `components/Badge/Badge.module.css:28-29,38-39` — the `.success` and `.danger` variants use raw hex literals (`#d1fae5`, `#065f46`, `#fee2e2`, `#991b1b`) instead of tokens, unlike every other variant in the same file. `styles/tokens.css` has no success/danger color tokens defined yet — add them and reference here. (found: 2026-09-02)
+- [ ] `lib/distanceCalculator.ts`'s `isWithinDistance` (line 35) and `sortByDistance` (line 47), and `lib/filterEngine.ts:95`'s `getFilteredDestinations`, are exported and unit-tested but never called from app code (`recommendationEngine.ts` calls `filterDestinations` directly instead of the `getFilteredDestinations` wrapper). Candidates for trimming if reducing `/lib`'s public surface is ever a goal. (found: 2026-09-02)
+- [ ] `components/ProGate/ProGate.tsx` and `components/UpgradePrompt/UpgradePrompt.tsx` are dead code from the live app's perspective (also flagged in section 5 as a UX/roadmap issue) — listed here too since it's a code-quality dead-code finding as well as a UX gap. (found: 2026-09-02)
