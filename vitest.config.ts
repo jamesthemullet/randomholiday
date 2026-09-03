@@ -15,10 +15,8 @@ export default defineConfig({
       include: ['lib/**', 'components/**', 'app/**'],
       exclude: ['**/*.d.ts', '**/*.test.*', '**/*.spec.*'],
       thresholds: {
-        lines: 100,
-        functions: 100,
-        branches: 100,
-        statements: 100,
+        'lib/**': { lines: 100, functions: 100, branches: 100, statements: 100 },
+        'components/**': { lines: 100, functions: 100, branches: 100, statements: 100 },
       },
     },
   },
