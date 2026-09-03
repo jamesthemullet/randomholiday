@@ -141,6 +141,16 @@ describe('DestinationCard', () => {
     expect(screen.getByRole('button', { name: /bali/i })).toHaveAttribute('aria-pressed', 'true')
   })
 
+  it('calls onSelect and stops propagation when select clicked on the front face', () => {
+    const onSelect = vi.fn()
+    render(<DestinationCard destination={baseDest} onSelect={onSelect} />)
+    // Card starts unflipped (front face visible)
+    fireEvent.click(screen.getByRole('button', { name: 'Select Destination' }))
+    expect(onSelect).toHaveBeenCalledOnce()
+    // Card should still be in unflipped state (click did not toggle)
+    expect(screen.getByRole('button', { name: /bali/i })).toHaveAttribute('aria-pressed', 'false')
+  })
+
   it('applies flipped class when flipped', () => {
     render(<DestinationCard destination={baseDest} />)
     fireEvent.click(screen.getByRole('button'))
