@@ -45,7 +45,7 @@
   padding: var(--space-3) var(--space-8);
   border-radius: var(--radius-md);
   background-color: var(--color-coral);
-  color: var(--color-white);
+  color: var(--color-grey-900);
   font-family: var(--font-heading);
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);

@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 6 — Monetisation Layer
 
-## Last Completed: Task 6.4 — Added pricing page (`/pricing`) with `PricingPlans` component comparing Free vs Pro tiers ✅
+## Last Completed: Task 6.5 — Added Stripe checkout + webhook handler scaffold (`/api/checkout`, `/api/webhooks/stripe`) ✅
 
-## Next: Task 6.5 — Add Stripe checkout + webhook handler scaffold
+## Next: Task 6.6 — Add AdSense placeholder components
 
 ---
 
@@ -90,7 +90,7 @@ Sub-steps:
 - [x] Affiliate link injection — Skyscanner (flights)
 - [x] Pro tier UI (feature gates, upgrade prompts)
 - [x] Pricing page
-- [ ] Stripe checkout + webhook handler scaffold
+- [x] Stripe checkout + webhook handler scaffold
 - [ ] AdSense placeholder components
 - [ ] RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required"
 
