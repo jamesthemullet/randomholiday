@@ -13,6 +13,8 @@ audit adds new findings to the bottom of each section and leaves checked items a
   tests); see item note for remaining two uncovered defensive branches.
 - 2026-09-03 — resolved section 1 `coverage.include` scope-gap item (added `app/**` so route
   handlers and pages are no longer silently excluded from the coverage report/gate).
+- 2026-09-04 — resolved section 2 Hero CTA `color-contrast` finding (darkened the button's text
+  color so it clears WCAG AA 4.5:1 against the coral background).
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -27,7 +29,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 
 ## 2. Accessibility
 
-- [ ] `/` (Hero): axe `color-contrast` (serious) on `.Hero_cta__FxM8U` ("Find My Holiday" button) — coral background (`--color-coral: #ff6b6b` in `styles/tokens.css:7`) with white text falls below the WCAG AA 4.5:1 threshold for normal-size text. (found: 2026-09-02)
+- [x] `/` (Hero): axe `color-contrast` (serious) on `.Hero_cta__FxM8U` ("Find My Holiday" button) — coral background (`--color-coral: #ff6b6b` in `styles/tokens.css:7`) with white text falls below the WCAG AA 4.5:1 threshold for normal-size text. (found: 2026-09-02) (resolved: 2026-09-04, PR #62) — changed `.cta` text color in `components/Hero/Hero.module.css` from `var(--color-white)` to `var(--color-grey-900)`, scoped to just this button (the shared `--color-coral` token is left untouched since it's used elsewhere). Verified via the WCAG relative-luminance formula: coral bg + grey-900 text = 6.39:1, and the `:hover` state (coral-dark bg) + grey-900 text = 4.61:1 — both clear the 4.5:1 AA threshold for normal-size text (previously 2.78:1 and 3.85:1 with white text). No live browser/axe run was available in this environment to re-scan; verification here is by contrast-ratio calculation, not a rendered scan.
 - [ ] `/results`: axe `nested-interactive` (serious) on `.DestinationCard_scene__8th0Z` — the flip-card's outer clickable scene contains nested interactive controls, which is invalid ARIA/HTML and can produce unpredictable keyboard/screen-reader behavior. (found: 2026-09-02)
 - [ ] `/results`: axe `aria-hidden-focus` (serious) on `.DestinationCard_front__rQhHQ` — an `aria-hidden` element contains a focusable descendant, so keyboard focus can land on content hidden from assistive tech. (found: 2026-09-02)
 - [ ] `/results` and destination detail modal: axe `color-contrast` (serious) on multiple elements — `.Button_secondary__kYMEY` button text, `.Badge_badge__Jd6Bq` (the match-percentage badge), `.DestinationDetailModal_totalRow__A23iz > dd` (the total price), both `.DestinationDetailModal_affiliateLink___17Ua` links (Skyscanner/Booking.com), and the `TripActions` secondary button text. Six distinct contrast failures across the results/modal flow. (found: 2026-09-02)
