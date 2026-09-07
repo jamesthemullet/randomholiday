@@ -92,7 +92,7 @@
 .totalRow dd {
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
-  color: var(--color-accent-primary);
+  color: var(--color-turquoise-contrast);
 }
 
 .affiliateLinks {
@@ -107,9 +107,9 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-5);
-  border: 2px solid var(--color-accent-primary);
+  border: 2px solid var(--color-turquoise-contrast);
   border-radius: var(--radius-md);
-  color: var(--color-accent-primary);
+  color: var(--color-turquoise-contrast);
   font-weight: var(--font-semibold);
   text-decoration: none;
   transition:
