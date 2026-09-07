@@ -15,7 +15,10 @@
 }
 
 .primary {
-  background-color: var(--color-accent-primary);
+  /* Fixed value (not the theme-swapping --color-turquoise-contrast token): this badge's white
+     text sits on this solid background in both themes, so it needs to stay dark enough for
+     AA contrast against white regardless of --data-theme. */
+  background-color: #007d7d;
   color: var(--color-white);
 }
 

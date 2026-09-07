@@ -4,6 +4,8 @@
   --color-turquoise: #00c9c8;
   --color-turquoise-light: #4dd9d8;
   --color-turquoise-dark: #009b9a;
+  /* Darker than --color-turquoise-dark: needed to clear WCAG AA 4.5:1 as text/border on a light background */
+  --color-turquoise-contrast: #007d7d;
   --color-coral: #ff6b6b;
   --color-coral-light: #ff9090;
   --color-coral-dark: #e84848;
@@ -143,6 +145,7 @@
   --color-text-inverse: var(--color-grey-900);
   --color-border: var(--color-grey-700);
   --color-border-focus: var(--color-turquoise-light);
+  --color-turquoise-contrast: var(--color-turquoise-light);
   --color-link: var(--color-turquoise-light);
   --color-link-hover: var(--color-turquoise);
   --shadow-card: 0 4px 24px rgba(0, 201, 200, 0.08);

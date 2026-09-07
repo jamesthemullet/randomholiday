@@ -41,8 +41,8 @@
 
 .secondary {
   background-color: transparent;
-  color: var(--color-accent-primary);
-  border-color: var(--color-accent-primary);
+  color: var(--color-turquoise-contrast);
+  border-color: var(--color-turquoise-contrast);
 }
 
 .secondary:hover:not(:disabled) {
