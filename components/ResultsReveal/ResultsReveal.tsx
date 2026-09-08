@@ -26,9 +26,9 @@ export function ResultsReveal({ recommendation, onShuffle, onSelect }: ResultsRe
   return (
     <section className={styles.wrapper} aria-labelledby="results-heading">
       <div className={styles.header}>
-        <h2 id="results-heading" className={styles.heading}>
+        <h1 id="results-heading" className={styles.heading}>
           Your Match
-        </h2>
+        </h1>
         <Button type="button" variant="secondary" onClick={onShuffle}>
           Shuffle
         </Button>
