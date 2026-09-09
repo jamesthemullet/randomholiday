@@ -166,4 +166,22 @@ describe('DestinationCard', () => {
     const inner = scene.querySelector('div')
     expect(inner?.className).not.toContain('flipped')
   })
+
+  it('front select button is focusable and back select button is not when unflipped', () => {
+    render(<DestinationCard destination={baseDest} onSelect={vi.fn()} />)
+    const buttons = screen.getAllByText('Select Destination').map((el) => el.closest('button')!)
+    expect(buttons).toHaveLength(2)
+    const [frontBtn, backBtn] = buttons
+    expect(frontBtn).toHaveAttribute('tabIndex', '0')
+    expect(backBtn).toHaveAttribute('tabIndex', '-1')
+  })
+
+  it('back select button is focusable and front select button is not when flipped', () => {
+    render(<DestinationCard destination={baseDest} onSelect={vi.fn()} />)
+    fireEvent.click(screen.getByRole('button', { name: /bali/i }))
+    const buttons = screen.getAllByText('Select Destination').map((el) => el.closest('button')!)
+    const [frontBtn, backBtn] = buttons
+    expect(frontBtn).toHaveAttribute('tabIndex', '-1')
+    expect(backBtn).toHaveAttribute('tabIndex', '0')
+  })
 })
