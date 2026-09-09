@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
@@ -22,7 +22,7 @@
     "nanoid": "^6.0.0",
     "js-yaml": "^5.0.0",
     "undici": "^8.0.0",
-    "brace-expansion": "^5.0.9",
+    "brace-expansion": "^2.0.2",
     "postcss": "^8.5.18",
     "sharp": "^0.35.0"
   },
@@ -39,7 +39,7 @@
     "framer-motion": "^12.42.1",
     "stripe": "^22.5.0",
     "motion": "^12.42.1",
-    "next": "15.5.24",
+    "next": "16.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -52,16 +52,16 @@
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@types/testing-library__jest-dom": "^5.14.9",
     "@vitejs/plugin-react": "^6.0.3",
     "@vitest/coverage-v8": "^4.1.9",
-    "eslint": "^8",
-    "eslint-config-next": "15.5.24",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
     "husky": "^9.1.7",
     "jsdom": "^30.0.0",
     "lint-staged": "^17.0.0",
     "prettier": "^3.9.4",
     "typescript": "^5",
+    "typescript-eslint": "^8.46.0",
     "vitest": "^4.1.9"
   }
 }
