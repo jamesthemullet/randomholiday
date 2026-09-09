@@ -7,6 +7,7 @@ import { destinations } from '@/lib/destinations'
 import type { TravelStyle } from '@/lib/destinations'
 import { departureCities } from '@/lib/departureCities'
 import { getRecommendations } from '@/lib/recommendationEngine'
+import { scoreDestination } from '@/lib/scoringEngine'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
 import { ResultsReveal } from '@/components/ResultsReveal'
@@ -40,11 +41,21 @@ export function ResultsClient() {
     }
   }, [searchParams])
 
-  const [recommendation, setRecommendation] = useState<DestinationScore | null>(() =>
-    filterParams
-      ? (getRecommendations(destinations, filterParams).recommendations[0] ?? null)
-      : null
-  )
+  const pinnedDestinationId = searchParams.get('destination')
+
+  const [recommendation, setRecommendation] = useState<DestinationScore | null>(() => {
+    if (!filterParams) return null
+
+    const pinnedDestination = pinnedDestinationId
+      ? destinations.find((d) => d.id === pinnedDestinationId)
+      : undefined
+
+    if (pinnedDestination) {
+      return scoreDestination(pinnedDestination, filterParams)
+    }
+
+    return getRecommendations(destinations, filterParams).recommendations[0] ?? null
+  })
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
 
   const handleShuffle = useCallback(() => {
