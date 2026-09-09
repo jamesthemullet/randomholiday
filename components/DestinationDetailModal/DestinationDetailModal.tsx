@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { getDestinationImagePath } from '@/lib/destinationImage'
@@ -33,10 +33,12 @@ export function DestinationDetailModal({
   groupSize,
 }: DestinationDetailModalProps) {
   const [imageFailed, setImageFailed] = useState(false)
+  const [imageFailedForId, setImageFailedForId] = useState(destination?.id)
 
-  useEffect(() => {
+  if (destination?.id !== imageFailedForId) {
+    setImageFailedForId(destination?.id)
     setImageFailed(false)
-  }, [destination?.id])
+  }
 
   if (!destination) return null
 
