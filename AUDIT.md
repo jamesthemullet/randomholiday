@@ -19,6 +19,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
   a theme-aware `--color-turquoise-contrast` token and switched the affected components to it.
 - 2026-09-08 — resolved section 2 `/results` `page-has-heading-one` finding: changed the "Your
   Match" heading from `<h2>` to `<h1>`.
+- 2026-09-10 — resolved section 4 `robots.txt` finding: added `app/robots.ts`.
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -48,7 +49,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 
 ## 4. SEO / metadata
 
-- [ ] No `robots.txt` — confirmed via `GET /robots.txt` → 404 and no `app/robots.ts`. PLAN.md Phase 9 lists this as not-yet-done, which matches. (found: 2026-09-02)
+- [x] No `robots.txt` — confirmed via `GET /robots.txt` → 404 and no `app/robots.ts`. PLAN.md Phase 9 lists this as not-yet-done, which matches. (found: 2026-09-02) (resolved: 2026-09-10, PR #TBD) — added `app/robots.ts` allowing all user agents on all paths and pointing `sitemap` at `${NEXT_PUBLIC_APP_URL}/sitemap.xml` (falls back to `http://localhost:3000`, matching the existing convention in `app/api/checkout/route.ts`). The sitemap URL is forward-referencing since `app/sitemap.ts` doesn't exist yet — that's the separate, still-open next item in this section. Verified via `yarn build`, which lists `○ /robots.txt` in the route output.
 - [ ] No `sitemap.xml` — confirmed via `GET /sitemap.xml` → 404 and no `app/sitemap.ts`. Matches PLAN.md Phase 9. (found: 2026-09-02)
 - [ ] `app/layout.tsx` metadata has `og:title`/`og:description`/`og:type` and `twitter:card`/`twitter:title`/`twitter:description`, but no `og:image` or `twitter:image` — shared links will render without a preview image on Slack/Twitter/iMessage etc. (found: 2026-09-02)
 - [ ] No canonical URL (`metadataBase`/`alternates.canonical`) set in `app/layout.tsx`'s metadata export. Low priority pre-launch, but worth adding alongside the sitemap work in Phase 9. (found: 2026-09-02)
