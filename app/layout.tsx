@@ -17,9 +17,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'),
   title: 'RandomHoliday — Discover Your Next Adventure',
   description:
     'Get surprise holiday destination suggestions based on your budget, travel style, and departure location.',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'RandomHoliday — Discover Your Next Adventure',
     description:
