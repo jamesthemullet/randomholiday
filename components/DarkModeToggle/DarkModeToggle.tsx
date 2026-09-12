@@ -7,6 +7,9 @@ export function DarkModeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
 
   useEffect(() => {
+    // Reads browser-only APIs (localStorage, matchMedia) unavailable during SSR render,
+    // so the theme can only be determined after mount.
+    /* eslint-disable react-hooks/set-state-in-effect */
     const stored = localStorage.getItem('theme')
     if (stored === 'light' || stored === 'dark') {
       setTheme(stored)
@@ -17,6 +20,7 @@ export function DarkModeToggle() {
       setTheme(initial)
       document.documentElement.setAttribute('data-theme', initial)
     }
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [])
 
   const toggle = () => {
