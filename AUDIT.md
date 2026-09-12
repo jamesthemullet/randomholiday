@@ -23,6 +23,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-09-08 — resolved section 2 `/results` `page-has-heading-one` finding: changed the "Your
   Match" heading from `<h2>` to `<h1>`.
 - 2026-09-11 — resolved section 4 `sitemap.xml` finding: added `app/sitemap.ts`.
+- 2026-09-12 — resolved section 4 canonical URL finding: added `metadataBase`/`alternates.canonical` to `app/layout.tsx`.
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -55,7 +56,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [ ] No `robots.txt` — confirmed via `GET /robots.txt` → 404 and no `app/robots.ts`. PLAN.md Phase 9 lists this as not-yet-done, which matches. (found: 2026-09-02)
 - [x] No `sitemap.xml` — confirmed via `GET /sitemap.xml` → 404 and no `app/sitemap.ts`. Matches PLAN.md Phase 9. (found: 2026-09-02) (resolved: 2026-09-11, PR #76) — added `app/sitemap.ts` listing the three static, canonically-navigable routes (`/`, `/discover`, `/pricing`) with a `lastModified` timestamp, using the same `NEXT_PUBLIC_APP_URL` (falls back to `http://localhost:3000`) convention as `app/robots.ts`. `/results` is intentionally excluded since it only renders meaningful content behind a query string built by the wizard flow, not as a standalone crawlable URL. Verified via `yarn build`, which lists `○ /sitemap.xml` in the route output, plus a new `tests/app/sitemap.test.ts` covering the route list and both the custom and fallback `NEXT_PUBLIC_APP_URL` cases.
 - [ ] `app/layout.tsx` metadata has `og:title`/`og:description`/`og:type` and `twitter:card`/`twitter:title`/`twitter:description`, but no `og:image` or `twitter:image` — shared links will render without a preview image on Slack/Twitter/iMessage etc. (found: 2026-09-02)
-- [ ] No canonical URL (`metadataBase`/`alternates.canonical`) set in `app/layout.tsx`'s metadata export. Low priority pre-launch, but worth adding alongside the sitemap work in Phase 9. (found: 2026-09-02)
+- [x] No canonical URL (`metadataBase`/`alternates.canonical`) set in `app/layout.tsx`'s metadata export. Low priority pre-launch, but worth adding alongside the sitemap work in Phase 9. (found: 2026-09-02) (resolved: 2026-09-12, PR #77) — added `metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000')` and `alternates: { canonical: '/' }` to the `metadata` export in `app/layout.tsx`, matching the existing `NEXT_PUBLIC_APP_URL` env-var convention already used by `app/sitemap.ts`. No test was added directly against `app/layout.tsx` (it has zero test coverage today and isn't part of the `app/**` coverage gate; importing it in vitest would also pull in `next/font/google`, which relies on the Next.js compiler transform and isn't safely importable under plain vitest). Verified via `yarn lint`, `yarn typecheck`, `yarn test` (1271 tests passing), and `yarn build` (succeeds with no `metadataBase` warning).
 
 ## 5. Responsive / UX
 
