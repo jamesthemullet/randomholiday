@@ -28,6 +28,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-09-11 — resolved section 4 `sitemap.xml` finding: added `app/sitemap.ts`.
 - 2026-09-12 — resolved section 4 canonical URL finding: added `metadataBase`/`alternates.canonical` to `app/layout.tsx`.
 - 2026-09-15 — resolved section 5 `/results` match-badge/destination-name overlap finding: moved `.matchBadge` to the top-right corner.
+- 2026-09-17 — resolved section 6 missing security response headers finding: added baseline headers (excluding CSP, deferred to the Stripe/AdSense work) in `next.config.mjs`.
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -71,7 +72,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 
 ## 6. Security
 
-- [ ] `next.config.mjs` has no security response headers configured (no CSP, HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, or `Permissions-Policy`). Not urgent today (no user auth or sensitive data handling yet), but should land before or alongside the Stripe/AdSense work in Phase 6, since third-party scripts will increase XSS surface. (found: 2026-09-02)
+- [x] `next.config.mjs` has no security response headers configured (no CSP, HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, or `Permissions-Policy`). Not urgent today (no user auth or sensitive data handling yet), but should land before or alongside the Stripe/AdSense work in Phase 6, since third-party scripts will increase XSS surface. (found: 2026-09-02) (resolved: 2026-09-17, PR #TBD) — added a `headers()` function to `next.config.mjs` applying `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy: camera=(), microphone=(), geolocation=()` (none of these APIs are used anywhere in the app today), and `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload` to every route. A Content-Security-Policy is intentionally deferred: this repo has no live browser tooling available to verify a CSP wouldn't break `next/font`'s Google Fonts stylesheets, Next.js's own inline scripts, or the eventual Stripe/AdSense third-party scripts, so — matching this item's own framing — CSP should land as part of that Phase 6 work once those concrete script sources are known, rather than being guessed at here. Added `tests/next.config.test.ts` asserting the exact header set. Verified via `yarn lint`, `yarn typecheck`, `yarn test` (1277 passing), and `yarn build`.
 - [ ] When Stripe checkout work begins (PLAN.md task 6.5), bake in webhook signature verification (`stripe.webhooks.constructEvent` against the raw request body) and a check that `STRIPE_SECRET_KEY` is never referenced from a `'use client'` file, as part of that same PR. No Stripe code exists yet (confirmed via repo-wide grep), so this is a forward-looking checklist item, not a current defect. (found: 2026-09-02)
 - [ ] `app/api/weather/route.ts:63-64` interpolates the OpenWeather API key directly into the request URL's query string. No injection risk in practice (`lat`/`lng` are validated as in-range numbers before use, and `apiKey` comes from `process.env`), but worth a comment/guard that upstream error bodies are never logged verbatim server-side, since that could otherwise leak the key into logs. (found: 2026-09-02)
 
