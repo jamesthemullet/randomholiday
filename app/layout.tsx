@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Poppins, Inter } from 'next/font/google'
+import { Header } from '@/components/Header'
 import '@/styles/globals.css'
 
 const poppins = Poppins({
@@ -43,6 +44,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-to-main">
           Skip to main content
         </a>
+        <Header />
         {children}
       </body>
     </html>
