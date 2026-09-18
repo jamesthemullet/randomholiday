@@ -35,4 +35,9 @@ describe('Header', () => {
     const nav = screen.getByRole('navigation', { name: 'Main navigation' })
     expect(nav.querySelector('ul')).toBeInTheDocument()
   })
+
+  it('renders the dark mode toggle', () => {
+    render(<Header />)
+    expect(screen.getByRole('button', { name: /switch to (dark|light) mode/i })).toBeInTheDocument()
+  })
 })
