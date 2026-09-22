@@ -30,6 +30,12 @@ export const metadata: Metadata = {
       'Get surprise holiday destination suggestions based on your budget, travel style, and departure location.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RandomHoliday — Discover Your Next Adventure',
+    description:
+      'Get surprise holiday destination suggestions based on your budget, travel style, and departure location.',
+  },
 }
 
 export default function RootLayout({
