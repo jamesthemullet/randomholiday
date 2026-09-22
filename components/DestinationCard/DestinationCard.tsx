@@ -57,6 +57,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
               <button
                 type="button"
                 className={styles.selectBtn}
+                tabIndex={isFlipped ? -1 : 0}
                 onClick={(e) => {
                   e.stopPropagation()
                   onSelect()
@@ -84,6 +85,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
               <button
                 type="button"
                 className={styles.selectBtn}
+                tabIndex={isFlipped ? 0 : -1}
                 onClick={(e) => {
                   e.stopPropagation()
                   onSelect()

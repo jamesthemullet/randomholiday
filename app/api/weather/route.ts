@@ -60,6 +60,8 @@ async function fetchLiveWeather(
   apiKey: string
 ): Promise<{ source: 'live'; tempC: number; description: string } | null> {
   try {
+    // This URL embeds OPENWEATHER_API_KEY in the query string: never log it or the
+    // raw response body below, on success or failure — only response.status is safe to log.
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey}`,
       { signal: AbortSignal.timeout(LIVE_WEATHER_TIMEOUT_MS) }
