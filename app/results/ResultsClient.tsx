@@ -3,7 +3,7 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { destinations } from '@/lib/destinations'
+import { destinations, TRAVEL_STYLES } from '@/lib/destinations'
 import type { TravelStyle } from '@/lib/destinations'
 import { departureCities } from '@/lib/departureCities'
 import { getRecommendations } from '@/lib/recommendationEngine'
@@ -26,7 +26,11 @@ export function ResultsClient() {
     const groupSize = Number(searchParams.get('groupSize'))
     const travelMonth = Number(searchParams.get('month'))
     const stylesParam = searchParams.get('styles')
-    const travelStyles = stylesParam ? (stylesParam.split(',') as TravelStyle[]) : undefined
+    const travelStyles = stylesParam
+      ? stylesParam
+          .split(',')
+          .filter((style): style is TravelStyle => TRAVEL_STYLES.includes(style as TravelStyle))
+      : undefined
 
     if (!city || !budget || !maxDistanceKm || !nights || !groupSize) return null
 
