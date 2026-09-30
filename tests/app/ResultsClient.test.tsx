@@ -71,4 +71,23 @@ describe('ResultsClient', () => {
     )
     expect(hasSomeDestinationName).toBe(true)
   })
+
+  it('ignores invalid travel style values in the styles param instead of crashing', () => {
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+      styles: 'beach,not-a-real-style',
+    })
+
+    render(<ResultsClient />)
+
+    const hasSomeDestinationName = destinations.some(
+      (d) => screen.queryAllByText(d.name).length > 0
+    )
+    expect(hasSomeDestinationName).toBe(true)
+  })
 })
