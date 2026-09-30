@@ -33,6 +33,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-09-19 — resolved section 1's `e2e/` directory finding: verified stale, not reproducible on current `main` (already fixed by PR #78's `e2e/smoke.spec.ts`, which predates this run but wasn't reflected here); no code change needed. See item note for details.
 - 2026-09-21 — resolved section 4 missing `og:image`/`twitter:image` finding: added `app/opengraph-image.tsx` (Next file-convention `ImageResponse`) and explicit `twitter` metadata in `app/layout.tsx`.
 - 2026-09-22 — resolved section 6 OpenWeather API key logging finding: added a guard comment in `app/api/weather/route.ts` against logging the request URL or raw response body.
+- 2026-09-24 — resolved section 7 PLAN.md destination-count finding: `lib/destinations.ts` has 56 destinations, not the 55 PLAN.md line 52 claimed; fixed the count in PLAN.md.
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -85,7 +86,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [ ] PLAN.md lines 3-7 (header block) is silent on the fact that CI on `main` is currently failing (coverage gate + `DarkModeToggle` suite crash — see section 1), which undercuts the "Phase 1-5 COMPLETE" framing those phases carry above it. (found: 2026-09-02)
 - [ ] PLAN.md line 46 and line 58 both claim "100% coverage" for Phase 2/3 — this is currently false; see section 1 for the actual numbers and root cause (`DarkModeToggle` localStorage crash + several partially-covered files). (found: 2026-09-02)
 - [ ] PLAN.md line 16 ("Playwright setup" ✅) is technically true (config exists) but reads as more complete than reality — no `e2e/` directory or specs exist, and CI's e2e job fails with "No tests found" on every run. See section 1. (found: 2026-09-02)
-- [ ] PLAN.md line 52 states "55 destinations across 6 continents" — actual count in `lib/destinations.ts` is 56. Minor/cosmetic, but worth a one-line fix next time that file is touched. (found: 2026-09-02)
+- [x] PLAN.md line 52 states "55 destinations across 6 continents" — actual count in `lib/destinations.ts` is 56. Minor/cosmetic, but worth a one-line fix next time that file is touched. (found: 2026-09-02) (resolved: 2026-09-24, PR #89) — verified the discrepancy: `lib/destinations.ts` currently has 56 `id:` entries spanning all 6 continents named in PLAN.md (`Europe`, `Africa`, `Middle East`, `Asia`, `Americas`, `Oceania`). Changed PLAN.md line 52 from "55 destinations" to "56 destinations" to match. No other PLAN.md text or AUDIT.md content touched.
 - [ ] PLAN.md line 17 describes Husky pre-commit hooks running lint + typecheck + lint-staged; the actual `.husky/pre-commit` invokes `npx lint-staged` and `npm run typecheck`, not `yarn` — inconsistent with the project's yarn-only convention (the CI workflow itself is all-yarn). (found: 2026-09-02)
 - [ ] PLAN.md Phase 2 lines 44-45 mark "Layout shell: Header, Main, Footer" and "Dark mode toggle component" as complete, but neither is actually wired into the live app — see the detailed finding in section 5. This is the most user-visible roadmap/reality gap found this pass. (found: 2026-09-02)
 
