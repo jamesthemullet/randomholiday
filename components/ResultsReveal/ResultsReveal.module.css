@@ -21,6 +21,8 @@
 
 .cardWrapper {
   position: relative;
+  max-width: 24rem;
+  margin: 0 auto;
 }
 
 .matchBadge {
