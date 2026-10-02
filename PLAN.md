@@ -43,7 +43,7 @@ Sub-steps:
 - [x] Destination card with flip animation (DestinationCard.tsx + .module.css)
 - [x] Layout shell: Header, Main, Footer (each with own .module.css)
 - [x] Dark mode toggle component
-- [x] Unit tests for all components (100% coverage — 135 tests, 100% lines/branches/functions/statements)
+- [x] Unit tests for all components (coverage gated at ≥95% lines/branches/statements and 100% functions per `vitest.config.ts`'s `components/**` threshold — not 100% across every file; see AUDIT.md §1)
 
 ---
 
@@ -55,7 +55,7 @@ Sub-steps:
 - [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
 - [x] Scoring algorithm (weights: style match, season match, budget, distance) — 35 tests, 100% coverage
 - [x] Recommendation engine (combines filter + scoring + randomisation, weighted pool sampling) — 16 tests, 100% coverage
-- [x] 100% unit test coverage for all /lib (verified via `yarn vitest run --coverage`: 100% statements/branches/functions/lines)
+- [x] Unit test coverage for all /lib gated at ≥95% branches and 100% statements/functions/lines per `vitest.config.ts`'s `lib/**` threshold (currently 100%/99.12%/100%/100% — not literally 100% across every branch; see AUDIT.md §1)
 
 ---
 
