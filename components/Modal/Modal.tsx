@@ -20,9 +20,11 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
   useEffect(() => {
     if (!isOpen) return
 
+    const modal = modalRef.current
+    if (!modal) return
+
     document.body.setAttribute('data-modal-open', 'true')
 
-    const modal = modalRef.current!
     const focusable = Array.from(modal.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
     const first = focusable[0]
     const last = focusable[focusable.length - 1]
