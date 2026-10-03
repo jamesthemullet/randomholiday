@@ -6,6 +6,7 @@ import styles from './Header.module.css'
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/discover', label: 'Discover' },
+  { href: '/pricing', label: 'Pricing' },
 ] as const
 
 export function Header() {

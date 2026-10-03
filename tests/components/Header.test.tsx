@@ -30,6 +30,11 @@ describe('Header', () => {
     expect(screen.getByRole('link', { name: 'Discover' })).toHaveAttribute('href', '/discover')
   })
 
+  it('renders Pricing nav link', () => {
+    render(<Header />)
+    expect(screen.getByRole('link', { name: 'Pricing' })).toHaveAttribute('href', '/pricing')
+  })
+
   it('renders nav links in a list', () => {
     render(<Header />)
     const nav = screen.getByRole('navigation', { name: 'Main navigation' })
