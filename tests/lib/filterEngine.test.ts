@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { filterDestinations, getFilteredDestinations } from '@/lib/filterEngine'
+import { filterDestinations } from '@/lib/filterEngine'
 import type { FilterParams } from '@/lib/filterEngine'
 import type { Destination } from '@/lib/destinations'
 
@@ -338,24 +338,5 @@ describe('filterDestinations', () => {
     })
     expect(longTrip.passed).toHaveLength(0)
     expect(longTrip.removedByBudget).toHaveLength(1)
-  })
-})
-
-// ── getFilteredDestinations ───────────────────────────────────────────────────
-
-describe('getFilteredDestinations', () => {
-  it('returns the same passing set as filterDestinations', () => {
-    const params: FilterParams = { ...DEFAULT_PARAMS, maxDistanceKm: 2200 }
-    const fromFull = filterDestinations(ALL, params).passed
-    const fromConvenience = getFilteredDestinations(ALL, params)
-    expect(fromConvenience).toEqual(fromFull)
-  })
-
-  it('returns an empty array when no destinations pass', () => {
-    expect(getFilteredDestinations(ALL, { ...DEFAULT_PARAMS, maxBudgetPerPerson: 0 })).toEqual([])
-  })
-
-  it('returns all destinations when limits are very generous', () => {
-    expect(getFilteredDestinations(ALL, DEFAULT_PARAMS)).toHaveLength(ALL.length)
   })
 })

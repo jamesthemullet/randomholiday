@@ -28,28 +28,3 @@ export function calculateDistance(from: Coordinates, to: Coordinates): number {
 
   return EARTH_RADIUS_KM * c
 }
-
-/**
- * Returns true if the destination is within maxDistanceKm of the origin.
- */
-export function isWithinDistance(
-  origin: Coordinates,
-  destination: Coordinates,
-  maxDistanceKm: number
-): boolean {
-  return calculateDistance(origin, destination) <= maxDistanceKm
-}
-
-/**
- * Sorts an array of items by their distance from the origin (nearest first).
- * The caller provides a function to extract coordinates from each item.
- */
-export function sortByDistance<T>(
-  origin: Coordinates,
-  items: T[],
-  getCoords: (item: T) => Coordinates
-): T[] {
-  return [...items].sort(
-    (a, b) => calculateDistance(origin, getCoords(a)) - calculateDistance(origin, getCoords(b))
-  )
-}
