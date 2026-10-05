@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import { DarkModeToggle } from '@/components/DarkModeToggle'
 import styles from './Header.module.css'
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/discover', label: 'Discover' },
+  { href: '/pricing', label: 'Pricing' },
 ] as const
 
 export function Header() {
@@ -14,17 +16,20 @@ export function Header() {
         <Link href="/" className={styles.brand} aria-label="RandomHoliday home">
           RandomHoliday
         </Link>
-        <nav className={styles.nav} aria-label="Main navigation">
-          <ul className={styles.navList}>
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className={styles.navLink}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={styles.actions}>
+          <nav className={styles.nav} aria-label="Main navigation">
+            <ul className={styles.navList}>
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={styles.navLink}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <DarkModeToggle />
+        </div>
       </div>
     </header>
   )
