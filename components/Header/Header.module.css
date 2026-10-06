@@ -30,6 +30,12 @@
   color: var(--color-turquoise-dark);
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -58,6 +64,10 @@
 
 @media (max-width: 640px) {
   .navList {
+    gap: var(--space-4);
+  }
+
+  .actions {
     gap: var(--space-4);
   }
 }
