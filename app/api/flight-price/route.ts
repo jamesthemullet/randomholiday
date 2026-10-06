@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { estimateFlightCostPerPerson } from '@/lib/budgetCalculator'
+import { parseNumberParam } from '@/lib/queryParams'
 
 export async function GET(request: Request): Promise<NextResponse> {
   const { searchParams } = new URL(request.url)
@@ -9,8 +10,8 @@ export async function GET(request: Request): Promise<NextResponse> {
     return NextResponse.json({ error: 'distanceKm is required' }, { status: 400 })
   }
 
-  const distanceKm = Number(distanceKmParam)
-  if (!Number.isFinite(distanceKm) || distanceKm < 0) {
+  const distanceKm = parseNumberParam(distanceKmParam)
+  if (distanceKm === null || distanceKm < 0) {
     return NextResponse.json({ error: 'distanceKm must be a non-negative number' }, { status: 400 })
   }
 
