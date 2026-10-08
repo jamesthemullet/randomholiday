@@ -27,7 +27,11 @@ export interface FilterResult {
   removedByStyle: Destination[]
 }
 
-function meetsDistanceFilter(destination: Destination, origin: Coordinates, maxDistanceKm: number): boolean {
+function meetsDistanceFilter(
+  destination: Destination,
+  origin: Coordinates,
+  maxDistanceKm: number
+): boolean {
   return calculateDistance(origin, destination.coordinates) <= maxDistanceKm
 }
 
@@ -53,7 +57,10 @@ function meetsStyleFilter(destination: Destination, travelStyles: TravelStyle[])
  *
  * Filter order: distance → budget → travel style.
  */
-export function filterDestinations(destinations: Destination[], params: FilterParams): FilterResult {
+export function filterDestinations(
+  destinations: Destination[],
+  params: FilterParams
+): FilterResult {
   const { origin, maxBudgetPerPerson, maxDistanceKm, nights, groupSize, travelStyles } = params
 
   if (maxDistanceKm < 0) throw new Error('maxDistanceKm must be non-negative')
@@ -87,11 +94,4 @@ export function filterDestinations(destinations: Destination[], params: FilterPa
       : afterBudget
 
   return { passed, removedByDistance, removedByBudget, removedByStyle }
-}
-
-/**
- * Convenience wrapper that returns only the passing destinations.
- */
-export function getFilteredDestinations(destinations: Destination[], params: FilterParams): Destination[] {
-  return filterDestinations(destinations, params).passed
 }
