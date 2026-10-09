@@ -25,23 +25,25 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
   const cardClasses = [styles.card]
   if (isFlipped) cardClasses.push(styles.flipped)
 
+  const flip = () => setIsFlipped((f) => !f)
+
   return (
-    <div
-      className={styles.scene}
-      onClick={() => setIsFlipped((f) => !f)}
-      role="button"
-      tabIndex={0}
-      aria-pressed={isFlipped}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          setIsFlipped((f) => !f)
-        }
-      }}
-      aria-label={`${name}, ${country}. Click to ${isFlipped ? 'see photo' : 'see details'}`}
-    >
+    <div className={styles.scene} onClick={flip}>
       <div className={cardClasses.join(' ')}>
         <div className={styles.front} aria-hidden={isFlipped}>
+          <button
+            type="button"
+            className={styles.flipTrigger}
+            tabIndex={isFlipped ? -1 : 0}
+            aria-pressed={isFlipped}
+            aria-label={`${name}, ${country}. Click to see details`}
+            onClick={(e) => {
+              e.stopPropagation()
+              flip()
+            }}
+          >
+            Flip card
+          </button>
           {imageUrl && !imageFailed && (
             <img
               src={imageUrl}
@@ -70,6 +72,19 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
         </div>
 
         <div className={styles.back} aria-hidden={!isFlipped}>
+          <button
+            type="button"
+            className={styles.flipTrigger}
+            tabIndex={isFlipped ? 0 : -1}
+            aria-pressed={isFlipped}
+            aria-label={`${name}, ${country}. Click to see photo`}
+            onClick={(e) => {
+              e.stopPropagation()
+              flip()
+            }}
+          >
+            Flip card
+          </button>
           <div className={styles.backContent}>
             <h3 className={styles.name}>{name}</h3>
             {climate && <p className={styles.climate}>{climate}</p>}
