@@ -5,12 +5,6 @@
   cursor: pointer;
 }
 
-.scene:focus-visible {
-  outline: 3px solid var(--color-border-focus);
-  outline-offset: 4px;
-  border-radius: var(--radius-xl);
-}
-
 .card {
   width: 100%;
   height: 100%;
@@ -39,6 +33,29 @@
   transform: rotateY(180deg);
   background: linear-gradient(135deg, var(--color-ocean) 0%, var(--color-turquoise-dark) 100%);
   color: var(--color-white);
+}
+
+.flipTrigger {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 1;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-accent-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flipTrigger:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  outline: 3px solid var(--color-border-focus);
+  outline-offset: 2px;
 }
 
 .image {

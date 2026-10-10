@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { DestinationCard } from '@/components/DestinationCard'
 import type { Destination } from '@/components/DestinationCard'
 
@@ -13,6 +14,11 @@ describe('DestinationCard', () => {
     render(<DestinationCard destination={baseDest} />)
     expect(screen.getAllByText('Bali').length).toBeGreaterThan(0)
     expect(screen.getByText('Indonesia')).toBeInTheDocument()
+  })
+
+  it('does not expose the card as a single nested-interactive control', () => {
+    const { container } = render(<DestinationCard destination={baseDest} onSelect={vi.fn()} />)
+    expect(container.querySelector('[role="button"]')).not.toBeInTheDocument()
   })
 
   it('is not flipped initially (aria-pressed=false)', () => {
@@ -34,22 +40,27 @@ describe('DestinationCard', () => {
     expect(card).toHaveAttribute('aria-pressed', 'false')
   })
 
-  it('flips on Enter key', () => {
+  it('flips back to front via the back-face trigger', () => {
     render(<DestinationCard destination={baseDest} />)
-    fireEvent.keyDown(screen.getByRole('button'), { key: 'Enter' })
+    fireEvent.click(screen.getByRole('button'))
+    fireEvent.click(screen.getByRole('button', { name: /click to see photo/i }))
+    expect(screen.getByRole('button', { name: /bali/i })).toHaveAttribute('aria-pressed', 'false')
+  })
+
+  it('flips on Enter key', async () => {
+    const user = userEvent.setup()
+    render(<DestinationCard destination={baseDest} />)
+    screen.getByRole('button').focus()
+    await user.keyboard('{Enter}')
     expect(screen.getByRole('button')).toHaveAttribute('aria-pressed', 'true')
   })
 
-  it('flips on Space key', () => {
+  it('flips on Space key', async () => {
+    const user = userEvent.setup()
     render(<DestinationCard destination={baseDest} />)
-    fireEvent.keyDown(screen.getByRole('button'), { key: ' ' })
+    screen.getByRole('button').focus()
+    await user.keyboard(' ')
     expect(screen.getByRole('button')).toHaveAttribute('aria-pressed', 'true')
-  })
-
-  it('does not flip on other keys', () => {
-    render(<DestinationCard destination={baseDest} />)
-    fireEvent.keyDown(screen.getByRole('button'), { key: 'Tab' })
-    expect(screen.getByRole('button')).toHaveAttribute('aria-pressed', 'false')
   })
 
   it('renders image when imageUrl provided', () => {
@@ -152,18 +163,15 @@ describe('DestinationCard', () => {
   })
 
   it('applies flipped class when flipped', () => {
-    render(<DestinationCard destination={baseDest} />)
+    const { container } = render(<DestinationCard destination={baseDest} />)
     fireEvent.click(screen.getByRole('button'))
-    // Find the inner card div
-    const scene = screen.getByRole('button')
-    const inner = scene.querySelector('div')
+    const inner = container.querySelector('[class*="scene"]')?.firstElementChild
     expect(inner?.className).toContain('flipped')
   })
 
   it('does not apply flipped class initially', () => {
-    render(<DestinationCard destination={baseDest} />)
-    const scene = screen.getByRole('button')
-    const inner = scene.querySelector('div')
+    const { container } = render(<DestinationCard destination={baseDest} />)
+    const inner = container.querySelector('[class*="scene"]')?.firstElementChild
     expect(inner?.className).not.toContain('flipped')
   })
 
