@@ -1,0 +1,33 @@
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-bg-secondary);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.banner {
+  max-width: 320px;
+  height: 50px;
+}
+
+.rectangle {
+  max-width: 300px;
+  height: 250px;
+}
+
+.leaderboard {
+  max-width: 728px;
+  height: 90px;
+}
