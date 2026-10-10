@@ -15,6 +15,10 @@
   --color-ocean: #06427c;
   --color-ocean-light: #0a5fa8;
   --color-ocean-dark: #032d54;
+  --color-success-bg: #d1fae5;
+  --color-success-text: #065f46;
+  --color-danger-bg: #fee2e2;
+  --color-danger-text: #991b1b;
 
   /* Neutrals */
   --color-white: #ffffff;

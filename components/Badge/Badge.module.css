@@ -28,8 +28,8 @@
 }
 
 .success {
-  background-color: #d1fae5;
-  color: #065f46;
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
 }
 
 .warning {
@@ -38,6 +38,6 @@
 }
 
 .danger {
-  background-color: #fee2e2;
-  color: #991b1b;
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
 }

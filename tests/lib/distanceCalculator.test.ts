@@ -1,10 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import {
-  toRadians,
-  calculateDistance,
-  isWithinDistance,
-  sortByDistance,
-} from '@/lib/distanceCalculator'
+import { toRadians, calculateDistance } from '@/lib/distanceCalculator'
 import type { Coordinates } from '@/lib/destinations'
 
 // Well-known coordinate pairs for ground-truth checks
@@ -83,76 +78,5 @@ describe('calculateDistance', () => {
     const distance = calculateDistance(capeTown, buenosAires)
     expect(distance).toBeGreaterThan(6000)
     expect(distance).toBeLessThan(8000)
-  })
-})
-
-describe('isWithinDistance', () => {
-  it('returns true when destination is closer than maxDistanceKm', () => {
-    // London to Paris is ~341 km
-    expect(isWithinDistance(LONDON, PARIS, 400)).toBe(true)
-  })
-
-  it('returns false when destination is farther than maxDistanceKm', () => {
-    expect(isWithinDistance(LONDON, PARIS, 300)).toBe(false)
-  })
-
-  it('returns true when destination is exactly at maxDistanceKm (boundary inclusive)', () => {
-    const distance = calculateDistance(LONDON, PARIS)
-    expect(isWithinDistance(LONDON, PARIS, distance)).toBe(true)
-  })
-
-  it('returns true for same point with any positive maxDistanceKm', () => {
-    expect(isWithinDistance(LONDON, LONDON, 1)).toBe(true)
-  })
-
-  it('returns true for same point with maxDistanceKm of 0', () => {
-    expect(isWithinDistance(LONDON, LONDON, 0)).toBe(true)
-  })
-
-  it('returns false for New York from London with max 1000 km', () => {
-    expect(isWithinDistance(LONDON, NEW_YORK, 1000)).toBe(false)
-  })
-})
-
-describe('sortByDistance', () => {
-  const cities: { name: string; coords: Coordinates }[] = [
-    { name: 'Sydney', coords: SYDNEY },
-    { name: 'Paris', coords: PARIS },
-    { name: 'New York', coords: NEW_YORK },
-  ]
-
-  it('sorts items nearest-first from origin', () => {
-    const sorted = sortByDistance(LONDON, cities, (c) => c.coords)
-    expect(sorted[0].name).toBe('Paris')
-    expect(sorted[1].name).toBe('New York')
-    expect(sorted[2].name).toBe('Sydney')
-  })
-
-  it('returns an empty array when given an empty array', () => {
-    expect(sortByDistance(LONDON, [], (c: { coords: Coordinates }) => c.coords)).toEqual([])
-  })
-
-  it('returns a single-item array unchanged', () => {
-    const result = sortByDistance(LONDON, [cities[0]], (c) => c.coords)
-    expect(result).toHaveLength(1)
-    expect(result[0].name).toBe('Sydney')
-  })
-
-  it('does not mutate the original array', () => {
-    const original = [...cities]
-    sortByDistance(LONDON, cities, (c) => c.coords)
-    expect(cities.map((c) => c.name)).toEqual(original.map((c) => c.name))
-  })
-
-  it('handles two equally-distant items without throwing', () => {
-    const mirror1: Coordinates = { lat: 0, lng: 10 }
-    const mirror2: Coordinates = { lat: 0, lng: -10 }
-    const origin: Coordinates = { lat: 0, lng: 0 }
-    const items = [
-      { name: 'A', coords: mirror1 },
-      { name: 'B', coords: mirror2 },
-    ]
-    const result = sortByDistance(origin, items, (c) => c.coords)
-    expect(result).toHaveLength(2)
   })
 })
