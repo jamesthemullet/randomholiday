@@ -40,6 +40,13 @@ describe('DestinationCard', () => {
     expect(card).toHaveAttribute('aria-pressed', 'false')
   })
 
+  it('flips back to front via the back-face trigger', () => {
+    render(<DestinationCard destination={baseDest} />)
+    fireEvent.click(screen.getByRole('button'))
+    fireEvent.click(screen.getByRole('button', { name: /click to see photo/i }))
+    expect(screen.getByRole('button', { name: /bali/i })).toHaveAttribute('aria-pressed', 'false')
+  })
+
   it('flips on Enter key', async () => {
     const user = userEvent.setup()
     render(<DestinationCard destination={baseDest} />)
