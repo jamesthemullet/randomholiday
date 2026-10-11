@@ -1,10 +1,10 @@
 # RandomHoliday — Build Plan
 
-## Current Phase: Phase 6 — Monetisation Layer
+## Current Phase: Phase 7 — Accessibility Audit & Polish
 
-## Last Completed: Task 6.6 — Added AdSense placeholder component (`AdSlot`, banner/rectangle/leaderboard formats, ad-free for Pro tier) ✅
+## Last Completed: Task 6.7 — Raised GitHub issue "Stripe + Affiliate Keys Required" (#108) — Phase 6 complete ✅
 
-## Next: Task 6.7 — RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required"
+## Next: Task 7.1 — axe-core sweep across all pages
 
 ---
 
@@ -92,7 +92,7 @@ Sub-steps:
 - [x] Pricing page
 - [x] Stripe checkout + webhook handler scaffold
 - [x] AdSense placeholder components
-- [ ] RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required"
+- [x] RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required" (#108)
 
 ---
 
