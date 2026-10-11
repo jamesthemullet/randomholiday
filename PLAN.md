@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 6 — Monetisation Layer
 
-## Last Completed: Task 6.5 — Added Stripe checkout + webhook handler scaffold (`/api/checkout`, `/api/webhooks/stripe`) ✅
+## Last Completed: Task 6.6 — Added AdSense placeholder component (`AdSlot`, banner/rectangle/leaderboard formats, ad-free for Pro tier) ✅
 
-## Next: Task 6.6 — Add AdSense placeholder components
+## Next: Task 6.7 — RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required"
 
 ---
 
@@ -91,7 +91,7 @@ Sub-steps:
 - [x] Pro tier UI (feature gates, upgrade prompts)
 - [x] Pricing page
 - [x] Stripe checkout + webhook handler scaffold
-- [ ] AdSense placeholder components
+- [x] AdSense placeholder components
 - [ ] RAISE GITHUB ISSUE: "Stripe + Affiliate Keys Required"
 
 ---
