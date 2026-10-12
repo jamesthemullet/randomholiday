@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { getDestinationImagePath } from '@/lib/destinationImage'
@@ -16,6 +16,19 @@ export interface DestinationDetailModalProps {
   distanceKm: number
   nights: number
   groupSize: number
+  /** 1-12. Defaults to the current calendar month when not provided. */
+  month?: number
+}
+
+type WeatherEstimate =
+  | { source: 'live'; tempC: number; description: string }
+  | { source: 'static'; avgHighC: number; description: string }
+
+interface WeatherResult {
+  /** `${destinationId}:${month}`, used to tell a stale result from the current request. */
+  key: string
+  status: 'loaded' | 'error'
+  data: WeatherEstimate | null
 }
 
 const currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -31,16 +44,51 @@ export function DestinationDetailModal({
   distanceKm,
   nights,
   groupSize,
+  month,
 }: DestinationDetailModalProps) {
   const [imageFailed, setImageFailed] = useState(false)
   const [imageFailedForId, setImageFailedForId] = useState(destination?.id)
+  const [weatherResult, setWeatherResult] = useState<WeatherResult | null>(null)
 
   if (destination?.id !== imageFailedForId) {
     setImageFailedForId(destination?.id)
     setImageFailed(false)
   }
 
+  const travelMonth = month ?? new Date().getMonth() + 1
+  const weatherKey = destination ? `${destination.id}:${travelMonth}` : null
+
+  useEffect(() => {
+    if (!isOpen || !destination || !weatherKey) return
+
+    const controller = new AbortController()
+    const params = new URLSearchParams({
+      lat: String(destination.coordinates.lat),
+      lng: String(destination.coordinates.lng),
+      climate: destination.climate,
+      month: String(travelMonth),
+    })
+
+    fetch(`/api/weather?${params.toString()}`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error('weather request failed')
+        return response.json() as Promise<WeatherEstimate>
+      })
+      .then((data) => {
+        setWeatherResult({ key: weatherKey, status: 'loaded', data })
+      })
+      .catch(() => {
+        if (!controller.signal.aborted) {
+          setWeatherResult({ key: weatherKey, status: 'error', data: null })
+        }
+      })
+
+    return () => controller.abort()
+  }, [isOpen, destination, weatherKey, travelMonth])
+
   if (!destination) return null
+
+  const currentWeather = weatherResult?.key === weatherKey ? weatherResult : null
 
   const budget = calculateBudget({ destination, distanceKm, nights, groupSize })
   const bookingUrl = getBookingAffiliateUrl({
@@ -83,6 +131,30 @@ export function DestinationDetailModal({
       )}
 
       <p className={styles.description}>{destination.description}</p>
+
+      <section aria-labelledby="weather-heading" className={styles.section}>
+        <h3 id="weather-heading" className={styles.sectionTitle}>
+          Weather
+        </h3>
+        {!currentWeather && <p className={styles.weatherStatus}>Loading seasonal weather…</p>}
+        {currentWeather?.status === 'error' && (
+          <p className={styles.weatherStatus}>Weather estimate unavailable right now.</p>
+        )}
+        {currentWeather?.status === 'loaded' && currentWeather.data && (
+          <p className={styles.weatherSummary}>
+            Typically{' '}
+            <strong>
+              {Math.round(
+                currentWeather.data.source === 'live'
+                  ? currentWeather.data.tempC
+                  : currentWeather.data.avgHighC
+              )}
+              °C
+            </strong>{' '}
+            and {currentWeather.data.description}.
+          </p>
+        )}
+      </section>
 
       <section aria-labelledby="cost-breakdown-heading" className={styles.section}>
         <h3 id="cost-breakdown-heading" className={styles.sectionTitle}>
