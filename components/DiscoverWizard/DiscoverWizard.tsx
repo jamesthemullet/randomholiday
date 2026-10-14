@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { DepartureAutocomplete } from '@/components/DepartureAutocomplete'
 import type { DepartureCity } from '@/lib/departureCities'
@@ -49,6 +49,19 @@ export function DiscoverWizard() {
   const [travelStyles, setTravelStyles] = useState<TravelStyle[]>([])
   const [maxDistance, setMaxDistance] = useState(10000)
   const [groupSize, setGroupSize] = useState(2)
+  const progressRef = useRef<HTMLParagraphElement>(null)
+  const hasStepChanged = useRef(false)
+
+  // Moves focus to the step announcement when the step changes, so keyboard and
+  // screen-reader users land at the top of the new step instead of staying on the
+  // Back/Next button below it. Skipped on mount, since the first step needs no announcement.
+  useEffect(() => {
+    if (!hasStepChanged.current) {
+      hasStepChanged.current = true
+      return
+    }
+    progressRef.current?.focus()
+  }, [step])
 
   const canProceed = [city !== null, true, month !== null, true, true][step]
 
@@ -80,7 +93,7 @@ export function DiscoverWizard() {
       <h1 id="wizard-heading" className={styles.heading}>
         Plan your surprise trip
       </h1>
-      <p className={styles.progress} role="status">
+      <p ref={progressRef} className={styles.progress} role="status" tabIndex={-1}>
         Step {step + 1} of {STEP_LABELS.length}: {STEP_LABELS[step]}
       </p>
 

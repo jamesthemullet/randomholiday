@@ -192,4 +192,23 @@ describe('DestinationCard', () => {
     expect(frontBtn).toHaveAttribute('tabIndex', '-1')
     expect(backBtn).toHaveAttribute('tabIndex', '0')
   })
+
+  it('moves focus to the back face trigger after flipping, so focus never stays on the now aria-hidden front face', () => {
+    render(<DestinationCard destination={baseDest} />)
+    screen.getByRole('button', { name: /click to see details/i }).focus()
+    fireEvent.click(screen.getByRole('button', { name: /click to see details/i }))
+    expect(screen.getByRole('button', { name: /click to see photo/i })).toHaveFocus()
+  })
+
+  it('moves focus back to the front face trigger after flipping back', () => {
+    render(<DestinationCard destination={baseDest} />)
+    fireEvent.click(screen.getByRole('button', { name: /click to see details/i }))
+    fireEvent.click(screen.getByRole('button', { name: /click to see photo/i }))
+    expect(screen.getByRole('button', { name: /click to see details/i })).toHaveFocus()
+  })
+
+  it('does not steal focus on initial render', () => {
+    render(<DestinationCard destination={baseDest} />)
+    expect(screen.getByRole('button', { name: /click to see details/i })).not.toHaveFocus()
+  })
 })
