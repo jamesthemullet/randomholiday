@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 7 — Accessibility Audit & Polish
 
-## Last Completed: Task 7.3 — ARIA labels + focus management audit + fixes — audited every component for ARIA labelling and focus-management gaps not already covered by the 7.1 (axe) and 7.2 (keyboard nav) passes. Form input label association, icon-only button labelling, and image alt text were already correct, so this was a bounded fix: (1) Modal now restores focus to the element that triggered it when it closes, instead of dropping focus back to the document body; (2) ResultsReveal now announces the matched destination via a visually-hidden `role="status"` live region so Shuffle updates reach screen reader users; (3) Header nav links now get `aria-current="page"` (plus a visual style) on the link matching the current route, via `usePathname()`.
+## Last Completed: Task 7.4 — Add skip-to-main link + route change announcer — the skip-to-main link already existed (added in Phase 1), so this added the missing half: a `RouteAnnouncer` component rendered in the root layout that watches `usePathname()` and, on each change, announces the new `document.title` via a visually-hidden `role="status"` live region, so screen reader users are told a new page loaded on client-side navigations (which don't trigger the browser's native announcement).
 
-## Next: Task 7.4 — Add skip-to-main link + route change announcer
+## Next: Task 7.5 — Add accessibility unit tests (axe-core in Vitest)
 
 ---
 
@@ -103,8 +103,8 @@ Sub-steps:
 - [x] ARIA labels audit (form input label association, icon-only buttons and image alt text were already correct; fixed Modal not restoring focus to its trigger on close, ResultsReveal's Shuffle update having no live-region announcement, and Header nav links missing `aria-current="page"`)
 - [x] Colour contrast check (WCAG AA) — covered by the 7.1 axe-core sweep
 - [x] Focus trap in modals — pre-existing trap verified in 7.2, focus restoration to trigger on close added in 7.3
-- [ ] Skip-to-main link
-- [ ] Route change announcements for screen readers
+- [x] Skip-to-main link
+- [x] Route change announcements for screen readers
 - [ ] Accessibility unit tests
 
 ---
