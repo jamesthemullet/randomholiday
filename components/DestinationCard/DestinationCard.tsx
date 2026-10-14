@@ -53,7 +53,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
             />
           )}
           <div className={styles.frontContent}>
-            <h3 className={styles.name}>{name}</h3>
+            <h2 className={styles.name}>{name}</h2>
             <p className={styles.country}>{country}</p>
             {onSelect && (
               <button
@@ -86,7 +86,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
             Flip card
           </button>
           <div className={styles.backContent}>
-            <h3 className={styles.name}>{name}</h3>
+            <h2 className={styles.name}>{name}</h2>
             {climate && <p className={styles.climate}>{climate}</p>}
             {description && <p className={styles.description}>{description}</p>}
             {activities && activities.length > 0 && (

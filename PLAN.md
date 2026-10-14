@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 7 — Accessibility Audit & Polish
 
-## Last Completed: Task 6.7 — Raised GitHub issue "Stripe + Affiliate Keys Required" (#108) — Phase 6 complete ✅
+## Last Completed: Task 7.1 — axe-core sweep across all pages (home, discover, results, pricing, destination detail modal) — fixed two serious WCAG AA color-contrast violations (Button primary/danger, Badge secondary) and one heading-order violation (DestinationCard name)
 
-## Next: Task 7.1 — axe-core sweep across all pages
+## Next: Task 7.2 — Full keyboard navigation audit + fixes
 
 ---
 
@@ -98,7 +98,7 @@ Sub-steps:
 
 ## Phase 7: Accessibility Audit & Polish
 
-- [ ] axe-core sweep across all pages
+- [x] axe-core sweep across all pages (`@axe-core/playwright` e2e scan of home, discover, results, pricing, and the destination detail modal; fixed Button primary/danger and Badge secondary color-contrast, and DestinationCard heading order)
 - [ ] Full keyboard navigation testing + fixes
 - [ ] ARIA labels audit
 - [ ] Colour contrast check (WCAG AA)
