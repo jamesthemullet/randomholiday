@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 7 — Accessibility Audit & Polish
 
-## Last Completed: Task 7.1 — axe-core sweep across all pages (home, discover, results, pricing, destination detail modal) — fixed two serious WCAG AA color-contrast violations (Button primary/danger, Badge secondary) and one heading-order violation (DestinationCard name)
+## Last Completed: Task 7.2 — Full keyboard navigation audit + fixes — audited every interactive component for keyboard operability; fixed two real focus-management bugs: DestinationCard left DOM focus inside the now-`aria-hidden` face after a flip, and DiscoverWizard gave no focus cue when moving between wizard steps. Everything else audited (Modal focus trap, DepartureAutocomplete combobox, TravelStyleSelector, Slider/BudgetSlider, Card, skip-to-main link, Header/Footer/nav) was already keyboard-operable with visible focus rings.
 
-## Next: Task 7.2 — Full keyboard navigation audit + fixes
+## Next: Task 7.3 — ARIA labels + focus management audit + fixes
 
 ---
 
@@ -99,7 +99,7 @@ Sub-steps:
 ## Phase 7: Accessibility Audit & Polish
 
 - [x] axe-core sweep across all pages (`@axe-core/playwright` e2e scan of home, discover, results, pricing, and the destination detail modal; fixed Button primary/danger and Badge secondary color-contrast, and DestinationCard heading order)
-- [ ] Full keyboard navigation testing + fixes
+- [x] Full keyboard navigation testing + fixes (fixed DestinationCard's post-flip focus landing inside `aria-hidden` content, and added focus movement to the step announcement in DiscoverWizard on step change; audited Modal, DepartureAutocomplete, TravelStyleSelector, Slider/BudgetSlider, Card and nav — all already keyboard-operable)
 - [ ] ARIA labels audit
 - [ ] Colour contrast check (WCAG AA)
 - [ ] Focus trap in modals

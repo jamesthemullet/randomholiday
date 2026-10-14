@@ -166,6 +166,26 @@ describe('DiscoverWizard', () => {
     expect(beach).toHaveAttribute('aria-pressed', 'true')
   })
 
+  it('moves focus to the step announcement when advancing to a new step', () => {
+    render(<DiscoverWizard />)
+    selectDepartureCity('London')
+    fireEvent.click(screen.getByRole('button', { name: 'Next' }))
+    expect(screen.getByText('Step 2 of 5: Budget')).toHaveFocus()
+  })
+
+  it('moves focus to the step announcement when going back a step', () => {
+    render(<DiscoverWizard />)
+    selectDepartureCity('London')
+    fireEvent.click(screen.getByRole('button', { name: 'Next' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Back' }))
+    expect(screen.getByText('Step 1 of 5: Departure')).toHaveFocus()
+  })
+
+  it('does not steal focus from the page on initial render', () => {
+    render(<DiscoverWizard />)
+    expect(screen.getByText('Step 1 of 5: Departure')).not.toHaveFocus()
+  })
+
   it('navigates to /results with the built query string on final submit', () => {
     render(<DiscoverWizard />)
     goToStep(4)

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './DestinationCard.module.css'
 
 export interface Destination {
@@ -21,17 +21,35 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
   const [isFlipped, setIsFlipped] = useState(false)
   const [imageFailed, setImageFailed] = useState(false)
   const { name, country, imageUrl, climate, description, activities } = destination
+  const frontFlipTriggerRef = useRef<HTMLButtonElement>(null)
+  const backFlipTriggerRef = useRef<HTMLButtonElement>(null)
+  const hasFlippedBefore = useRef(false)
 
   const cardClasses = [styles.card]
   if (isFlipped) cardClasses.push(styles.flipped)
 
   const flip = () => setIsFlipped((f) => !f)
 
+  // Moves focus to the newly-visible face's trigger so it never lands inside
+  // the face that just became aria-hidden. Skipped on mount, since nothing has flipped yet.
+  useEffect(() => {
+    if (!hasFlippedBefore.current) {
+      hasFlippedBefore.current = true
+      return
+    }
+    if (isFlipped) {
+      backFlipTriggerRef.current?.focus()
+    } else {
+      frontFlipTriggerRef.current?.focus()
+    }
+  }, [isFlipped])
+
   return (
     <div className={styles.scene} onClick={flip}>
       <div className={cardClasses.join(' ')}>
         <div className={styles.front} aria-hidden={isFlipped}>
           <button
+            ref={frontFlipTriggerRef}
             type="button"
             className={styles.flipTrigger}
             tabIndex={isFlipped ? -1 : 0}
@@ -73,6 +91,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
 
         <div className={styles.back} aria-hidden={!isFlipped}>
           <button
+            ref={backFlipTriggerRef}
             type="button"
             className={styles.flipTrigger}
             tabIndex={isFlipped ? 0 : -1}
