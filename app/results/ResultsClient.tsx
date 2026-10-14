@@ -104,6 +104,7 @@ export function ResultsClient() {
         distanceKm={distanceKm}
         nights={filterParams.nights}
         groupSize={filterParams.groupSize}
+        month={filterParams.travelMonth}
       />
     </main>
   )

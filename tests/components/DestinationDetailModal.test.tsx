@@ -1,7 +1,14 @@
-import { describe, it, expect, vi } from 'vitest'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import type { Destination } from '@/lib/destinations'
+
+function jsonResponse(body: unknown): Response {
+  return new Response(JSON.stringify(body), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  })
+}
 
 function makeDestination(overrides: Partial<Destination> = {}): Destination {
   return {
@@ -24,6 +31,19 @@ function makeDestination(overrides: Partial<Destination> = {}): Destination {
 }
 
 describe('DestinationDetailModal', () => {
+  beforeEach(() => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve(jsonResponse({ source: 'static', avgHighC: 24, description: 'warm' }))
+      )
+    )
+  })
+
+  afterEach(() => {
+    vi.unstubAllGlobals()
+  })
+
   it('renders nothing when destination is null', () => {
     render(
       <DestinationDetailModal
@@ -206,5 +226,107 @@ describe('DestinationDetailModal', () => {
     expect(screen.getByRole('heading', { name: 'Things to do' })).toBeInTheDocument()
     expect(screen.getByText('Surfing')).toBeInTheDocument()
     expect(screen.getByText('Temple hopping')).toBeInTheDocument()
+  })
+
+  it('fetches and renders a seasonal weather estimate, scoped to the destination and month', async () => {
+    const fetchMock = vi.fn((_url: string | URL) =>
+      Promise.resolve(jsonResponse({ source: 'static', avgHighC: 30.4, description: 'hot' }))
+    )
+    vi.stubGlobal('fetch', fetchMock)
+
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+        month={7}
+      />
+    )
+
+    expect(screen.getByText('Loading seasonal weather…')).toBeInTheDocument()
+
+    await waitFor(() => {
+      expect(screen.getByText(/Typically/)).toBeInTheDocument()
+    })
+    expect(screen.getByText('30°C', { exact: false })).toBeInTheDocument()
+    expect(screen.getByText(/hot\./)).toBeInTheDocument()
+
+    const requestUrl = new URL(fetchMock.mock.calls[0][0] as string, 'http://localhost')
+    expect(requestUrl.pathname).toBe('/api/weather')
+    expect(requestUrl.searchParams.get('lat')).toBe('-8.3405')
+    expect(requestUrl.searchParams.get('lng')).toBe('115.092')
+    expect(requestUrl.searchParams.get('climate')).toBe('tropical')
+    expect(requestUrl.searchParams.get('month')).toBe('7')
+  })
+
+  it('renders a live weather estimate using its tempC field', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve(jsonResponse({ source: 'live', tempC: 18.9, description: 'light rain' }))
+      )
+    )
+
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+        month={11}
+      />
+    )
+
+    await waitFor(() => {
+      expect(screen.getByText('19°C', { exact: false })).toBeInTheDocument()
+    })
+    expect(screen.getByText(/light rain\./)).toBeInTheDocument()
+  })
+
+  it('shows an unavailable message when the weather request fails', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => Promise.resolve(new Response(null, { status: 500 })))
+    )
+
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+
+    await waitFor(() => {
+      expect(screen.getByText('Weather estimate unavailable right now.')).toBeInTheDocument()
+    })
+  })
+
+  it('does not fetch weather when the modal is closed', () => {
+    const fetchMock = vi.fn(() =>
+      Promise.resolve(jsonResponse({ source: 'static', avgHighC: 24, description: 'warm' }))
+    )
+    vi.stubGlobal('fetch', fetchMock)
+
+    render(
+      <DestinationDetailModal
+        isOpen={false}
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+
+    expect(fetchMock).not.toHaveBeenCalled()
   })
 })
