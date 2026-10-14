@@ -1,10 +1,10 @@
 # RandomHoliday — Build Plan
 
-## Current Phase: Phase 7 — Accessibility Audit & Polish
+## Current Phase: Phase 8 — Test Coverage Pass
 
-## Last Completed: Task 7.4 — Add skip-to-main link + route change announcer — the skip-to-main link already existed (added in Phase 1), so this added the missing half: a `RouteAnnouncer` component rendered in the root layout that watches `usePathname()` and, on each change, announces the new `document.title` via a visually-hidden `role="status"` live region, so screen reader users are told a new page loaded on client-side navigations (which don't trigger the browser's native announcement).
+## Last Completed: Task 7.5 — Add accessibility unit tests (axe-core in Vitest) — added `jest-axe` (+ `@types/jest-axe` and a local `vitest`-module type augmentation, since the community types only augment Jest's own matcher types) and extended Vitest's `expect` in `tests/setup.ts` with `toHaveNoViolations`. Added `tests/a11y/components.test.tsx`, which renders every component in `/components` with representative props and asserts `axe()` finds no violations — unit-level coverage of the design system and composite components (DiscoverWizard, ResultsReveal, DestinationDetailModal, etc.) alongside the existing page-level e2e axe-core sweep in `e2e/accessibility.spec.ts`.
 
-## Next: Task 7.5 — Add accessibility unit tests (axe-core in Vitest)
+## Next: Task 8.1 — Audit coverage report, write missing unit tests for /lib
 
 ---
 
@@ -105,7 +105,7 @@ Sub-steps:
 - [x] Focus trap in modals — pre-existing trap verified in 7.2, focus restoration to trigger on close added in 7.3
 - [x] Skip-to-main link
 - [x] Route change announcements for screen readers
-- [ ] Accessibility unit tests
+- [x] Accessibility unit tests (axe-core in Vitest)
 
 ---
 
