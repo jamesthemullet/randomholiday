@@ -98,6 +98,12 @@ describe('decodeShareableResult', () => {
     expect(decodeShareableResult('')).toBeNull()
   })
 
+  it('treats a non-numeric month as absent', () => {
+    const params = new URLSearchParams(encodeShareableResult(FULL_RESULT))
+    params.set('month', 'not-a-number')
+    expect(decodeShareableResult(params)?.travelMonth).toBeUndefined()
+  })
+
   it('handles multiple travel styles', () => {
     const result: ShareableResult = {
       ...MINIMAL_RESULT,

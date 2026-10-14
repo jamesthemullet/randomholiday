@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 8 — Test Coverage Pass
 
-## Last Completed: Task 7.5 — Add accessibility unit tests (axe-core in Vitest) — added `jest-axe` (+ `@types/jest-axe` and a local `vitest`-module type augmentation, since the community types only augment Jest's own matcher types) and extended Vitest's `expect` in `tests/setup.ts` with `toHaveNoViolations`. Added `tests/a11y/components.test.tsx`, which renders every component in `/components` with representative props and asserts `axe()` finds no violations — unit-level coverage of the design system and composite components (DiscoverWizard, ResultsReveal, DestinationDetailModal, etc.) alongside the existing page-level e2e axe-core sweep in `e2e/accessibility.spec.ts`.
+## Last Completed: Task 8.1 — Audit coverage report, write missing unit tests for /lib — ran `yarn test:coverage` and found `/lib` had a single uncovered branch: `decodeShareableResult` in `lib/shareableResult.ts` never exercised the case where a `month` query param is present but non-numeric (`Number.isNaN(travelMonth)` evaluating true). Added a test asserting a non-numeric `month` is treated as absent. `/lib` is now 100% statements/branches/functions/lines; remaining gaps are all in `/components` and `/app` (DestinationDetailModal, DiscoverWizard, Modal, ResultsClient, and unexercised page/layout shells), which is Task 8.2's scope.
 
-## Next: Task 8.1 — Audit coverage report, write missing unit tests for /lib
+## Next: Task 8.2 — Missing unit tests to reach 100% for /components
 
 ---
 
