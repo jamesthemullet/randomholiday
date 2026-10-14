@@ -1,6 +1,14 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, afterEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { Header } from '@/components/Header'
+
+const { usePathname } = vi.hoisted(() => ({ usePathname: vi.fn(() => '/') }))
+
+vi.mock('next/navigation', () => ({ usePathname }))
+
+afterEach(() => {
+  usePathname.mockReturnValue('/')
+})
 
 describe('Header', () => {
   it('renders a header element', () => {
@@ -44,5 +52,21 @@ describe('Header', () => {
   it('renders the dark mode toggle', () => {
     render(<Header />)
     expect(screen.getByRole('button', { name: /switch to (dark|light) mode/i })).toBeInTheDocument()
+  })
+
+  it('marks the nav link matching the current path with aria-current', () => {
+    usePathname.mockReturnValue('/discover')
+    render(<Header />)
+    expect(screen.getByRole('link', { name: 'Discover' })).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByRole('link', { name: 'Home' })).not.toHaveAttribute('aria-current')
+    expect(screen.getByRole('link', { name: 'Pricing' })).not.toHaveAttribute('aria-current')
+  })
+
+  it('does not mark any nav link as current when the path matches none', () => {
+    usePathname.mockReturnValue('/discover/results')
+    render(<Header />)
+    expect(screen.getByRole('link', { name: 'Home' })).not.toHaveAttribute('aria-current')
+    expect(screen.getByRole('link', { name: 'Discover' })).not.toHaveAttribute('aria-current')
+    expect(screen.getByRole('link', { name: 'Pricing' })).not.toHaveAttribute('aria-current')
   })
 })

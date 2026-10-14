@@ -25,9 +25,12 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 
     document.body.setAttribute('data-modal-open', 'true')
 
+    const triggerElement = document.activeElement as HTMLElement | null
+
     const focusable = Array.from(modal.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR))
     const first = focusable[0]
     const last = focusable[focusable.length - 1]
+    first?.focus()
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -50,6 +53,7 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
     return () => {
       document.body.removeAttribute('data-modal-open')
       document.removeEventListener('keydown', handleKeyDown)
+      triggerElement?.focus()
     }
   }, [isOpen, onClose])
 
@@ -74,7 +78,6 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
             onClick={onClose}
             className={styles.close}
             aria-label="Close dialog"
-            autoFocus
           >
             <svg
               aria-hidden="true"
