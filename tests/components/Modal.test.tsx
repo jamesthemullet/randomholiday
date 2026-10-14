@@ -1,4 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
+import { useState } from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { Modal } from '@/components/Modal'
 
@@ -196,5 +197,31 @@ describe('Modal', () => {
     )
     fireEvent.keyDown(document, { key: 'ArrowDown' })
     expect(onClose).not.toHaveBeenCalled()
+  })
+
+  it('returns focus to the trigger element when the modal closes', () => {
+    function Harness() {
+      const [isOpen, setIsOpen] = useState(false)
+      return (
+        <>
+          <button onClick={() => setIsOpen(true)}>Open modal</button>
+          <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} title="Test">
+            Content
+          </Modal>
+        </>
+      )
+    }
+
+    render(<Harness />)
+    const trigger = screen.getByRole('button', { name: 'Open modal' })
+    trigger.focus()
+    fireEvent.click(trigger)
+
+    expect(screen.getByRole('dialog')).toBeInTheDocument()
+
+    fireEvent.click(screen.getByRole('button', { name: 'Close dialog' }))
+
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+    expect(document.activeElement).toBe(trigger)
   })
 })

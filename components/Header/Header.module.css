@@ -62,6 +62,11 @@
   color: var(--color-accent-primary);
 }
 
+.navLink[aria-current='page'] {
+  color: var(--color-accent-primary);
+  font-weight: var(--font-bold);
+}
+
 @media (max-width: 640px) {
   .navList {
     gap: var(--space-4);

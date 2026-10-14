@@ -34,6 +34,12 @@ export function ResultsReveal({ recommendation, onShuffle, onSelect }: ResultsRe
         </Button>
       </div>
 
+      <p className="sr-only" role="status" aria-live="polite">
+        {recommendation
+          ? `New match: ${recommendation.destination.name}, ${recommendation.destination.country} — ${Math.round(recommendation.totalScore)}% match`
+          : ''}
+      </p>
+
       {!recommendation ? (
         <p className={styles.empty}>
           No destinations matched your search. Try adjusting your budget or distance.

@@ -89,6 +89,31 @@ describe('ResultsReveal', () => {
     expect(screen.queryByRole('button', { name: 'Select Destination' })).not.toBeInTheDocument()
   })
 
+  it('announces the matched destination in a live region', () => {
+    render(<ResultsReveal recommendation={makeScore({ totalScore: 87.6 })} onShuffle={vi.fn()} />)
+    expect(screen.getByRole('status')).toHaveTextContent('New match: Bali, Indonesia — 88% match')
+  })
+
+  it('updates the live region announcement when the recommendation changes', () => {
+    const { rerender } = render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(screen.getByRole('status')).toHaveTextContent('New match: Bali, Indonesia')
+
+    rerender(
+      <ResultsReveal
+        recommendation={makeScore({
+          destination: makeDestination({ id: 'kyoto-japan', name: 'Kyoto', country: 'Japan' }),
+        })}
+        onShuffle={vi.fn()}
+      />
+    )
+    expect(screen.getByRole('status')).toHaveTextContent('New match: Kyoto, Japan')
+  })
+
+  it('renders an empty live region when there is no recommendation', () => {
+    render(<ResultsReveal recommendation={null} onShuffle={vi.fn()} />)
+    expect(screen.getByRole('status')).toHaveTextContent('')
+  })
+
   it('skips entrance animation variants when the user prefers reduced motion', async () => {
     vi.resetModules()
     vi.doMock('framer-motion', async () => {

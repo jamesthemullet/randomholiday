@@ -1,5 +1,8 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { DarkModeToggle } from '@/components/DarkModeToggle'
 import styles from './Header.module.css'
 
@@ -10,6 +13,8 @@ const NAV_LINKS = [
 ] as const
 
 export function Header() {
+  const pathname = usePathname()
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -19,13 +24,20 @@ export function Header() {
         <div className={styles.actions}>
           <nav className={styles.nav} aria-label="Main navigation">
             <ul className={styles.navList}>
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className={styles.navLink}>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const isActive = pathname === link.href
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={styles.navLink}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
           <DarkModeToggle />

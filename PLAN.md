@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 7 — Accessibility Audit & Polish
 
-## Last Completed: Task 7.2 — Full keyboard navigation audit + fixes — audited every interactive component for keyboard operability; fixed two real focus-management bugs: DestinationCard left DOM focus inside the now-`aria-hidden` face after a flip, and DiscoverWizard gave no focus cue when moving between wizard steps. Everything else audited (Modal focus trap, DepartureAutocomplete combobox, TravelStyleSelector, Slider/BudgetSlider, Card, skip-to-main link, Header/Footer/nav) was already keyboard-operable with visible focus rings.
+## Last Completed: Task 7.3 — ARIA labels + focus management audit + fixes — audited every component for ARIA labelling and focus-management gaps not already covered by the 7.1 (axe) and 7.2 (keyboard nav) passes. Form input label association, icon-only button labelling, and image alt text were already correct, so this was a bounded fix: (1) Modal now restores focus to the element that triggered it when it closes, instead of dropping focus back to the document body; (2) ResultsReveal now announces the matched destination via a visually-hidden `role="status"` live region so Shuffle updates reach screen reader users; (3) Header nav links now get `aria-current="page"` (plus a visual style) on the link matching the current route, via `usePathname()`.
 
-## Next: Task 7.3 — ARIA labels + focus management audit + fixes
+## Next: Task 7.4 — Add skip-to-main link + route change announcer
 
 ---
 
@@ -100,9 +100,9 @@ Sub-steps:
 
 - [x] axe-core sweep across all pages (`@axe-core/playwright` e2e scan of home, discover, results, pricing, and the destination detail modal; fixed Button primary/danger and Badge secondary color-contrast, and DestinationCard heading order)
 - [x] Full keyboard navigation testing + fixes (fixed DestinationCard's post-flip focus landing inside `aria-hidden` content, and added focus movement to the step announcement in DiscoverWizard on step change; audited Modal, DepartureAutocomplete, TravelStyleSelector, Slider/BudgetSlider, Card and nav — all already keyboard-operable)
-- [ ] ARIA labels audit
-- [ ] Colour contrast check (WCAG AA)
-- [ ] Focus trap in modals
+- [x] ARIA labels audit (form input label association, icon-only buttons and image alt text were already correct; fixed Modal not restoring focus to its trigger on close, ResultsReveal's Shuffle update having no live-region announcement, and Header nav links missing `aria-current="page"`)
+- [x] Colour contrast check (WCAG AA) — covered by the 7.1 axe-core sweep
+- [x] Focus trap in modals — pre-existing trap verified in 7.2, focus restoration to trigger on close added in 7.3
 - [ ] Skip-to-main link
 - [ ] Route change announcements for screen readers
 - [ ] Accessibility unit tests
