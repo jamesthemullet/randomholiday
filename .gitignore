@@ -41,6 +41,10 @@ next-env.d.ts
 /playwright-report/
 /test-results/
 
+# lighthouse ci
+/lighthouseci/
+/.lighthouseci/
+
 # IDE
 .idea
 .vscode
