@@ -1,10 +1,10 @@
 # RandomHoliday — Build Plan
 
-## Current Phase: Phase 8 — Test Coverage Pass
+## Current Phase: Phase 9 — Release Readiness
 
-## Last Completed: Task 8.3 — E2E tests: full happy path, mobile viewport, keyboard-only navigation, API error states. Added four new Playwright specs: `e2e/happy-path.spec.ts` (landing → discover wizard, all 5 steps → results → destination modal → shuffle), `e2e/keyboard-navigation.spec.ts` (the same flow driven with Tab/Enter/Arrow keys only, no pointer input), `e2e/mobile-viewport.spec.ts` (a 360×740 viewport check for horizontal overflow on home/discover/results/pricing, plus the wizard flow and the destination modal at that width), and `e2e/api-error-states.spec.ts` (mocks `/api/weather` to return a 500 and to abort entirely, asserting the modal's static-fallback message and that the rest of the modal still renders). Writing `mobile-viewport.spec.ts` surfaced a real bug: `components/Header`'s `.actions` (nav + dark mode toggle) didn't wrap and overflowed the viewport on every page below ~480px wide, pushing `document.documentElement.scrollWidth` past `window.innerWidth`. Fixed with a `max-width: 480px` media query in `Header.module.css` that wraps the header onto two rows. Also fixed `playwright.config.ts`'s `webServer.command`, which read `npm run dev` — changed to `yarn dev` (this repo is yarn-only). All 32 e2e specs pass locally on both the `chromium` and `Mobile Chrome` projects (`yarn e2e`); `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean. Note: `e2e/accessibility.spec.ts`'s "results page" check showed one flaky failure during this work (an axe-core color-contrast violation on the match-score `Badge`, with a different reported background color each time) that reproduced identically with and without this task's changes and passed again on a clean re-run — a pre-existing timing race with the card's entrance animation, not something this task introduced or fixed.
+## Last Completed: Task 8.4 — Lighthouse CI check (target 90+ all metrics). Added `@lhci/cli` as a dev dependency, a `lighthouserc.js` config (collects `/`, `/discover`, and `/pricing` against a `yarn start` server, 3 runs per URL so the median smooths out single-run noise, `--no-sandbox --disable-gpu --disable-dev-shm-usage` Chrome flags for CI-container compatibility, filesystem report upload to `./lighthouseci`), a `yarn lighthouse` script (`lhci autorun`), and a new `lighthouse` job in `.github/workflows/ci.yml` that builds the app and runs it, uploading the HTML/JSON reports as a build artifact. Assertions require `minScore: 0.9` on performance, accessibility, best-practices, and SEO for all three URLs — verified locally (median across 3 runs): `/` 0.97/0.96/0.96/1.0, `/discover` 0.96/0.96/0.96/0.92, `/pricing` 0.97/0.96/0.96/0.92. `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean.
 
-## Next: Task 8.4 — Lighthouse CI check (target 90+ all metrics)
+## Next: Task 9.1 — README.md with full setup + deployment guide
 
 ---
 
@@ -114,7 +114,7 @@ Sub-steps:
 - [x] Coverage report audit — find gaps
 - [x] Missing unit tests to reach 100% for /lib and /components
 - [x] E2E: full happy path, mobile viewport, keyboard-only, API error states
-- [ ] Lighthouse CI check (target 90+ all metrics)
+- [x] Lighthouse CI check (target 90+ all metrics)
 
 ---
 
