@@ -98,8 +98,8 @@ Native app.
 1. Push this repository to GitHub and [import it into Vercel](https://vercel.com/new).
 2. Set the framework preset to **Next.js** (auto-detected).
 3. Build settings (install/build commands, framework) are pre-configured in [`vercel.json`](./vercel.json),
-   and the Node.js version is pinned via the `engines` field in `package.json` — no manual setup is
-   needed.
+   and the minimum Node.js version is set via the `engines` field in `package.json` — no manual setup
+   is needed.
 4. Add the environment variables you need from the table above in the Vercel project's
    **Settings → Environment Variables**, for each environment (Production/Preview/Development)
    you want them in.
