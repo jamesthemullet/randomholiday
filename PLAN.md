@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 8 — Test Coverage Pass
 
-## Last Completed: Task 8.1 — Audit coverage report, write missing unit tests for /lib — ran `yarn test:coverage` and found `/lib` had a single uncovered branch: `decodeShareableResult` in `lib/shareableResult.ts` never exercised the case where a `month` query param is present but non-numeric (`Number.isNaN(travelMonth)` evaluating true). Added a test asserting a non-numeric `month` is treated as absent. `/lib` is now 100% statements/branches/functions/lines; remaining gaps are all in `/components` and `/app` (DestinationDetailModal, DiscoverWizard, Modal, ResultsClient, and unexercised page/layout shells), which is Task 8.2's scope.
+## Last Completed: Task 8.2 — Missing unit tests for /components — `DestinationDetailModal.tsx` had an uncovered branch (lines 54-55) where it resets its `imageFailed` state when the `destination` prop changes while the modal stays open (e.g. the user shuffles to a new recommendation after a photo 404'd). Added a test that fails the image, re-renders with a different destination, and asserts the placeholder clears and the new photo renders. `components/DestinationDetailModal` is now 100% statements/lines (was 93.93%/93.1%), 100% functions, 96.87% branches (was 93.75%). The three remaining gaps in `/components` — `DiscoverWizard.tsx` lines 71/73 and `Modal.tsx` line 24 (documented in AUDIT.md §1/§8) and `DestinationDetailModal.tsx` line 81 (an abort-race branch in the weather-fetch cleanup) — are defensive guards unreachable through normal UI interaction (React suppresses click dispatch on `disabled` buttons; refs are always set before effects run; the fetch in question resolves before any test unmounts it), not missing test coverage. `yarn test:coverage` passes the `vitest.config.ts` `components/**` gate (95/95/100/95 statements/branches/functions/lines) cleanly. Remaining gaps are all in `/app` (ResultsClient, page/layout shells, opengraph-image) which is out of `components/**`'s scope and not yet gated — left for a future task if `app/**` gating is ever added to Phase 8.
 
-## Next: Task 8.2 — Missing unit tests to reach 100% for /components
+## Next: Task 8.3 — E2E tests: full happy path, mobile viewport, keyboard-only navigation, API error states
 
 ---
 
@@ -111,8 +111,8 @@ Sub-steps:
 
 ## Phase 8: Test Coverage Pass
 
-- [ ] Coverage report audit — find gaps
-- [ ] Missing unit tests to reach 100% for /lib and /components
+- [x] Coverage report audit — find gaps
+- [x] Missing unit tests to reach 100% for /lib and /components
 - [ ] E2E: full happy path, mobile viewport, keyboard-only, API error states
 - [ ] Lighthouse CI check (target 90+ all metrics)
 
