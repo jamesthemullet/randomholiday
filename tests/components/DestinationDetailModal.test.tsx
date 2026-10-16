@@ -132,6 +132,37 @@ describe('DestinationDetailModal', () => {
     expect(screen.queryByRole('img')).not.toBeInTheDocument()
   })
 
+  it('resets the image-failed state when the destination changes while the modal stays open', () => {
+    const { rerender } = render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    fireEvent.error(screen.getByRole('img'))
+    expect(screen.getByText('Photos coming soon')).toBeInTheDocument()
+
+    rerender(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination({ id: 'rome-italy', name: 'Rome', country: 'Italy' })}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+
+    expect(screen.queryByText('Photos coming soon')).not.toBeInTheDocument()
+    const img = screen.getByRole('img')
+    expect(img).toHaveAttribute('src', '/destinations/rome-italy.jpg')
+    expect(img).toHaveAttribute('alt', 'Rome, Italy')
+  })
+
   it('renders a cost breakdown with flights, hotel, daily spending, and total', () => {
     render(
       <DestinationDetailModal
