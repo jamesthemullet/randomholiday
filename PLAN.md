@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 9 — Release Readiness
 
-## Last Completed: Task 8.4 — Lighthouse CI check (target 90+ all metrics). Added `@lhci/cli` as a dev dependency, a `lighthouserc.js` config (collects `/`, `/discover`, and `/pricing` against a `yarn start` server, 3 runs per URL so the median smooths out single-run noise, `--no-sandbox --disable-gpu --disable-dev-shm-usage` Chrome flags for CI-container compatibility, filesystem report upload to `./lighthouseci`), a `yarn lighthouse` script (`lhci autorun`), and a new `lighthouse` job in `.github/workflows/ci.yml` that builds the app and runs it, uploading the HTML/JSON reports as a build artifact. Assertions require `minScore: 0.9` on performance, accessibility, best-practices, and SEO for all three URLs — verified locally (median across 3 runs): `/` 0.97/0.96/0.96/1.0, `/discover` 0.96/0.96/0.96/0.92, `/pricing` 0.97/0.96/0.96/0.92. `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean.
+## Last Completed: Task 9.1 — README.md with full setup + deployment guide. Rewrote the placeholder `README.md` with: requirements (Node 22+, Yarn), local setup steps, an environment variable reference table (cross-referencing `.env.example`, noting every integration degrades gracefully without a key), a table of all `yarn` scripts, the `/app /components /lib /styles /tests /e2e` project structure, a testing section (unit/e2e/accessibility), and a step-by-step Vercel deployment guide. `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean.
 
-## Next: Task 9.1 — README.md with full setup + deployment guide
+## Next: Task 9.2 — vercel.json deployment config
 
 ---
 
@@ -120,7 +120,7 @@ Sub-steps:
 
 ## Phase 9: Release Readiness
 
-- [ ] README.md with full setup + deployment guide
+- [x] README.md with full setup + deployment guide
 - [ ] vercel.json deployment config
 - [ ] robots.txt, sitemap, OpenGraph meta tags
 - [ ] Error boundary + 404/500 pages
