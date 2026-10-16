@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 8 — Test Coverage Pass
 
-## Last Completed: Task 8.2 — Missing unit tests for /components — `DestinationDetailModal.tsx` had an uncovered branch (lines 54-55) where it resets its `imageFailed` state when the `destination` prop changes while the modal stays open (e.g. the user shuffles to a new recommendation after a photo 404'd). Added a test that fails the image, re-renders with a different destination, and asserts the placeholder clears and the new photo renders. `components/DestinationDetailModal` is now 100% statements/lines (was 93.93%/93.1%), 100% functions, 96.87% branches (was 93.75%). The three remaining gaps in `/components` — `DiscoverWizard.tsx` lines 71/73 and `Modal.tsx` line 24 (documented in AUDIT.md §1/§8) and `DestinationDetailModal.tsx` line 81 (an abort-race branch in the weather-fetch cleanup) — are defensive guards unreachable through normal UI interaction (React suppresses click dispatch on `disabled` buttons; refs are always set before effects run; the fetch in question resolves before any test unmounts it), not missing test coverage. `yarn test:coverage` passes the `vitest.config.ts` `components/**` gate (95/95/100/95 statements/branches/functions/lines) cleanly. Remaining gaps are all in `/app` (ResultsClient, page/layout shells, opengraph-image) which is out of `components/**`'s scope and not yet gated — left for a future task if `app/**` gating is ever added to Phase 8.
+## Last Completed: Task 8.3 — E2E tests: full happy path, mobile viewport, keyboard-only navigation, API error states. Added four new Playwright specs: `e2e/happy-path.spec.ts` (landing → discover wizard, all 5 steps → results → destination modal → shuffle), `e2e/keyboard-navigation.spec.ts` (the same flow driven with Tab/Enter/Arrow keys only, no pointer input), `e2e/mobile-viewport.spec.ts` (a 360×740 viewport check for horizontal overflow on home/discover/results/pricing, plus the wizard flow and the destination modal at that width), and `e2e/api-error-states.spec.ts` (mocks `/api/weather` to return a 500 and to abort entirely, asserting the modal's static-fallback message and that the rest of the modal still renders). Writing `mobile-viewport.spec.ts` surfaced a real bug: `components/Header`'s `.actions` (nav + dark mode toggle) didn't wrap and overflowed the viewport on every page below ~480px wide, pushing `document.documentElement.scrollWidth` past `window.innerWidth`. Fixed with a `max-width: 480px` media query in `Header.module.css` that wraps the header onto two rows. Also fixed `playwright.config.ts`'s `webServer.command`, which read `npm run dev` — changed to `yarn dev` (this repo is yarn-only). All 32 e2e specs pass locally on both the `chromium` and `Mobile Chrome` projects (`yarn e2e`); `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean. Note: `e2e/accessibility.spec.ts`'s "results page" check showed one flaky failure during this work (an axe-core color-contrast violation on the match-score `Badge`, with a different reported background color each time) that reproduced identically with and without this task's changes and passed again on a clean re-run — a pre-existing timing race with the card's entrance animation, not something this task introduced or fixed.
 
-## Next: Task 8.3 — E2E tests: full happy path, mobile viewport, keyboard-only navigation, API error states
+## Next: Task 8.4 — Lighthouse CI check (target 90+ all metrics)
 
 ---
 
@@ -113,7 +113,7 @@ Sub-steps:
 
 - [x] Coverage report audit — find gaps
 - [x] Missing unit tests to reach 100% for /lib and /components
-- [ ] E2E: full happy path, mobile viewport, keyboard-only, API error states
+- [x] E2E: full happy path, mobile viewport, keyboard-only, API error states
 - [ ] Lighthouse CI check (target 90+ all metrics)
 
 ---

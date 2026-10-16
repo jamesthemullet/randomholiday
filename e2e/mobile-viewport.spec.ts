@@ -1,0 +1,62 @@
+import { test, expect } from '@playwright/test'
+
+// A pinned `destination` keeps the result deterministic, matching the pattern used in
+// e2e/accessibility.spec.ts.
+const resultsUrl =
+  '/results?originId=london-uk&budget=1500&distance=5000&nights=7&groupSize=2&month=6&styles=beach&destination=barcelona-spain'
+
+test.use({ viewport: { width: 360, height: 740 } })
+
+const pages = [
+  { name: 'home', path: '/' },
+  { name: 'discover', path: '/discover' },
+  { name: 'results', path: resultsUrl },
+  { name: 'pricing', path: '/pricing' },
+]
+
+for (const { name, path } of pages) {
+  test(`${name} page has no horizontal overflow at a narrow viewport`, async ({ page }) => {
+    await page.goto(path)
+    await expect(page.locator('#main-content')).toBeVisible()
+
+    const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth)
+    const viewportWidth = await page.evaluate(() => window.innerWidth)
+    expect(scrollWidth).toBeLessThanOrEqual(viewportWidth)
+  })
+}
+
+test('the discover → results flow works on a narrow viewport', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('link', { name: /find my holiday/i }).click()
+  await expect(page).toHaveURL(/\/discover/)
+
+  await page.getByLabel(/where are you flying from/i).fill('London')
+  await page.getByRole('option', { name: /london/i }).click()
+  await page.getByRole('button', { name: /^next$/i }).click()
+  await page.getByRole('button', { name: /^next$/i }).click()
+  await page.getByLabel(/roughly when do you want to go/i).selectOption('6')
+  await page.getByRole('button', { name: /^next$/i }).click()
+  await page.getByRole('button', { name: /^next$/i }).click()
+  await page.getByRole('button', { name: /reveal my holiday/i }).click()
+
+  await expect(page).toHaveURL(/\/results\?/)
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
+})
+
+test('the destination detail modal is usable on a narrow viewport', async ({ page }) => {
+  await page.goto(resultsUrl)
+
+  const selectButton = page.getByRole('button', { name: /select destination/i }).first()
+  await selectButton.waitFor({ state: 'visible' })
+  // The card's 3D flip transform overlaps both faces in the hit-testing tree, which confuses
+  // Playwright's pointer-coordinate click; dispatch the click event on the element directly.
+  await selectButton.dispatchEvent('click')
+
+  const dialog = page.getByRole('dialog')
+  await expect(dialog).toBeVisible()
+  await expect(dialog.getByText('Cost breakdown')).toBeVisible()
+
+  const dialogBox = await dialog.boundingBox()
+  const viewportWidth = await page.evaluate(() => window.innerWidth)
+  expect(dialogBox?.width).toBeLessThanOrEqual(viewportWidth)
+})
