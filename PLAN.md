@@ -2,9 +2,13 @@
 
 ## Current Phase: Phase 9 — Release Readiness
 
-## Last Completed: Task 9.1 — README.md with full setup + deployment guide. Rewrote the placeholder `README.md` with: requirements (Node 22+, Yarn), local setup steps, an environment variable reference table (cross-referencing `.env.example`, noting every integration degrades gracefully without a key), a table of all `yarn` scripts, the `/app /components /lib /styles /tests /e2e` project structure, a testing section (unit/e2e/accessibility), and a step-by-step Vercel deployment guide. `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean.
+## Last Completed: Task 9.2 — vercel.json deployment config. Added `vercel.json` pinning the framework preset (`nextjs`) and the install/build/dev commands to their `yarn` equivalents (`yarn install` / `yarn build` / `yarn dev`), and pinned the Node.js runtime version via `"engines": { "node": "22.x" }` in `package.json` (the way Vercel actually reads a pinned Node version — `vercel.json` has no Node-version field). Env var placeholders already live in `.env.example`/the README's variable table from Task 9.1; deliberately did not duplicate them as literal values in `vercel.json`'s `env` block, since a `vercel.json`-level `env` entry takes precedence over the same variable set in the Vercel dashboard and would silently blank out real secrets configured there. Updated the README's Vercel deployment section to reference the new config instead of claiming "no custom configuration is needed". `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean; verified `yarn build` succeeds.
 
-## Next: Task 9.2 — vercel.json deployment config
+## Next: Task 9.4 — Error boundary + 404/500 pages
+
+(Task 9.3 — robots.txt, sitemap, OpenGraph meta tags — was already shipped in an earlier PR as
+`app/robots.ts`, `app/sitemap.ts`, and `app/opengraph-image.tsx`; the Phase 9 checklist below just
+hadn't been ticked off for it until now.)
 
 ---
 
@@ -121,8 +125,8 @@ Sub-steps:
 ## Phase 9: Release Readiness
 
 - [x] README.md with full setup + deployment guide
-- [ ] vercel.json deployment config
-- [ ] robots.txt, sitemap, OpenGraph meta tags
+- [x] vercel.json deployment config
+- [x] robots.txt, sitemap, OpenGraph meta tags (shipped earlier as `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`; this checklist just hadn't been updated)
 - [ ] Error boundary + 404/500 pages
 - [ ] Rate limiting on API routes
 - [ ] Final CI check passes
