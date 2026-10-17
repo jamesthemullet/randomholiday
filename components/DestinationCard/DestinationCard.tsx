@@ -83,7 +83,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
                   onSelect()
                 }}
               >
-                Select Destination
+                See prices &amp; book
               </button>
             )}
           </div>
@@ -125,7 +125,7 @@ export function DestinationCard({ destination, onSelect }: DestinationCardProps)
                   onSelect()
                 }}
               >
-                Select Destination
+                See prices &amp; book
               </button>
             )}
           </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState, useSyncExternalStore } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { destinations, TRAVEL_STYLES } from '@/lib/destinations'
@@ -13,6 +13,10 @@ import { calculateDistance } from '@/lib/distanceCalculator'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
+
+const subscribeToNothing = () => () => {}
+const getClientSnapshot = () => true
+const getServerSnapshot = () => false
 
 export function ResultsClient() {
   const searchParams = useSearchParams()
@@ -47,24 +51,32 @@ export function ResultsClient() {
 
   const pinnedDestinationId = searchParams.get('destination')
 
-  const [recommendation, setRecommendation] = useState<DestinationScore | null>(() => {
-    if (!filterParams) return null
+  // The random pick must only happen in the browser: the server and client would each roll a
+  // different destination and fail hydration. This is false while hydrating, then true.
+  const isClient = useSyncExternalStore(subscribeToNothing, getClientSnapshot, getServerSnapshot)
 
-    const pinnedDestination = pinnedDestinationId
-      ? destinations.find((d) => d.id === pinnedDestinationId)
-      : undefined
+  // A pinned destination involves no randomness, so it can render on the server too.
+  const pinnedRecommendation = useMemo(() => {
+    if (!filterParams || !pinnedDestinationId) return null
+    const pinnedDestination = destinations.find((d) => d.id === pinnedDestinationId)
+    return pinnedDestination ? scoreDestination(pinnedDestination, filterParams) : null
+  }, [filterParams, pinnedDestinationId])
 
-    if (pinnedDestination) {
-      return scoreDestination(pinnedDestination, filterParams)
-    }
-
+  const initialPick = useMemo(() => {
+    if (!filterParams || pinnedRecommendation || !isClient) return null
     return getRecommendations(destinations, filterParams).recommendations[0] ?? null
-  })
+  }, [filterParams, pinnedRecommendation, isClient])
+
+  // undefined until the user shuffles; null means a shuffle found nothing.
+  const [shuffledPick, setShuffledPick] = useState<DestinationScore | null | undefined>(undefined)
+  const recommendation =
+    shuffledPick !== undefined ? shuffledPick : (pinnedRecommendation ?? initialPick)
+  const isPicking = shuffledPick === undefined && !pinnedRecommendation && !isClient
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
 
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
-    setRecommendation(getRecommendations(destinations, filterParams).recommendations[0] ?? null)
+    setShuffledPick(getRecommendations(destinations, filterParams).recommendations[0] ?? null)
   }, [filterParams])
 
   const handleSelect = useCallback(() => {
@@ -83,8 +95,8 @@ export function ResultsClient() {
     return (
       <main id="main-content" className={styles.wrapper}>
         <p className={styles.empty}>We couldn&apos;t find your trip details. Please start over.</p>
-        <Link href="/discover" className={styles.link}>
-          Back to Discover
+        <Link href="/" className={styles.link}>
+          Start over
         </Link>
       </main>
     )
@@ -94,8 +106,10 @@ export function ResultsClient() {
     <main id="main-content" className={styles.wrapper}>
       <ResultsReveal
         recommendation={recommendation}
+        isPicking={isPicking}
         onShuffle={handleShuffle}
         onSelect={handleSelect}
+        changeSearchHref={`/?${searchParams.toString()}`}
       />
       <DestinationDetailModal
         isOpen={isDetailModalOpen}

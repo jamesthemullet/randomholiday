@@ -22,7 +22,7 @@ export interface ShareableResult {
 /**
  * Encodes a result (the destination shown plus the preferences that produced
  * it) into a URL query string. Param names match the individual preference
- * params `/results` already reads from the discover flow, plus a
+ * params `/results` already reads from the homepage search form, plus a
  * `destination` param pinning the specific destination that was shown.
  */
 export function encodeShareableResult(result: ShareableResult): string {

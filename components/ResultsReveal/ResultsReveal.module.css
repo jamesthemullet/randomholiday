@@ -19,8 +19,28 @@
   margin: 0;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.changeSearch {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
+.changeSearch:hover {
+  color: var(--color-text-primary);
+}
+
 .cardWrapper {
   position: relative;
+  /* An auto-margined flex item shrinks to its content, and every child of the card is
+     absolutely positioned or percentage-sized, so without an explicit width it collapses to 0. */
+  width: 100%;
   max-width: 24rem;
   margin: 0 auto;
 }
@@ -30,6 +50,12 @@
   top: var(--space-3);
   right: var(--space-3);
   z-index: 1;
+}
+
+.picking {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-16) 0;
 }
 
 .empty {

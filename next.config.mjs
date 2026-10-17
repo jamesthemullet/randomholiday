@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    // The search form now lives on the homepage; keep old /discover links working.
+    return [{ source: '/discover', destination: '/', permanent: true }]
+  },
   async headers() {
     return [
       {

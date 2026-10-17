@@ -3,7 +3,7 @@ module.exports = {
     collect: {
       startServerCommand: 'yarn start',
       startServerReadyPattern: 'Ready in',
-      url: ['http://localhost:3000/', 'http://localhost:3000/discover', 'http://localhost:3000/pricing'],
+      url: ['http://localhost:3000/', 'http://localhost:3000/pricing'],
       numberOfRuns: 3,
       settings: {
         chromeFlags: '--no-sandbox --disable-gpu --disable-dev-shm-usage',

@@ -19,7 +19,7 @@
 .value {
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
-  color: var(--color-accent-primary);
+  color: var(--color-turquoise-contrast);
   min-width: 3rem;
   text-align: right;
 }
@@ -28,7 +28,8 @@
   width: 100%;
   height: 4px;
   appearance: none;
-  accent-color: var(--color-accent-primary);
+  background-color: var(--color-border);
+  accent-color: var(--color-turquoise-contrast);
   cursor: pointer;
   border-radius: var(--radius-full);
 }

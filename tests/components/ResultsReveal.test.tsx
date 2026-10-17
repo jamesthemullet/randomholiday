@@ -59,6 +59,32 @@ describe('ResultsReveal', () => {
     expect(onShuffle).toHaveBeenCalledOnce()
   })
 
+  it('renders a Change search link when changeSearchHref is provided', () => {
+    render(
+      <ResultsReveal
+        recommendation={makeScore()}
+        onShuffle={vi.fn()}
+        changeSearchHref="/?originId=london-uk"
+      />
+    )
+    expect(screen.getByRole('link', { name: 'Change search' })).toHaveAttribute(
+      'href',
+      '/?originId=london-uk'
+    )
+  })
+
+  it('omits the Change search link when no changeSearchHref is provided', () => {
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(screen.queryByRole('link', { name: 'Change search' })).not.toBeInTheDocument()
+  })
+
+  it('shows a picking spinner instead of the empty state while a destination is being chosen', () => {
+    render(<ResultsReveal recommendation={null} isPicking onShuffle={vi.fn()} />)
+    expect(screen.getByText('Picking your destination…')).toBeInTheDocument()
+    expect(screen.queryByText(/no destinations matched/i)).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Shuffle' })).toBeDisabled()
+  })
+
   it('shows an empty state message when there is no recommendation', () => {
     render(<ResultsReveal recommendation={null} onShuffle={vi.fn()} />)
     expect(
@@ -79,14 +105,14 @@ describe('ResultsReveal', () => {
       />
     )
     fireEvent.click(screen.getByRole('button', { name: /bali/i }))
-    fireEvent.click(screen.getByRole('button', { name: 'Select Destination' }))
+    fireEvent.click(screen.getByRole('button', { name: 'See prices & book' }))
     expect(onSelect).toHaveBeenCalledWith('kyoto-japan')
   })
 
   it('does not render a select button when onSelect is not provided', () => {
     render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
     fireEvent.click(screen.getByRole('button', { name: /bali/i }))
-    expect(screen.queryByRole('button', { name: 'Select Destination' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'See prices & book' })).not.toBeInTheDocument()
   })
 
   it('announces the matched destination in a live region', () => {

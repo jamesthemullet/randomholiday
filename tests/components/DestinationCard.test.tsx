@@ -131,13 +131,13 @@ describe('DestinationCard', () => {
   it('renders select button when onSelect provided', () => {
     render(<DestinationCard destination={baseDest} onSelect={vi.fn()} />)
     fireEvent.click(screen.getByRole('button', { name: /bali/i }))
-    expect(screen.getByRole('button', { name: 'Select Destination' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'See prices & book' })).toBeInTheDocument()
   })
 
   it('does not render select button when no onSelect', () => {
     render(<DestinationCard destination={baseDest} />)
     fireEvent.click(screen.getByRole('button'))
-    expect(screen.queryByRole('button', { name: 'Select Destination' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'See prices & book' })).not.toBeInTheDocument()
   })
 
   it('calls onSelect and stops propagation when select clicked', () => {
@@ -146,7 +146,7 @@ describe('DestinationCard', () => {
     // Flip to back
     fireEvent.click(screen.getByRole('button', { name: /bali/i }))
     // Click select button
-    fireEvent.click(screen.getByRole('button', { name: 'Select Destination' }))
+    fireEvent.click(screen.getByRole('button', { name: 'See prices & book' }))
     expect(onSelect).toHaveBeenCalledOnce()
     // Card should still be in flipped state (click did not toggle)
     expect(screen.getByRole('button', { name: /bali/i })).toHaveAttribute('aria-pressed', 'true')
@@ -156,7 +156,7 @@ describe('DestinationCard', () => {
     const onSelect = vi.fn()
     render(<DestinationCard destination={baseDest} onSelect={onSelect} />)
     // Card starts unflipped (front face visible)
-    fireEvent.click(screen.getByRole('button', { name: 'Select Destination' }))
+    fireEvent.click(screen.getByRole('button', { name: 'See prices & book' }))
     expect(onSelect).toHaveBeenCalledOnce()
     // Card should still be in unflipped state (click did not toggle)
     expect(screen.getByRole('button', { name: /bali/i })).toHaveAttribute('aria-pressed', 'false')
@@ -177,7 +177,7 @@ describe('DestinationCard', () => {
 
   it('front select button is focusable and back select button is not when unflipped', () => {
     render(<DestinationCard destination={baseDest} onSelect={vi.fn()} />)
-    const buttons = screen.getAllByText('Select Destination').map((el) => el.closest('button')!)
+    const buttons = screen.getAllByText('See prices & book').map((el) => el.closest('button')!)
     expect(buttons).toHaveLength(2)
     const [frontBtn, backBtn] = buttons
     expect(frontBtn).toHaveAttribute('tabIndex', '0')
@@ -187,7 +187,7 @@ describe('DestinationCard', () => {
   it('back select button is focusable and front select button is not when flipped', () => {
     render(<DestinationCard destination={baseDest} onSelect={vi.fn()} />)
     fireEvent.click(screen.getByRole('button', { name: /bali/i }))
-    const buttons = screen.getAllByText('Select Destination').map((el) => el.closest('button')!)
+    const buttons = screen.getAllByText('See prices & book').map((el) => el.closest('button')!)
     const [frontBtn, backBtn] = buttons
     expect(frontBtn).toHaveAttribute('tabIndex', '-1')
     expect(backBtn).toHaveAttribute('tabIndex', '0')

@@ -1,6 +1,15 @@
 import { describe, it, expect } from 'vitest'
 import nextConfig from '../next.config.mjs'
 
+describe('next.config redirects', () => {
+  it('permanently redirects the retired /discover page to the homepage form', async () => {
+    if (!nextConfig.redirects) throw new Error('nextConfig.redirects is not defined')
+    const rules = await nextConfig.redirects()
+
+    expect(rules).toEqual([{ source: '/discover', destination: '/', permanent: true }])
+  })
+})
+
 describe('next.config headers', () => {
   it('applies baseline security headers to every route', async () => {
     if (!nextConfig.headers) throw new Error('nextConfig.headers is not defined')

@@ -38,30 +38,6 @@
   margin-bottom: var(--space-8);
 }
 
-.cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-3) var(--space-8);
-  border-radius: var(--radius-md);
-  background-color: var(--color-coral);
-  color: var(--color-grey-900);
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
-  text-decoration: none;
-  transition:
-    background-color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.cta:hover {
-  background-color: var(--color-coral-dark);
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-
 .globe {
   width: 12rem;
   height: 12rem;

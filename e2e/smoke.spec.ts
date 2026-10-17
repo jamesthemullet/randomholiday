@@ -1,10 +1,15 @@
 import { test, expect } from '@playwright/test'
 
-test('homepage loads and links to the discover flow', async ({ page }) => {
+test('homepage loads with the trip search form inline', async ({ page }) => {
   await page.goto('/')
 
   await expect(page.getByRole('heading', { name: /your next adventure/i })).toBeVisible()
+  await expect(page.getByRole('form', { name: /find your holiday/i })).toBeVisible()
+})
 
-  await page.getByRole('link', { name: /find my holiday/i }).click()
-  await expect(page).toHaveURL(/\/discover/)
+test('the retired /discover page redirects to the homepage form', async ({ page }) => {
+  await page.goto('/discover')
+
+  await expect(page).toHaveURL(/\/$/)
+  await expect(page.getByRole('form', { name: /find your holiday/i })).toBeVisible()
 })
