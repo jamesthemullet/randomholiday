@@ -1,0 +1,31 @@
+.wrapper {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16) var(--container-padding);
+  text-align: center;
+}
+
+.content {
+  max-width: 32rem;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-4);
+}
+
+.message {
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-8);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}

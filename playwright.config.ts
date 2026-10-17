@@ -10,6 +10,9 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
+    // Entrance animations (e.g. ResultsReveal's fade-in) honour prefers-reduced-motion. Without
+    // this, axe can sample colours mid-fade and report bogus contrast failures.
+    reducedMotion: 'reduce',
   },
   projects: [
     {
@@ -22,7 +25,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'yarn dev',
+    // CI builds first, so serve that build rather than paying dev-mode on-demand compilation.
+    command: process.env.CI ? 'yarn start' : 'yarn dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
   },
