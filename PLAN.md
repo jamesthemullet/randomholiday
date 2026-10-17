@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 9 — Release Readiness
 
-## Last Completed: Task 9.5 — Rate limiting on API routes. Added a dependency-free, in-memory fixed-window limiter (`lib/rateLimiter.ts`, injectable clock for tests) and a client-identifier helper (`lib/requestIp.ts`, reads `x-forwarded-for`/`x-real-ip`). Wired into the three user-facing route handlers — `/api/flight-price` and `/api/weather` (30 requests/minute per IP) and `/api/checkout` (10 requests/minute per IP) — each returning `429` with a `Retry-After` header once exceeded. `/api/webhooks/stripe` is deliberately excluded: it's signature-verified and driven by Stripe's own retry behaviour, so rate limiting it risks dropping legitimate webhook deliveries without adding real protection. Tests added for both lib modules plus a 429 case in each wired route's test file. `yarn lint`, `yarn typecheck`, and `yarn test` (1353 tests) are all clean.
+## Last Completed: Task 9.6 (final) — Confirmed CI on `main` is green (run #386, commit `b603fa7`: lint, typecheck, and all 1353 tests pass) and raised the "Ready for Production Release" GitHub issue (#127) with the Vercel deployment checklist.
 
-## Next: Task 9.6 (final) — Run the final CI check and, once green, raise the "Ready for Production Release" GitHub issue with the Vercel deployment checklist
+## Next: All phases complete. No further tasks — remaining work is tracked in issue #127 (Vercel deployment checklist) and the already-open #27 / #108 (API and Stripe/affiliate keys).
 
 ---
 
@@ -125,8 +125,8 @@ Sub-steps:
 - [x] robots.txt, sitemap, OpenGraph meta tags (shipped earlier as `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`; this checklist just hadn't been updated)
 - [x] Error boundary + 404/500 pages
 - [x] Rate limiting on API routes
-- [ ] Final CI check passes
-- [ ] RAISE GITHUB ISSUE: "Ready for Production Release"
+- [x] Final CI check passes
+- [x] RAISE GITHUB ISSUE: "Ready for Production Release" (#127)
 
 ---
 
