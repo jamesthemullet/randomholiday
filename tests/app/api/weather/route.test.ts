@@ -135,4 +135,21 @@ describe('GET /api/weather', () => {
 
     expect(body.source).toBe('static')
   })
+
+  it('returns 429 once the per-IP limit is exceeded', async () => {
+    vi.stubEnv('OPENWEATHER_API_KEY', '')
+    const headers = { 'x-forwarded-for': '203.0.113.42' }
+
+    for (let i = 0; i < 30; i += 1) {
+      const response = await GET(new Request(`${BASE_URL}?${VALID_QUERY}`, { headers }))
+      expect(response.status).toBe(200)
+    }
+
+    const limited = await GET(new Request(`${BASE_URL}?${VALID_QUERY}`, { headers }))
+    const body = await limited.json()
+
+    expect(limited.status).toBe(429)
+    expect(body.error).toMatch(/Too many requests/)
+    expect(limited.headers.get('Retry-After')).not.toBeNull()
+  })
 })

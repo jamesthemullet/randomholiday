@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { getSeasonalWeatherEstimate } from '@/lib/seasonalWeather'
 import { parseNumberParam } from '@/lib/queryParams'
+import { createRateLimiter } from '@/lib/rateLimiter'
+import { getClientIp } from '@/lib/requestIp'
 
 interface OpenWeatherResponse {
   main?: { temp?: number }
@@ -8,8 +10,17 @@ interface OpenWeatherResponse {
 }
 
 const LIVE_WEATHER_TIMEOUT_MS = 5000
+const rateLimiter = createRateLimiter({ limit: 30, windowMs: 60_000 })
 
 export async function GET(request: Request): Promise<NextResponse> {
+  const rateLimit = rateLimiter.check(getClientIp(request))
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: 'Too many requests, please try again shortly' },
+      { status: 429, headers: { 'Retry-After': String(Math.ceil(rateLimit.retryAfterMs / 1000)) } }
+    )
+  }
+
   const { searchParams } = new URL(request.url)
   const lat = parseNumberParam(searchParams.get('lat'))
   const lng = parseNumberParam(searchParams.get('lng'))

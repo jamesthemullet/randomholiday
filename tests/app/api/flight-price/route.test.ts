@@ -41,4 +41,20 @@ describe('GET /api/flight-price', () => {
 
     expect(body).toEqual({ source: 'static', pricePerPerson: 1100, currency: 'USD' })
   })
+
+  it('returns 429 once the per-IP limit is exceeded', async () => {
+    const headers = { 'x-forwarded-for': '203.0.113.42' }
+
+    for (let i = 0; i < 30; i += 1) {
+      const response = await GET(new Request(`${BASE_URL}?distanceKm=1150`, { headers }))
+      expect(response.status).toBe(200)
+    }
+
+    const limited = await GET(new Request(`${BASE_URL}?distanceKm=1150`, { headers }))
+    const body = await limited.json()
+
+    expect(limited.status).toBe(429)
+    expect(body.error).toMatch(/Too many requests/)
+    expect(limited.headers.get('Retry-After')).not.toBeNull()
+  })
 })

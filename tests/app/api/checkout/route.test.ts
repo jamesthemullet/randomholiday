@@ -8,6 +8,13 @@ vi.mock('@/lib/stripeClient', () => ({
 
 const mockedGetStripeClient = vi.mocked(getStripeClient)
 
+function createRequest(ip = '203.0.113.1'): Request {
+  return new Request('http://localhost/api/checkout', {
+    method: 'POST',
+    headers: { 'x-forwarded-for': ip },
+  })
+}
+
 describe('POST /api/checkout', () => {
   afterEach(() => {
     vi.unstubAllEnvs()
@@ -17,7 +24,7 @@ describe('POST /api/checkout', () => {
   it('returns 503 when Stripe is not configured', async () => {
     mockedGetStripeClient.mockReturnValue(null)
 
-    const response = await POST()
+    const response = await POST(createRequest())
     const body = await response.json()
 
     expect(response.status).toBe(503)
@@ -31,7 +38,7 @@ describe('POST /api/checkout', () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
-    const response = await POST()
+    const response = await POST(createRequest())
 
     expect(response.status).toBe(503)
   })
@@ -44,7 +51,7 @@ describe('POST /api/checkout', () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
-    const response = await POST()
+    const response = await POST(createRequest())
     const body = await response.json()
 
     expect(response.status).toBe(200)
@@ -64,7 +71,7 @@ describe('POST /api/checkout', () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
-    const response = await POST()
+    const response = await POST(createRequest())
 
     expect(response.status).toBe(502)
   })
@@ -76,10 +83,27 @@ describe('POST /api/checkout', () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
-    const response = await POST()
+    const response = await POST(createRequest())
     const body = await response.json()
 
     expect(response.status).toBe(502)
     expect(body.error).toMatch(/Failed to create checkout session/)
+  })
+
+  it('returns 429 once the per-IP limit is exceeded', async () => {
+    mockedGetStripeClient.mockReturnValue(null)
+    const ip = '203.0.113.99'
+
+    for (let i = 0; i < 10; i += 1) {
+      const response = await POST(createRequest(ip))
+      expect(response.status).toBe(503)
+    }
+
+    const limited = await POST(createRequest(ip))
+    const body = await limited.json()
+
+    expect(limited.status).toBe(429)
+    expect(body.error).toMatch(/Too many requests/)
+    expect(limited.headers.get('Retry-After')).not.toBeNull()
   })
 })

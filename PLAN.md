@@ -2,9 +2,9 @@
 
 ## Current Phase: Phase 9 — Release Readiness
 
-## Last Completed: Task 9.4 — Error boundary + 404/500 pages. Added `app/not-found.tsx` (404 page, shown automatically by the App Router for unmatched routes), `app/error.tsx` (client-side error boundary that wraps route segments below the root layout — catches render/render-phase errors, logs them, and offers a "Try again" button that calls `reset()` plus a link home), and `app/global-error.tsx` (the root-layout-level boundary; per Next.js convention it renders its own `<html>`/`<body>` and imports `styles/globals.css` directly, since the root layout itself is bypassed when it's shown, and deliberately avoids depending on the `Button` component tree in case the error originated there). Each has its own `.module.css` using existing design tokens, and tests in `tests/app/` covering heading, reset/navigation behaviour, and error logging. `yarn lint`, `yarn typecheck`, and `yarn test` (1340 tests) are all clean.
+## Last Completed: Task 9.5 — Rate limiting on API routes. Added a dependency-free, in-memory fixed-window limiter (`lib/rateLimiter.ts`, injectable clock for tests) and a client-identifier helper (`lib/requestIp.ts`, reads `x-forwarded-for`/`x-real-ip`). Wired into the three user-facing route handlers — `/api/flight-price` and `/api/weather` (30 requests/minute per IP) and `/api/checkout` (10 requests/minute per IP) — each returning `429` with a `Retry-After` header once exceeded. `/api/webhooks/stripe` is deliberately excluded: it's signature-verified and driven by Stripe's own retry behaviour, so rate limiting it risks dropping legitimate webhook deliveries without adding real protection. Tests added for both lib modules plus a 429 case in each wired route's test file. `yarn lint`, `yarn typecheck`, and `yarn test` (1353 tests) are all clean.
 
-## Next: Task 9.5 — Rate limiting on API routes
+## Next: Task 9.6 (final) — Run the final CI check and, once green, raise the "Ready for Production Release" GitHub issue with the Vercel deployment checklist
 
 ---
 
@@ -124,7 +124,7 @@ Sub-steps:
 - [x] vercel.json deployment config
 - [x] robots.txt, sitemap, OpenGraph meta tags (shipped earlier as `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`; this checklist just hadn't been updated)
 - [x] Error boundary + 404/500 pages
-- [ ] Rate limiting on API routes
+- [x] Rate limiting on API routes
 - [ ] Final CI check passes
 - [ ] RAISE GITHUB ISSUE: "Ready for Production Release"
 
