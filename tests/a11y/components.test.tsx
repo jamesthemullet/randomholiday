@@ -16,7 +16,6 @@ import { DestinationCard } from '@/components/DestinationCard'
 import type { Destination as DestinationCardDestination } from '@/components/DestinationCard'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import type { Destination } from '@/lib/destinations'
-import { DiscoverWizard } from '@/components/DiscoverWizard'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
@@ -27,8 +26,8 @@ import type { DestinationScore } from '@/lib/scoringEngine'
 import { RouteAnnouncer } from '@/components/RouteAnnouncer'
 import { BudgetSlider } from '@/components/BudgetSlider'
 import { TravelStyleSelector } from '@/components/TravelStyleSelector'
-import { TravelTimingStep } from '@/components/TravelTimingStep'
 import { TripActions } from '@/components/TripActions'
+import { TripForm } from '@/components/TripForm'
 import { TripScopeStep } from '@/components/TripScopeStep'
 import { UpgradePrompt } from '@/components/UpgradePrompt'
 
@@ -193,11 +192,6 @@ describe('accessibility (axe)', () => {
     vi.unstubAllGlobals()
   })
 
-  it('DiscoverWizard has no violations', async () => {
-    const { container } = render(<DiscoverWizard />)
-    expect(await axe(container)).toHaveNoViolations()
-  })
-
   it('Footer has no violations', async () => {
     const { container } = render(<Footer />)
     expect(await axe(container)).toHaveNoViolations()
@@ -247,15 +241,13 @@ describe('accessibility (axe)', () => {
     expect(await axe(container)).toHaveNoViolations()
   })
 
-  it('TravelTimingStep has no violations', async () => {
-    const { container } = render(
-      <TravelTimingStep month={null} onMonthChange={vi.fn()} nights={7} onNightsChange={vi.fn()} />
-    )
+  it('TripActions has no violations', async () => {
+    const { container } = render(<TripActions destinationName="Bali, Indonesia" />)
     expect(await axe(container)).toHaveNoViolations()
   })
 
-  it('TripActions has no violations', async () => {
-    const { container } = render(<TripActions destinationName="Bali, Indonesia" />)
+  it('TripForm has no violations', async () => {
+    const { container } = render(<TripForm />)
     expect(await axe(container)).toHaveNoViolations()
   })
 

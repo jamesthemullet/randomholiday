@@ -1,8 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
+import { TripForm } from '@/components/TripForm'
+import type { TripQueryInitialValues } from '@/lib/tripQuery'
 import styles from './Hero.module.css'
 
-export function Hero() {
+export interface HeroProps {
+  initialValues?: TripQueryInitialValues
+}
+
+export function Hero({ initialValues }: HeroProps) {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.container}>
@@ -11,12 +16,10 @@ export function Hero() {
             Your next adventure is one click away
           </h1>
           <p className={styles.tagline}>
-            Tell us your budget, style, and dates — we&apos;ll surprise you with the perfect holiday
+            Tell us where you&apos;re flying from — we&apos;ll surprise you with the perfect holiday
             destination.
           </p>
-          <Link href="/discover" className={styles.cta}>
-            Find My Holiday
-          </Link>
+          <TripForm initialValues={initialValues} />
         </div>
 
         <svg

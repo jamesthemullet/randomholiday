@@ -7,7 +7,7 @@ const resultsUrl =
 
 async function openDestinationModal(page: import('@playwright/test').Page) {
   await page.goto(resultsUrl)
-  const selectButton = page.getByRole('button', { name: /select destination/i }).first()
+  const selectButton = page.getByRole('button', { name: /see prices & book/i }).first()
   await selectButton.waitFor({ state: 'visible' })
   // The card's 3D flip transform overlaps both faces in the hit-testing tree, which confuses
   // Playwright's pointer-coordinate click; dispatch the click event on the element directly.

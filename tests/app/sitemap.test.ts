@@ -19,7 +19,7 @@ describe('sitemap', () => {
   it('lists the static routes with a lastModified date', () => {
     const result = sitemap()
 
-    expect(result).toHaveLength(3)
+    expect(result).toHaveLength(2)
     result.forEach((entry) => {
       expect(entry.lastModified).toBeInstanceOf(Date)
     })
@@ -32,7 +32,6 @@ describe('sitemap', () => {
 
     expect(result.map((entry) => entry.url)).toEqual([
       'https://randomholiday.example',
-      'https://randomholiday.example/discover',
       'https://randomholiday.example/pricing',
     ])
   })
@@ -42,7 +41,6 @@ describe('sitemap', () => {
 
     expect(result.map((entry) => entry.url)).toEqual([
       'http://localhost:3000',
-      'http://localhost:3000/discover',
       'http://localhost:3000/pricing',
     ])
   })
