@@ -2,13 +2,9 @@
 
 ## Current Phase: Phase 9 — Release Readiness
 
-## Last Completed: Task 9.2 — vercel.json deployment config. Added `vercel.json` pinning the framework preset (`nextjs`) and the install/build/dev commands to their `yarn` equivalents (`yarn install` / `yarn build` / `yarn dev`), and set a minimum Node.js version via `"engines": { "node": ">=22.0.0" }` in `package.json` (the way Vercel actually reads a Node version preference — `vercel.json` has no Node-version field). Initially pinned `engines.node` to the exact `"22.x"` the task asked for, but that broke CI: the GitHub Actions workflow runs Node 24, and yarn's engine check is strict by default, so `yarn install` started failing there. Switched to an open-ended `">=22.0.0"` minimum instead, which satisfies both Vercel (22+) and CI (24) without re-pinning to whatever each happens to run today. Env var placeholders already live in `.env.example`/the README's variable table from Task 9.1; deliberately did not duplicate them as literal values in `vercel.json`'s `env` block, since a `vercel.json`-level `env` entry takes precedence over the same variable set in the Vercel dashboard and would silently blank out real secrets configured there. Updated the README's Vercel deployment section to reference the new config instead of claiming "no custom configuration is needed". `yarn lint`, `yarn typecheck`, and `yarn test` (1330 tests) are all clean; verified `yarn build` succeeds.
+## Last Completed: Task 9.4 — Error boundary + 404/500 pages. Added `app/not-found.tsx` (404 page, shown automatically by the App Router for unmatched routes), `app/error.tsx` (client-side error boundary that wraps route segments below the root layout — catches render/render-phase errors, logs them, and offers a "Try again" button that calls `reset()` plus a link home), and `app/global-error.tsx` (the root-layout-level boundary; per Next.js convention it renders its own `<html>`/`<body>` and imports `styles/globals.css` directly, since the root layout itself is bypassed when it's shown, and deliberately avoids depending on the `Button` component tree in case the error originated there). Each has its own `.module.css` using existing design tokens, and tests in `tests/app/` covering heading, reset/navigation behaviour, and error logging. `yarn lint`, `yarn typecheck`, and `yarn test` (1340 tests) are all clean.
 
-## Next: Task 9.4 — Error boundary + 404/500 pages
-
-(Task 9.3 — robots.txt, sitemap, OpenGraph meta tags — was already shipped in an earlier PR as
-`app/robots.ts`, `app/sitemap.ts`, and `app/opengraph-image.tsx`; the Phase 9 checklist below just
-hadn't been ticked off for it until now.)
+## Next: Task 9.5 — Rate limiting on API routes
 
 ---
 
@@ -127,7 +123,7 @@ Sub-steps:
 - [x] README.md with full setup + deployment guide
 - [x] vercel.json deployment config
 - [x] robots.txt, sitemap, OpenGraph meta tags (shipped earlier as `app/robots.ts`, `app/sitemap.ts`, `app/opengraph-image.tsx`; this checklist just hadn't been updated)
-- [ ] Error boundary + 404/500 pages
+- [x] Error boundary + 404/500 pages
 - [ ] Rate limiting on API routes
 - [ ] Final CI check passes
 - [ ] RAISE GITHUB ISSUE: "Ready for Production Release"
