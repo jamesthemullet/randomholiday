@@ -59,10 +59,10 @@ jobs:
           key: playwright-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - name: Install Playwright browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps chromium
+        run: yarn playwright install --with-deps chromium
       - name: Install Playwright OS dependencies
         if: steps.playwright-cache.outputs.cache-hit == 'true'
-        run: npx playwright install-deps chromium
+        run: yarn playwright install-deps chromium
       - run: yarn build
       - run: yarn e2e
         env:
