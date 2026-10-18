@@ -1,18 +1,24 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { getDestinationImagePath } from '@/lib/destinationImage'
 import { DestinationCard } from '@/components/DestinationCard'
 import { Badge } from '@/components/Badge'
 import { Button } from '@/components/Button'
+import { Spinner } from '@/components/Spinner'
 import styles from './ResultsReveal.module.css'
 
 export interface ResultsRevealProps {
   recommendation: DestinationScore | null
+  /** True while the destination is still being chosen, so an empty result isn't shown as "no match". */
+  isPicking?: boolean
   onShuffle: () => void
   onSelect?: (destinationId: string) => void
+  /** Where "Change search" links to, typically the homepage form prefilled with this search. */
+  changeSearchHref?: string
 }
 
 const cardVariants: Variants = {
@@ -20,7 +26,13 @@ const cardVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
-export function ResultsReveal({ recommendation, onShuffle, onSelect }: ResultsRevealProps) {
+export function ResultsReveal({
+  recommendation,
+  isPicking = false,
+  onShuffle,
+  onSelect,
+  changeSearchHref,
+}: ResultsRevealProps) {
   const prefersReducedMotion = useReducedMotion()
 
   return (
@@ -29,9 +41,16 @@ export function ResultsReveal({ recommendation, onShuffle, onSelect }: ResultsRe
         <h1 id="results-heading" className={styles.heading}>
           Your Match
         </h1>
-        <Button type="button" variant="secondary" onClick={onShuffle}>
-          Shuffle
-        </Button>
+        <div className={styles.actions}>
+          {changeSearchHref && (
+            <Link href={changeSearchHref} className={styles.changeSearch}>
+              Change search
+            </Link>
+          )}
+          <Button type="button" variant="secondary" onClick={onShuffle} disabled={isPicking}>
+            Shuffle
+          </Button>
+        </div>
       </div>
 
       <p className="sr-only" role="status" aria-live="polite">
@@ -40,7 +59,11 @@ export function ResultsReveal({ recommendation, onShuffle, onSelect }: ResultsRe
           : ''}
       </p>
 
-      {!recommendation ? (
+      {isPicking ? (
+        <div className={styles.picking}>
+          <Spinner size="lg" label="Picking your destination…" />
+        </div>
+      ) : !recommendation ? (
         <p className={styles.empty}>
           No destinations matched your search. Try adjusting your budget or distance.
         </p>

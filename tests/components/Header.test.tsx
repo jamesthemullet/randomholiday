@@ -33,9 +33,9 @@ describe('Header', () => {
     expect(screen.getByRole('link', { name: 'Home' })).toHaveAttribute('href', '/')
   })
 
-  it('renders Discover nav link', () => {
+  it('does not render a separate Discover nav link', () => {
     render(<Header />)
-    expect(screen.getByRole('link', { name: 'Discover' })).toHaveAttribute('href', '/discover')
+    expect(screen.queryByRole('link', { name: 'Discover' })).not.toBeInTheDocument()
   })
 
   it('renders Pricing nav link', () => {
@@ -55,18 +55,16 @@ describe('Header', () => {
   })
 
   it('marks the nav link matching the current path with aria-current', () => {
-    usePathname.mockReturnValue('/discover')
+    usePathname.mockReturnValue('/pricing')
     render(<Header />)
-    expect(screen.getByRole('link', { name: 'Discover' })).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByRole('link', { name: 'Pricing' })).toHaveAttribute('aria-current', 'page')
     expect(screen.getByRole('link', { name: 'Home' })).not.toHaveAttribute('aria-current')
-    expect(screen.getByRole('link', { name: 'Pricing' })).not.toHaveAttribute('aria-current')
   })
 
   it('does not mark any nav link as current when the path matches none', () => {
-    usePathname.mockReturnValue('/discover/results')
+    usePathname.mockReturnValue('/results')
     render(<Header />)
     expect(screen.getByRole('link', { name: 'Home' })).not.toHaveAttribute('aria-current')
-    expect(screen.getByRole('link', { name: 'Discover' })).not.toHaveAttribute('aria-current')
     expect(screen.getByRole('link', { name: 'Pricing' })).not.toHaveAttribute('aria-current')
   })
 })
