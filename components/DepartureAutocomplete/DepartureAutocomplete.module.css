@@ -5,9 +5,12 @@
 }
 
 .label {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-label);
 }
 
 .comboboxWrapper {
@@ -15,72 +18,69 @@
 }
 
 .input {
-  padding: var(--space-2) var(--space-3);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-family: var(--font-body);
-  font-size: var(--text-base);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 3px solid var(--color-line);
+  border-radius: 14px;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
-  width: 100%;
+  transition: box-shadow var(--transition-fast);
 }
 
 .input:focus {
   outline: none;
-  border-color: var(--color-border-focus);
-  box-shadow: 0 0 0 3px rgba(0, 201, 200, 0.15);
+  box-shadow: 0 0 0 5px rgba(0, 201, 200, 0.35);
 }
 
 .inputError {
-  border-color: var(--color-coral);
+  border-color: var(--color-coral-dark);
 }
 
 .inputError:focus {
-  border-color: var(--color-coral-dark);
-  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+  box-shadow: 0 0 0 5px rgba(255, 107, 107, 0.3);
 }
 
 .listbox {
   position: absolute;
-  top: calc(100% + var(--space-1));
+  top: calc(100% + var(--space-2));
   left: 0;
   right: 0;
   z-index: var(--z-dropdown);
   margin: 0;
-  padding: var(--space-1);
+  padding: 0.375rem;
   list-style: none;
   background-color: var(--color-bg-card);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  max-height: 16rem;
+  border: 3px solid var(--color-line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-pop);
+  max-height: 16.25rem;
   overflow-y: auto;
 }
 
 .option {
   display: flex;
   align-items: baseline;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-sm);
+  gap: 0.625rem;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
   cursor: pointer;
 }
 
 .option:hover {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
 }
 
 .optionHighlighted {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-primary);
   outline: 2px solid var(--color-border-focus);
   outline-offset: -2px;
 }
 
 .optionName {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
   color: var(--color-text-primary);
 }
 
@@ -91,22 +91,22 @@
 
 .noResults {
   position: absolute;
-  top: calc(100% + var(--space-1));
+  top: calc(100% + var(--space-2));
   left: 0;
   right: 0;
   z-index: var(--z-dropdown);
   margin: 0;
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4);
   background-color: var(--color-bg-card);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  font-size: var(--text-sm);
+  border: 3px solid var(--color-line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-pop);
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
 }
 
 .error {
   font-size: var(--text-sm);
-  color: var(--color-coral);
+  color: var(--color-danger-text);
   margin: 0;
 }

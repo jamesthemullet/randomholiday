@@ -24,7 +24,10 @@ describe('TripScopeStep', () => {
 
   it('displays "Anywhere" when distance is at the max limit', () => {
     render(<TripScopeStep {...defaultProps} maxDistance={20000} maxDistanceLimit={20000} />)
-    expect(screen.getByText('Anywhere')).toBeInTheDocument()
+    expect(screen.getByRole('slider', { name: 'Max travel distance' })).toHaveAttribute(
+      'aria-valuetext',
+      'Anywhere'
+    )
   })
 
   it('calls onMaxDistanceChange with the numeric slider value', () => {

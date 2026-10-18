@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Button } from '@/components/Button'
 import { Badge } from '@/components/Badge'
 import styles from './TripActions.module.css'
 
@@ -49,12 +48,12 @@ export function TripActions({ destinationName, shareUrl, className }: TripAction
   return (
     <div className={classes}>
       <div className={styles.buttons}>
-        <Button type="button" variant="secondary" onClick={handleSave}>
+        <button type="button" className={styles.save} onClick={handleSave}>
           Save trip
-        </Button>
-        <Button type="button" variant="ghost" onClick={handleShare}>
+        </button>
+        <button type="button" className={styles.share} onClick={handleShare}>
           Share
-        </Button>
+        </button>
       </div>
 
       {showUpsell && (

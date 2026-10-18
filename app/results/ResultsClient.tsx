@@ -11,6 +11,7 @@ import { getRecommendations } from '@/lib/recommendationEngine'
 import { scoreDestination } from '@/lib/scoringEngine'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
+import { calculateBudget } from '@/lib/budgetCalculator'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
@@ -40,6 +41,7 @@ export function ResultsClient() {
     if (!city || !budget || !maxDistanceKm || !nights || !groupSize) return null
 
     return {
+      originName: city.name,
       origin: city.coordinates,
       maxBudgetPerPerson: budget,
       maxDistanceKm,
@@ -94,35 +96,59 @@ export function ResultsClient() {
     [filterParams, recommendation]
   )
 
+  const perPersonCost = useMemo(
+    () =>
+      filterParams && recommendation
+        ? calculateBudget({
+            destination: recommendation.destination,
+            distanceKm,
+            nights: filterParams.nights,
+            groupSize: filterParams.groupSize,
+          }).perPersonCost
+        : undefined,
+    [filterParams, recommendation, distanceKm]
+  )
+
   if (!filterParams) {
     return (
-      <main id="main-content" className={styles.wrapper}>
-        <p className={styles.empty}>We couldn&apos;t find your trip details. Please start over.</p>
-        <Link href="/" className={styles.link}>
-          Start over
-        </Link>
+      <main id="main-content" className={styles.page}>
+        <div className={styles.wrapper}>
+          <p className={styles.empty}>
+            We couldn&apos;t find your trip details. Please start over.
+          </p>
+          <Link href="/" className={styles.link}>
+            Start over
+          </Link>
+        </div>
       </main>
     )
   }
 
   return (
-    <main id="main-content" className={styles.wrapper}>
-      <ResultsReveal
-        recommendation={recommendation}
-        isPicking={isPicking}
-        onShuffle={handleShuffle}
-        onSelect={handleSelect}
-        changeSearchHref={`/?${searchParams.toString()}`}
-      />
-      <DestinationDetailModal
-        isOpen={isDetailModalOpen}
-        onClose={() => setIsDetailModalOpen(false)}
-        destination={recommendation?.destination ?? null}
-        distanceKm={distanceKm}
-        nights={filterParams.nights}
-        groupSize={filterParams.groupSize}
-        month={filterParams.travelMonth}
-      />
+    <main id="main-content" className={styles.page}>
+      <div className={styles.wrapper}>
+        <ResultsReveal
+          recommendation={recommendation}
+          isPicking={isPicking}
+          onShuffle={handleShuffle}
+          onSelect={handleSelect}
+          changeSearchHref={`/?${searchParams.toString()}`}
+          originName={filterParams.originName}
+          distanceKm={recommendation ? distanceKm : undefined}
+          nights={filterParams.nights}
+          perPersonCost={perPersonCost}
+        />
+        <DestinationDetailModal
+          isOpen={isDetailModalOpen}
+          onClose={() => setIsDetailModalOpen(false)}
+          destination={recommendation?.destination ?? null}
+          distanceKm={distanceKm}
+          nights={filterParams.nights}
+          groupSize={filterParams.groupSize}
+          month={filterParams.travelMonth}
+          originName={filterParams.originName}
+        />
+      </div>
     </main>
   )
 }

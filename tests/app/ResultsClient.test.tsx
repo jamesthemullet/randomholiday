@@ -36,7 +36,7 @@ describe('ResultsClient', () => {
     expect(screen.getAllByText(pinned.name).length).toBeGreaterThan(0)
   })
 
-  it('links Change search back to the homepage form with the current query', () => {
+  it('links Change my answers back to the homepage form with the current query', () => {
     setParams({
       originId: city.id,
       budget: '1500',
@@ -48,10 +48,29 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    expect(screen.getByRole('link', { name: 'Change search' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Change my answers' })).toHaveAttribute(
       'href',
       `/?${mockSearchParams.toString()}`
     )
+  })
+
+  it('shows the trip details on the postcard', () => {
+    const pinned = destinations.find((d) => d.id === 'barcelona-spain')!
+    setParams({
+      destination: pinned.id,
+      originId: city.id,
+      budget: '1500',
+      distance: '5000',
+      nights: '7',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    expect(screen.getByText('From').nextSibling).toHaveTextContent(city.name)
+    expect(screen.getByText('7 nights')).toBeInTheDocument()
+    expect(screen.getByText('Est. pp').nextSibling).toHaveTextContent(/^\$[\d,]+$/)
   })
 
   it('offers a Start over link to the homepage when the trip details are missing', () => {
