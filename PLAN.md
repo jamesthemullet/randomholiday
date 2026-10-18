@@ -42,7 +42,7 @@ Sub-steps:
 - [x] Loading spinner (Spinner.tsx + Spinner.module.css) — CSS animation, globe SVG
 - [x] Destination card with flip animation (DestinationCard.tsx + .module.css)
 - [x] Layout shell: Header, Main, Footer (each with own .module.css)
-- [x] Dark mode toggle component
+- [x] ~~Dark mode toggle component~~ (removed 2026-10-18 — light theme only)
 - [x] Unit tests for all components (part of the 1277-test suite; `vitest.config.ts` enforces 95%+ lines/branches/statements and 100% functions for `components/**`, not blanket 100% — see AUDIT.md §1 for the known gaps in `DestinationDetailModal`/`DiscoverWizard`)
 
 ---
@@ -134,6 +134,5 @@ Sub-steps:
 
 - All styles via CSS Modules (.module.css per component) — NO Tailwind, NO inline styles
 - Design tokens in /styles/tokens.css as CSS custom properties
-- Dark mode: [data-theme="dark"] overrides on CSS custom properties
 - Business logic stays in /lib with zero DOM dependencies (React Native reuse)
 - All API calls server-side via Next.js route handlers

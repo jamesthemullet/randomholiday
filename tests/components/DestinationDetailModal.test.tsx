@@ -174,19 +174,19 @@ describe('DestinationDetailModal', () => {
         groupSize={2}
       />
     )
-    // flightFromEurope: $600 * 2 travellers = $1200
+    // flightFromEurope: £600 * 2 travellers = £1200
     expect(screen.getByText('Flights (2 travellers)')).toBeInTheDocument()
-    expect(screen.getByText('$1,200')).toBeInTheDocument()
-    // hotel: $60 * 5 nights = $300
+    expect(screen.getByText('£1,200')).toBeInTheDocument()
+    // hotel: £60 * 5 nights = £300
     expect(screen.getByText('Hotel (5 nights)')).toBeInTheDocument()
-    expect(screen.getByText('$300')).toBeInTheDocument()
-    // daily spending: $40 * 2 * 5 = $400
+    expect(screen.getByText('£300')).toBeInTheDocument()
+    // daily spending: £40 * 2 * 5 = £400
     expect(screen.getByText('Daily spending')).toBeInTheDocument()
-    expect(screen.getByText('$400')).toBeInTheDocument()
-    // total: 1200 + 300 + 400 = $1,900, per person = $950
+    expect(screen.getByText('£400')).toBeInTheDocument()
+    // total: 1200 + 300 + 400 = £1,900, per person = £950
     expect(screen.getByText('Total')).toBeInTheDocument()
-    expect(screen.getByText('$950 per person')).toBeInTheDocument()
-    expect(screen.getByText('$1,900')).toBeInTheDocument()
+    expect(screen.getByText('£950 per person')).toBeInTheDocument()
+    expect(screen.getByText('£1,900')).toBeInTheDocument()
   })
 
   it('singularises the traveller label for a group size of 1', () => {
@@ -387,10 +387,10 @@ describe('DestinationDetailModal', () => {
     )
     expect(
       screen.getByRole('link', { name: 'Find flights on Skyscanner' })
-    ).toHaveAccessibleDescription('From London · est. $1,200')
+    ).toHaveAccessibleDescription('From London · est. £1,200')
     expect(
       screen.getByRole('link', { name: 'Find hotels on Booking.com' })
-    ).toHaveAccessibleDescription('5 nights · 2 guests · est. $300')
+    ).toHaveAccessibleDescription('5 nights · 2 guests · est. £300')
   })
 
   it('leaves the origin out of the flights note when it is unknown', () => {
@@ -406,10 +406,10 @@ describe('DestinationDetailModal', () => {
     )
     expect(
       screen.getByRole('link', { name: 'Find flights on Skyscanner' })
-    ).toHaveAccessibleDescription('est. $600')
+    ).toHaveAccessibleDescription('est. £600')
     expect(
       screen.getByRole('link', { name: 'Find hotels on Booking.com' })
-    ).toHaveAccessibleDescription('5 nights · 1 guest · est. $300')
+    ).toHaveAccessibleDescription('5 nights · 1 guest · est. £300')
   })
 
   it('does not fetch weather when the modal is closed', () => {
