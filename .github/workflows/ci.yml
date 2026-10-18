@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'yarn'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn lint
       - run: yarn typecheck
 
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'yarn'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn test:coverage
       - uses: actions/upload-artifact@v7
         if: always()
@@ -50,7 +50,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'yarn'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - name: Cache Playwright browsers
         uses: actions/cache@v6
         id: playwright-cache
@@ -82,7 +82,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'yarn'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn build
       - run: yarn lighthouse
       - uses: actions/upload-artifact@v7

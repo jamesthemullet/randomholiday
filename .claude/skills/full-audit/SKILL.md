@@ -162,7 +162,7 @@ already running it.
 - Since Stripe checkout is planned (PLAN.md Phase 6): if any Stripe code exists yet, confirm
   webhook signature verification and that `STRIPE_SECRET_KEY` is never referenced from a client
   component
-- Dependency vulnerabilities: `yarn audit` (or check Renovate's open PR backlog per
+- Dependency vulnerabilities: `yarn npm audit --all --recursive` (or check Renovate's open PR backlog per
   `renovate.json`)
 - Basic response headers (CSP, HSTS, X-Content-Type-Options) — check `next.config.mjs` for
   header config, since Vercel deployment config (`vercel.json`) doesn't exist yet per PLAN.md

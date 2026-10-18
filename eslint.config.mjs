@@ -9,6 +9,7 @@ const config = [
       'test-results/**',
       '.open-next/**',
       '.wrangler/**',
+      '.yarn/**',
     ],
   },
   ...nextCoreWebVitals,
