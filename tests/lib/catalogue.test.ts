@@ -143,9 +143,8 @@ describe('buildCatalogue', () => {
     expect(entries[0].london).toEqual(route)
   })
 
-  it('marks an unmatched hand-written destination as needing a connection', () => {
-    const [entry] = buildCatalogue([lisbon], [], {})
-    expect(entry.london).toEqual({ direct: false, airports: [], airlines: [], seasonalOnly: false })
+  it('leaves out a hand-written destination with no London route', () => {
+    expect(buildCatalogue([lisbon], [], {})).toEqual([])
   })
 
   it('adds unmatched generated destinations, merged with any details', () => {
@@ -162,13 +161,15 @@ describe('buildCatalogue', () => {
 })
 
 describe('catalogue', () => {
-  it('includes every hand-written destination and every unmatched London destination', () => {
-    const matched = new Set(
-      destinations
-        .map((d) => HAND_WRITTEN_ALIASES[d.id] ?? d.id)
-        .filter((id) => londonData.some((l) => l.id === id))
-    )
-    expect(catalogue).toHaveLength(destinations.length + londonData.length - matched.size)
+  it('has exactly one entry per London destination', () => {
+    expect(catalogue).toHaveLength(londonData.length)
+  })
+
+  it('only includes destinations reachable from London', () => {
+    const londonIds = new Set(londonData.map((d) => d.id))
+    expect(
+      catalogue.every((d) => londonIds.has(d.id) || londonIds.has(HAND_WRITTEN_ALIASES[d.id]))
+    ).toBe(true)
   })
 
   it('has unique ids', () => {
@@ -181,13 +182,18 @@ describe('catalogue', () => {
     expect(pickable.every((d) => isPickable({ ...d, london: route }))).toBe(true)
   })
 
-  it('recommends every hand-written destination and every generated one with full details', () => {
+  it('recommends every hand-written destination with a London route and every detailed generated one', () => {
     const detailed = Object.keys(detailsData).filter((id) => {
       const entry = catalogue.find((d) => d.id === id)
       return entry !== undefined && isPickable(entry)
     })
     expect(pickableDestinations.map((d) => d.id).sort()).toEqual(
-      [...destinations.map((d) => d.id), ...detailed].sort()
+      [
+        ...destinations
+          .map((d) => d.id)
+          .filter((id) => londonData.some((l) => l.id === (HAND_WRITTEN_ALIASES[id] ?? id))),
+        ...detailed,
+      ].sort()
     )
   })
 })
