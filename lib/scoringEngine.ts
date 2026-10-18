@@ -23,7 +23,7 @@ export const DEFAULT_WEIGHTS: ScoringWeights = {
 export interface ScoreParams {
   /** User's departure location */
   origin: Coordinates
-  /** Maximum total cost per person in USD (flights + hotel + daily spending) */
+  /** Maximum total cost per person in GBP (flights + hotel + daily spending) */
   maxBudgetPerPerson: number
   /** Maximum great-circle distance from origin in kilometres */
   maxDistanceKm: number

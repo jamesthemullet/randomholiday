@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
+import { formatGbp } from '@/lib/currency'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'
 import { getBookingAffiliateUrl, getSkyscannerAffiliateUrl } from '@/lib/affiliateLinks'
 import { getMonthOptions } from '@/lib/tripQuery'
@@ -33,12 +34,6 @@ interface WeatherResult {
   status: 'loaded' | 'error'
   data: WeatherEstimate | null
 }
-
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  maximumFractionDigits: 0,
-})
 
 const ACTIVITY_THEMES = ['yellow', 'turquoise', 'coral', 'ocean'] as const
 
@@ -117,11 +112,11 @@ export function DestinationDetailModal({
     : `OFF-PEAK IN ${monthName}`
   const flightsNote = [
     originName && `From ${originName}`,
-    `est. ${currencyFormatter.format(budget.totalFlightCost)}`,
+    `est. ${formatGbp(budget.totalFlightCost)}`,
   ]
     .filter(Boolean)
     .join(' · ')
-  const hotelsNote = `${nightsLabel} · ${groupSize} ${groupSize === 1 ? 'guest' : 'guests'} · est. ${currencyFormatter.format(budget.totalHotelCost)}`
+  const hotelsNote = `${nightsLabel} · ${groupSize} ${groupSize === 1 ? 'guest' : 'guests'} · est. ${formatGbp(budget.totalHotelCost)}`
 
   const media = imageFailed ? (
     <div className={`${styles.poster} ${styles[getPosterTheme(destination.id)]}`}>
@@ -159,24 +154,24 @@ export function DestinationDetailModal({
             <dl className={styles.costList}>
               <div className={styles.costRow}>
                 <dt>Flights ({travellers})</dt>
-                <dd>{currencyFormatter.format(budget.totalFlightCost)}</dd>
+                <dd>{formatGbp(budget.totalFlightCost)}</dd>
               </div>
               <div className={styles.costRow}>
                 <dt>Hotel ({nightsLabel})</dt>
-                <dd>{currencyFormatter.format(budget.totalHotelCost)}</dd>
+                <dd>{formatGbp(budget.totalHotelCost)}</dd>
               </div>
               <div className={styles.costRow}>
                 <dt>Daily spending</dt>
-                <dd>{currencyFormatter.format(budget.totalDailySpending)}</dd>
+                <dd>{formatGbp(budget.totalDailySpending)}</dd>
               </div>
               <div className={styles.totalRow}>
                 <dt>
                   <span className={styles.totalLabel}>Total</span>
                   <span className={styles.perPerson}>
-                    {currencyFormatter.format(budget.perPersonCost)} per person
+                    {formatGbp(budget.perPersonCost)} per person
                   </span>
                 </dt>
-                <dd className={styles.totalValue}>{currencyFormatter.format(budget.totalCost)}</dd>
+                <dd className={styles.totalValue}>{formatGbp(budget.totalCost)}</dd>
               </div>
             </dl>
           </section>
