@@ -29,8 +29,7 @@
 /* Variants */
 .primary {
   /* Fixed values (not --color-accent-primary): white text on turquoise only clears WCAG AA
-     4.5:1 at this darker shade — the token's full-brightness turquoise is 2.06:1. Stays the
-     same in both themes since the text is always white here. */
+     4.5:1 at this darker shade — the token's full-brightness turquoise is 2.06:1. */
   background-color: #007d7d;
   color: var(--color-white);
   border-color: #007d7d;
@@ -65,8 +64,7 @@
 
 .danger {
   /* Fixed values (not --color-coral): white text on coral only clears WCAG AA 4.5:1 at this
-     darker shade — the token's full-brightness coral is 2.78:1. Stays the same in both themes
-     since the text is always white here. */
+     darker shade — the token's full-brightness coral is 2.78:1. */
   background-color: #c62828;
   color: var(--color-white);
   border-color: #c62828;

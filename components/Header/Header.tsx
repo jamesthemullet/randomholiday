@@ -3,7 +3,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { DarkModeToggle } from '@/components/DarkModeToggle'
 import styles from './Header.module.css'
 
 const NAV_LINKS = [
@@ -39,7 +38,6 @@ export function Header() {
               })}
             </ul>
           </nav>
-          <DarkModeToggle />
         </div>
       </div>
     </header>

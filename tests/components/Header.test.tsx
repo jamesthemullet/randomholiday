@@ -49,9 +49,11 @@ describe('Header', () => {
     expect(nav.querySelector('ul')).toBeInTheDocument()
   })
 
-  it('renders the dark mode toggle', () => {
+  it('does not render a dark mode toggle', () => {
     render(<Header />)
-    expect(screen.getByRole('button', { name: /switch to (dark|light) mode/i })).toBeInTheDocument()
+    expect(
+      screen.queryByRole('button', { name: /switch to (dark|light) mode/i })
+    ).not.toBeInTheDocument()
   })
 
   it('marks the nav link matching the current path with aria-current', () => {
