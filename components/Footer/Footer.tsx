@@ -14,6 +14,17 @@ export function Footer() {
         <p className={styles.copy}>
           &copy; {new Date().getFullYear()} RandomHoliday. All rights reserved.
         </p>
+        <p className={styles.credit}>
+          Route data from{' '}
+          <a href="https://www.wikipedia.org/" className={styles.link}>
+            Wikipedia
+          </a>{' '}
+          (CC BY-SA) and{' '}
+          <a href="https://www.wikidata.org/" className={styles.link}>
+            Wikidata
+          </a>
+          .
+        </p>
         <nav className={styles.nav} aria-label="Footer navigation">
           {FOOTER_LINKS.map((link) => (
             <a key={link.href} href={link.href} className={styles.link}>

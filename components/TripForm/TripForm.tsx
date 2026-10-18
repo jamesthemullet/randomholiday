@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { DepartureAutocomplete } from '@/components/DepartureAutocomplete'
+import { supportedDepartureCities } from '@/lib/departureCities'
 import type { DepartureCity } from '@/lib/departureCities'
 import { BudgetSlider } from '@/components/BudgetSlider'
 import { Slider } from '@/components/Slider'
@@ -30,8 +31,10 @@ export function TripForm({ initialValues = {} }: TripFormProps) {
   const router = useRouter()
   const defaultMonth = getNextMonth()
 
-  const [cityQuery, setCityQuery] = useState(initialValues.city?.name ?? '')
-  const [city, setCity] = useState<DepartureCity | null>(initialValues.city ?? null)
+  // London is the only city with route data so far, so it starts chosen.
+  const initialCity = initialValues.city ?? supportedDepartureCities[0]
+  const [cityQuery, setCityQuery] = useState(initialCity.name)
+  const [city, setCity] = useState<DepartureCity | null>(initialCity)
   const [budget, setBudget] = useState(initialValues.budget ?? 1500)
   const [nights, setNights] = useState(initialValues.nights ?? 7)
   const [month, setMonth] = useState(initialValues.month ?? defaultMonth)

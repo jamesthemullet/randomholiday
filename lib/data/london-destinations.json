@@ -1,0 +1,7675 @@
+[
+  {
+    "id": "aalborg-denmark",
+    "name": "Aalborg",
+    "country": "Denmark",
+    "countryCode": "DK",
+    "coordinates": {
+      "lat": 57.0928,
+      "lng": 9.8492
+    },
+    "continent": "Europe",
+    "currency": "DKK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Norwegian Air Shuttle"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "aarhus-denmark",
+    "name": "Aarhus",
+    "country": "Denmark",
+    "countryCode": "DK",
+    "coordinates": {
+      "lat": 56.3042,
+      "lng": 10.6192
+    },
+    "continent": "Europe",
+    "currency": "DKK",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "aberdeen-united-kingdom",
+    "name": "Aberdeen",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 57.2019,
+      "lng": -2.1978
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "abu-dhabi-united-arab-emirates",
+    "name": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "coordinates": {
+      "lat": 24.4331,
+      "lng": 54.6511
+    },
+    "continent": "Middle East",
+    "currency": "AED",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Etihad Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "abuja-nigeria",
+    "name": "Abuja",
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "coordinates": {
+      "lat": 9.0068,
+      "lng": 7.2632
+    },
+    "continent": "Africa",
+    "currency": "NGN",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Peace", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "accra-ghana",
+    "name": "Accra",
+    "country": "Ghana",
+    "countryCode": "GH",
+    "coordinates": {
+      "lat": 5.6047,
+      "lng": -0.1674
+    },
+    "continent": "Africa",
+    "currency": "GHS",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "adana-mersin-turkey",
+    "name": "Adana/Mersin",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 36.8969,
+      "lng": 35.0675
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Pegasus Airlines", "SunExpress"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "addis-ababa-ethiopia",
+    "name": "Addis Ababa",
+    "country": "Ethiopia",
+    "countryCode": "ET",
+    "coordinates": {
+      "lat": 8.9778,
+      "lng": 38.7994
+    },
+    "continent": "Africa",
+    "currency": "ETB",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Ethiopian Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "agadir-morocco",
+    "name": "Agadir",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 30.3225,
+      "lng": -9.4114
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ahmedabad-india",
+    "name": "Ahmedabad",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 23.0772,
+      "lng": 72.6347
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air India"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ajaccio-france",
+    "name": "Ajaccio",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 41.9239,
+      "lng": 8.8025
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "akureyri-iceland",
+    "name": "Akureyri",
+    "country": "Iceland",
+    "countryCode": "IS",
+    "coordinates": {
+      "lat": 65.66,
+      "lng": -18.0727
+    },
+    "continent": "Europe",
+    "currency": "ISK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "alesund-norway",
+    "name": "Ålesund",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 62.5625,
+      "lng": 6.1197
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Norwegian Air Shuttle"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "alghero-italy",
+    "name": "Alghero",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 40.6311,
+      "lng": 8.2886
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "algiers-algeria",
+    "name": "Algiers",
+    "country": "Algeria",
+    "countryCode": "DZ",
+    "coordinates": {
+      "lat": 36.6944,
+      "lng": 3.2169
+    },
+    "continent": "Africa",
+    "currency": "DZD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "STN"],
+      "airlines": ["Air Algerie", "Air Algérie"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "alicante-spain",
+    "name": "Alicante",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 38.2822,
+      "lng": -0.5581
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": [
+        "British Airways",
+        "Jet2.com",
+        "Ryanair",
+        "TUI Airways",
+        "Vueling",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "almaty-kazakhstan",
+    "name": "Almaty",
+    "country": "Kazakhstan",
+    "countryCode": "KZ",
+    "coordinates": {
+      "lat": 43.3519,
+      "lng": 77.0406
+    },
+    "continent": "Europe",
+    "currency": "KZT",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Air Astana"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "almeria-spain",
+    "name": "Almería",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 36.8439,
+      "lng": -2.37
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "amman-jordan",
+    "name": "Amman",
+    "country": "Jordan",
+    "countryCode": "JO",
+    "coordinates": {
+      "lat": 31.7225,
+      "lng": 35.9933
+    },
+    "continent": "Middle East",
+    "currency": "JOD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "STN"],
+      "airlines": ["British Airways", "Royal Jordanian"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "amritsar-india",
+    "name": "Amritsar",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 31.7078,
+      "lng": 74.7992
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air India"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "amsterdam-netherlands",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "coordinates": {
+      "lat": 52.3081,
+      "lng": 4.7642
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "EasyJet", "KLM", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ancona-italy",
+    "name": "Ancona",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 43.6167,
+      "lng": 13.3603
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ankara-turkey",
+    "name": "Ankara",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 40.1281,
+      "lng": 32.995
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["AJet", "Pegasus Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "antalya-turkey",
+    "name": "Antalya",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 36.9003,
+      "lng": 30.7928
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": [
+        "British Airways",
+        "Corendon Airlines",
+        "Jet2.com",
+        "Pegasus Airlines",
+        "SunExpress",
+        "TUI Airways",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "antigua-antigua-and-barbuda",
+    "name": "Antigua",
+    "country": "Antigua and Barbuda",
+    "countryCode": "AG",
+    "coordinates": {
+      "lat": 17.1367,
+      "lng": -61.7931
+    },
+    "continent": "Americas",
+    "currency": "XCD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ashgabat-turkmenistan",
+    "name": "Ashgabat",
+    "country": "Turkmenistan",
+    "countryCode": "TM",
+    "coordinates": {
+      "lat": 37.9869,
+      "lng": 58.3608
+    },
+    "continent": "Asia",
+    "currency": "TMT",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Turkmenistan Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "asturias-spain",
+    "name": "Asturias",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 43.5636,
+      "lng": -6.0347
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN"],
+      "airlines": ["Vueling", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "athens-greece",
+    "name": "Athens",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 37.9364,
+      "lng": 23.9444
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": [
+        "Aegean Airlines",
+        "British Airways",
+        "Jet2.com",
+        "Ryanair",
+        "Sky Express",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "atlanta-united-states",
+    "name": "Atlanta",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 33.6367,
+      "lng": -84.4281
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Delta Air Lines", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "austin-united-states",
+    "name": "Austin",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 30.1944,
+      "lng": -97.67
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bacau-romania",
+    "name": "Bacău",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 46.5219,
+      "lng": 26.9103
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Dan Air", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bahrain-bahrain",
+    "name": "Bahrain",
+    "country": "Bahrain",
+    "countryCode": "BH",
+    "coordinates": {
+      "lat": 26.2708,
+      "lng": 50.6336
+    },
+    "continent": "Middle East",
+    "currency": "BHD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Gulf Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "baku-azerbaijan",
+    "name": "Baku",
+    "country": "Azerbaijan",
+    "countryCode": "AZ",
+    "coordinates": {
+      "lat": 40.4675,
+      "lng": 50.0467
+    },
+    "continent": "Europe",
+    "currency": "AZN",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Azerbaijan Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "baltimore-united-states",
+    "name": "Baltimore",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 39.1782,
+      "lng": -76.6675
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bandar-seri-begawan-brunei",
+    "name": "Bandar Seri Begawan",
+    "country": "Brunei",
+    "countryCode": "BN",
+    "coordinates": {
+      "lat": 4.9453,
+      "lng": 114.9336
+    },
+    "continent": "Asia",
+    "currency": "BND",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Royal Brunei Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bangkok-thailand",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "coordinates": {
+      "lat": 13.6811,
+      "lng": 100.7472
+    },
+    "continent": "Asia",
+    "currency": "THB",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": [
+        "British Airways",
+        "EVA Air",
+        "Norse Atlantic Airways",
+        "Thai Airways International"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "banjul-the-gambia",
+    "name": "Banjul",
+    "country": "The Gambia",
+    "countryCode": "GM",
+    "coordinates": {
+      "lat": 13.338,
+      "lng": -16.6522
+    },
+    "continent": "Africa",
+    "currency": "GMD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Sierra Leone", "TUI Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "barbados-barbados",
+    "name": "Barbados",
+    "country": "Barbados",
+    "countryCode": "BB",
+    "coordinates": {
+      "lat": 13.0747,
+      "lng": -59.4925
+    },
+    "continent": "Americas",
+    "currency": "BBD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "TUI Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "barcelona-spain",
+    "name": "Barcelona",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 41.2969,
+      "lng": 2.0783
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "Vueling", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bari-italy",
+    "name": "Bari",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 41.1389,
+      "lng": 16.7606
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "basel-mulhouse-france",
+    "name": "Basel/Mulhouse",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 47.5997,
+      "lng": 7.5316
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bastia-france",
+    "name": "Bastia",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 42.55,
+      "lng": 9.4847
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "beijing-people-s-republic-of-china",
+    "name": "Beijing",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 40.08,
+      "lng": 116.5844
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air China", "China Southern Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "beirut-lebanon",
+    "name": "Beirut",
+    "country": "Lebanon",
+    "countryCode": "LB",
+    "coordinates": {
+      "lat": 33.8211,
+      "lng": 35.4883
+    },
+    "continent": "Middle East",
+    "currency": "LBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Middle East Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "belfast-united-kingdom",
+    "name": "Belfast",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 54.6155,
+      "lng": -5.8712
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "EasyJet", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "belgrade-serbia",
+    "name": "Belgrade",
+    "country": "Serbia",
+    "countryCode": "RS",
+    "coordinates": {
+      "lat": 44.8194,
+      "lng": 20.3069
+    },
+    "continent": "Europe",
+    "currency": "RSD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "LTN"],
+      "airlines": ["Air Serbia", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bengaluru-india",
+    "name": "Bengaluru",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 13.1989,
+      "lng": 77.7056
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Air India", "British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bergamo-italy",
+    "name": "Bergamo",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.6655,
+      "lng": 9.6995
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bergen-norway",
+    "name": "Bergen",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 60.2936,
+      "lng": 5.2181
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Norwegian Air Shuttle"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bergerac-france",
+    "name": "Bergerac",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 44.8244,
+      "lng": 0.5206
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "STN"],
+      "airlines": ["British Airways", "Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "berlin-germany",
+    "name": "Berlin",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 52.3622,
+      "lng": 13.5007
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Eurowings", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bermuda-united-kingdom",
+    "name": "Bermuda",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 32.3642,
+      "lng": -64.6786
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "beziers-france",
+    "name": "Béziers",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.3233,
+      "lng": 3.3533
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "biarritz-france",
+    "name": "Biarritz",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.4683,
+      "lng": -1.5233
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bilbao-spain",
+    "name": "Bilbao",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 43.3011,
+      "lng": -2.9106
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN"],
+      "airlines": ["Vueling", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "billund-denmark",
+    "name": "Billund",
+    "country": "Denmark",
+    "countryCode": "DK",
+    "coordinates": {
+      "lat": 55.7403,
+      "lng": 9.1519
+    },
+    "continent": "Europe",
+    "currency": "DKK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Norwegian Air Shuttle"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "boa-vista-cape-verde",
+    "name": "Boa Vista",
+    "country": "Cape Verde",
+    "countryCode": "CV",
+    "coordinates": {
+      "lat": 16.1372,
+      "lng": -22.8886
+    },
+    "continent": "Africa",
+    "currency": "CVE",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bodrum-turkey",
+    "name": "Bodrum",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 37.2506,
+      "lng": 27.6642
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["AJet", "British Airways", "Jet2.com", "Ryanair", "SunExpress", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bogota-colombia",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "countryCode": "CO",
+    "coordinates": {
+      "lat": 4.7014,
+      "lng": -74.1469
+    },
+    "continent": "Americas",
+    "currency": "COP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Avianca"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bologna-italy",
+    "name": "Bologna",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 44.5354,
+      "lng": 11.2887
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bolzano-italy",
+    "name": "Bolzano",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 46.4603,
+      "lng": 11.3264
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Sky Alps"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bordeaux-france",
+    "name": "Bordeaux",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 44.8283,
+      "lng": -0.7156
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN"],
+      "airlines": ["British Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "boston-united-states",
+    "name": "Boston",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 42.3631,
+      "lng": -71.0064
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": [
+        "American Airlines",
+        "British Airways",
+        "Delta Air Lines",
+        "JetBlue",
+        "Virgin Atlantic"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "brasov-romania",
+    "name": "Brașov",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 45.7071,
+      "lng": 25.5243
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bratislava-slovakia",
+    "name": "Bratislava",
+    "country": "Slovakia",
+    "countryCode": "SK",
+    "coordinates": {
+      "lat": 48.17,
+      "lng": 17.2128
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bremen-germany",
+    "name": "Bremen",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 53.0474,
+      "lng": 8.7867
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "brest-france",
+    "name": "Brest",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 48.4472,
+      "lng": -4.4217
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "brindisi-italy",
+    "name": "Brindisi",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 40.6575,
+      "lng": 17.9469
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "brive-france",
+    "name": "Brive",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 45.0397,
+      "lng": 1.4856
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "brno-czech-republic",
+    "name": "Brno",
+    "country": "Czech Republic",
+    "countryCode": "CZ",
+    "coordinates": {
+      "lat": 49.1514,
+      "lng": 16.6939
+    },
+    "continent": "Europe",
+    "currency": "CZK",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "brussels-belgium",
+    "name": "Brussels",
+    "country": "Belgium",
+    "countryCode": "BE",
+    "coordinates": {
+      "lat": 50.9014,
+      "lng": 4.4844
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Brussels Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "bucharest-romania",
+    "name": "Bucharest",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 44.5707,
+      "lng": 26.0822
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["Animawings", "British Airways", "FlyOne", "Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "budapest-hungary",
+    "name": "Budapest",
+    "country": "Hungary",
+    "countryCode": "HU",
+    "coordinates": {
+      "lat": 47.4394,
+      "lng": 19.2619
+    },
+    "continent": "Europe",
+    "currency": "HUF",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "buenos-aires-argentina",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "countryCode": "AR",
+    "coordinates": {
+      "lat": -34.8222,
+      "lng": -58.5358
+    },
+    "continent": "Americas",
+    "currency": "ARS",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "burgas-bulgaria",
+    "name": "Burgas",
+    "country": "Bulgaria",
+    "countryCode": "BG",
+    "coordinates": {
+      "lat": 42.5703,
+      "lng": 27.5153
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "bydgoszcz-poland",
+    "name": "Bydgoszcz",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 53.0967,
+      "lng": 17.9778
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cagliari-italy",
+    "name": "Cagliari",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 39.2515,
+      "lng": 9.0543
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["British Airways", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cairo-egypt",
+    "name": "Cairo",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": {
+      "lat": 30.1219,
+      "lng": 31.4056
+    },
+    "continent": "Africa",
+    "currency": "EGP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "EgyptAir"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "calgary-canada",
+    "name": "Calgary",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 51.1139,
+      "lng": -114.0203
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Air Canada", "WestJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cancun-mexico",
+    "name": "Cancún",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "coordinates": {
+      "lat": 21.0367,
+      "lng": -86.8769
+    },
+    "continent": "Americas",
+    "currency": "MXN",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "TUI Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cape-town-south-africa",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "coordinates": {
+      "lat": -33.9694,
+      "lng": 18.5972
+    },
+    "continent": "Africa",
+    "currency": "ZAR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Norse Atlantic Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "carcassonne-france",
+    "name": "Carcassonne",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.2158,
+      "lng": 2.3086
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "casablanca-morocco",
+    "name": "Casablanca",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 33.3642,
+      "lng": -7.5817
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["Royal Air Maroc"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "castellon-spain",
+    "name": "Castellón",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 40.2097,
+      "lng": 0.0697
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "catania-italy",
+    "name": "Catania",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 37.4667,
+      "lng": 15.0639
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chambery-france",
+    "name": "Chambéry",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 45.6392,
+      "lng": 5.88
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "changsha-people-s-republic-of-china",
+    "name": "Changsha",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 28.1967,
+      "lng": 113.2208
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Hainan Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chania-greece",
+    "name": "Chania",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 35.5317,
+      "lng": 24.1497
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "charlotte-united-states",
+    "name": "Charlotte",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 35.2139,
+      "lng": -80.9431
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chengdu-people-s-republic-of-china",
+    "name": "Chengdu",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 30.319,
+      "lng": 104.445
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air China"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chennai-india",
+    "name": "Chennai",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 12.9822,
+      "lng": 80.1636
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chicago-united-states",
+    "name": "Chicago",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 41.9786,
+      "lng": -87.9047
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines", "British Airways", "United Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chisinau-moldova",
+    "name": "Chișinău",
+    "country": "Moldova",
+    "countryCode": "MD",
+    "coordinates": {
+      "lat": 46.9278,
+      "lng": 28.9308
+    },
+    "continent": "Europe",
+    "currency": "MDL",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["FlyOne", "HiSky", "SkyUp Airlines", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "chongqing-people-s-republic-of-china",
+    "name": "Chongqing",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 29.7192,
+      "lng": 106.6417
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Tianjin Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cincinnati-united-states",
+    "name": "Cincinnati",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 39.0489,
+      "lng": -84.6678
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cluj-napoca-romania",
+    "name": "Cluj-Napoca",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 46.7851,
+      "lng": 23.6861
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "cologne-bonn-germany",
+    "name": "Cologne/Bonn",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 50.8659,
+      "lng": 7.1427
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Eurowings", "Jet2.com", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "colombo-sri-lanka",
+    "name": "Colombo",
+    "country": "Sri Lanka",
+    "countryCode": "LK",
+    "coordinates": {
+      "lat": 7.1811,
+      "lng": 79.8836
+    },
+    "continent": "Asia",
+    "currency": "LKR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "SriLankan Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "constanta-romania",
+    "name": "Constanța",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 44.3622,
+      "lng": 28.4883
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "copenhagen-denmark",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "countryCode": "DK",
+    "coordinates": {
+      "lat": 55.6181,
+      "lng": 12.6561
+    },
+    "continent": "Europe",
+    "currency": "DKK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": [
+        "British Airways",
+        "Norwegian Air Shuttle",
+        "Ryanair",
+        "Scandinavian Airlines",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "corfu-greece",
+    "name": "Corfu",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 39.6019,
+      "lng": 19.9122
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "cork-ireland",
+    "name": "Cork",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "coordinates": {
+      "lat": 51.8414,
+      "lng": -8.4911
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["Aer Lingus", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "craiova-romania",
+    "name": "Craiova",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 44.3181,
+      "lng": 23.8886
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dakar-senegal",
+    "name": "Dakar",
+    "country": "Senegal",
+    "countryCode": "SN",
+    "coordinates": {
+      "lat": 14.6708,
+      "lng": -17.0689
+    },
+    "continent": "Africa",
+    "currency": "XOF",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "dalaman-turkey",
+    "name": "Dalaman",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 36.7147,
+      "lng": 28.7928
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": [
+        "British Airways",
+        "Jet2.com",
+        "Ryanair",
+        "SunExpress",
+        "TUI Airways",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dallas-fort-worth-united-states",
+    "name": "Dallas/Fort Worth",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 32.8969,
+      "lng": -97.0381
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dammam-saudi-arabia",
+    "name": "Dammam",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "coordinates": {
+      "lat": 26.4711,
+      "lng": 49.7978
+    },
+    "continent": "Middle East",
+    "currency": "SAR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Saudia"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dar-es-salaam-tanzania",
+    "name": "Dar es Salaam",
+    "country": "Tanzania",
+    "countryCode": "TZ",
+    "coordinates": {
+      "lat": -6.8781,
+      "lng": 39.2028
+    },
+    "continent": "Africa",
+    "currency": "TZS",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Tanzania"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "debrecen-hungary",
+    "name": "Debrecen",
+    "country": "Hungary",
+    "countryCode": "HU",
+    "coordinates": {
+      "lat": 47.4889,
+      "lng": 21.6153
+    },
+    "continent": "Europe",
+    "currency": "HUF",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "delhi-india",
+    "name": "Delhi",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 28.5574,
+      "lng": 77.0833
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Air India", "British Airways", "IndiGo", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "denver-united-states",
+    "name": "Denver",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 39.8617,
+      "lng": -104.6731
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "United Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "derry-united-kingdom",
+    "name": "Derry",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 55.0428,
+      "lng": -7.1619
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Loganair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "detroit-united-states",
+    "name": "Detroit",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 42.2125,
+      "lng": -83.3533
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Delta Air Lines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dhaka-bangladesh",
+    "name": "Dhaka",
+    "country": "Bangladesh",
+    "countryCode": "BD",
+    "coordinates": {
+      "lat": 23.845,
+      "lng": 90.4005
+    },
+    "continent": "Asia",
+    "currency": "BDT",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Biman Bangladesh Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "djerba-tunisia",
+    "name": "Djerba",
+    "country": "Tunisia",
+    "countryCode": "TN",
+    "coordinates": {
+      "lat": 33.875,
+      "lng": 10.7753
+    },
+    "continent": "Africa",
+    "currency": "TND",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN"],
+      "airlines": ["TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "doha-qatar",
+    "name": "Doha",
+    "country": "Qatar",
+    "countryCode": "QA",
+    "coordinates": {
+      "lat": 25.2731,
+      "lng": 51.6081
+    },
+    "continent": "Middle East",
+    "currency": "QAR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Qatar Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dortmund-germany",
+    "name": "Dortmund",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 51.5183,
+      "lng": 7.6122
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dubai-united-arab-emirates",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "coordinates": {
+      "lat": 25.2528,
+      "lng": 55.3644
+    },
+    "continent": "Middle East",
+    "currency": "AED",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Emirates", "Royal Brunei Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dublin-ireland",
+    "name": "Dublin",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "coordinates": {
+      "lat": 53.4214,
+      "lng": -6.27
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["Aer Lingus", "British Airways", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dubrovnik-croatia",
+    "name": "Dubrovnik",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 42.5614,
+      "lng": 18.2683
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dundee-united-kingdom",
+    "name": "Dundee",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 56.4525,
+      "lng": -3.0175
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Loganair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "dusseldorf-germany",
+    "name": "Düsseldorf",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 51.2809,
+      "lng": 6.7573
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Eurowings", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "edinburgh-united-kingdom",
+    "name": "Edinburgh",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 55.95,
+      "lng": -3.3725
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "EasyJet", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "eindhoven-netherlands",
+    "name": "Eindhoven",
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "coordinates": {
+      "lat": 51.4506,
+      "lng": 5.3742
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "enfidha-tunisia",
+    "name": "Enfidha",
+    "country": "Tunisia",
+    "countryCode": "TN",
+    "coordinates": {
+      "lat": 36.0758,
+      "lng": 10.4386
+    },
+    "continent": "Africa",
+    "currency": "TND",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["Jet2.com", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "entebbe-uganda",
+    "name": "Entebbe",
+    "country": "Uganda",
+    "countryCode": "UG",
+    "coordinates": {
+      "lat": 0.0447,
+      "lng": 32.4431
+    },
+    "continent": "Africa",
+    "currency": "UGX",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Uganda Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "erbil-iraq",
+    "name": "Erbil",
+    "country": "Iraq",
+    "countryCode": "IQ",
+    "coordinates": {
+      "lat": 36.2375,
+      "lng": 43.9631
+    },
+    "continent": "Middle East",
+    "currency": "IQD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["FlyErbil"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "essaouira-morocco",
+    "name": "Essaouira",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 31.3975,
+      "lng": -9.6817
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "faro-portugal",
+    "name": "Faro",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "coordinates": {
+      "lat": 37.0144,
+      "lng": -7.9658
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "fez-morocco",
+    "name": "Fez",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 33.9272,
+      "lng": -4.9778
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "figari-france",
+    "name": "Figari",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 41.5022,
+      "lng": 9.0967
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "florence-italy",
+    "name": "Florence",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 43.8086,
+      "lng": 11.2028
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Vueling"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "forli-italy",
+    "name": "Forlì",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 44.197,
+      "lng": 12.0716
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "frankfurt-germany",
+    "name": "Frankfurt",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 50.0333,
+      "lng": 8.5705
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR"],
+      "airlines": [
+        "Air Dolomiti",
+        "British Airways",
+        "Condor",
+        "Lufthansa",
+        "Lufthansa City Airlines"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "freetown-sierra-leone",
+    "name": "Freetown",
+    "country": "Sierra Leone",
+    "countryCode": "SL",
+    "coordinates": {
+      "lat": 8.6164,
+      "lng": -13.1955
+    },
+    "continent": "Africa",
+    "currency": "SLE",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Sierra Leone"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "friedrichshafen-germany",
+    "name": "Friedrichshafen",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 47.6713,
+      "lng": 9.5115
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "fuerteventura-spain",
+    "name": "Fuerteventura",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 28.4528,
+      "lng": -13.8639
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "funchal-portugal",
+    "name": "Funchal",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "coordinates": {
+      "lat": 32.6942,
+      "lng": -16.7781
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "gaziantep-turkey",
+    "name": "Gaziantep",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 36.9478,
+      "lng": 37.4789
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["SunExpress"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "gdansk-poland",
+    "name": "Gdańsk",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 54.3775,
+      "lng": 18.4661
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "geneva-switzerland",
+    "name": "Geneva",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "coordinates": {
+      "lat": 46.2383,
+      "lng": 6.1094
+    },
+    "continent": "Europe",
+    "currency": "CHF",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": [
+        "British Airways",
+        "EasyJet",
+        "Jet2.com",
+        "Swiss International Air Lines",
+        "TUI Airways",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "genoa-italy",
+    "name": "Genoa",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 44.4135,
+      "lng": 8.8376
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "georgetown-guyana",
+    "name": "Georgetown",
+    "country": "Guyana",
+    "countryCode": "GY",
+    "coordinates": {
+      "lat": 6.4983,
+      "lng": -58.2539
+    },
+    "continent": "Americas",
+    "currency": "GYD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "gibraltar-united-kingdom",
+    "name": "Gibraltar",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 36.1511,
+      "lng": -5.3497
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "girona-spain",
+    "name": "Girona",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 41.8981,
+      "lng": 2.766
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "giza-egypt",
+    "name": "Giza",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": {
+      "lat": 30.1097,
+      "lng": 30.8944
+    },
+    "continent": "Africa",
+    "currency": "EGP",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "glasgow-united-kingdom",
+    "name": "Glasgow",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 55.8719,
+      "lng": -4.4331
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "EasyJet", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "goa-india",
+    "name": "Goa",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 15.7302,
+      "lng": 73.8631
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "gothenburg-sweden",
+    "name": "Gothenburg",
+    "country": "Sweden",
+    "countryCode": "SE",
+    "coordinates": {
+      "lat": 57.66,
+      "lng": 12.2911
+    },
+    "continent": "Europe",
+    "currency": "SEK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Norwegian Air Shuttle", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "gran-canaria-spain",
+    "name": "Gran Canaria",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 27.9319,
+      "lng": -15.3867
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "granada-spain",
+    "name": "Granada",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 37.1886,
+      "lng": -3.7772
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "grand-cayman-united-kingdom",
+    "name": "Grand Cayman",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 19.2925,
+      "lng": -81.3592
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "graz-austria",
+    "name": "Graz",
+    "country": "Austria",
+    "countryCode": "AT",
+    "coordinates": {
+      "lat": 46.9931,
+      "lng": 15.4392
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "grenada-grenada",
+    "name": "Grenada",
+    "country": "Grenada",
+    "countryCode": "GD",
+    "coordinates": {
+      "lat": 12.0042,
+      "lng": -61.7861
+    },
+    "continent": "Americas",
+    "currency": "XCD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "grenoble-france",
+    "name": "Grenoble",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 45.3631,
+      "lng": 5.3328
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "guangzhou-people-s-republic-of-china",
+    "name": "Guangzhou",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 23.3924,
+      "lng": 113.2988
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["China Southern Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "guernsey-guernsey",
+    "name": "Guernsey",
+    "country": "Guernsey",
+    "countryCode": "GG",
+    "coordinates": {
+      "lat": 49.435,
+      "lng": -2.6019
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR"],
+      "airlines": ["Aurigny", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hahn-germany",
+    "name": "Hahn",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 49.9458,
+      "lng": 7.2611
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "haikou-people-s-republic-of-china",
+    "name": "Haikou",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 19.9347,
+      "lng": 110.4589
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Hainan Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "halifax-canada",
+    "name": "Halifax",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 44.8797,
+      "lng": -63.5103
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Canada", "WestJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hamburg-germany",
+    "name": "Hamburg",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 53.6304,
+      "lng": 9.9882
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Eurowings", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hanoi-vietnam",
+    "name": "Hanoi",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "coordinates": {
+      "lat": 21.2211,
+      "lng": 105.8072
+    },
+    "continent": "Asia",
+    "currency": "VND",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Vietnam Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hanover-germany",
+    "name": "Hanover",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 52.4602,
+      "lng": 9.6835
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "harare-zimbabwe",
+    "name": "Harare",
+    "country": "Zimbabwe",
+    "countryCode": "ZW",
+    "coordinates": {
+      "lat": -17.9318,
+      "lng": 31.0928
+    },
+    "continent": "Africa",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Zimbabwe"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "helsinki-finland",
+    "name": "Helsinki",
+    "country": "Finland",
+    "countryCode": "FI",
+    "coordinates": {
+      "lat": 60.3172,
+      "lng": 24.9633
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["Finnair", "Norwegian Air Shuttle", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "heraklion-greece",
+    "name": "Heraklion",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 35.3397,
+      "lng": 25.1803
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Corendon Airlines", "Jet2.com", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "ho-chi-minh-city-vietnam",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "coordinates": {
+      "lat": 10.8188,
+      "lng": 106.652
+    },
+    "continent": "Asia",
+    "currency": "VND",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Vietnam Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hong-kong-people-s-republic-of-china",
+    "name": "Hong Kong",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 22.3089,
+      "lng": 113.9144
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Cathay Pacific"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "houston-united-states",
+    "name": "Houston",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 29.9844,
+      "lng": -95.3414
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "United Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hurghada-egypt",
+    "name": "Hurghada",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": {
+      "lat": 27.1781,
+      "lng": 33.7992
+    },
+    "continent": "Africa",
+    "currency": "EGP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "hyderabad-india",
+    "name": "Hyderabad",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 17.2386,
+      "lng": 78.4294
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "iasi-romania",
+    "name": "Iași",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 47.1789,
+      "lng": 27.62
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ibiza-spain",
+    "name": "Ibiza",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 38.8729,
+      "lng": 1.3731
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "innsbruck-austria",
+    "name": "Innsbruck",
+    "country": "Austria",
+    "countryCode": "AT",
+    "coordinates": {
+      "lat": 47.2603,
+      "lng": 11.3439
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "inverness-united-kingdom",
+    "name": "Inverness",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 57.5425,
+      "lng": -4.0475
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "islamabad-pakistan",
+    "name": "Islamabad",
+    "country": "Pakistan",
+    "countryCode": "PK",
+    "coordinates": {
+      "lat": 33.5536,
+      "lng": 72.8347
+    },
+    "continent": "Asia",
+    "currency": "PKR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Pakistan International Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "isle-of-man-isle-of-man",
+    "name": "Isle of Man",
+    "country": "Isle of Man",
+    "countryCode": "IM",
+    "coordinates": {
+      "lat": 54.0833,
+      "lng": -4.6239
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN"],
+      "airlines": ["Loganair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "istanbul-turkey",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 41.2608,
+      "lng": 28.7422
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["AJet", "British Airways", "Pegasus Airlines", "Turkish Airlines", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ivalo-finland",
+    "name": "Ivalo",
+    "country": "Finland",
+    "countryCode": "FI",
+    "coordinates": {
+      "lat": 68.6108,
+      "lng": 27.4139
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways", "TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "izmir-turkey",
+    "name": "İzmir",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 38.2892,
+      "lng": 27.155
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Pegasus Airlines", "SunExpress", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "jeddah-saudi-arabia",
+    "name": "Jeddah",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "coordinates": {
+      "lat": 21.6617,
+      "lng": 39.173
+    },
+    "continent": "Middle East",
+    "currency": "SAR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Saudia"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "jerez-de-la-frontera-spain",
+    "name": "Jerez de la Frontera",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 36.7447,
+      "lng": -6.06
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Jet2.com", "TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "jersey-jersey",
+    "name": "Jersey",
+    "country": "Jersey",
+    "countryCode": "JE",
+    "coordinates": {
+      "lat": 49.2081,
+      "lng": -2.1953
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "johannesburg-south-africa",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "coordinates": {
+      "lat": -26.1392,
+      "lng": 28.2461
+    },
+    "continent": "Africa",
+    "currency": "ZAR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kalamata-greece",
+    "name": "Kalamata",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 37.0684,
+      "lng": 22.0256
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "karlsruhe-baden-baden-germany",
+    "name": "Karlsruhe/Baden-Baden",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 48.7794,
+      "lng": 8.0805
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "katowice-poland",
+    "name": "Katowice",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 50.4742,
+      "lng": 19.08
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kaunas-lithuania",
+    "name": "Kaunas",
+    "country": "Lithuania",
+    "countryCode": "LT",
+    "coordinates": {
+      "lat": 54.9639,
+      "lng": 24.0847
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kavala-greece",
+    "name": "Kavala",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 40.9133,
+      "lng": 24.6192
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Jet2.com"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "kayseri-turkey",
+    "name": "Kayseri",
+    "country": "Turkey",
+    "countryCode": "TR",
+    "coordinates": {
+      "lat": 38.7703,
+      "lng": 35.4953
+    },
+    "continent": "Middle East",
+    "currency": "TRY",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["SunExpress"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "kefalonia-greece",
+    "name": "Kefalonia",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 38.12,
+      "lng": 20.5003
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "kerry-ireland",
+    "name": "Kerry",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "coordinates": {
+      "lat": 52.1808,
+      "lng": -9.5239
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kigali-rwanda",
+    "name": "Kigali",
+    "country": "Rwanda",
+    "countryCode": "RW",
+    "coordinates": {
+      "lat": -1.9684,
+      "lng": 30.1384
+    },
+    "continent": "Africa",
+    "currency": "RWF",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["RwandAir"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kilimanjaro-tanzania",
+    "name": "Kilimanjaro",
+    "country": "Tanzania",
+    "countryCode": "TZ",
+    "coordinates": {
+      "lat": -3.4294,
+      "lng": 37.0744
+    },
+    "continent": "Africa",
+    "currency": "TZS",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Tanzania", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kingston-jamaica",
+    "name": "Kingston",
+    "country": "Jamaica",
+    "countryCode": "JM",
+    "coordinates": {
+      "lat": 17.9356,
+      "lng": -76.7875
+    },
+    "continent": "Americas",
+    "currency": "JMD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kirkwall-united-kingdom",
+    "name": "Kirkwall",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 58.9581,
+      "lng": -2.9006
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Loganair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "kittila-finland",
+    "name": "Kittilä",
+    "country": "Finland",
+    "countryCode": "FI",
+    "coordinates": {
+      "lat": 67.6986,
+      "lng": 24.8481
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN"],
+      "airlines": ["TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "klagenfurt-austria",
+    "name": "Klagenfurt",
+    "country": "Austria",
+    "countryCode": "AT",
+    "coordinates": {
+      "lat": 46.6428,
+      "lng": 14.3372
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "knock-ireland",
+    "name": "Knock",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "coordinates": {
+      "lat": 53.9103,
+      "lng": -8.8185
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "LTN", "STN"],
+      "airlines": ["Aer Lingus", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kos-greece",
+    "name": "Kos",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 36.7933,
+      "lng": 27.0917
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "kosice-slovakia",
+    "name": "Košice",
+    "country": "Slovakia",
+    "countryCode": "SK",
+    "coordinates": {
+      "lat": 48.6631,
+      "lng": 21.2411
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "krakow-poland",
+    "name": "Kraków",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 50.0778,
+      "lng": 19.7847
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kuala-lumpur-malaysia",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "countryCode": "MY",
+    "coordinates": {
+      "lat": 2.7456,
+      "lng": 101.7097
+    },
+    "continent": "Asia",
+    "currency": "MYR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Malaysia Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "kuusamo-finland",
+    "name": "Kuusamo",
+    "country": "Finland",
+    "countryCode": "FI",
+    "coordinates": {
+      "lat": 65.9903,
+      "lng": 29.2319
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways", "airBaltic"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "kuwait-city-kuwait",
+    "name": "Kuwait City",
+    "country": "Kuwait",
+    "countryCode": "KW",
+    "coordinates": {
+      "lat": 29.2268,
+      "lng": 47.98
+    },
+    "continent": "Middle East",
+    "currency": "KWD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Kuwait Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "la-palma-spain",
+    "name": "La Palma",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 28.6264,
+      "lng": -17.7556
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Jet2.com", "TUI Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "la-rochelle-france",
+    "name": "La Rochelle",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 46.1792,
+      "lng": -1.1953
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "la-romana-dominican-republic",
+    "name": "La Romana",
+    "country": "Dominican Republic",
+    "countryCode": "DO",
+    "coordinates": {
+      "lat": 18.4511,
+      "lng": -68.9117
+    },
+    "continent": "Americas",
+    "currency": "DOP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "lagos-nigeria",
+    "name": "Lagos",
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "coordinates": {
+      "lat": 6.5772,
+      "lng": 3.3211
+    },
+    "continent": "Africa",
+    "currency": "NGN",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Peace", "British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lahore-pakistan",
+    "name": "Lahore",
+    "country": "Pakistan",
+    "countryCode": "PK",
+    "coordinates": {
+      "lat": 31.5214,
+      "lng": 74.4025
+    },
+    "continent": "Asia",
+    "currency": "PKR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Pakistan International Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lamezia-terme-italy",
+    "name": "Lamezia Terme",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 38.9053,
+      "lng": 16.2422
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "TUI Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lanzarote-spain",
+    "name": "Lanzarote",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 28.9456,
+      "lng": -13.6053
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "larnaca-cyprus",
+    "name": "Larnaca",
+    "country": "Cyprus",
+    "countryCode": "CY",
+    "coordinates": {
+      "lat": 34.8789,
+      "lng": 33.6303
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "las-vegas-united-states",
+    "name": "Las Vegas",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 36.0853,
+      "lng": -115.1506
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "limoges-france",
+    "name": "Limoges",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 45.8608,
+      "lng": 1.1803
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "linz-austria",
+    "name": "Linz",
+    "country": "Austria",
+    "countryCode": "AT",
+    "coordinates": {
+      "lat": 48.2353,
+      "lng": 14.1881
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lisbon-portugal",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "coordinates": {
+      "lat": 38.7742,
+      "lng": -9.1342
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "TAP Air Portugal", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ljubljana-slovenia",
+    "name": "Ljubljana",
+    "country": "Slovenia",
+    "countryCode": "SI",
+    "coordinates": {
+      "lat": 46.2244,
+      "lng": 14.4561
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "los-angeles-united-states",
+    "name": "Los Angeles",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 33.9425,
+      "lng": -118.4081
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines", "British Airways", "United Airlines", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lourdes-france",
+    "name": "Lourdes",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.185,
+      "lng": -0.0019
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lubeck-germany",
+    "name": "Lübeck",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 53.8054,
+      "lng": 10.7192
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "lublin-poland",
+    "name": "Lublin",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 51.2319,
+      "lng": 22.6903
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "luxembourg-luxembourg",
+    "name": "Luxembourg",
+    "country": "Luxembourg",
+    "countryCode": "LU",
+    "coordinates": {
+      "lat": 49.6233,
+      "lng": 6.2044
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LHR", "STN"],
+      "airlines": ["British Airways", "Luxair", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "luxor-egypt",
+    "name": "Luxor",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": {
+      "lat": 25.6708,
+      "lng": 32.7064
+    },
+    "continent": "Africa",
+    "currency": "EGP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["EgyptAir", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "lyon-france",
+    "name": "Lyon",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 45.7256,
+      "lng": 5.0811
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN"],
+      "airlines": ["British Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "madrid-spain",
+    "name": "Madrid",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 40.4722,
+      "lng": -3.5608
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": [
+        "Air Europa",
+        "British Airways",
+        "Iberia",
+        "Iberia Express",
+        "Ryanair",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "malaga-spain",
+    "name": "Málaga",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 36.675,
+      "lng": -4.4992
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": [
+        "British Airways",
+        "Jet2.com",
+        "Ryanair",
+        "TUI Airways",
+        "Vueling",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "male-maldives",
+    "name": "Malé",
+    "country": "Maldives",
+    "countryCode": "MV",
+    "coordinates": {
+      "lat": 4.1918,
+      "lng": 73.5291
+    },
+    "continent": "Asia",
+    "currency": "MVR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["BeOnd", "British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "malmo-sweden",
+    "name": "Malmö",
+    "country": "Sweden",
+    "countryCode": "SE",
+    "coordinates": {
+      "lat": 55.53,
+      "lng": 13.3714
+    },
+    "continent": "Europe",
+    "currency": "SEK",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "malta-malta",
+    "name": "Malta",
+    "country": "Malta",
+    "countryCode": "MT",
+    "coordinates": {
+      "lat": 35.8575,
+      "lng": 14.4775
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "KM Malta Airlines", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "manchester-united-kingdom",
+    "name": "Manchester",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 53.3539,
+      "lng": -2.275
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "marrakesh-morocco",
+    "name": "Marrakesh",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 31.6086,
+      "lng": -8.0408
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "marsa-alam-egypt",
+    "name": "Marsa Alam",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": {
+      "lat": 25.5569,
+      "lng": 34.5836
+    },
+    "continent": "Africa",
+    "currency": "EGP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "marseille-france",
+    "name": "Marseille",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.4367,
+      "lng": 5.215
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "mauritius-mauritius",
+    "name": "Mauritius",
+    "country": "Mauritius",
+    "countryCode": "MU",
+    "coordinates": {
+      "lat": -20.43,
+      "lng": 57.683
+    },
+    "continent": "Africa",
+    "currency": "MUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Mauritius", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "melbourne-australia",
+    "name": "Melbourne",
+    "country": "Australia",
+    "countryCode": "AU",
+    "coordinates": {
+      "lat": -37.6733,
+      "lng": 144.8433
+    },
+    "continent": "Oceania",
+    "currency": "AUD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Qantas"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "melbourne-orlando-united-states",
+    "name": "Melbourne/Orlando",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 28.1028,
+      "lng": -80.6453
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "memmingen-germany",
+    "name": "Memmingen",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 47.9888,
+      "lng": 10.2395
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "menorca-spain",
+    "name": "Menorca",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 39.8625,
+      "lng": 4.2186
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "mexico-city-mexico",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "coordinates": {
+      "lat": 19.4361,
+      "lng": -99.0719
+    },
+    "continent": "Americas",
+    "currency": "MXN",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Aeroméxico", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "miami-united-states",
+    "name": "Miami",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 25.7933,
+      "lng": -80.2906
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines", "British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "milan-italy",
+    "name": "Milan",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.4609,
+      "lng": 9.28
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "ITA Airways", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "minneapolis-saint-paul-united-states",
+    "name": "Minneapolis/Saint Paul",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 44.8819,
+      "lng": -93.2217
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Delta Air Lines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "montego-bay-jamaica",
+    "name": "Montego Bay",
+    "country": "Jamaica",
+    "countryCode": "JM",
+    "coordinates": {
+      "lat": 18.5036,
+      "lng": -77.9133
+    },
+    "continent": "Americas",
+    "currency": "JMD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["TUI Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "montpellier-france",
+    "name": "Montpellier",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.5789,
+      "lng": 3.9593
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "montreal-canada",
+    "name": "Montréal",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 45.4706,
+      "lng": -73.7408
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Canada", "Air Transat", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "mumbai-india",
+    "name": "Mumbai",
+    "country": "India",
+    "countryCode": "IN",
+    "coordinates": {
+      "lat": 19.0886,
+      "lng": 72.8681
+    },
+    "continent": "Asia",
+    "currency": "INR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Air India", "British Airways", "IndiGo", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "munich-germany",
+    "name": "Munich",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 48.3538,
+      "lng": 11.7861
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Lufthansa", "Lufthansa City Airlines", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "munster-osnabruck-germany",
+    "name": "Münster/Osnabrück",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 52.1346,
+      "lng": 7.6848
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "murcia-spain",
+    "name": "Murcia",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 37.8036,
+      "lng": -1.1241
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "muscat-oman",
+    "name": "Muscat",
+    "country": "Oman",
+    "countryCode": "OM",
+    "coordinates": {
+      "lat": 23.601,
+      "lng": 58.2869
+    },
+    "continent": "Middle East",
+    "currency": "OMR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Oman Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "mykonos-greece",
+    "name": "Mykonos",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 37.4351,
+      "lng": 25.3481
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN"],
+      "airlines": ["British Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "mytilene-greece",
+    "name": "Mytilene",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 39.0567,
+      "lng": 26.5983
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Jet2.com"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "nairobi-kenya",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "countryCode": "KE",
+    "coordinates": {
+      "lat": -1.3192,
+      "lng": 36.9275
+    },
+    "continent": "Africa",
+    "currency": "KES",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Kenya Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "nantes-france",
+    "name": "Nantes",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 47.1569,
+      "lng": -1.6078
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "naples-italy",
+    "name": "Naples",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 40.8844,
+      "lng": 14.2908
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "nashville-united-states",
+    "name": "Nashville",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 36.1267,
+      "lng": -86.6819
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "nassau-the-bahamas",
+    "name": "Nassau",
+    "country": "The Bahamas",
+    "countryCode": "BS",
+    "coordinates": {
+      "lat": 25.0389,
+      "lng": -77.4661
+    },
+    "continent": "Americas",
+    "currency": "BSD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "new-orleans-united-states",
+    "name": "New Orleans",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 29.9933,
+      "lng": -90.2581
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "new-york-united-states",
+    "name": "New York",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 40.64,
+      "lng": -73.78
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": [
+        "American Airlines",
+        "British Airways",
+        "Delta Air Lines",
+        "JetBlue",
+        "Norse Atlantic Airways",
+        "Virgin Atlantic"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "newark-united-states",
+    "name": "Newark",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 40.6925,
+      "lng": -74.1686
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "United Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "newcastle-upon-tyne-united-kingdom",
+    "name": "Newcastle upon Tyne",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 55.0375,
+      "lng": -1.6917
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "newquay-united-kingdom",
+    "name": "Newquay",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 50.4408,
+      "lng": -4.9953
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "nice-france",
+    "name": "Nice",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.6653,
+      "lng": 7.215
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "nimes-france",
+    "name": "Nimes",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.7575,
+      "lng": 4.4164
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "nuremberg-germany",
+    "name": "Nuremberg",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 49.4987,
+      "lng": 11.078
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "odz-poland",
+    "name": "Łódź",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 51.7219,
+      "lng": 19.3981
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ohrid-north-macedonia",
+    "name": "Ohrid",
+    "country": "North Macedonia",
+    "countryCode": "MK",
+    "coordinates": {
+      "lat": 41.18,
+      "lng": 20.7422
+    },
+    "continent": "Europe",
+    "currency": "MKD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "olbia-italy",
+    "name": "Olbia",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 40.8987,
+      "lng": 9.5176
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "olsztyn-mazury-poland",
+    "name": "Olsztyn-Mazury",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 53.4819,
+      "lng": 20.9378
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "orlando-united-states",
+    "name": "Orlando",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 28.4294,
+      "lng": -81.3089
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Norse Atlantic Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "osijek-croatia",
+    "name": "Osijek",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 45.4628,
+      "lng": 18.8103
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "oslo-norway",
+    "name": "Oslo",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 60.2028,
+      "lng": 11.0839
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": [
+        "British Airways",
+        "Norwegian Air Shuttle",
+        "Ryanair",
+        "Scandinavian Airlines",
+        "TUI Airways"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ostrava-czech-republic",
+    "name": "Ostrava",
+    "country": "Czech Republic",
+    "countryCode": "CZ",
+    "coordinates": {
+      "lat": 49.6961,
+      "lng": 18.1108
+    },
+    "continent": "Europe",
+    "currency": "CZK",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ottawa-canada",
+    "name": "Ottawa",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 45.3225,
+      "lng": -75.6672
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Canada", "Air Transat"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "palanga-lithuania",
+    "name": "Palanga",
+    "country": "Lithuania",
+    "countryCode": "LT",
+    "coordinates": {
+      "lat": 55.9733,
+      "lng": 21.0939
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "palermo-italy",
+    "name": "Palermo",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 38.1819,
+      "lng": 13.0994
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "palma-de-mallorca-spain",
+    "name": "Palma de Mallorca",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 39.5517,
+      "lng": 2.7388
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "paphos-cyprus",
+    "name": "Paphos",
+    "country": "Cyprus",
+    "countryCode": "CY",
+    "coordinates": {
+      "lat": 34.7183,
+      "lng": 32.485
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "paris-france",
+    "name": "Paris",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 49.0097,
+      "lng": 2.5478
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["Air France", "British Airways", "EasyJet", "Jet2.com", "Vueling", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "parma-italy",
+    "name": "Parma",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 44.8222,
+      "lng": 10.2953
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "perpignan-france",
+    "name": "Perpignan",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 42.7406,
+      "lng": 2.8706
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "perth-australia",
+    "name": "Perth",
+    "country": "Australia",
+    "countryCode": "AU",
+    "coordinates": {
+      "lat": -31.94,
+      "lng": 115.965
+    },
+    "continent": "Oceania",
+    "currency": "AUD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Qantas"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "perugia-italy",
+    "name": "Perugia",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 43.0954,
+      "lng": 12.5028
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "STN"],
+      "airlines": ["British Airways", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "pescara-italy",
+    "name": "Pescara",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 42.4372,
+      "lng": 14.1872
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "philadelphia-united-states",
+    "name": "Philadelphia",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 39.8719,
+      "lng": -75.2411
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "phoenix-united-states",
+    "name": "Phoenix",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 33.4342,
+      "lng": -112.0117
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "phuket-thailand",
+    "name": "Phuket",
+    "country": "Thailand",
+    "countryCode": "TH",
+    "coordinates": {
+      "lat": 8.1133,
+      "lng": 98.3169
+    },
+    "continent": "Asia",
+    "currency": "THB",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["TUI Airways", "Virgin Atlantic"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "pisa-italy",
+    "name": "Pisa",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 43.6839,
+      "lng": 10.3925
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "pittsburgh-united-states",
+    "name": "Pittsburgh",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 40.496,
+      "lng": -80.2567
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "plovdiv-bulgaria",
+    "name": "Plovdiv",
+    "country": "Bulgaria",
+    "countryCode": "BG",
+    "coordinates": {
+      "lat": 42.0678,
+      "lng": 24.8508
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "podgorica-montenegro",
+    "name": "Podgorica",
+    "country": "Montenegro",
+    "countryCode": "ME",
+    "coordinates": {
+      "lat": 42.3594,
+      "lng": 19.2519
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "poitiers-france",
+    "name": "Poitiers",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 46.5875,
+      "lng": 0.3067
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "ponta-delgada-portugal",
+    "name": "Ponta Delgada",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "coordinates": {
+      "lat": 37.7419,
+      "lng": -25.6978
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "poprad-tatry-slovakia",
+    "name": "Poprad-Tatry",
+    "country": "Slovakia",
+    "countryCode": "SK",
+    "coordinates": {
+      "lat": 49.0736,
+      "lng": 20.2411
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "port-of-spain-trinidad-and-tobago",
+    "name": "Port of Spain",
+    "country": "Trinidad and Tobago",
+    "countryCode": "TT",
+    "coordinates": {
+      "lat": 10.5953,
+      "lng": -61.3372
+    },
+    "continent": "Americas",
+    "currency": "TTD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "portland-or-united-states",
+    "name": "Portland (OR)",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 45.5886,
+      "lng": -122.5975
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "porto-portugal",
+    "name": "Porto",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "coordinates": {
+      "lat": 41.2356,
+      "lng": -8.6781
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "TAP Air Portugal", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "poznan-poland",
+    "name": "Poznań",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 52.421,
+      "lng": 16.8263
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "prague-czech-republic",
+    "name": "Prague",
+    "country": "Czech Republic",
+    "countryCode": "CZ",
+    "coordinates": {
+      "lat": 50.1008,
+      "lng": 14.26
+    },
+    "continent": "Europe",
+    "currency": "CZK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "preveza-lefkada-greece",
+    "name": "Preveza/Lefkada",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 38.93,
+      "lng": 20.772
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "pristina-kosovo",
+    "name": "Pristina",
+    "country": "Kosovo",
+    "countryCode": "XK",
+    "coordinates": {
+      "lat": 42.5728,
+      "lng": 21.0358
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "providenciales-united-kingdom",
+    "name": "Providenciales",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 21.7736,
+      "lng": -72.2658
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "pula-croatia",
+    "name": "Pula",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 44.8936,
+      "lng": 13.9222
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "punta-cana-dominican-republic",
+    "name": "Punta Cana",
+    "country": "Dominican Republic",
+    "countryCode": "DO",
+    "coordinates": {
+      "lat": 18.5667,
+      "lng": -68.3519
+    },
+    "continent": "Americas",
+    "currency": "DOP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways", "TUI Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "qingdao-people-s-republic-of-china",
+    "name": "Qingdao",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 36.3483,
+      "lng": 120.059
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Beijing Capital Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rabat-morocco",
+    "name": "Rabat",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 34.0514,
+      "lng": -6.7517
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["British Airways", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "raleigh-durham-united-states",
+    "name": "Raleigh/Durham",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 35.8778,
+      "lng": -78.7875
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["American Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "red-sea-saudi-arabia",
+    "name": "Red Sea",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "coordinates": {
+      "lat": 25.6303,
+      "lng": 37.0783
+    },
+    "continent": "Middle East",
+    "currency": "SAR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["BeOnd"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "reggio-calabria-italy",
+    "name": "Reggio Calabria",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 38.0719,
+      "lng": 15.6536
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rennes-france",
+    "name": "Rennes",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 48.0683,
+      "lng": -1.7261
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "reus-spain",
+    "name": "Reus",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 41.1475,
+      "lng": 1.1672
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "reykjavik-iceland",
+    "name": "Reykjavík",
+    "country": "Iceland",
+    "countryCode": "IS",
+    "coordinates": {
+      "lat": 63.985,
+      "lng": -22.6056
+    },
+    "continent": "Europe",
+    "currency": "ISK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Icelandair", "Jet2.com", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rhodes-greece",
+    "name": "Rhodes",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 36.4053,
+      "lng": 28.0861
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "riga-latvia",
+    "name": "Riga",
+    "country": "Latvia",
+    "countryCode": "LV",
+    "coordinates": {
+      "lat": 56.9208,
+      "lng": 23.9708
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Norwegian Air Shuttle", "Ryanair", "airBaltic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rijeka-croatia",
+    "name": "Rijeka",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 45.2169,
+      "lng": 14.5703
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "rimini-italy",
+    "name": "Rimini",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 44.0194,
+      "lng": 12.6094
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Ryanair", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "rio-de-janeiro-brazil",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "countryCode": "BR",
+    "coordinates": {
+      "lat": -22.81,
+      "lng": -43.2506
+    },
+    "continent": "Americas",
+    "currency": "BRL",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "riyadh-saudi-arabia",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "countryCode": "SA",
+    "coordinates": {
+      "lat": 24.9576,
+      "lng": 46.6988
+    },
+    "continent": "Middle East",
+    "currency": "SAR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Riyadh Air", "Saudia"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rodez-france",
+    "name": "Rodez",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 44.4078,
+      "lng": 2.4828
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "rome-italy",
+    "name": "Rome",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 41.7956,
+      "lng": 12.2499
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "ITA Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rotterdam-the-hague-netherlands",
+    "name": "Rotterdam/The Hague",
+    "country": "Netherlands",
+    "countryCode": "NL",
+    "coordinates": {
+      "lat": 51.95,
+      "lng": 4.4333
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "STN"],
+      "airlines": ["British Airways", "Transavia"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "rovaniemi-finland",
+    "name": "Rovaniemi",
+    "country": "Finland",
+    "countryCode": "FI",
+    "coordinates": {
+      "lat": 66.5617,
+      "lng": 25.8308
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Norwegian Air Shuttle", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "rzeszow-poland",
+    "name": "Rzeszów",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 50.11,
+      "lng": 22.0189
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sal-cape-verde",
+    "name": "Sal",
+    "country": "Cape Verde",
+    "countryCode": "CV",
+    "coordinates": {
+      "lat": 16.7376,
+      "lng": -22.95
+    },
+    "continent": "Africa",
+    "currency": "CVE",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "salen-trysil-sweden",
+    "name": "Sälen-Trysil",
+    "country": "Sweden",
+    "countryCode": "SE",
+    "coordinates": {
+      "lat": 61.159,
+      "lng": 12.84
+    },
+    "continent": "Europe",
+    "currency": "SEK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "salerno-italy",
+    "name": "Salerno",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 40.62,
+      "lng": 14.9125
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "salt-lake-city-united-states",
+    "name": "Salt Lake City",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 40.7883,
+      "lng": -111.9778
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Delta Air Lines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "salzburg-austria",
+    "name": "Salzburg",
+    "country": "Austria",
+    "countryCode": "AT",
+    "coordinates": {
+      "lat": 47.7944,
+      "lng": 13.0033
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Lufthansa", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "samos-greece",
+    "name": "Samos",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 37.6903,
+      "lng": 26.9128
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Jet2.com", "TUI Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "san-diego-united-states",
+    "name": "San Diego",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 32.7317,
+      "lng": -117.1995
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "san-francisco-united-states",
+    "name": "San Francisco",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 37.6189,
+      "lng": -122.375
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "United Airlines", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "san-jose-cr-costa-rica",
+    "name": "San José (CR)",
+    "country": "Costa Rica",
+    "countryCode": "CR",
+    "coordinates": {
+      "lat": 9.9939,
+      "lng": -84.2089
+    },
+    "continent": "Americas",
+    "currency": "CRC",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "san-sebastian-spain",
+    "name": "San Sebastián",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 43.3564,
+      "lng": -1.7906
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "sandefjord-norway",
+    "name": "Sandefjord",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 59.1867,
+      "lng": 10.2586
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "santander-spain",
+    "name": "Santander",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 43.4269,
+      "lng": -3.82
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "santiago-de-chile-chile",
+    "name": "Santiago de Chile",
+    "country": "Chile",
+    "countryCode": "CL",
+    "coordinates": {
+      "lat": -33.3928,
+      "lng": -70.7856
+    },
+    "continent": "Americas",
+    "currency": "CLP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "santiago-de-compostela-spain",
+    "name": "Santiago de Compostela",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 42.8963,
+      "lng": -8.4151
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["Ryanair", "Vueling"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "santorini-greece",
+    "name": "Santorini",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 36.3992,
+      "lng": 25.4793
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "sao-paulo-brazil",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "countryCode": "BR",
+    "coordinates": {
+      "lat": -23.4356,
+      "lng": -46.4731
+    },
+    "continent": "Americas",
+    "currency": "BRL",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "LATAM Brasil"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sarajevo-bosnia-and-herzegovina",
+    "name": "Sarajevo",
+    "country": "Bosnia and Herzegovina",
+    "countryCode": "BA",
+    "coordinates": {
+      "lat": 43.8261,
+      "lng": 18.3374
+    },
+    "continent": "Europe",
+    "currency": "BAD",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "satu-mare-romania",
+    "name": "Satu Mare",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 47.7034,
+      "lng": 22.8856
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "seattle-tacoma-united-states",
+    "name": "Seattle/Tacoma",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 47.4489,
+      "lng": -122.3094
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Alaska Airlines", "British Airways", "Delta Air Lines", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "seoul-south-korea",
+    "name": "Seoul",
+    "country": "South Korea",
+    "countryCode": "KR",
+    "coordinates": {
+      "lat": 37.4625,
+      "lng": 126.4392
+    },
+    "continent": "Asia",
+    "currency": "KRW",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Asiana Airlines", "Korean Air", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "seville-spain",
+    "name": "Seville",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 37.4181,
+      "lng": -5.8989
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "Vueling", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "shanghai-people-s-republic-of-china",
+    "name": "Shanghai",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 31.1433,
+      "lng": 121.8053
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air China", "British Airways", "China Eastern Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "shannon-ireland",
+    "name": "Shannon",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "coordinates": {
+      "lat": 52.7019,
+      "lng": -8.9247
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["Aer Lingus", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sharjah-united-arab-emirates",
+    "name": "Sharjah",
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "coordinates": {
+      "lat": 25.3286,
+      "lng": 55.5172
+    },
+    "continent": "Middle East",
+    "currency": "AED",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Arabia"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sharm-el-sheikh-egypt",
+    "name": "Sharm El Sheikh",
+    "country": "Egypt",
+    "countryCode": "EG",
+    "coordinates": {
+      "lat": 27.9772,
+      "lng": 34.3947
+    },
+    "continent": "Africa",
+    "currency": "EGP",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "shenzhen-people-s-republic-of-china",
+    "name": "Shenzhen",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 22.6394,
+      "lng": 113.8108
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Shenzhen Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sibiu-romania",
+    "name": "Sibiu",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 45.789,
+      "lng": 24.095
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "singapore-singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "coordinates": {
+      "lat": 1.3592,
+      "lng": 103.9894
+    },
+    "continent": "Asia",
+    "currency": "SGD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Qantas", "Singapore Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "skiathos-greece",
+    "name": "Skiathos",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 39.1772,
+      "lng": 23.5036
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "TUI Airways", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "skopje-north-macedonia",
+    "name": "Skopje",
+    "country": "North Macedonia",
+    "countryCode": "MK",
+    "coordinates": {
+      "lat": 41.9611,
+      "lng": 21.6269
+    },
+    "continent": "Europe",
+    "currency": "MKD",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sofia-bulgaria",
+    "name": "Sofia",
+    "country": "Bulgaria",
+    "countryCode": "BG",
+    "coordinates": {
+      "lat": 42.695,
+      "lng": 23.4083
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": [
+        "British Airways",
+        "Bulgaria Air",
+        "Ryanair",
+        "TUI Airways",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "split-croatia",
+    "name": "Split",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 43.5389,
+      "lng": 16.2981
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": [
+        "British Airways",
+        "Croatia Airlines",
+        "Jet2.com",
+        "TUI Airways",
+        "Wizz Air",
+        "easyJet"
+      ],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "st-john-s-nl-canada",
+    "name": "St. John's (NL)",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 47.6186,
+      "lng": -52.7525
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["WestJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "st-kitts-saint-kitts-and-nevis",
+    "name": "St. Kitts",
+    "country": "Saint Kitts and Nevis",
+    "countryCode": "KN",
+    "coordinates": {
+      "lat": 17.3114,
+      "lng": -62.7186
+    },
+    "continent": "Americas",
+    "currency": "XCD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "st-louis-united-states",
+    "name": "St. Louis",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 38.7472,
+      "lng": -90.3614
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "st-lucia-saint-lucia",
+    "name": "St. Lucia",
+    "country": "Saint Lucia",
+    "countryCode": "LC",
+    "coordinates": {
+      "lat": 13.7333,
+      "lng": -60.9525
+    },
+    "continent": "Americas",
+    "currency": "XCD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "st-vincent-saint-vincent-and-the-grenadines",
+    "name": "St. Vincent",
+    "country": "Saint Vincent and the Grenadines",
+    "countryCode": "VC",
+    "coordinates": {
+      "lat": 13.1564,
+      "lng": -61.1503
+    },
+    "continent": "Americas",
+    "currency": "XCD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "stavanger-norway",
+    "name": "Stavanger",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 58.8767,
+      "lng": 5.6378
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Norwegian Air Shuttle"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "stockholm-sweden",
+    "name": "Stockholm",
+    "country": "Sweden",
+    "countryCode": "SE",
+    "coordinates": {
+      "lat": 59.6519,
+      "lng": 17.9186
+    },
+    "continent": "Europe",
+    "currency": "SEK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Norwegian Air Shuttle", "Ryanair", "Scandinavian Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "strasbourg-france",
+    "name": "Strasbourg",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 48.5419,
+      "lng": 7.6344
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "stuttgart-germany",
+    "name": "Stuttgart",
+    "country": "Germany",
+    "countryCode": "DE",
+    "coordinates": {
+      "lat": 48.6899,
+      "lng": 9.222
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Eurowings"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "suceava-romania",
+    "name": "Suceava",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 47.6875,
+      "lng": 26.3542
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sumburgh-united-kingdom",
+    "name": "Sumburgh",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "coordinates": {
+      "lat": 59.8814,
+      "lng": -1.2939
+    },
+    "continent": "Europe",
+    "currency": "GBP",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Loganair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "sydney-australia",
+    "name": "Sydney",
+    "country": "Australia",
+    "countryCode": "AU",
+    "coordinates": {
+      "lat": -33.9483,
+      "lng": 151.1761
+    },
+    "continent": "Oceania",
+    "currency": "AUD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "Qantas"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "sylhet-bangladesh",
+    "name": "Sylhet",
+    "country": "Bangladesh",
+    "countryCode": "BD",
+    "coordinates": {
+      "lat": 24.9633,
+      "lng": 91.8669
+    },
+    "continent": "Asia",
+    "currency": "BDT",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Biman Bangladesh Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "szczecin-poland",
+    "name": "Szczecin",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 53.5847,
+      "lng": 14.9022
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "taipei-taiwan",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "countryCode": "TW",
+    "coordinates": {
+      "lat": 25.0764,
+      "lng": 121.2239
+    },
+    "continent": "Asia",
+    "currency": "TWD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["China Airlines", "EVA Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tallinn-estonia",
+    "name": "Tallinn",
+    "country": "Estonia",
+    "countryCode": "EE",
+    "coordinates": {
+      "lat": 59.4164,
+      "lng": 24.7992
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["Jet2.com", "Ryanair", "Wizz Air", "airBaltic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tampa-united-states",
+    "name": "Tampa",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 27.9798,
+      "lng": -82.5348
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tangier-morocco",
+    "name": "Tangier",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 35.7269,
+      "lng": -5.9169
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Air Arabia", "Royal Air Maroc", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "targu-mures-romania",
+    "name": "Târgu Mureș",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 46.4678,
+      "lng": 24.4125
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tashkent-uzbekistan",
+    "name": "Tashkent",
+    "country": "Uzbekistan",
+    "countryCode": "UZ",
+    "coordinates": {
+      "lat": 41.2579,
+      "lng": 69.2812
+    },
+    "continent": "Asia",
+    "currency": "UZS",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Qanot Sharq", "Uzbekistan Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tbilisi-georgia",
+    "name": "Tbilisi",
+    "country": "Georgia",
+    "countryCode": "GE",
+    "coordinates": {
+      "lat": 41.6692,
+      "lng": 44.9547
+    },
+    "continent": "Europe",
+    "currency": "GEL",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "LTN"],
+      "airlines": ["British Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tel-aviv-israel",
+    "name": "Tel Aviv",
+    "country": "Israel",
+    "countryCode": "IL",
+    "coordinates": {
+      "lat": 32.0094,
+      "lng": 34.8828
+    },
+    "continent": "Middle East",
+    "currency": "ILS",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["Arkia", "British Airways", "El Al", "Israir", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tenerife-spain",
+    "name": "Tenerife",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 28.0444,
+      "lng": -16.5725
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tetouan-morocco",
+    "name": "Tétouan",
+    "country": "Morocco",
+    "countryCode": "MA",
+    "coordinates": {
+      "lat": 35.5944,
+      "lng": -5.32
+    },
+    "continent": "Africa",
+    "currency": "MAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Royal Air Maroc"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "thessaloniki-greece",
+    "name": "Thessaloniki",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 40.5197,
+      "lng": 22.9709
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tianjin-people-s-republic-of-china",
+    "name": "Tianjin",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 39.1244,
+      "lng": 117.3461
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Tianjin Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "timisoara-romania",
+    "name": "Timișoara",
+    "country": "Romania",
+    "countryCode": "RO",
+    "coordinates": {
+      "lat": 45.81,
+      "lng": 21.3381
+    },
+    "continent": "Europe",
+    "currency": "RON",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tirana-albania",
+    "name": "Tirana",
+    "country": "Albania",
+    "countryCode": "AL",
+    "coordinates": {
+      "lat": 41.4147,
+      "lng": 19.7206
+    },
+    "continent": "Europe",
+    "currency": "ALL",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tivat-montenegro",
+    "name": "Tivat",
+    "country": "Montenegro",
+    "countryCode": "ME",
+    "coordinates": {
+      "lat": 42.4047,
+      "lng": 18.7233
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "tobago-trinidad-and-tobago",
+    "name": "Tobago",
+    "country": "Trinidad and Tobago",
+    "countryCode": "TT",
+    "coordinates": {
+      "lat": 11.1497,
+      "lng": -60.8322
+    },
+    "continent": "Americas",
+    "currency": "TTD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tokyo-japan",
+    "name": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP",
+    "coordinates": {
+      "lat": 35.5533,
+      "lng": 139.7811
+    },
+    "continent": "Asia",
+    "currency": "JPY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["All Nippon Airways", "British Airways", "Japan Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "toronto-canada",
+    "name": "Toronto",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 43.6767,
+      "lng": -79.6306
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Canada", "Air Transat", "British Airways", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "toulon-france",
+    "name": "Toulon",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.0972,
+      "lng": 6.1461
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LCY"],
+      "airlines": ["British Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "toulouse-france",
+    "name": "Toulouse",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 43.635,
+      "lng": 1.3678
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": ["British Airways", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tours-france",
+    "name": "Tours",
+    "country": "France",
+    "countryCode": "FR",
+    "coordinates": {
+      "lat": 47.4319,
+      "lng": 0.7231
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "trapani-italy",
+    "name": "Trapani",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 37.9119,
+      "lng": 12.4933
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "treviso-italy",
+    "name": "Treviso",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.6508,
+      "lng": 12.1978
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "trieste-italy",
+    "name": "Trieste",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.8212,
+      "lng": 13.4856
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "troms-norway",
+    "name": "Tromsø",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 69.6814,
+      "lng": 18.9178
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN"],
+      "airlines": ["British Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "trondheim-norway",
+    "name": "Trondheim",
+    "country": "Norway",
+    "countryCode": "NO",
+    "coordinates": {
+      "lat": 63.4575,
+      "lng": 10.9242
+    },
+    "continent": "Europe",
+    "currency": "NOK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Norwegian Air Shuttle"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "tunis-tunisia",
+    "name": "Tunis",
+    "country": "Tunisia",
+    "countryCode": "TN",
+    "coordinates": {
+      "lat": 36.8511,
+      "lng": 10.2272
+    },
+    "continent": "Africa",
+    "currency": "TND",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Nouvelair", "Tunisair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "turin-italy",
+    "name": "Turin",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.2018,
+      "lng": 7.6496
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "vagar-faroe-islands",
+    "name": "Vágar",
+    "country": "Faroe Islands",
+    "countryCode": "FO",
+    "coordinates": {
+      "lat": 62.0636,
+      "lng": -7.2772
+    },
+    "continent": "Europe",
+    "currency": "DKK",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Atlantic Airways"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "valencia-spain",
+    "name": "Valencia",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 39.4894,
+      "lng": -0.4817
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "Vueling", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "vancouver-canada",
+    "name": "Vancouver",
+    "country": "Canada",
+    "countryCode": "CA",
+    "coordinates": {
+      "lat": 49.1947,
+      "lng": -123.184
+    },
+    "continent": "Americas",
+    "currency": "CAD",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR"],
+      "airlines": ["Air Canada", "British Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "varna-bulgaria",
+    "name": "Varna",
+    "country": "Bulgaria",
+    "countryCode": "BG",
+    "coordinates": {
+      "lat": 43.2319,
+      "lng": 27.8253
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "venice-italy",
+    "name": "Venice",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.5053,
+      "lng": 12.3519
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Ryanair", "Wizz Air", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "verona-italy",
+    "name": "Verona",
+    "country": "Italy",
+    "countryCode": "IT",
+    "coordinates": {
+      "lat": 45.3964,
+      "lng": 10.8881
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "vienna-austria",
+    "name": "Vienna",
+    "country": "Austria",
+    "countryCode": "AT",
+    "coordinates": {
+      "lat": 48.1103,
+      "lng": 16.5697
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "STN"],
+      "airlines": [
+        "Austrian Airlines",
+        "British Airways",
+        "Jet2.com",
+        "Ryanair",
+        "TUI Airways",
+        "easyJet"
+      ],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "vilnius-lithuania",
+    "name": "Vilnius",
+    "country": "Lithuania",
+    "countryCode": "LT",
+    "coordinates": {
+      "lat": 54.6369,
+      "lng": 25.2878
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "warsaw-poland",
+    "name": "Warsaw",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 52.1658,
+      "lng": 20.9672
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "LOT Polish Airlines", "Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "washington-united-states",
+    "name": "Washington",
+    "country": "United States",
+    "countryCode": "US",
+    "coordinates": {
+      "lat": 38.9444,
+      "lng": -77.4558
+    },
+    "continent": "Americas",
+    "currency": "USD",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["British Airways", "United Airlines", "Virgin Atlantic"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "wroc-aw-poland",
+    "name": "Wrocław",
+    "country": "Poland",
+    "countryCode": "PL",
+    "coordinates": {
+      "lat": 51.1028,
+      "lng": 16.8858
+    },
+    "continent": "Europe",
+    "currency": "PLN",
+    "london": {
+      "direct": true,
+      "airports": ["LTN", "STN"],
+      "airlines": ["Ryanair", "Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "wuhan-people-s-republic-of-china",
+    "name": "Wuhan",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 30.7748,
+      "lng": 114.2174
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["China Southern Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "xi-an-people-s-republic-of-china",
+    "name": "Xi'an",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 34.4469,
+      "lng": 108.7514
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["Tianjin Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "xiamen-people-s-republic-of-china",
+    "name": "Xiamen",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 24.5442,
+      "lng": 118.1278
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LHR"],
+      "airlines": ["XiamenAir"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "yerevan-armenia",
+    "name": "Yerevan",
+    "country": "Armenia",
+    "countryCode": "AM",
+    "coordinates": {
+      "lat": 40.1472,
+      "lng": 44.3958
+    },
+    "continent": "Asia",
+    "currency": "AMD",
+    "london": {
+      "direct": true,
+      "airports": ["LTN"],
+      "airlines": ["Wizz Air"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "zadar-croatia",
+    "name": "Zadar",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 44.1083,
+      "lng": 15.3467
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "STN"],
+      "airlines": ["Ryanair", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "zagreb-croatia",
+    "name": "Zagreb",
+    "country": "Croatia",
+    "countryCode": "HR",
+    "coordinates": {
+      "lat": 45.7431,
+      "lng": 16.0689
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LHR", "STN"],
+      "airlines": ["British Airways", "Croatia Airlines", "Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "zakynthos-greece",
+    "name": "Zakynthos",
+    "country": "Greece",
+    "countryCode": "GR",
+    "coordinates": {
+      "lat": 37.7508,
+      "lng": 20.8842
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+      "seasonalOnly": true
+    }
+  },
+  {
+    "id": "zanzibar-tanzania",
+    "name": "Zanzibar",
+    "country": "Tanzania",
+    "countryCode": "TZ",
+    "coordinates": {
+      "lat": -6.2222,
+      "lng": 39.225
+    },
+    "continent": "Africa",
+    "currency": "TZS",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["Air Tanzania", "British Airways", "TUI Airways"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "zaragoza-spain",
+    "name": "Zaragoza",
+    "country": "Spain",
+    "countryCode": "ES",
+    "coordinates": {
+      "lat": 41.6661,
+      "lng": -1.0417
+    },
+    "continent": "Europe",
+    "currency": "EUR",
+    "london": {
+      "direct": true,
+      "airports": ["STN"],
+      "airlines": ["Ryanair"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "zhengzhou-people-s-republic-of-china",
+    "name": "Zhengzhou",
+    "country": "People's Republic of China",
+    "countryCode": "CN",
+    "coordinates": {
+      "lat": 34.5197,
+      "lng": 113.8408
+    },
+    "continent": "Asia",
+    "currency": "CNY",
+    "london": {
+      "direct": true,
+      "airports": ["LGW"],
+      "airlines": ["China Southern Airlines"],
+      "seasonalOnly": false
+    }
+  },
+  {
+    "id": "zurich-switzerland",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "countryCode": "CH",
+    "coordinates": {
+      "lat": 47.4581,
+      "lng": 8.5481
+    },
+    "continent": "Europe",
+    "currency": "CHF",
+    "london": {
+      "direct": true,
+      "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+      "airlines": ["British Airways", "EasyJet", "Swiss International Air Lines", "easyJet"],
+      "seasonalOnly": false
+    }
+  }
+]

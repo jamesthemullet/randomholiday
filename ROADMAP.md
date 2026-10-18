@@ -104,6 +104,90 @@ Roll two or three destinations at once and compare them side by side on budget/w
 2. Comparison table UI on `/results`, reusing `budgetCalculator`/`seasonalWeather`/
    `distanceCalculator` outputs already computed per candidate.
 
+### 8. More departure cities — _Acquisition_
+
+Only London can be chosen today. It's the only city in `SUPPORTED_DEPARTURE_CITY_IDS`
+(`lib/departureCities.ts`) with route data (`lib/data/london-destinations.json`, from
+`yarn data:london`). The other cities are already in `departureCities` but can't be chosen. Each
+city goes live as its own PR: route data only, no prices. New destinations it adds join the
+catalogue as stubs and stay unpickable until their details land in
+`lib/data/destination-details.json`.
+
+1. **Infra (Mise en Place):** generalise the London script into
+   `yarn data:routes <city-id>`. It takes a config of each city's airports (IATA code plus
+   Wikipedia page) and writes `lib/data/routes/<city-id>.json`. The facts (country, coordinates,
+   currency, continent) move to one shared destinations file, so a destination served from
+   several cities is stored once. London's output must match today's.
+2. Make the catalogue and engine origin-aware. A destination's `london` field becomes
+   `routes: Record<originId, Route>`, and `getRecommendations` only picks destinations reachable
+   from the chosen origin. Decide what counts as reachable before the smaller airports go live.
+   Inverness flies to very few places directly, so "any destination, one stop" may suit it
+   better. Also stop a city recommending itself (Edinburgh → Edinburgh).
+
+**UK first.** For each city: add its airports to the config, run `yarn data:routes <city-id>`,
+check the new stubs and the merges with existing destinations (watch for airport-named cities,
+like Newark vs New York), then add the id to `SUPPORTED_DEPARTURE_CITY_IDS`.
+
+3. Manchester (MAN)
+4. Birmingham (BHX)
+5. Edinburgh (EDI)
+6. Glasgow (GLA, PIK)
+7. Bristol (BRS)
+8. Newcastle (NCL)
+9. Liverpool (LPL)
+10. Leeds (LBA)
+11. East Midlands (EMA)
+12. Belfast (BFS, BHD)
+13. Aberdeen (ABZ)
+14. Cardiff (CWL)
+15. Southampton (SOU)
+16. Exeter (EXT)
+17. Bournemouth (BOH)
+18. Norwich (NWI)
+19. Inverness (INV)
+
+**Then Europe**, same steps:
+
+20. Dublin (DUB)
+21. Paris (CDG, ORY, BVA)
+22. Amsterdam (AMS)
+23. Berlin (BER)
+24. Madrid (MAD)
+25. Rome (FCO, CIA)
+26. Lisbon (LIS)
+27. Vienna (VIE)
+28. Zurich (ZRH)
+29. Copenhagen (CPH)
+30. Stockholm (ARN, BMA)
+31. Oslo (OSL, TRF)
+32. Warsaw (WAW, WMI)
+33. Athens (ATH)
+
+**Then the rest of the world.** These need step 2's "reachable" rule to hold up for long-haul
+hubs. Wikipedia's destination lists for big hubs are long and get edited often, so re-run each
+one seasonally.
+
+34. New York (JFK, EWR, LGA)
+35. Los Angeles (LAX)
+36. Chicago (ORD, MDW)
+37. Toronto (YYZ)
+38. Mexico City (MEX, NLU)
+39. São Paulo (GRU, CGH)
+40. Buenos Aires (EZE, AEP)
+41. Dubai (DXB, DWC)
+42. Cairo (CAI)
+43. Johannesburg (JNB)
+44. Nairobi (NBO)
+45. Mumbai (BOM)
+46. Bangkok (BKK, DMK)
+47. Singapore (SIN)
+48. Hong Kong (HKG)
+49. Seoul (ICN, GMP)
+50. Tokyo (HND, NRT)
+51. Sydney (SYD)
+52. Melbourne (MEL, AVV)
+53. Auckland (AKL)
+
 ## Mise en place — infrastructure prerequisites
 
 | Investment                                     | Unlocks                                                                    |
@@ -111,7 +195,9 @@ Roll two or three destinations at once and compare them side by side on budget/w
 | **Persistence layer** (Saved Trips step 1)     | Saved Trips, and any future accounts/history feature.                      |
 | **Destination pages** (feature 3)              | SEO acquisition and a linkable target for Shareable Result.                |
 | **Engine diagnostics test** (feature 5 step 1) | A before/after measure for every change to filtering, scoring or sampling. |
+| **Per-city route script** (feature 8 step 1)   | Every departure city after London, one `yarn data:routes <city-id>` each.  |
 
 ---
 
-_RandomHoliday — product roadmap, 2 September 2026 (feature 5 added 17 October 2026)_
+_RandomHoliday — product roadmap, 2 September 2026 (feature 5 added 17 October 2026, feature 8
+added 18 October 2026)_

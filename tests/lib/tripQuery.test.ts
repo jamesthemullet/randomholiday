@@ -86,6 +86,10 @@ describe('parseTripQuery', () => {
     expect(values).toEqual({})
   })
 
+  it('drops a known city that has no route data yet', () => {
+    expect(parseTripQuery(new URLSearchParams({ originId: 'paris-france' })).city).toBeUndefined()
+  })
+
   it('rejects a fractional month', () => {
     expect(parseTripQuery(new URLSearchParams({ month: '6.5' })).month).toBeUndefined()
   })

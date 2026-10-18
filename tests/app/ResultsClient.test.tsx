@@ -62,6 +62,21 @@ describe('ResultsClient', () => {
     expect(screen.getByRole('link', { name: 'Start over' })).toHaveAttribute('href', '/')
   })
 
+  it('shows no destination when departing from a city without route data', () => {
+    setParams({
+      originId: 'paris-france',
+      budget: '1500',
+      distance: '5000',
+      nights: '7',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    expect(screen.getByRole('link', { name: 'Start over' })).toHaveAttribute('href', '/')
+  })
+
   it('does not pick a random destination during server rendering, to avoid a hydration mismatch', () => {
     setParams({
       originId: city.id,
