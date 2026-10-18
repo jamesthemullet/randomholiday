@@ -33,7 +33,7 @@ describe('POST /api/webhooks/stripe', () => {
   it('returns 503 when the webhook secret is missing', async () => {
     vi.stubEnv('STRIPE_WEBHOOK_SECRET', '')
     mockedGetStripeClient.mockReturnValue({
-      webhooks: { constructEvent: vi.fn() },
+      webhooks: { constructEventAsync: vi.fn() },
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
@@ -45,7 +45,7 @@ describe('POST /api/webhooks/stripe', () => {
   it('returns 400 when the stripe-signature header is missing', async () => {
     vi.stubEnv('STRIPE_WEBHOOK_SECRET', 'whsec_test')
     mockedGetStripeClient.mockReturnValue({
-      webhooks: { constructEvent: vi.fn() },
+      webhooks: { constructEventAsync: vi.fn() },
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
@@ -58,11 +58,9 @@ describe('POST /api/webhooks/stripe', () => {
 
   it('returns 400 when signature verification fails', async () => {
     vi.stubEnv('STRIPE_WEBHOOK_SECRET', 'whsec_test')
-    const constructEvent = vi.fn().mockImplementation(() => {
-      throw new Error('bad signature')
-    })
+    const constructEventAsync = vi.fn().mockRejectedValue(new Error('bad signature'))
     mockedGetStripeClient.mockReturnValue({
-      webhooks: { constructEvent },
+      webhooks: { constructEventAsync },
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 
@@ -81,9 +79,9 @@ describe('POST /api/webhooks/stripe', () => {
     'some.other.event',
   ])('acknowledges a valid %s event', async (type) => {
     vi.stubEnv('STRIPE_WEBHOOK_SECRET', 'whsec_test')
-    const constructEvent = vi.fn().mockReturnValue({ type })
+    const constructEventAsync = vi.fn().mockResolvedValue({ type })
     mockedGetStripeClient.mockReturnValue({
-      webhooks: { constructEvent },
+      webhooks: { constructEventAsync },
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
 

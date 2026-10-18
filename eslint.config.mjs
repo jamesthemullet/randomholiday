@@ -1,9 +1,15 @@
-import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
-import tseslint from 'typescript-eslint';
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
+import tseslint from 'typescript-eslint'
 
 const config = [
   {
-    ignores: ['coverage/**', 'playwright-report/**', 'test-results/**'],
+    ignores: [
+      'coverage/**',
+      'playwright-report/**',
+      'test-results/**',
+      '.open-next/**',
+      '.wrangler/**',
+    ],
   },
   ...nextCoreWebVitals,
   {
@@ -22,6 +28,6 @@ const config = [
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
   },
-];
+]
 
-export default config;
+export default config
