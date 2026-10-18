@@ -4,6 +4,7 @@ import React, { useEffect, useState, useSyncExternalStore } from 'react'
 import Link from 'next/link'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'
+import { formatGbp } from '@/lib/currency'
 import styles from './ResultsReveal.module.css'
 
 export interface ResultsRevealProps {
@@ -86,10 +87,6 @@ function useSplitFlap(target: string, skip: boolean): { text: string; settled: b
   return { text: settled ? target : getFlapFrame(target, flap.tick), settled }
 }
 
-function formatUsd(value: number): string {
-  return `$${Math.round(value).toLocaleString('en-US')}`
-}
-
 function Postcard({
   recommendation,
   revealDelayMs,
@@ -118,7 +115,7 @@ function Postcard({
       label: 'Trip',
       value: `${nights} ${nights === 1 ? 'night' : 'nights'}`,
     },
-    perPersonCost !== undefined && { label: 'Est. pp', value: formatUsd(perPersonCost) },
+    perPersonCost !== undefined && { label: 'Est. pp', value: formatGbp(perPersonCost) },
   ].filter((stat): stat is { label: string; value: string } => Boolean(stat))
 
   return (

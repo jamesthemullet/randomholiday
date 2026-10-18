@@ -15,17 +15,16 @@
 }
 
 .primary {
-  /* Fixed value (not the theme-swapping --color-turquoise-contrast token): this badge's white
-     text sits on this solid background in both themes, so it needs to stay dark enough for
-     AA contrast against white regardless of --data-theme. */
+  /* Fixed value: this badge's white text sits on this solid background, so it needs to stay
+     dark enough for AA contrast against white. */
   background-color: #007d7d;
   color: var(--color-white);
 }
 
 .secondary {
   /* Fixed value (not --color-accent-secondary): this badge's white text sits on this solid
-     background in both themes, so it needs to stay dark enough for AA contrast against white
-     regardless of --data-theme — the token's full-brightness coral is only 2.78:1. */
+     background, so it needs to stay dark enough for AA contrast against white — the token's
+     full-brightness coral is only 2.78:1. */
   background-color: #c62828;
   color: var(--color-white);
 }

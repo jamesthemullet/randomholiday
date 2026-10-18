@@ -30,6 +30,6 @@ export async function GET(request: Request): Promise<NextResponse> {
   return NextResponse.json({
     source: 'static',
     pricePerPerson: estimateFlightCostPerPerson(distanceKm),
-    currency: 'USD',
+    currency: 'GBP',
   })
 }
