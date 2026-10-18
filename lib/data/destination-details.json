@@ -37,6 +37,66 @@
     ],
     "visa": "free"
   },
+  "budapest-hungary": {
+    "description": "Hungary's capital straddles the Danube, mixing thermal bathhouses, grand Habsburg architecture and lively ruin bars at modest prices.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Széchenyi thermal baths",
+      "Buda Castle and Fisherman's Bastion",
+      "Hungarian Parliament Building",
+      "Ruin bar crawl in the Jewish Quarter",
+      "Danube evening cruise",
+      "Goulash and lángos at the Great Market Hall"
+    ],
+    "visa": "free"
+  },
+  "dalaman-turkey": {
+    "description": "The gateway to Turkey's Turkish Riviera, near Ölüdeniz's lagoon, Dalyan's river tombs and pine-backed coves along the Turquoise Coast.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Ölüdeniz Blue Lagoon",
+      "Paragliding from Babadağ",
+      "Dalyan river trip to the Lycian rock tombs",
+      "Boat day around Fethiye's 12 Islands",
+      "Saklıkent Gorge",
+      "Mud baths at Iztuzu Beach"
+    ],
+    "visa": "free"
+  },
+  "dublin-ireland": {
+    "description": "Ireland's compact capital pairs Georgian squares, literary pubs and the Guinness Storehouse with easy coastal escapes along Dublin Bay.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Guinness Storehouse",
+      "Book of Kells at Trinity College",
+      "Kilmainham Gaol",
+      "Temple Bar live music",
+      "Howth cliff walk",
+      "Day trip to Glendalough"
+    ],
+    "visa": "free"
+  },
   "faro-portugal": {
     "description": "The gateway to Portugal's Algarve, with a walled old town, lagoon islands and golden beaches along the surrounding coast.",
     "climate": "mediterranean",
@@ -75,6 +135,26 @@
     ],
     "visa": "free"
   },
+  "glasgow-united-kingdom": {
+    "description": "Scotland's largest city is a Victorian-built hub of free museums, a thriving live music scene and Art Nouveau design, near Loch Lomond.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 85,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Kelvingrove Art Gallery and Museum",
+      "Glasgow Cathedral and Necropolis",
+      "Mackintosh trail at the Willow Tearooms",
+      "Live gig at King Tut's",
+      "West End and Ashton Lane",
+      "Day trip to Loch Lomond"
+    ],
+    "visa": "free"
+  },
   "ibiza-spain": {
     "description": "A Balearic island pairing world-famous clubs with quiet coves, a walled Dalt Vila old town and hippie markets.",
     "climate": "mediterranean",
@@ -91,6 +171,46 @@
       "Las Dalias hippie market",
       "Formentera day trip",
       "Club night at Amnesia"
+    ],
+    "visa": "free"
+  },
+  "jersey-jersey": {
+    "description": "The largest Channel Island offers sandy bays, clifftop paths, Norman castles and seafood, with a French accent and a mild climate.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 125,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Mont Orgueil Castle",
+      "Jersey War Tunnels",
+      "Coastal walk along the north cliff path",
+      "Jersey Royal potatoes and seafood in St Aubin",
+      "Durrell Wildlife Park",
+      "St Ouen's Bay surfing"
+    ],
+    "visa": "free"
+  },
+  "madrid-spain": {
+    "description": "Spain's capital delivers world-class art at the Prado, long tapas evenings, lively plazas and grand parks in a sunny, elegant city.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 115,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Prado Museum",
+      "Royal Palace of Madrid",
+      "Retiro Park",
+      "Tapas crawl in La Latina",
+      "Reina Sofía and Picasso's Guernica",
+      "Day trip to Toledo"
     ],
     "visa": "free"
   },
