@@ -4,6 +4,7 @@ import { renderToString } from 'react-dom/server'
 import { ResultsClient } from '@/app/results/ResultsClient'
 import { departureCities } from '@/lib/departureCities'
 import { destinations } from '@/lib/destinations'
+import { pickableDestinations } from '@/lib/catalogue'
 
 const city = departureCities[0]
 
@@ -123,7 +124,7 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    const hasSomeDestinationName = destinations.some(
+    const hasSomeDestinationName = pickableDestinations.some(
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)
@@ -142,7 +143,7 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    const hasSomeDestinationName = destinations.some(
+    const hasSomeDestinationName = pickableDestinations.some(
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)
@@ -161,7 +162,7 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    const hasSomeDestinationName = destinations.some(
+    const hasSomeDestinationName = pickableDestinations.some(
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)
