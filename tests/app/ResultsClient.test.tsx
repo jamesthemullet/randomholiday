@@ -1,8 +1,10 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
+import { renderToString } from 'react-dom/server'
 import { ResultsClient } from '@/app/results/ResultsClient'
 import { departureCities } from '@/lib/departureCities'
 import { destinations } from '@/lib/destinations'
+import { pickableDestinations } from '@/lib/catalogue'
 
 const city = departureCities[0]
 
@@ -35,6 +37,100 @@ describe('ResultsClient', () => {
     expect(screen.getAllByText(pinned.name).length).toBeGreaterThan(0)
   })
 
+  it('links Change my answers back to the homepage form with the current query', () => {
+    setParams({
+      originId: city.id,
+      budget: '1500',
+      distance: '5000',
+      nights: '7',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    expect(screen.getByRole('link', { name: 'Change my answers' })).toHaveAttribute(
+      'href',
+      `/?${mockSearchParams.toString()}`
+    )
+  })
+
+  it('shows the trip details on the postcard', () => {
+    const pinned = destinations.find((d) => d.id === 'barcelona-spain')!
+    setParams({
+      destination: pinned.id,
+      originId: city.id,
+      budget: '1500',
+      distance: '5000',
+      nights: '7',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    expect(screen.getByText('From').nextSibling).toHaveTextContent(city.name)
+    expect(screen.getByText('7 nights')).toBeInTheDocument()
+    expect(screen.getByText('Est. pp').nextSibling).toHaveTextContent(/^\$[\d,]+$/)
+  })
+
+  it('offers a Start over link to the homepage when the trip details are missing', () => {
+    setParams({})
+
+    render(<ResultsClient />)
+
+    expect(screen.getByRole('link', { name: 'Start over' })).toHaveAttribute('href', '/')
+  })
+
+  it('shows no destination when departing from a city without route data', () => {
+    setParams({
+      originId: 'paris-france',
+      budget: '1500',
+      distance: '5000',
+      nights: '7',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    expect(screen.getByRole('link', { name: 'Start over' })).toHaveAttribute('href', '/')
+  })
+
+  it('does not pick a random destination during server rendering, to avoid a hydration mismatch', () => {
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    const html = renderToString(<ResultsClient />)
+
+    expect(html).toContain('Picking your destination…')
+    expect(html).not.toContain('No destinations matched')
+  })
+
+  it('server-renders a pinned destination, since it involves no randomness', () => {
+    const pinned = destinations[destinations.length - 1]
+    setParams({
+      destination: pinned.id,
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    const html = renderToString(<ResultsClient />)
+
+    expect(html).toContain(pinned.name)
+    expect(html).not.toContain('Picking your destination…')
+  })
+
   it('falls back to a random recommendation when no destination param is present', () => {
     setParams({
       originId: city.id,
@@ -47,7 +143,7 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    const hasSomeDestinationName = destinations.some(
+    const hasSomeDestinationName = pickableDestinations.some(
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)
@@ -66,7 +162,7 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    const hasSomeDestinationName = destinations.some(
+    const hasSomeDestinationName = pickableDestinations.some(
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)
@@ -85,7 +181,7 @@ describe('ResultsClient', () => {
 
     render(<ResultsClient />)
 
-    const hasSomeDestinationName = destinations.some(
+    const hasSomeDestinationName = pickableDestinations.some(
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)

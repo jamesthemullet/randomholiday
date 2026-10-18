@@ -1,25 +1,31 @@
 'use client'
 
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useMemo, useState, useSyncExternalStore } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { destinations, TRAVEL_STYLES } from '@/lib/destinations'
+import { TRAVEL_STYLES } from '@/lib/destinations'
+import { pickableDestinations } from '@/lib/catalogue'
 import type { TravelStyle } from '@/lib/destinations'
-import { departureCities } from '@/lib/departureCities'
+import { supportedDepartureCities } from '@/lib/departureCities'
 import { getRecommendations } from '@/lib/recommendationEngine'
 import { scoreDestination } from '@/lib/scoringEngine'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
+import { calculateBudget } from '@/lib/budgetCalculator'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
+
+const subscribeToNothing = () => () => {}
+const getClientSnapshot = () => true
+const getServerSnapshot = () => false
 
 export function ResultsClient() {
   const searchParams = useSearchParams()
 
   const filterParams = useMemo(() => {
     const originId = searchParams.get('originId')
-    const city = departureCities.find((c) => c.id === originId)
+    const city = supportedDepartureCities.find((c) => c.id === originId)
     const budget = Number(searchParams.get('budget'))
     const maxDistanceKm = Number(searchParams.get('distance'))
     const nights = Number(searchParams.get('nights'))
@@ -35,6 +41,7 @@ export function ResultsClient() {
     if (!city || !budget || !maxDistanceKm || !nights || !groupSize) return null
 
     return {
+      originName: city.name,
       origin: city.coordinates,
       maxBudgetPerPerson: budget,
       maxDistanceKm,
@@ -47,24 +54,34 @@ export function ResultsClient() {
 
   const pinnedDestinationId = searchParams.get('destination')
 
-  const [recommendation, setRecommendation] = useState<DestinationScore | null>(() => {
-    if (!filterParams) return null
+  // The random pick must only happen in the browser: the server and client would each roll a
+  // different destination and fail hydration. This is false while hydrating, then true.
+  const isClient = useSyncExternalStore(subscribeToNothing, getClientSnapshot, getServerSnapshot)
 
-    const pinnedDestination = pinnedDestinationId
-      ? destinations.find((d) => d.id === pinnedDestinationId)
-      : undefined
+  // A pinned destination involves no randomness, so it can render on the server too.
+  const pinnedRecommendation = useMemo(() => {
+    if (!filterParams || !pinnedDestinationId) return null
+    const pinnedDestination = pickableDestinations.find((d) => d.id === pinnedDestinationId)
+    return pinnedDestination ? scoreDestination(pinnedDestination, filterParams) : null
+  }, [filterParams, pinnedDestinationId])
 
-    if (pinnedDestination) {
-      return scoreDestination(pinnedDestination, filterParams)
-    }
+  const initialPick = useMemo(() => {
+    if (!filterParams || pinnedRecommendation || !isClient) return null
+    return getRecommendations(pickableDestinations, filterParams).recommendations[0] ?? null
+  }, [filterParams, pinnedRecommendation, isClient])
 
-    return getRecommendations(destinations, filterParams).recommendations[0] ?? null
-  })
+  // undefined until the user shuffles; null means a shuffle found nothing.
+  const [shuffledPick, setShuffledPick] = useState<DestinationScore | null | undefined>(undefined)
+  const recommendation =
+    shuffledPick !== undefined ? shuffledPick : (pinnedRecommendation ?? initialPick)
+  const isPicking = shuffledPick === undefined && !pinnedRecommendation && !isClient
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
 
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
-    setRecommendation(getRecommendations(destinations, filterParams).recommendations[0] ?? null)
+    setShuffledPick(
+      getRecommendations(pickableDestinations, filterParams).recommendations[0] ?? null
+    )
   }, [filterParams])
 
   const handleSelect = useCallback(() => {
@@ -79,33 +96,59 @@ export function ResultsClient() {
     [filterParams, recommendation]
   )
 
+  const perPersonCost = useMemo(
+    () =>
+      filterParams && recommendation
+        ? calculateBudget({
+            destination: recommendation.destination,
+            distanceKm,
+            nights: filterParams.nights,
+            groupSize: filterParams.groupSize,
+          }).perPersonCost
+        : undefined,
+    [filterParams, recommendation, distanceKm]
+  )
+
   if (!filterParams) {
     return (
-      <main id="main-content" className={styles.wrapper}>
-        <p className={styles.empty}>We couldn&apos;t find your trip details. Please start over.</p>
-        <Link href="/discover" className={styles.link}>
-          Back to Discover
-        </Link>
+      <main id="main-content" className={styles.page}>
+        <div className={styles.wrapper}>
+          <p className={styles.empty}>
+            We couldn&apos;t find your trip details. Please start over.
+          </p>
+          <Link href="/" className={styles.link}>
+            Start over
+          </Link>
+        </div>
       </main>
     )
   }
 
   return (
-    <main id="main-content" className={styles.wrapper}>
-      <ResultsReveal
-        recommendation={recommendation}
-        onShuffle={handleShuffle}
-        onSelect={handleSelect}
-      />
-      <DestinationDetailModal
-        isOpen={isDetailModalOpen}
-        onClose={() => setIsDetailModalOpen(false)}
-        destination={recommendation?.destination ?? null}
-        distanceKm={distanceKm}
-        nights={filterParams.nights}
-        groupSize={filterParams.groupSize}
-        month={filterParams.travelMonth}
-      />
+    <main id="main-content" className={styles.page}>
+      <div className={styles.wrapper}>
+        <ResultsReveal
+          recommendation={recommendation}
+          isPicking={isPicking}
+          onShuffle={handleShuffle}
+          onSelect={handleSelect}
+          changeSearchHref={`/?${searchParams.toString()}`}
+          originName={filterParams.originName}
+          distanceKm={recommendation ? distanceKm : undefined}
+          nights={filterParams.nights}
+          perPersonCost={perPersonCost}
+        />
+        <DestinationDetailModal
+          isOpen={isDetailModalOpen}
+          onClose={() => setIsDetailModalOpen(false)}
+          destination={recommendation?.destination ?? null}
+          distanceKm={distanceKm}
+          nights={filterParams.nights}
+          groupSize={filterParams.groupSize}
+          month={filterParams.travelMonth}
+          originName={filterParams.originName}
+        />
+      </div>
     </main>
   )
 }

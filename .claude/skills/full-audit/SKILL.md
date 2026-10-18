@@ -119,7 +119,7 @@ already running it.
 
 ### 2. Accessibility
 
-- Automated pass per route (`/`, `/discover`, `/results`) via axe injected through
+- Automated pass per route (`/`, `/results`, `/pricing`) via axe injected through
   `claude-in-chrome`, or a Lighthouse a11y score
 - Manual: color contrast against `styles/tokens.css` custom properties (including dark mode via
   `[data-theme="dark"]`), focus order/visible focus states, labels on the wizard's slider/select/
@@ -145,8 +145,8 @@ already running it.
 
 ### 5. Responsive / UX
 
-- Screenshot `/`, `/discover`, and `/results` at ~375px and ~1280px via `claude-in-chrome`,
-  including the wizard mid-flow and the destination detail modal open, and compare against any
+- Screenshot `/`, `/results`, and `/pricing` at ~375px and ~1280px via `claude-in-chrome`,
+  including the homepage form with "More options" expanded and the destination detail modal open, and compare against any
   per-PR spot checks already done — look for anything that's drifted or was never verified
   holistically (e.g. interactions between components added in different phases)
 - Console errors on load/navigation (`read_console_messages`), broken links, dead-end states

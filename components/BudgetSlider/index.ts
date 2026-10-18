@@ -1,2 +1,2 @@
-export { BudgetSlider, formatBudget } from './BudgetSlider'
+export { BudgetSlider, formatBudget, getBudgetTier } from './BudgetSlider'
 export type { BudgetSliderProps } from './BudgetSlider'

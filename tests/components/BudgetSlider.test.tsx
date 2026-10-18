@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
-import { BudgetSlider, formatBudget } from '@/components/BudgetSlider'
+import { BudgetSlider, formatBudget, getBudgetTier } from '@/components/BudgetSlider'
 
 describe('BudgetSlider', () => {
   const defaultProps = {
@@ -27,7 +27,12 @@ describe('BudgetSlider', () => {
 
   it('appends a "+" suffix when the value is at the max', () => {
     render(<BudgetSlider {...defaultProps} value={5000} max={5000} />)
-    expect(screen.getByText('$5,000+')).toBeInTheDocument()
+    expect(screen.getByRole('slider')).toHaveAttribute('aria-valuetext', '$5,000+')
+  })
+
+  it('shows the budget tier beside the value', () => {
+    render(<BudgetSlider {...defaultProps} value={2500} />)
+    expect(screen.getByText('Treat yourself')).toBeInTheDocument()
   })
 
   it('uses default min, max, and step of 200, 5000, and 50', () => {
@@ -58,6 +63,21 @@ describe('BudgetSlider', () => {
     expect(
       screen.getByText('Covers flights, hotel, and daily spending for your whole trip')
     ).toBeInTheDocument()
+  })
+})
+
+describe('getBudgetTier', () => {
+  it.each([
+    [200, 'Backpacker'],
+    [799, 'Backpacker'],
+    [800, 'Comfy'],
+    [1999, 'Comfy'],
+    [2000, 'Treat yourself'],
+    [3499, 'Treat yourself'],
+    [3500, 'Champagne'],
+    [5000, 'Champagne'],
+  ])('names a %i budget %s', (value, tier) => {
+    expect(getBudgetTier(value)).toBe(tier)
   })
 })
 

@@ -14,7 +14,7 @@ features:
 
 - **Findability** — making the destination/results content easier to discover and revisit
   (shareable results, saved favourites, linkable destination pages).
-- **SEO** — the app is currently pure client-flow (`/discover` → `/results`) with no indexable
+- **SEO** — the app is currently pure client-flow (homepage search form → `/results`) with no indexable
   per-destination content; SEO plays here look like giving destinations their own crawlable URLs.
 - **Improving what already exists** — `lib/scoringEngine.ts`, `filterEngine.ts`,
   `recommendationEngine.ts`, `budgetCalculator.ts`, `proTier.ts` are all real, working logic —

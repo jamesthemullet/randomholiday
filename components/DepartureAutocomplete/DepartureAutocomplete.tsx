@@ -13,6 +13,8 @@ export interface DepartureAutocompleteProps {
   onSelect: (city: DepartureCity) => void
   placeholder?: string
   error?: string
+  /** The cities to choose from; defaults to those with route data. */
+  cities?: DepartureCity[]
 }
 
 export function DepartureAutocomplete({
@@ -23,11 +25,12 @@ export function DepartureAutocomplete({
   onSelect,
   placeholder,
   error,
+  cities,
 }: DepartureAutocompleteProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [highlightedIndex, setHighlightedIndex] = useState(-1)
 
-  const matches = useMemo(() => searchDepartureCities(value), [value])
+  const matches = useMemo(() => searchDepartureCities(value, cities), [value, cities])
   const listboxId = `${id}-listbox`
   const showListbox = isOpen && matches.length > 0
 

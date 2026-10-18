@@ -10,6 +10,7 @@ describe('DepartureAutocomplete', () => {
     value: '',
     onChange: vi.fn(),
     onSelect: vi.fn(),
+    cities: departureCities,
   }
 
   it('renders label and combobox input', () => {
@@ -30,6 +31,12 @@ describe('DepartureAutocomplete', () => {
     expect(screen.getByRole('listbox')).toBeInTheDocument()
     expect(screen.getByText('Paris')).toBeInTheDocument()
     expect(screen.getByRole('combobox')).toHaveAttribute('aria-expanded', 'true')
+  })
+
+  it('only offers cities with route data by default', () => {
+    render(<DepartureAutocomplete {...defaultProps} cities={undefined} value="Par" />)
+    fireEvent.focus(screen.getByRole('combobox'))
+    expect(screen.queryByText('Paris')).not.toBeInTheDocument()
   })
 
   it('shows a no-results message when nothing matches', () => {

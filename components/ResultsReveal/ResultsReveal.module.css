@@ -1,40 +1,450 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--space-6);
+  gap: var(--space-10);
 }
 
-.header {
+/* ── Departures board ─────────────────────────────────────────────────────── */
+
+.board {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.125rem;
+  padding: var(--space-6) 1.75rem 1.75rem;
+  background-color: var(--color-black);
+  border: 3px solid var(--color-grey-800);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.boardHeader {
+  display: flex;
   justify-content: space-between;
   gap: var(--space-4);
   flex-wrap: wrap;
-}
-
-.heading {
-  font-size: var(--text-2xl);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
   font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-  margin: 0;
+  letter-spacing: 0.14em;
+  color: var(--color-yellow);
 }
 
-.cardWrapper {
+.statusShuffling {
+  color: var(--color-yellow);
+}
+
+.statusBoarding {
+  color: var(--color-turquoise-light);
+}
+
+.statusCancelled {
+  color: var(--color-coral-light);
+}
+
+.flaps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 68px;
+}
+
+.flap {
   position: relative;
-  max-width: 24rem;
-  margin: 0 auto;
+  width: 46px;
+  height: 64px;
+  border-radius: 6px;
+  background-color: var(--color-grey-800);
+  color: var(--color-yellow);
+  font-family: var(--font-mono);
+  font-size: 2.25rem;
+  font-weight: var(--font-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.matchBadge {
+/* The hinge line across the middle of each flap */
+.flap::after {
+  content: '';
   position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background-color: var(--color-black);
 }
+
+.picking {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.1em;
+  color: var(--color-cream);
+  text-align: center;
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────────── */
 
 .empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-10);
+  background-color: var(--color-cream);
+  border-radius: 20px;
+  color: var(--color-ink);
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-weight: var(--font-normal);
+  font-size: var(--text-4xl);
+  color: var(--color-ink);
+}
+
+.emptyText {
+  font-size: var(--text-lg);
+}
+
+/* ── Postcard ─────────────────────────────────────────────────────────────── */
+
+.postcard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 14px;
+  overflow: hidden;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  transform: rotate(-1deg);
+  animation: postcardPop 600ms cubic-bezier(0.2, 1.4, 0.4, 1) var(--reveal-delay, 0ms) both;
+}
+
+@keyframes postcardPop {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotate(2deg) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-1deg) scale(1);
+  }
+}
+
+.photo {
+  position: relative;
+  flex: 1 1 380px;
+  min-height: 420px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+  color: var(--color-white);
+}
+
+.poster.yellow {
+  color: var(--color-ink);
+}
+
+/* Small text sits on a dark pill so it stays readable on every poster colour */
+.posterKicker,
+.posterNote {
+  align-self: flex-start;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: rgba(3, 45, 84, 0.7);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.posterKicker {
+  font-weight: var(--font-bold);
+  letter-spacing: 0.14em;
+}
+
+.posterName {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.25rem);
+  line-height: 0.95;
+  transform: rotate(-4deg);
+  text-shadow: 4px 4px 0 rgba(3, 45, 84, 0.35);
+  overflow-wrap: anywhere;
+}
+
+.details {
+  position: relative;
+  flex: 1 1 340px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: 1.75rem var(--space-6) var(--space-5);
+  border-left: 2px dashed rgba(3, 45, 84, 0.25);
+}
+
+.stamp {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 3px dashed var(--color-coral-contrast);
+  background-color: var(--color-white);
+  color: var(--color-coral-contrast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(12deg);
+}
+
+.stampScore {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stampLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  letter-spacing: 0.12em;
+}
+
+.kicker,
+.statLabel {
+  font-family: var(--font-mono);
+  font-weight: var(--font-bold);
+  color: var(--color-ocean);
+}
+
+.kicker {
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: var(--font-normal);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1;
+  color: var(--color-ink);
+  padding-right: 110px;
+  overflow-wrap: anywhere;
+}
+
+.country {
+  margin-top: calc(-1 * var(--space-2));
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-ocean);
+}
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.activity {
+  padding: 0.375rem var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.poster.coral {
+  background-color: var(--color-coral-dark);
+}
+
+.poster.turquoise {
+  background-color: var(--color-turquoise-contrast);
+}
+
+.poster.ocean {
+  background-color: var(--color-ocean);
+}
+
+.poster.yellow {
+  background-color: var(--color-yellow-dark);
+}
+
+.activity.yellow {
+  background-color: var(--color-yellow-light);
+}
+
+.activity.turquoise {
+  background-color: var(--color-pastel-turquoise);
+}
+
+.activity.coral {
+  background-color: var(--color-pastel-coral);
+}
+
+.activity.ocean {
+  background-color: var(--color-pastel-ocean);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.625rem;
+  padding: 0.875rem 0;
+  border-top: 2px dashed rgba(3, 45, 84, 0.25);
+  border-bottom: 2px dashed rgba(3, 45, 84, 0.25);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.statValue {
+  font-size: 1.0625rem;
+  font-weight: var(--font-bold);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: auto;
+}
+
+.primaryAction,
+.secondaryAction {
+  border: 3px solid var(--color-ink);
+  border-radius: var(--radius-full);
+  color: var(--color-ink);
+  font-weight: var(--font-bold);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primaryAction {
+  display: inline-block;
+  padding: var(--space-4) 1.875rem;
+  background-color: var(--color-yellow);
+  font-family: var(--font-display);
+  font-weight: var(--font-normal);
+  font-size: var(--text-xl);
+  box-shadow: 5px 5px 0 var(--color-ink);
+  transition: transform var(--transition-fast);
+}
+
+.primaryAction:hover {
+  color: var(--color-ink);
+  transform: translate(-2px, -2px);
+}
+
+.secondaryAction {
+  padding: 0.875rem var(--space-6);
+  background-color: var(--color-white);
   font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  text-align: center;
-  padding: var(--space-8) 0;
+}
+
+.secondaryAction:hover {
+  background-color: var(--color-yellow-light);
+}
+
+.changeLink {
+  font-size: 0.9375rem;
+  font-weight: var(--font-bold);
+  color: var(--color-ocean);
+  text-decoration: underline;
+}
+
+.changeLink:hover {
+  color: var(--color-ocean-light);
+}
+
+@media (max-width: 640px) {
+  .board {
+    padding: var(--space-4);
+  }
+
+  .flaps {
+    gap: 4px;
+    min-height: 48px;
+  }
+
+  .flap {
+    width: 30px;
+    height: 44px;
+    font-size: var(--text-2xl);
+  }
+
+  .photo {
+    min-height: 260px;
+  }
+
+  .details {
+    border-left: none;
+    border-top: 2px dashed rgba(3, 45, 84, 0.25);
+    padding: var(--space-6) var(--space-3) var(--space-3);
+  }
+
+  .stamp {
+    width: 84px;
+    height: 84px;
+  }
+
+  .stampScore {
+    font-size: var(--text-2xl);
+  }
+
+  .name {
+    padding-right: 90px;
+  }
+
+  .empty {
+    padding: var(--space-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .postcard {
+    animation: none;
+  }
+
+  .primaryAction,
+  .primaryAction:hover {
+    transition: none;
+    transform: none;
+  }
 }

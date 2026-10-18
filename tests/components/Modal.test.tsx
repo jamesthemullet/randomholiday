@@ -224,4 +224,24 @@ describe('Modal', () => {
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
     expect(document.activeElement).toBe(trigger)
   })
+
+  it('overlays the title and kicker on a media banner when one is given', () => {
+    render(
+      <Modal
+        isOpen
+        onClose={vi.fn()}
+        title="Bali, Indonesia"
+        kicker="GREAT IN MAY"
+        media={<div role="img" aria-label="Bali" />}
+        size="lg"
+      >
+        Body
+      </Modal>
+    )
+    const dialog = screen.getByRole('dialog', { name: 'Bali, Indonesia' })
+    expect(dialog.className).toMatch(/lg/)
+    expect(screen.getByRole('img', { name: 'Bali' })).toBeInTheDocument()
+    expect(screen.getByText('GREAT IN MAY')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Close dialog' })).toBeInTheDocument()
+  })
 })

@@ -5,67 +5,92 @@
 }
 
 .label {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-label);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
-}
-
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
 }
 
 .option {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-4);
-  background: var(--color-bg-card);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-1);
+  border-radius: 14px;
+  border: 2px solid var(--color-line);
+  color: var(--color-ink);
   cursor: pointer;
-  transition:
-    border-color var(--transition-fast),
-    background-color var(--transition-fast),
-    transform var(--transition-fast);
   font-family: inherit;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .option:hover {
-  border-color: var(--color-turquoise-light);
   transform: translateY(-2px);
 }
 
-.option:focus-visible {
-  outline: 2px solid var(--color-border-focus);
-  outline-offset: 2px;
+.beach {
+  background-color: var(--color-yellow-light);
+}
+
+.city {
+  background-color: var(--color-pastel-coral);
+}
+
+.adventure {
+  background-color: var(--color-pastel-turquoise);
+}
+
+.culture {
+  background-color: var(--color-pastel-ocean);
 }
 
 .selected {
-  border-color: var(--color-turquoise);
-  background: color-mix(in srgb, var(--color-turquoise) 12%, var(--color-bg-card));
+  box-shadow: 4px 4px 0 var(--color-line);
+  transform: rotate(-2deg) translateY(-3px);
+}
+
+.selected:nth-child(even) {
+  transform: rotate(2deg) translateY(-3px);
 }
 
 .icon {
-  font-size: var(--text-2xl);
+  font-size: 1.625rem;
   line-height: 1;
 }
 
 .optionLabel {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-primary);
+  font-size: 0.8125rem;
+  font-weight: var(--font-bold);
 }
 
 .hint {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 360px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option,
+  .option:hover,
+  .selected,
+  .selected:nth-child(even) {
+    transition: none;
+    transform: none;
+  }
 }

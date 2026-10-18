@@ -10,16 +10,12 @@ async function tabUntilFocused(page: Page, locator: Locator, maxPresses = 40): P
   throw new Error('Target element was never reached via Tab')
 }
 
-test('complete the full wizard and open/close the destination modal using only the keyboard', async ({
+test('complete the search form and open/close the destination modal using only the keyboard', async ({
   page,
 }) => {
   await page.goto('/')
 
-  await tabUntilFocused(page, page.getByRole('link', { name: /find my holiday/i }))
-  await page.keyboard.press('Enter')
-  await expect(page).toHaveURL(/\/discover/)
-
-  // Step 1: departure city — type, then pick the first match with the arrow keys.
+  // Departure city — type, then pick the first match with the arrow keys.
   // Scoped to the combobox role: focusing it opens a listbox sharing the same aria-label,
   // which would otherwise make `getByLabel` ambiguous.
   const departureInput = page.getByRole('combobox', { name: /where are you flying from/i })
@@ -28,37 +24,33 @@ test('complete the full wizard and open/close the destination modal using only t
   await page.keyboard.press('ArrowDown')
   await page.keyboard.press('Enter')
 
-  await tabUntilFocused(page, page.getByRole('button', { name: /^next$/i }))
+  // Budget and trip length defaults are fine. Open "More options" from the keyboard.
+  const moreOptions = page.getByRole('button', { name: /more options/i })
+  await tabUntilFocused(page, moreOptions)
   await page.keyboard.press('Enter')
+  await expect(moreOptions).toHaveAttribute('aria-expanded', 'true')
 
-  // Step 2: budget slider — default value is fine, just move on
-  await tabUntilFocused(page, page.getByRole('button', { name: /^next$/i }))
+  // Travel month
+  const june = page.getByRole('button', { name: 'June' })
+  await tabUntilFocused(page, june)
   await page.keyboard.press('Enter')
+  await expect(june).toHaveAttribute('aria-pressed', 'true')
 
-  // Step 3: travel timing — a focused, closed <select> moves to the next option on ArrowDown
-  const monthSelect = page.getByLabel(/roughly when do you want to go/i)
-  await tabUntilFocused(page, monthSelect)
-  await page.keyboard.press('ArrowDown')
-  await tabUntilFocused(page, page.getByRole('button', { name: /^next$/i }))
-  await page.keyboard.press('Enter')
-
-  // Step 4: travel style — toggle "Beach" on with the keyboard
+  // Travel style — toggle "Beach" on with the keyboard, which must not submit the form
   const beachOption = page.getByRole('button', { name: 'Beach' })
   await tabUntilFocused(page, beachOption)
   await page.keyboard.press('Enter')
   await expect(beachOption).toHaveAttribute('aria-pressed', 'true')
-  await tabUntilFocused(page, page.getByRole('button', { name: /^next$/i }))
-  await page.keyboard.press('Enter')
+  await expect(page).toHaveURL(/\/$/)
 
-  // Step 5: distance + group size — defaults are fine, submit the wizard
-  const submitButton = page.getByRole('button', { name: /reveal my holiday/i })
+  const submitButton = page.getByRole('button', { name: 'Surprise me' })
   await tabUntilFocused(page, submitButton)
   await page.keyboard.press('Enter')
 
   await expect(page).toHaveURL(/\/results\?/)
-  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeAttached()
 
-  const selectButton = page.getByRole('button', { name: /select destination/i }).first()
+  const selectButton = page.getByRole('button', { name: /see prices & book/i })
   await tabUntilFocused(page, selectButton)
   await page.keyboard.press('Enter')
 

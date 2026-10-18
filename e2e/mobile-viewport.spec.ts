@@ -9,7 +9,6 @@ test.use({ viewport: { width: 360, height: 740 } })
 
 const pages = [
   { name: 'home', path: '/' },
-  { name: 'discover', path: '/discover' },
   { name: 'results', path: resultsUrl },
   { name: 'pricing', path: '/pricing' },
 ]
@@ -25,19 +24,12 @@ for (const { name, path } of pages) {
   })
 }
 
-test('the discover → results flow works on a narrow viewport', async ({ page }) => {
+test('the homepage form → results flow works on a narrow viewport', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('link', { name: /find my holiday/i }).click()
-  await expect(page).toHaveURL(/\/discover/)
 
-  await page.getByLabel(/where are you flying from/i).fill('London')
+  await page.getByRole('combobox', { name: /where are you flying from/i }).fill('London')
   await page.getByRole('option', { name: /london/i }).click()
-  await page.getByRole('button', { name: /^next$/i }).click()
-  await page.getByRole('button', { name: /^next$/i }).click()
-  await page.getByLabel(/roughly when do you want to go/i).selectOption('6')
-  await page.getByRole('button', { name: /^next$/i }).click()
-  await page.getByRole('button', { name: /^next$/i }).click()
-  await page.getByRole('button', { name: /reveal my holiday/i }).click()
+  await page.getByRole('button', { name: 'Surprise me' }).click()
 
   await expect(page).toHaveURL(/\/results\?/)
   await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
@@ -46,11 +38,8 @@ test('the discover → results flow works on a narrow viewport', async ({ page }
 test('the destination detail modal is usable on a narrow viewport', async ({ page }) => {
   await page.goto(resultsUrl)
 
-  const selectButton = page.getByRole('button', { name: /select destination/i }).first()
-  await selectButton.waitFor({ state: 'visible' })
-  // The card's 3D flip transform overlaps both faces in the hit-testing tree, which confuses
-  // Playwright's pointer-coordinate click; dispatch the click event on the element directly.
-  await selectButton.dispatchEvent('click')
+  const selectButton = page.getByRole('button', { name: /see prices & book/i }).first()
+  await selectButton.click()
 
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()

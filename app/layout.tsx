@@ -1,20 +1,27 @@
 import type { Metadata } from 'next'
-import { Poppins, Inter } from 'next/font/google'
+import { DM_Sans, Shrikhand, Space_Mono } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { RouteAnnouncer } from '@/components/RouteAnnouncer'
 import '@/styles/globals.css'
 
-const poppins = Poppins({
+const shrikhand = Shrikhand({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
+  weight: '400',
+  variable: '--font-shrikhand',
   display: 'swap',
 })
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-inter',
+  weight: ['400', '500', '700'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
   display: 'swap',
 })
 
@@ -47,7 +54,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body
+        className={`${shrikhand.variable} ${dmSans.variable} ${spaceMono.variable}`}
+        suppressHydrationWarning
+      >
         <a href="#main-content" className="skip-to-main">
           Skip to main content
         </a>

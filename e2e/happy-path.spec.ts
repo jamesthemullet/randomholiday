@@ -1,30 +1,19 @@
 import { test, expect } from '@playwright/test'
 
-test('full happy path: landing → discover wizard → results → destination detail', async ({
+test('full happy path: homepage form → results → destination detail → change answers', async ({
   page,
 }) => {
   await page.goto('/')
-  await page.getByRole('link', { name: /find my holiday/i }).click()
-  await expect(page).toHaveURL(/\/discover/)
 
-  // Step 1: departure city
-  await page.getByLabel(/where are you flying from/i).fill('London')
+  await page.getByRole('combobox', { name: /where are you flying from/i }).fill('London')
   await page.getByRole('option', { name: /london/i }).click()
-  await page.getByRole('button', { name: /^next$/i }).click()
 
-  // Step 2: budget (default value is fine for this flow)
-  await page.getByRole('button', { name: /^next$/i }).click()
-
-  // Step 3: travel timing
-  await page.getByLabel(/roughly when do you want to go/i).selectOption('6')
-  await page.getByRole('button', { name: /^next$/i }).click()
-
-  // Step 4: travel style
+  // Optional filters live under "More options"
+  await page.getByRole('button', { name: /more options/i }).click()
+  await page.getByRole('button', { name: 'June' }).click()
   await page.getByRole('button', { name: 'Beach' }).click()
-  await page.getByRole('button', { name: /^next$/i }).click()
 
-  // Step 5: max distance + group size (defaults are fine)
-  await page.getByRole('button', { name: /reveal my holiday/i }).click()
+  await page.getByRole('button', { name: 'Surprise me' }).click()
 
   await expect(page).toHaveURL(/\/results\?/)
   const resultsUrl = new URL(page.url())
@@ -32,13 +21,14 @@ test('full happy path: landing → discover wizard → results → destination d
   expect(resultsUrl.searchParams.get('month')).toBe('6')
   expect(resultsUrl.searchParams.get('styles')).toBe('beach')
 
-  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeAttached()
 
-  const selectButton = page.getByRole('button', { name: /select destination/i }).first()
-  await selectButton.waitFor({ state: 'visible' })
-  // The card's 3D flip transform overlaps both faces in the hit-testing tree, which confuses
-  // Playwright's pointer-coordinate click; dispatch the click event on the element directly.
-  await selectButton.dispatchEvent('click')
+  // Guards against the postcard collapsing to zero width, which `toBeVisible` doesn't catch.
+  // Polled because the results tree can be re-rendered right after hydration.
+  const postcard = page.getByRole('article')
+  await expect.poll(async () => (await postcard.boundingBox())?.width ?? 0).toBeGreaterThan(200)
+
+  await page.getByRole('button', { name: /see prices & book/i }).click()
 
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()
@@ -49,7 +39,20 @@ test('full happy path: landing → discover wizard → results → destination d
   await page.keyboard.press('Escape')
   await expect(dialog).not.toBeVisible()
 
-  await page.getByRole('button', { name: /shuffle/i }).click()
-  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
-  await expect(page.getByRole('button', { name: /select destination/i }).first()).toBeVisible()
+  await page.getByRole('button', { name: 'Spin again' }).click()
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeAttached()
+  await expect(page.getByRole('button', { name: /see prices & book/i })).toBeVisible()
+
+  // "Change my answers" reopens the homepage form with the previous answers filled in
+  await page.getByRole('link', { name: 'Change my answers' }).click()
+  await expect(page).toHaveURL(/\/\?/)
+  await expect(page.getByRole('combobox', { name: /where are you flying from/i })).toHaveValue(
+    'London'
+  )
+  await expect(page.getByRole('button', { name: /more options/i })).toHaveAttribute(
+    'aria-expanded',
+    'true'
+  )
+  await expect(page.getByRole('button', { name: 'June' })).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByRole('button', { name: 'Beach' })).toHaveAttribute('aria-pressed', 'true')
 })
