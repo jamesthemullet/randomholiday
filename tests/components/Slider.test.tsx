@@ -65,4 +65,9 @@ describe('Slider', () => {
     expect(slider).toHaveAttribute('min', '10')
     expect(slider).toHaveAttribute('max', '500')
   })
+
+  it('renders an adornment beside the value', () => {
+    render(<Slider {...defaultProps} adornment={<span>Comfy</span>} />)
+    expect(screen.getByText('Comfy')).toBeInTheDocument()
+  })
 })

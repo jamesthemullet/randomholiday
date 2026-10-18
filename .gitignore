@@ -48,3 +48,13 @@ next-env.d.ts
 # IDE
 .idea
 .vscode
+
+# cloudflare / opennext
+/.open-next/
+/.wrangler/
+.dev.vars*
+!.dev.vars.example
+
+# yarn 4 (keep the pinned release committed)
+.yarn/*
+!.yarn/releases

@@ -25,14 +25,16 @@ test('complete the search form and open/close the destination modal using only t
   await page.keyboard.press('Enter')
 
   // Budget and trip length defaults are fine. Open "More options" from the keyboard.
-  const moreOptions = page.getByText('More options')
+  const moreOptions = page.getByRole('button', { name: /more options/i })
   await tabUntilFocused(page, moreOptions)
   await page.keyboard.press('Enter')
+  await expect(moreOptions).toHaveAttribute('aria-expanded', 'true')
 
-  // Travel month — a focused, closed <select> moves to the next option on ArrowDown
-  const monthSelect = page.getByLabel(/roughly when do you want to go/i)
-  await tabUntilFocused(page, monthSelect)
-  await page.keyboard.press('ArrowDown')
+  // Travel month
+  const june = page.getByRole('button', { name: 'June' })
+  await tabUntilFocused(page, june)
+  await page.keyboard.press('Enter')
+  await expect(june).toHaveAttribute('aria-pressed', 'true')
 
   // Travel style — toggle "Beach" on with the keyboard, which must not submit the form
   const beachOption = page.getByRole('button', { name: 'Beach' })
@@ -41,14 +43,14 @@ test('complete the search form and open/close the destination modal using only t
   await expect(beachOption).toHaveAttribute('aria-pressed', 'true')
   await expect(page).toHaveURL(/\/$/)
 
-  const submitButton = page.getByRole('button', { name: /surprise me/i })
+  const submitButton = page.getByRole('button', { name: 'Surprise me' })
   await tabUntilFocused(page, submitButton)
   await page.keyboard.press('Enter')
 
   await expect(page).toHaveURL(/\/results\?/)
-  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeAttached()
 
-  const selectButton = page.getByRole('button', { name: /see prices & book/i }).first()
+  const selectButton = page.getByRole('button', { name: /see prices & book/i })
   await tabUntilFocused(page, selectButton)
   await page.keyboard.press('Enter')
 

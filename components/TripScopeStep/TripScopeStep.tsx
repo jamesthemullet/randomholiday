@@ -1,6 +1,5 @@
 import React from 'react'
 import { Slider } from '@/components/Slider'
-import { Button } from '@/components/Button'
 import styles from './TripScopeStep.module.css'
 
 export interface TripScopeStepProps {
@@ -50,10 +49,9 @@ export function TripScopeStep({
           Group size
         </span>
         <div className={styles.stepper} role="group" aria-labelledby="group-size-label">
-          <Button
+          <button
             type="button"
-            variant="secondary"
-            size="sm"
+            className={styles.stepButton}
             aria-label="Decrease group size"
             disabled={!canDecrease}
             onClick={() =>
@@ -61,14 +59,13 @@ export function TripScopeStep({
             }
           >
             −
-          </Button>
+          </button>
           <output className={styles.count} aria-live="polite">
             {groupSize} {groupSize === 1 ? 'traveller' : 'travellers'}
           </output>
-          <Button
+          <button
             type="button"
-            variant="secondary"
-            size="sm"
+            className={styles.stepButton}
             aria-label="Increase group size"
             disabled={!canIncrease}
             onClick={() =>
@@ -76,7 +73,7 @@ export function TripScopeStep({
             }
           >
             +
-          </Button>
+          </button>
         </div>
       </div>
     </div>

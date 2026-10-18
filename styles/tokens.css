@@ -9,12 +9,18 @@
   --color-coral: #ff6b6b;
   --color-coral-light: #ff9090;
   --color-coral-dark: #e84848;
+  /* Darker than --color-coral-dark: needed to clear WCAG AA 4.5:1 as small text on white */
+  --color-coral-contrast: #c53030;
   --color-yellow: #ffd166;
   --color-yellow-light: #ffe09a;
   --color-yellow-dark: #e6b84d;
   --color-ocean: #06427c;
   --color-ocean-light: #0a5fa8;
   --color-ocean-dark: #032d54;
+  --color-cream: #fff4e0;
+  --color-pastel-coral: #ffc9c9;
+  --color-pastel-turquoise: #b8f0ef;
+  --color-pastel-ocean: #d8e6f5;
   --color-success-bg: #d1fae5;
   --color-success-text: #065f46;
   --color-danger-bg: #fee2e2;
@@ -34,11 +40,11 @@
   --color-grey-900: #111827;
   --color-black: #0a0a0a;
 
-  /* Semantic colours (light mode) */
-  --color-bg-primary: var(--color-white);
+  /* Semantic colours */
+  --color-bg-primary: var(--color-cream);
   --color-bg-secondary: var(--color-off-white);
   --color-bg-card: var(--color-white);
-  --color-text-primary: var(--color-grey-900);
+  --color-text-primary: var(--color-ocean-dark);
   --color-text-secondary: var(--color-grey-600);
   --color-text-muted: var(--color-grey-400);
   --color-text-inverse: var(--color-white);
@@ -49,6 +55,14 @@
   --color-accent-tertiary: var(--color-yellow);
   --color-link: var(--color-ocean);
   --color-link-hover: var(--color-ocean-light);
+  /* Text on yellow/pastel surfaces */
+  --color-ink: var(--color-ocean-dark);
+  /* Chunky outlines and offset "sticker" shadows */
+  --color-line: var(--color-ocean-dark);
+  /* Small monospace labels */
+  --color-label: var(--color-ocean);
+  /* Big display numbers (large text, so 3:1 contrast is enough) */
+  --color-accent-hot: var(--color-coral-dark);
 
   /* Spacing scale (rem) */
   --space-1: 0.25rem;
@@ -66,9 +80,10 @@
   --space-32: 8rem;
 
   /* Typography */
-  --font-heading: var(--font-poppins, 'Poppins'), system-ui, sans-serif;
-  --font-body: var(--font-inter, 'Inter'), system-ui, sans-serif;
-  --font-mono: 'Fira Code', 'Courier New', monospace;
+  --font-display: var(--font-shrikhand, 'Shrikhand'), cursive;
+  --font-heading: var(--font-dm-sans, 'DM Sans'), system-ui, sans-serif;
+  --font-body: var(--font-dm-sans, 'DM Sans'), system-ui, sans-serif;
+  --font-mono: var(--font-space-mono, 'Space Mono'), 'Courier New', monospace;
 
   /* Font sizes */
   --text-xs: 0.75rem;
@@ -111,6 +126,9 @@
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
   --shadow-card: 0 4px 24px rgba(0, 201, 200, 0.12);
   --shadow-card-hover: 0 8px 32px rgba(0, 201, 200, 0.2);
+  --shadow-pop-sm: 5px 5px 0 var(--color-line);
+  --shadow-pop: 6px 6px 0 var(--color-line);
+  --shadow-pop-lg: 10px 10px 0 var(--color-line);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -136,22 +154,4 @@
   /* Container */
   --container-max: 1200px;
   --container-padding: var(--space-4);
-}
-
-/* Dark mode overrides */
-[data-theme='dark'] {
-  --color-bg-primary: var(--color-grey-900);
-  --color-bg-secondary: var(--color-grey-800);
-  --color-bg-card: var(--color-grey-800);
-  --color-text-primary: var(--color-off-white);
-  --color-text-secondary: var(--color-grey-300);
-  --color-text-muted: var(--color-grey-500);
-  --color-text-inverse: var(--color-grey-900);
-  --color-border: var(--color-grey-700);
-  --color-border-focus: var(--color-turquoise-light);
-  --color-turquoise-contrast: var(--color-turquoise-light);
-  --color-link: var(--color-turquoise-light);
-  --color-link-hover: var(--color-turquoise);
-  --shadow-card: 0 4px 24px rgba(0, 201, 200, 0.08);
-  --shadow-card-hover: 0 8px 32px rgba(0, 201, 200, 0.16);
 }

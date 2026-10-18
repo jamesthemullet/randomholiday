@@ -40,6 +40,20 @@ export function getNextMonth(now: Date = new Date()): number {
   return ((now.getMonth() + 1) % 12) + 1
 }
 
+/** The search used when nothing has been chosen: London, next month, a week for two. */
+export function getDefaultTripQuery(now: Date = new Date()): TripQuery {
+  return {
+    // London is the only city with route data so far.
+    city: supportedDepartureCities[0],
+    budget: 1500,
+    month: getNextMonth(now),
+    nights: 7,
+    travelStyles: [],
+    maxDistance: 10000,
+    groupSize: 2,
+  }
+}
+
 export function buildResultsQuery(params: TripQuery): string {
   const query = new URLSearchParams({
     originId: params.city.id,

@@ -1,4 +1,5 @@
 import { Hero } from '@/components/Hero'
+import { Footer } from '@/components/Footer'
 import { parseTripQuery } from '@/lib/tripQuery'
 
 interface HomePageProps {
@@ -14,12 +15,15 @@ function toURLSearchParams(params: Record<string, string | string[] | undefined>
 }
 
 export default async function HomePage({ searchParams }: HomePageProps) {
-  // Prefills the form when arriving from the results page's "Change search" link.
+  // Prefills the form when arriving from the results page's "Change my answers" link.
   const initialValues = parseTripQuery(toURLSearchParams(await searchParams))
 
   return (
-    <main id="main-content">
-      <Hero initialValues={initialValues} />
-    </main>
+    <>
+      <main id="main-content">
+        <Hero initialValues={initialValues} />
+      </main>
+      <Footer />
+    </>
   )
 }

@@ -11,9 +11,23 @@ export interface ModalProps {
   onClose: () => void
   title: string
   children: React.ReactNode
+  /** A banner image (or stand-in) shown behind the title, which then overlays it. */
+  media?: React.ReactNode
+  /** A short label shown just above the title. */
+  kicker?: React.ReactNode
+  /** "lg" fits a two-column layout. */
+  size?: 'md' | 'lg'
 }
 
-export function Modal({ isOpen, onClose, title, children }: ModalProps) {
+export function Modal({
+  isOpen,
+  onClose,
+  title,
+  children,
+  media,
+  kicker,
+  size = 'md',
+}: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
   const titleId = useId()
 
@@ -59,6 +73,32 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 
   if (!isOpen) return null
 
+  const closeButton = (
+    <button type="button" onClick={onClose} className={styles.close} aria-label="Close dialog">
+      <svg
+        aria-hidden="true"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      >
+        <path d="M2 2L14 14M14 2L2 14" />
+      </svg>
+    </button>
+  )
+
+  const titleBlock = (
+    <div className={styles.titleBlock}>
+      {kicker && <span className={styles.kicker}>{kicker}</span>}
+      <h2 id={titleId} className={styles.title}>
+        {title}
+      </h2>
+    </div>
+  )
+
   return (
     <div className={styles.root}>
       <div className={styles.backdrop} onClick={onClose} aria-hidden="true" />
@@ -67,32 +107,21 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className={styles.modal}
+        className={`${styles.modal} ${size === 'lg' ? styles.lg : ''}`}
       >
-        <div className={styles.header}>
-          <h2 id={titleId} className={styles.title}>
-            {title}
-          </h2>
-          <button
-            type="button"
-            onClick={onClose}
-            className={styles.close}
-            aria-label="Close dialog"
-          >
-            <svg
-              aria-hidden="true"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            >
-              <path d="M2 2L14 14M14 2L2 14" />
-            </svg>
-          </button>
-        </div>
+        {media ? (
+          <div className={styles.banner}>
+            {media}
+            <div className={styles.scrim} aria-hidden="true" />
+            {titleBlock}
+            {closeButton}
+          </div>
+        ) : (
+          <div className={styles.header}>
+            {titleBlock}
+            {closeButton}
+          </div>
+        )}
         <div className={styles.body}>{children}</div>
       </div>
     </div>

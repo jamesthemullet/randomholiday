@@ -10,11 +10,11 @@ export interface Coordinates {
 }
 
 export interface EstimatedCosts {
-  /** Round-trip flight estimate in USD per person from a typical European hub */
+  /** Round-trip flight estimate in GBP per person from a typical European hub */
   flightFromEurope: number
-  /** Average hotel cost per night in USD */
+  /** Average hotel cost per night in GBP */
   hotelPerNight: number
-  /** Daily spending per person in USD (food, transport, activities) */
+  /** Daily spending per person in GBP (food, transport, activities) */
   dailySpending: number
 }
 

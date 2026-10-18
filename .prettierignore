@@ -2,3 +2,6 @@
 node_modules
 coverage
 playwright-report
+.open-next
+.wrangler
+.yarn
