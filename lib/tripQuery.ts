@@ -1,4 +1,4 @@
-import { departureCities } from './departureCities'
+import { supportedDepartureCities } from './departureCities'
 import type { DepartureCity } from './departureCities'
 import { TRAVEL_STYLES } from './destinations'
 import type { TravelStyle } from './destinations'
@@ -67,7 +67,7 @@ function parsePositiveParam(value: string | null): number | undefined {
 export function parseTripQuery(params: URLSearchParams): TripQueryInitialValues {
   const values: TripQueryInitialValues = {}
 
-  const city = departureCities.find((c) => c.id === params.get('originId'))
+  const city = supportedDepartureCities.find((c) => c.id === params.get('originId'))
   if (city) values.city = city
 
   const budget = parsePositiveParam(params.get('budget'))

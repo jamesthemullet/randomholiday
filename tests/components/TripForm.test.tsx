@@ -40,32 +40,36 @@ describe('TripForm', () => {
     vi.useRealTimers()
   })
 
-  it('disables Surprise me until a departure city is selected', () => {
+  it('starts with London chosen, so Surprise me works straight away', () => {
     render(<TripForm />)
-    const submit = screen.getByRole('button', { name: 'Surprise me' })
-    expect(submit).toBeDisabled()
-    selectDepartureCity('London')
-    expect(submit).toBeEnabled()
+    expect(screen.getByRole('combobox', { name: 'Where are you flying from?' })).toHaveValue(
+      'London'
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Surprise me' }))
+    expect(submittedParams().get('originId')).toBe('london-uk')
   })
 
   it('re-disables Surprise me when the city text is edited after selecting', () => {
     render(<TripForm />)
-    selectDepartureCity('London')
     fireEvent.change(screen.getByRole('combobox', { name: 'Where are you flying from?' }), {
       target: { value: 'Lond' },
     })
     expect(screen.getByRole('button', { name: 'Surprise me' })).toBeDisabled()
+    selectDepartureCity('London')
+    expect(screen.getByRole('button', { name: 'Surprise me' })).toBeEnabled()
   })
 
   it('does not navigate when submitted without a city', () => {
     render(<TripForm />)
+    fireEvent.change(screen.getByRole('combobox', { name: 'Where are you flying from?' }), {
+      target: { value: '' },
+    })
     fireEvent.submit(screen.getByRole('form', { name: 'Find your holiday' }))
     expect(push).not.toHaveBeenCalled()
   })
 
   it('submits with defaults, using next month as the travel month', () => {
     render(<TripForm />)
-    selectDepartureCity('London')
     fireEvent.click(screen.getByRole('button', { name: 'Surprise me' }))
 
     const params = submittedParams()
@@ -80,7 +84,6 @@ describe('TripForm', () => {
 
   it('submits when the form is submitted directly (e.g. pressing Enter)', () => {
     render(<TripForm />)
-    selectDepartureCity('London')
     fireEvent.submit(screen.getByRole('form', { name: 'Find your holiday' }))
     expect(submittedParams().get('originId')).toBe('london-uk')
   })
@@ -92,7 +95,6 @@ describe('TripForm', () => {
 
   it('includes values chosen under More options', () => {
     render(<TripForm />)
-    selectDepartureCity('London')
     fireEvent.change(screen.getByLabelText('Roughly when do you want to go?'), {
       target: { value: '6' },
     })
@@ -110,7 +112,6 @@ describe('TripForm', () => {
 
   it('does not submit when toggling styles or the group stepper', () => {
     render(<TripForm />)
-    selectDepartureCity('London')
     fireEvent.click(screen.getByRole('button', { name: /beach/i }))
     fireEvent.click(screen.getByRole('button', { name: 'Increase group size' }))
     expect(push).not.toHaveBeenCalled()

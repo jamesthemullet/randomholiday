@@ -1,5 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { departureCities, searchDepartureCities } from '@/lib/departureCities'
+import {
+  departureCities,
+  searchDepartureCities,
+  supportedDepartureCities,
+} from '@/lib/departureCities'
 
 describe('departureCities database', () => {
   it('has a set of major departure cities', () => {
@@ -21,26 +25,37 @@ describe('departureCities database', () => {
   })
 })
 
+describe('supportedDepartureCities', () => {
+  it('is just London until other cities have route data', () => {
+    expect(supportedDepartureCities.map((c) => c.id)).toEqual(['london-uk'])
+  })
+})
+
 describe('searchDepartureCities', () => {
+  it('searches only supported cities by default', () => {
+    expect(searchDepartureCities('')).toEqual(supportedDepartureCities)
+    expect(searchDepartureCities('Paris')).toEqual([])
+  })
+
   it('returns all cities for an empty query', () => {
-    expect(searchDepartureCities('')).toEqual(departureCities)
+    expect(searchDepartureCities('', departureCities)).toEqual(departureCities)
   })
 
   it('returns all cities for a whitespace-only query', () => {
-    expect(searchDepartureCities('   ')).toEqual(departureCities)
+    expect(searchDepartureCities('   ', departureCities)).toEqual(departureCities)
   })
 
   it('matches by city name, case-insensitively', () => {
-    const results = searchDepartureCities('lon')
+    const results = searchDepartureCities('lon', departureCities)
     expect(results.some((c) => c.name === 'London')).toBe(true)
   })
 
   it('matches by country, case-insensitively', () => {
-    const results = searchDepartureCities('FRANCE')
+    const results = searchDepartureCities('FRANCE', departureCities)
     expect(results.some((c) => c.name === 'Paris')).toBe(true)
   })
 
   it('returns an empty array when nothing matches', () => {
-    expect(searchDepartureCities('zzzznotacity')).toEqual([])
+    expect(searchDepartureCities('zzzznotacity', departureCities)).toEqual([])
   })
 })
