@@ -5,7 +5,7 @@ export interface ShareableResult {
   destinationId: string
   /** id of the departure city used to produce the result */
   originId: string
-  /** Maximum total cost per person in USD, as entered by the user */
+  /** Maximum total cost per person in GBP, as entered by the user */
   maxBudgetPerPerson: number
   /** Maximum great-circle distance from origin in kilometres */
   maxDistanceKm: number

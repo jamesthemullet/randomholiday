@@ -138,7 +138,7 @@ describe('ResultsReveal', () => {
     expect(screen.getByText('From').nextSibling).toHaveTextContent('London')
     expect(screen.getByText('12,340 km')).toBeInTheDocument()
     expect(screen.getByText('1 night')).toBeInTheDocument()
-    expect(screen.getByText('$1,234')).toBeInTheDocument()
+    expect(screen.getByText('£1,234')).toBeInTheDocument()
   })
 
   it('pluralises the trip length', () => {
