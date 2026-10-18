@@ -12,7 +12,9 @@ features.
 ## Requirements
 
 - Node.js 22+
-- [Yarn](https://yarnpkg.com/) 1.x (Classic)
+- [Yarn](https://yarnpkg.com/) 4 — the release is committed in `.yarn/releases` and pinned via
+  `yarnPath`, so any globally installed `yarn` (including 1.x) runs the right version
+  automatically. No corepack needed.
 
 This project only uses Yarn — there is no `package-lock.json`, and `npm`/`npx` commands are not
 supported.
