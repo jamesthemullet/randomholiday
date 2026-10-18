@@ -69,6 +69,9 @@ the app is fully usable without any of them configured.
 | `yarn e2e`           | Run the Playwright end-to-end suite (requires `yarn build` first, or run against `yarn dev`) |
 | `yarn e2e:ui`        | Run Playwright in UI mode                                                                    |
 | `yarn lighthouse`    | Run the Lighthouse CI checks against a production build                                      |
+| `yarn preview`       | Build for Cloudflare Workers and serve it locally in the Workers runtime                     |
+| `yarn deploy`        | Build for Cloudflare Workers and deploy it                                                   |
+| `yarn cf-typegen`    | Regenerate `cloudflare-env.d.ts` types for Worker bindings                                   |
 
 ## Project structure
 
@@ -93,20 +96,30 @@ Native app.
 - **Accessibility**: axe-core checks run both in the Vitest suite and as part of the Playwright
   e2e suite, targeting WCAG 2.1 AA.
 
-## Deployment (Vercel)
+## Deployment (Cloudflare Workers)
 
-1. Push this repository to GitHub and [import it into Vercel](https://vercel.com/new).
-2. Set the framework preset to **Next.js** (auto-detected).
-3. Build settings (install/build commands, framework) are pre-configured in [`vercel.json`](./vercel.json),
-   and the minimum Node.js version is set via the `engines` field in `package.json` — no manual setup
-   is needed.
-4. Add the environment variables you need from the table above in the Vercel project's
-   **Settings → Environment Variables**, for each environment (Production/Preview/Development)
-   you want them in.
-5. Set `NEXT_PUBLIC_APP_URL` to your deployed domain (e.g. `https://randomholiday.app`) so
-   OpenGraph tags and the sitemap generate absolute URLs correctly.
-6. Deploy. Every push to `main` deploys to production; every pull request gets its own preview
-   deployment.
+The site runs on Cloudflare Workers via the [OpenNext adapter](https://opennext.js.org/cloudflare)
+(`@opennextjs/cloudflare`). Worker settings live in [`wrangler.jsonc`](./wrangler.jsonc) and
+adapter settings in [`open-next.config.ts`](./open-next.config.ts).
+
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Import a repository** and pick
+   this repo. Set the build command to `yarn opennextjs-cloudflare build` and the deploy command
+   to `yarn wrangler deploy`. Every push to `main` then deploys to production.
+2. Add the server secrets (`STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRO_PRICE_ID`,
+   `OPENWEATHER_API_KEY`) under the Worker's **Settings → Variables and Secrets**, or with
+   `yarn wrangler secret put <NAME>`.
+3. Add the `NEXT_PUBLIC_*` variables under **Settings → Build → Variables** — they are inlined at
+   build time, so they must be present where the build runs. Set `NEXT_PUBLIC_APP_URL` to your
+   deployed domain (e.g. `https://randomholiday.app`) so OpenGraph tags and the sitemap generate
+   absolute URLs correctly.
+4. Attach your domain under the Worker's **Settings → Domains & Routes**, then point the Stripe
+   webhook at `https://<your-domain>/api/webhooks/stripe`.
+
+To test locally in the Workers runtime, copy `.dev.vars.example` to `.dev.vars`, fill it in and
+run `yarn preview`. On Windows, if preview fails with "Couldn't find the binary wrangler", run
+`yarn opennextjs-cloudflare build && yarn wrangler dev` instead.
+
+`vercel.json` is kept so the app can still be deployed to Vercel unchanged if needed.
 
 Continuous integration (`.github/workflows/ci.yml`) runs lint, typecheck, unit tests, e2e tests,
 and Lighthouse CI on every pull request targeting `main`.

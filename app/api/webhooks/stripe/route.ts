@@ -16,9 +16,9 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const payload = await request.text()
 
-  let event: ReturnType<typeof stripe.webhooks.constructEvent>
+  let event: Awaited<ReturnType<typeof stripe.webhooks.constructEventAsync>>
   try {
-    event = stripe.webhooks.constructEvent(payload, signature, webhookSecret)
+    event = await stripe.webhooks.constructEventAsync(payload, signature, webhookSecret)
   } catch {
     return NextResponse.json({ error: 'Invalid webhook signature' }, { status: 400 })
   }

@@ -1,0 +1,6 @@
+# Copy to .dev.vars for `yarn preview` (Cloudflare's local runtime reads this, not .env.local)
+NEXTJS_ENV=development
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+STRIPE_PRO_PRICE_ID=
+OPENWEATHER_API_KEY=
