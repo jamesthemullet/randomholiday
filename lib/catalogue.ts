@@ -38,13 +38,11 @@ const londonDestinations = londonData as LondonDestination[]
 // Hand-maintained details for generated destinations, keyed by destination id.
 const destinationDetails = detailsData as Record<string, Partial<DestinationDetails>>
 
-const NOT_DIRECT: LondonRoute = { direct: false, airports: [], airlines: [], seasonalOnly: false }
-
 /**
  * Hand-written destination ids whose generated London counterpart has a different id. Listed
  * explicitly rather than matched by distance, which would wrongly pair New York with Newark and
- * the Amalfi Coast with Salerno. Hand-written ids not here or in the generated data need a
- * connection from London.
+ * the Amalfi Coast with Salerno. Hand-written ids not here or in the generated data are left out
+ * of the catalogue.
  */
 export const HAND_WRITTEN_ALIASES: Record<string, string> = {
   'costa-rica': 'san-jose-cr-costa-rica',
@@ -61,9 +59,10 @@ export const HAND_WRITTEN_ALIASES: Record<string, string> = {
 }
 
 /**
- * Merges the hand-written destinations with the generated London destinations. A hand-written
- * destination keeps its own data and gains the matching London route (or is marked as needing a
- * connection); generated destinations without a match are added with whatever details exist.
+ * Builds the catalogue from the generated London destinations, which are the source of truth for
+ * where you can go from London. A hand-written destination is only included when it matches one of
+ * them (keeping its own data and gaining the London route); one with no London route is left out.
+ * Generated destinations without a hand-written match are added with whatever details exist.
  */
 export function buildCatalogue(
   handWritten: Destination[],
@@ -73,11 +72,13 @@ export function buildCatalogue(
 ): CatalogueEntry[] {
   const londonById = new Map(london.map((destination) => [destination.id, destination]))
   const matchedIds = new Set<string>()
-  const entries: CatalogueEntry[] = handWritten.map((destination) => {
+  const entries: CatalogueEntry[] = []
+  for (const destination of handWritten) {
     const match = londonById.get(aliases[destination.id] ?? destination.id)
-    if (match) matchedIds.add(match.id)
-    return { ...destination, london: match?.london ?? NOT_DIRECT }
-  })
+    if (!match) continue
+    matchedIds.add(match.id)
+    entries.push({ ...destination, london: match.london })
+  }
 
   for (const destination of london) {
     if (matchedIds.has(destination.id)) continue
