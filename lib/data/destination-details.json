@@ -1,1 +1,116 @@
-{}
+{
+  "belfast-united-kingdom": {
+    "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Titanic Belfast",
+      "Black Taxi mural tour",
+      "St George's Market",
+      "Giant's Causeway day trip",
+      "Crown Liquor Saloon"
+    ],
+    "visa": "free"
+  },
+  "berlin-germany": {
+    "description": "Germany's sprawling capital, layering Cold War history, world-class museums, street art and all-night clubs across its many districts.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 105,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Brandenburg Gate",
+      "Berlin Wall Memorial",
+      "Museum Island",
+      "East Side Gallery",
+      "Currywurst at Mauerpark"
+    ],
+    "visa": "free"
+  },
+  "faro-portugal": {
+    "description": "The gateway to Portugal's Algarve, with a walled old town, lagoon islands and golden beaches along the surrounding coast.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Ria Formosa boat trip",
+      "Faro old town",
+      "Ilha Deserta beach",
+      "Benagil cave kayaking",
+      "Capela dos Ossos"
+    ],
+    "visa": "free"
+  },
+  "geneva-switzerland": {
+    "description": "A lakeside city of diplomacy and watchmaking, ringed by the Alps and Jura, with its famous jet d'eau.",
+    "climate": "continental",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 160,
+      "hotelPerNight": 220,
+      "dailySpending": 130
+    },
+    "activities": [
+      "Jet d'Eau",
+      "Old Town and St Peter's Cathedral",
+      "Lake Geneva cruise",
+      "Mont Blanc day trip from Chamonix",
+      "Cheese fondue"
+    ],
+    "visa": "free"
+  },
+  "ibiza-spain": {
+    "description": "A Balearic island pairing world-famous clubs with quiet coves, a walled Dalt Vila old town and hippie markets.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 150,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Dalt Vila",
+      "Cala Comte sunset",
+      "Las Dalias hippie market",
+      "Formentera day trip",
+      "Club night at Amnesia"
+    ],
+    "visa": "free"
+  },
+  "malaga-spain": {
+    "description": "A sunny Andalusian port city with a Moorish Alcazaba, Picasso's birthplace, tapas bars and beaches on the Costa del Sol.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 105,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Alcazaba",
+      "Picasso Museum",
+      "Caminito del Rey hike",
+      "Espetos de sardinas at La Malagueta",
+      "Gibralfaro castle"
+    ],
+    "visa": "free"
+  }
+}
