@@ -232,5 +232,125 @@
       "Gibralfaro castle"
     ],
     "visa": "free"
+  },
+  "milan-italy": {
+    "description": "Italy's fashion and finance capital, pairing a marble Gothic cathedral and Leonardo's Last Supper with aperitivo bars and canal-side Navigli evenings.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Duomo di Milano rooftop",
+      "The Last Supper at Santa Maria delle Grazie",
+      "Galleria Vittorio Emanuele II",
+      "Navigli aperitivo",
+      "La Scala opera house",
+      "Risotto alla milanese"
+    ],
+    "visa": "free"
+  },
+  "munich-germany": {
+    "description": "Bavaria's capital, where beer halls, baroque palaces and English Garden surfers sit within sight of the Alps.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Marienplatz Glockenspiel",
+      "Hofbräuhaus",
+      "English Garden and Eisbach surfers",
+      "Nymphenburg Palace",
+      "Oktoberfest (late Sept)",
+      "Day trip to Neuschwanstein Castle"
+    ],
+    "visa": "free"
+  },
+  "nice-france": {
+    "description": "The French Riviera's capital, with a pebble-beach promenade, pastel Old Town markets and easy trips to Monaco and Antibes.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 160,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Promenade des Anglais",
+      "Cours Saleya market",
+      "Castle Hill viewpoint",
+      "Matisse Museum",
+      "Day trip to Èze village",
+      "Socca and salade niçoise"
+    ],
+    "visa": "free"
+  },
+  "olbia-italy": {
+    "description": "Gateway to Sardinia's Costa Smeralda, with powder-white coves, granite-fringed bays and clear emerald water within easy reach.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [5, 6, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 160,
+      "hotelPerNight": 180,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Costa Smeralda beaches",
+      "La Maddalena archipelago boat trip",
+      "Porto Cervo",
+      "Capo Coda Cavallo",
+      "Basilica di San Simplicio",
+      "Porceddu roast pork"
+    ],
+    "visa": "free"
+  },
+  "palma-de-mallorca-spain": {
+    "description": "Mallorca's elegant capital, with a Gothic cathedral on the seafront, a lively old quarter and beaches and mountains close by.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 135,
+      "dailySpending": 85
+    },
+    "activities": [
+      "La Seu Cathedral",
+      "Bellver Castle",
+      "Palma Old Town tapas",
+      "Serra de Tramuntana drive",
+      "Sóller tram",
+      "Cala Mondragó"
+    ],
+    "visa": "free"
+  },
+  "pisa-italy": {
+    "description": "Tuscan university city famed for its leaning tower, set among marble Piazza dei Miracoli landmarks and a short train from Florence.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 115,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Leaning Tower of Pisa",
+      "Piazza dei Miracoli",
+      "Camposanto Monumentale",
+      "Borgo Stretto",
+      "Day trip to Lucca city walls",
+      "Day trip to Florence"
+    ],
+    "visa": "free"
   }
 }
