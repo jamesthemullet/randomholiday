@@ -71,7 +71,7 @@ describe('ResultsClient', () => {
 
     expect(screen.getByText('From').nextSibling).toHaveTextContent(city.name)
     expect(screen.getByText('7 nights')).toBeInTheDocument()
-    expect(screen.getByText('Est. pp').nextSibling).toHaveTextContent(/^\$[\d,]+$/)
+    expect(screen.getByText('Est. pp').nextSibling).toHaveTextContent(/^£[\d,]+$/)
   })
 
   it('offers a Start over link to the homepage when the trip details are missing', () => {

@@ -20,14 +20,14 @@ describe('BudgetSlider', () => {
     expect(screen.getByRole('slider')).toHaveAttribute('id', 'trip-budget')
   })
 
-  it('displays the value formatted as USD currency', () => {
+  it('displays the value formatted as GBP currency', () => {
     render(<BudgetSlider {...defaultProps} value={1200} />)
-    expect(screen.getByText('$1,200')).toBeInTheDocument()
+    expect(screen.getByText('£1,200')).toBeInTheDocument()
   })
 
   it('appends a "+" suffix when the value is at the max', () => {
     render(<BudgetSlider {...defaultProps} value={5000} max={5000} />)
-    expect(screen.getByRole('slider')).toHaveAttribute('aria-valuetext', '$5,000+')
+    expect(screen.getByRole('slider')).toHaveAttribute('aria-valuetext', '£5,000+')
   })
 
   it('shows the budget tier beside the value', () => {
@@ -83,14 +83,14 @@ describe('getBudgetTier', () => {
 
 describe('formatBudget', () => {
   it('formats a value below max as plain currency', () => {
-    expect(formatBudget(1200, 5000)).toBe('$1,200')
+    expect(formatBudget(1200, 5000)).toBe('£1,200')
   })
 
   it('appends a "+" suffix when value equals max', () => {
-    expect(formatBudget(5000, 5000)).toBe('$5,000+')
+    expect(formatBudget(5000, 5000)).toBe('£5,000+')
   })
 
   it('appends a "+" suffix when value exceeds max', () => {
-    expect(formatBudget(6000, 5000)).toBe('$6,000+')
+    expect(formatBudget(6000, 5000)).toBe('£6,000+')
   })
 })

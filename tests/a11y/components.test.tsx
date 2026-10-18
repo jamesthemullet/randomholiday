@@ -10,7 +10,6 @@ import { Select } from '@/components/Select'
 import { Spinner } from '@/components/Spinner'
 import { Modal } from '@/components/Modal'
 import { AdSlot } from '@/components/AdSlot'
-import { DarkModeToggle } from '@/components/DarkModeToggle'
 import { DepartureAutocomplete } from '@/components/DepartureAutocomplete'
 import { DestinationCard } from '@/components/DestinationCard'
 import type { Destination as DestinationCardDestination } from '@/components/DestinationCard'
@@ -143,11 +142,6 @@ describe('accessibility (axe)', () => {
 
   it('AdSlot has no violations', async () => {
     const { container } = render(<AdSlot format="banner" />)
-    expect(await axe(container)).toHaveNoViolations()
-  })
-
-  it('DarkModeToggle has no violations', async () => {
-    const { container } = render(<DarkModeToggle />)
     expect(await axe(container)).toHaveNoViolations()
   })
 

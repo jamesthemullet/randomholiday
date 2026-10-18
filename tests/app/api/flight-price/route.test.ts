@@ -30,7 +30,7 @@ describe('GET /api/flight-price', () => {
     const response = await GET(request)
     const body = await response.json()
 
-    expect(body).toEqual({ source: 'static', pricePerPerson: 120, currency: 'USD' })
+    expect(body).toEqual({ source: 'static', pricePerPerson: 120, currency: 'GBP' })
   })
 
   it('returns a static estimate for a long-haul distance', async () => {
@@ -39,7 +39,7 @@ describe('GET /api/flight-price', () => {
     const response = await GET(request)
     const body = await response.json()
 
-    expect(body).toEqual({ source: 'static', pricePerPerson: 1100, currency: 'USD' })
+    expect(body).toEqual({ source: 'static', pricePerPerson: 1100, currency: 'GBP' })
   })
 
   it('returns 429 once the per-IP limit is exceeded', async () => {

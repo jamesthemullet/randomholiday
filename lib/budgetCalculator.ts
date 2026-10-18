@@ -14,11 +14,11 @@ export interface BudgetParams {
 
 export interface BudgetBreakdown {
   flightTier: FlightTier
-  /** Round-trip flight cost per person in USD */
+  /** Round-trip flight cost per person in GBP */
   flightCostPerPerson: number
-  /** Hotel cost per night in USD (whole group shares one booking) */
+  /** Hotel cost per night in GBP (whole group shares one booking) */
   hotelCostPerNight: number
-  /** Daily spending per person in USD (food, transport, activities) */
+  /** Daily spending per person in GBP (food, transport, activities) */
   dailySpendingPerPerson: number
   nights: number
   groupSize: number
@@ -41,7 +41,7 @@ const TIER_THRESHOLDS = {
   LONG: 8000,
 } as const
 
-// Round-trip flight cost per person in USD for each tier
+// Round-trip flight cost per person in GBP for each tier
 const FLIGHT_COSTS: Record<FlightTier, number> = {
   'short-haul': 120,
   'medium-haul': 350,
