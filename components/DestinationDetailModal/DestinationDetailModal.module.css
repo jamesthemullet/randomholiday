@@ -1,152 +1,290 @@
-.photoPlaceholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  height: 160px;
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-6);
-  color: var(--color-text-inverse);
-  background: linear-gradient(
-    135deg,
-    var(--color-turquoise) 0%,
-    var(--color-ocean) 60%,
-    var(--color-coral) 100%
-  );
-}
-
-.photoPlaceholderText {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-}
+/* ── Banner media ─────────────────────────────────────────────────────────── */
 
 .photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 160px;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-6);
 }
 
-.description {
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  margin: 0 0 var(--space-6);
+.poster {
+  position: absolute;
+  inset: 0;
+  padding: var(--space-4) 1.75rem;
+}
+
+.poster.coral {
+  background-color: var(--color-coral-dark);
+}
+
+.poster.turquoise {
+  background-color: var(--color-turquoise-contrast);
+}
+
+.poster.ocean {
+  background-color: var(--color-ocean);
+}
+
+.poster.yellow {
+  background-color: var(--color-yellow-dark);
+}
+
+.posterNote {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background-color: rgba(3, 45, 84, 0.7);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+/* ── Layout ───────────────────────────────────────────────────────────────── */
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+.main {
+  flex: 1 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
 }
 
 .section {
-  margin-bottom: var(--space-6);
-}
-
-.section:last-child {
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
 }
 
 .sectionTitle {
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
-  color: var(--color-text-primary);
-  margin: 0 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-label);
 }
+
+.description {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  text-wrap: pretty;
+}
+
+/* ── Cost card ────────────────────────────────────────────────────────────── */
+
+.costCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5) 1.375rem;
+  background-color: var(--color-bg-card);
+  border: 3px solid var(--color-line);
+  border-radius: 18px;
+}
+
+.costHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.tripLine {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.costList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.costRow,
+.totalRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.costRow {
+  padding-bottom: 0.625rem;
+  border-bottom: 2px dashed var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.costRow dd {
+  font-size: 1.0625rem;
+  font-weight: var(--font-bold);
+  white-space: nowrap;
+}
+
+.totalRow {
+  flex-wrap: wrap;
+}
+
+.totalRow dt {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalLabel {
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+}
+
+.perPerson {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.totalValue {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-accent-hot);
+}
+
+/* ── Weather and activities ───────────────────────────────────────────────── */
 
 .weatherStatus,
 .weatherSummary {
-  margin: 0;
   color: var(--color-text-secondary);
-  font-size: var(--text-sm);
+  font-size: 0.9375rem;
 }
 
 .weatherSummary strong {
   color: var(--color-text-primary);
 }
 
-.costList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin: 0;
-}
-
-.costRow {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--color-border);
-  color: var(--color-text-secondary);
-}
-
-.costRow dt {
-  font-size: var(--text-sm);
-}
-
-.costRow dd {
-  margin: 0;
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text-primary);
-  white-space: nowrap;
-}
-
-.totalRow {
-  border-bottom: none;
-  padding-top: var(--space-3);
-  color: var(--color-text-primary);
-}
-
-.totalRow dt {
-  font-weight: var(--font-semibold);
-}
-
-.totalRow dd {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--color-turquoise-contrast);
-}
-
-.affiliateLinks {
+.activities {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
-  margin-top: var(--space-4);
-}
-
-.affiliateLink {
-  display: inline-flex;
-  align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-5);
-  border: 2px solid var(--color-turquoise-contrast);
-  border-radius: var(--radius-md);
-  color: var(--color-turquoise-contrast);
-  font-weight: var(--font-semibold);
-  text-decoration: none;
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast);
-}
-
-.affiliateLink:hover,
-.affiliateLink:focus-visible {
-  background-color: var(--color-accent-primary);
-  color: var(--color-white);
-}
-
-.activities {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: var(--space-2);
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
-.activities li {
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  background-color: var(--color-bg-secondary);
-  color: var(--color-text-primary);
+.activity {
+  padding: 0.375rem var(--space-3);
+  border-radius: var(--radius-full);
   font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-ink);
+}
+
+.activity.yellow {
+  background-color: var(--color-yellow-light);
+}
+
+.activity.turquoise {
+  background-color: var(--color-pastel-turquoise);
+}
+
+.activity.coral {
+  background-color: var(--color-pastel-coral);
+}
+
+.activity.ocean {
+  background-color: var(--color-pastel-ocean);
+}
+
+/* ── Booking panel ────────────────────────────────────────────────────────── */
+
+.book {
+  flex: 1 1 300px;
+  min-width: 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding: 1.375rem;
+  background-color: var(--color-yellow);
+  border: 3px solid var(--color-ink);
+  border-radius: 18px;
+  color: var(--color-ink);
+}
+
+.bookTitle {
+  font-family: var(--font-display);
+  font-weight: var(--font-normal);
+  font-size: 1.875rem;
+  line-height: 1.1;
+  color: var(--color-ink);
+}
+
+.bookLink {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: var(--space-4) 1.125rem;
+  background-color: var(--color-white);
+  border: 3px solid var(--color-ink);
+  border-radius: var(--radius-xl);
+  box-shadow: 5px 5px 0 var(--color-ink);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.bookLink:hover {
+  color: var(--color-ink);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--color-ink);
+}
+
+.bookIcon {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+.bookText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookLabel {
+  font-size: 1.0625rem;
+  font-weight: var(--font-bold);
+}
+
+.bookNote {
+  font-size: var(--text-sm);
+  color: var(--color-grey-600);
+}
+
+.bookArrow {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+}
+
+.disclaimer {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.tripActions {
+  padding-top: var(--space-3);
+  border-top: 2px dashed rgba(3, 45, 84, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bookLink,
+  .bookLink:hover {
+    transition: none;
+    transform: none;
+  }
 }

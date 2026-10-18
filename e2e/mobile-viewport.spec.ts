@@ -29,7 +29,7 @@ test('the homepage form → results flow works on a narrow viewport', async ({ p
 
   await page.getByRole('combobox', { name: /where are you flying from/i }).fill('London')
   await page.getByRole('option', { name: /london/i }).click()
-  await page.getByRole('button', { name: /surprise me/i }).click()
+  await page.getByRole('button', { name: 'Surprise me' }).click()
 
   await expect(page).toHaveURL(/\/results\?/)
   await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
@@ -39,10 +39,7 @@ test('the destination detail modal is usable on a narrow viewport', async ({ pag
   await page.goto(resultsUrl)
 
   const selectButton = page.getByRole('button', { name: /see prices & book/i }).first()
-  await selectButton.waitFor({ state: 'visible' })
-  // The card's 3D flip transform overlaps both faces in the hit-testing tree, which confuses
-  // Playwright's pointer-coordinate click; dispatch the click event on the element directly.
-  await selectButton.dispatchEvent('click')
+  await selectButton.click()
 
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()

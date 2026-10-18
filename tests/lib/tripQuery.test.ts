@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
   buildResultsQuery,
+  getDefaultTripQuery,
   getMonthOptions,
   getNextMonth,
   parseTripQuery,
@@ -41,6 +42,20 @@ describe('getNextMonth', () => {
 
   it('wraps December round to January', () => {
     expect(getNextMonth(new Date(2026, 11, 5))).toBe(1)
+  })
+})
+
+describe('getDefaultTripQuery', () => {
+  it('defaults to a week for two from London next month, with any style', () => {
+    expect(getDefaultTripQuery(new Date(2026, 9, 17))).toEqual({
+      city: london,
+      budget: 1500,
+      month: 11,
+      nights: 7,
+      travelStyles: [],
+      maxDistance: 10000,
+      groupSize: 2,
+    })
   })
 })
 

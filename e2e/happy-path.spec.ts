@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test('full happy path: homepage form → results → destination detail → change search', async ({
+test('full happy path: homepage form → results → destination detail → change answers', async ({
   page,
 }) => {
   await page.goto('/')
@@ -9,11 +9,11 @@ test('full happy path: homepage form → results → destination detail → chan
   await page.getByRole('option', { name: /london/i }).click()
 
   // Optional filters live under "More options"
-  await page.getByText('More options').click()
-  await page.getByLabel(/roughly when do you want to go/i).selectOption('6')
+  await page.getByRole('button', { name: /more options/i }).click()
+  await page.getByRole('button', { name: 'June' }).click()
   await page.getByRole('button', { name: 'Beach' }).click()
 
-  await page.getByRole('button', { name: /surprise me/i }).click()
+  await page.getByRole('button', { name: 'Surprise me' }).click()
 
   await expect(page).toHaveURL(/\/results\?/)
   const resultsUrl = new URL(page.url())
@@ -21,19 +21,14 @@ test('full happy path: homepage form → results → destination detail → chan
   expect(resultsUrl.searchParams.get('month')).toBe('6')
   expect(resultsUrl.searchParams.get('styles')).toBe('beach')
 
-  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeAttached()
 
-  // Guards against the card wrapper collapsing to zero width, which `toBeVisible` doesn't catch.
-  // Measures the name's block-level parent, which spans the card (the h2 itself is only as wide
-  // as its text). Polled because the results tree can be re-rendered right after hydration.
-  const cardContent = page.locator('main h2').first().locator('xpath=..')
-  await expect.poll(async () => (await cardContent.boundingBox())?.width ?? 0).toBeGreaterThan(200)
+  // Guards against the postcard collapsing to zero width, which `toBeVisible` doesn't catch.
+  // Polled because the results tree can be re-rendered right after hydration.
+  const postcard = page.getByRole('article')
+  await expect.poll(async () => (await postcard.boundingBox())?.width ?? 0).toBeGreaterThan(200)
 
-  const selectButton = page.getByRole('button', { name: /see prices & book/i }).first()
-  await selectButton.waitFor({ state: 'visible' })
-  // The card's 3D flip transform overlaps both faces in the hit-testing tree, which confuses
-  // Playwright's pointer-coordinate click; dispatch the click event on the element directly.
-  await selectButton.dispatchEvent('click')
+  await page.getByRole('button', { name: /see prices & book/i }).click()
 
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()
@@ -44,16 +39,20 @@ test('full happy path: homepage form → results → destination detail → chan
   await page.keyboard.press('Escape')
   await expect(dialog).not.toBeVisible()
 
-  await page.getByRole('button', { name: /shuffle/i }).click()
-  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeVisible()
-  await expect(page.getByRole('button', { name: /see prices & book/i }).first()).toBeVisible()
+  await page.getByRole('button', { name: 'Spin again' }).click()
+  await expect(page.getByRole('heading', { name: 'Your Match' })).toBeAttached()
+  await expect(page.getByRole('button', { name: /see prices & book/i })).toBeVisible()
 
-  // "Change search" reopens the homepage form with the previous answers filled in
-  await page.getByRole('link', { name: /change search/i }).click()
+  // "Change my answers" reopens the homepage form with the previous answers filled in
+  await page.getByRole('link', { name: 'Change my answers' }).click()
   await expect(page).toHaveURL(/\/\?/)
   await expect(page.getByRole('combobox', { name: /where are you flying from/i })).toHaveValue(
     'London'
   )
-  await expect(page.getByLabel(/roughly when do you want to go/i)).toHaveValue('6')
+  await expect(page.getByRole('button', { name: /more options/i })).toHaveAttribute(
+    'aria-expanded',
+    'true'
+  )
+  await expect(page.getByRole('button', { name: 'June' })).toHaveAttribute('aria-pressed', 'true')
   await expect(page.getByRole('button', { name: 'Beach' })).toHaveAttribute('aria-pressed', 'true')
 })

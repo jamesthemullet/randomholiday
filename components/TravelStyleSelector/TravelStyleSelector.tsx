@@ -42,7 +42,7 @@ export function TravelStyleSelector({
             <button
               key={option.value}
               type="button"
-              className={`${styles.option} ${isSelected ? styles.selected : ''}`}
+              className={`${styles.option} ${styles[option.value]} ${isSelected ? styles.selected : ''}`}
               aria-pressed={isSelected}
               onClick={() => onChange(toggleTravelStyle(selected, option.value))}
             >

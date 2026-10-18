@@ -11,10 +11,21 @@ vi.mock('next/navigation', () => ({
 
 const london = departureCities.find((c) => c.id === 'london-uk')!
 
+function getCombobox() {
+  return screen.getByRole('combobox', { name: 'Where are you flying from?' })
+}
+
 function selectDepartureCity(name: string) {
-  const combobox = screen.getByRole('combobox', { name: 'Where are you flying from?' })
-  fireEvent.change(combobox, { target: { value: name } })
+  fireEvent.change(getCombobox(), { target: { value: name } })
   fireEvent.click(screen.getByRole('option', { name: new RegExp(name) }))
+}
+
+function getSubmit() {
+  return screen.getByRole('button', { name: 'Surprise me' })
+}
+
+function getMoreToggle() {
+  return screen.getByRole('button', { name: /more options/i })
 }
 
 function submittedParams(): URLSearchParams {
@@ -22,10 +33,6 @@ function submittedParams(): URLSearchParams {
   const [url] = push.mock.calls[0]
   expect(url.startsWith('/results?')).toBe(true)
   return new URLSearchParams(url.split('?')[1])
-}
-
-function getMoreOptions(): HTMLDetailsElement {
-  return screen.getByText('More options').closest('details')!
 }
 
 describe('TripForm', () => {
@@ -42,35 +49,29 @@ describe('TripForm', () => {
 
   it('starts with London chosen, so Surprise me works straight away', () => {
     render(<TripForm />)
-    expect(screen.getByRole('combobox', { name: 'Where are you flying from?' })).toHaveValue(
-      'London'
-    )
-    fireEvent.click(screen.getByRole('button', { name: 'Surprise me' }))
+    expect(getCombobox()).toHaveValue('London')
+    fireEvent.click(getSubmit())
     expect(submittedParams().get('originId')).toBe('london-uk')
   })
 
   it('re-disables Surprise me when the city text is edited after selecting', () => {
     render(<TripForm />)
-    fireEvent.change(screen.getByRole('combobox', { name: 'Where are you flying from?' }), {
-      target: { value: 'Lond' },
-    })
-    expect(screen.getByRole('button', { name: 'Surprise me' })).toBeDisabled()
+    fireEvent.change(getCombobox(), { target: { value: 'Lond' } })
+    expect(getSubmit()).toBeDisabled()
     selectDepartureCity('London')
-    expect(screen.getByRole('button', { name: 'Surprise me' })).toBeEnabled()
+    expect(getSubmit()).toBeEnabled()
   })
 
   it('does not navigate when submitted without a city', () => {
     render(<TripForm />)
-    fireEvent.change(screen.getByRole('combobox', { name: 'Where are you flying from?' }), {
-      target: { value: '' },
-    })
+    fireEvent.change(getCombobox(), { target: { value: '' } })
     fireEvent.submit(screen.getByRole('form', { name: 'Find your holiday' }))
     expect(push).not.toHaveBeenCalled()
   })
 
   it('submits with defaults, using next month as the travel month', () => {
     render(<TripForm />)
-    fireEvent.click(screen.getByRole('button', { name: 'Surprise me' }))
+    fireEvent.click(getSubmit())
 
     const params = submittedParams()
     expect(params.get('originId')).toBe('london-uk')
@@ -88,20 +89,40 @@ describe('TripForm', () => {
     expect(submittedParams().get('originId')).toBe('london-uk')
   })
 
-  it('keeps More options collapsed by default', () => {
+  it('keeps More options collapsed by default, summarising the month', () => {
     render(<TripForm />)
-    expect(getMoreOptions()).not.toHaveAttribute('open')
+    expect(getMoreToggle()).toHaveAttribute('aria-expanded', 'false')
+    expect(getMoreToggle()).toHaveTextContent('More optionsNov')
+    expect(screen.queryByRole('group', { name: /roughly when/i })).not.toBeInTheDocument()
+  })
+
+  it('toggles More options open and closed', () => {
+    render(<TripForm />)
+    fireEvent.click(getMoreToggle())
+    expect(getMoreToggle()).toHaveAttribute('aria-expanded', 'true')
+    expect(screen.getByRole('group', { name: /roughly when/i })).toBeInTheDocument()
+    fireEvent.click(getMoreToggle())
+    expect(getMoreToggle()).toHaveAttribute('aria-expanded', 'false')
+  })
+
+  it('summarises chosen styles beside the collapsed toggle', () => {
+    render(<TripForm />)
+    fireEvent.click(getMoreToggle())
+    fireEvent.click(screen.getByRole('button', { name: 'City' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Beach' }))
+    fireEvent.click(getMoreToggle())
+    expect(getMoreToggle()).toHaveTextContent('Nov · Beach, City')
   })
 
   it('includes values chosen under More options', () => {
     render(<TripForm />)
-    fireEvent.change(screen.getByLabelText('Roughly when do you want to go?'), {
-      target: { value: '6' },
-    })
+    fireEvent.click(getMoreToggle())
+    fireEvent.click(screen.getByRole('button', { name: 'June' }))
+    expect(screen.getByRole('button', { name: 'June' })).toHaveAttribute('aria-pressed', 'true')
     fireEvent.change(screen.getByLabelText('Trip length'), { target: { value: '10' } })
-    fireEvent.click(screen.getByRole('button', { name: /beach/i }))
+    fireEvent.click(screen.getByRole('button', { name: 'Beach' }))
     fireEvent.click(screen.getByRole('button', { name: 'Increase group size' }))
-    fireEvent.click(screen.getByRole('button', { name: 'Surprise me' }))
+    fireEvent.click(getSubmit())
 
     const params = submittedParams()
     expect(params.get('month')).toBe('6')
@@ -110,44 +131,35 @@ describe('TripForm', () => {
     expect(params.get('groupSize')).toBe('3')
   })
 
-  it('does not submit when toggling styles or the group stepper', () => {
+  it('does not submit when toggling styles, months or the group stepper', () => {
     render(<TripForm />)
-    fireEvent.click(screen.getByRole('button', { name: /beach/i }))
+    fireEvent.click(getMoreToggle())
+    fireEvent.click(screen.getByRole('button', { name: 'March' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Beach' }))
     fireEvent.click(screen.getByRole('button', { name: 'Increase group size' }))
     expect(push).not.toHaveBeenCalled()
   })
 
-  it('prefills from initial values and can submit straight away', () => {
+  it('prefills from initial values with More options open, and can submit straight away', () => {
     render(
       <TripForm
         initialValues={{
           city: london,
           budget: 2500,
           nights: 4,
-          month: 11,
+          month: 3,
           maxDistance: 10000,
           groupSize: 2,
         }}
       />
     )
-    expect(screen.getByRole('combobox', { name: 'Where are you flying from?' })).toHaveValue(
-      'London'
-    )
-    expect(getMoreOptions()).not.toHaveAttribute('open')
+    expect(getCombobox()).toHaveValue('London')
+    expect(getMoreToggle()).toHaveAttribute('aria-expanded', 'true')
+    expect(screen.getByRole('button', { name: 'March' })).toHaveAttribute('aria-pressed', 'true')
 
-    fireEvent.click(screen.getByRole('button', { name: 'Surprise me' }))
+    fireEvent.click(getSubmit())
     const params = submittedParams()
     expect(params.get('budget')).toBe('2500')
     expect(params.get('nights')).toBe('4')
-  })
-
-  it.each([
-    ['a non-default month', { month: 3 }],
-    ['travel styles', { travelStyles: ['city' as const] }],
-    ['a non-default distance', { maxDistance: 4000 }],
-    ['a non-default group size', { groupSize: 5 }],
-  ])('opens More options when initial values include %s', (_, initialValues) => {
-    render(<TripForm initialValues={initialValues} />)
-    expect(getMoreOptions()).toHaveAttribute('open')
   })
 })

@@ -1,16 +1,31 @@
+.page {
+  min-height: calc(100vh - 64px);
+  background-color: var(--color-ocean-dark);
+  padding: var(--space-12) var(--space-6) var(--space-24);
+}
+
 .wrapper {
-  max-width: 64rem;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: var(--space-8) var(--space-4);
 }
 
 .empty {
   font-size: var(--text-lg);
-  color: var(--color-text-secondary);
+  color: var(--color-cream);
   margin-bottom: var(--space-4);
 }
 
 .link {
-  color: var(--color-accent-primary);
-  font-weight: var(--font-medium);
+  color: var(--color-yellow);
+  font-weight: var(--font-bold);
+}
+
+.link:hover {
+  color: var(--color-yellow-light);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: var(--space-8) var(--space-4) var(--space-16);
+  }
 }

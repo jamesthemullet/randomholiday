@@ -32,11 +32,7 @@ test('destination detail modal has no automatically detectable accessibility vio
 }) => {
   await page.goto(resultsUrl)
   const selectButton = page.getByRole('button', { name: /see prices & book/i }).first()
-  await selectButton.waitFor({ state: 'visible' })
-  // The card's 3D flip transform keeps both faces overlapping in the hit-testing tree, which
-  // confuses Playwright's (and the browser's) pointer-coordinate click; dispatch the click
-  // event on the element directly instead.
-  await selectButton.dispatchEvent('click')
+  await selectButton.click()
 
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()
