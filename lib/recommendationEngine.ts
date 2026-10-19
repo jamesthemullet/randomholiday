@@ -12,6 +12,8 @@ export interface RecommendationParams
   poolSize?: number
   /** Random number source returning values in [0, 1). Injectable for deterministic tests; defaults to Math.random. */
   random?: () => number
+  /** Destination IDs to leave out of consideration entirely, e.g. recently shown results. */
+  excludeDestinationIds?: string[]
 }
 
 export interface RecommendationResult {
@@ -48,13 +50,19 @@ export function getRecommendations(
     random = Math.random,
     travelMonth,
     weights,
+    excludeDestinationIds,
     ...filterParams
   } = params
 
   if (count < 1) throw new Error('count must be at least 1')
   if (poolSize < 1) throw new Error('poolSize must be at least 1')
 
-  const filterResult = filterDestinations(destinations, filterParams)
+  const candidates =
+    excludeDestinationIds && excludeDestinationIds.length > 0
+      ? destinations.filter((d) => !excludeDestinationIds.includes(d.id))
+      : destinations
+
+  const filterResult = filterDestinations(candidates, filterParams)
   const scored = scoreDestinations(filterResult.passed, { ...filterParams, travelMonth, weights })
   const pool = scored.slice(0, poolSize)
   const recommendations = shuffle(pool, random).slice(0, count)
