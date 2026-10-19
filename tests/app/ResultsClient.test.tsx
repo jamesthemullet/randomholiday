@@ -6,12 +6,18 @@ import { ResultsClient } from '@/app/results/ResultsClient'
 import { departureCities } from '@/lib/departureCities'
 import { destinations } from '@/lib/destinations'
 import { pickableDestinations } from '@/lib/catalogue'
+import { getRecommendations } from '@/lib/recommendationEngine'
 
 const city = departureCities[0]
 
 vi.mock('next/navigation', () => ({
   useSearchParams: () => mockSearchParams,
 }))
+
+vi.mock('@/lib/recommendationEngine', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@/lib/recommendationEngine')>()
+  return { ...actual, getRecommendations: vi.fn(actual.getRecommendations) }
+})
 
 let mockSearchParams = new URLSearchParams()
 
@@ -218,5 +224,55 @@ describe('ResultsClient', () => {
     expect(sharedUrl.searchParams.get('destination')).toBe(shownDestination.id)
     expect(sharedUrl.searchParams.get('originId')).toBe(city.id)
     expect(sharedUrl.searchParams.get('budget')).toBe('100000')
+  })
+
+  it('excludes the currently shown destination when Spin again is clicked', async () => {
+    const user = userEvent.setup()
+    const recommendations = vi.mocked(getRecommendations)
+    recommendations.mockClear()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    const shown = pickableDestinations.find((d) => screen.queryAllByText(d.name).length > 0)!
+
+    await user.click(screen.getByRole('button', { name: 'Spin again' }))
+
+    const lastCall = recommendations.mock.calls[recommendations.mock.calls.length - 1]
+    expect(lastCall[1].excludeDestinationIds).toEqual([shown.id])
+  })
+
+  it('grows the exclusion list across repeated shuffles, up to a limit', async () => {
+    const user = userEvent.setup()
+    const recommendations = vi.mocked(getRecommendations)
+    recommendations.mockClear()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    for (let i = 0; i < 6; i++) {
+      await user.click(screen.getByRole('button', { name: 'Spin again' }))
+    }
+
+    const lastCall = recommendations.mock.calls[recommendations.mock.calls.length - 1]
+    const excluded = lastCall[1].excludeDestinationIds as string[]
+    expect(excluded.length).toBeLessThanOrEqual(5)
+    expect(new Set(excluded).size).toBe(excluded.length)
   })
 })

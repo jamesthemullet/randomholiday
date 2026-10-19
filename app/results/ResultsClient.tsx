@@ -21,6 +21,9 @@ const subscribeToNothing = () => () => {}
 const getClientSnapshot = () => true
 const getServerSnapshot = () => false
 
+/** How many of the most recently shown destinations "Spin again" excludes from the next pick. */
+const RECENT_EXCLUSION_LIMIT = 5
+
 export function ResultsClient() {
   const searchParams = useSearchParams()
 
@@ -78,12 +81,30 @@ export function ResultsClient() {
   const isPicking = shuffledPick === undefined && !pinnedRecommendation && !isClient
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false)
 
+  // Tracks the last few destinations actually shown, so "Spin again" doesn't just re-roll back
+  // to one of them. Updated during render (not an effect) so the very next shuffle already
+  // excludes whatever is on screen right now.
+  const [recentlyShown, setRecentlyShown] = useState<{ ids: string[]; lastId: string | null }>({
+    ids: [],
+    lastId: null,
+  })
+  if (recommendation && recommendation.destination.id !== recentlyShown.lastId) {
+    const destinationId = recommendation.destination.id
+    setRecentlyShown({
+      ids: [...recentlyShown.ids, destinationId].slice(-RECENT_EXCLUSION_LIMIT),
+      lastId: destinationId,
+    })
+  }
+
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
     setShuffledPick(
-      getRecommendations(pickableDestinations, filterParams).recommendations[0] ?? null
+      getRecommendations(pickableDestinations, {
+        ...filterParams,
+        excludeDestinationIds: recentlyShown.ids,
+      }).recommendations[0] ?? null
     )
-  }, [filterParams])
+  }, [filterParams, recentlyShown.ids])
 
   const handleSelect = useCallback(() => {
     setIsDetailModalOpen(true)
