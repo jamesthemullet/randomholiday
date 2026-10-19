@@ -1,4 +1,24 @@
 {
+  "alicante-spain": {
+    "description": "A Costa Blanca city with a hilltop castle, a palm-lined seafront promenade and sandy beaches, plus a lively tapas and old-town scene.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Santa Bárbara Castle",
+      "Explanada de España",
+      "Postiguet Beach",
+      "Day trip to Tabarca Island",
+      "Barrio de Santa Cruz",
+      "Arroz a banda"
+    ],
+    "visa": "free"
+  },
   "belfast-united-kingdom": {
     "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
     "climate": "oceanic",
@@ -34,6 +54,66 @@
       "Museum Island",
       "East Side Gallery",
       "Currywurst at Mauerpark"
+    ],
+    "visa": "free"
+  },
+  "budapest-hungary": {
+    "description": "Hungary's capital straddles the Danube, mixing thermal bathhouses, grand Habsburg architecture and lively ruin bars at modest prices.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Széchenyi thermal baths",
+      "Buda Castle and Fisherman's Bastion",
+      "Hungarian Parliament Building",
+      "Ruin bar crawl in the Jewish Quarter",
+      "Danube evening cruise",
+      "Goulash and lángos at the Great Market Hall"
+    ],
+    "visa": "free"
+  },
+  "dalaman-turkey": {
+    "description": "The gateway to Turkey's Turkish Riviera, near Ölüdeniz's lagoon, Dalyan's river tombs and pine-backed coves along the Turquoise Coast.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Ölüdeniz Blue Lagoon",
+      "Paragliding from Babadağ",
+      "Dalyan river trip to the Lycian rock tombs",
+      "Boat day around Fethiye's 12 Islands",
+      "Saklıkent Gorge",
+      "Mud baths at Iztuzu Beach"
+    ],
+    "visa": "free"
+  },
+  "dublin-ireland": {
+    "description": "Ireland's compact capital pairs Georgian squares, literary pubs and the Guinness Storehouse with easy coastal escapes along Dublin Bay.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Guinness Storehouse",
+      "Book of Kells at Trinity College",
+      "Kilmainham Gaol",
+      "Temple Bar live music",
+      "Howth cliff walk",
+      "Day trip to Glendalough"
     ],
     "visa": "free"
   },
@@ -75,6 +155,26 @@
     ],
     "visa": "free"
   },
+  "glasgow-united-kingdom": {
+    "description": "Scotland's largest city is a Victorian-built hub of free museums, a thriving live music scene and Art Nouveau design, near Loch Lomond.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 85,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Kelvingrove Art Gallery and Museum",
+      "Glasgow Cathedral and Necropolis",
+      "Mackintosh trail at the Willow Tearooms",
+      "Live gig at King Tut's",
+      "West End and Ashton Lane",
+      "Day trip to Loch Lomond"
+    ],
+    "visa": "free"
+  },
   "ibiza-spain": {
     "description": "A Balearic island pairing world-famous clubs with quiet coves, a walled Dalt Vila old town and hippie markets.",
     "climate": "mediterranean",
@@ -94,6 +194,46 @@
     ],
     "visa": "free"
   },
+  "jersey-jersey": {
+    "description": "The largest Channel Island offers sandy bays, clifftop paths, Norman castles and seafood, with a French accent and a mild climate.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 125,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Mont Orgueil Castle",
+      "Jersey War Tunnels",
+      "Coastal walk along the north cliff path",
+      "Jersey Royal potatoes and seafood in St Aubin",
+      "Durrell Wildlife Park",
+      "St Ouen's Bay surfing"
+    ],
+    "visa": "free"
+  },
+  "madrid-spain": {
+    "description": "Spain's capital delivers world-class art at the Prado, long tapas evenings, lively plazas and grand parks in a sunny, elegant city.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 115,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Prado Museum",
+      "Royal Palace of Madrid",
+      "Retiro Park",
+      "Tapas crawl in La Latina",
+      "Reina Sofía and Picasso's Guernica",
+      "Day trip to Toledo"
+    ],
+    "visa": "free"
+  },
   "malaga-spain": {
     "description": "A sunny Andalusian port city with a Moorish Alcazaba, Picasso's birthplace, tapas bars and beaches on the Costa del Sol.",
     "climate": "mediterranean",
@@ -110,6 +250,226 @@
       "Caminito del Rey hike",
       "Espetos de sardinas at La Malagueta",
       "Gibralfaro castle"
+    ],
+    "visa": "free"
+  },
+  "milan-italy": {
+    "description": "Italy's fashion and finance capital, pairing a marble Gothic cathedral and Leonardo's Last Supper with aperitivo bars and canal-side Navigli evenings.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Duomo di Milano rooftop",
+      "The Last Supper at Santa Maria delle Grazie",
+      "Galleria Vittorio Emanuele II",
+      "Navigli aperitivo",
+      "La Scala opera house",
+      "Risotto alla milanese"
+    ],
+    "visa": "free"
+  },
+  "munich-germany": {
+    "description": "Bavaria's capital, where beer halls, baroque palaces and English Garden surfers sit within sight of the Alps.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Marienplatz Glockenspiel",
+      "Hofbräuhaus",
+      "English Garden and Eisbach surfers",
+      "Nymphenburg Palace",
+      "Oktoberfest (late Sept)",
+      "Day trip to Neuschwanstein Castle"
+    ],
+    "visa": "free"
+  },
+  "nice-france": {
+    "description": "The French Riviera's capital, with a pebble-beach promenade, pastel Old Town markets and easy trips to Monaco and Antibes.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 160,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Promenade des Anglais",
+      "Cours Saleya market",
+      "Castle Hill viewpoint",
+      "Matisse Museum",
+      "Day trip to Èze village",
+      "Socca and salade niçoise"
+    ],
+    "visa": "free"
+  },
+  "olbia-italy": {
+    "description": "Gateway to Sardinia's Costa Smeralda, with powder-white coves, granite-fringed bays and clear emerald water within easy reach.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [5, 6, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 160,
+      "hotelPerNight": 180,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Costa Smeralda beaches",
+      "La Maddalena archipelago boat trip",
+      "Porto Cervo",
+      "Capo Coda Cavallo",
+      "Basilica di San Simplicio",
+      "Porceddu roast pork"
+    ],
+    "visa": "free"
+  },
+  "palma-de-mallorca-spain": {
+    "description": "Mallorca's elegant capital, with a Gothic cathedral on the seafront, a lively old quarter and beaches and mountains close by.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 135,
+      "dailySpending": 85
+    },
+    "activities": [
+      "La Seu Cathedral",
+      "Bellver Castle",
+      "Palma Old Town tapas",
+      "Serra de Tramuntana drive",
+      "Sóller tram",
+      "Cala Mondragó"
+    ],
+    "visa": "free"
+  },
+  "pisa-italy": {
+    "description": "Tuscan university city famed for its leaning tower, set among marble Piazza dei Miracoli landmarks and a short train from Florence.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 115,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Leaning Tower of Pisa",
+      "Piazza dei Miracoli",
+      "Camposanto Monumentale",
+      "Borgo Stretto",
+      "Day trip to Lucca city walls",
+      "Day trip to Florence"
+    ],
+    "visa": "free"
+  },
+  "rhodes-greece": {
+    "description": "A Dodecanese island where a walled medieval Old Town, Lindos's hilltop acropolis and long Aegean beaches share one sunny coastline.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Medieval Old Town of Rhodes",
+      "Acropolis of Lindos",
+      "Palace of the Grand Master",
+      "Butterfly Valley",
+      "Tsambika Beach",
+      "Day trip to Symi"
+    ],
+    "visa": "free"
+  },
+  "salzburg-austria": {
+    "description": "Mozart's birthplace, a baroque Alpine city beneath a hilltop fortress, with lakes and mountains within easy reach of its old town.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 140,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Hohensalzburg Fortress",
+      "Mozart's Birthplace",
+      "Mirabell Gardens",
+      "Getreidegasse shopping street",
+      "Sound of Music tour",
+      "Salzburger Nockerl dessert"
+    ],
+    "visa": "free"
+  },
+  "split-croatia": {
+    "description": "A Dalmatian port built inside a Roman emperor's palace, with a lively waterfront, nearby beaches and ferries to the Adriatic islands.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 115,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Diocletian's Palace",
+      "Marjan Hill viewpoint",
+      "Bačvice beach",
+      "Day trip to Hvar",
+      "Krka National Park",
+      "Riva promenade"
+    ],
+    "visa": "free"
+  },
+  "tenerife-spain": {
+    "description": "The largest Canary Island, pairing year-round sun and black-sand beaches with Mount Teide's volcanic landscapes and whale-watching waters.",
+    "climate": "subtropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 6, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Mount Teide cable car",
+      "Los Gigantes cliffs",
+      "Masca Gorge hike",
+      "Whale watching off Los Cristianos",
+      "Siam Park",
+      "Anaga Rural Park"
+    ],
+    "visa": "free"
+  },
+  "zurich-switzerland": {
+    "description": "Switzerland's financial hub on Lake Zurich, mixing a medieval old town, strong museums and quick rail links to the Alps.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 230,
+      "dailySpending": 140
+    },
+    "activities": [
+      "Old Town (Altstadt)",
+      "Lake Zurich boat trip",
+      "Kunsthaus Zurich",
+      "Uetliberg viewpoint",
+      "Bahnhofstrasse",
+      "Day trip to Rhine Falls"
     ],
     "visa": "free"
   }
