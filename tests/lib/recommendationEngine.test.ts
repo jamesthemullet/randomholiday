@@ -217,6 +217,56 @@ describe('getRecommendations', () => {
     )
   })
 
+  it('never recommends a destination listed in excludeDestinationIds', () => {
+    const result = getRecommendations([PARIS, NEW_YORK, TOKYO, SYDNEY], {
+      ...GENEROUS_PARAMS,
+      count: 4,
+      poolSize: 10,
+      excludeDestinationIds: ['paris', 'tokyo'],
+    })
+
+    expect(result.recommendations.map((r) => r.destination.id).sort()).toEqual(
+      ['new-york', 'sydney'].sort()
+    )
+  })
+
+  it('excludes listed destinations from filterResult diagnostics entirely', () => {
+    const result = getRecommendations([PARIS, NEW_YORK], {
+      ...GENEROUS_PARAMS,
+      excludeDestinationIds: ['paris'],
+    })
+
+    const allReported = [
+      ...result.filterResult.passed,
+      ...result.filterResult.removedByDistance,
+      ...result.filterResult.removedByBudget,
+      ...result.filterResult.removedByStyle,
+    ].map((d) => d.id)
+    expect(allReported).not.toContain('paris')
+  })
+
+  it('treats an empty excludeDestinationIds the same as omitting it', () => {
+    const result = getRecommendations([PARIS, NEW_YORK], {
+      ...GENEROUS_PARAMS,
+      count: 2,
+      poolSize: 2,
+      excludeDestinationIds: [],
+    })
+
+    expect(result.recommendations.map((r) => r.destination.id).sort()).toEqual(
+      ['new-york', 'paris'].sort()
+    )
+  })
+
+  it('returns no recommendations when every candidate is excluded', () => {
+    const result = getRecommendations([PARIS, NEW_YORK], {
+      ...GENEROUS_PARAMS,
+      excludeDestinationIds: ['paris', 'new-york'],
+    })
+
+    expect(result.recommendations).toEqual([])
+  })
+
   it('applies travelMonth and weights through to scoring', () => {
     const result = getRecommendations([PARIS, TOKYO], {
       ...GENEROUS_PARAMS,

@@ -34,7 +34,9 @@ Re-rolling currently can repeat the same destination. Exclude the last N results
 feels like discovery, not repetition.
 
 1. Track recently-shown destination IDs client-side (session state) — pure function + tests
-   extending `recommendationEngine.ts`'s selection logic to accept an exclusion list.
+   extending `recommendationEngine.ts`'s selection logic to accept an exclusion list. ✅
+   (`excludeDestinationIds` on `RecommendationParams` in `lib/recommendationEngine.ts`, tested in
+   `tests/lib/recommendationEngine.test.ts`)
 2. Wire the exclusion list into the "spin again" action on `/results`.
 
 ### 3. Destination structured data — _Acquisition_
