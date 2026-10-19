@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest'
 import sitemap from '@/app/sitemap'
+import { pickableDestinations } from '@/lib/catalogue'
 
 describe('sitemap', () => {
   const originalAppUrl = process.env.NEXT_PUBLIC_APP_URL
@@ -16,10 +17,10 @@ describe('sitemap', () => {
     }
   })
 
-  it('lists the static routes with a lastModified date', () => {
+  it('lists the static routes and every pickable destination with a lastModified date', () => {
     const result = sitemap()
 
-    expect(result).toHaveLength(2)
+    expect(result).toHaveLength(2 + pickableDestinations.length)
     result.forEach((entry) => {
       expect(entry.lastModified).toBeInstanceOf(Date)
     })
@@ -33,6 +34,9 @@ describe('sitemap', () => {
     expect(result.map((entry) => entry.url)).toEqual([
       'https://randomholiday.example',
       'https://randomholiday.example/pricing',
+      ...pickableDestinations.map(
+        (destination) => `https://randomholiday.example/destination/${destination.id}`
+      ),
     ])
   })
 
@@ -42,6 +46,9 @@ describe('sitemap', () => {
     expect(result.map((entry) => entry.url)).toEqual([
       'http://localhost:3000',
       'http://localhost:3000/pricing',
+      ...pickableDestinations.map(
+        (destination) => `http://localhost:3000/destination/${destination.id}`
+      ),
     ])
   })
 })
