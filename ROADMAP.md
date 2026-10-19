@@ -47,7 +47,10 @@ Each suggested destination already has data (`lib/destinations.ts`) but no crawl
 needs _something_ indexable.
 
 1. **One PR.** Static per-destination pages (`/destination/[slug]`) built from
-   `lib/destinations.ts`, with basic JSON-LD — self-contained, reuses existing destination data.
+   `lib/destinations.ts`, with basic JSON-LD — self-contained, reuses existing destination data. ✅
+   (`app/destination/[slug]/page.tsx`, built from `pickableDestinations` in `lib/catalogue.ts` so
+   only destinations the app actually recommends get a page; `TouristDestination` JSON-LD and the
+   new routes added to `app/sitemap.ts`, tested in `tests/app/destination-page.test.tsx`)
 
 ### 4. Pro tier upsell moment — _Acquisition_
 
