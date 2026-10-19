@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { renderToString } from 'react-dom/server'
 import { ResultsClient } from '@/app/results/ResultsClient'
 import { departureCities } from '@/lib/departureCities'
@@ -185,5 +186,37 @@ describe('ResultsClient', () => {
       (d) => screen.queryAllByText(d.name).length > 0
     )
     expect(hasSomeDestinationName).toBe(true)
+  })
+
+  it('shares a link that pins the exact destination shown, not the page URL', async () => {
+    const user = userEvent.setup()
+    const writeText = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    // No `destination` param was present, so the page's own URL would re-roll on open —
+    // the shared link must pin whichever destination actually ended up on screen instead.
+    const shownDestination = pickableDestinations.find(
+      (d) => screen.queryAllByText(d.name).length > 0
+    )!
+
+    fireEvent.click(screen.getByRole('button', { name: /see prices & book/i }))
+    await user.click(screen.getByRole('button', { name: 'Share' }))
+
+    expect(writeText).toHaveBeenCalled()
+    const sharedUrl = new URL(writeText.mock.calls[0][0] as string)
+    expect(sharedUrl.pathname).toBe('/results')
+    expect(sharedUrl.searchParams.get('destination')).toBe(shownDestination.id)
+    expect(sharedUrl.searchParams.get('originId')).toBe(city.id)
+    expect(sharedUrl.searchParams.get('budget')).toBe('100000')
   })
 })

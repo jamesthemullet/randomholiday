@@ -6,6 +6,7 @@ import styles from './TripActions.module.css'
 
 export interface TripActionsProps {
   destinationName: string
+  /** Absolute or site-relative URL to share. Falls back to `window.location.href` when omitted. */
   shareUrl?: string
   className?: string
 }
@@ -19,7 +20,7 @@ export function TripActions({ destinationName, shareUrl, className }: TripAction
   }
 
   const handleShare = async () => {
-    const url = shareUrl ?? window.location.href
+    const url = shareUrl ? new URL(shareUrl, window.location.origin).toString() : window.location.href
     setShareStatus(null)
 
     if (typeof navigator.share === 'function') {

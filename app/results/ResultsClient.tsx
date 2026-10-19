@@ -12,6 +12,7 @@ import { scoreDestination } from '@/lib/scoringEngine'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
 import { calculateBudget } from '@/lib/budgetCalculator'
+import { encodeShareableResult } from '@/lib/shareableResult'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
@@ -109,6 +110,26 @@ export function ResultsClient() {
     [filterParams, recommendation, distanceKm]
   )
 
+  // Pins the exact destination shown so the Share button sends a link that reproduces this
+  // result, rather than the page's own URL which re-rolls on a shuffled pick.
+  const shareUrl = useMemo(() => {
+    if (!filterParams || !recommendation) return undefined
+    const originId = searchParams.get('originId')
+    if (!originId) return undefined
+
+    const query = encodeShareableResult({
+      destinationId: recommendation.destination.id,
+      originId,
+      maxBudgetPerPerson: filterParams.maxBudgetPerPerson,
+      maxDistanceKm: filterParams.maxDistanceKm,
+      nights: filterParams.nights,
+      groupSize: filterParams.groupSize,
+      travelStyles: filterParams.travelStyles,
+      travelMonth: filterParams.travelMonth,
+    })
+    return `/results?${query}`
+  }, [filterParams, recommendation, searchParams])
+
   if (!filterParams) {
     return (
       <main id="main-content" className={styles.page}>
@@ -147,6 +168,7 @@ export function ResultsClient() {
           groupSize={filterParams.groupSize}
           month={filterParams.travelMonth}
           originName={filterParams.originName}
+          shareUrl={shareUrl}
         />
       </div>
     </main>
