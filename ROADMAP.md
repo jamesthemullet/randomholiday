@@ -21,9 +21,12 @@ A shareable link/URL for a result so "you got Lisbon" can be sent to a friend in
 seen once in `/results`.
 
 1. Encode the result's inputs (destination + preferences) into a URL query param or slug — pure
-   function + tests, reusing the existing `recommendationEngine`/`scoringEngine` output shape.
+   function + tests, reusing the existing `recommendationEngine`/`scoringEngine` output shape. ✅
+   (`lib/shareableResult.ts`, tested in `tests/lib/shareableResult.test.ts`)
 2. `/results` reads that param on load and re-renders the same result deterministically instead
-   of only working from live form state.
+   of only working from live form state. ✅ (`app/results/ResultsClient.tsx`'s `pinnedDestinationId`/
+   `pinnedRecommendation`, tested in `tests/app/ResultsClient.test.tsx`; wired into the Share button
+   in PR #146)
 
 ### 2. "Spin again" exclusion — _Engagement, Fun_
 
