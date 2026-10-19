@@ -81,6 +81,16 @@ describe('TripActions', () => {
     expect(await screen.findByText('Link copied to clipboard!')).toBeInTheDocument()
   })
 
+  it('resolves a site-relative shareUrl against the current origin', async () => {
+    const user = userEvent.setup()
+    const writeText = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
+
+    render(<TripActions destinationName="Bali, Indonesia" shareUrl="/results?destination=bali" />)
+    await user.click(screen.getByRole('button', { name: 'Share' }))
+
+    expect(writeText).toHaveBeenCalledWith(`${window.location.origin}/results?destination=bali`)
+  })
+
   it('falls back to window.location.href when no shareUrl is provided', async () => {
     const user = userEvent.setup()
     const writeText = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)

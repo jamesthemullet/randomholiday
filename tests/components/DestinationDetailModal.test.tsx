@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import type { Destination } from '@/lib/destinations'
 
@@ -430,5 +431,28 @@ describe('DestinationDetailModal', () => {
     )
 
     expect(fetchMock).not.toHaveBeenCalled()
+  })
+
+  it('passes shareUrl through to the Share button', async () => {
+    const user = userEvent.setup()
+    const writeText = vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
+
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+        shareUrl="/results?destination=bali-indonesia"
+      />
+    )
+
+    await user.click(screen.getByRole('button', { name: 'Share' }))
+
+    expect(writeText).toHaveBeenCalledWith(
+      `${window.location.origin}/results?destination=bali-indonesia`
+    )
   })
 })

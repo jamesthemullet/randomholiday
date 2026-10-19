@@ -22,6 +22,8 @@ export interface DestinationDetailModalProps {
   month?: number
   /** Departure city name, shown under the flights link. */
   originName?: string
+  /** Deterministic link back to this exact result, passed through to the Share button. */
+  shareUrl?: string
 }
 
 type WeatherEstimate =
@@ -46,6 +48,7 @@ export function DestinationDetailModal({
   groupSize,
   month,
   originName,
+  shareUrl,
 }: DestinationDetailModalProps) {
   const [imageFailed, setImageFailed] = useState(false)
   const [imageFailedForId, setImageFailedForId] = useState(destination?.id)
@@ -262,6 +265,7 @@ export function DestinationDetailModal({
           </p>
           <TripActions
             destinationName={`${destination.name}, ${destination.country}`}
+            shareUrl={shareUrl}
             className={styles.tripActions}
           />
         </aside>
