@@ -214,7 +214,7 @@ describe('DestinationDetailModal', () => {
         groupSize={3}
       />
     )
-    const link = screen.getByRole('link', { name: 'Find hotels on Booking.com' })
+    const link = screen.getByRole('link', { name: /find hotels on booking\.com/i })
     const url = new URL(link.getAttribute('href') ?? '')
     expect(url.origin + url.pathname).toBe('https://www.booking.com/searchresults.html')
     expect(url.searchParams.get('ss')).toBe('Bali, Indonesia')
@@ -234,7 +234,7 @@ describe('DestinationDetailModal', () => {
         groupSize={3}
       />
     )
-    const link = screen.getByRole('link', { name: 'Find flights on Skyscanner' })
+    const link = screen.getByRole('link', { name: /find flights on skyscanner/i })
     const url = new URL(link.getAttribute('href') ?? '')
     expect(url.origin + url.pathname).toBe(
       'https://www.skyscanner.net/transport/flights/everywhere/id/'
@@ -373,7 +373,7 @@ describe('DestinationDetailModal', () => {
     expect(screen.getByText('1 traveller · 1 night')).toBeInTheDocument()
   })
 
-  it('describes the booking links with the trip details', () => {
+  it('includes the trip details in the booking link names', () => {
     render(
       <DestinationDetailModal
         isOpen
@@ -385,12 +385,12 @@ describe('DestinationDetailModal', () => {
         originName="London"
       />
     )
-    expect(
-      screen.getByRole('link', { name: 'Find flights on Skyscanner' })
-    ).toHaveAccessibleDescription('From London · est. £1,200')
-    expect(
-      screen.getByRole('link', { name: 'Find hotels on Booking.com' })
-    ).toHaveAccessibleDescription('5 nights · 2 guests · est. £300')
+    expect(screen.getByRole('link', { name: /find flights on skyscanner/i })).toHaveAccessibleName(
+      'Find flights on Skyscanner From London · est. £1,200'
+    )
+    expect(screen.getByRole('link', { name: /find hotels on booking\.com/i })).toHaveAccessibleName(
+      'Find hotels on Booking.com 5 nights · 2 guests · est. £300'
+    )
   })
 
   it('leaves the origin out of the flights note when it is unknown', () => {
@@ -404,12 +404,12 @@ describe('DestinationDetailModal', () => {
         groupSize={1}
       />
     )
-    expect(
-      screen.getByRole('link', { name: 'Find flights on Skyscanner' })
-    ).toHaveAccessibleDescription('est. £600')
-    expect(
-      screen.getByRole('link', { name: 'Find hotels on Booking.com' })
-    ).toHaveAccessibleDescription('5 nights · 1 guest · est. £300')
+    expect(screen.getByRole('link', { name: /find flights on skyscanner/i })).toHaveAccessibleName(
+      'Find flights on Skyscanner est. £600'
+    )
+    expect(screen.getByRole('link', { name: /find hotels on booking\.com/i })).toHaveAccessibleName(
+      'Find hotels on Booking.com 5 nights · 1 guest · est. £300'
+    )
   })
 
   it('does not fetch weather when the modal is closed', () => {

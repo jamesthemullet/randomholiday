@@ -228,19 +228,13 @@ export function DestinationDetailModal({
             target="_blank"
             rel="noopener noreferrer sponsored"
             className={styles.bookLink}
-            aria-labelledby="flights-link-label"
-            aria-describedby="flights-link-note"
           >
             <span className={styles.bookIcon} aria-hidden="true">
               ✈️
             </span>
             <span className={styles.bookText}>
-              <span id="flights-link-label" className={styles.bookLabel}>
-                Find flights on Skyscanner
-              </span>
-              <span id="flights-link-note" className={styles.bookNote}>
-                {flightsNote}
-              </span>
+              <span className={styles.bookLabel}>Find flights on Skyscanner</span>{' '}
+              <span className={styles.bookNote}>{flightsNote}</span>
             </span>
             <span className={styles.bookArrow} aria-hidden="true">
               →
@@ -251,19 +245,13 @@ export function DestinationDetailModal({
             target="_blank"
             rel="noopener noreferrer sponsored"
             className={styles.bookLink}
-            aria-labelledby="hotels-link-label"
-            aria-describedby="hotels-link-note"
           >
             <span className={styles.bookIcon} aria-hidden="true">
               🛏️
             </span>
             <span className={styles.bookText}>
-              <span id="hotels-link-label" className={styles.bookLabel}>
-                Find hotels on Booking.com
-              </span>
-              <span id="hotels-link-note" className={styles.bookNote}>
-                {hotelsNote}
-              </span>
+              <span className={styles.bookLabel}>Find hotels on Booking.com</span>{' '}
+              <span className={styles.bookNote}>{hotelsNote}</span>
             </span>
             <span className={styles.bookArrow} aria-hidden="true">
               →
