@@ -1,4 +1,24 @@
 {
+  "alicante-spain": {
+    "description": "A Costa Blanca city with a hilltop castle, a palm-lined seafront promenade and sandy beaches, plus a lively tapas and old-town scene.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Santa Bárbara Castle",
+      "Explanada de España",
+      "Postiguet Beach",
+      "Day trip to Tabarca Island",
+      "Barrio de Santa Cruz",
+      "Arroz a banda"
+    ],
+    "visa": "free"
+  },
   "belfast-united-kingdom": {
     "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
     "climate": "oceanic",
@@ -350,6 +370,106 @@
       "Borgo Stretto",
       "Day trip to Lucca city walls",
       "Day trip to Florence"
+    ],
+    "visa": "free"
+  },
+  "rhodes-greece": {
+    "description": "A Dodecanese island where a walled medieval Old Town, Lindos's hilltop acropolis and long Aegean beaches share one sunny coastline.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Medieval Old Town of Rhodes",
+      "Acropolis of Lindos",
+      "Palace of the Grand Master",
+      "Butterfly Valley",
+      "Tsambika Beach",
+      "Day trip to Symi"
+    ],
+    "visa": "free"
+  },
+  "salzburg-austria": {
+    "description": "Mozart's birthplace, a baroque Alpine city beneath a hilltop fortress, with lakes and mountains within easy reach of its old town.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 140,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Hohensalzburg Fortress",
+      "Mozart's Birthplace",
+      "Mirabell Gardens",
+      "Getreidegasse shopping street",
+      "Sound of Music tour",
+      "Salzburger Nockerl dessert"
+    ],
+    "visa": "free"
+  },
+  "split-croatia": {
+    "description": "A Dalmatian port built inside a Roman emperor's palace, with a lively waterfront, nearby beaches and ferries to the Adriatic islands.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 115,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Diocletian's Palace",
+      "Marjan Hill viewpoint",
+      "Bačvice beach",
+      "Day trip to Hvar",
+      "Krka National Park",
+      "Riva promenade"
+    ],
+    "visa": "free"
+  },
+  "tenerife-spain": {
+    "description": "The largest Canary Island, pairing year-round sun and black-sand beaches with Mount Teide's volcanic landscapes and whale-watching waters.",
+    "climate": "subtropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 6, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Mount Teide cable car",
+      "Los Gigantes cliffs",
+      "Masca Gorge hike",
+      "Whale watching off Los Cristianos",
+      "Siam Park",
+      "Anaga Rural Park"
+    ],
+    "visa": "free"
+  },
+  "zurich-switzerland": {
+    "description": "Switzerland's financial hub on Lake Zurich, mixing a medieval old town, strong museums and quick rail links to the Alps.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 230,
+      "dailySpending": 140
+    },
+    "activities": [
+      "Old Town (Altstadt)",
+      "Lake Zurich boat trip",
+      "Kunsthaus Zurich",
+      "Uetliberg viewpoint",
+      "Bahnhofstrasse",
+      "Day trip to Rhine Falls"
     ],
     "visa": "free"
   }
