@@ -80,7 +80,9 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
 
 1. **Baseline first.** Add an engine diagnostics test that runs every `departureCities` origin
    through `getRecommendations` and records pool coverage, self-matches and distinct shuffle
-   results. Thresholds start at today's numbers, so each later step tightens them.
+   results. Thresholds start at today's numbers, so each later step tightens them. ✅
+   (`lib/engineDiagnostics.ts`'s `runEngineDiagnostics`, baselined against `pickableDestinations`/
+   `departureCities` in `tests/lib/engineDiagnostics.test.ts`)
 2. Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests.
 3. Price flights by distance from the actual origin via `estimateFlightCostPerPerson` in
    `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
