@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'
 import { formatGbp } from '@/lib/currency'
+import { UpgradePrompt } from '@/components/UpgradePrompt'
 import styles from './ResultsReveal.module.css'
 
 export interface ResultsRevealProps {
@@ -21,6 +22,14 @@ export interface ResultsRevealProps {
   distanceKm?: number
   nights?: number
   perPersonCost?: number
+  /**
+   * True when "Spin again" found no new destination only because every match for this search
+   * has already been shown, not because nothing matches at all — Pro's unlimited shuffles would
+   * have kept finding new ones.
+   */
+  shuffleLimitedByFreeTier?: boolean
+  /** Called when the user clicks "Upgrade to Pro" on the shuffle-limit upsell. */
+  onUpgrade?: () => void
 }
 
 const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -217,6 +226,8 @@ export function ResultsReveal({
   distanceKm,
   nights,
   perPersonCost,
+  shuffleLimitedByFreeTier = false,
+  onUpgrade,
 }: ResultsRevealProps) {
   const prefersReducedMotion = usePrefersReducedMotion()
   const target = recommendation ? recommendation.destination.name.toUpperCase() : 'NO MATCH'
@@ -264,10 +275,22 @@ export function ResultsReveal({
         <p className={styles.picking}>Picking your destination…</p>
       ) : !recommendation ? (
         <div className={styles.empty}>
-          <h2 className={styles.emptyTitle}>Nowhere fits… yet.</h2>
-          <p className={styles.emptyText}>
-            No destinations matched your search. Try adjusting your budget or distance.
-          </p>
+          {shuffleLimitedByFreeTier ? (
+            <>
+              <h2 className={styles.emptyTitle}>You&apos;ve seen them all!</h2>
+              <p className={styles.emptyText}>
+                Every match for this search has already come up. Upgrade to keep shuffling.
+              </p>
+              <UpgradePrompt feature="unlimited-shuffles" onUpgrade={onUpgrade} />
+            </>
+          ) : (
+            <>
+              <h2 className={styles.emptyTitle}>Nowhere fits… yet.</h2>
+              <p className={styles.emptyText}>
+                No destinations matched your search. Try adjusting your budget or distance.
+              </p>
+            </>
+          )}
           {changeSearchHref && (
             <Link href={changeSearchHref} className={styles.primaryAction}>
               Change my answers

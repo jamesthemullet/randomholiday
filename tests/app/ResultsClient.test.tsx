@@ -10,8 +10,11 @@ import { getRecommendations } from '@/lib/recommendationEngine'
 
 const city = departureCities[0]
 
+const mockPush = vi.fn()
+
 vi.mock('next/navigation', () => ({
   useSearchParams: () => mockSearchParams,
+  useRouter: () => ({ push: mockPush }),
 }))
 
 vi.mock('@/lib/recommendationEngine', async (importOriginal) => {
@@ -274,5 +277,61 @@ describe('ResultsClient', () => {
     const excluded = lastCall[1].excludeDestinationIds as string[]
     expect(excluded.length).toBeLessThanOrEqual(5)
     expect(new Set(excluded).size).toBe(excluded.length)
+  })
+
+  it('shows a Pro upsell when Spin again only fails because every match has already been shown', async () => {
+    const user = userEvent.setup()
+    const recommendations = vi.mocked(getRecommendations)
+    recommendations.mockClear()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    recommendations.mockImplementationOnce(() => ({
+      recommendations: [],
+      filterResult: { passed: [], removedByDistance: [], removedByBudget: [], removedByStyle: [] },
+    }))
+
+    await user.click(screen.getByRole('button', { name: 'Spin again' }))
+
+    expect(screen.getByRole('heading', { name: "You've seen them all!" })).toBeInTheDocument()
+
+    await user.click(screen.getByRole('button', { name: 'Upgrade to Pro' }))
+    expect(mockPush).toHaveBeenCalledWith('/pricing')
+  })
+
+  it('shows the generic empty state when Spin again truly finds no match, not the Pro upsell', async () => {
+    const user = userEvent.setup()
+    const recommendations = vi.mocked(getRecommendations)
+    recommendations.mockClear()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      distance: '20000',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    recommendations.mockImplementation(() => ({
+      recommendations: [],
+      filterResult: { passed: [], removedByDistance: [], removedByBudget: [], removedByStyle: [] },
+    }))
+
+    await user.click(screen.getByRole('button', { name: 'Spin again' }))
+
+    expect(screen.getByRole('heading', { name: 'Nowhere fits… yet.' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Upgrade to Pro' })).not.toBeInTheDocument()
   })
 })

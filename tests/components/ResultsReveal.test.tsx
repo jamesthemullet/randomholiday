@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { render, screen, fireEvent, act } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { renderToString } from 'react-dom/server'
 import {
   ResultsReveal,
@@ -206,6 +207,39 @@ describe('ResultsReveal', () => {
   it('omits the empty state link when no changeSearchHref is provided', () => {
     render(<ResultsReveal recommendation={null} onShuffle={vi.fn()} />)
     expect(screen.queryByRole('link')).not.toBeInTheDocument()
+  })
+
+  it('shows a Pro upsell instead of the generic empty state when the shuffle limit is hit', () => {
+    render(
+      <ResultsReveal
+        recommendation={null}
+        onShuffle={vi.fn()}
+        changeSearchHref="/"
+        shuffleLimitedByFreeTier
+      />
+    )
+    expect(screen.getByRole('heading', { name: "You've seen them all!" })).toBeInTheDocument()
+    expect(
+      screen.getByText('Every match for this search has already come up. Upgrade to keep shuffling.')
+    ).toBeInTheDocument()
+    expect(screen.queryByText(/no destinations matched/i)).not.toBeInTheDocument()
+    expect(screen.getByText('Unlimited destination shuffles with RandomHoliday Pro.')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Change my answers' })).toHaveAttribute('href', '/')
+  })
+
+  it('calls onUpgrade when the Pro upsell button is clicked', async () => {
+    const user = userEvent.setup()
+    const onUpgrade = vi.fn()
+    render(
+      <ResultsReveal
+        recommendation={null}
+        onShuffle={vi.fn()}
+        shuffleLimitedByFreeTier
+        onUpgrade={onUpgrade}
+      />
+    )
+    await user.click(screen.getByRole('button', { name: 'Upgrade to Pro' }))
+    expect(onUpgrade).toHaveBeenCalledTimes(1)
   })
 
   it('calls onSelect with the destination id', () => {

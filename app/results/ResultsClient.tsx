@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useCallback, useMemo, useState, useSyncExternalStore } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { TRAVEL_STYLES } from '@/lib/destinations'
 import { pickableDestinations } from '@/lib/catalogue'
@@ -26,6 +26,7 @@ const RECENT_EXCLUSION_LIMIT = 5
 
 export function ResultsClient() {
   const searchParams = useSearchParams()
+  const router = useRouter()
 
   const filterParams = useMemo(() => {
     const originId = searchParams.get('originId')
@@ -76,6 +77,9 @@ export function ResultsClient() {
 
   // undefined until the user shuffles; null means a shuffle found nothing.
   const [shuffledPick, setShuffledPick] = useState<DestinationScore | null | undefined>(undefined)
+  // True when a shuffle came back empty only because every match has already been shown this
+  // session (the free-tier "spin again" exclusion), not because nothing matches at all.
+  const [shuffleLimitedByFreeTier, setShuffleLimitedByFreeTier] = useState(false)
   const recommendation =
     shuffledPick !== undefined ? shuffledPick : (pinnedRecommendation ?? initialPick)
   const isPicking = shuffledPick === undefined && !pinnedRecommendation && !isClient
@@ -98,13 +102,23 @@ export function ResultsClient() {
 
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
-    setShuffledPick(
-      getRecommendations(pickableDestinations, {
-        ...filterParams,
-        excludeDestinationIds: recentlyShown.ids,
-      }).recommendations[0] ?? null
-    )
+    const picked = getRecommendations(pickableDestinations, {
+      ...filterParams,
+      excludeDestinationIds: recentlyShown.ids,
+    }).recommendations[0]
+
+    const limitedByExclusion =
+      !picked &&
+      recentlyShown.ids.length > 0 &&
+      getRecommendations(pickableDestinations, filterParams).recommendations.length > 0
+
+    setShuffleLimitedByFreeTier(limitedByExclusion)
+    setShuffledPick(picked ?? null)
   }, [filterParams, recentlyShown.ids])
+
+  const handleUpgrade = useCallback(() => {
+    router.push('/pricing')
+  }, [router])
 
   const handleSelect = useCallback(() => {
     setIsDetailModalOpen(true)
@@ -179,6 +193,8 @@ export function ResultsClient() {
           distanceKm={recommendation ? distanceKm : undefined}
           nights={filterParams.nights}
           perPersonCost={perPersonCost}
+          shuffleLimitedByFreeTier={shuffleLimitedByFreeTier}
+          onUpgrade={handleUpgrade}
         />
         <DestinationDetailModal
           isOpen={isDetailModalOpen}

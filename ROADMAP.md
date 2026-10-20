@@ -57,7 +57,12 @@ needs _something_ indexable.
 `lib/proTier.ts` exists but there's no visible moment prompting a free user toward `/pricing`.
 
 1. **One PR.** A single upsell prompt component shown on `/results` when a pro-only filter would
-   have changed the outcome (using existing `proTier.ts` logic), linking to `/pricing`.
+   have changed the outcome (using existing `proTier.ts` logic), linking to `/pricing`. ✅
+   (`/results` shows the existing `UpgradePrompt` for the `unlimited-shuffles` feature when "Spin
+   again" comes back empty only because every match has already been shown this session — not
+   because nothing matches — linking to `/pricing`; see `ResultsClient.tsx`'s
+   `shuffleLimitedByFreeTier`, tested in `tests/app/ResultsClient.test.tsx` and
+   `tests/components/ResultsReveal.test.tsx`)
 
 ### 5. Recommendation quality — _Engagement, Fun_
 
