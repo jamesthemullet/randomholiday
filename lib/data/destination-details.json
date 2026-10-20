@@ -19,6 +19,64 @@
     ],
     "visa": "free"
   },
+  "almeria-spain": {
+    "description": "A sunny Andalusian port city beneath a vast Moorish fortress, gateway to the wild, desert-like beaches of Cabo de Gata.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Alcazaba of Almería",
+      "Cabo de Gata natural park",
+      "Playa de los Genoveses",
+      "Tabernas Desert film sets",
+      "Tapas with a free plate in the old town"
+    ],
+    "visa": "free"
+  },
+  "antalya-turkey": {
+    "description": "A Turkish Riviera resort city pairing a Roman-era old town and harbour with long beaches backed by the Taurus Mountains.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 90,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Kaleiçi old town",
+      "Hadrian's Gate",
+      "Düden Waterfalls",
+      "Perge and Aspendos ruins",
+      "Boat trip to Kekova"
+    ],
+    "visa": "free"
+  },
+  "athens-greece": {
+    "description": "Greece's capital, where the Acropolis rises above a busy mix of ancient ruins, neighbourhood tavernas, street art and rooftop bars.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Acropolis and Parthenon",
+      "Acropolis Museum",
+      "Plaka and Anafiotika",
+      "Ancient Agora",
+      "Souvlaki in Monastiraki",
+      "Sunset at Cape Sounion"
+    ],
+    "visa": "free"
+  },
   "belfast-united-kingdom": {
     "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
     "climate": "oceanic",
@@ -57,6 +115,44 @@
     ],
     "visa": "free"
   },
+  "bodrum-turkey": {
+    "description": "A lively Aegean resort town centred on a crusader castle, with white-washed bays, yacht-filled marinas and warm clear water.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 100,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Bodrum Castle and Museum of Underwater Archaeology",
+      "Mausoleum at Halicarnassus site",
+      "Gulet boat trip along the coast",
+      "Bitez and Gümbet beaches",
+      "Yalıkavak marina"
+    ],
+    "visa": "free"
+  },
+  "bucharest-romania": {
+    "description": "Romania's capital of grand boulevards and communist-era monumentality, with a revived old town, café culture and a lively nightlife.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Palace of the Parliament",
+      "Lipscani old town",
+      "Herăstrău Park and Village Museum",
+      "Romanian Athenaeum",
+      "Day trip to Bran Castle"
+    ],
+    "visa": "free"
+  },
   "budapest-hungary": {
     "description": "Hungary's capital straddles the Danube, mixing thermal bathhouses, grand Habsburg architecture and lively ruin bars at modest prices.",
     "climate": "continental",
@@ -74,6 +170,26 @@
       "Ruin bar crawl in the Jewish Quarter",
       "Danube evening cruise",
       "Goulash and lángos at the Great Market Hall"
+    ],
+    "visa": "free"
+  },
+  "chania-greece": {
+    "description": "A Venetian harbour town in western Crete, with Ottoman lanes, lively tavernas and gorges and pink-sand beaches within reach.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 95,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Venetian Harbour and lighthouse",
+      "Samaria Gorge hike",
+      "Elafonisi pink-sand beach",
+      "Balos Lagoon",
+      "Old town and Splantzia square",
+      "Dakos and Cretan raki"
     ],
     "visa": "free"
   },
