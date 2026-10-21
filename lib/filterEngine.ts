@@ -2,6 +2,13 @@ import type { Coordinates, Destination, TravelStyle } from './destinations'
 import { calculateDistance } from './distanceCalculator'
 import { calculateBudget } from './budgetCalculator'
 
+/**
+ * Destinations closer than this to the origin are excluded as too-local to be a "holiday" and,
+ * for origins that are themselves a pickable destination, to stop a city recommending itself
+ * (see ROADMAP.md feature 5).
+ */
+export const MIN_DISTANCE_KM = 100
+
 export interface FilterParams {
   /** User's departure location */
   origin: Coordinates
@@ -32,7 +39,8 @@ function meetsDistanceFilter(
   origin: Coordinates,
   maxDistanceKm: number
 ): boolean {
-  return calculateDistance(origin, destination.coordinates) <= maxDistanceKm
+  const distanceKm = calculateDistance(origin, destination.coordinates)
+  return distanceKm >= MIN_DISTANCE_KM && distanceKm <= maxDistanceKm
 }
 
 function meetsBudgetFilter(
