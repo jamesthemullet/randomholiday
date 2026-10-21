@@ -4,6 +4,10 @@ import userEvent from '@testing-library/user-event'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import type { Destination } from '@/lib/destinations'
 
+vi.mock('next/navigation', () => ({
+  useRouter: () => ({ push: vi.fn() }),
+}))
+
 function jsonResponse(body: unknown): Response {
   return new Response(JSON.stringify(body), {
     status: 200,

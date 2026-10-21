@@ -62,7 +62,9 @@ which earn on every result.
 1. **One PR.** Replace the inline "Pro" message in `components/TripActions/TripActions.tsx` with
    the existing (unused) `components/UpgradePrompt/UpgradePrompt.tsx` for the `save-trip`
    feature, linking to `/pricing`. Resolves the matching AUDIT.md item about `ProGate`/
-   `UpgradePrompt` never being imported.
+   `UpgradePrompt` never being imported. ✅ (`components/TripActions/TripActions.tsx` now renders
+   `UpgradePrompt`, with `onUpgrade` routing to `/pricing`, tested in
+   `tests/components/TripActions.test.tsx`)
 
 Note: nothing sets a user's status to `'pro'` yet, so checkout currently unlocks nothing — see
 **Pro status** under Mise en place before adding further gates (e.g. a shuffle limit).

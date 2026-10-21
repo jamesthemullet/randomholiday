@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Badge } from '@/components/Badge'
+import { useRouter } from 'next/navigation'
+import { UpgradePrompt } from '@/components/UpgradePrompt'
 import styles from './TripActions.module.css'
 
 export interface TripActionsProps {
@@ -12,6 +13,7 @@ export interface TripActionsProps {
 }
 
 export function TripActions({ destinationName, shareUrl, className }: TripActionsProps) {
+  const router = useRouter()
   const [showUpsell, setShowUpsell] = useState(false)
   const [shareStatus, setShareStatus] = useState<string | null>(null)
 
@@ -58,12 +60,7 @@ export function TripActions({ destinationName, shareUrl, className }: TripAction
       </div>
 
       {showUpsell && (
-        <p className={styles.message} role="status">
-          <Badge variant="secondary" className={styles.proBadge}>
-            Pro
-          </Badge>
-          Save your favourite trips with RandomHoliday Pro.
-        </p>
+        <UpgradePrompt feature="save-trip" onUpgrade={() => router.push('/pricing')} />
       )}
 
       {shareStatus && (
