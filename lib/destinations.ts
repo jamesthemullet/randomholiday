@@ -30,7 +30,7 @@ export interface Destination {
   /** Primary climate type */
   climate: string
   travelStyles: TravelStyle[]
-  /** Months (1–12) when this destination is at its best */
+  /** Months (1–12) when this destination is at its best — mostly good weather, but also seasonal draws like Christmas markets */
   bestMonths: number[]
   estimatedCosts: EstimatedCosts
   activities: string[]
@@ -91,7 +91,7 @@ export const destinations: Destination[] = [
       'The golden city of a hundred spires — a fairy-tale medieval centre with world-class craft beer.',
     climate: 'continental',
     travelStyles: ['city', 'culture'],
-    bestMonths: [4, 5, 6, 9, 10],
+    bestMonths: [4, 5, 6, 9, 10, 12],
     estimatedCosts: { flightFromEurope: 80, hotelPerNight: 70, dailySpending: 50 },
     activities: [
       'Old Town Square',
@@ -99,6 +99,7 @@ export const destinations: Destination[] = [
       'Prague Castle',
       'Josefov',
       'Czech beer tasting',
+      'Old Town Square Christmas market',
     ],
     currency: 'CZK',
     visa: 'free',
@@ -200,7 +201,7 @@ export const destinations: Destination[] = [
       "Imperial grandeur meets coffee house culture — Vienna is Europe's most refined capital.",
     climate: 'continental',
     travelStyles: ['city', 'culture'],
-    bestMonths: [4, 5, 6, 9, 10],
+    bestMonths: [4, 5, 6, 9, 10, 12],
     estimatedCosts: { flightFromEurope: 100, hotelPerNight: 120, dailySpending: 80 },
     activities: [
       'Schönbrunn Palace',
@@ -208,6 +209,7 @@ export const destinations: Destination[] = [
       'Opera House',
       'Naschmarkt',
       'Café Central',
+      'Christmas markets',
     ],
     currency: 'EUR',
     visa: 'free',
@@ -223,7 +225,7 @@ export const destinations: Destination[] = [
       "Scotland's dramatic capital perches on volcanic rock — a city of medieval closes, festivals, and whisky.",
     climate: 'oceanic',
     travelStyles: ['city', 'culture', 'adventure'],
-    bestMonths: [5, 6, 7, 8, 9],
+    bestMonths: [5, 6, 7, 8, 9, 12],
     estimatedCosts: { flightFromEurope: 80, hotelPerNight: 110, dailySpending: 70 },
     activities: [
       'Edinburgh Castle',
@@ -231,6 +233,7 @@ export const destinations: Destination[] = [
       "Arthur's Seat hike",
       'Scotch whisky trail',
       'Fringe Festival',
+      'Christmas market and Hogmanay',
     ],
     currency: 'GBP',
     visa: 'free',
@@ -758,7 +761,7 @@ export const destinations: Destination[] = [
       'The city that never sleeps — iconic skyline, world-class food, Broadway, and Central Park.',
     climate: 'humid continental',
     travelStyles: ['city', 'culture'],
-    bestMonths: [4, 5, 6, 9, 10, 11],
+    bestMonths: [4, 5, 6, 9, 10, 11, 12],
     estimatedCosts: { flightFromEurope: 400, hotelPerNight: 200, dailySpending: 120 },
     activities: [
       'Times Square',
@@ -766,6 +769,7 @@ export const destinations: Destination[] = [
       'Metropolitan Museum',
       'Brooklyn Bridge',
       'Broadway show',
+      'Holiday markets and Rockefeller Center tree',
     ],
     currency: 'USD',
     visa: 'on-arrival',
