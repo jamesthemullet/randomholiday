@@ -100,7 +100,7 @@
     "description": "Germany's sprawling capital, layering Cold War history, world-class museums, street art and all-night clubs across its many districts.",
     "climate": "oceanic",
     "travelStyles": ["city", "culture"],
-    "bestMonths": [5, 6, 7, 8, 9],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
     "estimatedCosts": {
       "flightFromEurope": 110,
       "hotelPerNight": 105,
@@ -111,7 +111,8 @@
       "Berlin Wall Memorial",
       "Museum Island",
       "East Side Gallery",
-      "Currywurst at Mauerpark"
+      "Currywurst at Mauerpark",
+      "Christmas markets"
     ],
     "visa": "free"
   },
@@ -157,7 +158,7 @@
     "description": "Hungary's capital straddles the Danube, mixing thermal bathhouses, grand Habsburg architecture and lively ruin bars at modest prices.",
     "climate": "continental",
     "travelStyles": ["city", "culture"],
-    "bestMonths": [4, 5, 6, 9, 10],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
     "estimatedCosts": {
       "flightFromEurope": 90,
       "hotelPerNight": 80,
@@ -169,7 +170,8 @@
       "Hungarian Parliament Building",
       "Ruin bar crawl in the Jewish Quarter",
       "Danube evening cruise",
-      "Goulash and lángos at the Great Market Hall"
+      "Goulash and lángos at the Great Market Hall",
+      "Vörösmarty Square Christmas market"
     ],
     "visa": "free"
   },
@@ -513,7 +515,7 @@
     "description": "Bavaria's capital, where beer halls, baroque palaces and English Garden surfers sit within sight of the Alps.",
     "climate": "continental",
     "travelStyles": ["city", "culture"],
-    "bestMonths": [5, 6, 7, 8, 9],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
     "estimatedCosts": {
       "flightFromEurope": 110,
       "hotelPerNight": 130,
@@ -525,7 +527,8 @@
       "English Garden and Eisbach surfers",
       "Nymphenburg Palace",
       "Oktoberfest (late Sept)",
-      "Day trip to Neuschwanstein Castle"
+      "Day trip to Neuschwanstein Castle",
+      "Christkindlmarkt on Marienplatz"
     ],
     "visa": "free"
   },
@@ -645,7 +648,8 @@
       "Mirabell Gardens",
       "Getreidegasse shopping street",
       "Sound of Music tour",
-      "Salzburger Nockerl dessert"
+      "Salzburger Nockerl dessert",
+      "Christkindlmarkt"
     ],
     "visa": "free"
   },
@@ -693,7 +697,7 @@
     "description": "Switzerland's financial hub on Lake Zurich, mixing a medieval old town, strong museums and quick rail links to the Alps.",
     "climate": "oceanic",
     "travelStyles": ["city", "culture"],
-    "bestMonths": [5, 6, 7, 8, 9],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
     "estimatedCosts": {
       "flightFromEurope": 150,
       "hotelPerNight": 230,
@@ -705,7 +709,8 @@
       "Kunsthaus Zurich",
       "Uetliberg viewpoint",
       "Bahnhofstrasse",
-      "Day trip to Rhine Falls"
+      "Day trip to Rhine Falls",
+      "Christmas markets"
     ],
     "visa": "free"
   }
