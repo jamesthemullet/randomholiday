@@ -195,6 +195,46 @@
     ],
     "visa": "free"
   },
+  "corfu-greece": {
+    "description": "A green Ionian island of Venetian fortresses, olive groves and sheltered coves, with an elegant UNESCO-listed old town.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 105,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Corfu Old Town",
+      "Old Fortress and New Fortress",
+      "Achilleion Palace",
+      "Paleokastritsa beaches",
+      "Mount Pantokrator",
+      "Pastitsada and sofrito"
+    ],
+    "visa": "free"
+  },
+  "cork-ireland": {
+    "description": "Ireland's second city, a compact riverside hub of food markets and pubs, and the base for Blarney Castle and the Wild Atlantic Way.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 125,
+      "dailySpending": 80
+    },
+    "activities": [
+      "English Market",
+      "Blarney Castle",
+      "Cobh and the Titanic Experience",
+      "Day trip to Kinsale",
+      "Shandon Bells and Tower",
+      "Cork City Gaol"
+    ],
+    "visa": "free"
+  },
   "dalaman-turkey": {
     "description": "The gateway to Turkey's Turkish Riviera, near Ölüdeniz's lagoon, Dalyan's river tombs and pine-backed coves along the Turquoise Coast.",
     "climate": "mediterranean",
@@ -254,6 +294,46 @@
     ],
     "visa": "free"
   },
+  "florence-italy": {
+    "description": "The cradle of the Renaissance, packing Michelangelo's David, the Duomo and the Uffizi into a walkable city on the Arno.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 150,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Uffizi Gallery",
+      "Duomo and Brunelleschi's Dome",
+      "Galleria dell'Accademia",
+      "Ponte Vecchio",
+      "Piazzale Michelangelo at sunset",
+      "Bistecca alla fiorentina"
+    ],
+    "visa": "free"
+  },
+  "fuerteventura-spain": {
+    "description": "A Canary island of wide white-sand beaches, steady Atlantic winds and volcanic desert landscapes, popular for windsurfing and year-round sun.",
+    "climate": "subtropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 6, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 210,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Corralejo Dunes Natural Park",
+      "Windsurfing at Sotavento beach",
+      "Day trip to Lobos Island",
+      "Betancuria village",
+      "Cofete beach",
+      "Papas arrugadas with mojo sauce"
+    ],
+    "visa": "free"
+  },
   "geneva-switzerland": {
     "description": "A lakeside city of diplomacy and watchmaking, ringed by the Alps and Jura, with its famous jet d'eau.",
     "climate": "continental",
@@ -290,6 +370,46 @@
       "Live gig at King Tut's",
       "West End and Ashton Lane",
       "Day trip to Loch Lomond"
+    ],
+    "visa": "free"
+  },
+  "gran-canaria-spain": {
+    "description": "A Canary island of contrasts, with the Maspalomas dunes, a lively old quarter in Las Palmas and mountain villages inland.",
+    "climate": "subtropical",
+    "travelStyles": ["beach", "city", "adventure"],
+    "bestMonths": [3, 4, 5, 6, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 210,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Maspalomas Dunes",
+      "Vegueta old town in Las Palmas",
+      "Las Canteras beach",
+      "Roque Nublo hike",
+      "Puerto de Mogán",
+      "Ropa vieja canaria"
+    ],
+    "visa": "free"
+  },
+  "grenoble-france": {
+    "description": "An Alpine city ringed by mountains, with a cable car to the Bastille fortress and quick access to Isère ski resorts and trails.",
+    "climate": "continental",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [1, 2, 3, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 105,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Bastille cable car",
+      "Musée de Grenoble",
+      "Skiing at Les Deux Alpes",
+      "Vercors Regional Natural Park",
+      "Old town and Place Grenette",
+      "Gratin dauphinois"
     ],
     "visa": "free"
   },
