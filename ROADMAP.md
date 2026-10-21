@@ -55,9 +55,17 @@ needs _something_ indexable.
 ### 4. Pro tier upsell moment — _Acquisition_
 
 `lib/proTier.ts` exists but there's no visible moment prompting a free user toward `/pricing`.
+The upsell attaches to a perk Pro already offers ("Save trip") rather than withholding a filter
+from free users — degrading free recommendations works against _Fun_ and the affiliate links,
+which earn on every result.
 
-1. **One PR.** A single upsell prompt component shown on `/results` when a pro-only filter would
-   have changed the outcome (using existing `proTier.ts` logic), linking to `/pricing`.
+1. **One PR.** Replace the inline "Pro" message in `components/TripActions/TripActions.tsx` with
+   the existing (unused) `components/UpgradePrompt/UpgradePrompt.tsx` for the `save-trip`
+   feature, linking to `/pricing`. Resolves the matching AUDIT.md item about `ProGate`/
+   `UpgradePrompt` never being imported.
+
+Note: nothing sets a user's status to `'pro'` yet, so checkout currently unlocks nothing — see
+**Pro status** under Mise en place before adding further gates (e.g. a shuffle limit).
 
 ### 5. Recommendation quality — _Engagement, Fun_
 
@@ -202,12 +210,13 @@ one seasonally.
 
 ## Mise en place — infrastructure prerequisites
 
-| Investment                                     | Unlocks                                                                    |
-| :--------------------------------------------- | :------------------------------------------------------------------------- |
-| **Persistence layer** (Saved Trips step 1)     | Saved Trips, and any future accounts/history feature.                      |
-| **Destination pages** (feature 3)              | SEO acquisition and a linkable target for Shareable Result.                |
-| **Engine diagnostics test** (feature 5 step 1) | A before/after measure for every change to filtering, scoring or sampling. |
-| **Per-city route script** (feature 8 step 1)   | Every departure city after London, one `yarn data:routes <city-id>` each.  |
+| Investment                                      | Unlocks                                                                      |
+| :---------------------------------------------- | :--------------------------------------------------------------------------- |
+| **Persistence layer** (Saved Trips step 1)      | Saved Trips, and any future accounts/history feature.                        |
+| **Destination pages** (feature 3)               | SEO acquisition and a linkable target for Shareable Result.                  |
+| **Engine diagnostics test** (feature 5 step 1)  | A before/after measure for every change to filtering, scoring or sampling.   |
+| **Per-city route script** (feature 8 step 1)    | Every departure city after London, one `yarn data:routes <city-id>` each.    |
+| **Pro status** (Stripe webhook → stored status) | Any Pro gate actually unlocking after checkout; needs the persistence layer. |
 
 ---
 
