@@ -93,7 +93,10 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
    `departureCities` in `tests/lib/engineDiagnostics.test.ts`)
 2. Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests.
 3. Price flights by distance from the actual origin via `estimateFlightCostPerPerson` in
-   `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
+   `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it. ✅
+   (`lib/budgetCalculator.ts`'s `calculateBudget` now derives `flightCostPerPerson` from
+   `distanceKm` instead of `estimatedCosts.flightFromEurope`; `DestinationDetailModal` picks it
+   up automatically since it already passes `distanceKm` through)
 4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
 5. Change `calculateBudgetScore` to reward how closely the trip fits the budget rather than how
    far it undercuts it, so a bigger budget unlocks bigger trips.

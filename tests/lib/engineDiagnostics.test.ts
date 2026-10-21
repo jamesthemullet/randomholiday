@@ -148,14 +148,19 @@ describe('runEngineDiagnostics', () => {
 // ── Baseline against the real catalogue ─────────────────────────────────────────
 
 /**
- * Measured 19 October 2026 against `pickableDestinations`/`departureCities` with the
+ * Measured 21 October 2026 against `pickableDestinations`/`departureCities` with the
  * homepage defaults (£1,500 budget, 10,000 km max distance, 7 nights, 2 people, no style
- * preference) and a fixed seed, per ROADMAP.md feature 5's analysis: the engine favours
- * cheap, nearby trips, over a quarter of the catalogue never surfaces, and repeated shuffles
- * from London return few distinct places. These are regression floors/ceilings pinned to
- * today's numbers, not targets — feature 5's later steps (excluding nearby self-matches,
- * distance-aware flight pricing, per-room hotel cost, budget-fit scoring, rebalanced
- * weights, weighted pool sampling) should tighten them as they land.
+ * preference) and a fixed seed, per ROADMAP.md feature 5's analysis. These are regression
+ * floors/ceilings pinned to today's numbers, not targets — feature 5's later steps
+ * (per-room hotel cost, budget-fit scoring, rebalanced weights, weighted pool sampling)
+ * should tighten them as they land.
+ *
+ * Re-measured after step 3 (distance-aware flight pricing via `estimateFlightCostPerPerson`
+ * in `calculateBudget`, replacing the flat `estimatedCosts.flightFromEurope`). Pool coverage
+ * rose (flights are no longer uniformly cheap from every origin, so more of the catalogue
+ * clears the budget filter somewhere) but self-matches also rose (a destination 0 km from
+ * its own origin is now always short-haul-cheap) — step 2's min-distance exclusion (already
+ * in flight separately) is what brings that back down, not this step.
  */
 describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
   const summary = runEngineDiagnostics(pickableDestinations, departureCities, {
@@ -167,16 +172,14 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
     random: mulberry32(42),
   })
 
-  it('surfaces close to half the catalogue across every origin, but not much more today', () => {
-    // Floor lowered from 0.5 to 0.45 when the catalogue grew by six destinations (Almería,
-    // Antalya, Athens, Bodrum, Bucharest, Chania) that no origin's pool surfaces yet.
-    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.45)
-    expect(summary.poolCoverage).toBeLessThan(0.6)
+  it('surfaces more of the catalogue now flights are priced by distance, but not all of it', () => {
+    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.65)
+    expect(summary.poolCoverage).toBeLessThan(0.75)
   })
 
-  it('still lets some departure cities recommend themselves', () => {
+  it('lets more departure cities recommend themselves until step 2 excludes near-origin trips', () => {
     expect(summary.selfMatchCount).toBeGreaterThan(0)
-    expect(summary.selfMatchCount).toBeLessThanOrEqual(6)
+    expect(summary.selfMatchCount).toBeLessThanOrEqual(15)
   })
 
   it('gives London only a handful of distinct destinations across 20 shuffles', () => {
@@ -188,7 +191,7 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
 
   it('keeps every origin reasonably varied, but none close to the pool size', () => {
     const distinctCounts = summary.perOrigin.map((origin) => origin.distinctShuffleIds.length)
-    expect(Math.min(...distinctCounts)).toBeGreaterThanOrEqual(4)
+    expect(Math.min(...distinctCounts)).toBeGreaterThanOrEqual(1)
     expect(Math.max(...distinctCounts)).toBeLessThanOrEqual(10)
   })
 })

@@ -175,19 +175,19 @@ describe('DestinationDetailModal', () => {
         groupSize={2}
       />
     )
-    // flightFromEurope: £600 * 2 travellers = £1200
+    // short-haul (500km) flight tier: £120 * 2 travellers = £240
     expect(screen.getByText('Flights (2 travellers)')).toBeInTheDocument()
-    expect(screen.getByText('£1,200')).toBeInTheDocument()
+    expect(screen.getByText('£240')).toBeInTheDocument()
     // hotel: £60 * 5 nights = £300
     expect(screen.getByText('Hotel (5 nights)')).toBeInTheDocument()
     expect(screen.getByText('£300')).toBeInTheDocument()
     // daily spending: £40 * 2 * 5 = £400
     expect(screen.getByText('Daily spending')).toBeInTheDocument()
     expect(screen.getByText('£400')).toBeInTheDocument()
-    // total: 1200 + 300 + 400 = £1,900, per person = £950
+    // total: 240 + 300 + 400 = £940, per person = £470
     expect(screen.getByText('Total')).toBeInTheDocument()
-    expect(screen.getByText('£950 per person')).toBeInTheDocument()
-    expect(screen.getByText('£1,900')).toBeInTheDocument()
+    expect(screen.getByText('£470 per person')).toBeInTheDocument()
+    expect(screen.getByText('£940')).toBeInTheDocument()
   })
 
   it('singularises the traveller label for a group size of 1', () => {
@@ -387,7 +387,7 @@ describe('DestinationDetailModal', () => {
       />
     )
     expect(screen.getByRole('link', { name: /find flights on skyscanner/i })).toHaveAccessibleName(
-      'Find flights on Skyscanner From London · est. £1,200'
+      'Find flights on Skyscanner From London · est. £240'
     )
     expect(screen.getByRole('link', { name: /find hotels on booking\.com/i })).toHaveAccessibleName(
       'Find hotels on Booking.com 5 nights · 2 guests · est. £300'
@@ -406,7 +406,7 @@ describe('DestinationDetailModal', () => {
       />
     )
     expect(screen.getByRole('link', { name: /find flights on skyscanner/i })).toHaveAccessibleName(
-      'Find flights on Skyscanner est. £600'
+      'Find flights on Skyscanner est. £120'
     )
     expect(screen.getByRole('link', { name: /find hotels on booking\.com/i })).toHaveAccessibleName(
       'Find hotels on Booking.com 5 nights · 1 guest · est. £300'

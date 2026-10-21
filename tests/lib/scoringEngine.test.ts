@@ -40,12 +40,13 @@ function makeDestination(overrides: Partial<Destination> & { id: string }): Dest
 }
 
 /**
- * Paris (~341 km from London). flightFromEurope: $100.
+ * Paris (~341 km from London) — short-haul, so flightCostPerPerson is the fixed $120 tier
+ * rate from `estimateFlightCostPerPerson`, not `estimatedCosts.flightFromEurope`.
  * Budget for 7 nights, 2 people:
- *   flights: 100 × 2 = 200
+ *   flights: 120 × 2 = 240
  *   hotel:   80 × 7  = 560
  *   daily:   50 × 2 × 7 = 700
- *   total:   1460   → perPerson: 730
+ *   total:   1500   → perPerson: 750
  */
 const PARIS = makeDestination({
   id: 'paris',
@@ -57,12 +58,13 @@ const PARIS = makeDestination({
 })
 
 /**
- * Tokyo (~9 560 km from London). flightFromEurope: $800.
+ * Tokyo (~9 560 km from London) — ultra-long-haul, so flightCostPerPerson is the fixed
+ * $1,100 tier rate from `estimateFlightCostPerPerson`, not `estimatedCosts.flightFromEurope`.
  * Budget for 7 nights, 2 people:
- *   flights: 800 × 2   = 1 600
+ *   flights: 1 100 × 2 = 2 200
  *   hotel:   200 × 7   = 1 400
  *   daily:   120 × 2 × 7 = 1 680
- *   total:   4 680  → perPerson: 2 340
+ *   total:   5 280  → perPerson: 2 640
  */
 const TOKYO = makeDestination({
   id: 'tokyo',
@@ -143,8 +145,8 @@ describe('calculateBudgetScore', () => {
   })
 
   it('returns close to 1 when cost is far under budget', () => {
-    // Paris perPerson cost ~730; budget of 7300 leaves 90% headroom
-    expect(calculateBudgetScore(PARIS, 341, 7300, 7, 2)).toBeCloseTo(0.9, 1)
+    // Paris perPerson cost 750; budget of 7500 leaves 90% headroom
+    expect(calculateBudgetScore(PARIS, 341, 7500, 7, 2)).toBeCloseTo(0.9, 1)
   })
 
   it('returns 0 when cost exceeds the budget', () => {
@@ -152,7 +154,7 @@ describe('calculateBudgetScore', () => {
   })
 
   it('returns 0 when cost exactly equals the budget', () => {
-    expect(calculateBudgetScore(PARIS, 341, 730, 7, 2)).toBe(0)
+    expect(calculateBudgetScore(PARIS, 341, 750, 7, 2)).toBe(0)
   })
 })
 
