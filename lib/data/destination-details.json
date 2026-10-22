@@ -652,6 +652,26 @@
     ],
     "visa": "free"
   },
+  "naples-italy": {
+    "description": "A raucous, characterful port city beneath Vesuvius, birthplace of pizza and gateway to Pompeii, Capri and the Amalfi Coast.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Pompeii and Herculaneum",
+      "Napoli Sotterranea underground tour",
+      "National Archaeological Museum",
+      "Pizza at L'Antica Pizzeria da Michele",
+      "Spaccanapoli old town",
+      "Ferry to Capri"
+    ],
+    "visa": "free"
+  },
   "nice-france": {
     "description": "The French Riviera's capital, with a pebble-beach promenade, pastel Old Town markets and easy trips to Monaco and Antibes.",
     "climate": "mediterranean",
@@ -692,6 +712,26 @@
     ],
     "visa": "free"
   },
+  "palermo-italy": {
+    "description": "Sicily's Arab-Norman capital, with gilded cathedrals, crumbling baroque palazzi and some of Italy's best street food.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 90,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Palermo Cathedral",
+      "Cappella Palatina",
+      "Ballarò market street food",
+      "Monreale Cathedral mosaics",
+      "Mondello beach",
+      "Arancine and pane con la milza"
+    ],
+    "visa": "free"
+  },
   "palma-de-mallorca-spain": {
     "description": "Mallorca's elegant capital, with a Gothic cathedral on the seafront, a lively old quarter and beaches and mountains close by.",
     "climate": "mediterranean",
@@ -709,6 +749,26 @@
       "Serra de Tramuntana drive",
       "Sóller tram",
       "Cala Mondragó"
+    ],
+    "visa": "free"
+  },
+  "paphos-cyprus": {
+    "description": "A Cypriot seaside town of Roman mosaics and harbour tavernas, with rocky coves and Aphrodite's legendary birthplace nearby.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 180,
+      "hotelPerNight": 95,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Paphos Archaeological Park mosaics",
+      "Tombs of the Kings",
+      "Petra tou Romiou (Aphrodite's Rock)",
+      "Akamas Peninsula and Blue Lagoon",
+      "Paphos Harbour and castle",
+      "Meze dinner with halloumi"
     ],
     "visa": "free"
   },
@@ -732,6 +792,26 @@
     ],
     "visa": "free"
   },
+  "preveza-lefkada-greece": {
+    "description": "The gateway to Lefkada, an Ionian island of dazzling white-pebble beaches, linked to the mainland by a short causeway.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Porto Katsiki beach",
+      "Egremni beach",
+      "Kathisma beach windsurfing",
+      "Nidri waterfalls",
+      "Boat trip to Meganisi and Scorpios",
+      "Lefkada town waterfront"
+    ],
+    "visa": "free"
+  },
   "rhodes-greece": {
     "description": "A Dodecanese island where a walled medieval Old Town, Lindos's hilltop acropolis and long Aegean beaches share one sunny coastline.",
     "climate": "mediterranean",
@@ -749,6 +829,26 @@
       "Butterfly Valley",
       "Tsambika Beach",
       "Day trip to Symi"
+    ],
+    "visa": "free"
+  },
+  "rovaniemi-finland": {
+    "description": "The Arctic Circle capital of Finnish Lapland, with Northern Lights, husky sleds, reindeer farms and Santa Claus Village.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [12, 1, 2, 3, 6, 7],
+    "estimatedCosts": {
+      "flightFromEurope": 260,
+      "hotelPerNight": 150,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Northern Lights hunting",
+      "Santa Claus Village",
+      "Husky sledding",
+      "Reindeer sleigh ride",
+      "Arktikum science museum",
+      "Midnight sun on the Ounasvaara fell"
     ],
     "visa": "free"
   },
@@ -772,6 +872,26 @@
       "Christkindlmarkt"
     ],
     "visa": "free"
+  },
+  "sharm-el-sheikh-egypt": {
+    "description": "A Red Sea resort at the tip of Sinai, known for vivid coral reefs, year-round sun and desert excursions to Mount Sinai.",
+    "climate": "hot desert",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 230,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Snorkelling and diving at Ras Mohammed National Park",
+      "Naama Bay promenade",
+      "Sunrise hike up Mount Sinai",
+      "Quad biking in the desert",
+      "Tiran Island boat trip",
+      "Old Market (Sharm El Maya)"
+    ],
+    "visa": "on-arrival"
   },
   "split-croatia": {
     "description": "A Dalmatian port built inside a Roman emperor's palace, with a lively waterfront, nearby beaches and ferries to the Adriatic islands.",
