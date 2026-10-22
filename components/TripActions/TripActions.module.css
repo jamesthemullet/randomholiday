@@ -43,7 +43,3 @@
   font-size: var(--text-sm);
   color: var(--color-ink);
 }
-
-.proBadge {
-  flex-shrink: 0;
-}
