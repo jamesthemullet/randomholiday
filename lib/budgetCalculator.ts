@@ -16,7 +16,9 @@ export interface BudgetBreakdown {
   flightTier: FlightTier
   /** Round-trip flight cost per person in GBP */
   flightCostPerPerson: number
-  /** Hotel cost per night in GBP (whole group shares one booking) */
+  /** Number of hotel rooms booked, roughly one room per 2 travellers */
+  rooms: number
+  /** Hotel cost per night in GBP across all booked rooms */
   hotelCostPerNight: number
   /** Daily spending per person in GBP (food, transport, activities) */
   dailySpendingPerPerson: number
@@ -60,6 +62,13 @@ export function estimateFlightCostPerPerson(distanceKm: number): number {
   return FLIGHT_COSTS[getFlightTier(distanceKm)]
 }
 
+// Travellers sharing a hotel room
+const TRAVELLERS_PER_ROOM = 2
+
+export function estimateRooms(groupSize: number): number {
+  return Math.ceil(groupSize / TRAVELLERS_PER_ROOM)
+}
+
 export function calculateBudget(params: BudgetParams): BudgetBreakdown {
   const { destination, distanceKm, nights, groupSize } = params
 
@@ -69,7 +78,8 @@ export function calculateBudget(params: BudgetParams): BudgetBreakdown {
 
   const flightTier = getFlightTier(distanceKm)
   const flightCostPerPerson = destination.estimatedCosts.flightFromEurope
-  const hotelCostPerNight = destination.estimatedCosts.hotelPerNight
+  const rooms = estimateRooms(groupSize)
+  const hotelCostPerNight = destination.estimatedCosts.hotelPerNight * rooms
   const dailySpendingPerPerson = destination.estimatedCosts.dailySpending
 
   const totalFlightCost = flightCostPerPerson * groupSize
@@ -81,6 +91,7 @@ export function calculateBudget(params: BudgetParams): BudgetBreakdown {
   return {
     flightTier,
     flightCostPerPerson,
+    rooms,
     hotelCostPerNight,
     dailySpendingPerPerson,
     nights,
