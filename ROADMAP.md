@@ -96,7 +96,9 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
    removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
 3. Price flights by distance from the actual origin via `estimateFlightCostPerPerson` in
    `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
-4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
+4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests. ✅
+   (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
+   `tests/lib/budgetCalculator.test.ts`)
 5. Change `calculateBudgetScore` to reward how closely the trip fits the budget rather than how
    far it undercuts it, so a bigger budget unlocks bigger trips.
 6. Rebalance `DEFAULT_WEIGHTS`, softening or dropping distance. Distance is already a hard
