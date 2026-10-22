@@ -195,6 +195,46 @@
     ],
     "visa": "free"
   },
+  "bologna-italy": {
+    "description": "Emilia-Romagna's medieval university city of red-brick porticoes and leaning towers, famed across Italy for tortellini, ragù and its food markets.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Piazza Maggiore and Basilica di San Petronio",
+      "Climb the Asinelli Tower",
+      "Portico di San Luca walk",
+      "Quadrilatero food market",
+      "Tagliatelle al ragù and tortellini in brodo",
+      "Day trip to Modena balsamic vinegar producers"
+    ],
+    "visa": "free"
+  },
+  "brindisi-italy": {
+    "description": "A Puglian port city on the Adriatic with Roman monuments and a lively harbour, and a base for whitewashed hill towns and Salento beaches.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Roman Columns marking the end of the Appian Way",
+      "Swabian Castle and the harbour",
+      "Day trip to Ostuni's white old town",
+      "Alberobello trulli houses",
+      "Torre Guaceto nature reserve beaches",
+      "Orecchiette and fresh burrata"
+    ],
+    "visa": "free"
+  },
   "bucharest-romania": {
     "description": "Romania's capital of grand boulevards and communist-era monumentality, with a revived old town, café culture and a lively nightlife.",
     "climate": "humid continental",
@@ -235,6 +275,66 @@
     ],
     "visa": "free"
   },
+  "burgas-bulgaria": {
+    "description": "A Black Sea port city with a green seafront garden and sandy beaches, and the gateway to Sunny Beach and the old town of Nessebar.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Sea Garden and seafront promenade",
+      "Burgas Lake and Atanasovsko Lake birdwatching",
+      "Nessebar UNESCO old town",
+      "Sunny Beach",
+      "Sozopol old town and harbour",
+      "Grilled Black Sea fish and shopska salad"
+    ],
+    "visa": "free"
+  },
+  "casablanca-morocco": {
+    "description": "Morocco's sprawling Atlantic metropolis, home to the vast Hassan II Mosque, Art Deco boulevards and a seafront lined with fish restaurants.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Hassan II Mosque guided tour",
+      "Corniche at Ain Diab",
+      "Art Deco architecture in the city centre",
+      "Central Market seafood lunch",
+      "Habous Quarter and old medina",
+      "Rick's Café"
+    ],
+    "visa": "free"
+  },
+  "catania-italy": {
+    "description": "A Sicilian baroque city built from black lava stone beneath Mount Etna, with a boisterous fish market and a base for Etna and Taormina.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "La Pescheria fish market",
+      "Piazza del Duomo and the Elephant Fountain",
+      "Mount Etna summit hike",
+      "Taormina Greek theatre",
+      "Arancini and pasta alla Norma",
+      "Ortigia day trip to Syracuse"
+    ],
+    "visa": "free"
+  },
   "chania-greece": {
     "description": "A Venetian harbour town in western Crete, with Ottoman lanes, lively tavernas and gorges and pink-sand beaches within reach.",
     "climate": "mediterranean",
@@ -252,6 +352,26 @@
       "Balos Lagoon",
       "Old town and Splantzia square",
       "Dakos and Cretan raki"
+    ],
+    "visa": "free"
+  },
+  "chisinau-moldova": {
+    "description": "Moldova's leafy, Soviet-planned capital, a gateway to the country's cave-cellar wineries including Cricova and Mileștii Mici, among the world's largest.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 180,
+      "hotelPerNight": 55,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Cricova underground winery",
+      "Mileștii Mici wine cellars",
+      "Central Market and Stefan cel Mare park",
+      "Orheiul Vechi cave monastery",
+      "Mazarache and Plăcinte pastries",
+      "Day trip to Tiraspol in Transnistria"
     ],
     "visa": "free"
   },
