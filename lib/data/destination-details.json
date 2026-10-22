@@ -375,6 +375,26 @@
     ],
     "visa": "free"
   },
+  "copenhagen-denmark": {
+    "description": "Denmark's waterfront capital of colourful Nyhavn houses, canal harbour baths, design shops and a world-leading food scene, best explored by bike.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Nyhavn harbour",
+      "Tivoli Gardens",
+      "Rosenborg Castle",
+      "Torvehallerne food market for smørrebrød",
+      "Christiania freetown",
+      "Day trip to Kronborg Castle in Helsingør"
+    ],
+    "visa": "free"
+  },
   "corfu-greece": {
     "description": "A green Ionian island of Venetian fortresses, olive groves and sheltered coves, with an elegant UNESCO-listed old town.",
     "climate": "mediterranean",
@@ -494,6 +514,26 @@
     ],
     "visa": "free"
   },
+  "frankfurt-germany": {
+    "description": "Germany's financial hub, a skyscraper-lined city on the River Main with a rebuilt old town, museum riverfront and traditional apple-wine taverns.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 125,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Römerberg old town square",
+      "Städel Museum on the Museumsufer",
+      "Main Tower observation deck",
+      "Apple wine in a Sachsenhausen tavern",
+      "Frankfurt Christmas Market",
+      "Day trip to Heidelberg Castle"
+    ],
+    "visa": "free"
+  },
   "fuerteventura-spain": {
     "description": "A Canary island of wide white-sand beaches, steady Atlantic winds and volcanic desert landscapes, popular for windsurfing and year-round sun.",
     "climate": "subtropical",
@@ -511,6 +551,46 @@
       "Betancuria village",
       "Cofete beach",
       "Papas arrugadas with mojo sauce"
+    ],
+    "visa": "free"
+  },
+  "funchal-portugal": {
+    "description": "Madeira's hillside capital, climbing from a sunny harbour to flower-filled gardens, with levada walks, cable cars and fortified wine on the doorstep.",
+    "climate": "subtropical",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 230,
+      "hotelPerNight": 115,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Mercado dos Lavradores",
+      "Monte cable car and toboggan ride",
+      "Levada walk to Caldeirão Verde",
+      "Cabo Girão skywalk",
+      "Blandy's Wine Lodge tasting",
+      "Poncha and espetada in Câmara de Lobos"
+    ],
+    "visa": "free"
+  },
+  "gdansk-poland": {
+    "description": "A Baltic port city of rebuilt merchant façades along the Motława river, amber workshops, shipyard history and the Solidarity story, near Sopot's beaches.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Długi Targ and Neptune Fountain",
+      "European Solidarity Centre",
+      "St Mary's Church tower",
+      "Amber shopping on Mariacka Street",
+      "Sopot pier and beach",
+      "Westerplatte peninsula"
     ],
     "visa": "free"
   },
@@ -533,6 +613,26 @@
     ],
     "visa": "free"
   },
+  "girona-spain": {
+    "description": "A compact Catalan city of medieval walls, a colourful Onyar riverfront and a preserved Jewish quarter, close to Costa Brava coves and Dalí's Figueres.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Girona Cathedral steps",
+      "Walk the Passeig de la Muralla city walls",
+      "El Call Jewish quarter",
+      "Onyar river Cases Penjades houses",
+      "Day trip to the Dalí Theatre-Museum in Figueres",
+      "Costa Brava coves at Tossa de Mar"
+    ],
+    "visa": "free"
+  },
   "glasgow-united-kingdom": {
     "description": "Scotland's largest city is a Victorian-built hub of free museums, a thriving live music scene and Art Nouveau design, near Loch Lomond.",
     "climate": "oceanic",
@@ -550,6 +650,26 @@
       "Live gig at King Tut's",
       "West End and Ashton Lane",
       "Day trip to Loch Lomond"
+    ],
+    "visa": "free"
+  },
+  "gothenburg-sweden": {
+    "description": "Sweden's relaxed west-coast second city of canals, a lively fish market, leafy Haga cafés and an archipelago of car-free islands just offshore.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Feskekôrka fish market",
+      "Liseberg amusement park",
+      "Haga district cinnamon buns",
+      "Canal boat tour",
+      "Ferry to the Southern Archipelago islands",
+      "Universeum science centre"
     ],
     "visa": "free"
   },
