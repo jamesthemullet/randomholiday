@@ -174,8 +174,9 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
     // Antalya, Athens, Bodrum, Bucharest, Chania) that no origin's pool surfaces yet, and again
     // from 0.45 to 0.4 after six more (Heraklion, Isle of Man, Kraków, Lanzarote, Larnaca, Lyon),
     // and again from 0.4 to 0.35 after six more (Aberdeen, Agadir, Bilbao, Valencia, Venice,
-    // Zakynthos).
-    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.35)
+    // Zakynthos), and again from 0.35 to 0.3 after six more (Bologna, Brindisi, Burgas,
+    // Casablanca, Catania, Chișinău).
+    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.3)
     expect(summary.poolCoverage).toBeLessThan(0.6)
   })
 
