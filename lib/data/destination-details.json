@@ -1,4 +1,44 @@
 {
+  "aberdeen-united-kingdom": {
+    "description": "Scotland's granite city on the North Sea, with a long sandy beach, a working harbour and the gateway to Royal Deeside castles and whisky country.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Footdee fishing village",
+      "Aberdeen Maritime Museum",
+      "Dunnottar Castle",
+      "Royal Deeside and Balmoral",
+      "Speyside whisky distillery tour",
+      "Cove Bay and Aberdeen Beach"
+    ],
+    "visa": "free"
+  },
+  "agadir-morocco": {
+    "description": "A modern Atlantic resort rebuilt after the 1960 earthquake, with a broad sandy bay, year-round sun and the Atlas foothills and Souss valley close by.",
+    "climate": "semi-arid",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Agadir Beach and promenade",
+      "Kasbah hilltop ruins",
+      "Souk El Had",
+      "Taghazout surf break",
+      "Paradise Valley day trip",
+      "Tagine and fresh grilled sardines"
+    ],
+    "visa": "free"
+  },
   "alicante-spain": {
     "description": "A Costa Blanca city with a hilltop castle, a palm-lined seafront promenade and sandy beaches, plus a lively tapas and old-town scene.",
     "climate": "mediterranean",
@@ -113,6 +153,26 @@
       "East Side Gallery",
       "Currywurst at Mauerpark",
       "Christmas markets"
+    ],
+    "visa": "free"
+  },
+  "bilbao-spain": {
+    "description": "A Basque city reborn around Frank Gehry's Guggenheim, with a lively pintxos scene, riverside walks and green hills meeting the Bay of Biscay.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Guggenheim Museum Bilbao",
+      "Casco Viejo pintxos crawl",
+      "Vizcaya Bridge",
+      "Mount Artxanda funicular",
+      "Gaztelugatxe day trip",
+      "Mercado de la Ribera"
     ],
     "visa": "free"
   },
@@ -1050,6 +1110,66 @@
       "Bay of Kotor boat trip",
       "Climb to Kotor Fortress",
       "Njeguši smoked ham and cheese"
+    ],
+    "visa": "free"
+  },
+  "valencia-spain": {
+    "description": "A sunny Spanish coastal city of futuristic architecture, a vast urban park, city beaches and the birthplace of paella.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 115,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "City of Arts and Sciences",
+      "Turia Gardens",
+      "Mercado Central",
+      "Malvarrosa beach",
+      "Paella in the Albufera",
+      "Las Fallas festival"
+    ],
+    "visa": "free"
+  },
+  "venice-italy": {
+    "description": "A lagoon city of canals, palazzi and bridges with no roads, home to St Mark's Basilica and the glass-making islands of Murano.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 170,
+      "dailySpending": 100
+    },
+    "activities": [
+      "St Mark's Basilica and Square",
+      "Grand Canal vaporetto ride",
+      "Doge's Palace",
+      "Murano and Burano islands",
+      "Rialto Market",
+      "Cicchetti bar crawl"
+    ],
+    "visa": "free"
+  },
+  "zakynthos-greece": {
+    "description": "A Ionian island of turquoise coves, the shipwreck-framed Navagio Beach, limestone sea caves and nesting loggerhead turtles.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Navagio (Shipwreck) Beach",
+      "Blue Caves boat trip",
+      "Laganas Bay turtle watching",
+      "Mizithres viewpoint",
+      "Zakynthos town",
+      "Marathonisi turtle island"
     ],
     "visa": "free"
   },
