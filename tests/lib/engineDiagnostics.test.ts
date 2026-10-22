@@ -32,7 +32,9 @@ function makeDestination(overrides: Partial<Destination> & { id: string }): Dest
 
 const PARIS = makeDestination({ id: 'paris', coordinates: { lat: 48.8566, lng: 2.3522 } })
 const BERLIN = makeDestination({ id: 'berlin', coordinates: { lat: 52.52, lng: 13.405 } })
-const LONDON_DEST = makeDestination({ id: 'london', coordinates: { lat: 51.5074, lng: -0.1278 } })
+// Shares an id with LONDON_ORIGIN (self-match), but sits ~165km away so filterEngine's
+// MIN_DISTANCE_KM exclusion doesn't itself remove it from the pool before selfMatch is checked.
+const LONDON_DEST = makeDestination({ id: 'london', coordinates: { lat: 53.0074, lng: -0.1278 } })
 
 const LONDON_ORIGIN: DepartureCity = {
   id: 'london',
@@ -175,9 +177,10 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
     expect(summary.poolCoverage).toBeLessThan(0.6)
   })
 
-  it('still lets some departure cities recommend themselves', () => {
-    expect(summary.selfMatchCount).toBeGreaterThan(0)
-    expect(summary.selfMatchCount).toBeLessThanOrEqual(6)
+  it('no longer lets departure cities recommend themselves', () => {
+    // Feature 5 step 2: filterEngine now excludes destinations within MIN_DISTANCE_KM of the
+    // origin, which also removes same-location self-matches (Cairo → Cairo, Bangkok → Bangkok).
+    expect(summary.selfMatchCount).toBe(0)
   })
 
   it('gives London only a handful of distinct destinations across 20 shuffles', () => {

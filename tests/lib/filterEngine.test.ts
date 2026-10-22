@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { filterDestinations } from '@/lib/filterEngine'
+import { filterDestinations, MIN_DISTANCE_KM } from '@/lib/filterEngine'
 import type { FilterParams } from '@/lib/filterEngine'
 import type { Destination } from '@/lib/destinations'
 
@@ -161,6 +161,36 @@ describe('filterDestinations', () => {
     const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: 0 })
     expect(result.passed).toHaveLength(0)
     expect(result.removedByDistance).toHaveLength(ALL.length)
+  })
+
+  it('removes destinations closer than MIN_DISTANCE_KM to the origin', () => {
+    // Brighton, ~75 km from London — too local to be a "holiday", and this is also how a
+    // departure city stops recommending itself when it shares coordinates with a destination.
+    const brighton = makeDestination({
+      id: 'brighton',
+      coordinates: { lat: 50.8225, lng: -0.1372 },
+    })
+    const result = filterDestinations([...ALL, brighton], DEFAULT_PARAMS)
+    expect(result.passed.map((d) => d.id)).not.toContain('brighton')
+    expect(result.removedByDistance.map((d) => d.id)).toContain('brighton')
+  })
+
+  it('keeps a destination just beyond MIN_DISTANCE_KM away', () => {
+    // Place a destination due north of London, comfortably past MIN_DISTANCE_KM (1 degree
+    // latitude ≈ 111.2 km) so the assertion isn't sensitive to Haversine vs. flat-earth rounding.
+    const justBeyond = makeDestination({
+      id: 'just-beyond',
+      coordinates: { lat: LONDON.lat + (MIN_DISTANCE_KM + 20) / 111.2, lng: LONDON.lng },
+    })
+    const result = filterDestinations([justBeyond], DEFAULT_PARAMS)
+    expect(result.passed.map((d) => d.id)).toContain('just-beyond')
+  })
+
+  it('removes a destination that sits exactly at the origin', () => {
+    const sameLocation = makeDestination({ id: 'london-itself', coordinates: { ...LONDON } })
+    const result = filterDestinations([sameLocation], DEFAULT_PARAMS)
+    expect(result.passed).toHaveLength(0)
+    expect(result.removedByDistance.map((d) => d.id)).toContain('london-itself')
   })
 
   // ── budget filter ───────────────────────────────────────────────────────────
