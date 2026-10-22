@@ -93,7 +93,9 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
    results. Thresholds start at today's numbers, so each later step tightens them. ✅
    (`lib/engineDiagnostics.ts`'s `runEngineDiagnostics`, baselined against `pickableDestinations`/
    `departureCities` in `tests/lib/engineDiagnostics.test.ts`)
-2. Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests.
+2. Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests. ✅
+   (`MIN_DISTANCE_KM` in `lib/filterEngine.ts`, tested in `tests/lib/filterEngine.test.ts`; also
+   removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
 3. Price flights by distance from the actual origin via `estimateFlightCostPerPerson` in
    `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
 4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.

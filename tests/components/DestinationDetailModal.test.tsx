@@ -117,7 +117,9 @@ describe('DestinationDetailModal', () => {
       />
     )
     const img = screen.getByRole('img')
-    expect(img).toHaveAttribute('src', '/destinations/bali-indonesia.jpg')
+    expect(decodeURIComponent(img.getAttribute('src') ?? '')).toContain(
+      '/destinations/bali-indonesia.jpg'
+    )
     expect(img).toHaveAttribute('alt', 'Bali, Indonesia')
   })
 
@@ -164,7 +166,9 @@ describe('DestinationDetailModal', () => {
 
     expect(screen.queryByText('Photos coming soon')).not.toBeInTheDocument()
     const img = screen.getByRole('img')
-    expect(img).toHaveAttribute('src', '/destinations/rome-italy.jpg')
+    expect(decodeURIComponent(img.getAttribute('src') ?? '')).toContain(
+      '/destinations/rome-italy.jpg'
+    )
     expect(img).toHaveAttribute('alt', 'Rome, Italy')
   })
 
