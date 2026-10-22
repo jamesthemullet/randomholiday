@@ -893,6 +893,46 @@
     ],
     "visa": "on-arrival"
   },
+  "skiathos-greece": {
+    "description": "A small Sporades island of pine-fringed coves, a lively harbour town and some of the Aegean's most sheltered sandy beaches.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Koukounaries Beach",
+      "Skiathos Town harbour and Bourtzi",
+      "Boat trip to Lalaria Beach",
+      "Day trip to Skopelos and Mamma Mia sites",
+      "Kastro medieval fortress",
+      "Papadiamantis House Museum"
+    ],
+    "visa": "free"
+  },
+  "sofia-bulgaria": {
+    "description": "Bulgaria's capital, where Roman ruins, golden-domed Orthodox churches and Soviet-era boulevards sit beneath the Vitosha mountain.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Alexander Nevsky Cathedral",
+      "Boyana Church",
+      "Serdica Roman ruins",
+      "Vitosha Boulevard cafés",
+      "Banya Bashi Mosque",
+      "Day hike on Vitosha"
+    ],
+    "visa": "free"
+  },
   "split-croatia": {
     "description": "A Dalmatian port built inside a Roman emperor's palace, with a lively waterfront, nearby beaches and ferries to the Adriatic islands.",
     "climate": "mediterranean",
@@ -913,6 +953,26 @@
     ],
     "visa": "free"
   },
+  "tel-aviv-israel": {
+    "description": "A Mediterranean beachfront city of Bauhaus architecture, bustling markets and a restless café, food and nightlife scene.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 260,
+      "hotelPerNight": 220,
+      "dailySpending": 110
+    },
+    "activities": [
+      "White City Bauhaus walking tour",
+      "Carmel Market",
+      "Old Jaffa",
+      "Tel Aviv Beach promenade",
+      "Sarona Market",
+      "Day trip to Jerusalem"
+    ],
+    "visa": "free"
+  },
   "tenerife-spain": {
     "description": "The largest Canary Island, pairing year-round sun and black-sand beaches with Mount Teide's volcanic landscapes and whale-watching waters.",
     "climate": "subtropical",
@@ -930,6 +990,66 @@
       "Whale watching off Los Cristianos",
       "Siam Park",
       "Anaga Rural Park"
+    ],
+    "visa": "free"
+  },
+  "thessaloniki-greece": {
+    "description": "Greece's second city, with Byzantine churches, a waterfront White Tower, vibrant markets and a famously good food scene.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "White Tower",
+      "Rotunda and Arch of Galerius",
+      "Ano Poli old town",
+      "Modiano Market",
+      "Bougatsa pastry breakfast",
+      "Day trip to Mount Olympus"
+    ],
+    "visa": "free"
+  },
+  "tirana-albania": {
+    "description": "Albania's colourful, fast-changing capital of communist-era bunkers, Ottoman mosques, lively cafés and a mountain cable car.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Skanderbeg Square",
+      "Bunk'Art 1 museum",
+      "Dajti Ekspres cable car",
+      "Blloku district",
+      "Et'hem Bey Mosque",
+      "Day trip to Berat"
+    ],
+    "visa": "free"
+  },
+  "tivat-montenegro": {
+    "description": "A Bay of Kotor gateway with a polished marina, pebble beaches and medieval Kotor and Perast within easy reach.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Porto Montenegro marina",
+      "Kotor Old Town",
+      "Perast and Our Lady of the Rocks",
+      "Bay of Kotor boat trip",
+      "Climb to Kotor Fortress",
+      "Njeguši smoked ham and cheese"
     ],
     "visa": "free"
   },
