@@ -102,7 +102,9 @@ describe('ResultsReveal', () => {
   it('shows the destination photo, swapping to a poster if it fails to load', () => {
     render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
     const photo = screen.getByRole('img', { name: 'Bali, Indonesia' })
-    expect(photo).toHaveAttribute('src', '/destinations/bali-indonesia.jpg')
+    expect(decodeURIComponent(photo.getAttribute('src') ?? '')).toContain(
+      '/destinations/bali-indonesia.jpg'
+    )
 
     fireEvent.error(photo)
     expect(screen.queryByRole('img')).not.toBeInTheDocument()

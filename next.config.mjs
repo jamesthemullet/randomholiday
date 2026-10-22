@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   async redirects() {
     // The search form now lives on the homepage; keep old /discover links working.
     return [{ source: '/discover', destination: '/', permanent: true }]
