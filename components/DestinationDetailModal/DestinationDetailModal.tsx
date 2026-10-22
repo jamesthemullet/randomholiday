@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
 import type { Destination } from '@/lib/destinations'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { formatGbp } from '@/lib/currency'
@@ -126,9 +127,11 @@ export function DestinationDetailModal({
       <span className={styles.posterNote}>Photos coming soon</span>
     </div>
   ) : (
-    <img
+    <Image
       src={getDestinationImagePath(destination.id)}
       alt={`${destination.name}, ${destination.country}`}
+      fill
+      sizes="(min-width: 1024px) 640px, 100vw"
       className={styles.photo}
       onError={() => setImageFailed(true)}
     />

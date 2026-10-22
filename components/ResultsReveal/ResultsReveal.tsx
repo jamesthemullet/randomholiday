@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState, useSyncExternalStore } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'
@@ -134,9 +135,11 @@ function Postcard({
             <span className={styles.posterNote}>Photos coming soon</span>
           </div>
         ) : (
-          <img
+          <Image
             src={getDestinationImagePath(destination.id)}
             alt={`${destination.name}, ${destination.country}`}
+            fill
+            sizes="(min-width: 768px) 380px, 100vw"
             className={styles.image}
             // A server-rendered image can fail before hydration attaches onError, so also
             // check once it mounts.
