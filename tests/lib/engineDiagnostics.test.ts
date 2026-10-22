@@ -172,8 +172,10 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
   it('surfaces close to half the catalogue across every origin, but not much more today', () => {
     // Floor lowered from 0.5 to 0.45 when the catalogue grew by six destinations (Almería,
     // Antalya, Athens, Bodrum, Bucharest, Chania) that no origin's pool surfaces yet, and again
-    // from 0.45 to 0.4 after six more (Heraklion, Isle of Man, Kraków, Lanzarote, Larnaca, Lyon).
-    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.4)
+    // from 0.45 to 0.4 after six more (Heraklion, Isle of Man, Kraków, Lanzarote, Larnaca, Lyon),
+    // and again from 0.4 to 0.35 after six more (Aberdeen, Agadir, Bilbao, Valencia, Venice,
+    // Zakynthos).
+    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.35)
     expect(summary.poolCoverage).toBeLessThan(0.6)
   })
 
