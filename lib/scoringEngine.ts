@@ -47,7 +47,7 @@ export interface DestinationScore {
   styleScore: number
   /** 1 if travelMonth is a best month, 0.5 if adjacent, otherwise 0 */
   seasonScore: number
-  /** Fraction (0–1) of budget headroom remaining, 0 if over budget */
+  /** Fraction (0–1) of how closely the cost fits the budget, 0 if over budget */
   budgetScore: number
   /** Fraction (0–1) of distance headroom remaining, 0 if beyond maxDistanceKm */
   distanceScore: number
@@ -86,7 +86,8 @@ export function calculateBudgetScore(
 ): number {
   if (maxBudgetPerPerson <= 0) return 0
   const { perPersonCost } = calculateBudget({ destination, distanceKm, nights, groupSize })
-  return clamp01(1 - perPersonCost / maxBudgetPerPerson)
+  if (perPersonCost > maxBudgetPerPerson) return 0
+  return clamp01(perPersonCost / maxBudgetPerPerson)
 }
 
 export function calculateDistanceScore(distanceKm: number, maxDistanceKm: number): number {

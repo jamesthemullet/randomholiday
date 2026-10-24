@@ -100,7 +100,9 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
    `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
 4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
 5. Change `calculateBudgetScore` to reward how closely the trip fits the budget rather than how
-   far it undercuts it, so a bigger budget unlocks bigger trips.
+   far it undercuts it, so a bigger budget unlocks bigger trips. ✅
+   (`calculateBudgetScore` in `lib/scoringEngine.ts` now scores `perPersonCost / maxBudgetPerPerson`
+   — 0 if over budget, 1 at a perfect fit — tested in `tests/lib/scoringEngine.test.ts`)
 6. Rebalance `DEFAULT_WEIGHTS`, softening or dropping distance. Distance is already a hard
    filter, and for a "random holiday" nearer isn't better.
 7. Sample the top-10 pool weighted by score instead of uniformly in `recommendationEngine.ts`.
