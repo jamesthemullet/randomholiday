@@ -3,10 +3,17 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TripActions } from '@/components/TripActions'
 
+const push = vi.fn()
+
+vi.mock('next/navigation', () => ({
+  useRouter: () => ({ push }),
+}))
+
 describe('TripActions', () => {
   afterEach(() => {
     // @ts-expect-error -- cleaning up test-only navigator overrides
     delete navigator.share
+    push.mockClear()
   })
 
   it('renders Save trip and Share buttons', () => {
@@ -22,7 +29,7 @@ describe('TripActions', () => {
     expect(container.firstElementChild).toHaveClass('extra')
   })
 
-  it('shows a Pro upsell message when Save trip is clicked', async () => {
+  it('shows a Pro upsell prompt when Save trip is clicked', async () => {
     const user = userEvent.setup()
     render(<TripActions destinationName="Bali, Indonesia" />)
 
@@ -32,6 +39,16 @@ describe('TripActions', () => {
 
     expect(screen.getByText(/RandomHoliday Pro/)).toBeInTheDocument()
     expect(screen.getByText('Pro')).toBeInTheDocument()
+  })
+
+  it('navigates to the pricing page when the upsell prompt is upgraded', async () => {
+    const user = userEvent.setup()
+    render(<TripActions destinationName="Bali, Indonesia" />)
+
+    await user.click(screen.getByRole('button', { name: 'Save trip' }))
+    await user.click(screen.getByRole('button', { name: 'Upgrade to Pro' }))
+
+    expect(push).toHaveBeenCalledWith('/pricing')
   })
 
   it('uses the native share sheet when available', async () => {
