@@ -1,4 +1,44 @@
 {
+  "aberdeen-united-kingdom": {
+    "description": "Scotland's granite city on the North Sea, with a long sandy beach, a working harbour and the gateway to Royal Deeside castles and whisky country.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Footdee fishing village",
+      "Aberdeen Maritime Museum",
+      "Dunnottar Castle",
+      "Royal Deeside and Balmoral",
+      "Speyside whisky distillery tour",
+      "Cove Bay and Aberdeen Beach"
+    ],
+    "visa": "free"
+  },
+  "agadir-morocco": {
+    "description": "A modern Atlantic resort rebuilt after the 1960 earthquake, with a broad sandy bay, year-round sun and the Atlas foothills and Souss valley close by.",
+    "climate": "semi-arid",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Agadir Beach and promenade",
+      "Kasbah hilltop ruins",
+      "Souk El Had",
+      "Taghazout surf break",
+      "Paradise Valley day trip",
+      "Tagine and fresh grilled sardines"
+    ],
+    "visa": "free"
+  },
   "alicante-spain": {
     "description": "A Costa Blanca city with a hilltop castle, a palm-lined seafront promenade and sandy beaches, plus a lively tapas and old-town scene.",
     "climate": "mediterranean",
@@ -116,6 +156,26 @@
     ],
     "visa": "free"
   },
+  "bilbao-spain": {
+    "description": "A Basque city reborn around Frank Gehry's Guggenheim, with a lively pintxos scene, riverside walks and green hills meeting the Bay of Biscay.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Guggenheim Museum Bilbao",
+      "Casco Viejo pintxos crawl",
+      "Vizcaya Bridge",
+      "Mount Artxanda funicular",
+      "Gaztelugatxe day trip",
+      "Mercado de la Ribera"
+    ],
+    "visa": "free"
+  },
   "bodrum-turkey": {
     "description": "A lively Aegean resort town centred on a crusader castle, with white-washed bays, yacht-filled marinas and warm clear water.",
     "climate": "mediterranean",
@@ -132,6 +192,46 @@
       "Gulet boat trip along the coast",
       "Bitez and Gümbet beaches",
       "Yalıkavak marina"
+    ],
+    "visa": "free"
+  },
+  "bologna-italy": {
+    "description": "Emilia-Romagna's medieval university city of red-brick porticoes and leaning towers, famed across Italy for tortellini, ragù and its food markets.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Piazza Maggiore and Basilica di San Petronio",
+      "Climb the Asinelli Tower",
+      "Portico di San Luca walk",
+      "Quadrilatero food market",
+      "Tagliatelle al ragù and tortellini in brodo",
+      "Day trip to Modena balsamic vinegar producers"
+    ],
+    "visa": "free"
+  },
+  "brindisi-italy": {
+    "description": "A Puglian port city on the Adriatic with Roman monuments and a lively harbour, and a base for whitewashed hill towns and Salento beaches.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Roman Columns marking the end of the Appian Way",
+      "Swabian Castle and the harbour",
+      "Day trip to Ostuni's white old town",
+      "Alberobello trulli houses",
+      "Torre Guaceto nature reserve beaches",
+      "Orecchiette and fresh burrata"
     ],
     "visa": "free"
   },
@@ -175,6 +275,66 @@
     ],
     "visa": "free"
   },
+  "burgas-bulgaria": {
+    "description": "A Black Sea port city with a green seafront garden and sandy beaches, and the gateway to Sunny Beach and the old town of Nessebar.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Sea Garden and seafront promenade",
+      "Burgas Lake and Atanasovsko Lake birdwatching",
+      "Nessebar UNESCO old town",
+      "Sunny Beach",
+      "Sozopol old town and harbour",
+      "Grilled Black Sea fish and shopska salad"
+    ],
+    "visa": "free"
+  },
+  "casablanca-morocco": {
+    "description": "Morocco's sprawling Atlantic metropolis, home to the vast Hassan II Mosque, Art Deco boulevards and a seafront lined with fish restaurants.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Hassan II Mosque guided tour",
+      "Corniche at Ain Diab",
+      "Art Deco architecture in the city centre",
+      "Central Market seafood lunch",
+      "Habous Quarter and old medina",
+      "Rick's Café"
+    ],
+    "visa": "free"
+  },
+  "catania-italy": {
+    "description": "A Sicilian baroque city built from black lava stone beneath Mount Etna, with a boisterous fish market and a base for Etna and Taormina.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "La Pescheria fish market",
+      "Piazza del Duomo and the Elephant Fountain",
+      "Mount Etna summit hike",
+      "Taormina Greek theatre",
+      "Arancini and pasta alla Norma",
+      "Ortigia day trip to Syracuse"
+    ],
+    "visa": "free"
+  },
   "chania-greece": {
     "description": "A Venetian harbour town in western Crete, with Ottoman lanes, lively tavernas and gorges and pink-sand beaches within reach.",
     "climate": "mediterranean",
@@ -192,6 +352,46 @@
       "Balos Lagoon",
       "Old town and Splantzia square",
       "Dakos and Cretan raki"
+    ],
+    "visa": "free"
+  },
+  "chisinau-moldova": {
+    "description": "Moldova's leafy, Soviet-planned capital, a gateway to the country's cave-cellar wineries including Cricova and Mileștii Mici, among the world's largest.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 180,
+      "hotelPerNight": 55,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Cricova underground winery",
+      "Mileștii Mici wine cellars",
+      "Central Market and Stefan cel Mare park",
+      "Orheiul Vechi cave monastery",
+      "Mazarache and Plăcinte pastries",
+      "Day trip to Tiraspol in Transnistria"
+    ],
+    "visa": "free"
+  },
+  "copenhagen-denmark": {
+    "description": "Denmark's waterfront capital of colourful Nyhavn houses, canal harbour baths, design shops and a world-leading food scene, best explored by bike.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Nyhavn harbour",
+      "Tivoli Gardens",
+      "Rosenborg Castle",
+      "Torvehallerne food market for smørrebrød",
+      "Christiania freetown",
+      "Day trip to Kronborg Castle in Helsingør"
     ],
     "visa": "free"
   },
@@ -314,6 +514,26 @@
     ],
     "visa": "free"
   },
+  "frankfurt-germany": {
+    "description": "Germany's financial hub, a skyscraper-lined city on the River Main with a rebuilt old town, museum riverfront and traditional apple-wine taverns.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 125,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Römerberg old town square",
+      "Städel Museum on the Museumsufer",
+      "Main Tower observation deck",
+      "Apple wine in a Sachsenhausen tavern",
+      "Frankfurt Christmas Market",
+      "Day trip to Heidelberg Castle"
+    ],
+    "visa": "free"
+  },
   "fuerteventura-spain": {
     "description": "A Canary island of wide white-sand beaches, steady Atlantic winds and volcanic desert landscapes, popular for windsurfing and year-round sun.",
     "climate": "subtropical",
@@ -331,6 +551,46 @@
       "Betancuria village",
       "Cofete beach",
       "Papas arrugadas with mojo sauce"
+    ],
+    "visa": "free"
+  },
+  "funchal-portugal": {
+    "description": "Madeira's hillside capital, climbing from a sunny harbour to flower-filled gardens, with levada walks, cable cars and fortified wine on the doorstep.",
+    "climate": "subtropical",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 230,
+      "hotelPerNight": 115,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Mercado dos Lavradores",
+      "Monte cable car and toboggan ride",
+      "Levada walk to Caldeirão Verde",
+      "Cabo Girão skywalk",
+      "Blandy's Wine Lodge tasting",
+      "Poncha and espetada in Câmara de Lobos"
+    ],
+    "visa": "free"
+  },
+  "gdansk-poland": {
+    "description": "A Baltic port city of rebuilt merchant façades along the Motława river, amber workshops, shipyard history and the Solidarity story, near Sopot's beaches.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Długi Targ and Neptune Fountain",
+      "European Solidarity Centre",
+      "St Mary's Church tower",
+      "Amber shopping on Mariacka Street",
+      "Sopot pier and beach",
+      "Westerplatte peninsula"
     ],
     "visa": "free"
   },
@@ -353,6 +613,26 @@
     ],
     "visa": "free"
   },
+  "girona-spain": {
+    "description": "A compact Catalan city of medieval walls, a colourful Onyar riverfront and a preserved Jewish quarter, close to Costa Brava coves and Dalí's Figueres.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Girona Cathedral steps",
+      "Walk the Passeig de la Muralla city walls",
+      "El Call Jewish quarter",
+      "Onyar river Cases Penjades houses",
+      "Day trip to the Dalí Theatre-Museum in Figueres",
+      "Costa Brava coves at Tossa de Mar"
+    ],
+    "visa": "free"
+  },
   "glasgow-united-kingdom": {
     "description": "Scotland's largest city is a Victorian-built hub of free museums, a thriving live music scene and Art Nouveau design, near Loch Lomond.",
     "climate": "oceanic",
@@ -370,6 +650,26 @@
       "Live gig at King Tut's",
       "West End and Ashton Lane",
       "Day trip to Loch Lomond"
+    ],
+    "visa": "free"
+  },
+  "gothenburg-sweden": {
+    "description": "Sweden's relaxed west-coast second city of canals, a lively fish market, leafy Haga cafés and an archipelago of car-free islands just offshore.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Feskekôrka fish market",
+      "Liseberg amusement park",
+      "Haga district cinnamon buns",
+      "Canal boat tour",
+      "Ferry to the Southern Archipelago islands",
+      "Universeum science centre"
     ],
     "visa": "free"
   },
@@ -1050,6 +1350,66 @@
       "Bay of Kotor boat trip",
       "Climb to Kotor Fortress",
       "Njeguši smoked ham and cheese"
+    ],
+    "visa": "free"
+  },
+  "valencia-spain": {
+    "description": "A sunny Spanish coastal city of futuristic architecture, a vast urban park, city beaches and the birthplace of paella.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 115,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "City of Arts and Sciences",
+      "Turia Gardens",
+      "Mercado Central",
+      "Malvarrosa beach",
+      "Paella in the Albufera",
+      "Las Fallas festival"
+    ],
+    "visa": "free"
+  },
+  "venice-italy": {
+    "description": "A lagoon city of canals, palazzi and bridges with no roads, home to St Mark's Basilica and the glass-making islands of Murano.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 170,
+      "dailySpending": 100
+    },
+    "activities": [
+      "St Mark's Basilica and Square",
+      "Grand Canal vaporetto ride",
+      "Doge's Palace",
+      "Murano and Burano islands",
+      "Rialto Market",
+      "Cicchetti bar crawl"
+    ],
+    "visa": "free"
+  },
+  "zakynthos-greece": {
+    "description": "A Ionian island of turquoise coves, the shipwreck-framed Navagio Beach, limestone sea caves and nesting loggerhead turtles.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Navagio (Shipwreck) Beach",
+      "Blue Caves boat trip",
+      "Laganas Bay turtle watching",
+      "Mizithres viewpoint",
+      "Zakynthos town",
+      "Marathonisi turtle island"
     ],
     "visa": "free"
   },

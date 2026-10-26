@@ -12,6 +12,7 @@ const city = departureCities[0]
 
 vi.mock('next/navigation', () => ({
   useSearchParams: () => mockSearchParams,
+  useRouter: () => ({ push: vi.fn() }),
 }))
 
 vi.mock('@/lib/recommendationEngine', async (importOriginal) => {
