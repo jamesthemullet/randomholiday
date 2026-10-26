@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import { getFlightTier, estimateFlightCostPerPerson, calculateBudget } from '@/lib/budgetCalculator'
+import {
+  getFlightTier,
+  estimateFlightCostPerPerson,
+  estimateRooms,
+  calculateBudget,
+} from '@/lib/budgetCalculator'
 import type { BudgetParams } from '@/lib/budgetCalculator'
 import type { Destination } from '@/lib/destinations'
 
@@ -89,6 +94,30 @@ describe('estimateFlightCostPerPerson', () => {
   })
 })
 
+// ── estimateRooms ──────────────────────────────────────────────────────────────
+
+describe('estimateRooms', () => {
+  it('books 1 room for a solo traveller', () => {
+    expect(estimateRooms(1)).toBe(1)
+  })
+
+  it('books 1 room for a couple', () => {
+    expect(estimateRooms(2)).toBe(1)
+  })
+
+  it('books 2 rooms for a group of 3 (rounds up)', () => {
+    expect(estimateRooms(3)).toBe(2)
+  })
+
+  it('books 2 rooms for a group of 4', () => {
+    expect(estimateRooms(4)).toBe(2)
+  })
+
+  it('books 5 rooms for a group of 10', () => {
+    expect(estimateRooms(10)).toBe(5)
+  })
+})
+
 // ── calculateBudget ───────────────────────────────────────────────────────────
 
 describe('calculateBudget', () => {
@@ -109,9 +138,17 @@ describe('calculateBudget', () => {
     expect(result.flightCostPerPerson).toBe(300)
   })
 
-  it('reflects destination hotelCostPerNight', () => {
+  it('reflects destination hotelCostPerNight for a single room', () => {
     const result = calculateBudget(baseParams)
+    expect(result.rooms).toBe(1)
     expect(result.hotelCostPerNight).toBe(100)
+  })
+
+  it('charges hotels per room, not per night flat', () => {
+    const result = calculateBudget({ ...baseParams, groupSize: 4 })
+    // 2 rooms × £100/night
+    expect(result.rooms).toBe(2)
+    expect(result.hotelCostPerNight).toBe(200)
   })
 
   it('reflects destination dailySpendingPerPerson', () => {
@@ -164,12 +201,13 @@ describe('calculateBudget', () => {
 
   it('handles a large group (groupSize 10)', () => {
     const result = calculateBudget({ ...baseParams, groupSize: 10 })
-    // flights: 300×10=3000, hotel: 100×7=700, daily: 50×10×7=3500 → total 7200
+    // 5 rooms: flights: 300×10=3000, hotel: (100×5)×7=3500, daily: 50×10×7=3500 → total 10000
+    expect(result.rooms).toBe(5)
     expect(result.totalFlightCost).toBe(3000)
-    expect(result.totalHotelCost).toBe(700)
+    expect(result.totalHotelCost).toBe(3500)
     expect(result.totalDailySpending).toBe(3500)
-    expect(result.totalCost).toBe(7200)
-    expect(result.perPersonCost).toBe(720)
+    expect(result.totalCost).toBe(10000)
+    expect(result.perPersonCost).toBe(1000)
   })
 
   it('handles 0 nights (day trip)', () => {
