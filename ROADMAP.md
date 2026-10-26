@@ -111,7 +111,9 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
      distinct-per-origin floor.
    - 3c. Present the flight cost as a rough guide. In the destination detail modal's breakdown,
      show it as "from ~£X" (or a range) and point people to the Skyscanner link for real prices.
-4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
+4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests. ✅
+   (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
+   `tests/lib/budgetCalculator.test.ts`)
 5. Change `calculateBudgetScore` to reward how closely the trip fits the budget rather than how
    far it undercuts it, so a bigger budget unlocks bigger trips.
 6. Rebalance `DEFAULT_WEIGHTS`, softening or dropping distance. Distance is already a hard
