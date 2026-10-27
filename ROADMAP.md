@@ -96,8 +96,21 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
 2. Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests. ✅
    (`MIN_DISTANCE_KM` in `lib/filterEngine.ts`, tested in `tests/lib/filterEngine.test.ts`; also
    removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
-3. Price flights by distance from the actual origin via `estimateFlightCostPerPerson` in
-   `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
+3. Price flights from non-European origins by distance, but keep `flightFromEurope` for European
+   ones. The per-destination figure captures low-cost-carrier pricing, which in Europe matters
+   more than distance. Pure distance tiers would price Malaga or Lisbon like Cyprus and add big
+   price jumps at the tier edges (an earlier attempt, PR #161, was closed for this reason).
+   - 3a. Add `continent: Continent` to `DepartureCity` in `lib/departureCities.ts` and fill it
+     in for every origin, plus a test that every origin has one.
+   - 3b. Add an `originContinent` to `BudgetParams`. `calculateBudget` uses
+     `flightFromEurope` when it's `'Europe'` and `estimateFlightCostPerPerson(distanceKm)`
+     otherwise. Pass it through from `filterEngine.ts`, `scoringEngine.ts`,
+     `DestinationDetailModal` and `app/results/ResultsClient.tsx`, plus tests (London →
+     Malaga is unchanged, New York → Marrakech gets more expensive). Re-measure the
+     `tests/lib/engineDiagnostics.test.ts` baseline, and don't loosen the
+     distinct-per-origin floor.
+   - 3c. Present the flight cost as a rough guide. In the destination detail modal's breakdown,
+     show it as "from ~£X" (or a range) and point people to the Skyscanner link for real prices.
 4. Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests. ✅
    (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
    `tests/lib/budgetCalculator.test.ts`)
