@@ -713,6 +713,66 @@
     ],
     "visa": "free"
   },
+  "guernsey-guernsey": {
+    "description": "A small Channel Island with granite cliffs, sheltered bays and a pretty harbour town, offering coastal walks, German occupation history and Victor Hugo's exile home.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "St Peter Port harbour and Castle Cornet",
+      "Hauteville House, Victor Hugo's home",
+      "Cliff path walks on the south coast",
+      "Cobo Bay and Vazon Bay beaches",
+      "Day trip by ferry to Herm",
+      "Guernsey Gâche bread and fresh crab"
+    ],
+    "visa": "free"
+  },
+  "hamburg-germany": {
+    "description": "Germany's great port city, with the Elbphilharmonie concert hall, the Speicherstadt warehouse district, canal-side Alster lakes and the nightlife of St. Pauli.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 125,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Elbphilharmonie Plaza viewing deck",
+      "Speicherstadt and Miniatur Wunderland",
+      "Fischmarkt Sunday morning market",
+      "St. Pauli and the Reeperbahn",
+      "Alster lake boat cruise",
+      "Fischbrötchen at the harbour"
+    ],
+    "visa": "free"
+  },
+  "helsinki-finland": {
+    "description": "A design-minded Nordic capital on the Baltic, with neoclassical squares, a sea fortress, lively market halls and public saunas by the waterfront.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 150,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Suomenlinna sea fortress",
+      "Helsinki Cathedral and Senate Square",
+      "Löyly public sauna",
+      "Old Market Hall and Kauppatori",
+      "Temppeliaukio Rock Church",
+      "Karelian pies and salmon soup"
+    ],
+    "visa": "free"
+  },
   "heraklion-greece": {
     "description": "Crete's busy capital and main gateway, home to the Minoan palace of Knossos, a Venetian harbour fortress and a superb archaeological museum.",
     "climate": "mediterranean",
@@ -733,6 +793,26 @@
     ],
     "visa": "free"
   },
+  "hurghada-egypt": {
+    "description": "A Red Sea resort strip with warm turquoise water, reefs for snorkelling and diving, and desert and Nile excursions on offer all year.",
+    "climate": "hot desert",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 220,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Snorkelling at Giftun Islands",
+      "Diving the Abu Nuhas wrecks",
+      "Quad biking in the Eastern Desert",
+      "Day trip to Luxor",
+      "Hurghada Marina promenade",
+      "Grilled fish and koshari"
+    ],
+    "visa": "on-arrival"
+  },
   "ibiza-spain": {
     "description": "A Balearic island pairing world-famous clubs with quiet coves, a walled Dalt Vila old town and hippie markets.",
     "climate": "mediterranean",
@@ -749,6 +829,46 @@
       "Las Dalias hippie market",
       "Formentera day trip",
       "Club night at Amnesia"
+    ],
+    "visa": "free"
+  },
+  "innsbruck-austria": {
+    "description": "An Alpine city ringed by the Nordkette mountains, with a Habsburg old town, the Golden Roof and ski lifts that start in the centre.",
+    "climate": "temperate",
+    "travelStyles": ["adventure", "city", "culture"],
+    "bestMonths": [1, 2, 3, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Nordkette cable car to Hafelekar",
+      "Golden Roof and Old Town",
+      "Hofkirche and Hofburg",
+      "Bergisel Ski Jump",
+      "Swarovski Crystal Worlds",
+      "Tiroler Gröstl and Kaiserschmarrn"
+    ],
+    "visa": "free"
+  },
+  "inverness-united-kingdom": {
+    "description": "The Highland capital on the River Ness, a base for Loch Ness, Culloden battlefield, the Cairngorms and the wild north-west coast.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Loch Ness cruise",
+      "Culloden Battlefield",
+      "Urquhart Castle",
+      "Ness Islands riverside walk",
+      "Cairngorms National Park",
+      "Dolphin watching at Chanonry Point"
     ],
     "visa": "free"
   },
