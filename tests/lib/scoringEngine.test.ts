@@ -142,17 +142,26 @@ describe('calculateBudgetScore', () => {
     expect(calculateBudgetScore(PARIS, 341, 0, 7, 2)).toBe(0)
   })
 
-  it('returns close to 1 when cost is far under budget', () => {
-    // Paris perPerson cost ~730; budget of 7300 leaves 90% headroom
-    expect(calculateBudgetScore(PARIS, 341, 7300, 7, 2)).toBeCloseTo(0.9, 1)
+  it('returns close to 0 when cost is far under budget', () => {
+    // Paris perPerson cost ~730; a 7300 budget is barely used, so the fit is poor
+    expect(calculateBudgetScore(PARIS, 341, 7300, 7, 2)).toBeCloseTo(0.1, 1)
   })
 
   it('returns 0 when cost exceeds the budget', () => {
     expect(calculateBudgetScore(PARIS, 341, 100, 7, 2)).toBe(0)
   })
 
-  it('returns 0 when cost exactly equals the budget', () => {
-    expect(calculateBudgetScore(PARIS, 341, 730, 7, 2)).toBe(0)
+  it('returns 1 when cost exactly equals the budget', () => {
+    expect(calculateBudgetScore(PARIS, 341, 730, 7, 2)).toBe(1)
+  })
+
+  it('rewards a closer fit over a bigger budget for the same destination', () => {
+    // A bigger budget should not automatically win: the cost that uses most of
+    // the available budget scores higher than the same cost under a much
+    // larger one.
+    const tightFit = calculateBudgetScore(PARIS, 341, 800, 7, 2)
+    const looseFit = calculateBudgetScore(PARIS, 341, 3000, 7, 2)
+    expect(tightFit).toBeGreaterThan(looseFit)
   })
 })
 
@@ -229,9 +238,14 @@ describe('scoreDestination', () => {
     })
     expect(result.styleScore).toBe(1)
     expect(result.seasonScore).toBe(1)
-    // At the exact budget/distance limit, headroom scores are 0, so totalScore
-    // reflects only the style + season weights.
-    expect(result.totalScore).toBeCloseTo(100 * (DEFAULT_WEIGHTS.style + DEFAULT_WEIGHTS.season), 5)
+    // At the exact budget limit the cost fits the budget perfectly (score 1),
+    // while the exact distance limit still leaves no distance headroom (score 0).
+    expect(result.budgetScore).toBe(1)
+    expect(result.distanceScore).toBe(0)
+    expect(result.totalScore).toBeCloseTo(
+      100 * (DEFAULT_WEIGHTS.style + DEFAULT_WEIGHTS.season + DEFAULT_WEIGHTS.budget),
+      5
+    )
   })
 
   it('returns a totalScore of 0 for a total mismatch', () => {
