@@ -31,7 +31,7 @@
 
 .input:focus {
   outline: none;
-  box-shadow: 0 0 0 5px rgba(0, 201, 200, 0.35);
+  box-shadow: 0 0 0 3px var(--color-turquoise-contrast);
 }
 
 .inputError {
