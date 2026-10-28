@@ -56,6 +56,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-10-27 — resolved section 2's departure-combobox low-contrast focus-indicator item (scheduled daily maintenance run).
 - 2026-10-27 — resolved section 2's global focus-ring low-contrast item (scheduled daily maintenance run).
 - 2026-10-27 — resolved section 3's unused `framer-motion`/`motion` dependencies item (scheduled daily maintenance run).
+- 2026-10-28 — resolved section 3's deprecated `next/image` `priority` prop item on `Hero.tsx` (scheduled daily maintenance run).
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -95,7 +96,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [x] Remove the unused `framer-motion` and `motion` dependencies (`package.json:47-48`) — nothing in `app/`, `components/` or `lib/` imports either. (found: 2026-10-26) (resolved: 2026-10-27, PR #187) — confirmed via a repo-wide grep of `app/`, `components/`, and `lib/` that neither package is imported anywhere; removed both from `package.json`'s `dependencies` and ran `yarn install` to update `yarn.lock` accordingly. Verified via `yarn lint` (0 errors), `yarn typecheck`, `yarn test` (1876 passing), and `yarn build`.
 - [ ] Make `/` static again: `app/page.tsx:87-89` awaits `searchParams` only to prefill the form from "Change my answers", which makes the homepage a per-request render (dynamic in build output). Read the params client-side in `TripForm` via `useSearchParams` inside a Suspense boundary so it can prerender. (found: 2026-10-26)
 - [ ] (low) `/results` ships the whole destination catalogue to the browser (~43KB gzip) because `app/results/ResultsClient.tsx:7-14` imports `pickableDestinations` and runs the recommendation engine client-side. Consider picking server-side or trimming the client copy to the fields the scorer needs. (found: 2026-10-26)
-- [ ] `components/Hero/Hero.tsx:18` uses `next/image`'s `priority` prop, deprecated in Next 16 in favour of `preload` (see `node_modules/next/dist/docs/01-app/03-api-reference/02-components/image.md`). Switch the prop. (found: 2026-10-26)
+- [x] `components/Hero/Hero.tsx:18` uses `next/image`'s `priority` prop, deprecated in Next 16 in favour of `preload` (see `node_modules/next/dist/docs/01-app/03-api-reference/02-components/image.md`). Switch the prop. (found: 2026-10-26) (resolved: 2026-10-28, PR #TBD) — swapped the boolean `priority` prop for `preload` on the Santorini hero image in `components/Hero/Hero.tsx`; per the Next 16 docs, `preload` is the direct replacement with identical behavior (inserts a preload `<link>` for this above-the-fold LCP candidate). No other file in `app/`, `components/` or `lib/` used the deprecated prop. Verified via `yarn lint` (0 errors), `yarn typecheck`, `yarn test` (1876 passing), and `yarn build`.
 
 ## 4. SEO / metadata
 
