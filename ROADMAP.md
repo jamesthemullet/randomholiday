@@ -21,12 +21,12 @@ A shareable link/URL for a result so "you got Lisbon" can be sent to a friend in
 seen once in `/results`.
 
 - [x] Encode the result's inputs (destination + preferences) into a URL query param or slug — pure
-  function + tests, reusing the existing `recommendationEngine`/`scoringEngine` output shape.
-  (`lib/shareableResult.ts`, tested in `tests/lib/shareableResult.test.ts`)
+      function + tests, reusing the existing `recommendationEngine`/`scoringEngine` output shape.
+      (`lib/shareableResult.ts`, tested in `tests/lib/shareableResult.test.ts`)
 - [x] `/results` reads that param on load and re-renders the same result deterministically instead
-  of only working from live form state. (`app/results/ResultsClient.tsx`'s `pinnedDestinationId`/
-  `pinnedRecommendation`, tested in `tests/app/ResultsClient.test.tsx`; wired into the Share button
-  in PR #146)
+      of only working from live form state. (`app/results/ResultsClient.tsx`'s `pinnedDestinationId`/
+      `pinnedRecommendation`, tested in `tests/app/ResultsClient.test.tsx`; wired into the Share button
+      in PR #146)
 
 ### 2. "Spin again" exclusion — _Engagement, Fun_
 
@@ -34,12 +34,12 @@ Re-rolling currently can repeat the same destination. Exclude the last N results
 feels like discovery, not repetition.
 
 - [x] Track recently-shown destination IDs client-side (session state) — pure function + tests
-  extending `recommendationEngine.ts`'s selection logic to accept an exclusion list.
-  (`excludeDestinationIds` on `RecommendationParams` in `lib/recommendationEngine.ts`, tested in
-  `tests/lib/recommendationEngine.test.ts`)
+      extending `recommendationEngine.ts`'s selection logic to accept an exclusion list.
+      (`excludeDestinationIds` on `RecommendationParams` in `lib/recommendationEngine.ts`, tested in
+      `tests/lib/recommendationEngine.test.ts`)
 - [x] Wire the exclusion list into the "spin again" action on `/results`.
-  (`app/results/ResultsClient.tsx` tracks the last 5 shown destinations and passes them as
-  `excludeDestinationIds` on shuffle, tested in `tests/app/ResultsClient.test.tsx`)
+      (`app/results/ResultsClient.tsx` tracks the last 5 shown destinations and passes them as
+      `excludeDestinationIds` on shuffle, tested in `tests/app/ResultsClient.test.tsx`)
 
 ### 3. Destination structured data — _Acquisition_
 
@@ -47,10 +47,10 @@ Each suggested destination already has data (`lib/destinations.ts`) but no crawl
 needs _something_ indexable.
 
 - [x] **One PR.** Static per-destination pages (`/destination/[slug]`) built from
-  `lib/destinations.ts`, with basic JSON-LD — self-contained, reuses existing destination data.
-  (`app/destination/[slug]/page.tsx`, built from `pickableDestinations` in `lib/catalogue.ts` so
-  only destinations the app actually recommends get a page; `TouristDestination` JSON-LD and the
-  new routes added to `app/sitemap.ts`, tested in `tests/app/destination-page.test.tsx`)
+      `lib/destinations.ts`, with basic JSON-LD — self-contained, reuses existing destination data.
+      (`app/destination/[slug]/page.tsx`, built from `pickableDestinations` in `lib/catalogue.ts` so
+      only destinations the app actually recommends get a page; `TouristDestination` JSON-LD and the
+      new routes added to `app/sitemap.ts`, tested in `tests/app/destination-page.test.tsx`)
 
 ### 4. Pro tier upsell moment — _Acquisition_
 
@@ -60,11 +60,11 @@ from free users — degrading free recommendations works against _Fun_ and the a
 which earn on every result.
 
 - [x] **One PR.** Replace the inline "Pro" message in `components/TripActions/TripActions.tsx` with
-  the existing (unused) `components/UpgradePrompt/UpgradePrompt.tsx` for the `save-trip`
-  feature, linking to `/pricing`. Resolves the matching AUDIT.md item about `ProGate`/
-  `UpgradePrompt` never being imported. (`components/TripActions/TripActions.tsx` now renders
-  `UpgradePrompt`, with `onUpgrade` routing to `/pricing`, tested in
-  `tests/components/TripActions.test.tsx`)
+      the existing (unused) `components/UpgradePrompt/UpgradePrompt.tsx` for the `save-trip`
+      feature, linking to `/pricing`. Resolves the matching AUDIT.md item about `ProGate`/
+      `UpgradePrompt` never being imported. (`components/TripActions/TripActions.tsx` now renders
+      `UpgradePrompt`, with `onUpgrade` routing to `/pricing`, tested in
+      `tests/components/TripActions.test.tsx`)
 
 Note: nothing sets a user's status to `'pro'` yet, so checkout currently unlocks nothing — see
 **Pro status** under Mise en place before adding further gates (e.g. a shuffle limit).
@@ -89,26 +89,41 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
   Buenos Aires.
 
 - [x] **Baseline first.** Add an engine diagnostics test that runs every `departureCities` origin
-  through `getRecommendations` and records pool coverage, self-matches and distinct shuffle
-  results. Thresholds start at today's numbers, so each later step tightens them.
-  (`lib/engineDiagnostics.ts`'s `runEngineDiagnostics`, baselined against `pickableDestinations`/
-  `departureCities` in `tests/lib/engineDiagnostics.test.ts`)
+      through `getRecommendations` and records pool coverage, self-matches and distinct shuffle
+      results. Thresholds start at today's numbers, so each later step tightens them.
+      (`lib/engineDiagnostics.ts`'s `runEngineDiagnostics`, baselined against `pickableDestinations`/
+      `departureCities` in `tests/lib/engineDiagnostics.test.ts`)
 - [x] Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests.
-  (`MIN_DISTANCE_KM` in `lib/filterEngine.ts`, tested in `tests/lib/filterEngine.test.ts`; also
-  removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
-- [ ] Price flights by distance from the actual origin via `estimateFlightCostPerPerson` in
-  `calculateBudget`. The destination detail modal's cost breakdown changes too, so check it.
+      (`MIN_DISTANCE_KM` in `lib/filterEngine.ts`, tested in `tests/lib/filterEngine.test.ts`; also
+      removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
+- [ ] Price flights from non-European origins by distance, but keep `flightFromEurope` for European
+      ones. The per-destination figure captures low-cost-carrier pricing, which in Europe matters
+      more than distance. Pure distance tiers would price Malaga or Lisbon like Cyprus and add big
+      price jumps at the tier edges (an earlier attempt, PR #161, was closed for this reason).
+  - [ ] Add `continent: Continent` to `DepartureCity` in `lib/departureCities.ts` and fill it
+        in for every origin, plus a test that every origin has one.
+  - [ ] Add an `originContinent` to `BudgetParams`. `calculateBudget` uses
+        `flightFromEurope` when it's `'Europe'` and `estimateFlightCostPerPerson(distanceKm)`
+        otherwise. Pass it through from `filterEngine.ts`, `scoringEngine.ts`,
+        `DestinationDetailModal` and `app/results/ResultsClient.tsx`, plus tests (London →
+        Malaga is unchanged, New York → Marrakech gets more expensive). Re-measure the
+        `tests/lib/engineDiagnostics.test.ts` baseline, and don't loosen the
+        distinct-per-origin floor.
+  - [ ] Present the flight cost as a rough guide. In the destination detail modal's breakdown,
+        show it as "from ~£X" (or a range) and point people to the Skyscanner link for real prices.
 - [x] Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
-  (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
-  `tests/lib/budgetCalculator.test.ts`)
-- [ ] Change `calculateBudgetScore` to reward how closely the trip fits the budget rather than how
-  far it undercuts it, so a bigger budget unlocks bigger trips.
+      (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
+      `tests/lib/budgetCalculator.test.ts`)
+- [x] Change `calculateBudgetScore` to reward how closely the trip fits the budget rather than how
+      far it undercuts it, so a bigger budget unlocks bigger trips.
+      (`calculateBudgetScore` in `lib/scoringEngine.ts` now scores `perPersonCost / maxBudgetPerPerson`
+      — 0 if over budget, 1 at a perfect fit — tested in `tests/lib/scoringEngine.test.ts`)
 - [ ] Rebalance `DEFAULT_WEIGHTS`, softening or dropping distance. Distance is already a hard
-  filter, and for a "random holiday" nearer isn't better.
+      filter, and for a "random holiday" nearer isn't better.
 - [ ] Sample the top-10 pool weighted by score instead of uniformly in `recommendationEngine.ts`.
-  Session-level "don't show me that again" is feature 2.
+      Session-level "don't show me that again" is feature 2.
 - [ ] **Content, not code.** Grow the catalogue where it's thin. Oceania has 4 of 56 destinations,
-  so Sydney, Melbourne and Auckland get only 6–9 options.
+      so Sydney, Melbourne and Auckland get only 6–9 options.
 
 ## Next (this quarter — moderate new build)
 
@@ -117,7 +132,7 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
 Let a user save a result to come back to later — the first feature that needs persistence.
 
 - [ ] **Infra (Mise en Place):** pick and wire a lightweight persistence layer (no DB/auth exists
-  yet — could be as simple as `localStorage` for v1, or a real DB if accounts are wanted).
+      yet — could be as simple as `localStorage` for v1, or a real DB if accounts are wanted).
 - [ ] Save/unsave action on `/results`, storing the result's encoded state from feature 1.
 - [ ] A "saved trips" list page.
 
@@ -126,9 +141,9 @@ Let a user save a result to come back to later — the first feature that needs 
 Roll two or three destinations at once and compare them side by side on budget/weather/distance.
 
 - [ ] Extend `recommendationEngine.ts` to return N candidates instead of one — pure function change +
-  tests.
+      tests.
 - [ ] Comparison table UI on `/results`, reusing `budgetCalculator`/`seasonalWeather`/
-  `distanceCalculator` outputs already computed per candidate.
+      `distanceCalculator` outputs already computed per candidate.
 
 ### 8. More departure cities — _Acquisition_
 
@@ -140,15 +155,15 @@ catalogue as stubs and stay unpickable until their details land in
 `lib/data/destination-details.json`.
 
 - [ ] **Infra (Mise en Place):** generalise the London script into
-  `yarn data:routes <city-id>`. It takes a config of each city's airports (IATA code plus
-  Wikipedia page) and writes `lib/data/routes/<city-id>.json`. The facts (country, coordinates,
-  currency, continent) move to one shared destinations file, so a destination served from
-  several cities is stored once. London's output must match today's.
+      `yarn data:routes <city-id>`. It takes a config of each city's airports (IATA code plus
+      Wikipedia page) and writes `lib/data/routes/<city-id>.json`. The facts (country, coordinates,
+      currency, continent) move to one shared destinations file, so a destination served from
+      several cities is stored once. London's output must match today's.
 - [ ] Make the catalogue and engine origin-aware. A destination's `london` field becomes
-  `routes: Record<originId, Route>`, and `getRecommendations` only picks destinations reachable
-  from the chosen origin. Decide what counts as reachable before the smaller airports go live.
-  Inverness flies to very few places directly, so "any destination, one stop" may suit it
-  better. Also stop a city recommending itself (Edinburgh → Edinburgh).
+      `routes: Record<originId, Route>`, and `getRecommendations` only picks destinations reachable
+      from the chosen origin. Decide what counts as reachable before the smaller airports go live.
+      Inverness flies to very few places directly, so "any destination, one stop" may suit it
+      better. Also stop a city recommending itself (Edinburgh → Edinburgh).
 
 **UK first.** For each city: add its airports to the config, run `yarn data:routes <city-id>`,
 check the new stubs and the merges with existing destinations (watch for airport-named cities,
