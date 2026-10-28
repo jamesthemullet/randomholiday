@@ -1145,6 +1145,26 @@
     ],
     "visa": "free"
   },
+  "menorca-spain": {
+    "description": "A quieter Balearic island of white-sand coves, Bronze Age stone monuments and the harbour towns of Ciutadella and Mahón, a UNESCO biosphere reserve.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 125,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Cala Mitjana and Cala Macarella coves",
+      "Ciutadella old town and harbour",
+      "Cami de Cavalls coastal walk",
+      "Talayotic site of Naveta d'en Tudons",
+      "Mahón gin and fresh lobster stew (caldereta)",
+      "Monte Toro viewpoint"
+    ],
+    "visa": "free"
+  },
   "milan-italy": {
     "description": "Italy's fashion and finance capital, pairing a marble Gothic cathedral and Leonardo's Last Supper with aperitivo bars and canal-side Navigli evenings.",
     "climate": "humid subtropical",
@@ -1183,6 +1203,46 @@
       "Oktoberfest (late Sept)",
       "Day trip to Neuschwanstein Castle",
       "Christkindlmarkt on Marienplatz"
+    ],
+    "visa": "free"
+  },
+  "murcia-spain": {
+    "description": "A sunny southeastern Spanish city of baroque cathedral, lively tapas bars and orange groves, close to the Mar Menor lagoon and Costa Cálida beaches.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 85,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Murcia Cathedral and its bell tower",
+      "Plaza de las Flores tapas crawl",
+      "Real Casino de Murcia",
+      "Mar Menor lagoon and La Manga",
+      "Calblanque natural park beaches",
+      "Zarangollo and marinera tapa"
+    ],
+    "visa": "free"
+  },
+  "mykonos-greece": {
+    "description": "A glamorous Cycladic island of whitewashed lanes, windmills and sandy beaches, famed for sunset views over Little Venice and a lively beach-club scene.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 210,
+      "hotelPerNight": 230,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Little Venice and the Kato Mili windmills",
+      "Paradise and Super Paradise beaches",
+      "Mykonos Town's Matoyianni Street",
+      "Day trip to Delos archaeological site",
+      "Panagia Paraportiani church",
+      "Fresh seafood at Ano Mera"
     ],
     "visa": "free"
   },
@@ -1226,6 +1286,26 @@
     ],
     "visa": "free"
   },
+  "nuremberg-germany": {
+    "description": "A Bavarian city of medieval walls and a hilltop imperial castle, known for gingerbread, its Christkindlesmarkt and sobering Nazi-era history.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Kaiserburg imperial castle",
+      "Christkindlesmarkt Christmas market",
+      "Documentation Centre Nazi Party Rally Grounds",
+      "Nuremberg rostbratwurst at Bratwursthäusle",
+      "Albrecht Dürer's House",
+      "German Museum of Technology (DB Museum)"
+    ],
+    "visa": "free"
+  },
   "olbia-italy": {
     "description": "Gateway to Sardinia's Costa Smeralda, with powder-white coves, granite-fringed bays and clear emerald water within easy reach.",
     "climate": "mediterranean",
@@ -1243,6 +1323,26 @@
       "Capo Coda Cavallo",
       "Basilica di San Simplicio",
       "Porceddu roast pork"
+    ],
+    "visa": "free"
+  },
+  "oslo-norway": {
+    "description": "Norway's fjord-side capital, with waterfront opera house, Viking ships and the Munch Museum, plus forests, islands and ski trails minutes from the centre.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 190,
+      "dailySpending": 130
+    },
+    "activities": [
+      "Viking Ship Museum",
+      "Munch Museum",
+      "Oslo Opera House rooftop",
+      "Vigeland Sculpture Park",
+      "Oslofjord island-hopping by ferry",
+      "Holmenkollen ski jump"
     ],
     "visa": "free"
   },
@@ -1343,6 +1443,26 @@
       "Nidri waterfalls",
       "Boat trip to Meganisi and Scorpios",
       "Lefkada town waterfront"
+    ],
+    "visa": "free"
+  },
+  "pula-croatia": {
+    "description": "An Istrian port city anchored by a remarkably intact Roman amphitheatre, with rocky Adriatic swimming spots and the Brijuni islands nearby.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Pula Arena Roman amphitheatre",
+      "Temple of Augustus and Forum",
+      "Brijuni National Park boat trip",
+      "Kamenjak peninsula beaches",
+      "Istrian truffle pasta and olive oil",
+      "Arch of the Sergii"
     ],
     "visa": "free"
   },
