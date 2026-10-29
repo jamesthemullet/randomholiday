@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import { Hero } from '@/components/Hero'
 import { Footer } from '@/components/Footer'
 import { parseTripQuery } from '@/lib/tripQuery'
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+}
 
 interface HomePageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>
