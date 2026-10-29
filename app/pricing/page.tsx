@@ -4,6 +4,9 @@ import { PricingPlans } from '@/components/PricingPlans'
 export const metadata: Metadata = {
   title: 'Pricing — RandomHoliday',
   description: 'Compare RandomHoliday Free and Pro plans.',
+  alternates: {
+    canonical: '/pricing',
+  },
 }
 
 export default function PricingPage() {
