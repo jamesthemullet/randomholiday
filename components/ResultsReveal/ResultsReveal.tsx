@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState, useSyncExternalStore } from 'react'
+import React, { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { DestinationScore } from '@/lib/scoringEngine'
@@ -98,13 +98,26 @@ function Postcard({
   distanceKm,
   nights,
   perPersonCost,
+  focusShuffleRef,
 }: Omit<ResultsRevealProps, 'recommendation' | 'isPicking'> & {
   recommendation: DestinationScore
   revealDelayMs: number
+  focusShuffleRef: React.RefObject<boolean>
 }) {
   const { destination } = recommendation
   const [imageFailed, setImageFailed] = useState(false)
   const score = Math.round(recommendation.totalScore)
+  const shuffleButtonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    if (focusShuffleRef.current) {
+      focusShuffleRef.current = false
+      shuffleButtonRef.current?.focus()
+    }
+    // Runs once per mount: a new Postcard mounts (with a fresh key) on every shuffle, so this
+    // restores focus that would otherwise drop to <body> when the previous postcard unmounts.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const stats = [
     originName !== undefined && { label: 'From', value: originName },
@@ -196,7 +209,12 @@ function Postcard({
               See prices &amp; book <span aria-hidden="true">→</span>
             </button>
           )}
-          <button type="button" className={styles.secondaryAction} onClick={onShuffle}>
+          <button
+            type="button"
+            ref={shuffleButtonRef}
+            className={styles.secondaryAction}
+            onClick={onShuffle}
+          >
             <span aria-hidden="true">↻ </span>Spin again
           </button>
           {changeSearchHref && (
@@ -224,6 +242,12 @@ export function ResultsReveal({
   const prefersReducedMotion = usePrefersReducedMotion()
   const target = recommendation ? recommendation.destination.name.toUpperCase() : 'NO MATCH'
   const flap = useSplitFlap(target, prefersReducedMotion || isPicking || !recommendation)
+  const focusShuffleRef = useRef(false)
+
+  const handleShuffle = () => {
+    focusShuffleRef.current = true
+    onShuffle()
+  }
 
   const boardText = isPicking ? PICKING_FLAPS : flap.text
   const status = isPicking
@@ -282,13 +306,14 @@ export function ResultsReveal({
           key={recommendation.destination.id}
           recommendation={recommendation}
           revealDelayMs={revealDelayMs}
-          onShuffle={onShuffle}
+          onShuffle={handleShuffle}
           onSelect={onSelect}
           changeSearchHref={changeSearchHref}
           originName={originName}
           distanceKm={distanceKm}
           nights={nights}
           perPersonCost={perPersonCost}
+          focusShuffleRef={focusShuffleRef}
         />
       )}
     </section>
