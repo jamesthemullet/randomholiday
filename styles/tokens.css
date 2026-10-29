@@ -49,7 +49,8 @@
   --color-text-muted: var(--color-grey-400);
   --color-text-inverse: var(--color-white);
   --color-border: var(--color-grey-200);
-  --color-border-focus: var(--color-turquoise);
+  /* Needs to clear WCAG 1.4.11's 3:1 non-text contrast minimum against light backgrounds */
+  --color-border-focus: var(--color-turquoise-contrast);
   --color-accent-primary: var(--color-turquoise);
   --color-accent-secondary: var(--color-coral);
   --color-accent-tertiary: var(--color-yellow);
