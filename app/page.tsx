@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Hero } from '@/components/Hero'
 import { Footer } from '@/components/Footer'
-import { parseTripQuery } from '@/lib/tripQuery'
 
 export const metadata: Metadata = {
   alternates: {
@@ -9,26 +8,11 @@ export const metadata: Metadata = {
   },
 }
 
-interface HomePageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>
-}
-
-function toURLSearchParams(params: Record<string, string | string[] | undefined>): URLSearchParams {
-  const query = new URLSearchParams()
-  for (const [key, value] of Object.entries(params)) {
-    if (typeof value === 'string') query.set(key, value)
-  }
-  return query
-}
-
-export default async function HomePage({ searchParams }: HomePageProps) {
-  // Prefills the form when arriving from the results page's "Change my answers" link.
-  const initialValues = parseTripQuery(toURLSearchParams(await searchParams))
-
+export default function HomePage() {
   return (
     <>
       <main id="main-content">
-        <Hero initialValues={initialValues} />
+        <Hero />
       </main>
       <Footer />
     </>
