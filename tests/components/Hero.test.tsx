@@ -1,10 +1,10 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { Hero } from '@/components/Hero'
-import { departureCities } from '@/lib/departureCities'
 
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: vi.fn() }),
+  useSearchParams: () => new URLSearchParams(),
 }))
 
 describe('Hero', () => {
@@ -26,13 +26,6 @@ describe('Hero', () => {
   it('renders the trip search form inline', () => {
     render(<Hero />)
     expect(screen.getByRole('form', { name: 'Find your holiday' })).toBeInTheDocument()
-  })
-
-  it('passes initial values through to the form', () => {
-    render(<Hero initialValues={{ city: departureCities[0] }} />)
-    expect(screen.getByRole('combobox', { name: 'Where are you flying from?' })).toHaveValue(
-      departureCities[0].name
-    )
   })
 
   it('renders the section labelled by the heading', () => {

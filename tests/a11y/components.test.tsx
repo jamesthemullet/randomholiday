@@ -33,6 +33,7 @@ import { UpgradePrompt } from '@/components/UpgradePrompt'
 vi.mock('next/navigation', () => ({
   usePathname: () => '/',
   useRouter: () => ({ push: vi.fn() }),
+  useSearchParams: () => new URLSearchParams(),
 }))
 
 function jsonResponse(body: unknown): Response {
