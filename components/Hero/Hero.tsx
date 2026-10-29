@@ -10,7 +10,7 @@ export function Hero() {
         src="/destinations/santorini-greece.jpg"
         alt="Santorini, Greece"
         fill
-        priority
+        preload
         sizes="100vw"
         className={styles.image}
       />
