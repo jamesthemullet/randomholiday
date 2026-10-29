@@ -61,6 +61,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-10-28 — resolved section 3's deprecated `next/image` `priority` prop item on `Hero.tsx` (scheduled daily maintenance run).
 - 2026-10-27 — resolved section 3's "Make `/` static again" item (scheduled daily maintenance run).
 - 2026-10-29 — resolved section 4's `alternates.canonical` layout-inheritance item (scheduled daily maintenance run).
+- 2026-10-29 — resolved section 4's `/pricing` openGraph/twitter metadata-inheritance item (scheduled daily maintenance run).
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -112,7 +113,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [ ] Add `metadata` to `app/results/page.tsx` with `robots: { index: false }` and its own title — it inherits the homepage title/description/canonical, and its prerendered HTML has no h1 since everything renders client-side behind `<Suspense fallback={null}>`. (found: 2026-10-26)
 - [ ] Destination pages have no `og:image`/`twitter:image`: `app/destination/[slug]/page.tsx:34-35` overrides `openGraph`/`twitter`, dropping the root `opengraph-image`, despite declaring `summary_large_image`. Use the destination photo via `getDestinationImage` or add `destination/[slug]/opengraph-image.tsx`. (found: 2026-10-26)
 - [ ] Add a favicon: there is no `app/icon.*`, `app/favicon.ico`, `app/apple-icon.*` or `public/favicon.ico`, so `/favicon.ico` 404s and tabs/bookmarks have no icon. (found: 2026-10-26)
-- [ ] (low) `/pricing` inherits the homepage `openGraph`/`twitter` title and description from `app/layout.tsx:36-47`, so shared pricing links read "Discover Your Next Adventure". Add page-level `openGraph`/`twitter` in `app/pricing/page.tsx:4-7`. (found: 2026-10-26)
+- [x] (low) `/pricing` inherits the homepage `openGraph`/`twitter` title and description from `app/layout.tsx:36-47`, so shared pricing links read "Discover Your Next Adventure". Add page-level `openGraph`/`twitter` in `app/pricing/page.tsx:4-7`. (found: 2026-10-26) (resolved: 2026-10-29, PR #TBD) — added `openGraph`/`twitter` fields to `app/pricing/page.tsx`'s existing `metadata` export, using the page's own title/description instead of inheriting `app/layout.tsx`'s homepage copy, matching the pattern `app/destination/[slug]/page.tsx` already uses for its own `generateMetadata`. Added `tests/app/pricing-page.test.tsx` asserting the title, description, canonical, `openGraph` and `twitter` fields. Verified via `yarn lint` (0 errors, 1 pre-existing unrelated warning), `yarn typecheck`, `yarn test` (1883 passing), and `yarn build` (succeeds, `/pricing` still prerenders as static). `yarn e2e` skipped per this routine's instructions (no live backend/secrets in this cloud checkout).
 
 ## 5. Responsive / UX
 
