@@ -52,4 +52,18 @@ describe('createRateLimiter', () => {
 
     expect(second.retryAfterMs).toBeLessThan(first.retryAfterMs)
   })
+
+  it('prunes expired windows so the tracked key count does not grow unbounded', () => {
+    let time = 0
+    const limiter = createRateLimiter({ limit: 1, windowMs: 1000, now: () => time })
+
+    limiter.check('a')
+    limiter.check('b')
+    expect(limiter.size()).toBe(2)
+
+    time += 1000
+    limiter.check('c')
+
+    expect(limiter.size()).toBe(1)
+  })
 })
