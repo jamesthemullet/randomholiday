@@ -70,6 +70,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-10-30 — resolved section 6's spoofable rate-limit client IP item: `getClientIp` now prefers Cloudflare's `cf-connecting-ip` header (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 5's Footer dead-links (`/about`/`/privacy`/`/terms`) item (scheduled daily maintenance run).
 - 2026-10-29 — resolved section 5's dead `/pricing` "Upgrade to Pro" button item, wiring it to `POST /api/checkout` (scheduled daily maintenance run).
+- 2026-10-30 — resolved section 7's PLAN.md line 52 stale destination-count item, rewording it to describe the route-data catalogue instead of a fixed number (scheduled daily maintenance run).
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -158,7 +159,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [ ] PLAN.md header (lines 3-7) says "Next: None — remaining work is tracked in GitHub issues", but work now flows through ROADMAP.md (min-distance exclusion, Pro upsell, destination-details PRs per `git log`). Point the header at ROADMAP.md. (found: 2026-10-26)
 - [ ] PLAN.md Phase 1 tech stack is stale: line 13 says "Next.js 14" (`package.json` has 16.4.2) and line 24 says "Poppins + Inter" (`app/layout.tsx:7-26` loads Shrikhand, DM Sans, Space Mono). (found: 2026-10-26)
 - [ ] PLAN.md Phase 4 (lines 64-71) describes an "animated globe SVG" hero and a 5-step `/discover` wizard; the hero is now a photo (`components/Hero/Hero.tsx:14-21`), `/discover` redirects to `/` (`next.config.mjs:6-8`) and `DiscoverWizard` was replaced by `TripForm`. Line 46 still mentions `DiscoverWizard` and a "1277-test suite". Mark as superseded. (found: 2026-10-26)
-- [ ] PLAN.md line 52 says "56 destinations", but the live catalogue is `lib/data/london-destinations.json` via `lib/catalogue.ts`, with 106 pickable destinations prerendered. Update the line to describe the route-data catalogue. (found: 2026-10-26)
+- [x] PLAN.md line 52 says "56 destinations", but the live catalogue is `lib/data/london-destinations.json` via `lib/catalogue.ts`, with 106 pickable destinations prerendered. Update the line to describe the route-data catalogue. (found: 2026-10-26) (resolved: 2026-10-30) — struck through the stale "56 destinations" line and replaced it with a note describing the actual architecture: `lib/catalogue.ts` merges generated `lib/data/london-destinations.json` with hand-written `lib/data/destination-details.json`. Used the current pickable count (154, measured via `pickableDestinations.length` — up from the 106 this item cited on 2026-10-26, confirming the catalogue grows independently of PLAN.md) rather than re-pinning a number that will go stale again; pointed to ROADMAP.md, which already tracks catalogue growth. No code change, `PLAN.md` only.
 
 ## 8. Code quality
 
