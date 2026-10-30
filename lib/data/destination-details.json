@@ -19,6 +19,26 @@
     ],
     "visa": "free"
   },
+  "accra-ghana": {
+    "description": "Ghana's lively Atlantic capital, with Jamestown's colonial lighthouse, buzzing Makola market, highlife music and beaches along the Gulf of Guinea.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 95,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Kwame Nkrumah Memorial Park",
+      "Jamestown and Ussher Fort",
+      "Makola Market",
+      "Labadi Beach",
+      "Cape Coast Castle day trip",
+      "Kokrobite beach and highlife music"
+    ],
+    "visa": "required"
+  },
   "agadir-morocco": {
     "description": "A modern Atlantic resort rebuilt after the 1960 earthquake, with a broad sandy bay, year-round sun and the Atlas foothills and Souss valley close by.",
     "climate": "semi-arid",
@@ -332,6 +352,26 @@
       "Taormina Greek theatre",
       "Arancini and pasta alla Norma",
       "Ortigia day trip to Syracuse"
+    ],
+    "visa": "free"
+  },
+  "chambery-france": {
+    "description": "The old capital of Savoy, with arcaded streets and a castle of the Dukes, set between three Alpine regional parks and the ski resorts of the Alps.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure", "city", "culture"],
+    "bestMonths": [1, 2, 3, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Château des Ducs de Savoie",
+      "Fontaine des Éléphants",
+      "Lac du Bourget and Aix-les-Bains",
+      "Skiing at Les Arcs or La Plagne",
+      "Parc naturel régional du Massif des Bauges",
+      "Tartiflette and Savoie wines"
     ],
     "visa": "free"
   },
@@ -1486,6 +1526,26 @@
     ],
     "visa": "free"
   },
+  "rimini-italy": {
+    "description": "Adriatic Riviera resort with a wide sandy beach, a Roman arch and bridge in the old town, and Italy's liveliest summer nightlife.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Rimini beach and Marina Centro",
+      "Arch of Augustus and Tiberius Bridge",
+      "Federico Fellini Museum (FM)",
+      "Piadina romagnola and fresh seafood",
+      "Day trip to San Marino",
+      "Tempio Malatestiano"
+    ],
+    "visa": "free"
+  },
   "rovaniemi-finland": {
     "description": "The Arctic Circle capital of Finnish Lapland, with Northern Lights, husky sleds, reindeer farms and Santa Claus Village.",
     "climate": "subarctic",
@@ -1524,6 +1584,26 @@
       "Sound of Music tour",
       "Salzburger Nockerl dessert",
       "Christkindlmarkt"
+    ],
+    "visa": "free"
+  },
+  "santiago-de-compostela-spain": {
+    "description": "The granite end-point of the Camino de Santiago in Galicia, centred on a Romanesque cathedral and rain-polished medieval streets.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Santiago Cathedral and the Botafumeiro",
+      "Praza do Obradoiro",
+      "Mercado de Abastos",
+      "Pulpo a la gallega and Padrón peppers",
+      "Walk the final stage of the Camino Francés",
+      "Day trip to Cape Finisterre"
     ],
     "visa": "free"
   },
@@ -1604,6 +1684,66 @@
       "Day trip to Hvar",
       "Krka National Park",
       "Riva promenade"
+    ],
+    "visa": "free"
+  },
+  "stockholm-sweden": {
+    "description": "A capital spread across 14 islands, with a medieval old town, the Vasa warship museum and an archipelago of summer swimming spots.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 190,
+      "dailySpending": 125
+    },
+    "activities": [
+      "Gamla Stan old town",
+      "Vasa Museum",
+      "ABBA The Museum",
+      "Archipelago boat trip to Vaxholm",
+      "Fika and cinnamon buns",
+      "Skansen open-air museum"
+    ],
+    "visa": "free"
+  },
+  "strasbourg-france": {
+    "description": "An Alsace city of half-timbered houses, canals and a Gothic cathedral, and home of the European Parliament, famous for its Christmas market.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 115,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Strasbourg Cathedral",
+      "La Petite France quarter",
+      "Barrage Vauban rooftop terrace",
+      "Flammekueche and choucroute",
+      "Christmas market at Place Kléber",
+      "Alsace wine route day trip"
+    ],
+    "visa": "free"
+  },
+  "tallinn-estonia": {
+    "description": "A walled Baltic capital with a remarkably intact medieval old town, a growing food scene and a tech-savvy, relaxed feel.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Tallinn Old Town and Town Hall Square",
+      "Toompea Hill viewing platforms",
+      "Telliskivi Creative City",
+      "Kadriorg Palace and park",
+      "Lahemaa National Park day trip",
+      "Medieval-themed restaurants like Olde Hansa"
     ],
     "visa": "free"
   },
@@ -1707,6 +1847,66 @@
     ],
     "visa": "free"
   },
+  "toulouse-france": {
+    "description": "The pink-brick city of southwest France, with a vast Romanesque basilica, canal-side picnics and a deep aerospace and cassoulet culture.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 115,
+      "hotelPerNight": 105,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Basilica of Saint-Sernin",
+      "Place du Capitole",
+      "Cité de l'Espace",
+      "Canal du Midi walk",
+      "Cassoulet and Toulouse sausage",
+      "Les Abattoirs contemporary art museum"
+    ],
+    "visa": "free"
+  },
+  "troms-norway": {
+    "description": "An Arctic island city beneath the aurora in winter and the midnight sun in summer, ringed by fjords, peaks and Sámi culture.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure", "city", "culture"],
+    "bestMonths": [1, 2, 3, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 280,
+      "hotelPerNight": 170,
+      "dailySpending": 130
+    },
+    "activities": [
+      "Northern lights chase",
+      "Arctic Cathedral",
+      "Fjellheisen cable car",
+      "Whale watching from Skjervøy",
+      "Sámi reindeer sledding",
+      "Polaria Arctic Aquarium"
+    ],
+    "visa": "free"
+  },
+  "turin-italy": {
+    "description": "Elegant Piedmontese capital of arcaded boulevards, Baroque palaces and Alpine views, home of the Egyptian Museum, vermouth and the aperitivo.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Museo Egizio",
+      "Mole Antonelliana and Museo del Cinema",
+      "Royal Palace and Venaria Reale",
+      "Shroud of Turin at the Cathedral",
+      "Aperitivo in Piazza Vittorio",
+      "Barolo wine tour in Langhe"
+    ],
+    "visa": "free"
+  },
   "valencia-spain": {
     "description": "A sunny Spanish coastal city of futuristic architecture, a vast urban park, city beaches and the birthplace of paella.",
     "climate": "mediterranean",
@@ -1744,6 +1944,46 @@
       "Murano and Burano islands",
       "Rialto Market",
       "Cicchetti bar crawl"
+    ],
+    "visa": "free"
+  },
+  "verona-italy": {
+    "description": "Shakespeare's city of star-crossed lovers, with a Roman arena that stages summer opera, Adige river bridges and Lake Garda close by.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 115,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Verona Arena opera season",
+      "Casa di Giulietta",
+      "Piazza delle Erbe",
+      "Castelvecchio and Ponte Scaligero",
+      "Day trip to Lake Garda",
+      "Amarone wine tasting in Valpolicella"
+    ],
+    "visa": "free"
+  },
+  "warsaw-poland": {
+    "description": "Poland's capital, faithfully rebuilt after the war, mixing a UNESCO-listed Old Town with Soviet skyscrapers, Chopin concerts and a thriving café and bar scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 85,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Warsaw Old Town and Royal Castle",
+      "POLIN Museum of the History of Polish Jews",
+      "Warsaw Uprising Museum",
+      "Łazienki Park and Chopin concerts",
+      "Pierogi at a milk bar",
+      "Palace of Culture and Science viewing terrace"
     ],
     "visa": "free"
   },
