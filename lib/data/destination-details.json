@@ -1486,6 +1486,26 @@
     ],
     "visa": "free"
   },
+  "rimini-italy": {
+    "description": "Adriatic Riviera resort with a wide sandy beach, a Roman arch and bridge in the old town, and Italy's liveliest summer nightlife.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Rimini beach and Marina Centro",
+      "Arch of Augustus and Tiberius Bridge",
+      "Federico Fellini Museum (FM)",
+      "Piadina romagnola and fresh seafood",
+      "Day trip to San Marino",
+      "Tempio Malatestiano"
+    ],
+    "visa": "free"
+  },
   "rovaniemi-finland": {
     "description": "The Arctic Circle capital of Finnish Lapland, with Northern Lights, husky sleds, reindeer farms and Santa Claus Village.",
     "climate": "subarctic",
@@ -1524,6 +1544,26 @@
       "Sound of Music tour",
       "Salzburger Nockerl dessert",
       "Christkindlmarkt"
+    ],
+    "visa": "free"
+  },
+  "santiago-de-compostela-spain": {
+    "description": "The granite end-point of the Camino de Santiago in Galicia, centred on a Romanesque cathedral and rain-polished medieval streets.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Santiago Cathedral and the Botafumeiro",
+      "Praza do Obradoiro",
+      "Mercado de Abastos",
+      "Pulpo a la gallega and Padrón peppers",
+      "Walk the final stage of the Camino Francés",
+      "Day trip to Cape Finisterre"
     ],
     "visa": "free"
   },
@@ -1604,6 +1644,66 @@
       "Day trip to Hvar",
       "Krka National Park",
       "Riva promenade"
+    ],
+    "visa": "free"
+  },
+  "stockholm-sweden": {
+    "description": "A capital spread across 14 islands, with a medieval old town, the Vasa warship museum and an archipelago of summer swimming spots.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 190,
+      "dailySpending": 125
+    },
+    "activities": [
+      "Gamla Stan old town",
+      "Vasa Museum",
+      "ABBA The Museum",
+      "Archipelago boat trip to Vaxholm",
+      "Fika and cinnamon buns",
+      "Skansen open-air museum"
+    ],
+    "visa": "free"
+  },
+  "strasbourg-france": {
+    "description": "An Alsace city of half-timbered houses, canals and a Gothic cathedral, and home of the European Parliament, famous for its Christmas market.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 115,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Strasbourg Cathedral",
+      "La Petite France quarter",
+      "Barrage Vauban rooftop terrace",
+      "Flammekueche and choucroute",
+      "Christmas market at Place Kléber",
+      "Alsace wine route day trip"
+    ],
+    "visa": "free"
+  },
+  "tallinn-estonia": {
+    "description": "A walled Baltic capital with a remarkably intact medieval old town, a growing food scene and a tech-savvy, relaxed feel.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Tallinn Old Town and Town Hall Square",
+      "Toompea Hill viewing platforms",
+      "Telliskivi Creative City",
+      "Kadriorg Palace and park",
+      "Lahemaa National Park day trip",
+      "Medieval-themed restaurants like Olde Hansa"
     ],
     "visa": "free"
   },
@@ -1704,6 +1804,26 @@
       "Bay of Kotor boat trip",
       "Climb to Kotor Fortress",
       "Njeguši smoked ham and cheese"
+    ],
+    "visa": "free"
+  },
+  "toulouse-france": {
+    "description": "The pink-brick city of southwest France, with a vast Romanesque basilica, canal-side picnics and a deep aerospace and cassoulet culture.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 115,
+      "hotelPerNight": 105,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Basilica of Saint-Sernin",
+      "Place du Capitole",
+      "Cité de l'Espace",
+      "Canal du Midi walk",
+      "Cassoulet and Toulouse sausage",
+      "Les Abattoirs contemporary art museum"
     ],
     "visa": "free"
   },
