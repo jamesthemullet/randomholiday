@@ -12,7 +12,7 @@ const PRO_FEATURES: ProFeature[] = [
   'priority-support',
 ]
 
-const FREE_FEATURES = ['Unlimited destination discovery', 'One shuffle per session']
+const FREE_FEATURES = ['Unlimited destination discovery', 'Shuffle to find your match']
 
 export interface PricingPlansProps {
   onUpgrade?: () => void
