@@ -99,3 +99,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.checkoutError {
+  max-width: 44rem;
+  margin: var(--space-4) auto 0;
+  text-align: center;
+  color: var(--color-danger-text);
+}
