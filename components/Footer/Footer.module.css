@@ -26,12 +26,6 @@
   margin: 0;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-}
-
 .link {
   font-size: var(--text-sm);
   color: var(--color-link);
