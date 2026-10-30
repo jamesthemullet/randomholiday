@@ -19,23 +19,16 @@ describe('Footer', () => {
     expect(screen.getByText(new RegExp(year))).toBeInTheDocument()
   })
 
-  it('renders footer navigation', () => {
+  it('renders a Wikipedia attribution link', () => {
     render(<Footer />)
-    expect(screen.getByRole('navigation', { name: 'Footer navigation' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Wikipedia' })).toHaveAttribute(
+      'href',
+      'https://www.wikipedia.org/'
+    )
   })
 
-  it('renders About link', () => {
+  it('does not render a footer navigation with dead links', () => {
     render(<Footer />)
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute('href', '/about')
-  })
-
-  it('renders Privacy link', () => {
-    render(<Footer />)
-    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy')
-  })
-
-  it('renders Terms link', () => {
-    render(<Footer />)
-    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute('href', '/terms')
+    expect(screen.queryByRole('navigation', { name: 'Footer navigation' })).not.toBeInTheDocument()
   })
 })
