@@ -4,7 +4,7 @@
 
 ## Last Completed: Task 9.6 (final) — Ran the final quality gate (`yarn lint`, `yarn typecheck`, `yarn test`: 1833 tests, all clean) and raised GitHub issue "Ready for Production Release" with a deployment checklist covering the app's actual deploy target (Cloudflare Workers via the OpenNext adapter, with `vercel.json` kept as a fallback path). This completes Phase 9 and the build plan — remaining work is the manual credential setup tracked in issue #108.
 
-## Next: None — all planned build phases are complete. Remaining work is tracked in open GitHub issues (credential/account setup) rather than PLAN.md tasks.
+## Next: None — all planned build phases are complete. New feature/content work is now planned in [ROADMAP.md](./ROADMAP.md) (e.g. the "Spin again" exclusion, the Pro upsell, and the ongoing destination-details PRs) rather than as PLAN.md tasks; credential/account setup is still tracked in open GitHub issues.
 
 ---
 
