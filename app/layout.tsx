@@ -30,9 +30,6 @@ export const metadata: Metadata = {
   title: 'RandomHoliday — Discover Your Next Adventure',
   description:
     'Get surprise holiday destination suggestions based on your budget, travel style, and departure location.',
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: 'RandomHoliday — Discover Your Next Adventure',
     description:

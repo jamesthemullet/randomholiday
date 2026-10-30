@@ -160,6 +160,28 @@ describe('ResultsReveal', () => {
     expect(onShuffle).toHaveBeenCalledOnce()
   })
 
+  it('keeps focus on Spin again after a shuffle remounts the postcard', () => {
+    const onShuffle = vi.fn()
+    const { rerender } = render(
+      <ResultsReveal recommendation={makeScore()} onShuffle={onShuffle} />
+    )
+    fireEvent.click(screen.getByRole('button', { name: 'Spin again' }))
+
+    rerender(
+      <ResultsReveal
+        recommendation={makeScore({ destination: makeDestination({ id: 'cairo-egypt' }) })}
+        onShuffle={onShuffle}
+      />
+    )
+
+    expect(screen.getByRole('button', { name: 'Spin again' })).toHaveFocus()
+  })
+
+  it('does not steal focus from the Spin again button on first render', () => {
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(screen.getByRole('button', { name: 'Spin again' })).not.toHaveFocus()
+  })
+
   it('renders a Change my answers link when changeSearchHref is provided', () => {
     render(
       <ResultsReveal
