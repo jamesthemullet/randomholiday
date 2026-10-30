@@ -176,8 +176,9 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
     // and again from 0.4 to 0.35 after six more (Aberdeen, Agadir, Bilbao, Valencia, Venice,
     // Zakynthos), and again from 0.35 to 0.3 after six more (Bologna, Brindisi, Burgas,
     // Casablanca, Catania, Chișinău), and again from 0.3 to 0.25 after six more (Guernsey,
-    // Hamburg, Helsinki, Hurghada, Innsbruck, Inverness).
-    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.25)
+    // Hamburg, Helsinki, Hurghada, Innsbruck, Inverness), and again from 0.25 to 0.2 after six
+    // more (Accra, Chambéry, Tromsø, Turin, Verona, Warsaw).
+    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.2)
     expect(summary.poolCoverage).toBeLessThan(0.6)
   })
 
