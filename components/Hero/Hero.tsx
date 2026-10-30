@@ -1,21 +1,16 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Image from 'next/image'
-import { TripForm } from '@/components/TripForm'
-import type { TripQueryInitialValues } from '@/lib/tripQuery'
+import { TripForm, TripFormFromQuery } from '@/components/TripForm'
 import styles from './Hero.module.css'
 
-export interface HeroProps {
-  initialValues?: TripQueryInitialValues
-}
-
-export function Hero({ initialValues }: HeroProps) {
+export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
       <Image
         src="/destinations/santorini-greece.jpg"
         alt="Santorini, Greece"
         fill
-        priority
+        preload
         sizes="100vw"
         className={styles.image}
       />
@@ -32,7 +27,9 @@ export function Hero({ initialValues }: HeroProps) {
           </p>
         </div>
         <div className={styles.formWrapper}>
-          <TripForm initialValues={initialValues} />
+          <Suspense fallback={<TripForm />}>
+            <TripFormFromQuery />
+          </Suspense>
         </div>
       </div>
       <span className={styles.caption} aria-hidden="true">
