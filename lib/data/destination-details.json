@@ -258,6 +258,110 @@
     ],
     "visa": "free"
   },
+  "bahrain-bahrain": {
+    "description": "A compact island kingdom in the Gulf, pairing the Portuguese-era Bahrain Fort and Manama's souq with pearl-diving heritage, Formula 1 and superb Arabic food.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 380,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Bahrain Fort (Qal'at al-Bahrain)",
+      "Manama Souq and Bab Al Bahrain",
+      "Al Fateh Grand Mosque",
+      "Pearling Path in Muharraq",
+      "Bahrain National Museum",
+      "Bahrain International Circuit tour",
+      "Tree of Life in the desert"
+    ],
+    "visa": "on-arrival"
+  },
+  "baku-azerbaijan": {
+    "description": "Azerbaijan's Caspian capital, where a walled medieval Old City sits beside the flame-shaped towers, wide seafront boulevards and mud volcanoes of a petroleum-funded boomtown.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 300,
+      "hotelPerNight": 85,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Icherisheher (Old City) and Maiden Tower",
+      "Palace of the Shirvanshahs",
+      "Heydar Aliyev Center",
+      "Flame Towers at night",
+      "Gobustan rock art and mud volcanoes",
+      "Ateshgah Fire Temple",
+      "Plov and qutab in a local restaurant"
+    ],
+    "visa": "required"
+  },
+  "barbados-barbados": {
+    "description": "Easternmost Caribbean island of coral-sand beaches, colonial Bridgetown, rum distilleries and flying-fish suppers, with calm west-coast waters and surf on the Atlantic side.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [12, 1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 230,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Carlisle Bay snorkelling with turtles",
+      "Historic Bridgetown and its Garrison",
+      "Mount Gay Rum Distillery tour",
+      "Oistins Friday Fish Fry",
+      "Harrison's Cave",
+      "Bathsheba surf and Soup Bowl",
+      "Crop Over festival"
+    ],
+    "visa": "free"
+  },
+  "bari-italy": {
+    "description": "Puglia's port city, with a labyrinthine old town where women still roll orecchiette by hand, the pilgrimage Basilica of San Nicola and a lively seafront.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Bari Vecchia and Strada dell'Orecchiette",
+      "Basilica di San Nicola",
+      "Castello Svevo",
+      "Panzerotti and focaccia barese",
+      "Day trip to Alberobello's trulli",
+      "Polignano a Mare cliffs and beaches"
+    ],
+    "visa": "free"
+  },
+  "beijing-people-s-republic-of-china": {
+    "description": "China's capital, where the Forbidden City, Temple of Heaven and hutong alleys sit beside futuristic skyscrapers, with the Great Wall within easy reach.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Forbidden City and Tiananmen Square",
+      "Great Wall at Mutianyu or Jinshanling",
+      "Temple of Heaven",
+      "Summer Palace",
+      "Hutong cycling around Nanluoguxiang",
+      "Peking duck at Siji Minfu",
+      "798 Art Zone"
+    ],
+    "visa": "free"
+  },
   "belfast-united-kingdom": {
     "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
     "climate": "oceanic",
@@ -274,6 +378,27 @@
       "St George's Market",
       "Giant's Causeway day trip",
       "Crown Liquor Saloon"
+    ],
+    "visa": "free"
+  },
+  "belgrade-serbia": {
+    "description": "Serbia's energetic capital at the meeting of the Sava and Danube, with Kalemegdan Fortress, bohemian Skadarlija, floating river clubs and fierce nightlife.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 75,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Kalemegdan Fortress",
+      "Skadarlija bohemian quarter",
+      "Church of Saint Sava",
+      "Nikola Tesla Museum",
+      "Splavovi river clubs",
+      "Ćevapi and rakija",
+      "Zemun old town"
     ],
     "visa": "free"
   },
