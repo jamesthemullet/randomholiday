@@ -19,6 +19,27 @@
     ],
     "visa": "free"
   },
+  "abuja-nigeria": {
+    "description": "Nigeria's planned capital, set among granite hills, with Zuma Rock, the grand National Mosque and a calmer, greener pace than Lagos.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 130,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Zuma Rock",
+      "Nigerian National Mosque",
+      "Aso Rock viewpoint",
+      "Nike Art Gallery",
+      "Millennium Park",
+      "Wuse Market",
+      "Jabi Lake"
+    ],
+    "visa": "required"
+  },
   "accra-ghana": {
     "description": "Ghana's lively Atlantic capital, with Jamestown's colonial lighthouse, buzzing Makola market, highlife music and beaches along the Gulf of Guinea.",
     "climate": "tropical",
@@ -36,6 +57,26 @@
       "Labadi Beach",
       "Cape Coast Castle day trip",
       "Kokrobite beach and highlife music"
+    ],
+    "visa": "required"
+  },
+  "addis-ababa-ethiopia": {
+    "description": "Ethiopia's high-altitude capital, with the National Museum's Lucy fossil, Merkato market, Orthodox churches and the home of coffee ceremonies.",
+    "climate": "subtropical highland",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 100,
+      "dailySpending": 50
+    },
+    "activities": [
+      "National Museum of Ethiopia and Lucy",
+      "Merkato market",
+      "Holy Trinity Cathedral",
+      "Mount Entoto viewpoint",
+      "Traditional coffee ceremony",
+      "Injera and tibs at a local restaurant"
     ],
     "visa": "required"
   },
@@ -58,6 +99,26 @@
       "Tagine and fresh grilled sardines"
     ],
     "visa": "free"
+  },
+  "algiers-algeria": {
+    "description": "A white Mediterranean capital stacked above its bay, with the Casbah's winding lanes, Ottoman palaces and the Notre-Dame d'Afrique basilica.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 230,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Casbah of Algiers",
+      "Martyrs' Memorial",
+      "Notre-Dame d'Afrique",
+      "Jardin d'Essai du Hamma",
+      "Tipasa Roman ruins day trip",
+      "Couscous and chorba at a local restaurant"
+    ],
+    "visa": "required"
   },
   "alicante-spain": {
     "description": "A Costa Blanca city with a hilltop castle, a palm-lined seafront promenade and sandy beaches, plus a lively tapas and old-town scene.",
@@ -98,6 +159,26 @@
     ],
     "visa": "free"
   },
+  "amman-jordan": {
+    "description": "Jordan's hilly capital, with a Roman theatre, hilltop Citadel, lively souks and a gateway to Petra, the Dead Sea and Wadi Rum.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 300,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Roman Theatre",
+      "Amman Citadel",
+      "Rainbow Street",
+      "Downtown souks",
+      "Dead Sea day trip",
+      "Hummus and falafel at Hashem"
+    ],
+    "visa": "on-arrival"
+  },
   "antalya-turkey": {
     "description": "A Turkish Riviera resort city pairing a Roman-era old town and harbour with long beaches backed by the Taurus Mountains.",
     "climate": "mediterranean",
@@ -114,6 +195,46 @@
       "Düden Waterfalls",
       "Perge and Aspendos ruins",
       "Boat trip to Kekova"
+    ],
+    "visa": "free"
+  },
+  "antigua-antigua-and-barbuda": {
+    "description": "A Caribbean island said to have a beach for every day of the year, plus Nelson's Dockyard, sailing regattas and rainforest hikes.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [12, 1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 300,
+      "dailySpending": 130
+    },
+    "activities": [
+      "Nelson's Dockyard and Shirley Heights",
+      "Half Moon Bay",
+      "Devil's Bridge",
+      "Stingray City",
+      "Rainforest canopy tour",
+      "Sailing around the island"
+    ],
+    "visa": "free"
+  },
+  "asturias-spain": {
+    "description": "Spain's green northern coast, with Picos de Europa peaks, cider houses, rugged beaches and the old stone towns of Oviedo and Gijón.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure", "culture", "beach"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Covadonga Lakes and Picos de Europa",
+      "Cares Gorge hike",
+      "Oviedo old town",
+      "Sidra cider house in Gijón",
+      "Cudillero fishing village",
+      "Fabada asturiana"
     ],
     "visa": "free"
   },
