@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PricingPlans } from '@/components/PricingPlans'
+import { PricingPlansCheckout } from '@/components/PricingPlans'
 
 export const metadata: Metadata = {
   title: 'Pricing — RandomHoliday',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <main id="main-content">
-      <PricingPlans />
+      <PricingPlansCheckout />
     </main>
   )
 }
