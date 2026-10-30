@@ -5,6 +5,8 @@ export interface RateLimitResult {
 
 export interface RateLimiter {
   check: (key: string) => RateLimitResult
+  /** Number of keys currently tracked; exposed so tests can assert expired windows are pruned. */
+  size: () => number
 }
 
 export interface RateLimiterOptions {
@@ -31,9 +33,18 @@ export function createRateLimiter({
 }: RateLimiterOptions): RateLimiter {
   const windows = new Map<string, Window>()
 
+  function pruneExpired(timestamp: number) {
+    for (const [key, entry] of windows) {
+      if (timestamp - entry.windowStart >= windowMs) {
+        windows.delete(key)
+      }
+    }
+  }
+
   return {
     check(key: string): RateLimitResult {
       const timestamp = now()
+      pruneExpired(timestamp)
       const entry = windows.get(key)
 
       if (!entry || timestamp - entry.windowStart >= windowMs) {
@@ -47,6 +58,9 @@ export function createRateLimiter({
       }
 
       return { allowed: false, retryAfterMs: entry.windowStart + windowMs - timestamp }
+    },
+    size() {
+      return windows.size
     },
   }
 }
