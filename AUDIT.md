@@ -63,6 +63,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-10-29 — resolved section 4's `alternates.canonical` layout-inheritance item (scheduled daily maintenance run).
 - 2026-10-29 — resolved section 4's missing favicon item (scheduled daily maintenance run).
 - 2026-10-29 — resolved section 4's destination-page `og:image`/`twitter:image` item (scheduled daily maintenance run).
+- 2026-10-30 — resolved section 5's `/results` navigation `scroll-behavior` console warning item (scheduled daily maintenance run).
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -125,7 +126,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [ ] `/pricing` "Upgrade to Pro" does nothing: `app/pricing/page.tsx:12` renders `<PricingPlans />` without `onUpgrade` (`components/PricingPlans/PricingPlans.tsx:66`), and nothing calls `POST /api/checkout` (confirmed in browser: no request, no navigation). The Save-trip upsell (`TripActions.tsx:63`) also leads here. Wire `onUpgrade` to POST `/api/checkout` and redirect to the returned `url`. (found: 2026-10-26)
 - [ ] Footer links `/about`, `/privacy` and `/terms` all 404 (`components/Footer/Footer.tsx:5-7`), and `Footer` is now rendered on `/` (`app/page.tsx:26`). Add the pages or remove the links. (found: 2026-10-26)
 - [ ] `/pricing` Free plan promises "One shuffle per session" (`components/PricingPlans/PricingPlans.tsx:15`), but "Spin again" on `/results` is unlimited. Fix the copy or enforce the limit. (found: 2026-10-26)
-- [ ] Console warning on `/results` navigation: "Detected `scroll-behavior: smooth` on the `<html>` element" from `styles/globals.css:13`. Add `data-scroll-behavior="smooth"` to `<html>` in `app/layout.tsx` as Next asks. (found: 2026-10-26)
+- [x] Console warning on `/results` navigation: "Detected `scroll-behavior: smooth` on the `<html>` element" from `styles/globals.css:13`. Add `data-scroll-behavior="smooth"` to `<html>` in `app/layout.tsx` as Next asks. (found: 2026-10-26) (resolved: 2026-10-30, PR #<PR_NUMBER>) — added `data-scroll-behavior="smooth"` to the `<html>` element in `app/layout.tsx`, per `node_modules/next/dist/docs/01-app/02-guides/upgrading/version-16.md`'s "Scroll Behavior Override" section: Next 16 no longer auto-overrides `scroll-behavior: smooth` during SPA navigation unless this attribute opts back in, which is what was producing the console warning. Verified via `yarn lint` (0 errors, 1 pre-existing unrelated warning), `yarn typecheck`, `yarn test` (1883 passing), and `yarn build` (succeeds, all routes still prerender). `yarn e2e` skipped per this routine's instructions (no live backend/secrets in this cloud checkout).
 - [ ] Visual drift: `/pricing`'s h1 and plan cards use `--font-heading` (DM Sans) on plain white cards, unlike the retro boarding-pass look (`--font-display`) on `/` and `/results`. Restyle `components/PricingPlans/PricingPlans.module.css` to match. (found: 2026-10-26)
 - [ ] Visual drift: `/destination/[slug]`'s poster h1 uses `--font-heading` and the page shows no destination photo, unlike the results card and modal. Restyle `app/destination/[slug]/page.module.css:45-49`. (found: 2026-10-26)
 
