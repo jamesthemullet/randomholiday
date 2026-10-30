@@ -2,6 +2,25 @@ import { describe, it, expect } from 'vitest'
 import { getClientIp } from '@/lib/requestIp'
 
 describe('getClientIp', () => {
+  it('prefers cf-connecting-ip over x-forwarded-for', () => {
+    const request = new Request('http://localhost/', {
+      headers: {
+        'cf-connecting-ip': '203.0.113.9',
+        'x-forwarded-for': '198.51.100.1, 10.0.0.1',
+      },
+    })
+
+    expect(getClientIp(request)).toBe('203.0.113.9')
+  })
+
+  it('trims whitespace around cf-connecting-ip', () => {
+    const request = new Request('http://localhost/', {
+      headers: { 'cf-connecting-ip': '  203.0.113.9  ' },
+    })
+
+    expect(getClientIp(request)).toBe('203.0.113.9')
+  })
+
   it('returns the first address from x-forwarded-for', () => {
     const request = new Request('http://localhost/', {
       headers: { 'x-forwarded-for': '203.0.113.1, 10.0.0.1' },
