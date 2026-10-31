@@ -701,6 +701,26 @@
     ],
     "visa": "free"
   },
+  "bydgoszcz-poland": {
+    "description": "A canal-threaded Polish city on the Brda river, with a restored granary waterfront, Art Nouveau streets and a thriving music scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Mill Island",
+      "Bydgoszcz Granaries",
+      "Brda river boat trip",
+      "Leon Wyczółkowski Museum",
+      "Opera Nova",
+      "Myślęcinek park"
+    ],
+    "visa": "free"
+  },
   "cagliari-italy": {
     "description": "Sardinia's hilltop capital, with a Pisan-era citadel, the Poetto beach on its doorstep and Sardinian seafood served in a fishing-quarter setting.",
     "climate": "mediterranean",
@@ -982,6 +1002,26 @@
     ],
     "visa": "free"
   },
+  "doha-qatar": {
+    "description": "Qatar's gleaming capital, where the Museum of Islamic Art and Souq Waqif sit beside futuristic towers and desert dunes.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 160,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Museum of Islamic Art",
+      "Souq Waqif",
+      "The Pearl-Qatar",
+      "National Museum of Qatar",
+      "Katara Cultural Village",
+      "Desert dune bashing at Sealine"
+    ],
+    "visa": "free"
+  },
   "dublin-ireland": {
     "description": "Ireland's compact capital pairs Georgian squares, literary pubs and the Guinness Storehouse with easy coastal escapes along Dublin Bay.",
     "climate": "oceanic",
@@ -999,6 +1039,26 @@
       "Temple Bar live music",
       "Howth cliff walk",
       "Day trip to Glendalough"
+    ],
+    "visa": "free"
+  },
+  "dusseldorf-germany": {
+    "description": "A fashionable Rhine city known for the Königsallee, the Altstadt's brewhouses and its altbier, and a striking modern harbour.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Königsallee shopping",
+      "Altstadt altbier brewhouses",
+      "Medienhafen architecture",
+      "Rhine Tower",
+      "Kunstsammlung K20",
+      "Christmas markets"
     ],
     "visa": "free"
   },
@@ -1140,6 +1200,26 @@
     ],
     "visa": "free"
   },
+  "gibraltar-united-kingdom": {
+    "description": "A tiny British territory under a towering limestone Rock, with wild Barbary macaques, Mediterranean views and Spain a short walk away.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "adventure", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Rock of Gibraltar cable car",
+      "Barbary macaques at the Upper Rock",
+      "St Michael's Cave",
+      "Great Siege Tunnels",
+      "Dolphin watching boat trip",
+      "Main Street shopping"
+    ],
+    "visa": "free"
+  },
   "girona-spain": {
     "description": "A compact Catalan city of medieval walls, a colourful Onyar riverfront and a preserved Jewish quarter, close to Costa Brava coves and Dalí's Figueres.",
     "climate": "mediterranean",
@@ -1217,6 +1297,26 @@
       "Roque Nublo hike",
       "Puerto de Mogán",
       "Ropa vieja canaria"
+    ],
+    "visa": "free"
+  },
+  "grenada-grenada": {
+    "description": "The Caribbean's Spice Isle, with Grand Anse beach, nutmeg plantations, rainforest waterfalls and an underwater sculpture park.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [1, 2, 3, 4, 5, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 850,
+      "hotelPerNight": 170,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Grand Anse Beach",
+      "Molinere Underwater Sculpture Park",
+      "Concord Falls",
+      "Dougaldston Spice Estate",
+      "Grand Etang rainforest",
+      "St George's Fort George"
     ],
     "visa": "free"
   },
@@ -1990,6 +2090,26 @@
       "Kamenjak peninsula beaches",
       "Istrian truffle pasta and olive oil",
       "Arch of the Sergii"
+    ],
+    "visa": "free"
+  },
+  "reus-spain": {
+    "description": "A Catalan market town of Modernista façades and Gaudí's birthplace, minutes from the sandy resorts of the Costa Dorada and Salou.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Gaudí Centre",
+      "Casa Navàs",
+      "Salou beaches",
+      "PortAventura World",
+      "Tarragona Roman amphitheatre",
+      "Vermouth tasting in Reus"
     ],
     "visa": "free"
   },
