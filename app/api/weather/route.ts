@@ -47,7 +47,8 @@ export async function GET(request: Request): Promise<NextResponse> {
   }
 
   const apiKey = process.env.OPENWEATHER_API_KEY
-  if (apiKey) {
+  const currentMonth = new Date().getMonth() + 1
+  if (apiKey && month === currentMonth) {
     const live = await fetchLiveWeather(lat, lng, apiKey)
     if (live) return NextResponse.json(live)
   }
