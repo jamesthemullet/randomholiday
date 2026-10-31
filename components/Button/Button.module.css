@@ -28,16 +28,16 @@
 
 /* Variants */
 .primary {
-  /* Fixed values (not --color-accent-primary): white text on turquoise only clears WCAG AA
-     4.5:1 at this darker shade — the token's full-brightness turquoise is 2.06:1. */
-  background-color: #007d7d;
+  /* --color-turquoise-contrast (not --color-accent-primary): white text on turquoise only
+     clears WCAG AA 4.5:1 at this darker shade — the token's full-brightness turquoise is 2.06:1. */
+  background-color: var(--color-turquoise-contrast);
   color: var(--color-white);
-  border-color: #007d7d;
+  border-color: var(--color-turquoise-contrast);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: #005f5f;
-  border-color: #005f5f;
+  background-color: var(--color-turquoise-solid-hover);
+  border-color: var(--color-turquoise-solid-hover);
   box-shadow: var(--shadow-md);
 }
 
@@ -63,16 +63,16 @@
 }
 
 .danger {
-  /* Fixed values (not --color-coral): white text on coral only clears WCAG AA 4.5:1 at this
-     darker shade — the token's full-brightness coral is 2.78:1. */
-  background-color: #c62828;
+  /* --color-coral-solid (not --color-coral): white text on coral only clears WCAG AA 4.5:1 at
+     this darker shade — the token's full-brightness coral is 2.78:1. */
+  background-color: var(--color-coral-solid);
   color: var(--color-white);
-  border-color: #c62828;
+  border-color: var(--color-coral-solid);
 }
 
 .danger:hover:not(:disabled) {
-  background-color: #a51f1f;
-  border-color: #a51f1f;
+  background-color: var(--color-coral-solid-hover);
+  border-color: var(--color-coral-solid-hover);
 }
 
 /* Sizes */
