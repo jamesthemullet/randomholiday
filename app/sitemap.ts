@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { pickableDestinations } from '@/lib/catalogue'
+import { getAppUrl } from '@/lib/appUrl'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
+  const appUrl = getAppUrl()
 
   const routes = [
     '',

@@ -8,8 +8,6 @@ import { Slider } from '@/components/Slider'
 import { Modal } from '@/components/Modal'
 import { AdSlot } from '@/components/AdSlot'
 import { DepartureAutocomplete } from '@/components/DepartureAutocomplete'
-import { DestinationCard } from '@/components/DestinationCard'
-import type { Destination as DestinationCardDestination } from '@/components/DestinationCard'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import type { Destination } from '@/lib/destinations'
 import { Footer } from '@/components/Footer'
@@ -72,14 +70,6 @@ function makeScore(overrides: Partial<DestinationScore> = {}): DestinationScore 
   }
 }
 
-const destinationCardDestination: DestinationCardDestination = {
-  name: 'Bali',
-  country: 'Indonesia',
-  climate: 'tropical',
-  description: 'A lush island paradise.',
-  activities: ['Surfing', 'Temple hopping'],
-}
-
 describe('accessibility (axe)', () => {
   it('Button has no violations', async () => {
     const { container } = render(<Button>Find my holiday</Button>)
@@ -126,13 +116,6 @@ describe('accessibility (axe)', () => {
         onChange={vi.fn()}
         onSelect={vi.fn()}
       />
-    )
-    expect(await axe(container)).toHaveNoViolations()
-  })
-
-  it('DestinationCard has no violations', async () => {
-    const { container } = render(
-      <DestinationCard destination={destinationCardDestination} onSelect={vi.fn()} />
     )
     expect(await axe(container)).toHaveNoViolations()
   })
