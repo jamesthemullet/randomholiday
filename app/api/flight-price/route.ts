@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { estimateFlightCostPerPerson } from '@/lib/budgetCalculator'
 import { parseNumberParam } from '@/lib/queryParams'
-import { createRateLimiter } from '@/lib/rateLimiter'
+import { createRateLimiter, rateLimitedResponse } from '@/lib/rateLimiter'
 import { getClientIp } from '@/lib/requestIp'
 
 const rateLimiter = createRateLimiter({ limit: 30, windowMs: 60_000 })
@@ -9,10 +9,7 @@ const rateLimiter = createRateLimiter({ limit: 30, windowMs: 60_000 })
 export async function GET(request: Request): Promise<NextResponse> {
   const rateLimit = rateLimiter.check(getClientIp(request))
   if (!rateLimit.allowed) {
-    return NextResponse.json(
-      { error: 'Too many requests, please try again shortly' },
-      { status: 429, headers: { 'Retry-After': String(Math.ceil(rateLimit.retryAfterMs / 1000)) } }
-    )
+    return rateLimitedResponse(rateLimit)
   }
 
   const { searchParams } = new URL(request.url)
