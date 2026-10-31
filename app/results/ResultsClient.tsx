@@ -3,9 +3,7 @@
 import React, { useCallback, useMemo, useState, useSyncExternalStore } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { TRAVEL_STYLES } from '@/lib/destinations'
 import { pickableDestinations } from '@/lib/catalogue'
-import type { TravelStyle } from '@/lib/destinations'
 import { supportedDepartureCities } from '@/lib/departureCities'
 import { getRecommendations } from '@/lib/recommendationEngine'
 import { scoreDestination } from '@/lib/scoringEngine'
@@ -13,6 +11,7 @@ import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { encodeShareableResult } from '@/lib/shareableResult'
+import { parseTravelStyles } from '@/lib/tripQuery'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
@@ -35,12 +34,7 @@ export function ResultsClient() {
     const nights = Number(searchParams.get('nights'))
     const groupSize = Number(searchParams.get('groupSize'))
     const travelMonth = Number(searchParams.get('month'))
-    const stylesParam = searchParams.get('styles')
-    const travelStyles = stylesParam
-      ? stylesParam
-          .split(',')
-          .filter((style): style is TravelStyle => TRAVEL_STYLES.includes(style as TravelStyle))
-      : undefined
+    const travelStyles = parseTravelStyles(searchParams.get('styles'))
 
     if (!city || !budget || !maxDistanceKm || !nights || !groupSize) return null
 
