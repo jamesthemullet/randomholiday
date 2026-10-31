@@ -24,6 +24,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
+      // vitest doesn't apply the "react-server" export condition Next's RSC bundler
+      // uses to pick server-only/empty.js, so it resolves to index.js and throws.
+      'server-only': path.resolve(__dirname, 'node_modules/server-only/empty.js'),
     },
   },
 })
