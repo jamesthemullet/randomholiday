@@ -4,6 +4,7 @@ import {
   searchDepartureCities,
   supportedDepartureCities,
 } from '@/lib/departureCities'
+import { CONTINENTS } from '@/lib/destinations'
 
 describe('departureCities database', () => {
   it('has a set of major departure cities', () => {
@@ -21,6 +22,12 @@ describe('departureCities database', () => {
       expect(city.coordinates.lat).toBeLessThanOrEqual(90)
       expect(city.coordinates.lng).toBeGreaterThanOrEqual(-180)
       expect(city.coordinates.lng).toBeLessThanOrEqual(180)
+    }
+  })
+
+  it('every city has a valid continent', () => {
+    for (const city of departureCities) {
+      expect(CONTINENTS).toContain(city.continent)
     }
   })
 })

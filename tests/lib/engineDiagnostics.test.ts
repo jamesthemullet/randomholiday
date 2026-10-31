@@ -41,12 +41,14 @@ const LONDON_ORIGIN: DepartureCity = {
   name: 'London',
   country: 'United Kingdom',
   coordinates: { lat: 51.5074, lng: -0.1278 },
+  continent: 'Europe',
 }
 const PARIS_ORIGIN: DepartureCity = {
   id: 'paris-origin',
   name: 'Paris',
   country: 'France',
   coordinates: { lat: 48.8566, lng: 2.3522 },
+  continent: 'Europe',
 }
 
 const BASE_PARAMS = {
