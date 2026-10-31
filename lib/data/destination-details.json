@@ -402,6 +402,26 @@
     ],
     "visa": "free"
   },
+  "bergerac-france": {
+    "description": "A Dordogne river town of half-timbered lanes and wine cellars, gateway to medieval villages, cave art, chateaux and Bergerac vineyards.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Old town and Place Pélissier",
+      "Bergerac wine tasting at Monbazillac",
+      "Canoe trip down the Dordogne",
+      "Beynac and Castelnaud castles",
+      "Lascaux IV cave art centre",
+      "Truffle and foie gras market stalls"
+    ],
+    "visa": "free"
+  },
   "berlin-germany": {
     "description": "Germany's sprawling capital, layering Cold War history, world-class museums, street art and all-night clubs across its many districts.",
     "climate": "oceanic",
@@ -422,6 +442,46 @@
     ],
     "visa": "free"
   },
+  "beziers-france": {
+    "description": "A Languedoc town above the Orb river with a hilltop cathedral, Canal du Midi locks and sandy beaches at nearby Valras-Plage.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 95,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Cathédrale Saint-Nazaire views",
+      "Fonseranes canal locks",
+      "Valras-Plage and Sérignan beaches",
+      "Languedoc wine tasting",
+      "Les Halles de Béziers market",
+      "Day trip to Carcassonne"
+    ],
+    "visa": "free"
+  },
+  "biarritz-france": {
+    "description": "A Basque-coast resort of Belle Époque villas and Atlantic surf breaks, with a lively market and Spanish tapas towns a short drive away.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 190,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Surfing at Grande Plage",
+      "Rocher de la Vierge",
+      "Les Halles market",
+      "Basque pintxos in Saint-Jean-de-Luz",
+      "Day trip to San Sebastián",
+      "Cité de l'Océan"
+    ],
+    "visa": "free"
+  },
   "bilbao-spain": {
     "description": "A Basque city reborn around Frank Gehry's Guggenheim, with a lively pintxos scene, riverside walks and green hills meeting the Bay of Biscay.",
     "climate": "oceanic",
@@ -439,6 +499,26 @@
       "Mount Artxanda funicular",
       "Gaztelugatxe day trip",
       "Mercado de la Ribera"
+    ],
+    "visa": "free"
+  },
+  "billund-denmark": {
+    "description": "A small Jutland town best known as the birthplace of Lego, with the original LEGOLAND, Lego House and Danish countryside nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 160,
+      "dailySpending": 100
+    },
+    "activities": [
+      "LEGOLAND Billund Resort",
+      "Lego House experience centre",
+      "LEGO Ideas and Lego Brand Store",
+      "Day trip to Ribe, Denmark's oldest town",
+      "Givskud Zoo safari park",
+      "Smørrebrød lunch"
     ],
     "visa": "free"
   },
@@ -478,6 +558,66 @@
       "Quadrilatero food market",
       "Tagliatelle al ragù and tortellini in brodo",
       "Day trip to Modena balsamic vinegar producers"
+    ],
+    "visa": "free"
+  },
+  "bordeaux-france": {
+    "description": "France's wine capital on the Garonne, with elegant 18th-century streets, the mirror-like Miroir d'Eau and world-famous châteaux nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 115,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Place de la Bourse and Miroir d'Eau",
+      "Cité du Vin",
+      "Saint-Émilion wine tour",
+      "Dune du Pilat day trip",
+      "Canelés and Marché des Capucins",
+      "Rue Sainte-Catherine"
+    ],
+    "visa": "free"
+  },
+  "boston-united-states": {
+    "description": "New England's revolutionary-era capital, where the Freedom Trail, Harvard's red-brick Cambridge, Fenway Park and fresh lobster rolls sit within easy reach.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 220,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Freedom Trail",
+      "Fenway Park",
+      "Harvard Yard and Cambridge",
+      "Museum of Fine Arts",
+      "Quincy Market chowder and lobster rolls",
+      "Day trip to Salem"
+    ],
+    "visa": "free"
+  },
+  "bratislava-slovakia": {
+    "description": "Slovakia's compact Danube capital, with a pastel Old Town, a hilltop castle, cheap beer and vineyards on the edge of the Little Carpathians.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 60,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Bratislava Castle",
+      "Old Town and Michael's Gate",
+      "Blue Church",
+      "Bryndzové halušky at a traditional pub",
+      "Little Carpathians wine route",
+      "Day trip to Vienna by train"
     ],
     "visa": "free"
   },
@@ -561,6 +701,26 @@
     ],
     "visa": "free"
   },
+  "cagliari-italy": {
+    "description": "Sardinia's hilltop capital, with a Pisan-era citadel, the Poetto beach on its doorstep and Sardinian seafood served in a fishing-quarter setting.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Castello district and Bastione di Saint Remy",
+      "Poetto Beach",
+      "Molentargius flamingo wetlands",
+      "Roman Amphitheatre",
+      "Culurgiones and fregola with clams",
+      "Villasimius coves day trip"
+    ],
+    "visa": "free"
+  },
   "casablanca-morocco": {
     "description": "Morocco's sprawling Atlantic metropolis, home to the vast Hassan II Mosque, Art Deco boulevards and a seafront lined with fish restaurants.",
     "climate": "mediterranean",
@@ -641,6 +801,27 @@
     ],
     "visa": "free"
   },
+  "chengdu-people-s-republic-of-china": {
+    "description": "Sichuan's relaxed capital, home to giant pandas, fiery hotpot, teahouse culture and the gateway to Leshan's colossal Buddha.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 70,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Chengdu Research Base of Giant Panda Breeding",
+      "Sichuan hotpot",
+      "Leshan Giant Buddha",
+      "Wuhou Shrine and Jinli Street",
+      "Kuanzhai Alley",
+      "People's Park teahouse",
+      "Mount Qingcheng"
+    ],
+    "visa": "free"
+  },
   "chisinau-moldova": {
     "description": "Moldova's leafy, Soviet-planned capital, a gateway to the country's cave-cellar wineries including Cricova and Mileștii Mici, among the world's largest.",
     "climate": "humid continental",
@@ -658,6 +839,46 @@
       "Orheiul Vechi cave monastery",
       "Mazarache and Plăcinte pastries",
       "Day trip to Tiraspol in Transnistria"
+    ],
+    "visa": "free"
+  },
+  "cluj-napoca-romania": {
+    "description": "Transylvania's student-filled cultural capital, with a Gothic St Michael's Church, lively cafes, strong music festivals and easy access to the Apuseni mountains.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "St Michael's Church and Unirii Square",
+      "Cluj Botanical Garden",
+      "Salina Turda salt mine",
+      "Cetățuia Hill viewpoint",
+      "Untold and Electric Castle festivals",
+      "Day trip to Turda Gorge"
+    ],
+    "visa": "free"
+  },
+  "cologne-bonn-germany": {
+    "description": "Germany's Rhine-side cathedral city, with a towering Gothic Dom, a lively old-town brewery scene and some of the country's best museums.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 125,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Cologne Cathedral and its south tower climb",
+      "Kölsch in an Altstadt brewhouse",
+      "Museum Ludwig",
+      "Hohenzollern Bridge love-lock walk",
+      "Rhine river cruise",
+      "Cologne Christmas Markets"
     ],
     "visa": "free"
   },
@@ -738,6 +959,26 @@
       "Boat day around Fethiye's 12 Islands",
       "Saklıkent Gorge",
       "Mud baths at Iztuzu Beach"
+    ],
+    "visa": "free"
+  },
+  "djerba-tunisia": {
+    "description": "A flat, sunny Tunisian island of whitewashed villages, sandy beaches, a historic synagogue and the medina market of Houmt Souk.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Houmt Souk medina",
+      "El Ghriba Synagogue",
+      "Djerba Explore and Lella Hadria Museum",
+      "Guellala pottery village",
+      "Sidi Mahrez beach",
+      "Camel ride in the dunes"
     ],
     "visa": "free"
   },
