@@ -10,7 +10,7 @@
 
 ## Phase 1: Project Scaffold ✅ COMPLETE
 
-- [x] Next.js 14 + TypeScript setup (no Tailwind)
+- [x] Next.js 16 + TypeScript setup (no Tailwind)
 - [x] ESLint + Prettier config
 - [x] Vitest + React Testing Library setup
 - [x] Playwright setup
@@ -21,7 +21,7 @@
 - [x] /styles/globals.css with base reset + accessibility utilities
 - [x] Basic folder structure: /app /components /lib /styles /tests /e2e
 - [x] .env.example with all API key placeholders
-- [x] Fonts: Poppins (headings) + Inter (body) via next/font/google
+- [x] Fonts: Shrikhand (display) + DM Sans (headings/body) + Space Mono via next/font/google
 - [x] Minimal app/layout.tsx with skip-to-main link
 - [x] app/page.tsx placeholder
 
