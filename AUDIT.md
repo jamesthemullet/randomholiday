@@ -78,6 +78,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-10-30 — resolved section 7's PLAN.md line 52 stale destination-count item, rewording it to describe the route-data catalogue instead of a fixed number (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 7's stale PLAN.md header item, pointing it at ROADMAP.md (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 7's stale PLAN.md Phase 1 tech-stack item (Next.js 14 → 16, Poppins/Inter → Shrikhand/DM Sans/Space Mono) (scheduled daily maintenance run).
+- 2026-10-31 — resolved section 8's unused `Input`/`Select`/`Spinner` UI primitives item: removed the three components and their tests (scheduled daily maintenance run).
 
 ## 1. Test coverage — unit gaps and e2e
 
@@ -184,7 +185,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [ ] `app/api/flight-price/route.ts` has no caller — no `fetch('/api/flight-price')` exists in `app/` or `components/`, and the modal computes costs locally. Wire it into `DestinationDetailModal`'s cost breakdown or remove the route and its test. (found: 2026-10-26)
 - [ ] `app/api/weather/route.ts:51` calls `fetchLiveWeather(lat, lng, apiKey)` without the validated `month`, so with `OPENWEATHER_API_KEY` set the modal shows today's current conditions rather than the travel month's. Use the seasonal estimate for non-current months (or a climate endpoint). (found: 2026-10-26)
 - [ ] `components/DestinationCard/` is never imported by any page or component (superseded by the `ResultsReveal` postcard) and is the sole source of the remaining `no-img-element` lint warning (`DestinationCard.tsx:66`). Remove it and its test. (found: 2026-10-26)
-- [ ] `components/Input/`, `components/Select/` and `components/Spinner/` are unused UI primitives — none is imported outside its own folder. Remove them and their tests. (found: 2026-10-26)
+- [x] `components/Input/`, `components/Select/` and `components/Spinner/` are unused UI primitives — none is imported outside its own folder. Remove them and their tests. (found: 2026-10-26) (resolved: 2026-10-31) — confirmed via a repo-wide grep that none of `Input`, `Select` or `Spinner` is imported outside its own folder (only their own test files and the shared `tests/a11y/components.test.tsx` axe suite referenced them). Deleted all three component folders and their test files, and removed their imports and axe test cases from `tests/a11y/components.test.tsx`. Verified via `yarn lint` (0 errors, 1 pre-existing unrelated warning on `DestinationCard.tsx`), `yarn typecheck`, `yarn test` (1855 passing), and `yarn build` (succeeds, all 333 routes still prerender). `yarn e2e` skipped per this routine's instructions (no live backend/secrets in this cloud checkout).
 - [ ] `components/AdSlot/AdSlot.tsx` is implemented and tested but never rendered. Decide: wire it in per the monetisation plan, or remove it. (found: 2026-10-26)
 - [ ] `lib/destinations.ts:1307` `DESTINATION_COUNT` and `:1313` `CONTINENTS` are exported but not imported outside tests. Trim them. (found: 2026-10-26)
 - [ ] `.env.example` lists `SKYSCANNER_API_KEY`, `NEXT_PUBLIC_ADSENSE_PUBLISHER_ID` and `STRIPE_PUBLISHABLE_KEY`, but no code reads them. Remove them (or add back when used). (found: 2026-10-26)
