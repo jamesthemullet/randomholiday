@@ -74,6 +74,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - 2026-10-30 — resolved section 6's spoofable rate-limit client IP item: `getClientIp` now prefers Cloudflare's `cf-connecting-ip` header (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 5's Footer dead-links (`/about`/`/privacy`/`/terms`) item (scheduled daily maintenance run).
 - 2026-10-29 — resolved section 5's dead `/pricing` "Upgrade to Pro" button item, wiring it to `POST /api/checkout` (scheduled daily maintenance run).
+- 2026-10-30 — resolved section 6's `yarn npm audit` high-severity findings item (5 of 10 fixed in-range/scoped; 5 not fixable without a cascading major bump of pinned upstream devDependency-only packages) and removed 4 of 5 now-unneeded `resolutions` entries, via the `dependency-update` skill (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 8's `lib/shareableResult.ts` `decodeShareableResult` dead-code/unvalidated-cast item: deleted the unused function (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 7's PLAN.md line 52 stale destination-count item, rewording it to describe the route-data catalogue instead of a fixed number (scheduled daily maintenance run).
 - 2026-10-30 — resolved section 7's stale PLAN.md header item, pointing it at ROADMAP.md (scheduled daily maintenance run).
@@ -153,7 +154,7 @@ audit adds new findings to the bottom of each section and leaves checked items a
 - [x] `lib/rateLimiter.ts:32`'s `windows` Map never drops expired entries, so it grows without bound per Worker isolate (worse given the spoofable key above). Prune stale windows in `check()`. (found: 2026-10-26)
 - [x] (low) Add `import 'server-only'` to `lib/stripeClient.ts:1` so importing `STRIPE_SECRET_KEY` code into a `'use client'` module becomes a build error rather than relying on a manual grep. (found: 2026-10-26)
 - [x] Add a Content-Security-Policy (start as `Content-Security-Policy-Report-Only`) in `next.config.mjs:11-24`. The checked headers item deferred CSP until the Stripe/AdSense work; that trigger has passed — Stripe uses a hosted-Checkout redirect (no Stripe.js) and `AdSlot` is unrendered, so all script sources are first-party. No open item tracks CSP. (found: 2026-10-26)
-- [ ] `yarn npm audit --all --recursive`: 10 high, 7 moderate, 1 low, 0 critical — all highs are dev/build-time transitives (`tmp`, `extract-zip`, `basic-ftp`, express4 `body-parser` via `@lhci/cli`/puppeteer; express5 `body-parser` and `glob@10.3.3` via `@opennextjs/aws`; `brace-expansion@1.1.18` via eslint `minimatch@3`; `zod` via `eslint-plugin-react-hooks`/`chromium-bidi`). Run the `dependency-update` skill. (found: 2026-10-26)
+- [x] `yarn npm audit --all --recursive`: 10 high, 7 moderate, 1 low, 0 critical — all highs are dev/build-time transitives (`tmp`, `extract-zip`, `basic-ftp`, express4 `body-parser` via `@lhci/cli`/puppeteer; express5 `body-parser` and `glob@10.3.3` via `@opennextjs/aws`; `brace-expansion@1.1.18` via eslint `minimatch@3`; `zod` via `eslint-plugin-react-hooks`/`chromium-bidi`). Run the `dependency-update` skill. (found: 2026-10-26)
 
 ## 7. Roadmap alignment
 
