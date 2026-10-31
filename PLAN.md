@@ -43,13 +43,13 @@ Sub-steps:
 - [x] Destination card with flip animation (DestinationCard.tsx + .module.css)
 - [x] Layout shell: Header, Main, Footer (each with own .module.css)
 - [x] ~~Dark mode toggle component~~ (removed 2026-10-18 — light theme only)
-- [x] Unit tests for all components (part of the 1277-test suite; `vitest.config.ts` enforces 95%+ lines/branches/statements and 100% functions for `components/**`, not blanket 100% — see AUDIT.md §1 for the known gaps in `DestinationDetailModal`/`DiscoverWizard`)
+- [x] Unit tests for all components (`vitest.config.ts` enforces 95%+ lines/branches/statements and 100% functions for `components/**`, not blanket 100% — see AUDIT.md §1 for current coverage gaps; test count has grown well past the original 1277, and `DiscoverWizard` was later replaced by `TripForm`, below)
 
 ---
 
 ## Phase 3: Holiday Recommendation Engine ✅ COMPLETE (pure logic, /lib)
 
-- [x] Destination database JSON (56 destinations across 6 continents, full TypeScript types)
+- [x] ~~Destination database JSON (56 destinations across 6 continents, full TypeScript types)~~ (superseded: the static list became a generated route-data catalogue — `lib/catalogue.ts` merges `lib/data/london-destinations.json` (`yarn data:london`) with hand-written `lib/data/destination-details.json`; 154 destinations are pickable today, and the count grows as destination-detail PRs land, see ROADMAP.md)
 - [x] Distance calculator (great-circle / haversine formula)
 - [x] Budget calculator (flight tiers + hotel + daily spending, 36 tests, 100% coverage)
 - [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
@@ -61,14 +61,16 @@ Sub-steps:
 
 ## Phase 4: Main UI Flow
 
-- [x] Landing page: hero with animated globe SVG, tagline, gradient background
-- [x] Multi-step wizard form — step 1: departure city autocomplete input
-- [x] Multi-step wizard form — step 2: budget slider
-- [x] Multi-step wizard form — step 3: travel dates picker
-- [x] Multi-step wizard form — step 4: travel style selector
-- [x] Multi-step wizard form — step 5: max distance + group size
-- [x] Results page: animated reveal of top 3 destinations, Shuffle button
-- [x] Wire wizard steps + results into a working flow: /discover route (step state + navigation) → /results route (query params → recommendation engine → ResultsReveal)
+*Superseded: the multi-step `/discover` wizard below was later replaced by a single-page `TripForm` on the homepage (`components/TripForm/`) — see the note after this list.*
+
+- [x] ~~Landing page: hero with animated globe SVG, tagline, gradient background~~ (superseded: the hero is now a photo image via `next/image`, not an animated SVG globe — `components/Hero/Hero.tsx`)
+- [x] ~~Multi-step wizard form — step 1: departure city autocomplete input~~ (superseded, see note below)
+- [x] ~~Multi-step wizard form — step 2: budget slider~~ (superseded, see note below)
+- [x] ~~Multi-step wizard form — step 3: travel dates picker~~ (superseded, see note below)
+- [x] ~~Multi-step wizard form — step 4: travel style selector~~ (superseded, see note below)
+- [x] ~~Multi-step wizard form — step 5: max distance + group size~~ (superseded, see note below)
+- [x] ~~Results page: animated reveal of top 3 destinations, Shuffle button~~ (superseded: `ResultsClient.tsx` reveals one recommendation at a time, with "Spin again" swapping it for another)
+- [x] ~~Wire wizard steps + results into a working flow: /discover route (step state + navigation) → /results route (query params → recommendation engine → ResultsReveal)~~ (superseded: `/discover` now permanently redirects to `/` — `next.config.mjs` — where `TripForm` collects all inputs on one page before navigating straight to `/results`; `DiscoverWizard` no longer exists)
 - [x] Destination detail modal: photos placeholder, cost breakdown, things to do (weather and affiliate links come later, in Phases 5 and 6)
 - [x] Save trip (Pro feature, upsell prompt) + Share button (native share sheet with clipboard fallback), via TripActions component in the destination detail modal
 
