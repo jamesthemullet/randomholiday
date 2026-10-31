@@ -581,6 +581,46 @@
     ],
     "visa": "free"
   },
+  "boston-united-states": {
+    "description": "New England's revolutionary-era capital, where the Freedom Trail, Harvard's red-brick Cambridge, Fenway Park and fresh lobster rolls sit within easy reach.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 220,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Freedom Trail",
+      "Fenway Park",
+      "Harvard Yard and Cambridge",
+      "Museum of Fine Arts",
+      "Quincy Market chowder and lobster rolls",
+      "Day trip to Salem"
+    ],
+    "visa": "free"
+  },
+  "bratislava-slovakia": {
+    "description": "Slovakia's compact Danube capital, with a pastel Old Town, a hilltop castle, cheap beer and vineyards on the edge of the Little Carpathians.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 60,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Bratislava Castle",
+      "Old Town and Michael's Gate",
+      "Blue Church",
+      "Bryndzové halušky at a traditional pub",
+      "Little Carpathians wine route",
+      "Day trip to Vienna by train"
+    ],
+    "visa": "free"
+  },
   "brindisi-italy": {
     "description": "A Puglian port city on the Adriatic with Roman monuments and a lively harbour, and a base for whitewashed hill towns and Salento beaches.",
     "climate": "mediterranean",
@@ -658,6 +698,26 @@
       "Sunny Beach",
       "Sozopol old town and harbour",
       "Grilled Black Sea fish and shopska salad"
+    ],
+    "visa": "free"
+  },
+  "cagliari-italy": {
+    "description": "Sardinia's hilltop capital, with a Pisan-era citadel, the Poetto beach on its doorstep and Sardinian seafood served in a fishing-quarter setting.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Castello district and Bastione di Saint Remy",
+      "Poetto Beach",
+      "Molentargius flamingo wetlands",
+      "Roman Amphitheatre",
+      "Culurgiones and fregola with clams",
+      "Villasimius coves day trip"
     ],
     "visa": "free"
   },
@@ -741,6 +801,27 @@
     ],
     "visa": "free"
   },
+  "chengdu-people-s-republic-of-china": {
+    "description": "Sichuan's relaxed capital, home to giant pandas, fiery hotpot, teahouse culture and the gateway to Leshan's colossal Buddha.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 70,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Chengdu Research Base of Giant Panda Breeding",
+      "Sichuan hotpot",
+      "Leshan Giant Buddha",
+      "Wuhou Shrine and Jinli Street",
+      "Kuanzhai Alley",
+      "People's Park teahouse",
+      "Mount Qingcheng"
+    ],
+    "visa": "free"
+  },
   "chisinau-moldova": {
     "description": "Moldova's leafy, Soviet-planned capital, a gateway to the country's cave-cellar wineries including Cricova and Mileștii Mici, among the world's largest.",
     "climate": "humid continental",
@@ -758,6 +839,26 @@
       "Orheiul Vechi cave monastery",
       "Mazarache and Plăcinte pastries",
       "Day trip to Tiraspol in Transnistria"
+    ],
+    "visa": "free"
+  },
+  "cluj-napoca-romania": {
+    "description": "Transylvania's student-filled cultural capital, with a Gothic St Michael's Church, lively cafes, strong music festivals and easy access to the Apuseni mountains.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "St Michael's Church and Unirii Square",
+      "Cluj Botanical Garden",
+      "Salina Turda salt mine",
+      "Cetățuia Hill viewpoint",
+      "Untold and Electric Castle festivals",
+      "Day trip to Turda Gorge"
     ],
     "visa": "free"
   },
@@ -858,6 +959,26 @@
       "Boat day around Fethiye's 12 Islands",
       "Saklıkent Gorge",
       "Mud baths at Iztuzu Beach"
+    ],
+    "visa": "free"
+  },
+  "djerba-tunisia": {
+    "description": "A flat, sunny Tunisian island of whitewashed villages, sandy beaches, a historic synagogue and the medina market of Houmt Souk.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Houmt Souk medina",
+      "El Ghriba Synagogue",
+      "Djerba Explore and Lella Hadria Museum",
+      "Guellala pottery village",
+      "Sidi Mahrez beach",
+      "Camel ride in the dunes"
     ],
     "visa": "free"
   },
