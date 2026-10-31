@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { DM_Sans, Shrikhand, Space_Mono } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { RouteAnnouncer } from '@/components/RouteAnnouncer'
+import { getAppUrl } from '@/lib/appUrl'
 import '@/styles/globals.css'
 
 const shrikhand = Shrikhand({
@@ -26,7 +27,7 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(getAppUrl()),
   title: 'RandomHoliday — Discover Your Next Adventure',
   description:
     'Get surprise holiday destination suggestions based on your budget, travel style, and departure location.',
