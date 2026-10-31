@@ -5,6 +5,7 @@ import { Badge } from '@/components/Badge'
 import { pickableDestinations } from '@/lib/catalogue'
 import { getPosterTheme } from '@/lib/destinationImage'
 import { getMonthOptions } from '@/lib/tripQuery'
+import { getAppUrl } from '@/lib/appUrl'
 import styles from './page.module.css'
 
 interface DestinationPageProps {
@@ -41,7 +42,7 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
   const destination = findDestination(slug)
   if (!destination) notFound()
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
+  const appUrl = getAppUrl()
   const monthOptions = getMonthOptions()
   const bestMonths = destination.bestMonths.map((month) => monthOptions[month - 1].label)
 
