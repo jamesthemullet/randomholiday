@@ -4,13 +4,13 @@
 
 ## Last Completed: Task 9.6 (final) — Ran the final quality gate (`yarn lint`, `yarn typecheck`, `yarn test`: 1833 tests, all clean) and raised GitHub issue "Ready for Production Release" with a deployment checklist covering the app's actual deploy target (Cloudflare Workers via the OpenNext adapter, with `vercel.json` kept as a fallback path). This completes Phase 9 and the build plan — remaining work is the manual credential setup tracked in issue #108.
 
-## Next: None — all planned build phases are complete. Remaining work is tracked in open GitHub issues (credential/account setup) rather than PLAN.md tasks.
+## Next: None — all planned build phases are complete. New feature/content work is now planned in [ROADMAP.md](./ROADMAP.md) (e.g. the "Spin again" exclusion, the Pro upsell, and the ongoing destination-details PRs) rather than as PLAN.md tasks; credential/account setup is still tracked in open GitHub issues.
 
 ---
 
 ## Phase 1: Project Scaffold ✅ COMPLETE
 
-- [x] Next.js 14 + TypeScript setup (no Tailwind)
+- [x] Next.js 16 + TypeScript setup (no Tailwind)
 - [x] ESLint + Prettier config
 - [x] Vitest + React Testing Library setup
 - [x] Playwright setup
@@ -21,7 +21,7 @@
 - [x] /styles/globals.css with base reset + accessibility utilities
 - [x] Basic folder structure: /app /components /lib /styles /tests /e2e
 - [x] .env.example with all API key placeholders
-- [x] Fonts: Poppins (headings) + Inter (body) via next/font/google
+- [x] Fonts: Shrikhand (display) + DM Sans (headings/body) + Space Mono via next/font/google
 - [x] Minimal app/layout.tsx with skip-to-main link
 - [x] app/page.tsx placeholder
 
