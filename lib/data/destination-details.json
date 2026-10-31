@@ -1601,7 +1601,7 @@
   "jeddah-saudi-arabia": {
     "description": "Saudi Arabia's Red Sea port, where coral-stone houses in Al-Balad stand a short way from waterfront corniches, reef diving and the soaring King Fahd Fountain.",
     "climate": "hot desert",
-    "travelStyles": ["city", "culture", "beach"],
+    "travelStyles": ["city", "culture"],
     "bestMonths": [11, 12, 1, 2, 3],
     "estimatedCosts": {
       "flightFromEurope": 400,
