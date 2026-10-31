@@ -27,5 +27,18 @@ describe('next.config headers', () => {
     expect(headerMap['Strict-Transport-Security']).toBe(
       'max-age=63072000; includeSubDomains; preload'
     )
+    expect(headerMap['Content-Security-Policy-Report-Only']).toBe(
+      [
+        "default-src 'self'",
+        "script-src 'self' 'unsafe-inline'",
+        "style-src 'self' 'unsafe-inline'",
+        "img-src 'self' data: blob:",
+        "font-src 'self' data:",
+        "connect-src 'self'",
+        "frame-ancestors 'self'",
+        "base-uri 'self'",
+        "form-action 'self'",
+      ].join('; ')
+    )
   })
 })
