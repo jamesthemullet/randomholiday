@@ -49,7 +49,7 @@ Sub-steps:
 
 ## Phase 3: Holiday Recommendation Engine ✅ COMPLETE (pure logic, /lib)
 
-- [x] Destination database JSON (56 destinations across 6 continents, full TypeScript types)
+- [x] ~~Destination database JSON (56 destinations across 6 continents, full TypeScript types)~~ (superseded: the static list became a generated route-data catalogue — `lib/catalogue.ts` merges `lib/data/london-destinations.json` (`yarn data:london`) with hand-written `lib/data/destination-details.json`; 154 destinations are pickable today, and the count grows as destination-detail PRs land, see ROADMAP.md)
 - [x] Distance calculator (great-circle / haversine formula)
 - [x] Budget calculator (flight tiers + hotel + daily spending, 36 tests, 100% coverage)
 - [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
