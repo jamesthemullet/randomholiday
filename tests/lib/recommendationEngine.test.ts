@@ -144,11 +144,12 @@ describe('getRecommendations', () => {
       poolSize: 4,
       random: () => 0,
     })
+    const draws = [0.1, 0.9, 0.9, 0.9]
     const high = getRecommendations([PARIS, NEW_YORK, TOKYO, SYDNEY], {
       ...GENEROUS_PARAMS,
       count: 4,
       poolSize: 4,
-      random: () => 0.999,
+      random: () => draws.shift() ?? 0,
     })
 
     expect(low.recommendations.map((r) => r.destination.id)).not.toEqual(
@@ -186,7 +187,30 @@ describe('getRecommendations', () => {
     expect(result.recommendations).toEqual([])
   })
 
-  it('defaults count to 1 and poolSize to 10', () => {
+  it('makes better scores more likely without ruling out weaker ones', () => {
+    const wins: Record<string, number> = { strong: 0, weak: 0 }
+    const strong = { ...PARIS, id: 'strong', bestMonths: [7] }
+    const weak = { ...PARIS, id: 'weak', bestMonths: [1] }
+    for (let i = 0; i < 500; i++) {
+      const [pick] = getRecommendations([strong, weak], {
+        ...GENEROUS_PARAMS,
+        travelMonth: 7,
+      }).recommendations
+      wins[pick.destination.id] += 1
+    }
+
+    expect(wins.strong).toBeGreaterThan(wins.weak)
+    expect(wins.weak).toBeGreaterThan(0)
+  })
+
+  it('draws from every passing destination by default', () => {
+    const many = Array.from({ length: 30 }, (_, i) => ({ ...PARIS, id: `city-${i}` }))
+    const result = getRecommendations(many, { ...GENEROUS_PARAMS, count: 30 })
+
+    expect(result.recommendations).toHaveLength(30)
+  })
+
+  it('defaults count to 1', () => {
     const many = [PARIS, NEW_YORK, TOKYO, SYDNEY, OVER_BUDGET]
     const result = getRecommendations(many, GENEROUS_PARAMS)
 
