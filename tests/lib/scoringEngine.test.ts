@@ -296,15 +296,15 @@ describe('scoreDestinations', () => {
   })
 
   it('sorts results by totalScore descending', () => {
-    // Tokyo is much farther and pricier than Paris, so under a shared budget
-    // and distance cap it should always score lower.
+    // Tokyo uses far more of a £3,000 budget than Paris, so it should score higher: bigger
+    // budgets favour bigger trips.
     const results = scoreDestinations(ALL, {
       ...DEFAULT_PARAMS,
       maxBudgetPerPerson: 3000,
       maxDistanceKm: 10000,
     })
-    expect(results[0]?.destination.id).toBe('paris')
-    expect(results[1]?.destination.id).toBe('tokyo')
+    expect(results[0]?.destination.id).toBe('tokyo')
+    expect(results[1]?.destination.id).toBe('paris')
     expect(results[0]?.totalScore).toBeGreaterThanOrEqual(results[1]?.totalScore ?? 0)
   })
 })

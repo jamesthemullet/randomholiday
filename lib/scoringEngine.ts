@@ -7,17 +7,18 @@ export interface ScoringWeights {
   style: number
   /** Weight applied to how well the travel month lines up with the destination's best months */
   season: number
-  /** Weight applied to how much headroom the destination leaves under the budget */
+  /** Weight applied to how fully the trip uses the budget, so bigger budgets favour bigger trips */
   budget: number
   /** Weight applied to how close the destination is to the origin */
   distance: number
 }
 
 export const DEFAULT_WEIGHTS: ScoringWeights = {
-  style: 0.4,
-  season: 0.25,
+  style: 0.5,
+  season: 0.3,
   budget: 0.2,
-  distance: 0.15,
+  // Max distance is already a hard filter, and for a random holiday nearer isn't better.
+  distance: 0,
 }
 
 export interface ScoreParams {

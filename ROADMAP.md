@@ -118,9 +118,10 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
       far it undercuts it, so a bigger budget unlocks bigger trips.
       (`calculateBudgetScore` in `lib/scoringEngine.ts` now scores `perPersonCost / maxBudgetPerPerson`
       — 0 if over budget, 1 at a perfect fit — tested in `tests/lib/scoringEngine.test.ts`)
-- [ ] Rebalance `DEFAULT_WEIGHTS`, softening or dropping distance. Distance is already a hard
-      filter, and for a "random holiday" nearer isn't better.
-- [ ] Sample the top-10 pool weighted by score instead of uniformly in `recommendationEngine.ts`.
+- [x] Rebalance `DEFAULT_WEIGHTS`, softening or dropping distance. Distance is already a hard
+      filter, and for a "random holiday" nearer isn't better. (distance weight is now 0)
+- [x] Sample by score instead of uniformly in `recommendationEngine.ts`. (widened from the top 10
+      to every destination that passes the filters)
       Session-level "don't show me that again" is feature 2.
 - [ ] **Content, not code.** Grow the catalogue where it's thin. Oceania has 4 of 56 destinations,
       so Sydney, Melbourne and Auckland get only 6–9 options.

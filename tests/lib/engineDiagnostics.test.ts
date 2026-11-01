@@ -134,7 +134,7 @@ describe('runEngineDiagnostics', () => {
     expect(summary.perOrigin[0].distinctShuffleIds.length).toBeLessThanOrEqual(3)
   })
 
-  it('defaults to a pool of 10 and 20 shuffles when not given', () => {
+  it('defaults to every destination and 20 shuffles when not given', () => {
     const destinations = Array.from({ length: 15 }, (_, i) =>
       makeDestination({ id: `d${i}`, coordinates: { lat: i * 0.1, lng: i * 0.1 } })
     )
@@ -143,7 +143,8 @@ describe('runEngineDiagnostics', () => {
       random: mulberry32(3),
     })
 
-    expect(summary.perOrigin[0].poolIds.length).toBeLessThanOrEqual(10)
+    expect(summary.perOrigin[0].poolIds).toHaveLength(15)
+    expect(summary.perOrigin[0].distinctShuffleIds.length).toBeLessThanOrEqual(15)
   })
 })
 
@@ -152,12 +153,9 @@ describe('runEngineDiagnostics', () => {
 /**
  * Measured 19 October 2026 against `pickableDestinations`/`departureCities` with the
  * homepage defaults (£1,500 budget, 10,000 km max distance, 7 nights, 2 people, no style
- * preference) and a fixed seed, per ROADMAP.md feature 5's analysis: the engine favours
- * cheap, nearby trips, over a quarter of the catalogue never surfaces, and repeated shuffles
- * from London return few distinct places. These are regression floors/ceilings pinned to
- * today's numbers, not targets — feature 5's later steps (excluding nearby self-matches,
- * distance-aware flight pricing, per-room hotel cost, budget-fit scoring, rebalanced
- * weights, weighted pool sampling) should tighten them as they land.
+ * preference) and a fixed seed, per ROADMAP.md feature 5's analysis. Re-pinned once score-weighted
+ * sampling across all passing destinations and the distance-free weights landed. These are
+ * regression floors, not targets.
  */
 describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
   const summary = runEngineDiagnostics(pickableDestinations, departureCities, {
@@ -169,17 +167,10 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
     random: mulberry32(42),
   })
 
-  it('surfaces close to half the catalogue across every origin, but not much more today', () => {
-    // Floor lowered from 0.5 to 0.45 when the catalogue grew by six destinations (Almería,
-    // Antalya, Athens, Bodrum, Bucharest, Chania) that no origin's pool surfaces yet, and again
-    // from 0.45 to 0.4 after six more (Heraklion, Isle of Man, Kraków, Lanzarote, Larnaca, Lyon),
-    // and again from 0.4 to 0.35 after six more (Aberdeen, Agadir, Bilbao, Valencia, Venice,
-    // Zakynthos), and again from 0.35 to 0.3 after six more (Bologna, Brindisi, Burgas,
-    // Casablanca, Catania, Chișinău), and again from 0.3 to 0.25 after six more (Guernsey,
-    // Hamburg, Helsinki, Hurghada, Innsbruck, Inverness), and again from 0.25 to 0.2 after six
-    // more (Accra, Chambéry, Tromsø, Turin, Verona, Warsaw).
-    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.2)
-    expect(summary.poolCoverage).toBeLessThan(0.6)
+  it('surfaces most of the catalogue across every origin', () => {
+    // Every destination that passes the filters can now be drawn, so coverage only misses what
+    // the £1,500 and 10,000 km defaults rule out.
+    expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.8)
   })
 
   it('no longer lets departure cities recommend themselves', () => {
@@ -188,16 +179,14 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
     expect(summary.selfMatchCount).toBe(0)
   })
 
-  it('gives London only a handful of distinct destinations across 20 shuffles', () => {
+  it('gives London plenty of distinct destinations across 20 shuffles', () => {
     const london = summary.perOrigin.find((origin) => origin.originId === 'london-uk')
     expect(london).toBeDefined()
-    expect(london?.distinctShuffleIds.length).toBeGreaterThanOrEqual(9)
-    expect(london?.distinctShuffleIds.length).toBeLessThan(15)
+    expect(london?.distinctShuffleIds.length).toBeGreaterThanOrEqual(15)
   })
 
-  it('keeps every origin reasonably varied, but none close to the pool size', () => {
+  it('keeps every origin reasonably varied', () => {
     const distinctCounts = summary.perOrigin.map((origin) => origin.distinctShuffleIds.length)
     expect(Math.min(...distinctCounts)).toBeGreaterThanOrEqual(4)
-    expect(Math.max(...distinctCounts)).toBeLessThanOrEqual(10)
   })
 })
