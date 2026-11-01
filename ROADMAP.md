@@ -77,8 +77,6 @@ next month, 10,000 km) showed the engine favours cheap, nearby trips. 27 of 56 d
 Petra, Kathmandu and Marrakech appear for 26–28 of the 35 cities, and 20 shuffles from London
 give only 9 distinct places. Root causes are all small, contained fixes in `lib/`:
 
-- `calculateBudget` always uses `estimatedCosts.flightFromEurope`, wherever you fly from, so New
-  York's #1 is Marrakech. `estimateFlightCostPerPerson(distanceKm)` exists but goes unused.
 - Hotel cost is charged once per night regardless of group size. From London, a solo traveller
   qualifies for 26 destinations and a group of 6 for 45.
 - The budget score rewards unspent budget. Raising London's budget from $1,500 to $5,000 returns
@@ -96,21 +94,8 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
 - [x] Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests.
       (`MIN_DISTANCE_KM` in `lib/filterEngine.ts`, tested in `tests/lib/filterEngine.test.ts`; also
       removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
-- [ ] Price flights from non-European origins by distance, but keep `flightFromEurope` for European
-      ones. The per-destination figure captures low-cost-carrier pricing, which in Europe matters
-      more than distance. Pure distance tiers would price Malaga or Lisbon like Cyprus and add big
-      price jumps at the tier edges (an earlier attempt, PR #161, was closed for this reason).
-  - [ ] Add `continent: Continent` to `DepartureCity` in `lib/departureCities.ts` and fill it
-        in for every origin, plus a test that every origin has one.
-  - [ ] Add an `originContinent` to `BudgetParams`. `calculateBudget` uses
-        `flightFromEurope` when it's `'Europe'` and `estimateFlightCostPerPerson(distanceKm)`
-        otherwise. Pass it through from `filterEngine.ts`, `scoringEngine.ts`,
-        `DestinationDetailModal` and `app/results/ResultsClient.tsx`, plus tests (London →
-        Malaga is unchanged, New York → Marrakech gets more expensive). Re-measure the
-        `tests/lib/engineDiagnostics.test.ts` baseline, and don't loosen the
-        distinct-per-origin floor.
-  - [ ] Present the flight cost as a rough guide. In the destination detail modal's breakdown,
-        show it as "from ~£X" (or a range) and point people to the Skyscanner link for real prices.
+- [ ] Present the flight cost as a rough guide. In the destination detail modal's breakdown, show
+      it as "from ~£X" (or a range) and point people to the Skyscanner link for real prices.
 - [x] Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
       (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
       `tests/lib/budgetCalculator.test.ts`)
