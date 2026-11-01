@@ -1,11 +1,19 @@
-import { describe, it, expect, afterEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { GET } from '@/app/api/weather/route'
 
 const BASE_URL = 'http://localhost/api/weather'
 const VALID_QUERY = 'lat=41.38&lng=2.17&climate=mediterranean&month=7'
 
 describe('GET /api/weather', () => {
+  beforeEach(() => {
+    // VALID_QUERY uses month=7; pin "now" to July so the live-weather path
+    // (gated on month === current month) is exercised by the tests below.
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 6, 15))
+  })
+
   afterEach(() => {
+    vi.useRealTimers()
     vi.unstubAllEnvs()
     vi.unstubAllGlobals()
   })
@@ -77,6 +85,23 @@ describe('GET /api/weather', () => {
     const body = await response.json()
 
     expect(body).toEqual({ source: 'live', tempC: 26.4, description: 'clear sky' })
+  })
+
+  it('uses the seasonal estimate instead of live weather when the requested month is not the current month', async () => {
+    vi.stubEnv('OPENWEATHER_API_KEY', 'test-key')
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ main: { temp: 26.4 }, weather: [{ description: 'clear sky' }] }),
+    })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const response = await GET(
+      new Request(`${BASE_URL}?lat=41.38&lng=2.17&climate=mediterranean&month=12`)
+    )
+    const body = await response.json()
+
+    expect(body).toEqual({ source: 'static', avgHighC: 15, description: 'cool' })
+    expect(fetchMock).not.toHaveBeenCalled()
   })
 
   it('falls back to the static estimate when the live fetch response is not ok', async () => {
