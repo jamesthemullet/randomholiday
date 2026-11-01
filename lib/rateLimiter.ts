@@ -1,6 +1,16 @@
+import { NextResponse } from 'next/server'
+
 export interface RateLimitResult {
   allowed: boolean
   retryAfterMs: number
+}
+
+/** Standard 429 JSON response for a blocked `RateLimitResult`. */
+export function rateLimitedResponse(result: RateLimitResult): NextResponse {
+  return NextResponse.json(
+    { error: 'Too many requests, please try again shortly' },
+    { status: 429, headers: { 'Retry-After': String(Math.ceil(result.retryAfterMs / 1000)) } }
+  )
 }
 
 export interface RateLimiter {

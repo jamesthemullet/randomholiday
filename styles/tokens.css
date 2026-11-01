@@ -6,11 +6,17 @@
   --color-turquoise-dark: #009b9a;
   /* Darker than --color-turquoise-dark: needed to clear WCAG AA 4.5:1 as text/border on a light background */
   --color-turquoise-contrast: #007d7d;
+  /* Hover/active shade of --color-turquoise-contrast when used as a solid button background */
+  --color-turquoise-solid-hover: #005f5f;
   --color-coral: #ff6b6b;
   --color-coral-light: #ff9090;
   --color-coral-dark: #e84848;
   /* Darker than --color-coral-dark: needed to clear WCAG AA 4.5:1 as small text on white */
   --color-coral-contrast: #c53030;
+  /* Needed to clear WCAG AA 4.5:1 for white text on a solid background (darker than --color-coral-contrast, which targets text/border contrast, not a solid fill) */
+  --color-coral-solid: #c62828;
+  /* Hover/active shade of --color-coral-solid */
+  --color-coral-solid-hover: #a51f1f;
   --color-yellow: #ffd166;
   --color-yellow-light: #ffe09a;
   --color-yellow-dark: #e6b84d;

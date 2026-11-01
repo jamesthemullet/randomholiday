@@ -74,6 +74,14 @@ function parsePositiveParam(value: string | null): number | undefined {
   return parsed !== null && parsed > 0 ? parsed : undefined
 }
 
+/** Splits a `styles` query param on commas and drops any entry that isn't a known TravelStyle. */
+export function parseTravelStyles(stylesParam: string | null): TravelStyle[] {
+  if (!stylesParam) return []
+  return stylesParam
+    .split(',')
+    .filter((style): style is TravelStyle => TRAVEL_STYLES.includes(style as TravelStyle))
+}
+
 /**
  * Reads a results query string back into form values, so "Change search" can reopen the
  * form prefilled. Anything missing or invalid is left undefined for the form to default.
@@ -99,13 +107,8 @@ export function parseTripQuery(params: URLSearchParams): TripQueryInitialValues 
   const groupSize = parsePositiveParam(params.get('groupSize'))
   if (groupSize !== undefined) values.groupSize = groupSize
 
-  const styles = params.get('styles')
-  if (styles) {
-    const travelStyles = styles
-      .split(',')
-      .filter((style): style is TravelStyle => TRAVEL_STYLES.includes(style as TravelStyle))
-    if (travelStyles.length > 0) values.travelStyles = travelStyles
-  }
+  const travelStyles = parseTravelStyles(params.get('styles'))
+  if (travelStyles.length > 0) values.travelStyles = travelStyles
 
   return values
 }

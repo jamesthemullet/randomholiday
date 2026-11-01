@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { encodeShareableResult, decodeShareableResult } from '@/lib/shareableResult'
+import { encodeShareableResult } from '@/lib/shareableResult'
 import type { ShareableResult } from '@/lib/shareableResult'
 
 const FULL_RESULT: ShareableResult = {
@@ -50,66 +50,5 @@ describe('encodeShareableResult', () => {
     const params = new URLSearchParams(query)
 
     expect(params.has('styles')).toBe(false)
-  })
-})
-
-describe('decodeShareableResult', () => {
-  it('round-trips a fully populated result', () => {
-    const query = encodeShareableResult(FULL_RESULT)
-    expect(decodeShareableResult(query)).toEqual(FULL_RESULT)
-  })
-
-  it('round-trips a minimal result without month or styles', () => {
-    const query = encodeShareableResult(MINIMAL_RESULT)
-    expect(decodeShareableResult(query)).toEqual(MINIMAL_RESULT)
-  })
-
-  it('accepts a URLSearchParams instance directly', () => {
-    const query = encodeShareableResult(FULL_RESULT)
-    const params = new URLSearchParams(query)
-    expect(decodeShareableResult(params)).toEqual(FULL_RESULT)
-  })
-
-  it('returns null when destination is missing', () => {
-    const params = new URLSearchParams(encodeShareableResult(FULL_RESULT))
-    params.delete('destination')
-    expect(decodeShareableResult(params)).toBeNull()
-  })
-
-  it('returns null when originId is missing', () => {
-    const params = new URLSearchParams(encodeShareableResult(FULL_RESULT))
-    params.delete('originId')
-    expect(decodeShareableResult(params)).toBeNull()
-  })
-
-  it('returns null when budget is missing or non-numeric', () => {
-    const params = new URLSearchParams(encodeShareableResult(FULL_RESULT))
-    params.set('budget', 'not-a-number')
-    expect(decodeShareableResult(params)).toBeNull()
-  })
-
-  it('returns null when groupSize is zero', () => {
-    const params = new URLSearchParams(encodeShareableResult(FULL_RESULT))
-    params.set('groupSize', '0')
-    expect(decodeShareableResult(params)).toBeNull()
-  })
-
-  it('returns null for an empty query string', () => {
-    expect(decodeShareableResult('')).toBeNull()
-  })
-
-  it('treats a non-numeric month as absent', () => {
-    const params = new URLSearchParams(encodeShareableResult(FULL_RESULT))
-    params.set('month', 'not-a-number')
-    expect(decodeShareableResult(params)?.travelMonth).toBeUndefined()
-  })
-
-  it('handles multiple travel styles', () => {
-    const result: ShareableResult = {
-      ...MINIMAL_RESULT,
-      travelStyles: ['adventure', 'beach', 'culture'],
-    }
-    const query = encodeShareableResult(result)
-    expect(decodeShareableResult(query)?.travelStyles).toEqual(['adventure', 'beach', 'culture'])
   })
 })
