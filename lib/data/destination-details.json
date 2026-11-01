@@ -1340,6 +1340,26 @@
     ],
     "visa": "free"
   },
+  "guangzhou-people-s-republic-of-china": {
+    "description": "The capital of Cantonese cuisine, where dim sum teahouses, colonial Shamian Island and the Canton Tower skyline define a humid Pearl River metropolis.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Dim sum at Tao Tao Ju or Lin Heung Tea House",
+      "Chen Clan Ancestral Hall",
+      "Shamian Island colonial architecture",
+      "Canton Tower and Pearl River night cruise",
+      "Yuexiu Park and the Five Rams statue",
+      "Qingping Market and Beijing Road"
+    ],
+    "visa": "free"
+  },
   "guernsey-guernsey": {
     "description": "A small Channel Island with granite cliffs, sheltered bays and a pretty harbour town, offering coastal walks, German occupation history and Victor Hugo's exile home.",
     "climate": "oceanic",
@@ -1357,6 +1377,26 @@
       "Cobo Bay and Vazon Bay beaches",
       "Day trip by ferry to Herm",
       "Guernsey Gâche bread and fresh crab"
+    ],
+    "visa": "free"
+  },
+  "halifax-canada": {
+    "description": "Nova Scotia's harbour capital, with a star-shaped Citadel, a lively waterfront boardwalk, fresh lobster and Peggy's Cove lighthouse a short drive away.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 150,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Halifax Citadel National Historic Site",
+      "Waterfront Boardwalk and Pier 21",
+      "Peggy's Cove lighthouse day trip",
+      "Lobster rolls and seafood chowder",
+      "Maritime Museum of the Atlantic",
+      "Lunenburg UNESCO old town"
     ],
     "visa": "free"
   },
@@ -1499,6 +1539,26 @@
     ],
     "visa": "free"
   },
+  "islamabad-pakistan": {
+    "description": "Pakistan's green, orderly capital, backed by the Margalla Hills and home to the vast Faisal Mosque, with Rawalpindi's bazaars and Taxila nearby.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 70,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Faisal Mosque",
+      "Margalla Hills trails and Monal restaurant",
+      "Pakistan Monument and Museum",
+      "Saidpur Village",
+      "Raja Bazaar in Rawalpindi",
+      "Taxila ancient Buddhist ruins"
+    ],
+    "visa": "required"
+  },
   "isle-of-man-isle-of-man": {
     "description": "A self-governing island in the Irish Sea of steam railways, rugged coastline and glens, famous for the Isle of Man TT motorcycle races.",
     "climate": "oceanic",
@@ -1538,6 +1598,46 @@
     ],
     "visa": "free"
   },
+  "jeddah-saudi-arabia": {
+    "description": "Saudi Arabia's Red Sea port, where coral-stone houses in Al-Balad stand a short way from waterfront corniches, reef diving and the soaring King Fahd Fountain.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 400,
+      "hotelPerNight": 130,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Al-Balad UNESCO historic district",
+      "Jeddah Corniche and King Fahd Fountain",
+      "Floating Mosque (Al-Rahma)",
+      "Red Sea snorkelling and diving",
+      "Souq Al-Alawi",
+      "Fakieh Aquarium and waterfront dining"
+    ],
+    "visa": "required"
+  },
+  "jerez-de-la-frontera-spain": {
+    "description": "An Andalusian city of sherry bodegas, flamenco, Arabic-influenced alcazar and Carthusian horses, within easy reach of Cadiz and the Atlantic coast.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Sherry bodega tours at Tio Pepe or Fundador",
+      "Royal Andalusian School of Equestrian Art",
+      "Alcazar of Jerez",
+      "Flamenco in the Santiago barrio",
+      "Jerez Cathedral",
+      "Day trip to Cadiz"
+    ],
+    "visa": "free"
+  },
   "jersey-jersey": {
     "description": "The largest Channel Island offers sandy bays, clifftop paths, Norman castles and seafood, with a French accent and a mild climate.",
     "climate": "oceanic",
@@ -1555,6 +1655,26 @@
       "Jersey Royal potatoes and seafood in St Aubin",
       "Durrell Wildlife Park",
       "St Ouen's Bay surfing"
+    ],
+    "visa": "free"
+  },
+  "kalamata-greece": {
+    "description": "A relaxed Peloponnese port famed for its olives, with a castle, a long pebble beach and the Mani peninsula's stone towers and coves nearby.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Kalamata Castle and old town",
+      "Kalamata olives and olive oil tasting",
+      "Central Market and Central Square",
+      "Mani peninsula and Vathia tower houses",
+      "Mystras Byzantine ruins",
+      "Beaches at Verga and Kardamyli"
     ],
     "visa": "free"
   },
