@@ -1303,18 +1303,5 @@ export const destinations: Destination[] = [
   },
 ]
 
-/** Total number of destinations in the database */
-export const DESTINATION_COUNT = destinations.length
-
 /** All valid travel styles */
 export const TRAVEL_STYLES: TravelStyle[] = ['beach', 'city', 'adventure', 'culture']
-
-/** All valid continents */
-export const CONTINENTS: Continent[] = [
-  'Europe',
-  'Africa',
-  'Asia',
-  'Americas',
-  'Oceania',
-  'Middle East',
-]
