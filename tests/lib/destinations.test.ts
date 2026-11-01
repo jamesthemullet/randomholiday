@@ -1,9 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
   destinations,
-  DESTINATION_COUNT,
   TRAVEL_STYLES,
-  CONTINENTS,
   type Destination,
   type TravelStyle,
   type Continent,
@@ -11,14 +9,8 @@ import {
 } from '@/lib/destinations'
 
 describe('destinations database', () => {
-  describe('DESTINATION_COUNT', () => {
-    it('matches the actual number of destinations', () => {
-      expect(DESTINATION_COUNT).toBe(destinations.length)
-    })
-
-    it('has at least 50 destinations', () => {
-      expect(DESTINATION_COUNT).toBeGreaterThanOrEqual(50)
-    })
+  it('has at least 50 destinations', () => {
+    expect(destinations.length).toBeGreaterThanOrEqual(50)
   })
 
   describe('TRAVEL_STYLES', () => {
@@ -28,18 +20,6 @@ describe('destinations database', () => {
       expect(TRAVEL_STYLES).toContain('city')
       expect(TRAVEL_STYLES).toContain('adventure')
       expect(TRAVEL_STYLES).toContain('culture')
-    })
-  })
-
-  describe('CONTINENTS', () => {
-    it('contains all six continents', () => {
-      expect(CONTINENTS).toHaveLength(6)
-      expect(CONTINENTS).toContain('Europe')
-      expect(CONTINENTS).toContain('Africa')
-      expect(CONTINENTS).toContain('Asia')
-      expect(CONTINENTS).toContain('Americas')
-      expect(CONTINENTS).toContain('Oceania')
-      expect(CONTINENTS).toContain('Middle East')
     })
   })
 
@@ -148,9 +128,18 @@ describe('destinations database', () => {
   })
 
   describe('geographic coverage', () => {
+    const ALL_CONTINENTS: Continent[] = [
+      'Europe',
+      'Africa',
+      'Asia',
+      'Americas',
+      'Oceania',
+      'Middle East',
+    ]
+
     it('has destinations on every continent', () => {
       const coveredContinents = new Set(destinations.map((d) => d.continent))
-      CONTINENTS.forEach((continent) => {
+      ALL_CONTINENTS.forEach((continent) => {
         expect(coveredContinents.has(continent)).toBe(true)
       })
     })
