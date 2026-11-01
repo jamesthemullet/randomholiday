@@ -1678,6 +1678,46 @@
     ],
     "visa": "free"
   },
+  "katowice-poland": {
+    "description": "The industrial heart of Silesia reborn as a creative city, with the UFO-shaped Spodek arena, the Culture Zone and the red-brick workers' village of Nikiszowiec.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 95,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Nikiszowiec historic mining district",
+      "Silesian Museum in the former Katowice coal mine",
+      "Spodek arena and Culture Zone",
+      "Silesian Insurgents' Monument",
+      "Day trip to Auschwitz-Birkenau or Kraków",
+      "Żurek and kluski śląskie"
+    ],
+    "visa": "free"
+  },
+  "kaunas-lithuania": {
+    "description": "Lithuania's interwar capital, with a cobbled Old Town at the meeting of two rivers, Art Deco architecture and a distinctive museum scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Kaunas Old Town and Town Hall Square",
+      "Laisvės alėja and the interwar modernist architecture",
+      "Ninth Fort Museum",
+      "M. K. Čiurlionis National Art Museum",
+      "Pažaislis Monastery",
+      "Cepelinai potato dumplings"
+    ],
+    "visa": "free"
+  },
   "kefalonia-greece": {
     "description": "Greece’s largest Ionian island, with pebbled turquoise coves, mountain villages and the sea-cave lake of Melissani.",
     "climate": "mediterranean",
@@ -1694,6 +1734,26 @@
       "Drogarati Cave",
       "Fiskardo harbour",
       "Kefalonian meat pie and local Robola wine"
+    ],
+    "visa": "free"
+  },
+  "kittila-finland": {
+    "description": "A Finnish Lapland gateway for ski resorts, husky and reindeer safaris and Northern Lights viewing under long arctic winter nights.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure"],
+    "bestMonths": [12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 170,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Northern Lights hunting from Levi or Ylläs",
+      "Husky sled safari",
+      "Levi ski resort",
+      "Snowmobile safari on frozen lakes",
+      "Reindeer farm visit",
+      "Glass igloo stay"
     ],
     "visa": "free"
   },
@@ -1716,6 +1776,26 @@
     ],
     "visa": "free"
   },
+  "kosice-slovakia": {
+    "description": "Slovakia's second city, with a Gothic cathedral at the head of a long pedestrian main street, lively cafés and the nearby Slovak Karst.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 85,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "St Elisabeth Cathedral",
+      "Hlavná ulica and the Singing Fountain",
+      "Old Town and Urban Tower",
+      "East Slovak Museum and Gold Treasure",
+      "Slovak Karst caves such as Domica",
+      "Bryndzové halušky at a traditional pub"
+    ],
+    "visa": "free"
+  },
   "krakow-poland": {
     "description": "Poland's former royal capital, with a vast medieval market square, Wawel Castle on its hill and a lively Jewish quarter and bar scene.",
     "climate": "humid continental",
@@ -1733,6 +1813,46 @@
       "Wieliczka Salt Mine",
       "Auschwitz-Birkenau Memorial",
       "Pierogi and obwarzanek"
+    ],
+    "visa": "free"
+  },
+  "la-palma-spain": {
+    "description": "The green 'island bonita' of the Canaries, with volcanic hiking trails, some of the clearest night skies in Europe and black-sand beaches.",
+    "climate": "subtropical",
+    "travelStyles": ["adventure", "beach"],
+    "bestMonths": [3, 4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 210,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Caldera de Taburiente hike",
+      "Roque de los Muchachos observatory stargazing",
+      "Tazacorte black-sand beach",
+      "Ruta de los Volcanes",
+      "Santa Cruz de la Palma old town",
+      "Papas arrugadas with mojo sauce"
+    ],
+    "visa": "free"
+  },
+  "la-rochelle-france": {
+    "description": "An Atlantic port with a medieval harbour guarded by twin towers, fresh oysters, sandy island beaches and a relaxed seaside atmosphere.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 115,
+      "hotelPerNight": 130,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Vieux Port and the Tour de la Chaîne",
+      "Aquarium La Rochelle",
+      "Île de Ré by bike",
+      "Fort Boyard from the sea",
+      "Covered market and fresh oysters",
+      "Île d'Aix day trip"
     ],
     "visa": "free"
   },
