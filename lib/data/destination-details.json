@@ -3054,6 +3054,26 @@
     ],
     "visa": "free"
   },
+  "stuttgart-germany": {
+    "description": "Baden-Württemberg's car-making capital, set in a vine-covered valley with Mercedes and Porsche museums, royal palaces and a lively wine and beer culture.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Mercedes-Benz Museum",
+      "Porsche Museum",
+      "Schlossplatz and Neues Schloss",
+      "Killesberg Park and Fernsehturm TV tower",
+      "Stuttgart Christmas market",
+      "Swabian Maultaschen and local Trollinger wine"
+    ],
+    "visa": "free"
+  },
   "tallinn-estonia": {
     "description": "A walled Baltic capital with a remarkably intact medieval old town, a growing food scene and a tech-savvy, relaxed feel.",
     "climate": "humid continental",
@@ -3071,6 +3091,66 @@
       "Kadriorg Palace and park",
       "Lahemaa National Park day trip",
       "Medieval-themed restaurants like Olde Hansa"
+    ],
+    "visa": "free"
+  },
+  "tampa-united-states": {
+    "description": "A sunny Gulf Coast city of waterfront riverwalks, Cuban-influenced Ybor City and easy access to Clearwater and St Pete's white-sand beaches.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Tampa Riverwalk",
+      "Ybor City and Cuban sandwiches",
+      "Clearwater Beach",
+      "Busch Gardens Tampa Bay",
+      "The Florida Aquarium",
+      "Dalí Museum in St Petersburg"
+    ],
+    "visa": "free"
+  },
+  "tangier-morocco": {
+    "description": "A whitewashed port city where Africa meets Europe, with a hilltop kasbah, Atlantic views at Cap Spartel and a long literary and café heritage.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 55,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Tangier Kasbah and Dar el Makhzen",
+      "Cap Spartel and the Caves of Hercules",
+      "Café Hafa mint tea",
+      "Grand Socco and Medina",
+      "Day trip to Chefchaouen",
+      "Tangier American Legation Museum"
+    ],
+    "visa": "free"
+  },
+  "tashkent-uzbekistan": {
+    "description": "Uzbekistan's sprawling capital, mixing Soviet-era grandeur, the Chorsu Bazaar and Islamic landmarks, and a gateway to the Silk Road cities.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 350,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Chorsu Bazaar",
+      "Khast Imam Complex",
+      "Tashkent Metro stations",
+      "Amir Timur Square",
+      "Plov at the Central Asian Plov Centre",
+      "High-speed train to Samarkand"
     ],
     "visa": "free"
   },
@@ -3174,6 +3254,26 @@
     ],
     "visa": "free"
   },
+  "toronto-canada": {
+    "description": "Canada's largest city on Lake Ontario, with the CN Tower, diverse neighbourhoods, a strong food scene and Niagara Falls within day-trip range.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 190,
+      "dailySpending": 110
+    },
+    "activities": [
+      "CN Tower and EdgeWalk",
+      "Royal Ontario Museum",
+      "Kensington Market",
+      "Toronto Islands ferry",
+      "St. Lawrence Market",
+      "Day trip to Niagara Falls"
+    ],
+    "visa": "free"
+  },
   "toulouse-france": {
     "description": "The pink-brick city of southwest France, with a vast Romanesque basilica, canal-side picnics and a deep aerospace and cassoulet culture.",
     "climate": "mediterranean",
@@ -3211,6 +3311,26 @@
       "Whale watching from Skjervøy",
       "Sámi reindeer sledding",
       "Polaria Arctic Aquarium"
+    ],
+    "visa": "free"
+  },
+  "tunis-tunisia": {
+    "description": "Tunisia's capital, with a UNESCO-listed medina, the Bardo Museum's mosaics and the blue-and-white clifftop village of Sidi Bou Said nearby.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Medina of Tunis and Zitouna Mosque",
+      "Bardo National Museum mosaics",
+      "Ruins of Carthage",
+      "Sidi Bou Said",
+      "Brik and couscous in the medina",
+      "La Marsa beach"
     ],
     "visa": "free"
   },
