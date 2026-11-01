@@ -59,6 +59,26 @@
     ],
     "visa": "free"
   },
+  "abu-dhabi-united-arab-emirates": {
+    "description": "The UAE capital pairs the vast white-marble Sheikh Zayed Mosque and the Louvre Abu Dhabi with Saadiyat Island beaches and Yas Island theme parks.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 350,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Sheikh Zayed Grand Mosque",
+      "Louvre Abu Dhabi",
+      "Ferrari World and Yas Waterworld",
+      "Saadiyat Beach",
+      "Qasr Al Watan palace",
+      "Liwa Desert dune drive"
+    ],
+    "visa": "on-arrival"
+  },
   "abuja-nigeria": {
     "description": "Nigeria's planned capital, set among granite hills, with Zuma Rock, the grand National Mosque and a calmer, greener pace than Lagos.",
     "climate": "tropical",
@@ -137,6 +157,106 @@
       "Taghazout surf break",
       "Paradise Valley day trip",
       "Tagine and fresh grilled sardines"
+    ],
+    "visa": "free"
+  },
+  "ahmedabad-india": {
+    "description": "Gujarat's old walled city of carved wooden havelis, Gandhi's Sabarmati Ashram, intricate stepwells and a famously good vegetarian thali scene.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 60,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Sabarmati Ashram",
+      "Old City heritage walk",
+      "Adalaj Stepwell",
+      "Sidi Saiyyed Mosque jaali windows",
+      "Gujarati thali at Agashiye",
+      "Calico Museum of Textiles"
+    ],
+    "visa": "required"
+  },
+  "ajaccio-france": {
+    "description": "Napoleon's birthplace on Corsica's west coast, with a pastel harbour, the Maison Bonaparte and sandy bays along the Sanguinaires peninsula.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Maison Bonaparte",
+      "Palais Fesch museum",
+      "Îles Sanguinaires sunset",
+      "Plage de Capo di Feno",
+      "Marché Central charcuterie and brocciu",
+      "Calanques de Piana boat trip"
+    ],
+    "visa": "free"
+  },
+  "akureyri-iceland": {
+    "description": "Iceland's northern capital at the head of a long fjord, base for whale watching, Goðafoss waterfall, Lake Mývatn and winter Northern Lights.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [6, 7, 8, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 160,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Whale watching from Hauganes",
+      "Goðafoss waterfall",
+      "Lake Mývatn and Dimmuborgir",
+      "Akureyri Botanical Garden",
+      "Hlíðarfjall ski area",
+      "Mývatn Nature Baths"
+    ],
+    "visa": "free"
+  },
+  "alesund-norway": {
+    "description": "A fjord-coast town rebuilt in Art Nouveau after the 1904 fire, set among islands and gateway to the Geirangerfjord and Atlantic Road.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure", "culture", "city"],
+    "bestMonths": [5, 6, 7, 8],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 170,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Aksla viewpoint 418 steps",
+      "Art Nouveau town centre walk",
+      "Geirangerfjord cruise",
+      "Atlantic Ocean Park",
+      "Atlantic Road drive",
+      "Runde Island puffin trip"
+    ],
+    "visa": "free"
+  },
+  "alghero-italy": {
+    "description": "A walled Catalan-flavoured port on Sardinia's northwest coast, with coral-fishing heritage, Neptune's Grotto sea caves and beaches such as Le Bombarde.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "city"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Old town ramparts walk",
+      "Neptune's Grotto boat or Escala del Cabirol",
+      "Spiaggia di Le Bombarde",
+      "Nuraghe di Palmavera",
+      "Catalan-style lobster dinner",
+      "Capo Caccia sunset"
     ],
     "visa": "free"
   },
