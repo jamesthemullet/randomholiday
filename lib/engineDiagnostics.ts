@@ -5,7 +5,7 @@ import type { RecommendationParams } from './recommendationEngine'
 
 export interface OriginDiagnostics {
   originId: string
-  /** Destination ids in the top-scored pool considered for this origin (pre-shuffle). */
+  /** Destination ids this origin can draw from. */
   poolIds: string[]
   /** True when the origin's own destination entry appears in its own pool. */
   selfMatch: boolean
@@ -21,11 +21,13 @@ export interface EngineDiagnosticsSummary {
   selfMatchCount: number
 }
 
-export interface EngineDiagnosticsOptions
-  extends Omit<RecommendationParams, 'origin' | 'count' | 'poolSize'> {
+export interface EngineDiagnosticsOptions extends Omit<
+  RecommendationParams,
+  'origin' | 'count' | 'poolSize'
+> {
   /** How many independent shuffles to sample per origin. Defaults to 20. */
   shuffleCount?: number
-  /** Size of the top-scored pool each origin draws from. Defaults to 10. */
+  /** Limits each origin to this many top-scored destinations. Defaults to all of them. */
   poolSize?: number
 }
 
@@ -41,7 +43,7 @@ export function runEngineDiagnostics(
   origins: DepartureCity[],
   options: EngineDiagnosticsOptions
 ): EngineDiagnosticsSummary {
-  const { shuffleCount = 20, poolSize = 10, random = Math.random, ...rest } = options
+  const { shuffleCount = 20, poolSize, random = Math.random, ...rest } = options
 
   const coveredIds = new Set<string>()
   let selfMatchCount = 0
@@ -49,10 +51,10 @@ export function runEngineDiagnostics(
   const perOrigin = origins.map((origin) => {
     const baseParams: RecommendationParams = { ...rest, origin: origin.coordinates, poolSize }
 
-    // count === poolSize returns every pool member (shuffled order, same membership) in one call.
+    // Asking for every destination returns the whole pool (shuffled order) in one call.
     const { recommendations: fullPool } = getRecommendations(destinations, {
       ...baseParams,
-      count: poolSize,
+      count: Math.max(destinations.length, 1),
       random,
     })
     const poolIds = fullPool.map((entry) => entry.destination.id)
