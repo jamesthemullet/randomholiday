@@ -2733,6 +2733,26 @@
     ],
     "visa": "free"
   },
+  "riga-latvia": {
+    "description": "Latvia's Baltic capital, with Europe's finest Art Nouveau architecture, a medieval old town, a vast Central Market and lively craft-beer bars.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 85,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Riga Old Town and Cathedral",
+      "Art Nouveau district on Alberta iela",
+      "Central Market in the Zeppelin hangars",
+      "House of the Blackheads",
+      "Jūrmala beach day trip",
+      "Black balsam and smoked fish tasting"
+    ],
+    "visa": "free"
+  },
   "rimini-italy": {
     "description": "Adriatic Riviera resort with a wide sandy beach, a Roman arch and bridge in the old town, and Italy's liveliest summer nightlife.",
     "climate": "humid subtropical",
@@ -2753,6 +2773,26 @@
     ],
     "visa": "free"
   },
+  "rotterdam-the-hague-netherlands": {
+    "description": "The Netherlands' bold, rebuilt port city of daring modern architecture, waterfront markets and street art, with The Hague's museums close by.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Markthal food hall",
+      "Cube Houses and Kijk-Kubus",
+      "Euromast tower",
+      "Kinderdijk windmills",
+      "Mauritshuis in The Hague",
+      "Water taxi around the Erasmus Bridge and Maas harbour"
+    ],
+    "visa": "free"
+  },
   "rovaniemi-finland": {
     "description": "The Arctic Circle capital of Finnish Lapland, with Northern Lights, husky sleds, reindeer farms and Santa Claus Village.",
     "climate": "subarctic",
@@ -2770,6 +2810,26 @@
       "Reindeer sleigh ride",
       "Arktikum science museum",
       "Midnight sun on the Ounasvaara fell"
+    ],
+    "visa": "free"
+  },
+  "rzeszow-poland": {
+    "description": "A compact south-eastern Polish city with a lively market square, a quirky underground tourist route and fairy-tale palaces nearby in the Podkarpacie foothills.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 95,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Rzeszów Market Square and Town Hall",
+      "Underground Tourist Route cellars",
+      "Łańcut Castle day trip",
+      "Bieszczady Mountains hiking",
+      "Podkarpackie pierogi and regional cuisine",
+      "Fountain Multimedia show in Rzeszów"
     ],
     "visa": "free"
   },
@@ -2794,6 +2854,26 @@
     ],
     "visa": "free"
   },
+  "samos-greece": {
+    "description": "A green, hilly Aegean island where Pythagoras was born, with ancient Heraion ruins, sweet muscat wine, mountain villages and quiet pebble coves.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 220,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Heraion of Samos UNESCO site",
+      "Eupalinos Tunnel",
+      "Pythagoreio harbour town",
+      "Vathy and Kokkari beaches",
+      "Muscat wine tasting at Samos cooperatives",
+      "Hike Mount Kerkis and Potami waterfalls"
+    ],
+    "visa": "free"
+  },
   "santiago-de-compostela-spain": {
     "description": "The granite end-point of the Camino de Santiago in Galicia, centred on a Romanesque cathedral and rain-polished medieval streets.",
     "climate": "oceanic",
@@ -2811,6 +2891,46 @@
       "Pulpo a la gallega and Padrón peppers",
       "Walk the final stage of the Camino Francés",
       "Day trip to Cape Finisterre"
+    ],
+    "visa": "free"
+  },
+  "sarajevo-bosnia-and-herzegovina": {
+    "description": "Bosnia's mountain-ringed capital, where Ottoman bazaars, Austro-Hungarian boulevards and powerful wartime history sit within a few walkable streets.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Baščaršija Ottoman bazaar",
+      "Latin Bridge and Sarajevo Haggadah",
+      "Tunnel of Hope museum",
+      "Cable car up Trebević Mountain",
+      "Ćevapi and Bosnian coffee",
+      "Day trip to Mostar and Kravice waterfalls"
+    ],
+    "visa": "free"
+  },
+  "shanghai-people-s-republic-of-china": {
+    "description": "China's glittering financial hub, where the colonial Bund faces the neon Pudong skyline and old lanes serve xiaolongbao beside lively modern art districts.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "The Bund waterfront",
+      "Yu Garden and Old City bazaar",
+      "Pudong skyline and Shanghai Tower",
+      "French Concession walks",
+      "Xiaolongbao at Din Tai Fung or Yang's Dumplings",
+      "Water-town day trip to Zhujiajiao"
     ],
     "visa": "free"
   },
