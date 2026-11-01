@@ -300,6 +300,26 @@
     ],
     "visa": "free"
   },
+  "almaty-kazakhstan": {
+    "description": "Kazakhstan's largest city beneath the snowy Trans-Ili Alatau, mixing Soviet-era parks and bazaars with mountain skiing, alpine lakes and a thriving café scene.",
+    "climate": "continental",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [4, 5, 6, 9, 12, 1],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Kok Tobe hill and cable car",
+      "Green Bazaar",
+      "Zenkov Cathedral in Panfilov Park",
+      "Medeu skating rink and Shymbulak ski resort",
+      "Big Almaty Lake",
+      "Charyn Canyon day trip"
+    ],
+    "visa": "free"
+  },
   "almeria-spain": {
     "description": "A sunny Andalusian port city beneath a vast Moorish fortress, gateway to the wild, desert-like beaches of Cabo de Gata.",
     "climate": "mediterranean",
@@ -338,6 +358,66 @@
       "Hummus and falafel at Hashem"
     ],
     "visa": "on-arrival"
+  },
+  "amritsar-india": {
+    "description": "The Sikh holy city of Punjab, centred on the gold-roofed Golden Temple, with fiery Punjabi food and a nightly border ceremony at Wagah.",
+    "climate": "humid subtropical",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [10, 11, 12, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 55,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Golden Temple and its free langar kitchen",
+      "Wagah border flag-lowering ceremony",
+      "Jallianwala Bagh memorial",
+      "Partition Museum",
+      "Amritsari kulcha and lassi",
+      "Durgiana Temple"
+    ],
+    "visa": "required"
+  },
+  "ancona-italy": {
+    "description": "A working Adriatic port in Le Marche, with a Greek-founded old town and cathedral on a hill, and the Conero Riviera's white cliffs and coves close by.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Duomo di San Ciriaco",
+      "Mole Vanvitelliana",
+      "Trajan's Arch",
+      "Conero Riviera beaches at Portonovo and Sirolo",
+      "Stoccafisso all'anconetana",
+      "Day trip to Urbino"
+    ],
+    "visa": "free"
+  },
+  "ankara-turkey": {
+    "description": "Turkey's modern capital, home to the mausoleum of Atatürk, the superb Museum of Anatolian Civilizations and a hilltop citadel quarter of Ottoman houses.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Anıtkabir",
+      "Museum of Anatolian Civilizations",
+      "Ankara Citadel and Hamamönü",
+      "Temple of Augustus and Roman Baths",
+      "Ankara tava and Turkish coffee",
+      "Day trip to Gordion"
+    ],
+    "visa": "free"
   },
   "antalya-turkey": {
     "description": "A Turkish Riviera resort city pairing a Roman-era old town and harbour with long beaches backed by the Taurus Mountains.",
@@ -378,6 +458,26 @@
     ],
     "visa": "free"
   },
+  "ashgabat-turkmenistan": {
+    "description": "Turkmenistan's white-marble capital, a surreal showcase of gilded monuments and fountains, set beside the Karakum Desert and the burning Darvaza gas crater.",
+    "climate": "cold desert",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Independence Monument and Neutrality Arch",
+      "Turkmenbashi Ruhy Mosque at Gypjak",
+      "Tolkuchka Bazaar for carpets",
+      "Nisa Parthian fortresses",
+      "Darvaza gas crater overnight trip",
+      "Turkmen carpet museum"
+    ],
+    "visa": "required"
+  },
   "asturias-spain": {
     "description": "Spain's green northern coast, with Picos de Europa peaks, cider houses, rugged beaches and the old stone towns of Oviedo and Gijón.",
     "climate": "oceanic",
@@ -415,6 +515,27 @@
       "Ancient Agora",
       "Souvlaki in Monastiraki",
       "Sunset at Cape Sounion"
+    ],
+    "visa": "free"
+  },
+  "atlanta-united-states": {
+    "description": "The Southern hub of civil-rights history and Coca-Cola, with Martin Luther King Jr.'s birthplace, leafy Piedmont Park, the BeltLine and soul-food cooking.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Martin Luther King Jr. National Historical Park",
+      "Georgia Aquarium",
+      "World of Coca-Cola",
+      "Atlanta BeltLine and Ponce City Market",
+      "Piedmont Park and Atlanta Botanical Garden",
+      "Fried chicken and soul food",
+      "Stone Mountain day trip"
     ],
     "visa": "free"
   },
