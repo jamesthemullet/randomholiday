@@ -2513,6 +2513,26 @@
     ],
     "visa": "free"
   },
+  "perugia-italy": {
+    "description": "Umbria's hilltop university city of medieval lanes, Etruscan gates and chocolate, with sweeping views over green valleys toward Assisi.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Corso Vannucci and Piazza IV Novembre",
+      "Fontana Maggiore",
+      "Galleria Nazionale dell'Umbria",
+      "Etruscan Well and Arco Etrusco",
+      "Perugina chocolate factory and museum",
+      "Day trip to Assisi"
+    ],
+    "visa": "free"
+  },
   "pisa-italy": {
     "description": "Tuscan university city famed for its leaning tower, set among marble Piazza dei Miracoli landmarks and a short train from Florence.",
     "climate": "mediterranean",
@@ -2530,6 +2550,66 @@
       "Borgo Stretto",
       "Day trip to Lucca city walls",
       "Day trip to Florence"
+    ],
+    "visa": "free"
+  },
+  "plovdiv-bulgaria": {
+    "description": "Bulgaria's ancient hill-ringed city, layered with a Roman amphitheatre, Ottoman-era Old Town houses and the arty Kapana quarter.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 55,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Roman Theatre of Philippopolis",
+      "Old Town merchant houses",
+      "Kapana creative district",
+      "Nebet Tepe hilltop fortress",
+      "Bachkovo Monastery",
+      "Rose Valley wine tasting"
+    ],
+    "visa": "free"
+  },
+  "podgorica-montenegro": {
+    "description": "Montenegro's modest capital at the meeting of two rivers, a handy base for Skadar Lake, Kotor and mountain canyons.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Millennium Bridge and Moraca river walk",
+      "Skadar Lake boat trip",
+      "Ostrog Monastery",
+      "Stara Varos old Ottoman quarter",
+      "Day trip to Kotor Bay",
+      "Rafting on the Tara canyon"
+    ],
+    "visa": "free"
+  },
+  "poznan-poland": {
+    "description": "A Renaissance market square ringed by pastel townhouses, famed for its mechanical goats, croissants and a young, university-driven food scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Old Market Square and the Town Hall goats",
+      "Rogal Swietomarcinski croissants",
+      "Ostrow Tumski cathedral island",
+      "Imperial Castle",
+      "Lake Malta",
+      "Craft beer in Jezyce"
     ],
     "visa": "free"
   },
@@ -2570,6 +2650,46 @@
       "Kamenjak peninsula beaches",
       "Istrian truffle pasta and olive oil",
       "Arch of the Sergii"
+    ],
+    "visa": "free"
+  },
+  "qingdao-people-s-republic-of-china": {
+    "description": "A German-built coastal city of red roofs, beaches and the Tsingtao brewery, with seafood-lined promenades and the forested Laoshan mountains nearby.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Tsingtao Brewery Museum",
+      "German Old Town and St Michael's Cathedral",
+      "Zhanqiao Pier",
+      "Laoshan mountain hike",
+      "Fresh seafood at Zhongshan Road",
+      "May Fourth Square and Olympic Sailing Centre"
+    ],
+    "visa": "free"
+  },
+  "rabat-morocco": {
+    "description": "Morocco's calm, tree-lined capital on the Atlantic, with the Kasbah of the Udayas, Hassan Tower and a laid-back medina.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [3, 4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Kasbah of the Udayas",
+      "Hassan Tower and Mausoleum of Mohammed V",
+      "Chellah necropolis",
+      "Rabat medina and souk",
+      "Mohammed VI Museum of Modern Art",
+      "Surf the Oudayas beach"
     ],
     "visa": "free"
   },
