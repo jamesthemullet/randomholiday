@@ -1,4 +1,44 @@
 {
+  "aalborg-denmark": {
+    "description": "North Jutland's lively harbour city, with a waterfront cultural quarter, a Viking burial ground and Denmark's famously cheerful nightlife.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Lindholm Høje Viking burial ground",
+      "Jomfru Ane Gade bars",
+      "Utzon Center",
+      "Aalborg Tower viewpoint",
+      "Kunsten modern art museum",
+      "Rebild Bakker hills"
+    ],
+    "visa": "free"
+  },
+  "aarhus-denmark": {
+    "description": "Denmark's second city, a student-filled port with the rainbow-crowned ARoS art museum, the Old Town open-air museum and Jutland beaches nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 125,
+      "dailySpending": 90
+    },
+    "activities": [
+      "ARoS Aarhus Art Museum rainbow panorama",
+      "Den Gamle By open-air museum",
+      "Moesgaard Museum",
+      "Latin Quarter cafés",
+      "Aarhus Street Food hall",
+      "Marselisborg Deer Park and beach"
+    ],
+    "visa": "free"
+  },
   "aberdeen-united-kingdom": {
     "description": "Scotland's granite city on the North Sea, with a long sandy beach, a working harbour and the gateway to Royal Deeside castles and whisky country.",
     "climate": "oceanic",
@@ -3414,6 +3454,26 @@
     ],
     "visa": "free"
   },
+  "vilnius-lithuania": {
+    "description": "Lithuania's baroque capital, with one of Europe's largest medieval old towns, the artists' republic of Užupis and cheap, excellent food.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 75,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Vilnius Old Town",
+      "Gediminas Tower",
+      "Užupis Republic",
+      "Gate of Dawn",
+      "Trakai Island Castle",
+      "Cepelinai dumplings"
+    ],
+    "visa": "free"
+  },
   "warsaw-poland": {
     "description": "Poland's capital, faithfully rebuilt after the war, mixing a UNESCO-listed Old Town with Soviet skyscrapers, Chopin concerts and a thriving café and bar scene.",
     "climate": "humid continental",
@@ -3431,6 +3491,68 @@
       "Łazienki Park and Chopin concerts",
       "Pierogi at a milk bar",
       "Palace of Culture and Science viewing terrace"
+    ],
+    "visa": "free"
+  },
+  "wroc-aw-poland": {
+    "description": "Poland's city of bridges and islands, with a colourful market square, hunt for the tiny bronze gnomes and a lively student scene.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Rynek market square",
+      "Ostrów Tumski cathedral island",
+      "Racławice Panorama",
+      "Hunting Wrocław gnomes",
+      "Centennial Hall and Japanese Garden",
+      "Christmas market",
+      "Pierogi and Polish craft beer"
+    ],
+    "visa": "free"
+  },
+  "zadar-croatia": {
+    "description": "A Dalmatian coastal city of Roman ruins and Venetian walls, famed for the Sea Organ, Greeting to the Sun and gateways to Kornati islands.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Sea Organ and Greeting to the Sun",
+      "Roman Forum and St Donatus Church",
+      "Kornati Islands boat trip",
+      "Krka and Paklenica national parks",
+      "Maraschino liqueur tasting",
+      "Kolovare beach"
+    ],
+    "visa": "free"
+  },
+  "zagreb-croatia": {
+    "description": "Croatia's café-filled capital, with an Austro-Hungarian upper town, quirky museums, famous Advent markets and easy trips to Plitvice.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Upper Town and St Mark’s Church",
+      "Dolac Market",
+      "Museum of Broken Relationships",
+      "Tkalčićeva Street cafés",
+      "Mirogoj Cemetery",
+      "Advent in Zagreb Christmas markets",
+      "Plitvice Lakes day trip"
     ],
     "visa": "free"
   },
