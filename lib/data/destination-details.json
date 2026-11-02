@@ -1542,6 +1542,26 @@
     ],
     "visa": "free"
   },
+  "changsha-people-s-republic-of-china": {
+    "description": "Hunan's riverside capital, famed for fiery Xiang cuisine, buzzing night markets, Orange Isle on the Xiang River and the Hunan Museum's Han dynasty treasures.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Orange Isle and Mao Zedong statue",
+      "Hunan Museum and Mawangdui silk burial",
+      "Yuelu Mountain and Yuelu Academy",
+      "Taiping Street and Huangxing Road night food",
+      "Stinky tofu and Xiang-style spicy dishes",
+      "Day trip to Zhangjiajie"
+    ],
+    "visa": "free"
+  },
   "chania-greece": {
     "description": "A Venetian harbour town in western Crete, with Ottoman lanes, lively tavernas and gorges and pink-sand beaches within reach.",
     "climate": "mediterranean",
@@ -1559,6 +1579,26 @@
       "Balos Lagoon",
       "Old town and Splantzia square",
       "Dakos and Cretan raki"
+    ],
+    "visa": "free"
+  },
+  "charlotte-united-states": {
+    "description": "North Carolina's fast-growing banking hub, with NASCAR heritage, a lively NoDa arts district, craft breweries and the Blue Ridge Mountains a short drive away.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 160,
+      "dailySpending": 100
+    },
+    "activities": [
+      "NASCAR Hall of Fame",
+      "U.S. National Whitewater Center",
+      "NoDa arts district and breweries",
+      "Freedom Park and Uptown skyline",
+      "Carolina barbecue",
+      "Day trip to the Blue Ridge Mountains"
     ],
     "visa": "free"
   },
@@ -1583,6 +1623,46 @@
     ],
     "visa": "free"
   },
+  "chennai-india": {
+    "description": "Tamil Nadu's coastal capital, where Dravidian temples, Marina Beach, Fort St George and filter coffee with crisp dosas anchor a deeply South Indian city.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [11, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 70,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Kapaleeshwarar Temple in Mylapore",
+      "Marina Beach",
+      "Fort St George and museum",
+      "Government Museum and Egmore",
+      "Dosa and filter coffee breakfast",
+      "Day trip to Mahabalipuram shore temples"
+    ],
+    "visa": "required"
+  },
+  "chicago-united-states": {
+    "description": "The Midwest's lakefront skyscraper city, with architecture river cruises, the Art Institute, deep-dish pizza, blues clubs and summer festivals in Millennium Park.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 220,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Chicago Architecture Center River Cruise",
+      "Art Institute of Chicago",
+      "Millennium Park and Cloud Gate",
+      "Deep-dish pizza at Lou Malnati's",
+      "Navy Pier and lakefront trail",
+      "Blues at Buddy Guy's Legends"
+    ],
+    "visa": "free"
+  },
   "chisinau-moldova": {
     "description": "Moldova's leafy, Soviet-planned capital, a gateway to the country's cave-cellar wineries including Cricova and Mileștii Mici, among the world's largest.",
     "climate": "humid continental",
@@ -1600,6 +1680,46 @@
       "Orheiul Vechi cave monastery",
       "Mazarache and Plăcinte pastries",
       "Day trip to Tiraspol in Transnistria"
+    ],
+    "visa": "free"
+  },
+  "chongqing-people-s-republic-of-china": {
+    "description": "A mountain megacity at the meeting of two rivers, with stacked cliffside districts, blazing hotpot, night views from Hongya Cave and Yangtze cruises.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Hongyadong stilted riverside complex",
+      "Chongqing hotpot",
+      "Liziba monorail through an apartment block",
+      "Dazu Rock Carvings",
+      "Ciqikou Ancient Town",
+      "Yangtze River cruise to the Three Gorges"
+    ],
+    "visa": "free"
+  },
+  "cincinnati-united-states": {
+    "description": "An Ohio River city of Over-the-Rhine's restored Italianate streets, Cincinnati chili, craft breweries, historic Findlay Market and America's oldest professional baseball team.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 150,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Over-the-Rhine and Findlay Market",
+      "Cincinnati chili at Skyline or Gold Star",
+      "National Underground Railroad Freedom Center",
+      "Cincinnati Zoo and Botanical Garden",
+      "John A. Roebling Suspension Bridge",
+      "Great American Ball Park"
     ],
     "visa": "free"
   },
