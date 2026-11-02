@@ -1963,6 +1963,66 @@
     ],
     "visa": "required"
   },
+  "denver-united-states": {
+    "description": "The Mile High City sits where the Great Plains meet the Rockies, with craft breweries, a lively food scene and mountains within an hour.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Red Rocks Amphitheatre concert",
+      "Denver Art Museum",
+      "Larimer Square and Union Station",
+      "Craft brewery crawl in RiNo",
+      "Day trip to Rocky Mountain National Park",
+      "Coors Field baseball game"
+    ],
+    "visa": "free"
+  },
+  "derry-united-kingdom": {
+    "description": "Northern Ireland's walled city on the River Foyle, known for its intact 17th-century ramparts, Bogside murals and a thriving music and arts scene.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Walk the City Walls",
+      "Bogside murals and Free Derry Corner",
+      "Museum of Free Derry",
+      "Peace Bridge at sunset",
+      "Guildhall",
+      "Day trip to Mussenden Temple and the Causeway Coast"
+    ],
+    "visa": "free"
+  },
+  "detroit-united-states": {
+    "description": "The Motor City pairs Motown history and Art Deco towers with the Detroit Institute of Arts, a revived riverfront and a strong food and music scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 500,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Detroit Institute of Arts",
+      "The Henry Ford Museum in Dearborn",
+      "Motown Museum",
+      "Eastern Market",
+      "Detroit RiverWalk",
+      "Detroit-style pizza and Coney dogs"
+    ],
+    "visa": "free"
+  },
   "djerba-tunisia": {
     "description": "A flat, sunny Tunisian island of whitewashed villages, sandy beaches, a historic synagogue and the medina market of Houmt Souk.",
     "climate": "mediterranean",
@@ -2003,6 +2063,26 @@
     ],
     "visa": "free"
   },
+  "dortmund-germany": {
+    "description": "A Ruhr city best known for football at Signal Iduna Park, with a rebuilt old town, a vibrant brewing heritage and industrial landmarks nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Borussia Dortmund match at Signal Iduna Park",
+      "German Football Museum",
+      "Zeche Zollern industrial museum",
+      "Westfalenpark and Florian Tower",
+      "Reinoldikirche and the old town",
+      "Dortmund Christmas market"
+    ],
+    "visa": "free"
+  },
   "dublin-ireland": {
     "description": "Ireland's compact capital pairs Georgian squares, literary pubs and the Guinness Storehouse with easy coastal escapes along Dublin Bay.",
     "climate": "oceanic",
@@ -2023,6 +2103,26 @@
     ],
     "visa": "free"
   },
+  "dundee-united-kingdom": {
+    "description": "Scotland's waterfront city on the Firth of Tay, home to the V&A Dundee, Discovery Point and RRS Discovery, and a lively arts and gaming scene.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "V&A Dundee",
+      "RRS Discovery at Discovery Point",
+      "Verdant Works jute museum",
+      "Dundee Law viewpoint",
+      "McManus Galleries",
+      "Day trip to Glamis Castle or St Andrews"
+    ],
+    "visa": "free"
+  },
   "dusseldorf-germany": {
     "description": "A fashionable Rhine city known for the Königsallee, the Altstadt's brewhouses and its altbier, and a striking modern harbour.",
     "climate": "oceanic",
@@ -2040,6 +2140,26 @@
       "Rhine Tower",
       "Kunstsammlung K20",
       "Christmas markets"
+    ],
+    "visa": "free"
+  },
+  "eindhoven-netherlands": {
+    "description": "The Netherlands' design and technology capital, with the Van Abbemuseum, the converted Strijp-S factory district and easy cycling around its canals and parks.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 115,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Van Abbemuseum",
+      "Strijp-S creative district",
+      "Philips Museum",
+      "Dutch Design Week (October)",
+      "Cycle through Genneper Parken",
+      "Day trip to Den Bosch for a Bossche bol"
     ],
     "visa": "free"
   },
