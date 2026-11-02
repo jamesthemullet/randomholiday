@@ -702,6 +702,26 @@
     ],
     "visa": "free"
   },
+  "basel-mulhouse-france": {
+    "description": "A Rhine-side Swiss art capital with a medieval Münster, world-class museums and Carnival, on the border with France and Germany.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 190,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Kunstmuseum Basel and Fondation Beyeler",
+      "Basel Münster and Rhine ferry",
+      "Altstadt and Rathaus",
+      "Basel Fasnacht carnival",
+      "Vitra Design Museum in Weil am Rhein",
+      "Basler Läckerli and Christmas market"
+    ],
+    "visa": "free"
+  },
   "bastia-france": {
     "description": "Corsica's old port town, with a pastel Vieux-Port, a hilltop citadel and the winding Cap Corse coast road leading to quiet fishing villages.",
     "climate": "mediterranean",
@@ -1282,6 +1302,26 @@
     ],
     "visa": "free"
   },
+  "brussels-belgium": {
+    "description": "Belgium's grand-place capital, known for Art Nouveau townhouses, comic-strip murals, and a serious devotion to chocolate, waffles, frites and beer.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 125,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Grand-Place",
+      "Atomium",
+      "Magritte Museum",
+      "Comic Strip Route murals",
+      "Belgian chocolate and praline shops",
+      "Day trip to Bruges or Ghent by train"
+    ],
+    "visa": "free"
+  },
   "bucharest-romania": {
     "description": "Romania's capital of grand boulevards and communist-era monumentality, with a revived old town, café culture and a lively nightlife.",
     "climate": "humid continental",
@@ -1382,6 +1422,46 @@
     ],
     "visa": "free"
   },
+  "calgary-canada": {
+    "description": "Alberta's Rocky Mountain gateway city, home to the Calgary Stampede and a short drive from Banff, Lake Louise and Canmore.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Calgary Stampede (July)",
+      "Calgary Tower and Prince's Island Park",
+      "Banff National Park day trip",
+      "Lake Louise and Moraine Lake",
+      "Drumheller and the Royal Tyrrell Museum",
+      "Heritage Park Historical Village"
+    ],
+    "visa": "free"
+  },
+  "carcassonne-france": {
+    "description": "A fairy-tale walled medieval citadel in Languedoc, with 52 towers, the Canal du Midi and nearby Cathar castles and wine country.",
+    "climate": "mediterranean",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "La Cité de Carcassonne ramparts",
+      "Château Comtal",
+      "Canal du Midi boat trip",
+      "Cassoulet at a local restaurant",
+      "Minervois and Corbières wine tasting",
+      "Cathar castle of Lastours"
+    ],
+    "visa": "free"
+  },
   "casablanca-morocco": {
     "description": "Morocco's sprawling Atlantic metropolis, home to the vast Hassan II Mosque, Art Deco boulevards and a seafront lined with fish restaurants.",
     "climate": "mediterranean",
@@ -1399,6 +1479,26 @@
       "Central Market seafood lunch",
       "Habous Quarter and old medina",
       "Rick's Café"
+    ],
+    "visa": "free"
+  },
+  "castellon-spain": {
+    "description": "The quieter Costa del Azahar, with long sandy beaches at Benicàssim, the walled seaside town of Peñíscola and the Desert de les Palmes.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Peñíscola castle and old town",
+      "Benicàssim beaches",
+      "Hiking in the Desert de les Palmes",
+      "Illes Columbretes boat trip",
+      "Paella valenciana",
+      "Morella medieval walled town"
     ],
     "visa": "free"
   },
@@ -1739,6 +1839,26 @@
       "Ilha Deserta beach",
       "Benagil cave kayaking",
       "Capela dos Ossos"
+    ],
+    "visa": "free"
+  },
+  "figari-france": {
+    "description": "The gateway to southern Corsica, with turquoise Bonifacio cliffs, Porto-Vecchio's white-sand coves and granite-ringed beaches like Rondinara and Palombaggia.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 160,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Bonifacio citadel and cliff-top old town",
+      "Plage de Palombaggia",
+      "Rondinara bay",
+      "Boat trip to the Lavezzi Islands",
+      "Porto-Vecchio old town",
+      "Prehistoric site of Filitosa"
     ],
     "visa": "free"
   },
