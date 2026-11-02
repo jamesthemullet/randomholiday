@@ -1903,6 +1903,26 @@
     ],
     "visa": "free"
   },
+  "dallas-fort-worth-united-states": {
+    "description": "A sprawling Texas metroplex pairing Dallas's skyline and JFK history with Fort Worth's Stockyards cowboy culture and top-tier museums.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 150,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Sixth Floor Museum at Dealey Plaza",
+      "Fort Worth Stockyards cattle drive",
+      "Kimbell Art Museum",
+      "Dallas Arts District",
+      "Texas barbecue and Tex-Mex",
+      "Reunion Tower observation deck"
+    ],
+    "visa": "free"
+  },
   "dar-es-salaam-tanzania": {
     "description": "Tanzania's sultry Indian Ocean port, a base for Zanzibar ferries and safaris, with Swahili markets, fresh seafood and palm-fringed island beaches nearby.",
     "climate": "tropical",
@@ -2342,6 +2362,26 @@
     ],
     "visa": "required"
   },
+  "friedrichshafen-germany": {
+    "description": "A lakeside town on Lake Constance, home of the Zeppelin, with Alpine views, cycling paths and ferries to Switzerland and Austria.",
+    "climate": "temperate",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Zeppelin Museum",
+      "Lake Constance cycle path",
+      "Ferry to Meersburg",
+      "Day trip to Mainau flower island",
+      "Dornier Museum",
+      "Lake Constance boat cruise"
+    ],
+    "visa": "free"
+  },
   "fuerteventura-spain": {
     "description": "A Canary island of wide white-sand beaches, steady Atlantic winds and volcanic desert landscapes, popular for windsurfing and year-round sun.",
     "climate": "subtropical",
@@ -2461,6 +2501,26 @@
     ],
     "visa": "free"
   },
+  "georgetown-guyana": {
+    "description": "Guyana's colonial-era capital of wooden Caribbean architecture, canals and markets, and the gateway to Kaieteur Falls and Amazonian rainforest.",
+    "climate": "tropical",
+    "travelStyles": ["adventure", "city"],
+    "bestMonths": [2, 3, 4, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 900,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Kaieteur Falls flight",
+      "St George's Cathedral",
+      "Stabroek Market",
+      "Georgetown Botanical Gardens",
+      "Iwokrama rainforest trip",
+      "Demerara River sunset"
+    ],
+    "visa": "free"
+  },
   "gibraltar-united-kingdom": {
     "description": "A tiny British territory under a towering limestone Rock, with wild Barbary macaques, Mediterranean views and Spain a short walk away.",
     "climate": "mediterranean",
@@ -2501,6 +2561,26 @@
     ],
     "visa": "free"
   },
+  "giza-egypt": {
+    "description": "Home to the Great Pyramids and the Sphinx on Cairo's western edge, with the Grand Egyptian Museum close to the plateau.",
+    "climate": "hot desert",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [10, 11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Great Pyramid of Khufu",
+      "Sphinx and Valley Temple",
+      "Grand Egyptian Museum",
+      "Saqqara step pyramid",
+      "Camel ride at sunset",
+      "Sound and light show"
+    ],
+    "visa": "on-arrival"
+  },
   "glasgow-united-kingdom": {
     "description": "Scotland's largest city is a Victorian-built hub of free museums, a thriving live music scene and Art Nouveau design, near Loch Lomond.",
     "climate": "oceanic",
@@ -2520,6 +2600,26 @@
       "Day trip to Loch Lomond"
     ],
     "visa": "free"
+  },
+  "goa-india": {
+    "description": "India's beach state of palm-fringed sands, Portuguese-era churches, spice plantations, seafood shacks and a lively party scene.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Palolem Beach",
+      "Basilica of Bom Jesus in Old Goa",
+      "Fontainhas Latin Quarter",
+      "Dudhsagar Falls",
+      "Anjuna flea market",
+      "Fish curry rice thali"
+    ],
+    "visa": "required"
   },
   "gothenburg-sweden": {
     "description": "Sweden's relaxed west-coast second city of canals, a lively fish market, leafy Haga cafés and an archipelago of car-free islands just offshore.",
@@ -2558,6 +2658,26 @@
       "Roque Nublo hike",
       "Puerto de Mogán",
       "Ropa vieja canaria"
+    ],
+    "visa": "free"
+  },
+  "granada-spain": {
+    "description": "An Andalusian city beneath the Sierra Nevada, crowned by the Alhambra palace and full of Moorish lanes and free tapas.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Alhambra and Generalife",
+      "Albaicín quarter",
+      "Sacromonte flamenco caves",
+      "Free tapas crawl",
+      "Granada Cathedral",
+      "Day trip to the Sierra Nevada"
     ],
     "visa": "free"
   },
