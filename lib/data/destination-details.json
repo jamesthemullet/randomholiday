@@ -1082,6 +1082,26 @@
     ],
     "visa": "free"
   },
+  "bolzano-italy": {
+    "description": "South Tyrol's Alpine-Italian capital, ringed by Dolomite peaks, home to Ötzi the Iceman and a cable car to the Renon plateau.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Ötzi the Iceman at the South Tyrol Museum of Archaeology",
+      "Renon cable car and earth pyramids",
+      "Piazza Walther and the Christmas market",
+      "Messner Mountain Museum Firmian",
+      "Dolomites hiking from Seiser Alm",
+      "Speck, canederli and South Tyrolean wine"
+    ],
+    "visa": "free"
+  },
   "bordeaux-france": {
     "description": "France's wine capital on the Garonne, with elegant 18th-century streets, the mirror-like Miroir d'Eau and world-famous châteaux nearby.",
     "climate": "oceanic",
@@ -1122,6 +1142,26 @@
     ],
     "visa": "free"
   },
+  "brasov-romania": {
+    "description": "A Transylvanian medieval town beneath Mount Tâmpa, with a Gothic Black Church, a colourful main square and Dracula's Bran Castle close by.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Black Church",
+      "Piața Sfatului (Council Square)",
+      "Tâmpa cable car",
+      "Bran Castle",
+      "Râșnov Fortress",
+      "Poiana Brașov hiking and skiing"
+    ],
+    "visa": "free"
+  },
   "bratislava-slovakia": {
     "description": "Slovakia's compact Danube capital, with a pastel Old Town, a hilltop castle, cheap beer and vineyards on the edge of the Little Carpathians.",
     "climate": "continental",
@@ -1142,6 +1182,46 @@
     ],
     "visa": "free"
   },
+  "bremen-germany": {
+    "description": "A Hanseatic city on the Weser, famous for its Roland statue, the Town Musicians fairy tale and the narrow Schnoor quarter.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Marktplatz with the Town Hall and Roland statue",
+      "Town Musicians of Bremen statue",
+      "Schnoor medieval quarter",
+      "Böttcherstraße",
+      "Schlachte riverfront promenade",
+      "Bremen Christmas market"
+    ],
+    "visa": "free"
+  },
+  "brest-france": {
+    "description": "Brittany's naval port at the tip of Finistère, with a castle-fortress, a vast oceanarium and a gateway to wild Atlantic coastline.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Océanopolis aquarium",
+      "Château de Brest and Musée de la Marine",
+      "Tour Tanguy",
+      "Crozon peninsula coastal walks",
+      "Île d’Ouessant boat trip",
+      "Breton crêpes and cider"
+    ],
+    "visa": "free"
+  },
   "brindisi-italy": {
     "description": "A Puglian port city on the Adriatic with Roman monuments and a lively harbour, and a base for whitewashed hill towns and Salento beaches.",
     "climate": "mediterranean",
@@ -1159,6 +1239,46 @@
       "Alberobello trulli houses",
       "Torre Guaceto nature reserve beaches",
       "Orecchiette and fresh burrata"
+    ],
+    "visa": "free"
+  },
+  "brive-france": {
+    "description": "Brive-la-Gaillarde is a market town on the edge of the Dordogne, known for its food halles, walnuts and nearby caves and villages.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 90,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Saturday Halle Georges-Brassens market",
+      "Collégiale Saint-Martin",
+      "Collonges-la-Rouge red-stone village",
+      "Padirac Chasm underground river",
+      "Rocamadour cliffside pilgrimage town",
+      "Dordogne canoeing and truffle tasting"
+    ],
+    "visa": "free"
+  },
+  "brno-czech-republic": {
+    "description": "Moravia's laid-back university city, with a hilltop Špilberk castle, a Functionalist villa and a lively wine-and-craft-beer scene.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 85,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Špilberk Castle",
+      "Villa Tugendhat",
+      "Cathedral of St Peter and Paul",
+      "Capuchin Crypt",
+      "Zelný trh cabbage market",
+      "Moravian wine tasting"
     ],
     "visa": "free"
   },
