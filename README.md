@@ -41,12 +41,9 @@ cp .env.example .env.local
 | ------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
 | `OPENWEATHER_API_KEY`                 | Live seasonal weather on the destination detail modal      | Optional — falls back to a static seasonal estimate  |
 | `STRIPE_SECRET_KEY`                   | Server-side Stripe checkout session creation               | Optional — only needed to test the Pro checkout flow |
-| `STRIPE_PUBLISHABLE_KEY`              | Client-side Stripe.js                                      | Optional — only needed to test the Pro checkout flow |
 | `STRIPE_WEBHOOK_SECRET`               | Verifying incoming Stripe webhook events                   | Optional — only needed to test the webhook handler   |
 | `STRIPE_PRO_PRICE_ID`                 | The Stripe Price ID for the RandomHoliday Pro subscription | Optional — only needed to test the Pro checkout flow |
-| `NEXT_PUBLIC_ADSENSE_PUBLISHER_ID`    | Google AdSense placeholder slots on the free tier          | Optional                                             |
 | `NEXT_PUBLIC_BOOKING_AFFILIATE_ID`    | Booking.com affiliate links on hotel results               | Optional                                             |
-| `SKYSCANNER_API_KEY`                  | Skyscanner affiliate API                                   | Optional                                             |
 | `NEXT_PUBLIC_SKYSCANNER_AFFILIATE_ID` | Skyscanner affiliate links on flight results               | Optional                                             |
 | `NEXT_PUBLIC_APP_URL`                 | Absolute base URL used for OpenGraph/sitemap links         | Defaults to `http://localhost:3000`                  |
 
