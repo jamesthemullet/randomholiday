@@ -539,6 +539,26 @@
     ],
     "visa": "free"
   },
+  "austin-united-states": {
+    "description": "Texas's capital of live music and barbecue, with a lakeside trail, spring-fed swimming holes and a nightly bat flight from Congress Avenue Bridge.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 190,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Franklin Barbecue brisket",
+      "Sixth Street and Rainey Street live music",
+      "Congress Avenue Bridge bat flight",
+      "Barton Springs Pool",
+      "Texas State Capitol tour",
+      "Paddleboarding on Lady Bird Lake"
+    ],
+    "visa": "free"
+  },
   "bahrain-bahrain": {
     "description": "A compact island kingdom in the Gulf, pairing the Portuguese-era Bahrain Fort and Manama's souq with pearl-diving heritage, Formula 1 and superb Arabic food.",
     "climate": "hot desert",
@@ -581,6 +601,66 @@
     ],
     "visa": "required"
   },
+  "baltimore-united-states": {
+    "description": "A working harbour city with a revitalised waterfront, the star-fort of Fort McHenry, free-entry art museums and Chesapeake blue crab on every menu.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 170,
+      "dailySpending": 100
+    },
+    "activities": [
+      "National Aquarium",
+      "Fort McHenry National Monument",
+      "Fells Point pubs and cobbled streets",
+      "Walters Art Museum",
+      "Lexington Market crab cakes",
+      "Day trip to Annapolis"
+    ],
+    "visa": "free"
+  },
+  "bandar-seri-begawan-brunei": {
+    "description": "The sultanate's quiet capital, with a gold-domed mosque, a centuries-old stilt-house water village and rainforest day trips into Temburong.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [2, 3, 4, 5, 6, 7],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Omar Ali Saifuddien Mosque",
+      "Kampong Ayer water village boat tour",
+      "Royal Regalia Museum",
+      "Ulu Temburong National Park canopy walk",
+      "Tamu Kianggeh market",
+      "Jame'asr Hassanil Bolkiah Mosque"
+    ],
+    "visa": "free"
+  },
+  "banjul-the-gambia": {
+    "description": "The Gambia's small riverside capital, a base for Atlantic beaches, mangrove birdwatching and boat trips to the slave-trade history of Kunta Kinteh Island.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 380,
+      "hotelPerNight": 60,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Albert Market",
+      "Arch 22 viewpoint",
+      "Kachikally Crocodile Pool",
+      "Kunta Kinteh Island boat trip",
+      "Abuko Nature Reserve",
+      "Kotu and Cape Point beaches"
+    ],
+    "visa": "free"
+  },
   "barbados-barbados": {
     "description": "Easternmost Caribbean island of coral-sand beaches, colonial Bridgetown, rum distilleries and flying-fish suppers, with calm west-coast waters and surf on the Atlantic side.",
     "climate": "tropical",
@@ -622,6 +702,26 @@
     ],
     "visa": "free"
   },
+  "bastia-france": {
+    "description": "Corsica's old port town, with a pastel Vieux-Port, a hilltop citadel and the winding Cap Corse coast road leading to quiet fishing villages.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Vieux-Port harbour",
+      "Citadelle de Bastia",
+      "Place Saint-Nicolas",
+      "Cap Corse coastal drive",
+      "Nonza black-pebble beach",
+      "Corsican charcuterie and Patrimonio wine"
+    ],
+    "visa": "free"
+  },
   "beijing-people-s-republic-of-china": {
     "description": "China's capital, where the Forbidden City, Temple of Heaven and hutong alleys sit beside futuristic skyscrapers, with the Great Wall within easy reach.",
     "climate": "humid continental",
@@ -642,6 +742,26 @@
       "798 Art Zone"
     ],
     "visa": "free"
+  },
+  "beirut-lebanon": {
+    "description": "Lebanon's resilient seafront capital, with Ottoman-era mansions, a thriving mezze and nightlife scene, and the Roman ruins of Byblos within day-trip range.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 380,
+      "hotelPerNight": 110,
+      "dailySpending": 60
+    },
+    "activities": [
+      "National Museum of Beirut",
+      "Raouche Pigeon Rocks",
+      "Sursock Museum",
+      "Gemmayzeh and Mar Mikhael dining",
+      "Jeita Grotto",
+      "Byblos day trip"
+    ],
+    "visa": "on-arrival"
   },
   "belfast-united-kingdom": {
     "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
