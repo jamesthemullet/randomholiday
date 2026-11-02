@@ -2183,6 +2183,46 @@
     ],
     "visa": "free"
   },
+  "entebbe-uganda": {
+    "description": "A Lake Victoria shore town and Uganda's gateway, with a botanical garden, chimpanzee sanctuary island and easy routes to gorilla country.",
+    "climate": "tropical",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [1, 2, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Entebbe Botanical Gardens",
+      "Ngamba Island Chimpanzee Sanctuary",
+      "Uganda Wildlife Education Centre",
+      "Lake Victoria boat trip",
+      "Rolex street-food roll",
+      "Gorilla trekking in Bwindi"
+    ],
+    "visa": "required"
+  },
+  "essaouira-morocco": {
+    "description": "A whitewashed Atlantic port with a walled medina, fortified sea ramparts, breezy beaches and some of Morocco's best grilled fish.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Skala de la Ville ramparts",
+      "Medina and thuya woodwork souks",
+      "Grilled fish at the port",
+      "Kitesurfing at Essaouira beach",
+      "Gnaoua music festival",
+      "Camel ride to Diabat"
+    ],
+    "visa": "free"
+  },
   "faro-portugal": {
     "description": "The gateway to Portugal's Algarve, with a walled old town, lagoon islands and golden beaches along the surrounding coast.",
     "climate": "mediterranean",
@@ -2199,6 +2239,26 @@
       "Ilha Deserta beach",
       "Benagil cave kayaking",
       "Capela dos Ossos"
+    ],
+    "visa": "free"
+  },
+  "fez-morocco": {
+    "description": "Morocco's medieval capital, where the vast Fes el-Bali medina, working tanneries and ancient madrasas make for a maze of living history.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Fes el-Bali medina",
+      "Chouara tannery",
+      "Bou Inania Madrasa",
+      "Al-Qarawiyyin University and library",
+      "Pottery workshops at Ain Nokbi",
+      "Tagine and pastilla supper"
     ],
     "visa": "free"
   },
@@ -2262,6 +2322,26 @@
     ],
     "visa": "free"
   },
+  "freetown-sierra-leone": {
+    "description": "A hilly Atlantic capital with palm-fringed beaches on the peninsula, a historic cotton tree and a chimpanzee sanctuary close to the city.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 100,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Lumley and River No. 2 beaches",
+      "Tacugama Chimpanzee Sanctuary",
+      "Cotton Tree monument",
+      "Sierra Leone National Museum",
+      "Bunce Island slave fort boat trip",
+      "Freshly grilled fish on the beach"
+    ],
+    "visa": "required"
+  },
   "fuerteventura-spain": {
     "description": "A Canary island of wide white-sand beaches, steady Atlantic winds and volcanic desert landscapes, popular for windsurfing and year-round sun.",
     "climate": "subtropical",
@@ -2302,6 +2382,26 @@
     ],
     "visa": "free"
   },
+  "gaziantep-turkey": {
+    "description": "Turkey's gastronomic capital in the south-east, famed for pistachio baklava, a mosaic museum of Roman Zeugma and a citadel-crowned old quarter.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Zeugma Mosaic Museum",
+      "Gaziantep Castle",
+      "Baklava tasting at Imam Çağdaş",
+      "Bakırcılar copper bazaar",
+      "Beyran soup breakfast",
+      "Rumkale and Halfeti day trip"
+    ],
+    "visa": "free"
+  },
   "gdansk-poland": {
     "description": "A Baltic port city of rebuilt merchant façades along the Motława river, amber workshops, shipyard history and the Solidarity story, near Sopot's beaches.",
     "climate": "temperate",
@@ -2338,6 +2438,26 @@
       "Lake Geneva cruise",
       "Mont Blanc day trip from Chamonix",
       "Cheese fondue"
+    ],
+    "visa": "free"
+  },
+  "genoa-italy": {
+    "description": "A faded-grand port city of marble palaces and narrow caruggi alleys, with Europe's largest medieval centre, a big aquarium and focaccia and pesto at source.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Palazzi dei Rolli on Via Garibaldi",
+      "Genoa Aquarium",
+      "Porto Antico harbour",
+      "Focaccia and pesto in the old town",
+      "Staglieno Monumental Cemetery",
+      "Train to Camogli and Portofino"
     ],
     "visa": "free"
   },
