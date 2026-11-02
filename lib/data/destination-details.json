@@ -1763,6 +1763,26 @@
     ],
     "visa": "free"
   },
+  "constanta-romania": {
+    "description": "Romania's oldest city and largest Black Sea port, mixing Roman ruins and a grand casino with the beach resorts of nearby Mamaia.",
+    "climate": "humid continental",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Roman Mosaic Edifice",
+      "Constanța Casino on the seafront",
+      "Mamaia beach and promenade",
+      "Ovidiu Square statue and Archaeological Museum",
+      "Genovese Lighthouse and Tomis port",
+      "Day trip to the Danube Delta"
+    ],
+    "visa": "free"
+  },
   "copenhagen-denmark": {
     "description": "Denmark's waterfront capital of colourful Nyhavn houses, canal harbour baths, design shops and a world-leading food scene, best explored by bike.",
     "climate": "oceanic",
@@ -1823,6 +1843,46 @@
     ],
     "visa": "free"
   },
+  "craiova-romania": {
+    "description": "Oltenia's elegant university city, home to the sprawling Nicolae Romanescu Park, a Belle Époque Art Museum and lively café-lined old streets.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Nicolae Romanescu Park and its Parcul Mare lake",
+      "Craiova Art Museum in the Jean Mihail Palace",
+      "Bania House and Oltenia Museum",
+      "Old Town café terraces on Calea Unirii",
+      "Constantin Brâncuși sculpture trail at Târgu Jiu",
+      "Wine tasting in nearby Segarcea vineyards"
+    ],
+    "visa": "free"
+  },
+  "dakar-senegal": {
+    "description": "West Africa's vibrant Atlantic capital, with a bustling Sandaga market, the Gorée Island slave-trade memorial and a celebrated music and surf scene.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 80,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Gorée Island ferry and House of Slaves",
+      "African Renaissance Monument",
+      "Lac Rose (Retba) salt lake",
+      "Ngor and Yoff surf beaches",
+      "Sandaga and Soumbédioune markets",
+      "Thieboudienne fish-and-rice lunch"
+    ],
+    "visa": "free"
+  },
   "dalaman-turkey": {
     "description": "The gateway to Turkey's Turkish Riviera, near Ölüdeniz's lagoon, Dalyan's river tombs and pine-backed coves along the Turquoise Coast.",
     "climate": "mediterranean",
@@ -1842,6 +1902,66 @@
       "Mud baths at Iztuzu Beach"
     ],
     "visa": "free"
+  },
+  "dar-es-salaam-tanzania": {
+    "description": "Tanzania's sultry Indian Ocean port, a base for Zanzibar ferries and safaris, with Swahili markets, fresh seafood and palm-fringed island beaches nearby.",
+    "climate": "tropical",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [6, 7, 8, 9, 10, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 75,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Kariakoo Market",
+      "National Museum and House of Culture",
+      "Fish Market at Kivukoni",
+      "Bongoyo Island snorkelling day trip",
+      "Ferry to Zanzibar",
+      "Day safari in Selous (Nyerere) National Park"
+    ],
+    "visa": "on-arrival"
+  },
+  "debrecen-hungary": {
+    "description": "Hungary's second city on the Great Plain, with a grand Reformed Great Church, Hortobágy puszta horse shows and the Aquaticum thermal spa.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Reformed Great Church",
+      "Déri Museum",
+      "Nagyerdő Park and Aquaticum thermal spa",
+      "Hortobágy National Park horse show",
+      "Debreceni sausage and Gundel-style Hungarian cooking",
+      "Flower Carnival in August"
+    ],
+    "visa": "free"
+  },
+  "delhi-india": {
+    "description": "India's sprawling capital, where Mughal forts, Old Delhi spice bazaars and Lutyens' grand boulevards sit beside serious street food.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 60,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Red Fort and Jama Masjid",
+      "Chandni Chowk street-food walk",
+      "Humayun's Tomb and Qutub Minar",
+      "India Gate and Rashtrapati Bhavan",
+      "Lodhi Garden and Hauz Khas Village",
+      "Day trip to the Taj Mahal in Agra"
+    ],
+    "visa": "required"
   },
   "djerba-tunisia": {
     "description": "A flat, sunny Tunisian island of whitewashed villages, sandy beaches, a historic synagogue and the medina market of Houmt Souk.",
