@@ -300,6 +300,26 @@
     ],
     "visa": "free"
   },
+  "almaty-kazakhstan": {
+    "description": "Kazakhstan's largest city beneath the snowy Trans-Ili Alatau, mixing Soviet-era parks and bazaars with mountain skiing, alpine lakes and a thriving café scene.",
+    "climate": "continental",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [4, 5, 6, 9, 12, 1],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Kok Tobe hill and cable car",
+      "Green Bazaar",
+      "Zenkov Cathedral in Panfilov Park",
+      "Medeu skating rink and Shymbulak ski resort",
+      "Big Almaty Lake",
+      "Charyn Canyon day trip"
+    ],
+    "visa": "free"
+  },
   "almeria-spain": {
     "description": "A sunny Andalusian port city beneath a vast Moorish fortress, gateway to the wild, desert-like beaches of Cabo de Gata.",
     "climate": "mediterranean",
@@ -338,6 +358,66 @@
       "Hummus and falafel at Hashem"
     ],
     "visa": "on-arrival"
+  },
+  "amritsar-india": {
+    "description": "The Sikh holy city of Punjab, centred on the gold-roofed Golden Temple, with fiery Punjabi food and a nightly border ceremony at Wagah.",
+    "climate": "humid subtropical",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [10, 11, 12, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 55,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Golden Temple and its free langar kitchen",
+      "Wagah border flag-lowering ceremony",
+      "Jallianwala Bagh memorial",
+      "Partition Museum",
+      "Amritsari kulcha and lassi",
+      "Durgiana Temple"
+    ],
+    "visa": "required"
+  },
+  "ancona-italy": {
+    "description": "A working Adriatic port in Le Marche, with a Greek-founded old town and cathedral on a hill, and the Conero Riviera's white cliffs and coves close by.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Duomo di San Ciriaco",
+      "Mole Vanvitelliana",
+      "Trajan's Arch",
+      "Conero Riviera beaches at Portonovo and Sirolo",
+      "Stoccafisso all'anconetana",
+      "Day trip to Urbino"
+    ],
+    "visa": "free"
+  },
+  "ankara-turkey": {
+    "description": "Turkey's modern capital, home to the mausoleum of Atatürk, the superb Museum of Anatolian Civilizations and a hilltop citadel quarter of Ottoman houses.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Anıtkabir",
+      "Museum of Anatolian Civilizations",
+      "Ankara Citadel and Hamamönü",
+      "Temple of Augustus and Roman Baths",
+      "Ankara tava and Turkish coffee",
+      "Day trip to Gordion"
+    ],
+    "visa": "free"
   },
   "antalya-turkey": {
     "description": "A Turkish Riviera resort city pairing a Roman-era old town and harbour with long beaches backed by the Taurus Mountains.",
@@ -378,6 +458,26 @@
     ],
     "visa": "free"
   },
+  "ashgabat-turkmenistan": {
+    "description": "Turkmenistan's white-marble capital, a surreal showcase of gilded monuments and fountains, set beside the Karakum Desert and the burning Darvaza gas crater.",
+    "climate": "cold desert",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Independence Monument and Neutrality Arch",
+      "Turkmenbashi Ruhy Mosque at Gypjak",
+      "Tolkuchka Bazaar for carpets",
+      "Nisa Parthian fortresses",
+      "Darvaza gas crater overnight trip",
+      "Turkmen carpet museum"
+    ],
+    "visa": "required"
+  },
   "asturias-spain": {
     "description": "Spain's green northern coast, with Picos de Europa peaks, cider houses, rugged beaches and the old stone towns of Oviedo and Gijón.",
     "climate": "oceanic",
@@ -415,6 +515,47 @@
       "Ancient Agora",
       "Souvlaki in Monastiraki",
       "Sunset at Cape Sounion"
+    ],
+    "visa": "free"
+  },
+  "atlanta-united-states": {
+    "description": "The Southern hub of civil-rights history and Coca-Cola, with Martin Luther King Jr.'s birthplace, leafy Piedmont Park, the BeltLine and soul-food cooking.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Martin Luther King Jr. National Historical Park",
+      "Georgia Aquarium",
+      "World of Coca-Cola",
+      "Atlanta BeltLine and Ponce City Market",
+      "Piedmont Park and Atlanta Botanical Garden",
+      "Fried chicken and soul food",
+      "Stone Mountain day trip"
+    ],
+    "visa": "free"
+  },
+  "austin-united-states": {
+    "description": "Texas's capital of live music and barbecue, with a lakeside trail, spring-fed swimming holes and a nightly bat flight from Congress Avenue Bridge.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 190,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Franklin Barbecue brisket",
+      "Sixth Street and Rainey Street live music",
+      "Congress Avenue Bridge bat flight",
+      "Barton Springs Pool",
+      "Texas State Capitol tour",
+      "Paddleboarding on Lady Bird Lake"
     ],
     "visa": "free"
   },
@@ -460,6 +601,66 @@
     ],
     "visa": "required"
   },
+  "baltimore-united-states": {
+    "description": "A working harbour city with a revitalised waterfront, the star-fort of Fort McHenry, free-entry art museums and Chesapeake blue crab on every menu.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 170,
+      "dailySpending": 100
+    },
+    "activities": [
+      "National Aquarium",
+      "Fort McHenry National Monument",
+      "Fells Point pubs and cobbled streets",
+      "Walters Art Museum",
+      "Lexington Market crab cakes",
+      "Day trip to Annapolis"
+    ],
+    "visa": "free"
+  },
+  "bandar-seri-begawan-brunei": {
+    "description": "The sultanate's quiet capital, with a gold-domed mosque, a centuries-old stilt-house water village and rainforest day trips into Temburong.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [2, 3, 4, 5, 6, 7],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Omar Ali Saifuddien Mosque",
+      "Kampong Ayer water village boat tour",
+      "Royal Regalia Museum",
+      "Ulu Temburong National Park canopy walk",
+      "Tamu Kianggeh market",
+      "Jame'asr Hassanil Bolkiah Mosque"
+    ],
+    "visa": "free"
+  },
+  "banjul-the-gambia": {
+    "description": "The Gambia's small riverside capital, a base for Atlantic beaches, mangrove birdwatching and boat trips to the slave-trade history of Kunta Kinteh Island.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 380,
+      "hotelPerNight": 60,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Albert Market",
+      "Arch 22 viewpoint",
+      "Kachikally Crocodile Pool",
+      "Kunta Kinteh Island boat trip",
+      "Abuko Nature Reserve",
+      "Kotu and Cape Point beaches"
+    ],
+    "visa": "free"
+  },
   "barbados-barbados": {
     "description": "Easternmost Caribbean island of coral-sand beaches, colonial Bridgetown, rum distilleries and flying-fish suppers, with calm west-coast waters and surf on the Atlantic side.",
     "climate": "tropical",
@@ -501,6 +702,46 @@
     ],
     "visa": "free"
   },
+  "basel-mulhouse-france": {
+    "description": "A Rhine-side Swiss art capital with a medieval Münster, world-class museums and Carnival, on the border with France and Germany.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 190,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Kunstmuseum Basel and Fondation Beyeler",
+      "Basel Münster and Rhine ferry",
+      "Altstadt and Rathaus",
+      "Basel Fasnacht carnival",
+      "Vitra Design Museum in Weil am Rhein",
+      "Basler Läckerli and Christmas market"
+    ],
+    "visa": "free"
+  },
+  "bastia-france": {
+    "description": "Corsica's old port town, with a pastel Vieux-Port, a hilltop citadel and the winding Cap Corse coast road leading to quiet fishing villages.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Vieux-Port harbour",
+      "Citadelle de Bastia",
+      "Place Saint-Nicolas",
+      "Cap Corse coastal drive",
+      "Nonza black-pebble beach",
+      "Corsican charcuterie and Patrimonio wine"
+    ],
+    "visa": "free"
+  },
   "beijing-people-s-republic-of-china": {
     "description": "China's capital, where the Forbidden City, Temple of Heaven and hutong alleys sit beside futuristic skyscrapers, with the Great Wall within easy reach.",
     "climate": "humid continental",
@@ -521,6 +762,26 @@
       "798 Art Zone"
     ],
     "visa": "free"
+  },
+  "beirut-lebanon": {
+    "description": "Lebanon's resilient seafront capital, with Ottoman-era mansions, a thriving mezze and nightlife scene, and the Roman ruins of Byblos within day-trip range.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 380,
+      "hotelPerNight": 110,
+      "dailySpending": 60
+    },
+    "activities": [
+      "National Museum of Beirut",
+      "Raouche Pigeon Rocks",
+      "Sursock Museum",
+      "Gemmayzeh and Mar Mikhael dining",
+      "Jeita Grotto",
+      "Byblos day trip"
+    ],
+    "visa": "on-arrival"
   },
   "belfast-united-kingdom": {
     "description": "Northern Ireland's capital, where Titanic heritage, Victorian pubs and murals sit a short drive from the Causeway Coast.",
@@ -562,6 +823,66 @@
     ],
     "visa": "free"
   },
+  "bengaluru-india": {
+    "description": "India's garden-and-tech city on the Deccan plateau, with a mild climate, craft-beer taverns, Tipu Sultan's palace and a lively dosa-café culture.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 70,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Lalbagh Botanical Garden",
+      "Bangalore Palace",
+      "Tipu Sultan's Summer Palace",
+      "Masala dosa at Vidyarthi Bhavan",
+      "Craft-beer brewpubs in Indiranagar",
+      "Day trip to Mysore Palace"
+    ],
+    "visa": "required"
+  },
+  "bergamo-italy": {
+    "description": "A hilltop medieval Città Alta ringed by Venetian walls, above a calm lower town and within easy reach of Lake Como and Milan.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Venetian Walls walk",
+      "Piazza Vecchia and Basilica di Santa Maria Maggiore",
+      "Funicular up to Città Alta",
+      "Polenta e osei and casoncelli alla bergamasca",
+      "Accademia Carrara art gallery",
+      "Day trip to Lake Iseo or Milan"
+    ],
+    "visa": "free"
+  },
+  "bergen-norway": {
+    "description": "A colourful Hanseatic harbour town ringed by seven mountains, and the gateway to the Norwegian fjords.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 170,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Bryggen wharf",
+      "Fløibanen funicular to Mount Fløyen",
+      "Fish Market",
+      "Flåm Railway and Nærøyfjord cruise",
+      "Hike Mount Ulriken",
+      "Troldhaugen, Edvard Grieg's home"
+    ],
+    "visa": "free"
+  },
   "bergerac-france": {
     "description": "A Dordogne river town of half-timbered lanes and wine cellars, gateway to medieval villages, cave art, chateaux and Bergerac vineyards.",
     "climate": "oceanic",
@@ -599,6 +920,26 @@
       "East Side Gallery",
       "Currywurst at Mauerpark",
       "Christmas markets"
+    ],
+    "visa": "free"
+  },
+  "bermuda-united-kingdom": {
+    "description": "A pastel-painted Atlantic island with pink-sand beaches, turquoise coves and British-colonial towns, a long way from the Caribbean crowds.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 380,
+      "dailySpending": 150
+    },
+    "activities": [
+      "Horseshoe Bay Beach",
+      "Royal Naval Dockyard",
+      "Crystal Caves",
+      "Snorkel the shipwrecks",
+      "Rum swizzle and fish chowder",
+      "Historic town of St George"
     ],
     "visa": "free"
   },
@@ -682,6 +1023,26 @@
     ],
     "visa": "free"
   },
+  "boa-vista-cape-verde": {
+    "description": "Cape Verde's flattest island, edged by long white beaches and Saharan dunes, with strong winds for kitesurfing and nesting turtles in summer.",
+    "climate": "semi-arid",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 400,
+      "hotelPerNight": 100,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Santa Monica Beach",
+      "Viana Desert dunes",
+      "Kitesurfing at Sal Rei",
+      "Loggerhead turtle watching",
+      "Shipwreck of the Santa Maria",
+      "Quad or buggy safari"
+    ],
+    "visa": "free"
+  },
   "bodrum-turkey": {
     "description": "A lively Aegean resort town centred on a crusader castle, with white-washed bays, yacht-filled marinas and warm clear water.",
     "climate": "mediterranean",
@@ -698,6 +1059,26 @@
       "Gulet boat trip along the coast",
       "Bitez and Gümbet beaches",
       "Yalıkavak marina"
+    ],
+    "visa": "free"
+  },
+  "bogota-colombia": {
+    "description": "Colombia's high-altitude capital, with a colonial La Candelaria quarter, the Gold Museum, cable-car views and a fast-growing food scene.",
+    "climate": "subtropical highland",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [12, 1, 2, 3, 7, 8],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 80,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Museo del Oro",
+      "La Candelaria and Plaza de Bolívar",
+      "Cable car up Monserrate",
+      "Botero Museum",
+      "Ajiaco soup",
+      "Zipaquirá Salt Cathedral"
     ],
     "visa": "free"
   },
@@ -718,6 +1099,26 @@
       "Quadrilatero food market",
       "Tagliatelle al ragù and tortellini in brodo",
       "Day trip to Modena balsamic vinegar producers"
+    ],
+    "visa": "free"
+  },
+  "bolzano-italy": {
+    "description": "South Tyrol's Alpine-Italian capital, ringed by Dolomite peaks, home to Ötzi the Iceman and a cable car to the Renon plateau.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Ötzi the Iceman at the South Tyrol Museum of Archaeology",
+      "Renon cable car and earth pyramids",
+      "Piazza Walther and the Christmas market",
+      "Messner Mountain Museum Firmian",
+      "Dolomites hiking from Seiser Alm",
+      "Speck, canederli and South Tyrolean wine"
     ],
     "visa": "free"
   },
@@ -761,6 +1162,26 @@
     ],
     "visa": "free"
   },
+  "brasov-romania": {
+    "description": "A Transylvanian medieval town beneath Mount Tâmpa, with a Gothic Black Church, a colourful main square and Dracula's Bran Castle close by.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Black Church",
+      "Piața Sfatului (Council Square)",
+      "Tâmpa cable car",
+      "Bran Castle",
+      "Râșnov Fortress",
+      "Poiana Brașov hiking and skiing"
+    ],
+    "visa": "free"
+  },
   "bratislava-slovakia": {
     "description": "Slovakia's compact Danube capital, with a pastel Old Town, a hilltop castle, cheap beer and vineyards on the edge of the Little Carpathians.",
     "climate": "continental",
@@ -781,6 +1202,46 @@
     ],
     "visa": "free"
   },
+  "bremen-germany": {
+    "description": "A Hanseatic city on the Weser, famous for its Roland statue, the Town Musicians fairy tale and the narrow Schnoor quarter.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Marktplatz with the Town Hall and Roland statue",
+      "Town Musicians of Bremen statue",
+      "Schnoor medieval quarter",
+      "Böttcherstraße",
+      "Schlachte riverfront promenade",
+      "Bremen Christmas market"
+    ],
+    "visa": "free"
+  },
+  "brest-france": {
+    "description": "Brittany's naval port at the tip of Finistère, with a castle-fortress, a vast oceanarium and a gateway to wild Atlantic coastline.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Océanopolis aquarium",
+      "Château de Brest and Musée de la Marine",
+      "Tour Tanguy",
+      "Crozon peninsula coastal walks",
+      "Île d’Ouessant boat trip",
+      "Breton crêpes and cider"
+    ],
+    "visa": "free"
+  },
   "brindisi-italy": {
     "description": "A Puglian port city on the Adriatic with Roman monuments and a lively harbour, and a base for whitewashed hill towns and Salento beaches.",
     "climate": "mediterranean",
@@ -798,6 +1259,66 @@
       "Alberobello trulli houses",
       "Torre Guaceto nature reserve beaches",
       "Orecchiette and fresh burrata"
+    ],
+    "visa": "free"
+  },
+  "brive-france": {
+    "description": "Brive-la-Gaillarde is a market town on the edge of the Dordogne, known for its food halles, walnuts and nearby caves and villages.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 90,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Saturday Halle Georges-Brassens market",
+      "Collégiale Saint-Martin",
+      "Collonges-la-Rouge red-stone village",
+      "Padirac Chasm underground river",
+      "Rocamadour cliffside pilgrimage town",
+      "Dordogne canoeing and truffle tasting"
+    ],
+    "visa": "free"
+  },
+  "brno-czech-republic": {
+    "description": "Moravia's laid-back university city, with a hilltop Špilberk castle, a Functionalist villa and a lively wine-and-craft-beer scene.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 85,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Špilberk Castle",
+      "Villa Tugendhat",
+      "Cathedral of St Peter and Paul",
+      "Capuchin Crypt",
+      "Zelný trh cabbage market",
+      "Moravian wine tasting"
+    ],
+    "visa": "free"
+  },
+  "brussels-belgium": {
+    "description": "Belgium's grand-place capital, known for Art Nouveau townhouses, comic-strip murals, and a serious devotion to chocolate, waffles, frites and beer.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 125,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Grand-Place",
+      "Atomium",
+      "Magritte Museum",
+      "Comic Strip Route murals",
+      "Belgian chocolate and praline shops",
+      "Day trip to Bruges or Ghent by train"
     ],
     "visa": "free"
   },
@@ -901,6 +1422,46 @@
     ],
     "visa": "free"
   },
+  "calgary-canada": {
+    "description": "Alberta's Rocky Mountain gateway city, home to the Calgary Stampede and a short drive from Banff, Lake Louise and Canmore.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Calgary Stampede (July)",
+      "Calgary Tower and Prince's Island Park",
+      "Banff National Park day trip",
+      "Lake Louise and Moraine Lake",
+      "Drumheller and the Royal Tyrrell Museum",
+      "Heritage Park Historical Village"
+    ],
+    "visa": "free"
+  },
+  "carcassonne-france": {
+    "description": "A fairy-tale walled medieval citadel in Languedoc, with 52 towers, the Canal du Midi and nearby Cathar castles and wine country.",
+    "climate": "mediterranean",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "La Cité de Carcassonne ramparts",
+      "Château Comtal",
+      "Canal du Midi boat trip",
+      "Cassoulet at a local restaurant",
+      "Minervois and Corbières wine tasting",
+      "Cathar castle of Lastours"
+    ],
+    "visa": "free"
+  },
   "casablanca-morocco": {
     "description": "Morocco's sprawling Atlantic metropolis, home to the vast Hassan II Mosque, Art Deco boulevards and a seafront lined with fish restaurants.",
     "climate": "mediterranean",
@@ -918,6 +1479,26 @@
       "Central Market seafood lunch",
       "Habous Quarter and old medina",
       "Rick's Café"
+    ],
+    "visa": "free"
+  },
+  "castellon-spain": {
+    "description": "The quieter Costa del Azahar, with long sandy beaches at Benicàssim, the walled seaside town of Peñíscola and the Desert de les Palmes.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Peñíscola castle and old town",
+      "Benicàssim beaches",
+      "Hiking in the Desert de les Palmes",
+      "Illes Columbretes boat trip",
+      "Paella valenciana",
+      "Morella medieval walled town"
     ],
     "visa": "free"
   },
@@ -961,6 +1542,26 @@
     ],
     "visa": "free"
   },
+  "changsha-people-s-republic-of-china": {
+    "description": "Hunan's riverside capital, famed for fiery Xiang cuisine, buzzing night markets, Orange Isle on the Xiang River and the Hunan Museum's Han dynasty treasures.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Orange Isle and Mao Zedong statue",
+      "Hunan Museum and Mawangdui silk burial",
+      "Yuelu Mountain and Yuelu Academy",
+      "Taiping Street and Huangxing Road night food",
+      "Stinky tofu and Xiang-style spicy dishes",
+      "Day trip to Zhangjiajie"
+    ],
+    "visa": "free"
+  },
   "chania-greece": {
     "description": "A Venetian harbour town in western Crete, with Ottoman lanes, lively tavernas and gorges and pink-sand beaches within reach.",
     "climate": "mediterranean",
@@ -978,6 +1579,26 @@
       "Balos Lagoon",
       "Old town and Splantzia square",
       "Dakos and Cretan raki"
+    ],
+    "visa": "free"
+  },
+  "charlotte-united-states": {
+    "description": "North Carolina's fast-growing banking hub, with NASCAR heritage, a lively NoDa arts district, craft breweries and the Blue Ridge Mountains a short drive away.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 160,
+      "dailySpending": 100
+    },
+    "activities": [
+      "NASCAR Hall of Fame",
+      "U.S. National Whitewater Center",
+      "NoDa arts district and breweries",
+      "Freedom Park and Uptown skyline",
+      "Carolina barbecue",
+      "Day trip to the Blue Ridge Mountains"
     ],
     "visa": "free"
   },
@@ -1002,6 +1623,46 @@
     ],
     "visa": "free"
   },
+  "chennai-india": {
+    "description": "Tamil Nadu's coastal capital, where Dravidian temples, Marina Beach, Fort St George and filter coffee with crisp dosas anchor a deeply South Indian city.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [11, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 70,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Kapaleeshwarar Temple in Mylapore",
+      "Marina Beach",
+      "Fort St George and museum",
+      "Government Museum and Egmore",
+      "Dosa and filter coffee breakfast",
+      "Day trip to Mahabalipuram shore temples"
+    ],
+    "visa": "required"
+  },
+  "chicago-united-states": {
+    "description": "The Midwest's lakefront skyscraper city, with architecture river cruises, the Art Institute, deep-dish pizza, blues clubs and summer festivals in Millennium Park.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 220,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Chicago Architecture Center River Cruise",
+      "Art Institute of Chicago",
+      "Millennium Park and Cloud Gate",
+      "Deep-dish pizza at Lou Malnati's",
+      "Navy Pier and lakefront trail",
+      "Blues at Buddy Guy's Legends"
+    ],
+    "visa": "free"
+  },
   "chisinau-moldova": {
     "description": "Moldova's leafy, Soviet-planned capital, a gateway to the country's cave-cellar wineries including Cricova and Mileștii Mici, among the world's largest.",
     "climate": "humid continental",
@@ -1019,6 +1680,46 @@
       "Orheiul Vechi cave monastery",
       "Mazarache and Plăcinte pastries",
       "Day trip to Tiraspol in Transnistria"
+    ],
+    "visa": "free"
+  },
+  "chongqing-people-s-republic-of-china": {
+    "description": "A mountain megacity at the meeting of two rivers, with stacked cliffside districts, blazing hotpot, night views from Hongya Cave and Yangtze cruises.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Hongyadong stilted riverside complex",
+      "Chongqing hotpot",
+      "Liziba monorail through an apartment block",
+      "Dazu Rock Carvings",
+      "Ciqikou Ancient Town",
+      "Yangtze River cruise to the Three Gorges"
+    ],
+    "visa": "free"
+  },
+  "cincinnati-united-states": {
+    "description": "An Ohio River city of Over-the-Rhine's restored Italianate streets, Cincinnati chili, craft breweries, historic Findlay Market and America's oldest professional baseball team.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 150,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Over-the-Rhine and Findlay Market",
+      "Cincinnati chili at Skyline or Gold Star",
+      "National Underground Railroad Freedom Center",
+      "Cincinnati Zoo and Botanical Garden",
+      "John A. Roebling Suspension Bridge",
+      "Great American Ball Park"
     ],
     "visa": "free"
   },
@@ -1059,6 +1760,26 @@
       "Hohenzollern Bridge love-lock walk",
       "Rhine river cruise",
       "Cologne Christmas Markets"
+    ],
+    "visa": "free"
+  },
+  "constanta-romania": {
+    "description": "Romania's oldest city and largest Black Sea port, mixing Roman ruins and a grand casino with the beach resorts of nearby Mamaia.",
+    "climate": "humid continental",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Roman Mosaic Edifice",
+      "Constanța Casino on the seafront",
+      "Mamaia beach and promenade",
+      "Ovidiu Square statue and Archaeological Museum",
+      "Genovese Lighthouse and Tomis port",
+      "Day trip to the Danube Delta"
     ],
     "visa": "free"
   },
@@ -1122,6 +1843,46 @@
     ],
     "visa": "free"
   },
+  "craiova-romania": {
+    "description": "Oltenia's elegant university city, home to the sprawling Nicolae Romanescu Park, a Belle Époque Art Museum and lively café-lined old streets.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Nicolae Romanescu Park and its Parcul Mare lake",
+      "Craiova Art Museum in the Jean Mihail Palace",
+      "Bania House and Oltenia Museum",
+      "Old Town café terraces on Calea Unirii",
+      "Constantin Brâncuși sculpture trail at Târgu Jiu",
+      "Wine tasting in nearby Segarcea vineyards"
+    ],
+    "visa": "free"
+  },
+  "dakar-senegal": {
+    "description": "West Africa's vibrant Atlantic capital, with a bustling Sandaga market, the Gorée Island slave-trade memorial and a celebrated music and surf scene.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 80,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Gorée Island ferry and House of Slaves",
+      "African Renaissance Monument",
+      "Lac Rose (Retba) salt lake",
+      "Ngor and Yoff surf beaches",
+      "Sandaga and Soumbédioune markets",
+      "Thieboudienne fish-and-rice lunch"
+    ],
+    "visa": "free"
+  },
   "dalaman-turkey": {
     "description": "The gateway to Turkey's Turkish Riviera, near Ölüdeniz's lagoon, Dalyan's river tombs and pine-backed coves along the Turquoise Coast.",
     "climate": "mediterranean",
@@ -1139,6 +1900,146 @@
       "Boat day around Fethiye's 12 Islands",
       "Saklıkent Gorge",
       "Mud baths at Iztuzu Beach"
+    ],
+    "visa": "free"
+  },
+  "dallas-fort-worth-united-states": {
+    "description": "A sprawling Texas metroplex pairing Dallas's skyline and JFK history with Fort Worth's Stockyards cowboy culture and top-tier museums.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 150,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Sixth Floor Museum at Dealey Plaza",
+      "Fort Worth Stockyards cattle drive",
+      "Kimbell Art Museum",
+      "Dallas Arts District",
+      "Texas barbecue and Tex-Mex",
+      "Reunion Tower observation deck"
+    ],
+    "visa": "free"
+  },
+  "dar-es-salaam-tanzania": {
+    "description": "Tanzania's sultry Indian Ocean port, a base for Zanzibar ferries and safaris, with Swahili markets, fresh seafood and palm-fringed island beaches nearby.",
+    "climate": "tropical",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [6, 7, 8, 9, 10, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 75,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Kariakoo Market",
+      "National Museum and House of Culture",
+      "Fish Market at Kivukoni",
+      "Bongoyo Island snorkelling day trip",
+      "Ferry to Zanzibar",
+      "Day safari in Selous (Nyerere) National Park"
+    ],
+    "visa": "on-arrival"
+  },
+  "debrecen-hungary": {
+    "description": "Hungary's second city on the Great Plain, with a grand Reformed Great Church, Hortobágy puszta horse shows and the Aquaticum thermal spa.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Reformed Great Church",
+      "Déri Museum",
+      "Nagyerdő Park and Aquaticum thermal spa",
+      "Hortobágy National Park horse show",
+      "Debreceni sausage and Gundel-style Hungarian cooking",
+      "Flower Carnival in August"
+    ],
+    "visa": "free"
+  },
+  "delhi-india": {
+    "description": "India's sprawling capital, where Mughal forts, Old Delhi spice bazaars and Lutyens' grand boulevards sit beside serious street food.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 60,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Red Fort and Jama Masjid",
+      "Chandni Chowk street-food walk",
+      "Humayun's Tomb and Qutub Minar",
+      "India Gate and Rashtrapati Bhavan",
+      "Lodhi Garden and Hauz Khas Village",
+      "Day trip to the Taj Mahal in Agra"
+    ],
+    "visa": "required"
+  },
+  "denver-united-states": {
+    "description": "The Mile High City sits where the Great Plains meet the Rockies, with craft breweries, a lively food scene and mountains within an hour.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 170,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Red Rocks Amphitheatre concert",
+      "Denver Art Museum",
+      "Larimer Square and Union Station",
+      "Craft brewery crawl in RiNo",
+      "Day trip to Rocky Mountain National Park",
+      "Coors Field baseball game"
+    ],
+    "visa": "free"
+  },
+  "derry-united-kingdom": {
+    "description": "Northern Ireland's walled city on the River Foyle, known for its intact 17th-century ramparts, Bogside murals and a thriving music and arts scene.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Walk the City Walls",
+      "Bogside murals and Free Derry Corner",
+      "Museum of Free Derry",
+      "Peace Bridge at sunset",
+      "Guildhall",
+      "Day trip to Mussenden Temple and the Causeway Coast"
+    ],
+    "visa": "free"
+  },
+  "detroit-united-states": {
+    "description": "The Motor City pairs Motown history and Art Deco towers with the Detroit Institute of Arts, a revived riverfront and a strong food and music scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 500,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Detroit Institute of Arts",
+      "The Henry Ford Museum in Dearborn",
+      "Motown Museum",
+      "Eastern Market",
+      "Detroit RiverWalk",
+      "Detroit-style pizza and Coney dogs"
     ],
     "visa": "free"
   },
@@ -1182,6 +2083,26 @@
     ],
     "visa": "free"
   },
+  "dortmund-germany": {
+    "description": "A Ruhr city best known for football at Signal Iduna Park, with a rebuilt old town, a vibrant brewing heritage and industrial landmarks nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Borussia Dortmund match at Signal Iduna Park",
+      "German Football Museum",
+      "Zeche Zollern industrial museum",
+      "Westfalenpark and Florian Tower",
+      "Reinoldikirche and the old town",
+      "Dortmund Christmas market"
+    ],
+    "visa": "free"
+  },
   "dublin-ireland": {
     "description": "Ireland's compact capital pairs Georgian squares, literary pubs and the Guinness Storehouse with easy coastal escapes along Dublin Bay.",
     "climate": "oceanic",
@@ -1199,6 +2120,26 @@
       "Temple Bar live music",
       "Howth cliff walk",
       "Day trip to Glendalough"
+    ],
+    "visa": "free"
+  },
+  "dundee-united-kingdom": {
+    "description": "Scotland's waterfront city on the Firth of Tay, home to the V&A Dundee, Discovery Point and RRS Discovery, and a lively arts and gaming scene.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "V&A Dundee",
+      "RRS Discovery at Discovery Point",
+      "Verdant Works jute museum",
+      "Dundee Law viewpoint",
+      "McManus Galleries",
+      "Day trip to Glamis Castle or St Andrews"
     ],
     "visa": "free"
   },
@@ -1222,6 +2163,26 @@
     ],
     "visa": "free"
   },
+  "eindhoven-netherlands": {
+    "description": "The Netherlands' design and technology capital, with the Van Abbemuseum, the converted Strijp-S factory district and easy cycling around its canals and parks.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 115,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Van Abbemuseum",
+      "Strijp-S creative district",
+      "Philips Museum",
+      "Dutch Design Week (October)",
+      "Cycle through Genneper Parken",
+      "Day trip to Den Bosch for a Bossche bol"
+    ],
+    "visa": "free"
+  },
   "enfidha-tunisia": {
     "description": "A modern resort coast of white sand beaches and all-inclusive hotels, close to Hammamet, Sousse's medina and the Roman amphitheatre at El Djem.",
     "climate": "mediterranean",
@@ -1242,6 +2203,46 @@
     ],
     "visa": "free"
   },
+  "entebbe-uganda": {
+    "description": "A Lake Victoria shore town and Uganda's gateway, with a botanical garden, chimpanzee sanctuary island and easy routes to gorilla country.",
+    "climate": "tropical",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [1, 2, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Entebbe Botanical Gardens",
+      "Ngamba Island Chimpanzee Sanctuary",
+      "Uganda Wildlife Education Centre",
+      "Lake Victoria boat trip",
+      "Rolex street-food roll",
+      "Gorilla trekking in Bwindi"
+    ],
+    "visa": "required"
+  },
+  "essaouira-morocco": {
+    "description": "A whitewashed Atlantic port with a walled medina, fortified sea ramparts, breezy beaches and some of Morocco's best grilled fish.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Skala de la Ville ramparts",
+      "Medina and thuya woodwork souks",
+      "Grilled fish at the port",
+      "Kitesurfing at Essaouira beach",
+      "Gnaoua music festival",
+      "Camel ride to Diabat"
+    ],
+    "visa": "free"
+  },
   "faro-portugal": {
     "description": "The gateway to Portugal's Algarve, with a walled old town, lagoon islands and golden beaches along the surrounding coast.",
     "climate": "mediterranean",
@@ -1258,6 +2259,46 @@
       "Ilha Deserta beach",
       "Benagil cave kayaking",
       "Capela dos Ossos"
+    ],
+    "visa": "free"
+  },
+  "fez-morocco": {
+    "description": "Morocco's medieval capital, where the vast Fes el-Bali medina, working tanneries and ancient madrasas make for a maze of living history.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Fes el-Bali medina",
+      "Chouara tannery",
+      "Bou Inania Madrasa",
+      "Al-Qarawiyyin University and library",
+      "Pottery workshops at Ain Nokbi",
+      "Tagine and pastilla supper"
+    ],
+    "visa": "free"
+  },
+  "figari-france": {
+    "description": "The gateway to southern Corsica, with turquoise Bonifacio cliffs, Porto-Vecchio's white-sand coves and granite-ringed beaches like Rondinara and Palombaggia.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 160,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Bonifacio citadel and cliff-top old town",
+      "Plage de Palombaggia",
+      "Rondinara bay",
+      "Boat trip to the Lavezzi Islands",
+      "Porto-Vecchio old town",
+      "Prehistoric site of Filitosa"
     ],
     "visa": "free"
   },
@@ -1301,6 +2342,46 @@
     ],
     "visa": "free"
   },
+  "freetown-sierra-leone": {
+    "description": "A hilly Atlantic capital with palm-fringed beaches on the peninsula, a historic cotton tree and a chimpanzee sanctuary close to the city.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 100,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Lumley and River No. 2 beaches",
+      "Tacugama Chimpanzee Sanctuary",
+      "Cotton Tree monument",
+      "Sierra Leone National Museum",
+      "Bunce Island slave fort boat trip",
+      "Freshly grilled fish on the beach"
+    ],
+    "visa": "required"
+  },
+  "friedrichshafen-germany": {
+    "description": "A lakeside town on Lake Constance, home of the Zeppelin, with Alpine views, cycling paths and ferries to Switzerland and Austria.",
+    "climate": "temperate",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Zeppelin Museum",
+      "Lake Constance cycle path",
+      "Ferry to Meersburg",
+      "Day trip to Mainau flower island",
+      "Dornier Museum",
+      "Lake Constance boat cruise"
+    ],
+    "visa": "free"
+  },
   "fuerteventura-spain": {
     "description": "A Canary island of wide white-sand beaches, steady Atlantic winds and volcanic desert landscapes, popular for windsurfing and year-round sun.",
     "climate": "subtropical",
@@ -1341,6 +2422,26 @@
     ],
     "visa": "free"
   },
+  "gaziantep-turkey": {
+    "description": "Turkey's gastronomic capital in the south-east, famed for pistachio baklava, a mosaic museum of Roman Zeugma and a citadel-crowned old quarter.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Zeugma Mosaic Museum",
+      "Gaziantep Castle",
+      "Baklava tasting at Imam Çağdaş",
+      "Bakırcılar copper bazaar",
+      "Beyran soup breakfast",
+      "Rumkale and Halfeti day trip"
+    ],
+    "visa": "free"
+  },
   "gdansk-poland": {
     "description": "A Baltic port city of rebuilt merchant façades along the Motława river, amber workshops, shipyard history and the Solidarity story, near Sopot's beaches.",
     "climate": "temperate",
@@ -1377,6 +2478,46 @@
       "Lake Geneva cruise",
       "Mont Blanc day trip from Chamonix",
       "Cheese fondue"
+    ],
+    "visa": "free"
+  },
+  "genoa-italy": {
+    "description": "A faded-grand port city of marble palaces and narrow caruggi alleys, with Europe's largest medieval centre, a big aquarium and focaccia and pesto at source.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Palazzi dei Rolli on Via Garibaldi",
+      "Genoa Aquarium",
+      "Porto Antico harbour",
+      "Focaccia and pesto in the old town",
+      "Staglieno Monumental Cemetery",
+      "Train to Camogli and Portofino"
+    ],
+    "visa": "free"
+  },
+  "georgetown-guyana": {
+    "description": "Guyana's colonial-era capital of wooden Caribbean architecture, canals and markets, and the gateway to Kaieteur Falls and Amazonian rainforest.",
+    "climate": "tropical",
+    "travelStyles": ["adventure", "city"],
+    "bestMonths": [2, 3, 4, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 900,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Kaieteur Falls flight",
+      "St George's Cathedral",
+      "Stabroek Market",
+      "Georgetown Botanical Gardens",
+      "Iwokrama rainforest trip",
+      "Demerara River sunset"
     ],
     "visa": "free"
   },
@@ -1420,6 +2561,26 @@
     ],
     "visa": "free"
   },
+  "giza-egypt": {
+    "description": "Home to the Great Pyramids and the Sphinx on Cairo's western edge, with the Grand Egyptian Museum close to the plateau.",
+    "climate": "hot desert",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [10, 11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Great Pyramid of Khufu",
+      "Sphinx and Valley Temple",
+      "Grand Egyptian Museum",
+      "Saqqara step pyramid",
+      "Camel ride at sunset",
+      "Sound and light show"
+    ],
+    "visa": "on-arrival"
+  },
   "glasgow-united-kingdom": {
     "description": "Scotland's largest city is a Victorian-built hub of free museums, a thriving live music scene and Art Nouveau design, near Loch Lomond.",
     "climate": "oceanic",
@@ -1439,6 +2600,26 @@
       "Day trip to Loch Lomond"
     ],
     "visa": "free"
+  },
+  "goa-india": {
+    "description": "India's beach state of palm-fringed sands, Portuguese-era churches, spice plantations, seafood shacks and a lively party scene.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Palolem Beach",
+      "Basilica of Bom Jesus in Old Goa",
+      "Fontainhas Latin Quarter",
+      "Dudhsagar Falls",
+      "Anjuna flea market",
+      "Fish curry rice thali"
+    ],
+    "visa": "required"
   },
   "gothenburg-sweden": {
     "description": "Sweden's relaxed west-coast second city of canals, a lively fish market, leafy Haga cafés and an archipelago of car-free islands just offshore.",
@@ -1477,6 +2658,26 @@
       "Roque Nublo hike",
       "Puerto de Mogán",
       "Ropa vieja canaria"
+    ],
+    "visa": "free"
+  },
+  "granada-spain": {
+    "description": "An Andalusian city beneath the Sierra Nevada, crowned by the Alhambra palace and full of Moorish lanes and free tapas.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Alhambra and Generalife",
+      "Albaicín quarter",
+      "Sacromonte flamenco caves",
+      "Free tapas crawl",
+      "Granada Cathedral",
+      "Day trip to the Sierra Nevada"
     ],
     "visa": "free"
   },
