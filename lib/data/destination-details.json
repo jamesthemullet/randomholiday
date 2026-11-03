@@ -2981,6 +2981,25 @@
     ],
     "visa": "free"
   },
+  "houston-united-states": {
+    "description": "Texas's sprawling energy capital, home to NASA's Johnson Space Center, a superb museum district and some of America's best barbecue and Tex-Mex.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 140,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Space Center Houston",
+      "Museum District (Museum of Fine Arts)",
+      "Buffalo Bayou Park",
+      "Texas barbecue and Tex-Mex",
+      "Galveston Island day trip"
+    ],
+    "visa": "free"
+  },
   "hurghada-egypt": {
     "description": "A Red Sea resort strip with warm turquoise water, reefs for snorkelling and diving, and desert and Nile excursions on offer all year.",
     "climate": "hot desert",
@@ -3000,6 +3019,44 @@
       "Grilled fish and koshari"
     ],
     "visa": "on-arrival"
+  },
+  "hyderabad-india": {
+    "description": "The City of Pearls pairs the Charminar and Golconda Fort with a thriving tech scene and India's most celebrated biryani.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 55,
+      "dailySpending": 30
+    },
+    "activities": [
+      "Charminar and Laad Bazaar",
+      "Golconda Fort sound and light show",
+      "Chowmahalla Palace",
+      "Hyderabadi dum biryani",
+      "Ramoji Film City"
+    ],
+    "visa": "required"
+  },
+  "iasi-romania": {
+    "description": "Romania's historic cultural capital, with the ornate Palace of Culture, a hill of centuries-old monasteries and a lively student scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Palace of Culture",
+      "Metropolitan Cathedral",
+      "Copou Park and Eminescu's linden tree",
+      "Cetățuia Monastery",
+      "Moldavian wine tasting"
+    ],
+    "visa": "free"
   },
   "ibiza-spain": {
     "description": "A Balearic island pairing world-famous clubs with quiet coves, a walled Dalt Vila old town and hippie markets.",
@@ -3179,6 +3236,25 @@
     ],
     "visa": "free"
   },
+  "johannesburg-south-africa": {
+    "description": "South Africa's largest city, where Apartheid Museum history, Soweto's streets and Maboneng's street art sit within reach of safari country.",
+    "climate": "subtropical highland",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 620,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Apartheid Museum",
+      "Soweto and Vilakazi Street",
+      "Maboneng Precinct",
+      "Cradle of Humankind caves",
+      "Pilanesberg safari day trip"
+    ],
+    "visa": "free"
+  },
   "kalamata-greece": {
     "description": "A relaxed Peloponnese port famed for its olives, with a castle, a long pebble beach and the Mani peninsula's stone towers and coves nearby.",
     "climate": "mediterranean",
@@ -3239,6 +3315,25 @@
     ],
     "visa": "free"
   },
+  "kavala-greece": {
+    "description": "A Macedonian port town of Ottoman-era lanes beneath a hilltop castle, with ferries to Thassos and nearby Philippi's ancient ruins.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Kavala Fortress and old town of Panagia",
+      "Kamares Aqueduct",
+      "Ancient Philippi",
+      "Ferry to Thassos",
+      "Imaret complex"
+    ],
+    "visa": "free"
+  },
   "kefalonia-greece": {
     "description": "Greece’s largest Ionian island, with pebbled turquoise coves, mountain villages and the sea-cave lake of Melissani.",
     "climate": "mediterranean",
@@ -3277,6 +3372,25 @@
       "Live traditional music in Dingle"
     ],
     "visa": "free"
+  },
+  "kigali-rwanda": {
+    "description": "A clean, green hillside capital known for its moving genocide memorial, coffee culture and as the gateway to gorilla trekking in the Volcanoes mountains.",
+    "climate": "subtropical highland",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [6, 7, 8, 9, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Kigali Genocide Memorial",
+      "Kimironko Market",
+      "Inema Arts Center",
+      "Gorilla trekking in Volcanoes National Park",
+      "Nyungwe Forest canopy walk"
+    ],
+    "visa": "on-arrival"
   },
   "kittila-finland": {
     "description": "A Finnish Lapland gateway for ski resorts, husky and reindeer safaris and Northern Lights viewing under long arctic winter nights.",
