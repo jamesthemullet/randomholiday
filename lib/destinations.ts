@@ -2,8 +2,6 @@ export type TravelStyle = 'beach' | 'city' | 'adventure' | 'culture'
 
 export type Continent = 'Europe' | 'Africa' | 'Asia' | 'Americas' | 'Oceania' | 'Middle East'
 
-export type VisaRequirement = 'free' | 'on-arrival' | 'required'
-
 export interface Coordinates {
   lat: number
   lng: number
@@ -35,7 +33,6 @@ export interface Destination {
   estimatedCosts: EstimatedCosts
   activities: string[]
   currency: string
-  visa: VisaRequirement
 }
 
 export const destinations: Destination[] = [
@@ -61,7 +58,6 @@ export const destinations: Destination[] = [
       'Camp Nou',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'santorini-greece',
@@ -78,7 +74,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 200, hotelPerNight: 180, dailySpending: 90 },
     activities: ['Oia sunset', 'caldera boat tour', 'wine tasting', 'Red Beach', 'Akrotiri ruins'],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'prague-czech-republic',
@@ -102,7 +97,6 @@ export const destinations: Destination[] = [
       'Old Town Square Christmas market',
     ],
     currency: 'CZK',
-    visa: 'free',
   },
   {
     id: 'amsterdam-netherlands',
@@ -125,7 +119,6 @@ export const destinations: Destination[] = [
       'Anne Frank House',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'lisbon-portugal',
@@ -148,7 +141,6 @@ export const destinations: Destination[] = [
       'Pastéis de Nata',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'rome-italy',
@@ -165,7 +157,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 110, hotelPerNight: 120, dailySpending: 80 },
     activities: ['Colosseum', 'Vatican Museums', 'Trevi Fountain', 'Pantheon', 'Trastevere dinner'],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'dubrovnik-croatia',
@@ -188,7 +179,6 @@ export const destinations: Destination[] = [
       'Game of Thrones tour',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'vienna-austria',
@@ -212,7 +202,6 @@ export const destinations: Destination[] = [
       'Christmas markets',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'edinburgh-uk',
@@ -236,7 +225,6 @@ export const destinations: Destination[] = [
       'Christmas market and Hogmanay',
     ],
     currency: 'GBP',
-    visa: 'free',
   },
   {
     id: 'paris-france',
@@ -252,7 +240,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 100, hotelPerNight: 160, dailySpending: 100 },
     activities: ['Eiffel Tower', 'Louvre', 'Montmartre', 'Seine river cruise', 'Versailles'],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'amalfi-coast-italy',
@@ -275,7 +262,6 @@ export const destinations: Destination[] = [
       'Ravello gardens',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'reykjavik-iceland',
@@ -298,7 +284,6 @@ export const destinations: Destination[] = [
       'whale watching',
     ],
     currency: 'ISK',
-    visa: 'free',
   },
 
   // ── Africa ──────────────────────────────────────────────────────────────────
@@ -323,7 +308,6 @@ export const destinations: Destination[] = [
       'cooking class',
     ],
     currency: 'MAD',
-    visa: 'free',
   },
   {
     id: 'cape-town-south-africa',
@@ -346,7 +330,6 @@ export const destinations: Destination[] = [
       'V&A Waterfront',
     ],
     currency: 'ZAR',
-    visa: 'on-arrival',
   },
   {
     id: 'zanzibar-tanzania',
@@ -369,7 +352,6 @@ export const destinations: Destination[] = [
       'sunset dhow cruise',
     ],
     currency: 'TZS',
-    visa: 'on-arrival',
   },
   {
     id: 'cairo-egypt',
@@ -392,7 +374,6 @@ export const destinations: Destination[] = [
       'Luxor day trip',
     ],
     currency: 'EGP',
-    visa: 'on-arrival',
   },
   {
     id: 'seychelles',
@@ -415,7 +396,6 @@ export const destinations: Destination[] = [
       'Creole cooking',
     ],
     currency: 'SCR',
-    visa: 'free',
   },
 
   // ── Middle East ─────────────────────────────────────────────────────────────
@@ -434,7 +414,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 350, hotelPerNight: 140, dailySpending: 90 },
     activities: ['Burj Khalifa', 'Dubai Mall', 'desert safari', 'Palm Jumeirah', 'Dubai Frame'],
     currency: 'AED',
-    visa: 'on-arrival',
   },
   {
     id: 'istanbul-turkey',
@@ -457,7 +436,6 @@ export const destinations: Destination[] = [
       'Turkish bath',
     ],
     currency: 'TRY',
-    visa: 'on-arrival',
   },
   {
     id: 'petra-jordan',
@@ -474,7 +452,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 350, hotelPerNight: 60, dailySpending: 40 },
     activities: ['Treasury', 'Monastery trail', 'Siq canyon', 'Wadi Rum', 'Bedouin camp'],
     currency: 'JOD',
-    visa: 'on-arrival',
   },
 
   // ── Asia ────────────────────────────────────────────────────────────────────
@@ -499,7 +476,6 @@ export const destinations: Destination[] = [
       'cooking class',
     ],
     currency: 'IDR',
-    visa: 'on-arrival',
   },
   {
     id: 'tokyo-japan',
@@ -522,7 +498,6 @@ export const destinations: Destination[] = [
       'day trip to Nikko',
     ],
     currency: 'JPY',
-    visa: 'free',
   },
   {
     id: 'bangkok-thailand',
@@ -545,7 +520,6 @@ export const destinations: Destination[] = [
       'Khao San Road',
     ],
     currency: 'THB',
-    visa: 'free',
   },
   {
     id: 'kyoto-japan',
@@ -568,7 +542,6 @@ export const destinations: Destination[] = [
       'tea ceremony',
     ],
     currency: 'JPY',
-    visa: 'free',
   },
   {
     id: 'singapore',
@@ -591,7 +564,6 @@ export const destinations: Destination[] = [
       'Little India',
     ],
     currency: 'SGD',
-    visa: 'free',
   },
   {
     id: 'phuket-thailand',
@@ -614,7 +586,6 @@ export const destinations: Destination[] = [
       'Phang Nga Bay',
     ],
     currency: 'THB',
-    visa: 'free',
   },
   {
     id: 'chiang-mai-thailand',
@@ -637,7 +608,6 @@ export const destinations: Destination[] = [
       'muay thai',
     ],
     currency: 'THB',
-    visa: 'free',
   },
   {
     id: 'hanoi-vietnam',
@@ -660,7 +630,6 @@ export const destinations: Destination[] = [
       'Ha Long Bay trip',
     ],
     currency: 'VND',
-    visa: 'on-arrival',
   },
   {
     id: 'maldives',
@@ -677,7 +646,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 800, hotelPerNight: 350, dailySpending: 120 },
     activities: ['snorkelling', 'diving', 'sunset cruise', 'dolphin watching', 'sandbank picnic'],
     currency: 'MVR',
-    visa: 'free',
   },
   {
     id: 'colombo-sri-lanka',
@@ -700,7 +668,6 @@ export const destinations: Destination[] = [
       'surf Arugam Bay',
     ],
     currency: 'LKR',
-    visa: 'on-arrival',
   },
   {
     id: 'kathmandu-nepal',
@@ -723,7 +690,6 @@ export const destinations: Destination[] = [
       'white-water rafting',
     ],
     currency: 'NPR',
-    visa: 'on-arrival',
   },
   {
     id: 'ho-chi-minh-city-vietnam',
@@ -746,7 +712,6 @@ export const destinations: Destination[] = [
       'rooftop bars',
     ],
     currency: 'VND',
-    visa: 'on-arrival',
   },
 
   // ── Americas ─────────────────────────────────────────────────────────────────
@@ -772,7 +737,6 @@ export const destinations: Destination[] = [
       'Holiday markets and Rockefeller Center tree',
     ],
     currency: 'USD',
-    visa: 'on-arrival',
   },
   {
     id: 'cancun-mexico',
@@ -795,7 +759,6 @@ export const destinations: Destination[] = [
       'Isla Mujeres',
     ],
     currency: 'MXN',
-    visa: 'free',
   },
   {
     id: 'rio-de-janeiro-brazil',
@@ -818,7 +781,6 @@ export const destinations: Destination[] = [
       'favela tour',
     ],
     currency: 'BRL',
-    visa: 'free',
   },
   {
     id: 'buenos-aires-argentina',
@@ -841,7 +803,6 @@ export const destinations: Destination[] = [
       'steak dinner',
     ],
     currency: 'ARS',
-    visa: 'free',
   },
   {
     id: 'cusco-peru',
@@ -864,7 +825,6 @@ export const destinations: Destination[] = [
       'Rainbow Mountain',
     ],
     currency: 'PEN',
-    visa: 'free',
   },
   {
     id: 'havana-cuba',
@@ -887,7 +847,6 @@ export const destinations: Destination[] = [
       'salsa class',
     ],
     currency: 'CUP',
-    visa: 'on-arrival',
   },
   {
     id: 'costa-rica',
@@ -910,7 +869,6 @@ export const destinations: Destination[] = [
       'surfing Tamarindo',
     ],
     currency: 'CRC',
-    visa: 'free',
   },
   {
     id: 'new-orleans-usa',
@@ -927,7 +885,6 @@ export const destinations: Destination[] = [
     estimatedCosts: { flightFromEurope: 500, hotelPerNight: 130, dailySpending: 90 },
     activities: ['French Quarter', 'Bourbon Street', 'jazz clubs', 'Mardi Gras', 'swamp tour'],
     currency: 'USD',
-    visa: 'on-arrival',
   },
   {
     id: 'vancouver-canada',
@@ -950,7 +907,6 @@ export const destinations: Destination[] = [
       'Capilano Suspension Bridge',
     ],
     currency: 'CAD',
-    visa: 'on-arrival',
   },
   {
     id: 'patagonia-argentina',
@@ -973,7 +929,6 @@ export const destinations: Destination[] = [
       'estancia stay',
     ],
     currency: 'ARS',
-    visa: 'free',
   },
   {
     id: 'cartagena-colombia',
@@ -996,7 +951,6 @@ export const destinations: Destination[] = [
       'Castillo San Felipe',
     ],
     currency: 'COP',
-    visa: 'free',
   },
 
   // ── Oceania ──────────────────────────────────────────────────────────────────
@@ -1021,7 +975,6 @@ export const destinations: Destination[] = [
       'Blue Mountains',
     ],
     currency: 'AUD',
-    visa: 'required',
   },
   {
     id: 'bora-bora-french-polynesia',
@@ -1044,7 +997,6 @@ export const destinations: Destination[] = [
       'sunset cruise',
     ],
     currency: 'XPF',
-    visa: 'free',
   },
   {
     id: 'queenstown-new-zealand',
@@ -1067,7 +1019,6 @@ export const destinations: Destination[] = [
       'Lord of the Rings tour',
     ],
     currency: 'NZD',
-    visa: 'on-arrival',
   },
   {
     id: 'fiji',
@@ -1090,7 +1041,6 @@ export const destinations: Destination[] = [
       'kava ceremony',
     ],
     currency: 'FJD',
-    visa: 'free',
   },
 
   // ── More diverse picks ──────────────────────────────────────────────────────
@@ -1115,7 +1065,6 @@ export const destinations: Destination[] = [
       'Georgian wine tasting',
     ],
     currency: 'GEL',
-    visa: 'free',
   },
   {
     id: 'valletta-malta',
@@ -1138,7 +1087,6 @@ export const destinations: Destination[] = [
       "St. John's Co-Cathedral",
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'medellín-colombia',
@@ -1161,7 +1109,6 @@ export const destinations: Destination[] = [
       'coffee farm',
     ],
     currency: 'COP',
-    visa: 'free',
   },
   {
     id: 'luang-prabang-laos',
@@ -1184,7 +1131,6 @@ export const destinations: Destination[] = [
       'Mount Phousi',
     ],
     currency: 'LAK',
-    visa: 'on-arrival',
   },
   {
     id: 'muscat-oman',
@@ -1207,7 +1153,6 @@ export const destinations: Destination[] = [
       'snorkelling',
     ],
     currency: 'OMR',
-    visa: 'on-arrival',
   },
   {
     id: 'trinidad-and-tobago',
@@ -1230,7 +1175,6 @@ export const destinations: Destination[] = [
       'steel band show',
     ],
     currency: 'TTD',
-    visa: 'free',
   },
   {
     id: 'porto-portugal',
@@ -1253,7 +1197,6 @@ export const destinations: Destination[] = [
       'Foz do Douro beach',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'seville-spain',
@@ -1276,7 +1219,6 @@ export const destinations: Destination[] = [
       'Plaza de España',
     ],
     currency: 'EUR',
-    visa: 'free',
   },
   {
     id: 'las-vegas-usa',
@@ -1299,7 +1241,6 @@ export const destinations: Destination[] = [
       'helicopter tour',
     ],
     currency: 'USD',
-    visa: 'on-arrival',
   },
 ]
 

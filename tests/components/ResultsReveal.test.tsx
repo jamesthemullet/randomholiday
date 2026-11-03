@@ -25,7 +25,6 @@ function makeDestination(overrides: Partial<Destination> = {}): Destination {
     estimatedCosts: { flightFromEurope: 600, hotelPerNight: 60, dailySpending: 40 },
     activities: ['Surfing', 'Temple hopping'],
     currency: 'IDR',
-    visa: 'on-arrival',
     ...overrides,
   }
 }

@@ -5,7 +5,6 @@ import {
   type Destination,
   type TravelStyle,
   type Continent,
-  type VisaRequirement,
 } from '@/lib/destinations'
 
 describe('destinations database', () => {
@@ -33,7 +32,6 @@ describe('destinations database', () => {
       'Oceania',
       'Middle East',
     ])
-    const VALID_VISA: VisaRequirement[] = ['free', 'on-arrival', 'required']
 
     it('has unique ids', () => {
       const ids = destinations.map((d) => d.id)
@@ -118,10 +116,6 @@ describe('destinations database', () => {
         it('has a non-empty currency', () => {
           expect(destination.currency).toBeTruthy()
           expect(typeof destination.currency).toBe('string')
-        })
-
-        it('has a valid visa requirement', () => {
-          expect(VALID_VISA).toContain(destination.visa)
         })
       })
     })
