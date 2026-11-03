@@ -2822,22 +2822,22 @@
     "visa": "free"
   },
   "haikou-people-s-republic-of-china": {
-    "description": "The capital of tropical Hainan island, mixing a colonial-era arcaded old quarter, coconut-fringed seafront and gateway access to China's southern beaches.",
+    "description": "Capital of tropical Hainan island, with a colonnaded old town, coconut-shaded seafront, hot springs and easy access to the island's beach resorts.",
     "climate": "tropical",
-    "travelStyles": ["city", "beach", "culture"],
-    "bestMonths": [11, 12, 1, 2, 3],
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
     "estimatedCosts": {
       "flightFromEurope": 700,
-      "hotelPerNight": 70,
-      "dailySpending": 50
+      "hotelPerNight": 60,
+      "dailySpending": 40
     },
     "activities": [
       "Qilou Old Street",
       "Five Officials Temple",
       "Hainan Museum",
-      "Hainan chicken rice",
-      "Mission Hills volcanic mineral springs",
-      "Holiday Beach"
+      "Mission Hills hot springs",
+      "Xiuying Fort",
+      "Hainanese chicken rice and Wenchang chicken"
     ],
     "visa": "free"
   },
@@ -2882,10 +2882,10 @@
     "visa": "free"
   },
   "hanover-germany": {
-    "description": "Lower Saxony's green capital, home to the baroque Herrenhausen Gardens, an impressive Neues Rathaus dome and the huge Maschsee lake.",
+    "description": "Lower Saxony's calm, green capital, with baroque Herrenhausen Gardens, a lakeside Maschsee, a lively old town and a famous trade-fair heritage.",
     "climate": "oceanic",
     "travelStyles": ["city", "culture"],
-    "bestMonths": [5, 6, 7, 8, 9],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
     "estimatedCosts": {
       "flightFromEurope": 110,
       "hotelPerNight": 110,
@@ -2893,31 +2893,31 @@
     },
     "activities": [
       "Herrenhausen Gardens",
-      "Neues Rathaus dome lift",
+      "New Town Hall dome lift",
       "Maschsee lake",
       "Sprengel Museum",
-      "Red Thread city walk",
-      "Marktkirche"
+      "Red Thread city walking route",
+      "Christmas market"
     ],
     "visa": "free"
   },
   "harare-zimbabwe": {
-    "description": "Zimbabwe's jacaranda-lined capital, a relaxed base for sculpture galleries, Great Zimbabwe-era history, lively markets and safaris within easy reach.",
+    "description": "Zimbabwe's jacaranda-lined capital, with craft markets, lively music venues and a base for Great Zimbabwe, Mana Pools and Victoria Falls trips.",
     "climate": "subtropical highland",
-    "travelStyles": ["city", "culture", "adventure"],
+    "travelStyles": ["city", "adventure", "culture"],
     "bestMonths": [5, 6, 7, 8, 9, 10],
     "estimatedCosts": {
-      "flightFromEurope": 700,
+      "flightFromEurope": 800,
       "hotelPerNight": 90,
-      "dailySpending": 60
+      "dailySpending": 55
     },
     "activities": [
       "Chapungu Sculpture Park",
       "National Gallery of Zimbabwe",
       "Mbare Musika market",
-      "Lake Chivero safari",
-      "Domboshava rock paintings",
-      "Mukuvisi Woodlands"
+      "Lion and Cheetah Park",
+      "Domboshawa rock paintings",
+      "Day trip to Lake Chivero"
     ],
     "visa": "on-arrival"
   },
@@ -2958,6 +2958,26 @@
       "Day trip to Matala beach",
       "Lions Square and the old market",
       "Dakos and Cretan raki"
+    ],
+    "visa": "free"
+  },
+  "hong-kong-people-s-republic-of-china": {
+    "description": "A dense harbour city of skyscrapers, hillside trails and island beaches, with dim sum, neon night markets and a famous skyline from Victoria Peak.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [10, 11, 12, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 150,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Victoria Peak and Peak Tram",
+      "Star Ferry across Victoria Harbour",
+      "Tian Tan Buddha and Ngong Ping 360",
+      "Temple Street Night Market",
+      "Dim sum at Tim Ho Wan",
+      "Dragon's Back hike"
     ],
     "visa": "free"
   },
