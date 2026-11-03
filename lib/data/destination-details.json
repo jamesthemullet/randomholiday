@@ -2681,6 +2681,46 @@
     ],
     "visa": "free"
   },
+  "grand-cayman-united-kingdom": {
+    "description": "A Caribbean island known for seven-mile white-sand beaches, calm turquoise water and some of the region's best diving and snorkelling.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [12, 1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 300,
+      "dailySpending": 140
+    },
+    "activities": [
+      "Seven Mile Beach",
+      "Stingray City sandbar",
+      "Cayman Turtle Centre",
+      "Kittiwake wreck dive",
+      "Rum Point",
+      "Cayman Crystal Caves"
+    ],
+    "visa": "free"
+  },
+  "graz-austria": {
+    "description": "Austria's second city, a UNESCO-listed old town of red rooftops beneath the Schlossberg, with strong food, markets and modern architecture.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Schlossberg and Clock Tower",
+      "Kunsthaus Graz 'Friendly Alien'",
+      "Eggenberg Palace",
+      "Murinsel floating island",
+      "Kaiser-Josef-Platz market",
+      "Styrian pumpkin seed oil and wine tasting"
+    ],
+    "visa": "free"
+  },
   "grenada-grenada": {
     "description": "The Caribbean's Spice Isle, with Grand Anse beach, nutmeg plantations, rainforest waterfalls and an underwater sculpture park.",
     "climate": "tropical",
@@ -2761,6 +2801,26 @@
     ],
     "visa": "free"
   },
+  "haikou-people-s-republic-of-china": {
+    "description": "Capital of tropical Hainan island, with a colonnaded old town, coconut-shaded seafront, hot springs and easy access to the island's beach resorts.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Qilou Old Street",
+      "Five Officials Temple",
+      "Hainan Museum",
+      "Mission Hills hot springs",
+      "Xiuying Fort",
+      "Hainanese chicken rice and Wenchang chicken"
+    ],
+    "visa": "free"
+  },
   "halifax-canada": {
     "description": "Nova Scotia's harbour capital, with a star-shaped Citadel, a lively waterfront boardwalk, fresh lobster and Peggy's Cove lighthouse a short drive away.",
     "climate": "humid continental",
@@ -2801,6 +2861,46 @@
     ],
     "visa": "free"
   },
+  "hanover-germany": {
+    "description": "Lower Saxony's calm, green capital, with baroque Herrenhausen Gardens, a lakeside Maschsee, a lively old town and a famous trade-fair heritage.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Herrenhausen Gardens",
+      "New Town Hall dome lift",
+      "Maschsee lake",
+      "Sprengel Museum",
+      "Red Thread city walking route",
+      "Christmas market"
+    ],
+    "visa": "free"
+  },
+  "harare-zimbabwe": {
+    "description": "Zimbabwe's jacaranda-lined capital, with craft markets, lively music venues and a base for Great Zimbabwe, Mana Pools and Victoria Falls trips.",
+    "climate": "subtropical highland",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 800,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Chapungu Sculpture Park",
+      "National Gallery of Zimbabwe",
+      "Mbare Musika market",
+      "Lion and Cheetah Park",
+      "Domboshawa rock paintings",
+      "Day trip to Lake Chivero"
+    ],
+    "visa": "on-arrival"
+  },
   "helsinki-finland": {
     "description": "A design-minded Nordic capital on the Baltic, with neoclassical squares, a sea fortress, lively market halls and public saunas by the waterfront.",
     "climate": "humid continental",
@@ -2838,6 +2938,26 @@
       "Day trip to Matala beach",
       "Lions Square and the old market",
       "Dakos and Cretan raki"
+    ],
+    "visa": "free"
+  },
+  "hong-kong-people-s-republic-of-china": {
+    "description": "A dense harbour city of skyscrapers, hillside trails and island beaches, with dim sum, neon night markets and a famous skyline from Victoria Peak.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [10, 11, 12, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 150,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Victoria Peak and Peak Tram",
+      "Star Ferry across Victoria Harbour",
+      "Tian Tan Buddha and Ngong Ping 360",
+      "Temple Street Night Market",
+      "Dim sum at Tim Ho Wan",
+      "Dragon's Back hike"
     ],
     "visa": "free"
   },
