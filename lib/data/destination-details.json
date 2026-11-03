@@ -2043,6 +2043,26 @@
     ],
     "visa": "free"
   },
+  "dhaka-bangladesh": {
+    "description": "Bangladesh's teeming capital, where rickshaw-clogged lanes lead to Mughal forts, Old Dhaka's riverfront and some of South Asia's best street food.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 70,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Lalbagh Fort",
+      "Sadarghat river port boat ride",
+      "Old Dhaka rickshaw tour",
+      "Armenian Church",
+      "Shankhari Bazar",
+      "Bangabandhu National Museum"
+    ],
+    "visa": "required"
+  },
   "djerba-tunisia": {
     "description": "A flat, sunny Tunisian island of whitewashed villages, sandy beaches, a historic synagogue and the medina market of Houmt Souk.",
     "climate": "mediterranean",
@@ -2682,7 +2702,7 @@
     "visa": "free"
   },
   "grand-cayman-united-kingdom": {
-    "description": "A Caribbean island known for seven-mile white-sand beaches, calm turquoise water and some of the region's best diving and snorkelling.",
+    "description": "The largest Cayman Island, known for powder-white Seven Mile Beach, world-class diving and calm turquoise water, with a relaxed British Caribbean feel.",
     "climate": "tropical",
     "travelStyles": ["beach", "adventure"],
     "bestMonths": [12, 1, 2, 3, 4, 5],
@@ -2694,30 +2714,30 @@
     "activities": [
       "Seven Mile Beach",
       "Stingray City sandbar",
+      "Snorkelling at Cemetery Reef",
       "Cayman Turtle Centre",
-      "Kittiwake wreck dive",
-      "Rum Point",
-      "Cayman Crystal Caves"
+      "Rum Point beach",
+      "Crystal Caves"
     ],
     "visa": "free"
   },
   "graz-austria": {
-    "description": "Austria's second city, a UNESCO-listed old town of red rooftops beneath the Schlossberg, with strong food, markets and modern architecture.",
+    "description": "Austria's second city, a UNESCO-listed old town of red roofs beneath a hilltop clock tower, with a lively food scene and the futuristic Kunsthaus.",
     "climate": "continental",
     "travelStyles": ["city", "culture"],
-    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "bestMonths": [4, 5, 6, 9, 12],
     "estimatedCosts": {
-      "flightFromEurope": 110,
+      "flightFromEurope": 120,
       "hotelPerNight": 110,
-      "dailySpending": 75
+      "dailySpending": 80
     },
     "activities": [
-      "Schlossberg and Clock Tower",
-      "Kunsthaus Graz 'Friendly Alien'",
-      "Eggenberg Palace",
+      "Schlossberg and Uhrturm clock tower",
+      "Kunsthaus Graz",
+      "Schloss Eggenberg",
       "Murinsel floating island",
-      "Kaiser-Josef-Platz market",
-      "Styrian pumpkin seed oil and wine tasting"
+      "Kernöl pumpkin-seed oil tasting",
+      "Christmas market"
     ],
     "visa": "free"
   },
