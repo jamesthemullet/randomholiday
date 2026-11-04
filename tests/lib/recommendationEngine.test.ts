@@ -28,7 +28,6 @@ function makeDestination(overrides: Partial<Destination> & { id: string }): Dest
     },
     activities: ['sightseeing'],
     currency: 'USD',
-    visa: 'free',
     ...overrides,
   }
 }
