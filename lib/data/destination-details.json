@@ -3002,6 +3002,25 @@
       "Peel Castle and kippers"
     ]
   },
+  "ivalo-finland": {
+    "description": "A Lapland gateway village on Lake Inari, where huskies, reindeer and Sámi culture sit beneath some of Finland's best northern lights.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [12, 1, 2, 3, 4, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 270,
+      "hotelPerNight": 150,
+      "dailySpending": 115
+    },
+    "activities": [
+      "Husky safari",
+      "Siida Sámi Museum in Inari",
+      "Northern lights hunting",
+      "Snowmobile safari",
+      "Reindeer sleigh ride",
+      "Kaunispää fell viewpoint"
+    ]
+  },
   "izmir-turkey": {
     "description": "A lively Aegean port city of bazaars, seafront promenades and Ottoman and Roman ruins, close to Ephesus and the Çeşme coast.",
     "climate": "mediterranean",
@@ -3228,6 +3247,44 @@
     ],
     "visa": "on-arrival"
   },
+  "kingston-jamaica": {
+    "description": "Jamaica's capital, the birthplace of reggae, with Bob Marley's old home, lively street food and the Blue Mountains rising behind the city.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 720,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Bob Marley Museum",
+      "Blue Mountain coffee tour",
+      "National Gallery of Jamaica",
+      "Devon House ice cream",
+      "Port Royal pirate ruins",
+      "Hellshire Beach fried fish"
+    ]
+  },
+  "kirkwall-united-kingdom": {
+    "description": "Orkney's main town, a sandstone harbour city with a medieval cathedral and Neolithic wonders such as Skara Brae close by.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 170,
+      "hotelPerNight": 120,
+      "dailySpending": 85
+    },
+    "activities": [
+      "St Magnus Cathedral",
+      "Skara Brae Neolithic village",
+      "Ring of Brodgar",
+      "Italian Chapel",
+      "Highland Park distillery",
+      "Earl's Palace and Bishop's Palace"
+    ]
+  },
   "kittila-finland": {
     "description": "A Finnish Lapland gateway for ski resorts, husky and reindeer safaris and Northern Lights viewing under long arctic winter nights.",
     "climate": "subarctic",
@@ -3245,6 +3302,25 @@
       "Snowmobile safari on frozen lakes",
       "Reindeer farm visit",
       "Glass igloo stay"
+    ]
+  },
+  "klagenfurt-austria": {
+    "description": "A relaxed Carinthian city beside the warm Wörthersee, with an arcaded old town, lakeside swimming and mountains on the horizon.",
+    "climate": "temperate",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 115,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Wörthersee swimming and boat trips",
+      "Neuer Platz and the Lindwurm fountain",
+      "Minimundus miniature world",
+      "Pyramidenkogel tower",
+      "Landhaus courtyard",
+      "Kärntner Kasnudeln"
     ]
   },
   "kos-greece": {
@@ -3301,6 +3377,44 @@
       "Wieliczka Salt Mine",
       "Auschwitz-Birkenau Memorial",
       "Pierogi and obwarzanek"
+    ]
+  },
+  "kuala-lumpur-malaysia": {
+    "description": "Malaysia's skyscraping capital, where Petronas Towers, hawker street food and Chinese, Malay and Indian traditions meet in one busy city.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 85,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Petronas Twin Towers",
+      "Batu Caves",
+      "Jalan Alor street food",
+      "Islamic Arts Museum",
+      "KL Tower",
+      "Chinatown and Petaling Street market"
+    ]
+  },
+  "kuusamo-finland": {
+    "description": "A wild northern Finland base for the Ruka ski resort, Oulanka National Park and winter nights lit by the aurora borealis.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure"],
+    "bestMonths": [12, 1, 2, 3, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 270,
+      "hotelPerNight": 140,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Ruka ski slopes",
+      "Oulanka National Park trails",
+      "Karhunkierros Bear's Ring trail",
+      "Northern lights viewing",
+      "Husky and snowmobile safaris",
+      "Kitkajoki river rafting"
     ]
   },
   "la-palma-spain": {
