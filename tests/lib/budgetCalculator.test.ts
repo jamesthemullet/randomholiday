@@ -23,7 +23,6 @@ const stubDestination: Destination = {
   estimatedCosts: { flightFromEurope: 300, hotelPerNight: 100, dailySpending: 50 },
   activities: ['sightseeing'],
   currency: 'USD',
-  visa: 'free',
 }
 
 // ── getFlightTier ─────────────────────────────────────────────────────────────

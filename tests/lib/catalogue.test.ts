@@ -65,7 +65,6 @@ const lisbonDetails: DestinationDetails = {
   bestMonths: lisbon.bestMonths,
   estimatedCosts: lisbon.estimatedCosts,
   activities: lisbon.activities,
-  visa: lisbon.visa,
 }
 
 describe('generated London destination data', () => {
@@ -108,7 +107,6 @@ describe('isPickable', () => {
     'description',
     'climate',
     'activities',
-    'visa',
   ] as const)('rejects an entry missing %s', (field) => {
     const entry: CatalogueEntry = { ...lisbon, london: route }
     delete entry[field]
@@ -230,7 +228,6 @@ describe('destination details data', () => {
       expect(entry.estimatedCosts?.hotelPerNight).toBeGreaterThan(0)
       expect(entry.estimatedCosts?.dailySpending).toBeGreaterThan(0)
       expect(entry.activities?.length).toBeGreaterThanOrEqual(3)
-      expect(['free', 'on-arrival', 'required']).toContain(entry.visa)
     })
   })
 })

@@ -96,8 +96,7 @@ export function isPickable(entry: CatalogueEntry): entry is CatalogueEntry & Des
     entry.bestMonths !== undefined &&
     entry.description !== undefined &&
     entry.climate !== undefined &&
-    entry.activities !== undefined &&
-    entry.visa !== undefined
+    entry.activities !== undefined
   )
 }
 
