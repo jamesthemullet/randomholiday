@@ -3946,6 +3946,63 @@
       "Gibralfaro castle"
     ]
   },
+  "malmo-sweden": {
+    "description": "Sweden's multicultural southern port city, linked to Copenhagen by the Øresund Bridge, with a waterfront Turning Torso, leafy parks and great falafel.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 130,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Turning Torso and Västra Hamnen waterfront",
+      "Malmöhus Castle and Kungsparken",
+      "Ribersborgs Kallbadhus sauna and sea dip",
+      "Falafel and street food around Möllevångstorget",
+      "Moderna Museet Malmö",
+      "Day trip to Copenhagen over the Øresund Bridge"
+    ]
+  },
+  "manchester-united-kingdom": {
+    "description": "A northern English city of red-brick mills, world-famous football and music heritage, canalside bars and a thriving independent food and gig scene.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 80
+    },
+    "activities": [
+      "National Football Museum and Old Trafford stadium tour",
+      "Science and Industry Museum",
+      "Northern Quarter bars and independent shops",
+      "Curry Mile and Chinatown dining",
+      "John Rylands Library",
+      "Peak District day trip"
+    ]
+  },
+  "marsa-alam-egypt": {
+    "description": "A quiet Red Sea resort coast with some of Egypt's best reefs, where snorkellers swim with dugongs, turtles and dolphins just offshore.",
+    "climate": "hot desert",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 300,
+      "hotelPerNight": 85,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Snorkelling with dugongs at Abu Dabbab Bay",
+      "Diving Elphinstone Reef",
+      "Dolphin watching at Sataya Reef",
+      "Quad biking and Bedouin dinner in the desert",
+      "Day trip to Edfu and Luxor",
+      "Wadi El Gemal National Park"
+    ]
+  },
   "marseille-france": {
     "description": "France’s oldest port city, a gritty-chic Mediterranean mix of fish soup, hilltop basilica and the limestone Calanques coves.",
     "climate": "mediterranean",
@@ -3962,6 +4019,44 @@
       "Le Panier old quarter",
       "Bouillabaisse at the Vieux-Port",
       "Château d’If"
+    ]
+  },
+  "mauritius-mauritius": {
+    "description": "A volcanic Indian Ocean island of lagoon-fringed beaches, sugar-cane hills, waterfalls and a Creole, Indian and Chinese food culture.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 850,
+      "hotelPerNight": 170,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Le Morne Brabant hike and kitesurfing",
+      "Seven Coloured Earths at Chamarel",
+      "Black River Gorges National Park",
+      "Catamaran trip to Île aux Cerfs",
+      "Port Louis Central Market and street food",
+      "Pamplemousses Botanical Garden"
+    ]
+  },
+  "melbourne-australia": {
+    "description": "Australia's coffee-obsessed cultural capital of laneway bars, street art, sport and galleries, with the Great Ocean Road and Yarra Valley wineries nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [1, 2, 3, 4, 11, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 1300,
+      "hotelPerNight": 180,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Laneway coffee and street art in Hosier Lane",
+      "Queen Victoria Market",
+      "National Gallery of Victoria",
+      "Great Ocean Road and Twelve Apostles day trip",
+      "Phillip Island penguin parade",
+      "Yarra Valley wine tasting"
     ]
   },
   "menorca-spain": {
@@ -3981,6 +4076,25 @@
       "Talayotic site of Naveta d'en Tudons",
       "Mahón gin and fresh lobster stew (caldereta)",
       "Monte Toro viewpoint"
+    ]
+  },
+  "mexico-city-mexico": {
+    "description": "A vast high-altitude capital of Aztec ruins, Frida Kahlo's Coyoacán, vibrant markets and one of the world's great street-food and fine-dining scenes.",
+    "climate": "subtropical highland",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 800,
+      "hotelPerNight": 110,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Zócalo and Templo Mayor",
+      "Museo Frida Kahlo (Casa Azul) in Coyoacán",
+      "National Museum of Anthropology",
+      "Teotihuacán pyramids day trip",
+      "Xochimilco trajinera boat ride",
+      "Tacos al pastor and mezcal in Roma and Condesa"
     ]
   },
   "milan-italy": {
