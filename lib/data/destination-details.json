@@ -4402,6 +4402,25 @@
       "Boat trip to the Exuma cays"
     ]
   },
+  "newcastle-upon-tyne-united-kingdom": {
+    "description": "A lively Tyne-side city of dramatic bridges, Georgian streets and legendary nightlife, with Hadrian's Wall and the Northumberland coast on the doorstep.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Tyne Bridge and Gateshead Millennium Bridge",
+      "Baltic Centre for Contemporary Art",
+      "Quayside Sunday Market",
+      "Newcastle Castle Keep",
+      "Day trip to Hadrian's Wall",
+      "Tynemouth Priory and beach"
+    ]
+  },
   "newquay-united-kingdom": {
     "description": "Cornwall's surf capital, with a string of sandy beaches, dramatic headlands and the Fistral surf scene, plus easy access to Padstow and the coast path.",
     "climate": "oceanic",
@@ -4440,6 +4459,25 @@
       "Socca and salade niçoise"
     ]
   },
+  "nimes-france": {
+    "description": "A Roman city in southern France, with a remarkably intact amphitheatre, a classical temple and easy access to the Pont du Gard and Camargue.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Arena of Nîmes",
+      "Maison Carrée",
+      "Jardins de la Fontaine and Tour Magne",
+      "Pont du Gard day trip",
+      "Brandade de morue at a local bistro",
+      "Camargue wetlands excursion"
+    ]
+  },
   "nuremberg-germany": {
     "description": "A Bavarian city of medieval walls and a hilltop imperial castle, known for gingerbread, its Christkindlesmarkt and sobering Nazi-era history.",
     "climate": "continental",
@@ -4457,6 +4495,44 @@
       "Nuremberg rostbratwurst at Bratwursthäusle",
       "Albrecht Dürer's House",
       "German Museum of Technology (DB Museum)"
+    ]
+  },
+  "odz-poland": {
+    "description": "Poland's former textile capital turned creative hub, with the long Piotrkowska Street promenade, converted mills and vivid street murals.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Piotrkowska Street",
+      "Manufaktura converted textile mill",
+      "Łódź street art murals",
+      "Central Museum of Textiles",
+      "Walk of Fame outside the Film School",
+      "Izrael Poznański's Palace"
+    ]
+  },
+  "ohrid-north-macedonia": {
+    "description": "A lakeside town on one of Europe's oldest and deepest lakes, with Byzantine churches, a hilltop fortress, pebble beaches and warm summer swimming.",
+    "climate": "continental",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Church of St John at Kaneo",
+      "Samuel's Fortress",
+      "Old Town and Plaošnik monastery",
+      "Lake Ohrid boat trip",
+      "Ohrid trout and Ohrid pearls",
+      "Day trip to Galičica National Park"
     ]
   },
   "olbia-italy": {
@@ -4478,6 +4554,25 @@
       "Porceddu roast pork"
     ]
   },
+  "olsztyn-mazury-poland": {
+    "description": "Gateway to Masuria's lake district, where visitors sail, kayak and cycle between forests, with a Gothic castle in Olsztyn's old town.",
+    "climate": "continental",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Olsztyn Castle and Old Town",
+      "Kayaking on the Krutynia River",
+      "Sailing on Lake Śniardwy",
+      "Giżycko and the Boyen Fortress",
+      "Wolf's Lair at Gierłoż",
+      "Gietrzwałd Marian shrine"
+    ]
+  },
   "orlando-united-states": {
     "description": "Florida's theme park capital, home to Walt Disney World, Universal and SeaWorld, with warm weather year-round and easy day trips to the coast.",
     "climate": "humid subtropical",
@@ -4495,6 +4590,25 @@
       "Kennedy Space Center day trip",
       "Gatorland",
       "Disney Springs dining"
+    ]
+  },
+  "osijek-croatia": {
+    "description": "Slavonia's riverside city on the Drava, with a star-shaped 18th-century fortress, Art Nouveau squares and the Kopački Rit wetlands for birdwatching.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Tvrđa fortress district",
+      "Co-Cathedral of St Peter and St Paul",
+      "Drava riverside promenade",
+      "Kopački Rit Nature Park boat trip",
+      "Kulen sausage and fiš paprikaš",
+      "Gradski Vrt Park"
     ]
   },
   "oslo-norway": {
