@@ -4097,6 +4097,25 @@
       "Tacos al pastor and mezcal in Roma and Condesa"
     ]
   },
+  "miami-united-states": {
+    "description": "Florida's Atlantic beach city, where Art Deco South Beach, Cuban cafés in Little Havana and Wynwood street art sit within a short drive.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [11, 12, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 560,
+      "hotelPerNight": 230,
+      "dailySpending": 130
+    },
+    "activities": [
+      "South Beach and Ocean Drive Art Deco district",
+      "Wynwood Walls street art",
+      "Cuban coffee and food in Little Havana",
+      "Everglades airboat tour",
+      "Vizcaya Museum and Gardens",
+      "Day trip to the Florida Keys"
+    ]
+  },
   "milan-italy": {
     "description": "Italy's fashion and finance capital, pairing a marble Gothic cathedral and Leonardo's Last Supper with aperitivo bars and canal-side Navigli evenings.",
     "climate": "humid subtropical",
@@ -4114,6 +4133,25 @@
       "Navigli aperitivo",
       "La Scala opera house",
       "Risotto alla milanese"
+    ]
+  },
+  "minneapolis-saint-paul-united-states": {
+    "description": "The Twin Cities pair lakeside parks, a strong arts and music scene and Mississippi riverfront history in the American Upper Midwest.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 170,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Chain of Lakes bike rides",
+      "Walker Art Center and Sculpture Garden",
+      "Minneapolis Institute of Art",
+      "Mill City Museum on the Mississippi",
+      "Stone Arch Bridge",
+      "First Avenue music venue"
     ]
   },
   "montego-bay-jamaica": {
@@ -4135,6 +4173,25 @@
       "Hip Strip nightlife"
     ]
   },
+  "montpellier-france": {
+    "description": "A lively southern French university city with a car-free medieval core, elegant squares and sandy Mediterranean beaches a short tram ride away.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Place de la Comédie",
+      "Promenade du Peyrou and Arc de Triomphe",
+      "Jardin des Plantes",
+      "Musée Fabre",
+      "Palavas-les-Flots beach",
+      "Day trip to Pont du Gard"
+    ]
+  },
   "montreal-canada": {
     "description": "A bilingual island city of cobbled Old Montréal, mural-lined streets, Mount Royal views and a serious food and festival scene.",
     "climate": "humid continental",
@@ -4152,6 +4209,25 @@
       "Poutine and Montréal-style bagels",
       "Plateau Mont-Royal murals",
       "Montreal Jazz Festival"
+    ]
+  },
+  "mumbai-india": {
+    "description": "India's coastal megacity mixes Victorian landmarks, Bollywood glamour, street food and a Marine Drive waterfront in constant motion.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 95,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Gateway of India",
+      "Chhatrapati Shivaji Terminus",
+      "Elephanta Caves ferry",
+      "Marine Drive at sunset",
+      "Vada pav and street food crawl",
+      "Dhobi Ghat and Dharavi walking tour"
     ]
   },
   "munich-germany": {
@@ -4286,6 +4362,44 @@
       "Pizza at L'Antica Pizzeria da Michele",
       "Spaccanapoli old town",
       "Ferry to Capri"
+    ]
+  },
+  "nashville-united-states": {
+    "description": "Tennessee's Music City is home to honky-tonk bars on Broadway, the Grand Ole Opry, country history museums and hot chicken.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 560,
+      "hotelPerNight": 200,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Honky-tonks on Lower Broadway",
+      "Grand Ole Opry",
+      "Country Music Hall of Fame",
+      "Ryman Auditorium",
+      "Hattie B's hot chicken",
+      "The Hermitage, Andrew Jackson's home"
+    ]
+  },
+  "nassau-the-bahamas": {
+    "description": "The Bahamian capital on New Providence Island offers turquoise water, colonial forts, Junkanoo culture and quick boat trips to quiet cays.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [12, 1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 260,
+      "dailySpending": 130
+    },
+    "activities": [
+      "Cable Beach",
+      "Fort Fincastle and Queen's Staircase",
+      "Paradise Island and Atlantis",
+      "Arawak Cay conch fritters",
+      "Straw Market",
+      "Boat trip to the Exuma cays"
     ]
   },
   "newquay-united-kingdom": {
