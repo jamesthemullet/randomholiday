@@ -114,6 +114,25 @@
       "Kokrobite beach and highlife music"
     ]
   },
+  "adana-mersin-turkey": {
+    "description": "A pair of Turkish Mediterranean cities where kebab culture, Roman bridges and Silifke's coast and Cilician castles reward the curious.",
+    "climate": "mediterranean",
+    "travelStyles": ["culture", "city", "beach"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 160,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Adana kebab and şalgam",
+      "Taşköprü Roman bridge",
+      "Sabancı Central Mosque",
+      "Tarsus: St Paul's Well and Cleopatra's Gate",
+      "Kızkalesi sea castle",
+      "Cennet and Cehennem sinkholes"
+    ]
+  },
   "addis-ababa-ethiopia": {
     "description": "Ethiopia's high-altitude capital, with the National Museum's Lucy fossil, Merkato market, Orthodox churches and the home of coffee ceremonies.",
     "climate": "subtropical highland",
@@ -2225,6 +2244,25 @@
       "Bistecca alla fiorentina"
     ]
   },
+  "forli-italy": {
+    "description": "A Romagna city with a striking Fascist-era centre and a gentle base for Ravenna's mosaics, Rimini's beaches and Emilian food.",
+    "climate": "temperate",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 90,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Abbey of San Mercuriale",
+      "Pinacoteca Civica art gallery",
+      "Ravenna's Byzantine mosaics",
+      "Rimini beach day trip",
+      "Piadina and Sangiovese tasting",
+      "Predappio and Romagna hills"
+    ]
+  },
   "frankfurt-germany": {
     "description": "Germany's financial hub, a skyscraper-lined city on the River Main with a rebuilt old town, museum riverfront and traditional apple-wine taverns.",
     "climate": "temperate",
@@ -3134,6 +3172,25 @@
       "Beaches at Verga and Kardamyli"
     ]
   },
+  "karlsruhe-baden-baden-germany": {
+    "description": "A Black Forest gateway pairing Karlsruhe's baroque fan-shaped palace with Baden-Baden's Roman-era thermal spas and elegant casino.",
+    "climate": "temperate",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Caracalla Spa in Baden-Baden",
+      "Friedrichsbad Roman-Irish baths",
+      "Karlsruhe Palace",
+      "Baden-Baden Casino",
+      "Black Forest High Road",
+      "Lichtentaler Allee park"
+    ]
+  },
   "katowice-poland": {
     "description": "The industrial heart of Silesia reborn as a creative city, with the UFO-shaped Spodek arena, the Culture Zone and the red-brick workers' village of Nikiszowiec.",
     "climate": "humid continental",
@@ -3323,6 +3380,25 @@
       "Kärntner Kasnudeln"
     ]
   },
+  "knock-ireland": {
+    "description": "A quiet County Mayo village known for its Marian shrine, and a gateway to Ireland's wild Atlantic coast, Croagh Patrick and Achill Island.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Knock Shrine and Basilica",
+      "Climb Croagh Patrick",
+      "Achill Island and Keem Bay",
+      "Westport House and town",
+      "Ballintubber Abbey",
+      "Great Western Greenway cycle"
+    ]
+  },
   "kos-greece": {
     "description": "A flat, bike-friendly Dodecanese island of long sandy beaches, Hippocrates’ plane tree and a crusader castle facing Turkey.",
     "climate": "mediterranean",
@@ -3472,6 +3548,25 @@
       "Lekki Arts and Crafts Market",
       "Afrobeats night at the Shrine",
       "Jollof rice and suya"
+    ]
+  },
+  "lamezia-terme-italy": {
+    "description": "A Calabrian gateway between two seas, close to Tropea's white beaches, Capo Vaticano coves and the wild Sila mountains.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 95,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Tropea old town and beach",
+      "Capo Vaticano coves",
+      "Pizzo and its tartufo ice cream",
+      "Scilla and Chianalea fishing quarter",
+      "Sila National Park hiking",
+      "Ndjua and Calabrian salumi tasting"
     ]
   },
   "lanzarote-spain": {
@@ -4439,6 +4534,25 @@
       "French Concession walks",
       "Xiaolongbao at Din Tai Fung or Yang's Dumplings",
       "Water-town day trip to Zhujiajiao"
+    ]
+  },
+  "shannon-ireland": {
+    "description": "The gateway to County Clare and the Wild Atlantic Way, with medieval castles, Cliffs of Moher views and lively pub music nearby.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Cliffs of Moher",
+      "Bunratty Castle and Folk Park",
+      "The Burren landscape",
+      "Doolin traditional music pubs",
+      "King John's Castle in Limerick",
+      "Loop Head lighthouse"
     ]
   },
   "sharm-el-sheikh-egypt": {
