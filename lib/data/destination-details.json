@@ -3248,6 +3248,25 @@
     ],
     "visa": "free"
   },
+  "kayseri-turkey": {
+    "description": "Gateway to southern Cappadocia, an Anatolian city of Seljuk tombs and a covered bazaar, in the shadow of snow-capped Mount Erciyes.",
+    "climate": "continental",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 70,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Kayseri Citadel and Seljuk-era Hunat Hatun complex",
+      "Mount Erciyes skiing and hiking",
+      "Kapalı Çarşı covered bazaar",
+      "Pastırma and mantı, Kayseri's signature dishes",
+      "Day trip to Cappadocia's fairy chimneys",
+      "Sultan Sazlığı wetlands birdwatching"
+    ]
+  },
   "kefalonia-greece": {
     "description": "Greece’s largest Ionian island, with pebbled turquoise coves, mountain villages and the sea-cave lake of Melissani.",
     "climate": "mediterranean",
@@ -3531,6 +3550,25 @@
       "Île d'Aix day trip"
     ]
   },
+  "la-romana-dominican-republic": {
+    "description": "A Dominican Caribbean resort hub with palm-fringed beaches, the Altos de Chavón artists' village and easy trips to Saona Island.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [1, 2, 3, 4, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 150,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Saona Island catamaran day trip",
+      "Altos de Chavón amphitheatre and village",
+      "Bayahibe beach and snorkelling",
+      "Dye Fore golf at Casa de Campo",
+      "Chavón River boat trip",
+      "Catalina Island diving"
+    ]
+  },
   "lagos-nigeria": {
     "description": "West Africa's biggest and most energetic city, with Afrobeats nightlife, lively art and craft markets, and Atlantic beaches along Lagos Lagoon.",
     "climate": "tropical",
@@ -3548,6 +3586,25 @@
       "Lekki Arts and Crafts Market",
       "Afrobeats night at the Shrine",
       "Jollof rice and suya"
+    ]
+  },
+  "lahore-pakistan": {
+    "description": "Pakistan's Mughal-era cultural capital, with a vast red-sandstone fort, glittering mosques and Walled City food streets.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [2, 3, 4, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Lahore Fort and Sheesh Mahal",
+      "Badshahi Mosque",
+      "Walled City and Delhi Gate",
+      "Food Street near Gawalmandi for nihari and halwa puri",
+      "Wagah border flag-lowering ceremony",
+      "Shalimar Gardens"
     ]
   },
   "lamezia-terme-italy": {
@@ -3607,6 +3664,44 @@
       "Meze and halloumi"
     ]
   },
+  "limoges-france": {
+    "description": "A porcelain-making city on the Vienne river, known for its enamel and china, medieval quarters and the lively Les Halles market.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Musée National Adrien Dubouché porcelain museum",
+      "Cathédrale Saint-Étienne",
+      "Les Halles covered market",
+      "Pont Saint-Étienne and river views",
+      "Jardins de l'Évêché",
+      "Oradour-sur-Glane memorial village"
+    ]
+  },
+  "linz-austria": {
+    "description": "A Danube city turned digital-arts hub, with the Ars Electronica Center, hilltop views and the original Linzer torte.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 115,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Ars Electronica Center",
+      "Pöstlingberg tram and basilica",
+      "Lentos Kunstmuseum",
+      "Linzer torte at Café Jindrak",
+      "Linz Hauptplatz",
+      "Mauthausen Memorial day trip"
+    ]
+  },
   "ljubljana-slovenia": {
     "description": "A compact, car-free riverside capital of Art Nouveau bridges, a hilltop castle and café terraces, near Lake Bled.",
     "climate": "continental",
@@ -3623,6 +3718,25 @@
       "Central Market and Open Kitchen",
       "Day trip to Lake Bled",
       "Škocjan Caves"
+    ]
+  },
+  "los-angeles-united-states": {
+    "description": "A sprawling Pacific metropolis of film studios, Pacific beaches, canyon hikes and some of the world's best tacos and galleries.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 260,
+      "dailySpending": 140
+    },
+    "activities": [
+      "Hollywood Walk of Fame and TCL Chinese Theatre",
+      "Santa Monica Pier and Venice Beach",
+      "The Getty Center",
+      "Griffith Observatory hike",
+      "Universal Studios Hollywood",
+      "Tacos in Boyle Heights and Grand Central Market"
     ]
   },
   "luxembourg-luxembourg": {
