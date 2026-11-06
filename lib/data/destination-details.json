@@ -2150,6 +2150,25 @@
       "Gorilla trekking in Bwindi"
     ]
   },
+  "erbil-iraq": {
+    "description": "Capital of Iraqi Kurdistan, centred on a citadel inhabited for thousands of years, with lively bazaars, tea houses and mountain day trips.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 350,
+      "hotelPerNight": 90,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Erbil Citadel (UNESCO World Heritage Site)",
+      "Qaysari Bazaar",
+      "Kurdish Textile Museum",
+      "Sami Abdulrahman Park",
+      "Shanidar and Gali Ali Beg waterfall day trip",
+      "Kurdish kebab and dolma at a local restaurant"
+    ]
+  },
   "essaouira-morocco": {
     "description": "A whitewashed Atlantic port with a walled medina, fortified sea ramparts, breezy beaches and some of Morocco's best grilled fish.",
     "climate": "mediterranean",
@@ -3323,6 +3342,25 @@
     ],
     "visa": "on-arrival"
   },
+  "kilimanjaro-tanzania": {
+    "description": "Africa's highest peak rises above the coffee farms of Moshi, offering multi-day treks, safaris in nearby Arusha and Maasai villages.",
+    "climate": "subtropical highland",
+    "travelStyles": ["adventure"],
+    "bestMonths": [1, 2, 6, 7, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Machame or Lemosho route trek to Uhuru Peak",
+      "Materuni waterfalls and coffee tour",
+      "Arusha National Park day safari",
+      "Chala Crater Lake",
+      "Marangu village walk",
+      "Moshi town markets"
+    ]
+  },
   "kingston-jamaica": {
     "description": "Jamaica's capital, the birthplace of reggae, with Bob Marley's old home, lively street food and the Blue Mountains rising behind the city.",
     "climate": "tropical",
@@ -3510,6 +3548,25 @@
       "Northern lights viewing",
       "Husky and snowmobile safaris",
       "Kitkajoki river rafting"
+    ]
+  },
+  "kuwait-city-kuwait": {
+    "description": "Gulf capital of sleek towers and old souks, with a striking waterfront skyline, excellent museums and warm winters on the Arabian Gulf.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 400,
+      "hotelPerNight": 130,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Kuwait Towers",
+      "Grand Mosque",
+      "Souq Al-Mubarakiya",
+      "Tareq Rajab Museum",
+      "Failaka Island ferry trip",
+      "Machboos at a traditional restaurant"
     ]
   },
   "la-palma-spain": {
@@ -3737,6 +3794,63 @@
       "Griffith Observatory hike",
       "Universal Studios Hollywood",
       "Tacos in Boyle Heights and Grand Central Market"
+    ]
+  },
+  "lourdes-france": {
+    "description": "Pyrenean town where pilgrims gather at the Sanctuary of Our Lady of Lourdes, set below a hilltop castle and near mountain trails.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Sanctuary of Our Lady of Lourdes and the Grotto",
+      "Evening candlelight procession",
+      "Château Fort de Lourdes",
+      "Pic du Jer funicular",
+      "Gavarnie cirque day trip",
+      "Pont Neuf Lourdes viewpoint walk"
+    ]
+  },
+  "lubeck-germany": {
+    "description": "Brick-gothic Hanseatic city on the Baltic with a UNESCO-listed old town, marzipan tradition and seaside resorts at nearby Travemünde.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 115,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Holstentor gate and Salzspeicher",
+      "Niederegger marzipan café",
+      "St Mary's Church",
+      "Buddenbrookhaus",
+      "Christmas market in the old town",
+      "Travemünde beach promenade"
+    ]
+  },
+  "lublin-poland": {
+    "description": "Eastern Poland's university city, with a handsome Renaissance old town, a medieval castle chapel and a creative, café-filled atmosphere.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Lublin Castle and Holy Trinity Chapel",
+      "Old Town and Kraków Gate",
+      "Majdanek State Museum",
+      "Open-air Village Museum",
+      "Cebularz onion bread tasting",
+      "Kazimierz Dolny day trip"
     ]
   },
   "luxembourg-luxembourg": {
