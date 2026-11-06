@@ -9,6 +9,7 @@ against four jobs:
 - **Engagement** — deepens a single visit
 - **Retention** — earns a repeat visit
 - **Fun** — no metric, just delight
+- **Trust** — keeps users safe and the site credible
 
 Every feature is broken into a **PR sequence** — each step small enough for a human to review in
 about 15 minutes. Genuinely atomic changes are left as one PR. Tick a step off once its PR merges.
@@ -110,6 +111,44 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
       Session-level "don't show me that again" is feature 2.
 - [ ] **Content, not code.** Grow the catalogue where it's thin. Oceania has 4 of 56 destinations,
       so Sydney, Melbourne and Auckland get only 6–9 options.
+
+### 9. Travel advisories — _Trust_
+
+Nothing stops a spin from suggesting a place at war. The London route data already includes
+Beirut, Tel Aviv and Iraq, and a direct flight doesn't make a place safe. Follow UK government
+(FCDO) travel advice rather than making our own calls. Users are UK-based, and travel insurance
+is usually void where the FCDO advises against all travel. The same mechanism covers disasters,
+outbreaks and entry bans, so call it a `travelAdvisory`, not anything war-specific.
+
+| FCDO status                                     | Behaviour                                                |
+| :---------------------------------------------- | :------------------------------------------------------- |
+| Against all / all but essential travel, country | Never picked. Detail page stays up with a banner.        |
+| Against travel to parts of the country          | Pickable, with a warning badge linking to the FCDO page. |
+| No warnings                                     | Normal.                                                  |
+
+- [ ] Add `lib/data/safety-overrides.json`, mapping destination id to `exclude | warn | ok` with a
+      reason and date, plus a typed loader. Seed it by hand (Lebanon, Israel, Iraq…). Per-city
+      overrides matter because FCDO advice is regional: Erbil isn't Baghdad, and Sharm el-Sheikh
+      isn't North Sinai.
+- [ ] Filter `exclude` destinations out in `lib/filterEngine.ts`, alongside the 100 km rule, plus
+      tests. Update the baseline in `tests/lib/engineDiagnostics.test.ts`.
+- [ ] Show a warning badge (reusing `components/Badge`) on `warn` results, linking to the
+      country's FCDO page. Use neutral wording: "FCDO advises against travel to parts of
+      <country>. Check the latest advice before booking."
+- [ ] Add a banner on `/destination/[slug]` for excluded places ("Currently excluded from picks
+      due to FCDO travel advice"). Keep the page indexed, and drop its flight and hotel affiliate
+      links (`lib/affiliateLinks.ts`).
+- [ ] **Infra (Mise en Place):** add a `yarn data:advisories` script that fetches each route-data
+      country's alert status from the GOV.UK content API
+      (`https://www.gov.uk/api/content/foreign-travel-advice/<country-slug>`) and writes
+      `lib/data/travel-advisories.json`. The filter merges the overrides on top. Check the exact
+      field names against a live response first. Store advice by country with a `source` field so
+      a second source (e.g. France Diplomatie) can be added when non-UK departure cities go live.
+- [ ] Run the script daily from the scheduled routine. It opens a PR only when a status changes,
+      so every change to the excluded list gets reviewed in a diff, and the site never calls
+      GOV.UK at runtime.
+
+No user override ("show me risky places anyway"). It invites trouble for no real gain.
 
 ## Next (this quarter — moderate new build)
 
@@ -224,8 +263,9 @@ one seasonally.
 | **Engine diagnostics test** (feature 5 step 1)  | A before/after measure for every change to filtering, scoring or sampling.   |
 | **Per-city route script** (feature 8 step 1)    | Every departure city after London, one `yarn data:routes <city-id>` each.    |
 | **Pro status** (Stripe webhook → stored status) | Any Pro gate actually unlocking after checkout; needs the persistence layer. |
+| **Advisory sync** (feature 9 step 5)            | Exclusions that track FCDO advice without hand-editing; reviewed via PRs.    |
 
 ---
 
 _RandomHoliday — product roadmap, 2 September 2026 (feature 5 added 17 October 2026, feature 8
-added 18 October 2026)_
+added 18 October 2026, feature 9 added 6 November 2026)_
