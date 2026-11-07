@@ -184,7 +184,7 @@ describe('DestinationDetailModal', () => {
     )
     // flightFromEurope: £600 * 2 travellers = £1200
     expect(screen.getByText('Flights (2 travellers)')).toBeInTheDocument()
-    expect(screen.getByText('£1,200')).toBeInTheDocument()
+    expect(screen.getByText('from ~£1,200')).toBeInTheDocument()
     // hotel: £60 * 5 nights = £300
     expect(screen.getByText('Hotel (5 nights)')).toBeInTheDocument()
     expect(screen.getByText('£300')).toBeInTheDocument()
@@ -195,6 +195,26 @@ describe('DestinationDetailModal', () => {
     expect(screen.getByText('Total')).toBeInTheDocument()
     expect(screen.getByText('£950 per person')).toBeInTheDocument()
     expect(screen.getByText('£1,900')).toBeInTheDocument()
+  })
+
+  it('flags the flight cost as a rough guide and links to Skyscanner for real prices', () => {
+    render(
+      <DestinationDetailModal
+        isOpen
+        onClose={vi.fn()}
+        destination={makeDestination()}
+        distanceKm={500}
+        nights={5}
+        groupSize={2}
+      />
+    )
+    expect(screen.getByText(/rough guide/i)).toBeInTheDocument()
+    const links = screen.getAllByRole('link', { name: /see live prices on skyscanner/i })
+    expect(links).toHaveLength(1)
+    const url = new URL(links[0].getAttribute('href') ?? '')
+    expect(url.origin + url.pathname).toBe(
+      'https://www.skyscanner.net/transport/flights/everywhere/id/'
+    )
   })
 
   it('singularises the traveller label for a group size of 1', () => {
