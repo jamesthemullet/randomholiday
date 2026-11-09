@@ -33,7 +33,7 @@ test('full happy path: homepage form → results → destination detail → chan
   const dialog = page.getByRole('dialog')
   await expect(dialog).toBeVisible()
   await expect(dialog.getByText('Cost breakdown')).toBeVisible()
-  await expect(dialog.getByRole('link', { name: /skyscanner/i })).toBeVisible()
+  await expect(dialog.getByRole('link', { name: /find flights on skyscanner/i })).toBeVisible()
   await expect(dialog.getByRole('link', { name: /booking\.com/i })).toBeVisible()
 
   await page.keyboard.press('Escape')
