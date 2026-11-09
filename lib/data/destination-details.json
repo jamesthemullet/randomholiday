@@ -4630,6 +4630,25 @@
       "Holmenkollen ski jump"
     ]
   },
+  "ostrava-czech-republic": {
+    "description": "A former coal-and-steel city reborn as an industrial-heritage hub, with the Lower Vítkovice blast furnaces, lively Stodolní bars and the Colours of Ostrava festival.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Lower Vítkovice blast furnace tower",
+      "Landek Park mining museum",
+      "Colours of Ostrava festival",
+      "Stodolní Street bars",
+      "New Town Hall tower viewpoint",
+      "Day trip to the Beskydy mountains"
+    ]
+  },
   "ottawa-canada": {
     "description": "Canada's capital on the Ottawa River, with Parliament Hill, excellent national museums, the Rideau Canal skateway and the lively ByWard Market.",
     "climate": "humid continental",
@@ -4839,6 +4858,25 @@
       "Eastern State Penitentiary"
     ]
   },
+  "phoenix-united-states": {
+    "description": "A sunbaked Sonoran Desert metropolis of saguaro-studded hiking trails, Frank Lloyd Wright architecture, spring-training baseball and easy day trips to Sedona.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [2, 3, 4, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 110,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Camelback Mountain hike",
+      "Desert Botanical Garden",
+      "Taliesin West",
+      "Heard Museum of Native American art",
+      "Musical Instrument Museum",
+      "Day trip to Sedona red rocks"
+    ]
+  },
   "pisa-italy": {
     "description": "Tuscan university city famed for its leaning tower, set among marble Piazza dei Miracoli landmarks and a short train from Florence.",
     "climate": "mediterranean",
@@ -4856,6 +4894,25 @@
       "Borgo Stretto",
       "Day trip to Lucca city walls",
       "Day trip to Florence"
+    ]
+  },
+  "pittsburgh-united-states": {
+    "description": "A city of rivers and bridges whose steel-era mansions and mills now house world-class museums, craft breweries and a thriving food scene.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 120,
+      "dailySpending": 90
+    },
+    "activities": [
+      "The Andy Warhol Museum",
+      "Duquesne Incline to Mount Washington",
+      "Carnegie Museum of Art and Natural History",
+      "Cathedral of Learning",
+      "Primanti Bros sandwich in the Strip District",
+      "Day trip to Fallingwater"
     ]
   },
   "plovdiv-bulgaria": {
@@ -4894,6 +4951,63 @@
       "Stara Varos old Ottoman quarter",
       "Day trip to Kotor Bay",
       "Rafting on the Tara canyon"
+    ]
+  },
+  "poitiers-france": {
+    "description": "A hilltop university city in western France, rich in Romanesque churches and Roman-era remains, and the gateway to the Futuroscope theme park.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 85,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Notre-Dame la Grande facade",
+      "Baptistère Saint-Jean",
+      "Futuroscope theme park",
+      "Palais des Ducs d'Aquitaine",
+      "Marais Poitevin boat trip",
+      "Saint-Hilaire-le-Grand church"
+    ]
+  },
+  "ponta-delgada-portugal": {
+    "description": "The Azores' main port, a gateway to crater lakes, geothermal hot springs, tea plantations and some of Europe's best whale watching.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure", "beach"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 190,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Sete Cidades twin crater lakes",
+      "Furnas hot springs and cozido stew",
+      "Whale and dolphin watching",
+      "Gorreana tea plantation",
+      "Terra Nostra Garden",
+      "Portas da Cidade old town gates"
+    ]
+  },
+  "poprad-tatry-slovakia": {
+    "description": "The gateway to Slovakia's High Tatras, with alpine hiking and skiing above glacial lakes, and the medieval towns and castle of the Spiš region nearby.",
+    "climate": "humid continental",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [1, 2, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Cable car to Lomnický štít",
+      "Štrbské Pleso mountain lake",
+      "Spiš Castle",
+      "Levoča old town and St James church",
+      "Aquacity Poprad thermal pools",
+      "Skiing at Tatranská Lomnica"
     ]
   },
   "poznan-poland": {
