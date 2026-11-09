@@ -159,8 +159,21 @@ export function DestinationDetailModal({
             </div>
             <dl className={styles.costList}>
               <div className={styles.costRow}>
-                <dt>Flights ({travellers})</dt>
-                <dd>{formatGbp(budget.totalFlightCost)}</dd>
+                <dt>
+                  Flights ({travellers})
+                  <span className={styles.costRowNote}>
+                    Rough guide —{' '}
+                    <a
+                      href={skyscannerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className={styles.inlineLink}
+                    >
+                      see live prices on Skyscanner
+                    </a>
+                  </span>
+                </dt>
+                <dd>from ~{formatGbp(budget.totalFlightCost)}</dd>
               </div>
               <div className={styles.costRow}>
                 <dt>Hotel ({nightsLabel})</dt>

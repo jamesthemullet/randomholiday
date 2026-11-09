@@ -95,8 +95,11 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
 - [x] Exclude destinations within ~100 km of the origin in `filterEngine.ts`, plus tests.
       (`MIN_DISTANCE_KM` in `lib/filterEngine.ts`, tested in `tests/lib/filterEngine.test.ts`; also
       removes same-location self-matches, baseline updated in `tests/lib/engineDiagnostics.test.ts`)
-- [ ] Present the flight cost as a rough guide. In the destination detail modal's breakdown, show
+- [x] Present the flight cost as a rough guide. In the destination detail modal's breakdown, show
       it as "from ~£X" (or a range) and point people to the Skyscanner link for real prices.
+      (`components/DestinationDetailModal/DestinationDetailModal.tsx`'s Flights row now reads
+      "from ~£X" with a "Rough guide — see live prices on Skyscanner" link, tested in
+      `tests/components/DestinationDetailModal.test.tsx`)
 - [x] Charge hotels per room (roughly one room per 2 travellers) in `calculateBudget`, plus tests.
       (`estimateRooms`/`rooms` in `lib/budgetCalculator.ts`, tested in
       `tests/lib/budgetCalculator.test.ts`)

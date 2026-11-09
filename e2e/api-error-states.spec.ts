@@ -28,7 +28,7 @@ test('falls back to a static weather message when the weather API returns an err
 
   // The rest of the modal still renders normally despite the weather failure.
   await expect(dialog.getByText('Cost breakdown')).toBeVisible()
-  await expect(dialog.getByRole('link', { name: /skyscanner/i })).toBeVisible()
+  await expect(dialog.getByRole('link', { name: /find flights on skyscanner/i })).toBeVisible()
 })
 
 test('falls back to the same message when the weather request is aborted entirely', async ({
