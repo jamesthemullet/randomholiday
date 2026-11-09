@@ -4402,6 +4402,25 @@
       "Boat trip to the Exuma cays"
     ]
   },
+  "newcastle-upon-tyne-united-kingdom": {
+    "description": "A lively Tyne-side city of dramatic bridges, Georgian streets and legendary nightlife, with Hadrian's Wall and the Northumberland coast on the doorstep.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 100,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Tyne Bridge and Gateshead Millennium Bridge",
+      "Baltic Centre for Contemporary Art",
+      "Quayside Sunday Market",
+      "Newcastle Castle Keep",
+      "Day trip to Hadrian's Wall",
+      "Tynemouth Priory and beach"
+    ]
+  },
   "newquay-united-kingdom": {
     "description": "Cornwall's surf capital, with a string of sandy beaches, dramatic headlands and the Fistral surf scene, plus easy access to Padstow and the coast path.",
     "climate": "oceanic",
@@ -4440,6 +4459,25 @@
       "Socca and salade niçoise"
     ]
   },
+  "nimes-france": {
+    "description": "A Roman city in southern France, with a remarkably intact amphitheatre, a classical temple and easy access to the Pont du Gard and Camargue.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Arena of Nîmes",
+      "Maison Carrée",
+      "Jardins de la Fontaine and Tour Magne",
+      "Pont du Gard day trip",
+      "Brandade de morue at a local bistro",
+      "Camargue wetlands excursion"
+    ]
+  },
   "nuremberg-germany": {
     "description": "A Bavarian city of medieval walls and a hilltop imperial castle, known for gingerbread, its Christkindlesmarkt and sobering Nazi-era history.",
     "climate": "continental",
@@ -4457,6 +4495,44 @@
       "Nuremberg rostbratwurst at Bratwursthäusle",
       "Albrecht Dürer's House",
       "German Museum of Technology (DB Museum)"
+    ]
+  },
+  "odz-poland": {
+    "description": "Poland's former textile capital turned creative hub, with the long Piotrkowska Street promenade, converted mills and vivid street murals.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Piotrkowska Street",
+      "Manufaktura converted textile mill",
+      "Łódź street art murals",
+      "Central Museum of Textiles",
+      "Walk of Fame outside the Film School",
+      "Izrael Poznański's Palace"
+    ]
+  },
+  "ohrid-north-macedonia": {
+    "description": "A lakeside town on one of Europe's oldest and deepest lakes, with Byzantine churches, a hilltop fortress, pebble beaches and warm summer swimming.",
+    "climate": "continental",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Church of St John at Kaneo",
+      "Samuel's Fortress",
+      "Old Town and Plaošnik monastery",
+      "Lake Ohrid boat trip",
+      "Ohrid trout and Ohrid pearls",
+      "Day trip to Galičica National Park"
     ]
   },
   "olbia-italy": {
@@ -4478,6 +4554,25 @@
       "Porceddu roast pork"
     ]
   },
+  "olsztyn-mazury-poland": {
+    "description": "Gateway to Masuria's lake district, where visitors sail, kayak and cycle between forests, with a Gothic castle in Olsztyn's old town.",
+    "climate": "continental",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 70,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Olsztyn Castle and Old Town",
+      "Kayaking on the Krutynia River",
+      "Sailing on Lake Śniardwy",
+      "Giżycko and the Boyen Fortress",
+      "Wolf's Lair at Gierłoż",
+      "Gietrzwałd Marian shrine"
+    ]
+  },
   "orlando-united-states": {
     "description": "Florida's theme park capital, home to Walt Disney World, Universal and SeaWorld, with warm weather year-round and easy day trips to the coast.",
     "climate": "humid subtropical",
@@ -4495,6 +4590,25 @@
       "Kennedy Space Center day trip",
       "Gatorland",
       "Disney Springs dining"
+    ]
+  },
+  "osijek-croatia": {
+    "description": "Slavonia's riverside city on the Drava, with a star-shaped 18th-century fortress, Art Nouveau squares and the Kopački Rit wetlands for birdwatching.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Tvrđa fortress district",
+      "Co-Cathedral of St Peter and St Paul",
+      "Drava riverside promenade",
+      "Kopački Rit Nature Park boat trip",
+      "Kulen sausage and fiš paprikaš",
+      "Gradski Vrt Park"
     ]
   },
   "oslo-norway": {
@@ -4533,6 +4647,25 @@
       "Canadian Museum of History",
       "ByWard Market and BeaverTails",
       "Gatineau Park"
+    ]
+  },
+  "palanga-lithuania": {
+    "description": "Lithuania's main Baltic beach resort, with a long white-sand shore, a 470-metre pier, a pine-backed amber museum and lively summer evenings.",
+    "climate": "humid continental",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 85,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Palanga Pier at sunset",
+      "Amber Museum in Tiškevičiai Palace",
+      "Botanical Park",
+      "Basanavičius Street cafés and bars",
+      "Beach walk to Šventoji",
+      "Curonian Spit day trip"
     ]
   },
   "palermo-italy": {
@@ -4592,6 +4725,63 @@
       "Meze dinner with halloumi"
     ]
   },
+  "parma-italy": {
+    "description": "A graceful Emilian city of frescoed churches and a grand opera house, home to Parmigiano-Reggiano, prosciutto di Parma and some of Italy's best eating.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 105,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Parma Cathedral and Baptistery",
+      "Teatro Regio di Parma",
+      "Palazzo della Pilotta and Teatro Farnese",
+      "Parmigiano-Reggiano dairy tour",
+      "Prosciutto di Parma tasting in Langhirano",
+      "Torchio and anolini pasta"
+    ]
+  },
+  "perpignan-france": {
+    "description": "Catalan-flavoured capital of French Roussillon, with the Palace of the Kings of Majorca, a lively old quarter and beaches and Pyrenean villages nearby.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "city"],
+    "bestMonths": [5, 6, 7, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 105,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Palais des Rois de Majorque",
+      "Le Castillet",
+      "Cathedral of Saint John the Baptist",
+      "Collioure fishing village day trip",
+      "Canet-en-Roussillon beach",
+      "Little Yellow Train from Villefranche"
+    ]
+  },
+  "perth-australia": {
+    "description": "Western Australia's sunny, laid-back capital, with city-edge surf beaches, Kings Park, the Fremantle waterfront and quokkas on nearby Rottnest Island.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "adventure"],
+    "bestMonths": [10, 11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 1300,
+      "hotelPerNight": 180,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Kings Park and Botanic Garden",
+      "Rottnest Island quokkas and cycling",
+      "Fremantle Markets and Prison",
+      "Cottesloe Beach sunset",
+      "Swan Valley wineries",
+      "Pinnacles Desert day trip"
+    ]
+  },
   "perugia-italy": {
     "description": "Umbria's hilltop university city of medieval lanes, Etruscan gates and chocolate, with sweeping views over green valleys toward Assisi.",
     "climate": "mediterranean",
@@ -4609,6 +4799,44 @@
       "Etruscan Well and Arco Etrusco",
       "Perugina chocolate factory and museum",
       "Day trip to Assisi"
+    ]
+  },
+  "pescara-italy": {
+    "description": "An Adriatic beach city on Abruzzo's coast, with a broad sandy seafront, a fresh-fish tradition and the Gran Sasso and Maiella mountains inland.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Lungomare and Pescara beaches",
+      "Ponte del Mare",
+      "Birthplace of Gabriele D’Annunzio",
+      "Brodetto di pesce and arrosticini",
+      "Trabocchi coast day trip",
+      "Majella National Park hiking"
+    ]
+  },
+  "philadelphia-united-states": {
+    "description": "The birthplace of American independence, with Independence Hall, the Liberty Bell, the Rocky steps, a renowned mural scene and cheesesteaks in Reading Terminal Market.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 520,
+      "hotelPerNight": 200,
+      "dailySpending": 115
+    },
+    "activities": [
+      "Independence Hall and Liberty Bell",
+      "Philadelphia Museum of Art and the Rocky Steps",
+      "Reading Terminal Market",
+      "Philly cheesesteak tasting",
+      "Mural Arts walking tour",
+      "Eastern State Penitentiary"
     ]
   },
   "pisa-italy": {
