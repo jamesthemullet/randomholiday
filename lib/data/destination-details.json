@@ -5010,6 +5010,25 @@
       "Skiing at Tatranská Lomnica"
     ]
   },
+  "portland-or-united-states": {
+    "description": "Oregon's laid-back city of food carts, craft breweries and bookshops, with Mount Hood and the Columbia River Gorge close by.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 160,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Powell's City of Books",
+      "Portland food cart pods",
+      "Multnomah Falls",
+      "Washington Park and Japanese Garden",
+      "craft brewery tour",
+      "Mount Hood day trip"
+    ]
+  },
   "poznan-poland": {
     "description": "A Renaissance market square ringed by pastel townhouses, famed for its mechanical goats, croissants and a young, university-driven food scene.",
     "climate": "humid continental",
@@ -5048,6 +5067,44 @@
       "Lefkada town waterfront"
     ]
   },
+  "pristina-kosovo": {
+    "description": "Kosovo's young, unpolished capital, with Ottoman mosques, a giant Newborn monument and a café culture that spills into the streets.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 55,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Newborn monument",
+      "National Library of Kosovo",
+      "Mother Teresa Boulevard",
+      "Gračanica Monastery",
+      "Prizren day trip",
+      "Germia Park"
+    ]
+  },
+  "providenciales-united-kingdom": {
+    "description": "The main island of Turks and Caicos, fringed by the long, powdery sands of Grace Bay and ringed by a barrier reef.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [12, 1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 300,
+      "dailySpending": 140
+    },
+    "activities": [
+      "Grace Bay Beach",
+      "snorkelling at Bight Reef",
+      "Chalk Sound National Park",
+      "Conch Bar Caves",
+      "kitesurfing at Long Bay",
+      "whale watching trip"
+    ]
+  },
   "pula-croatia": {
     "description": "An Istrian port city anchored by a remarkably intact Roman amphitheatre, with rocky Adriatic swimming spots and the Brijuni islands nearby.",
     "climate": "mediterranean",
@@ -5065,6 +5122,25 @@
       "Kamenjak peninsula beaches",
       "Istrian truffle pasta and olive oil",
       "Arch of the Sergii"
+    ]
+  },
+  "punta-cana-dominican-republic": {
+    "description": "The Dominican Republic's eastern tip, a run of palm-lined white beaches and all-inclusive resorts on the warm Caribbean and Atlantic waters.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 620,
+      "hotelPerNight": 120,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Bávaro Beach",
+      "Saona Island boat trip",
+      "Hoyo Azul cenote",
+      "Indigenous Eyes Ecological Reserve",
+      "Altos de Chavón",
+      "Scape Park zip-lining"
     ]
   },
   "qingdao-people-s-republic-of-china": {
@@ -5103,6 +5179,44 @@
       "Rabat medina and souk",
       "Mohammed VI Museum of Modern Art",
       "Surf the Oudayas beach"
+    ]
+  },
+  "reggio-calabria-italy": {
+    "description": "Calabria's port city on the Strait of Messina, home to the Riace Bronzes, a sweeping seafront promenade and views across to Sicily.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Riace Bronzes at the National Museum",
+      "Lungomare Falcomatà promenade",
+      "Aspromonte National Park",
+      "Scilla fishing village",
+      "Pentedattilo ghost village",
+      "Bergamot orchard visit"
+    ]
+  },
+  "rennes-france": {
+    "description": "Brittany's capital, a student city of half-timbered medieval streets, Saturday's Marché des Lices and a short hop to Mont-Saint-Michel.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Marché des Lices Saturday market",
+      "Parlement de Bretagne",
+      "Thabor Gardens",
+      "Rue Saint-Michel bars",
+      "galette-saucisse street food",
+      "Mont-Saint-Michel day trip"
     ]
   },
   "reus-spain": {
