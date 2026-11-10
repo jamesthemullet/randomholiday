@@ -5181,6 +5181,25 @@
       "Surf the Oudayas beach"
     ]
   },
+  "red-sea-saudi-arabia": {
+    "description": "Saudi Arabia's newly opened Red Sea coast, with luxury island resorts, pristine coral reefs, mangrove lagoons and dramatic desert-mountain scenery.",
+    "climate": "hot desert",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 350,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Diving and snorkelling the Red Sea reefs",
+      "Sheybarah Island resort",
+      "Shura Island mangroves and marina",
+      "Desert Rock rock formations",
+      "Hawksbill turtle watching",
+      "Dune bashing at Southern Dunes"
+    ]
+  },
   "reggio-calabria-italy": {
     "description": "Calabria's port city on the Strait of Messina, home to the Riace Bronzes, a sweeping seafront promenade and views across to Sicily.",
     "climate": "mediterranean",
@@ -5276,6 +5295,25 @@
       "Black balsam and smoked fish tasting"
     ]
   },
+  "rijeka-croatia": {
+    "description": "Croatia's gritty Adriatic port and former European Capital of Culture, with Habsburg architecture, a hilltop castle and easy access to Opatija and Istria.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Trsat Castle and Sanctuary",
+      "Korzo promenade and City Clock Tower",
+      "Rijeka Carnival parade",
+      "Opatija Lungomare coastal walk",
+      "Fish market and Ribarnica seafood",
+      "Ferry day trip to Krk"
+    ]
+  },
   "rimini-italy": {
     "description": "Adriatic Riviera resort with a wide sandy beach, a Roman arch and bridge in the old town, and Italy's liveliest summer nightlife.",
     "climate": "humid subtropical",
@@ -5293,6 +5331,25 @@
       "Piadina romagnola and fresh seafood",
       "Day trip to San Marino",
       "Tempio Malatestiano"
+    ]
+  },
+  "riyadh-saudi-arabia": {
+    "description": "Saudi Arabia's fast-changing capital, mixing the mud-brick heritage of Diriyah with glass towers, entertainment districts and desert escarpments on its doorstep.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 400,
+      "hotelPerNight": 150,
+      "dailySpending": 80
+    },
+    "activities": [
+      "At-Turaif in Diriyah",
+      "Kingdom Centre Sky Bridge",
+      "National Museum of Saudi Arabia",
+      "Edge of the World cliffs",
+      "Masmak Fortress and Al Zal Souq",
+      "Kabsa at a traditional restaurant"
     ]
   },
   "rotterdam-the-hague-netherlands": {
@@ -5350,6 +5407,63 @@
       "Bieszczady Mountains hiking",
       "Podkarpackie pierogi and regional cuisine",
       "Fountain Multimedia show in Rzeszów"
+    ]
+  },
+  "sal-cape-verde": {
+    "description": "A flat, sun-baked Atlantic island of long white beaches and steady trade winds, with kitesurfing, salt-crater floating and Cape Verdean live music.",
+    "climate": "hot desert",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 280,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Santa Maria beach",
+      "Floating in the Pedra de Lume salt crater",
+      "Kitesurfing at Ponta Preta",
+      "Lemon shark watching at Shark Bay",
+      "Buracona Blue Eye lava pool",
+      "Morna and funaná music in Santa Maria"
+    ]
+  },
+  "salen-trysil-sweden": {
+    "description": "A cross-border Scandinavian ski region in the Swedish mountains, with family-friendly slopes, cross-country trails, husky sledding and the start line of the Vasaloppet.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure"],
+    "bestMonths": [1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Alpine skiing in Tandådalen and Hundfjället",
+      "Cross-country skiing on the Vasaloppet trail",
+      "Husky sledding",
+      "Snowmobile safari",
+      "Skiing across the border at Trysil in Norway",
+      "Vasaloppet start at Berga by"
+    ]
+  },
+  "salerno-italy": {
+    "description": "A lively port city at the gateway to the Amalfi Coast, with a medieval old town, a palm-lined seafront and ferries to Positano and Amalfi.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Salerno Cathedral",
+      "Arechi Castle",
+      "Giardino della Minerva",
+      "Lungomare Trieste promenade",
+      "Ferry to Amalfi and Positano",
+      "Greek temples at Paestum"
     ]
   },
   "salzburg-austria": {
