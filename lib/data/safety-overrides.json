@@ -1,0 +1,17 @@
+{
+  "beirut-lebanon": {
+    "status": "warn",
+    "reason": "FCDO advises against all travel to Beirut's southern suburbs (Dahieh) and against all but essential travel to most other areas outside central Beirut, citing armed groups and the risk of Israeli airstrikes. Central Beirut itself is not covered by that advisory.",
+    "date": "2026-11-11"
+  },
+  "erbil-iraq": {
+    "status": "warn",
+    "reason": "FCDO advises against all but essential travel to the Kurdistan Region of Iraq (which includes Erbil), following drone activity intercepted near Erbil International Airport and ongoing regional tension with Iran.",
+    "date": "2026-11-11"
+  },
+  "tel-aviv-israel": {
+    "status": "warn",
+    "reason": "FCDO no longer advises against all travel to Israel, but warns that rocket and drone attacks remain possible across the country, including disruption and shrapnel risk at Ben Gurion Airport in Tel Aviv.",
+    "date": "2026-11-11"
+  }
+}
