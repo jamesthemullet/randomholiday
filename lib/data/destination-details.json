@@ -5352,6 +5352,25 @@
       "Kabsa at a traditional restaurant"
     ]
   },
+  "rodez-france": {
+    "description": "A rose-red sandstone town on a hill above the Aveyron, with a Gothic cathedral and the Soulages museum devoted to black-on-black painting.",
+    "climate": "oceanic",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 95,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Rodez Cathedral and its bell tower",
+      "Musée Soulages",
+      "Conques abbey day trip",
+      "Aligot and Laguiole cheese tasting",
+      "Millau Viaduct drive",
+      "Place du Bourg old town stroll"
+    ]
+  },
   "rotterdam-the-hague-netherlands": {
     "description": "The Netherlands' bold, rebuilt port city of daring modern architecture, waterfront markets and street art, with The Hague's museums close by.",
     "climate": "oceanic",
@@ -5942,6 +5961,25 @@
       "Ferry to Nevis"
     ]
   },
+  "st-louis-united-states": {
+    "description": "A Mississippi River city under the soaring Gateway Arch, known for blues clubs, free world-class museums and toasted ravioli.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 130,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Gateway Arch tram ride",
+      "St. Louis Art Museum",
+      "Forest Park and the Zoo",
+      "Anheuser-Busch brewery tour",
+      "Blues at BB's Jazz Blues & Soups",
+      "City Museum"
+    ]
+  },
   "st-lucia-saint-lucia": {
     "description": "A lush Caribbean island famed for the twin Pitons, sulphur springs, rainforest waterfalls and resort-lined beaches on its sheltered west coast.",
     "climate": "tropical",
@@ -6054,6 +6092,82 @@
       "Killesberg Park and Fernsehturm TV tower",
       "Stuttgart Christmas market",
       "Swabian Maultaschen and local Trollinger wine"
+    ]
+  },
+  "suceava-romania": {
+    "description": "The gateway to Bukovina's UNESCO-listed painted monasteries, with a ruined medieval citadel and Carpathian villages close by.",
+    "climate": "humid continental",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Voroneț Monastery painted blue frescoes",
+      "Sucevița and Moldovița monasteries",
+      "Suceava Fortress",
+      "Bucovina village homestays",
+      "Ciocănești decorated houses",
+      "Rarău Mountains hiking"
+    ]
+  },
+  "sylhet-bangladesh": {
+    "description": "A green tea-growing corner of north-east Bangladesh, with rolling plantations, rainforest reserves and the shrine of Hazrat Shah Jalal.",
+    "climate": "tropical",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [10, 11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Malnichhara tea gardens",
+      "Ratargul Swamp Forest boat ride",
+      "Hazrat Shah Jalal Mazar",
+      "Jaflong and Piyain River",
+      "Lalakhal blue-water boat trip",
+      "Lawachara rainforest trek"
+    ]
+  },
+  "szczecin-poland": {
+    "description": "A Baltic port city of grand boulevards and a rebuilt waterfront, with a Pomeranian ducal castle and a striking modern philharmonic hall.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Pomeranian Dukes' Castle",
+      "Szczecin Philharmonic",
+      "Chrobry Embankment (Haken Terrace)",
+      "Underground Szczecin museum",
+      "Jasne Błonia and Kasprowicz Park",
+      "Wolin Island and Baltic beaches day trip"
+    ]
+  },
+  "taipei-taiwan": {
+    "description": "Taiwan's night-market capital, with the Taipei 101 skyline, hot springs, temples and mountain trails all within the metro area.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 5, 10, 11, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 850,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Taipei 101 observatory",
+      "Shilin Night Market",
+      "National Palace Museum",
+      "Beitou hot springs",
+      "Jiufen old street and Shifen lanterns",
+      "Elephant Mountain sunset hike"
     ]
   },
   "tallinn-estonia": {
