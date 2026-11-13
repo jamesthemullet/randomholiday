@@ -5638,6 +5638,25 @@
       "Day trip to Cape Finisterre"
     ]
   },
+  "sao-paulo-brazil": {
+    "description": "South America's largest city, packed with world-class restaurants, vast art museums, street art, and a restless nightlife.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 8, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Museu de Arte de São Paulo (MASP)",
+      "Beco do Batman street art",
+      "Mercado Municipal mortadella sandwich",
+      "Ibirapuera Park",
+      "Liberdade Japanese district",
+      "Vila Madalena bar crawl"
+    ]
+  },
   "sarajevo-bosnia-and-herzegovina": {
     "description": "Bosnia's mountain-ringed capital, where Ottoman bazaars, Austro-Hungarian boulevards and powerful wartime history sit within a few walkable streets.",
     "climate": "humid continental",
@@ -5655,6 +5674,44 @@
       "Cable car up Trebević Mountain",
       "Ćevapi and Bosnian coffee",
       "Day trip to Mostar and Kravice waterfalls"
+    ]
+  },
+  "seattle-tacoma-united-states": {
+    "description": "Pacific Northwest port city of waterfront markets, coffee culture, and mountain and sound views, with Mount Rainier close by.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 160,
+      "dailySpending": 110
+    },
+    "activities": [
+      "Pike Place Market",
+      "Space Needle",
+      "Museum of Pop Culture",
+      "Mount Rainier day trip",
+      "Bainbridge Island ferry",
+      "Chihuly Garden and Glass"
+    ]
+  },
+  "seoul-south-korea": {
+    "description": "A neon-lit capital where royal palaces, mountain temples, K-pop culture, and legendary street food sit side by side.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Gyeongbokgung Palace",
+      "Bukchon Hanok Village",
+      "Gwangjang Market street food",
+      "N Seoul Tower",
+      "DMZ tour",
+      "Korean barbecue in Hongdae"
     ]
   },
   "shanghai-people-s-republic-of-china": {
@@ -5714,6 +5771,25 @@
       "Old Market (Sharm El Maya)"
     ]
   },
+  "sibiu-romania": {
+    "description": "A beautifully preserved Transylvanian Saxon town of pastel townhouses, medieval squares, and gateways to the Carpathian mountains.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Piața Mare and Piața Mică",
+      "Bridge of Lies",
+      "Brukenthal Museum",
+      "Transfăgărășan Highway drive",
+      "Astra open-air museum",
+      "Council Tower views"
+    ]
+  },
   "skiathos-greece": {
     "description": "A small Sporades island of pine-fringed coves, a lively harbour town and some of the Aegean's most sheltered sandy beaches.",
     "climate": "mediterranean",
@@ -5731,6 +5807,25 @@
       "Day trip to Skopelos and Mamma Mia sites",
       "Kastro medieval fortress",
       "Papadiamantis House Museum"
+    ]
+  },
+  "skopje-north-macedonia": {
+    "description": "A compact Balkan capital mixing an Ottoman bazaar, Mother Teresa heritage, and statue-lined squares, with Lake Matka nearby.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Old Bazaar (Čaršija)",
+      "Kale Fortress",
+      "Stone Bridge",
+      "Matka Canyon kayaking",
+      "Mother Teresa Memorial House",
+      "Vodno Millennium Cross cable car"
     ]
   },
   "sofia-bulgaria": {
@@ -5769,6 +5864,25 @@
       "Day trip to Hvar",
       "Krka National Park",
       "Riva promenade"
+    ]
+  },
+  "st-john-s-nl-canada": {
+    "description": "Newfoundland's colourful clifftop capital, with Signal Hill, lively George Street pubs, and nearby icebergs, whales, and puffins.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Signal Hill and Cabot Tower",
+      "Jellybean Row houses",
+      "George Street pubs",
+      "Cape Spear lighthouse",
+      "Witless Bay puffin and whale boat tour",
+      "The Rooms museum"
     ]
   },
   "stockholm-sweden": {
