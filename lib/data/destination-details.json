@@ -5466,6 +5466,25 @@
       "Greek temples at Paestum"
     ]
   },
+  "salt-lake-city-united-states": {
+    "description": "A mountain-ringed Utah capital with a grand temple square, a lively craft-beer scene and ski resorts less than an hour away.",
+    "climate": "semi-arid",
+    "travelStyles": ["adventure", "city"],
+    "bestMonths": [1, 2, 3, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 140,
+      "dailySpending": 95
+    },
+    "activities": [
+      "Temple Square",
+      "Alta and Snowbird skiing",
+      "Antelope Island State Park",
+      "Utah Museum of Natural History",
+      "Great Salt Lake sunsets",
+      "Day trip to Park City"
+    ]
+  },
   "salzburg-austria": {
     "description": "Mozart's birthplace, a baroque Alpine city beneath a hilltop fortress, with lakes and mountains within easy reach of its old town.",
     "climate": "temperate",
@@ -5503,6 +5522,101 @@
       "Vathy and Kokkari beaches",
       "Muscat wine tasting at Samos cooperatives",
       "Hike Mount Kerkis and Potami waterfalls"
+    ]
+  },
+  "san-diego-united-states": {
+    "description": "A relaxed Southern California coastal city of surf beaches, Balboa Park museums, craft breweries and fish tacos.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 190,
+      "dailySpending": 110
+    },
+    "activities": [
+      "San Diego Zoo",
+      "Balboa Park",
+      "La Jolla Cove sea lions",
+      "Coronado Beach",
+      "Fish tacos in Ocean Beach",
+      "USS Midway Museum"
+    ]
+  },
+  "san-francisco-united-states": {
+    "description": "A hilly Pacific city of cable cars, the Golden Gate Bridge, Victorian terraces and a famously inventive food scene.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 500,
+      "hotelPerNight": 220,
+      "dailySpending": 125
+    },
+    "activities": [
+      "Golden Gate Bridge",
+      "Alcatraz Island",
+      "Cable car to Fisherman's Wharf",
+      "Ferry Building Marketplace",
+      "Day trip to Muir Woods",
+      "Mission District murals and burritos"
+    ]
+  },
+  "san-sebastian-spain": {
+    "description": "An elegant Basque resort around a shell-shaped bay, with great surf, a pintxos-packed old town and more Michelin stars per head than almost anywhere.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 170,
+      "dailySpending": 90
+    },
+    "activities": [
+      "La Concha beach",
+      "Pintxos crawl in the Parte Vieja",
+      "Monte Igueldo funicular",
+      "Zurriola surf beach",
+      "Basque Culinary Center",
+      "Day trip to Getaria txakoli vineyards"
+    ]
+  },
+  "santander-spain": {
+    "description": "A graceful Cantabrian port city with sandy urban beaches, a belle-époque palace and fresh seafood on the Bay of Biscay.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 100,
+      "dailySpending": 70
+    },
+    "activities": [
+      "El Sardinero beaches",
+      "Palacio de la Magdalena",
+      "Centro Botín gallery",
+      "Rabas (fried squid) in the old town",
+      "Day trip to Santillana del Mar",
+      "Altamira cave replica museum"
+    ]
+  },
+  "santiago-de-chile-chile": {
+    "description": "Chile's capital sits beneath the snow-capped Andes, with hilltop parks, Pablo Neruda's house, leafy wine valleys and great ski slopes nearby.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "adventure", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 900,
+      "hotelPerNight": 100,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Cerro San Cristóbal funicular",
+      "La Chascona (Neruda's house)",
+      "Plaza de Armas and Mercado Central",
+      "Casablanca and Maipo valley wine tasting",
+      "Skiing at Valle Nevado",
+      "Museo de la Memoria y los Derechos Humanos"
     ]
   },
   "santiago-de-compostela-spain": {
