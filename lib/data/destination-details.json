@@ -6227,6 +6227,25 @@
       "Tangier American Legation Museum"
     ]
   },
+  "targu-mures-romania": {
+    "description": "Transylvanian city of Secession-style façades, a grand Culture Palace and a Hungarian-Romanian mix, close to Saxon villages and the Carpathian foothills.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 60,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Culture Palace and its stained-glass Hall of Mirrors",
+      "Piața Trandafirilor rose square",
+      "Fortified Citadel and Calvinist church",
+      "Day trip to Sighișoara",
+      "Palace of Administration",
+      "Sovata Bear Lake spa"
+    ]
+  },
   "tashkent-uzbekistan": {
     "description": "Uzbekistan's sprawling capital, mixing Soviet-era grandeur, the Chorsu Bazaar and Islamic landmarks, and a gateway to the Silk Road cities.",
     "climate": "continental",
@@ -6284,6 +6303,25 @@
       "Anaga Rural Park"
     ]
   },
+  "tetouan-morocco": {
+    "description": "Whitewashed Andalusian-influenced medina in the Rif foothills, a UNESCO site with craft souks and Mediterranean beaches a short drive away.",
+    "climate": "mediterranean",
+    "travelStyles": ["culture", "city", "beach"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 55,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Tetouan Medina (UNESCO) and Bab el Okla",
+      "Royal Artisan School",
+      "Archaeological Museum",
+      "Martil and Cabo Negro beaches",
+      "Day trip to Chefchaouen",
+      "Skala viewpoint and mint tea"
+    ]
+  },
   "thessaloniki-greece": {
     "description": "Greece's second city, with Byzantine churches, a waterfront White Tower, vibrant markets and a famously good food scene.",
     "climate": "mediterranean",
@@ -6301,6 +6339,44 @@
       "Modiano Market",
       "Bougatsa pastry breakfast",
       "Day trip to Mount Olympus"
+    ]
+  },
+  "tianjin-people-s-republic-of-china": {
+    "description": "Port city an hour from Beijing, with colonial-era Italian and French quarters, riverside Ferris wheel, street-food culture and crosstalk comedy theatres.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 85,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Italian Style Town and Five Great Avenues",
+      "Tianjin Eye Ferris wheel",
+      "Ancient Culture Street",
+      "Goubuli baozi and jianbing guozi",
+      "Xiangsheng crosstalk show",
+      "Day trip to Jixian Panshan mountain"
+    ]
+  },
+  "timisoara-romania": {
+    "description": "Western Romania's Art Nouveau city, birthplace of the 1989 revolution, with pastel squares, riverside parks and the 2023 European Capital of Culture programme.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 65,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Piața Victoriei and the Orthodox Cathedral",
+      "Union Square baroque buildings",
+      "Huniade Castle and Banat Museum",
+      "Rose Park and Bega canal",
+      "Revolution Memorial Museum",
+      "Craft beer in the Fabric district"
     ]
   },
   "tirana-albania": {
@@ -6341,6 +6417,25 @@
       "Njeguši smoked ham and cheese"
     ]
   },
+  "tobago-trinidad-and-tobago": {
+    "description": "Quiet Caribbean island of coral reefs, rainforest reserve and Pigeon Point beach, with a slower pace than its sister island Trinidad.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [1, 2, 3, 4, 5, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 180,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Pigeon Point Heritage Park and Store Bay",
+      "Buccoo Reef glass-bottom boat",
+      "Nylon Pool shallow sandbar",
+      "Main Ridge Forest Reserve birdwatching",
+      "Argyle Waterfall",
+      "Crab and dumpling at Store Bay"
+    ]
+  },
   "toronto-canada": {
     "description": "Canada's largest city on Lake Ontario, with the CN Tower, diverse neighbourhoods, a strong food scene and Niagara Falls within day-trip range.",
     "climate": "humid continental",
@@ -6358,6 +6453,25 @@
       "Toronto Islands ferry",
       "St. Lawrence Market",
       "Day trip to Niagara Falls"
+    ]
+  },
+  "toulon-france": {
+    "description": "Provençal naval port with a Mediterranean harbour, Mont Faron cable car and a market-filled old town, close to the Hyères islands and Bandol vineyards.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [5, 6, 7, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Mont Faron cable car viewpoint",
+      "Cours Lafayette market",
+      "Naval museum on the harbour",
+      "Boat to the Porquerolles island beaches",
+      "Bandol wine tasting",
+      "Mourillon beaches"
     ]
   },
   "toulouse-france": {
