@@ -129,10 +129,14 @@ outbreaks and entry bans, so call it a `travelAdvisory`, not anything war-specif
 | Against travel to parts of the country          | Pickable, with a warning badge linking to the FCDO page. |
 | No warnings                                     | Normal.                                                  |
 
-- [ ] Add `lib/data/safety-overrides.json`, mapping destination id to `exclude | warn | ok` with a
+- [x] Add `lib/data/safety-overrides.json`, mapping destination id to `exclude | warn | ok` with a
       reason and date, plus a typed loader. Seed it by hand (Lebanon, Israel, Iraq…). Per-city
       overrides matter because FCDO advice is regional: Erbil isn't Baghdad, and Sharm el-Sheikh
-      isn't North Sinai.
+      isn't North Sinai. (`lib/data/safety-overrides.json` seeded with `warn` entries for
+      `beirut-lebanon`, `erbil-iraq` and `tel-aviv-israel` based on current FCDO regional advice;
+      `getSafetyOverride`/`getSafetyStatus` loader in `lib/travelAdvisory.ts`, tested in
+      `tests/lib/travelAdvisory.test.ts`. Not yet wired into `filterEngine.ts` — that's the next
+      step.)
 - [ ] Filter `exclude` destinations out in `lib/filterEngine.ts`, alongside the 100 km rule, plus
       tests. Update the baseline in `tests/lib/engineDiagnostics.test.ts`.
 - [ ] Show a warning badge (reusing `components/Badge`) on `warn` results, linking to the
