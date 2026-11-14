@@ -4059,6 +4059,25 @@
       "Yarra Valley wine tasting"
     ]
   },
+  "memmingen-germany": {
+    "description": "A well-preserved medieval Swabian town of painted gables, canals and fish-festival traditions, on the doorstep of the Allgäu Alps.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Old town and Marktplatz",
+      "Siebendächerhaus (Seven-Roof House)",
+      "Stadtbach canals and Fischertag in July",
+      "Christmas market",
+      "Allgäu Alps hiking day trip",
+      "Neuschwanstein Castle day trip"
+    ]
+  },
   "menorca-spain": {
     "description": "A quieter Balearic island of white-sand coves, Bronze Age stone monuments and the harbour towns of Ciutadella and Mahón, a UNESCO biosphere reserve.",
     "climate": "mediterranean",
@@ -4248,6 +4267,25 @@
       "Oktoberfest (late Sept)",
       "Day trip to Neuschwanstein Castle",
       "Christkindlmarkt on Marienplatz"
+    ]
+  },
+  "munster-osnabruck-germany": {
+    "description": "A bicycle-loving Westphalian university city with a rebuilt gabled old town, lakeside parks and the Peace of Westphalia history.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Prinzipalmarkt and the Historic City Hall",
+      "St Paul’s Cathedral and its weekly market",
+      "Cycle the Promenade ring",
+      "Lake Aasee",
+      "Pinkus Müller brewery",
+      "Christmas markets"
     ]
   },
   "murcia-spain": {
@@ -5600,6 +5638,25 @@
       "Day trip to Getaria txakoli vineyards"
     ]
   },
+  "sandefjord-norway": {
+    "description": "A fjord-side Norwegian spa town with whaling heritage, island beaches and Viking-ship history, within easy reach of Oslo.",
+    "climate": "oceanic",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Whaling Museum (Hvalfangstmuseet)",
+      "Whaling Monument fountain",
+      "Vesterøya beaches",
+      "Gokstad Viking ship burial mound",
+      "Sandefjord Spa",
+      "Tønsberg day trip"
+    ]
+  },
   "santander-spain": {
     "description": "A graceful Cantabrian port city with sandy urban beaches, a belle-époque palace and fresh seafood on the Bay of Biscay.",
     "climate": "oceanic",
@@ -6113,6 +6170,25 @@
       "Rarău Mountains hiking"
     ]
   },
+  "sumburgh-united-kingdom": {
+    "description": "The southern gateway to Shetland, with prehistoric Jarlshof, puffin cliffs, wild coastal walks and Norse-flavoured Lerwick.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 220,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": [
+      "Jarlshof prehistoric and Norse settlement",
+      "Sumburgh Head lighthouse and puffins",
+      "St Ninian’s Isle tombolo beach",
+      "Mousa Broch and storm petrels",
+      "Shetland Museum in Lerwick",
+      "Up Helly Aa fire festival in January"
+    ]
+  },
   "sylhet-bangladesh": {
     "description": "A green tea-growing corner of north-east Bangladesh, with rolling plantations, rainforest reserves and the shrine of Hazrat Shah Jalal.",
     "climate": "tropical",
@@ -6491,6 +6567,45 @@
       "Canal du Midi walk",
       "Cassoulet and Toulouse sausage",
       "Les Abattoirs contemporary art museum"
+    ]
+  },
+  "tours-france": {
+    "description": "A relaxed Loire Valley city of timbered squares, gastronomy and wine, and the base for the region’s great Renaissance châteaux.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 115,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Place Plumereau and the old town",
+      "Cathédrale Saint-Gatien",
+      "Château de Chenonceau",
+      "Château d’Amboise",
+      "Villandry gardens",
+      "Vouvray wine tasting"
+    ]
+  },
+  "trapani-italy": {
+    "description": "A Sicilian port town with salt-pan sunsets, Baroque churches and easy access to Erice, the Egadi islands and San Vito Lo Capo.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 130,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Saline di Trapani salt pans and windmills",
+      "Erice hilltop village and cable car",
+      "Egadi Islands boat trip to Favignana",
+      "San Vito Lo Capo beach",
+      "Couscous and fish in Trapani old town",
+      "Marsala wine cellars",
+      "Holy Week Processione dei Misteri"
     ]
   },
   "troms-norway": {
