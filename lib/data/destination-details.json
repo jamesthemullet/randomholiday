@@ -6608,6 +6608,25 @@
       "Holy Week Processione dei Misteri"
     ]
   },
+  "trieste-italy": {
+    "description": "Italy's elegant Habsburg-era port on the Adriatic, with a grand seafront piazza, old coffee houses and the Karst plateau behind.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Piazza Unità d'Italia",
+      "Miramare Castle",
+      "Caffè San Marco",
+      "Molo Audace pier",
+      "Karst osmiza wine taverns",
+      "Roman theatre"
+    ]
+  },
   "troms-norway": {
     "description": "An Arctic island city beneath the aurora in winter and the midnight sun in summer, ringed by fjords, peaks and Sámi culture.",
     "climate": "subarctic",
@@ -6625,6 +6644,25 @@
       "Whale watching from Skjervøy",
       "Sámi reindeer sledding",
       "Polaria Arctic Aquarium"
+    ]
+  },
+  "trondheim-norway": {
+    "description": "Norway's medieval capital on the Nidelva river, home to the Nidaros Cathedral, colourful wharf warehouses and a lively food scene.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 140,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Nidaros Cathedral",
+      "Bakklandet old town",
+      "Kristiansten Fortress",
+      "Old Town Bridge",
+      "Sverresborg Trøndelag Folk Museum",
+      "Munkholmen island"
     ]
   },
   "tunis-tunisia": {
@@ -6665,6 +6703,25 @@
       "Barolo wine tour in Langhe"
     ]
   },
+  "vagar-faroe-islands": {
+    "description": "Gateway to the Faroe Islands, with sheer sea cliffs, grass-roofed villages, waterfalls and puffin colonies scattered across the North Atlantic.",
+    "climate": "oceanic",
+    "travelStyles": ["adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 260,
+      "hotelPerNight": 190,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Mulafossur waterfall at Gásadalur",
+      "Lake Sørvágsvatn (Leitisvatn)",
+      "Tórshavn old town",
+      "Mykines puffin colony",
+      "Saksun village",
+      "Vestmanna bird cliffs boat trip"
+    ]
+  },
   "valencia-spain": {
     "description": "A sunny Spanish coastal city of futuristic architecture, a vast urban park, city beaches and the birthplace of paella.",
     "climate": "mediterranean",
@@ -6682,6 +6739,25 @@
       "Malvarrosa beach",
       "Paella in the Albufera",
       "Las Fallas festival"
+    ]
+  },
+  "varna-bulgaria": {
+    "description": "Bulgaria's Black Sea summer capital, with sandy city beaches, a Roman bath complex, seaside gardens and Golden Sands resort nearby.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "city"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Sea Garden",
+      "Golden Sands beach",
+      "Roman Thermae",
+      "Varna Archaeological Museum",
+      "Aladzha Monastery",
+      "Dolphinarium"
     ]
   },
   "venice-italy": {
@@ -6760,6 +6836,25 @@
       "Palace of Culture and Science viewing terrace"
     ]
   },
+  "washington-united-states": {
+    "description": "The US capital pairs grand monuments and free Smithsonian museums with leafy Georgetown streets and the cherry blossoms of the Tidal Basin.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 480,
+      "hotelPerNight": 230,
+      "dailySpending": 140
+    },
+    "activities": [
+      "Lincoln Memorial and National Mall",
+      "Smithsonian National Air and Space Museum",
+      "US Capitol tour",
+      "Georgetown waterfront",
+      "Tidal Basin cherry blossoms",
+      "Mount Vernon day trip"
+    ]
+  },
   "wroc-aw-poland": {
     "description": "Poland's city of bridges and islands, with a colourful market square, hunt for the tiny bronze gnomes and a lively student scene.",
     "climate": "continental",
@@ -6778,6 +6873,25 @@
       "Centennial Hall and Japanese Garden",
       "Christmas market",
       "Pierogi and Polish craft beer"
+    ]
+  },
+  "wuhan-people-s-republic-of-china": {
+    "description": "Central China's sprawling Yangtze river metropolis, known for the Yellow Crane Tower, East Lake and hot dry noodles for breakfast.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Yellow Crane Tower",
+      "East Lake",
+      "Hubei Provincial Museum",
+      "Hot dry noodles (re gan mian)",
+      "Hankou Jianghan Road",
+      "Yangtze River cruise"
     ]
   },
   "zadar-croatia": {
