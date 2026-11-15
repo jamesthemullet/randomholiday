@@ -550,6 +550,25 @@
       "Paddleboarding on Lady Bird Lake"
     ]
   },
+  "bacau-romania": {
+    "description": "A Moldavian county seat on the Bistrița river, close to Carpathian foothills, spa resorts and monasteries, with a low-cost, little-visited feel.",
+    "climate": "humid continental",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 55,
+      "dailySpending": 45
+    },
+    "activities": [
+      "George Bacovia Memorial House",
+      "Slănic Moldova spa town",
+      "Ceahlău Massif hike",
+      "Bistrița Monastery day trip",
+      "Sarmale and mămăligă",
+      "Bistrița river walks"
+    ]
+  },
   "bahrain-bahrain": {
     "description": "A compact island kingdom in the Gulf, pairing the Portuguese-era Bahrain Fort and Manama's souq with pearl-diving heritage, Formula 1 and superb Arabic food.",
     "climate": "hot desert",
@@ -1844,6 +1863,25 @@
       "Dallas Arts District",
       "Texas barbecue and Tex-Mex",
       "Reunion Tower observation deck"
+    ]
+  },
+  "dammam-saudi-arabia": {
+    "description": "The Eastern Province's Gulf port, with a palm-lined Corniche, a striking cultural centre at nearby Dhahran and access to the vast Al-Ahsa oasis.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 120,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Dammam Corniche",
+      "Ithra (King Abdulaziz Center for World Culture)",
+      "Half Moon Bay beach",
+      "Al-Ahsa Oasis day trip",
+      "Kabsa and Gulf seafood",
+      "Al-Khobar waterfront"
     ]
   },
   "dar-es-salaam-tanzania": {
@@ -4059,6 +4097,25 @@
       "Yarra Valley wine tasting"
     ]
   },
+  "melbourne-orlando-united-states": {
+    "description": "Central Florida's theme-park capital, with Disney and Universal, plus Kennedy Space Center and the Atlantic beaches of the Space Coast an hour east.",
+    "climate": "humid subtropical",
+    "travelStyles": ["adventure", "beach", "city"],
+    "bestMonths": [2, 3, 4, 5, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 160,
+      "dailySpending": 130
+    },
+    "activities": [
+      "Walt Disney World",
+      "Universal Orlando and the Wizarding World of Harry Potter",
+      "Kennedy Space Center Visitor Complex",
+      "Cocoa Beach",
+      "Airboat ride at Wild Florida",
+      "Icon Park and Lake Eola"
+    ]
+  },
   "memmingen-germany": {
     "description": "A well-preserved medieval Swabian town of painted gables, canals and fish-festival traditions, on the doorstep of the Allgäu Alps.",
     "climate": "continental",
@@ -5219,6 +5276,25 @@
       "Surf the Oudayas beach"
     ]
   },
+  "raleigh-durham-united-states": {
+    "description": "North Carolina's university Triangle, with Duke's gardens, a thriving food scene, Carolina barbecue and easy access to the Blue Ridge and coast.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Sarah P. Duke Gardens",
+      "North Carolina Museum of Art",
+      "Durham Bulls baseball game",
+      "Carolina barbecue",
+      "North Carolina Museum of Natural Sciences",
+      "Downtown Raleigh and Durham food halls"
+    ]
+  },
   "red-sea-saudi-arabia": {
     "description": "Saudi Arabia's newly opened Red Sea coast, with luxury island resorts, pristine coral reefs, mangrove lagoons and dramatic desert-mountain scenery.",
     "climate": "hot desert",
@@ -5750,6 +5826,25 @@
       "Cable car up Trebević Mountain",
       "Ćevapi and Bosnian coffee",
       "Day trip to Mostar and Kravice waterfalls"
+    ]
+  },
+  "satu-mare-romania": {
+    "description": "A Hungarian-influenced border city on the Someș river, with a pedestrian centre and gateway to Maramureș's wooden churches and Merry Cemetery.",
+    "climate": "humid continental",
+    "travelStyles": ["culture", "city"],
+    "bestMonths": [5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 85,
+      "hotelPerNight": 60,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Piața Libertății and the Firemen's Tower",
+      "Roman Catholic Cathedral",
+      "Satu Mare County Museum",
+      "Merry Cemetery at Săpânța",
+      "Maramureș wooden churches",
+      "Someș river promenade"
     ]
   },
   "seattle-tacoma-united-states": {
@@ -6606,6 +6701,25 @@
       "Couscous and fish in Trapani old town",
       "Marsala wine cellars",
       "Holy Week Processione dei Misteri"
+    ]
+  },
+  "treviso-italy": {
+    "description": "A canal-laced Veneto city of frescoed arcades and fish market island, birthplace of tiramisu and a short step from Prosecco hills and Venice.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 110,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Piazza dei Signori and Palazzo dei Trecento",
+      "Isola della Pescheria fish market",
+      "Walk the Buranelli canals and city walls",
+      "Tiramisu where it was invented",
+      "Prosecco Hills wine route near Valdobbiadene",
+      "Train to Venice"
     ]
   },
   "trieste-italy": {
