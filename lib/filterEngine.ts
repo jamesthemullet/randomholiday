@@ -1,6 +1,7 @@
 import type { Coordinates, Destination, TravelStyle } from './destinations'
 import { calculateDistance } from './distanceCalculator'
 import { calculateBudget } from './budgetCalculator'
+import { getSafetyStatus } from './travelAdvisory'
 
 /**
  * Destinations closer than this to the origin are excluded as too-local to be a "holiday" and,
@@ -28,9 +29,11 @@ export interface FilterResult {
   passed: Destination[]
   /** Destinations removed by the distance filter */
   removedByDistance: Destination[]
-  /** Destinations removed by the budget filter (after distance filter) */
+  /** Destinations removed by the FCDO travel advisory filter (after distance filter) */
+  removedByAdvisory: Destination[]
+  /** Destinations removed by the budget filter (after distance + advisory filters) */
   removedByBudget: Destination[]
-  /** Destinations removed by the travel-style filter (after distance + budget filters) */
+  /** Destinations removed by the travel-style filter (after distance + advisory + budget filters) */
   removedByStyle: Destination[]
 }
 
@@ -41,6 +44,11 @@ function meetsDistanceFilter(
 ): boolean {
   const distanceKm = calculateDistance(origin, destination.coordinates)
   return distanceKm >= MIN_DISTANCE_KM && distanceKm <= maxDistanceKm
+}
+
+/** Destinations the FCDO advises against all/essential travel to are never picked. */
+function meetsAdvisoryFilter(destination: Destination): boolean {
+  return getSafetyStatus(destination.id) !== 'exclude'
 }
 
 function meetsBudgetFilter(
@@ -63,7 +71,7 @@ function meetsStyleFilter(destination: Destination, travelStyles: TravelStyle[])
  * Applies hard filters to a list of destinations and returns both the passing
  * set and the destinations removed at each stage (for diagnostics / UI hints).
  *
- * Filter order: distance → budget → travel style.
+ * Filter order: distance → travel advisory → budget → travel style.
  */
 export function filterDestinations(
   destinations: Destination[],
@@ -77,6 +85,7 @@ export function filterDestinations(
   if (groupSize < 1) throw new Error('groupSize must be at least 1')
 
   const removedByDistance: Destination[] = []
+  const removedByAdvisory: Destination[] = []
   const removedByBudget: Destination[] = []
   const removedByStyle: Destination[] = []
 
@@ -86,7 +95,13 @@ export function filterDestinations(
     return false
   })
 
-  const afterBudget = afterDistance.filter((d) => {
+  const afterAdvisory = afterDistance.filter((d) => {
+    if (meetsAdvisoryFilter(d)) return true
+    removedByAdvisory.push(d)
+    return false
+  })
+
+  const afterBudget = afterAdvisory.filter((d) => {
     if (meetsBudgetFilter(d, origin, maxBudgetPerPerson, nights, groupSize)) return true
     removedByBudget.push(d)
     return false
@@ -101,5 +116,5 @@ export function filterDestinations(
         })
       : afterBudget
 
-  return { passed, removedByDistance, removedByBudget, removedByStyle }
+  return { passed, removedByDistance, removedByAdvisory, removedByBudget, removedByStyle }
 }

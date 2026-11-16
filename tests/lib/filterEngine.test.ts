@@ -1,7 +1,11 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { filterDestinations, MIN_DISTANCE_KM } from '@/lib/filterEngine'
 import type { FilterParams } from '@/lib/filterEngine'
 import type { Destination } from '@/lib/destinations'
+
+vi.mock('@/lib/travelAdvisory', () => ({
+  getSafetyStatus: (id: string) => (id === 'excluded-place' ? 'exclude' : 'ok'),
+}))
 
 // ── Fixtures ──────────────────────────────────────────────────────────────────
 
@@ -133,6 +137,7 @@ describe('filterDestinations', () => {
     const result = filterDestinations([], DEFAULT_PARAMS)
     expect(result.passed).toEqual([])
     expect(result.removedByDistance).toEqual([])
+    expect(result.removedByAdvisory).toEqual([])
     expect(result.removedByBudget).toEqual([])
     expect(result.removedByStyle).toEqual([])
   })
@@ -190,6 +195,35 @@ describe('filterDestinations', () => {
     const result = filterDestinations([sameLocation], DEFAULT_PARAMS)
     expect(result.passed).toHaveLength(0)
     expect(result.removedByDistance.map((d) => d.id)).toContain('london-itself')
+  })
+
+  // ── travel advisory filter ──────────────────────────────────────────────────
+
+  it('removes destinations the FCDO advises against all travel to', () => {
+    const excluded = makeDestination({
+      id: 'excluded-place',
+      coordinates: { lat: 48.8566, lng: 2.3522 },
+    })
+    const result = filterDestinations([...ALL, excluded], DEFAULT_PARAMS)
+    expect(result.passed.map((d) => d.id)).not.toContain('excluded-place')
+    expect(result.removedByAdvisory.map((d) => d.id)).toEqual(['excluded-place'])
+  })
+
+  it('keeps destinations with no exclude advisory', () => {
+    const result = filterDestinations(ALL, DEFAULT_PARAMS)
+    expect(result.removedByAdvisory).toHaveLength(0)
+    expect(result.passed).toHaveLength(ALL.length)
+  })
+
+  it('advisory filter runs only on destinations that passed the distance filter', () => {
+    // Too close to the origin to clear the distance filter even without the advisory override.
+    const excludedAndTooClose = makeDestination({
+      id: 'excluded-place',
+      coordinates: { lat: LONDON.lat + 0.01, lng: LONDON.lng },
+    })
+    const result = filterDestinations([excludedAndTooClose], DEFAULT_PARAMS)
+    expect(result.removedByDistance.map((d) => d.id)).toContain('excluded-place')
+    expect(result.removedByAdvisory).toHaveLength(0)
   })
 
   // ── budget filter ───────────────────────────────────────────────────────────
