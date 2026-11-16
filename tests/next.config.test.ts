@@ -6,7 +6,25 @@ describe('next.config redirects', () => {
     if (!nextConfig.redirects) throw new Error('nextConfig.redirects is not defined')
     const rules = await nextConfig.redirects()
 
-    expect(rules).toEqual([{ source: '/discover', destination: '/', permanent: true }])
+    expect(rules).toContainEqual({ source: '/discover', destination: '/', permanent: true })
+  })
+
+  it('permanently redirects destination pages whose id changed to their generated id', async () => {
+    if (!nextConfig.redirects) throw new Error('nextConfig.redirects is not defined')
+    const rules = await nextConfig.redirects()
+
+    expect(rules).toContainEqual({
+      source: '/destination/new-york-usa',
+      destination: '/destination/new-york-united-states',
+      permanent: true,
+    })
+    const { pickableDestinations } = await import('@/lib/catalogue')
+    const pickableIds = new Set(pickableDestinations.map((d) => d.id))
+    rules
+      .filter((rule) => rule.source.startsWith('/destination/'))
+      .forEach((rule) => {
+        expect(pickableIds.has(rule.destination.replace('/destination/', ''))).toBe(true)
+      })
   })
 })
 

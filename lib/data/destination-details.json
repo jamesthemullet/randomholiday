@@ -379,6 +379,24 @@
       "Durgiana Temple"
     ]
   },
+  "amsterdam-netherlands": {
+    "description": "Canals, cycling culture, world-class museums, and legendary nightlife in a perfectly compact city.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 130,
+      "dailySpending": 85
+    },
+    "activities": [
+      "Rijksmuseum",
+      "Van Gogh Museum",
+      "canal boat tour",
+      "Vondelpark",
+      "Anne Frank House"
+    ]
+  },
   "ancona-italy": {
     "description": "A working Adriatic port in Le Marche, with a Greek-founded old town and cathedral on a hill, and the Conero Riviera's white cliffs and coves close by.",
     "climate": "mediterranean",
@@ -647,6 +665,24 @@
       "Jame'asr Hassanil Bolkiah Mosque"
     ]
   },
+  "bangkok-thailand": {
+    "description": "Frenetic, flavourful, and fun — temples, street food, floating markets, and epic nightlife.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Grand Palace",
+      "Wat Pho",
+      "Chatuchak Market",
+      "Chao Phraya river",
+      "Khao San Road"
+    ]
+  },
   "banjul-the-gambia": {
     "description": "The Gambia's small riverside capital, a base for Atlantic beaches, mangrove birdwatching and boat trips to the slave-trade history of Kunta Kinteh Island.",
     "climate": "tropical",
@@ -684,6 +720,24 @@
       "Harrison's Cave",
       "Bathsheba surf and Soup Bowl",
       "Crop Over festival"
+    ]
+  },
+  "barcelona-spain": {
+    "description": "A vibrant coastal city famous for Gaudí architecture, golden beaches, and electrifying nightlife.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 120,
+      "hotelPerNight": 110,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Sagrada Família",
+      "Gothic Quarter",
+      "La Barceloneta beach",
+      "Park Güell",
+      "Camp Nou"
     ]
   },
   "bari-italy": {
@@ -1332,6 +1386,24 @@
       "Vörösmarty Square Christmas market"
     ]
   },
+  "buenos-aires-argentina": {
+    "description": "The Paris of South America — tango, steak, art deco architecture, and electric football culture.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 800,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "La Boca neighbourhood",
+      "tango show",
+      "Palermo bars",
+      "La Recoleta Cemetery",
+      "steak dinner"
+    ]
+  },
   "burgas-bulgaria": {
     "description": "A Black Sea port city with a green seafront garden and sandy beaches, and the gateway to Sunny Beach and the old town of Nessebar.",
     "climate": "humid subtropical",
@@ -1389,6 +1461,24 @@
       "Villasimius coves day trip"
     ]
   },
+  "cairo-egypt": {
+    "description": "The Great Pyramids, Sphinx, and 5,000 years of civilisation in Africa's largest metropolis.",
+    "climate": "hot desert",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [10, 11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 250,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Pyramids of Giza",
+      "Egyptian Museum",
+      "Khan el-Khalili bazaar",
+      "Nile cruise",
+      "Luxor day trip"
+    ]
+  },
   "calgary-canada": {
     "description": "Alberta's Rocky Mountain gateway city, home to the Calgary Stampede and a short drive from Banff, Lake Louise and Canmore.",
     "climate": "humid continental",
@@ -1406,6 +1496,42 @@
       "Lake Louise and Moraine Lake",
       "Drumheller and the Royal Tyrrell Museum",
       "Heritage Park Historical Village"
+    ]
+  },
+  "cancun-mexico": {
+    "description": "Caribbean beaches, Mayan ruins, cenote swimming, and vibrant nightlife on Mexico's Yucatán coast.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [12, 1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Chichen Itza",
+      "cenote diving",
+      "Tulum ruins",
+      "snorkelling Cozumel",
+      "Isla Mujeres"
+    ]
+  },
+  "cape-town-south-africa": {
+    "description": "Spectacular Table Mountain towers over beaches, vineyards, and one of the world's most diverse cities.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "adventure", "city"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Table Mountain",
+      "Cape Point",
+      "Boulders Beach penguins",
+      "Stellenbosch wine",
+      "V&A Waterfront"
     ]
   },
   "carcassonne-france": {
@@ -1711,6 +1837,24 @@
       "Hohenzollern Bridge love-lock walk",
       "Rhine river cruise",
       "Cologne Christmas Markets"
+    ]
+  },
+  "colombo-sri-lanka": {
+    "description": "The Pearl of the Indian Ocean — ancient temples, tea plantations, leopards, and surf beaches in one island.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure", "culture"],
+    "bestMonths": [12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Sigiriya Rock Fortress",
+      "tea country",
+      "elephant orphanage",
+      "Galle Fort",
+      "surf Arugam Bay"
     ]
   },
   "constanta-romania": {
@@ -2074,6 +2218,18 @@
       "Dortmund Christmas market"
     ]
   },
+  "dubai-united-arab-emirates": {
+    "description": "A city of superlatives — tallest skyscraper, largest mall, and unmissable luxury in the desert.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "beach", "culture"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 350,
+      "hotelPerNight": 140,
+      "dailySpending": 90
+    },
+    "activities": ["Burj Khalifa", "Dubai Mall", "desert safari", "Palm Jumeirah", "Dubai Frame"]
+  },
   "dublin-ireland": {
     "description": "Ireland's compact capital pairs Georgian squares, literary pubs and the Guinness Storehouse with easy coastal escapes along Dublin Bay.",
     "climate": "oceanic",
@@ -2091,6 +2247,24 @@
       "Temple Bar live music",
       "Howth cliff walk",
       "Day trip to Glendalough"
+    ]
+  },
+  "dubrovnik-croatia": {
+    "description": "The \"Pearl of the Adriatic\" — a walled medieval city on turquoise waters with dramatic sea views.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture", "city"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 120,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Old Town walls",
+      "Lokrum Island",
+      "cable car",
+      "sea kayaking",
+      "Game of Thrones tour"
     ]
   },
   "dundee-united-kingdom": {
@@ -2129,6 +2303,25 @@
       "Rhine Tower",
       "Kunstsammlung K20",
       "Christmas markets"
+    ]
+  },
+  "edinburgh-united-kingdom": {
+    "description": "Scotland's dramatic capital perches on volcanic rock — a city of medieval closes, festivals, and whisky.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 7, 8, 9, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 110,
+      "dailySpending": 70
+    },
+    "activities": [
+      "Edinburgh Castle",
+      "Royal Mile",
+      "Arthur's Seat hike",
+      "Scotch whisky trail",
+      "Fringe Festival",
+      "Christmas market and Hogmanay"
     ]
   },
   "eindhoven-netherlands": {
@@ -2832,6 +3025,24 @@
       "Fischbrötchen at the harbour"
     ]
   },
+  "hanoi-vietnam": {
+    "description": "Vietnam's ancient, chaotic, charming capital — French colonial architecture, pho, and Hoan Kiem Lake.",
+    "climate": "subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [10, 11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 580,
+      "hotelPerNight": 40,
+      "dailySpending": 30
+    },
+    "activities": [
+      "Old Quarter",
+      "Hoan Kiem Lake",
+      "Ho Chi Minh Mausoleum",
+      "water puppet show",
+      "Ha Long Bay trip"
+    ]
+  },
   "hanover-germany": {
     "description": "Lower Saxony's calm, green capital, with baroque Herrenhausen Gardens, a lakeside Maschsee, a lively old town and a famous trade-fair heritage.",
     "climate": "oceanic",
@@ -2906,6 +3117,24 @@
       "Day trip to Matala beach",
       "Lions Square and the old market",
       "Dakos and Cretan raki"
+    ]
+  },
+  "ho-chi-minh-city-vietnam": {
+    "description": "A buzzing, traffic-filled city of street food, rooftop bars, Cu Chi Tunnels, and Mekong Delta tours.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 560,
+      "hotelPerNight": 40,
+      "dailySpending": 30
+    },
+    "activities": [
+      "Cu Chi Tunnels",
+      "War Remnants Museum",
+      "Mekong Delta",
+      "Ben Thanh Market",
+      "rooftop bars"
     ]
   },
   "hong-kong-people-s-republic-of-china": {
@@ -3095,6 +3324,24 @@
       "Laxey Wheel",
       "Calf of Man wildlife trip",
       "Peel Castle and kippers"
+    ]
+  },
+  "istanbul-turkey": {
+    "description": "A city straddling two continents — mosques, bazaars, Bosphorus cruises, and legendary cuisine.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 70,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Hagia Sophia",
+      "Grand Bazaar",
+      "Topkapi Palace",
+      "Bosphorus cruise",
+      "Turkish bath"
     ]
   },
   "ivalo-finland": {
@@ -3759,6 +4006,24 @@
       "Meze and halloumi"
     ]
   },
+  "las-vegas-united-states": {
+    "description": "The Entertainment Capital of the World — casinos, shows, grand canyon day trips, and non-stop excess.",
+    "climate": "hot desert",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [3, 4, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 450,
+      "hotelPerNight": 100,
+      "dailySpending": 120
+    },
+    "activities": [
+      "The Strip",
+      "Grand Canyon",
+      "Cirque du Soleil",
+      "Fremont Street",
+      "helicopter tour"
+    ]
+  },
   "limoges-france": {
     "description": "A porcelain-making city on the Vienne river, known for its enamel and china, medieval quarters and the lively Les Halles market.",
     "climate": "oceanic",
@@ -3795,6 +4060,24 @@
       "Linzer torte at Café Jindrak",
       "Linz Hauptplatz",
       "Mauthausen Memorial day trip"
+    ]
+  },
+  "lisbon-portugal": {
+    "description": "Hilly, sun-drenched Lisbon enchants with trams, azulejo tiles, fado music, and excellent seafood.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 90,
+      "dailySpending": 65
+    },
+    "activities": [
+      "Belém Tower",
+      "Alfama district",
+      "Jerónimos Monastery",
+      "tram 28",
+      "Pastéis de Nata"
     ]
   },
   "ljubljana-slovenia": {
@@ -3984,6 +4267,18 @@
       "Gibralfaro castle"
     ]
   },
+  "male-maldives": {
+    "description": "Ultra-private overwater bungalows on the bluest water on Earth — the ultimate luxury beach escape.",
+    "climate": "tropical",
+    "travelStyles": ["beach"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 800,
+      "hotelPerNight": 350,
+      "dailySpending": 120
+    },
+    "activities": ["snorkelling", "diving", "sunset cruise", "dolphin watching", "sandbank picnic"]
+  },
   "malmo-sweden": {
     "description": "Sweden's multicultural southern port city, linked to Copenhagen by the Øresund Bridge, with a waterfront Turning Torso, leafy parks and great falafel.",
     "climate": "oceanic",
@@ -4003,6 +4298,24 @@
       "Day trip to Copenhagen over the Øresund Bridge"
     ]
   },
+  "malta-malta": {
+    "description": "A tiny Baroque capital on a limestone island — crystal-clear lagoons, Knights Templar history, and sun year-round.",
+    "climate": "mediterranean",
+    "travelStyles": ["culture", "beach", "city"],
+    "bestMonths": [4, 5, 6, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Blue Lagoon",
+      "Valletta Baroque walk",
+      "Mdina",
+      "cliff diving",
+      "St. John's Co-Cathedral"
+    ]
+  },
   "manchester-united-kingdom": {
     "description": "A northern English city of red-brick mills, world-famous football and music heritage, canalside bars and a thriving independent food and gig scene.",
     "climate": "oceanic",
@@ -4020,6 +4333,24 @@
       "Curry Mile and Chinatown dining",
       "John Rylands Library",
       "Peak District day trip"
+    ]
+  },
+  "marrakesh-morocco": {
+    "description": "A sensory explosion of spice-scented souks, pink palaces, and rooftop terraces in the Medina.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [3, 4, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Jemaa el-Fnaa",
+      "Majorelle Garden",
+      "hammam",
+      "Atlas Mountains day trip",
+      "cooking class"
     ]
   },
   "marsa-alam-egypt": {
@@ -4364,6 +4695,24 @@
       "Zarangollo and marinera tapa"
     ]
   },
+  "muscat-oman": {
+    "description": "A sophisticated, safe, and deeply welcoming Gulf nation — pristine wadis, desert camping, and stunning forts.",
+    "climate": "hot desert",
+    "travelStyles": ["culture", "adventure"],
+    "bestMonths": [10, 11, 12, 1, 2, 3],
+    "estimatedCosts": {
+      "flightFromEurope": 400,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Sultan Qaboos Grand Mosque",
+      "Wahiba Sands desert",
+      "wadi bashing",
+      "Nizwa Fort",
+      "snorkelling"
+    ]
+  },
   "mykonos-greece": {
     "description": "A glamorous Cycladic island of whitewashed lanes, windmills and sandy beaches, famed for sunset views over Little Venice and a lively beach-club scene.",
     "climate": "mediterranean",
@@ -4495,6 +4844,37 @@
       "Arawak Cay conch fritters",
       "Straw Market",
       "Boat trip to the Exuma cays"
+    ]
+  },
+  "new-orleans-united-states": {
+    "description": "Jazz, Cajun food, Mardi Gras, and the most unique cultural blend in North America — the Big Easy.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [2, 3, 4, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 500,
+      "hotelPerNight": 130,
+      "dailySpending": 90
+    },
+    "activities": ["French Quarter", "Bourbon Street", "jazz clubs", "Mardi Gras", "swamp tour"]
+  },
+  "new-york-united-states": {
+    "description": "The city that never sleeps — iconic skyline, world-class food, Broadway, and Central Park.",
+    "climate": "humid continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 11, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 400,
+      "hotelPerNight": 200,
+      "dailySpending": 120
+    },
+    "activities": [
+      "Times Square",
+      "Central Park",
+      "Metropolitan Museum",
+      "Brooklyn Bridge",
+      "Broadway show",
+      "Holiday markets and Rockefeller Center tree"
     ]
   },
   "newcastle-upon-tyne-united-kingdom": {
@@ -4839,6 +5219,18 @@
       "Meze dinner with halloumi"
     ]
   },
+  "paris-france": {
+    "description": "The City of Light — romance, art, fashion, and the finest cuisine on the planet.",
+    "climate": "temperate",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 160,
+      "dailySpending": 100
+    },
+    "activities": ["Eiffel Tower", "Louvre", "Montmartre", "Seine river cruise", "Versailles"]
+  },
   "parma-italy": {
     "description": "A graceful Emilian city of frescoed churches and a grand opera house, home to Parmigiano-Reggiano, prosciutto di Parma and some of Italy's best eating.",
     "climate": "humid subtropical",
@@ -4970,6 +5362,24 @@
       "Heard Museum of Native American art",
       "Musical Instrument Museum",
       "Day trip to Sedona red rocks"
+    ]
+  },
+  "phuket-thailand": {
+    "description": "Thailand's largest island offers emerald-green sea, white-sand beaches, and buzzing beach towns.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "adventure"],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 580,
+      "hotelPerNight": 55,
+      "dailySpending": 40
+    },
+    "activities": [
+      "Patong Beach",
+      "Phi Phi Islands trip",
+      "Big Buddha",
+      "snorkelling",
+      "Phang Nga Bay"
     ]
   },
   "pisa-italy": {
@@ -5105,6 +5515,24 @@
       "Skiing at Tatranská Lomnica"
     ]
   },
+  "port-of-spain-trinidad-and-tobago": {
+    "description": "The birthplace of steelpan and soca — a Caribbean twin island with rainforests, leatherback turtles, and Carnival madness.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture", "adventure"],
+    "bestMonths": [1, 2, 3, 4, 5],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 90,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Carnival",
+      "leatherback turtle nesting",
+      "bird watching",
+      "Pigeon Point beach",
+      "steel band show"
+    ]
+  },
   "portland-or-united-states": {
     "description": "Oregon's laid-back city of food carts, craft breweries and bookshops, with Mount Hood and the Columbia River Gorge close by.",
     "climate": "oceanic",
@@ -5124,6 +5552,24 @@
       "Mount Hood day trip"
     ]
   },
+  "porto-portugal": {
+    "description": "Port wine, tiled façades, dramatic bridges, and the most beautiful bookshop in the world.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 90,
+      "hotelPerNight": 80,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Ribeira waterfront",
+      "port wine lodges",
+      "Livraria Lello",
+      "Dom Luís Bridge",
+      "Foz do Douro beach"
+    ]
+  },
   "poznan-poland": {
     "description": "A Renaissance market square ringed by pastel townhouses, famed for its mechanical goats, croissants and a young, university-driven food scene.",
     "climate": "humid continental",
@@ -5141,6 +5587,25 @@
       "Imperial Castle",
       "Lake Malta",
       "Craft beer in Jezyce"
+    ]
+  },
+  "prague-czech-republic": {
+    "description": "The golden city of a hundred spires — a fairy-tale medieval centre with world-class craft beer.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 80,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Old Town Square",
+      "Charles Bridge",
+      "Prague Castle",
+      "Josefov",
+      "Czech beer tasting",
+      "Old Town Square Christmas market"
     ]
   },
   "preveza-lefkada-greece": {
@@ -5371,6 +5836,24 @@
       "Vermouth tasting in Reus"
     ]
   },
+  "reykjavik-iceland": {
+    "description": "Gateway to the midnight sun, Northern Lights, geysers, glaciers, and dramatic volcanic landscapes.",
+    "climate": "subarctic",
+    "travelStyles": ["adventure", "culture"],
+    "bestMonths": [6, 7, 8, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 160,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Northern Lights tour",
+      "Golden Circle",
+      "Blue Lagoon",
+      "glacier hike",
+      "whale watching"
+    ]
+  },
   "rhodes-greece": {
     "description": "A Dodecanese island where a walled medieval Old Town, Lindos's hilltop acropolis and long Aegean beaches share one sunny coastline.",
     "climate": "mediterranean",
@@ -5447,6 +5930,24 @@
       "Tempio Malatestiano"
     ]
   },
+  "rio-de-janeiro-brazil": {
+    "description": "Cristo Redentor, Carnival, samba, Ipanema beach — the Marvelous City delivers on all fronts.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [12, 1, 2, 9, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Christ the Redeemer",
+      "Sugarloaf Mountain",
+      "Ipanema beach",
+      "Lapa nightlife",
+      "favela tour"
+    ]
+  },
   "riyadh-saudi-arabia": {
     "description": "Saudi Arabia's fast-changing capital, mixing the mud-brick heritage of Diriyah with glass towers, entertainment districts and desert escarpments on its doorstep.",
     "climate": "hot desert",
@@ -5483,6 +5984,24 @@
       "Aligot and Laguiole cheese tasting",
       "Millau Viaduct drive",
       "Place du Bourg old town stroll"
+    ]
+  },
+  "rome-italy": {
+    "description": "The Eternal City — two millennia of art, architecture, and incredible food at every turn.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 120,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Colosseum",
+      "Vatican Museums",
+      "Trevi Fountain",
+      "Pantheon",
+      "Trastevere dinner"
     ]
   },
   "rotterdam-the-hague-netherlands": {
@@ -5695,6 +6214,24 @@
       "Mission District murals and burritos"
     ]
   },
+  "san-jose-cr-costa-rica": {
+    "description": "Pura vida! Rainforests, volcanoes, sloths, world-class surfing, and eco-adventure all in one country.",
+    "climate": "tropical",
+    "travelStyles": ["adventure", "beach"],
+    "bestMonths": [12, 1, 2, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Arenal Volcano",
+      "Manuel Antonio beach",
+      "zip-lining",
+      "sloth sanctuary",
+      "surfing Tamarindo"
+    ]
+  },
   "san-sebastian-spain": {
     "description": "An elegant Basque resort around a shell-shaped bay, with great surf, a pintxos-packed old town and more Michelin stars per head than almost anywhere.",
     "climate": "oceanic",
@@ -5790,6 +6327,18 @@
       "Day trip to Cape Finisterre"
     ]
   },
+  "santorini-greece": {
+    "description": "An iconic Greek island with whitewashed villages perched on volcanic cliffs above a deep-blue caldera.",
+    "climate": "mediterranean",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 200,
+      "hotelPerNight": 180,
+      "dailySpending": 90
+    },
+    "activities": ["Oia sunset", "caldera boat tour", "wine tasting", "Red Beach", "Akrotiri ruins"]
+  },
   "sao-paulo-brazil": {
     "description": "South America's largest city, packed with world-class restaurants, vast art museums, street art, and a restless nightlife.",
     "climate": "humid subtropical",
@@ -5883,6 +6432,24 @@
       "N Seoul Tower",
       "DMZ tour",
       "Korean barbecue in Hongdae"
+    ]
+  },
+  "seville-spain": {
+    "description": "Flamenco, tapas, orange trees, and the most exuberant Easter and April Fair celebrations on Earth.",
+    "climate": "mediterranean",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 90,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Real Alcázar",
+      "Giralda tower",
+      "flamenco show",
+      "tapas bar crawl",
+      "Plaza de España"
     ]
   },
   "shanghai-people-s-republic-of-china": {
@@ -5997,6 +6564,24 @@
       "Transfăgărășan Highway drive",
       "Astra open-air museum",
       "Council Tower views"
+    ]
+  },
+  "singapore-singapore": {
+    "description": "A gleaming city-state of futuristic gardens, hawker food stalls, and impeccable efficiency.",
+    "climate": "tropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [2, 3, 6, 7],
+    "estimatedCosts": {
+      "flightFromEurope": 600,
+      "hotelPerNight": 130,
+      "dailySpending": 75
+    },
+    "activities": [
+      "Gardens by the Bay",
+      "Marina Bay Sands",
+      "hawker centres",
+      "Sentosa Island",
+      "Little India"
     ]
   },
   "skiathos-greece": {
@@ -6284,6 +6869,24 @@
       "Up Helly Aa fire festival in January"
     ]
   },
+  "sydney-australia": {
+    "description": "Bondi Beach, Opera House, harbour cruises, and a cafe culture that rivals any city on Earth.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [9, 10, 11, 12, 3, 4],
+    "estimatedCosts": {
+      "flightFromEurope": 1100,
+      "hotelPerNight": 150,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Sydney Opera House",
+      "Bondi Beach",
+      "harbour bridge climb",
+      "Taronga Zoo",
+      "Blue Mountains"
+    ]
+  },
   "sylhet-bangladesh": {
     "description": "A green tea-growing corner of north-east Bangladesh, with rolling plantations, rainforest reserves and the shrine of Hazrat Shah Jalal.",
     "climate": "tropical",
@@ -6434,6 +7037,24 @@
       "Amir Timur Square",
       "Plov at the Central Asian Plov Centre",
       "High-speed train to Samarkand"
+    ]
+  },
+  "tbilisi-georgia": {
+    "description": "A hidden gem at the crossroads of Europe and Asia — ancient baths, natural wine, and the Caucasus mountains.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 150,
+      "hotelPerNight": 50,
+      "dailySpending": 35
+    },
+    "activities": [
+      "Narikala fortress",
+      "sulphur baths",
+      "Old Town",
+      "Kazbegi mountains",
+      "Georgian wine tasting"
     ]
   },
   "tel-aviv-israel": {
@@ -6605,6 +7226,24 @@
       "Main Ridge Forest Reserve birdwatching",
       "Argyle Waterfall",
       "Crab and dumpling at Store Bay"
+    ]
+  },
+  "tokyo-japan": {
+    "description": "The future and the past collide in the world's greatest city — neon, ramen, robots, and Zen gardens.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [3, 4, 5, 10, 11],
+    "estimatedCosts": {
+      "flightFromEurope": 750,
+      "hotelPerNight": 100,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Shibuya Crossing",
+      "Tsukiji market",
+      "Shinjuku",
+      "teamLab digital art",
+      "day trip to Nikko"
     ]
   },
   "toronto-canada": {
@@ -6855,6 +7494,24 @@
       "Las Fallas festival"
     ]
   },
+  "vancouver-canada": {
+    "description": "Mountains meet ocean in this cosmopolitan Pacific city — skiing, kayaking, and sushi-world-class dining.",
+    "climate": "oceanic",
+    "travelStyles": ["city", "adventure"],
+    "bestMonths": [6, 7, 8, 9],
+    "estimatedCosts": {
+      "flightFromEurope": 550,
+      "hotelPerNight": 160,
+      "dailySpending": 100
+    },
+    "activities": [
+      "Stanley Park",
+      "Granville Island",
+      "Whistler ski resort",
+      "sea kayaking",
+      "Capilano Suspension Bridge"
+    ]
+  },
   "varna-bulgaria": {
     "description": "Bulgaria's Black Sea summer capital, with sandy city beaches, a Roman bath complex, seaside gardens and Golden Sands resort nearby.",
     "climate": "humid subtropical",
@@ -6910,6 +7567,25 @@
       "Castelvecchio and Ponte Scaligero",
       "Day trip to Lake Garda",
       "Amarone wine tasting in Valpolicella"
+    ]
+  },
+  "vienna-austria": {
+    "description": "Imperial grandeur meets coffee house culture — Vienna is Europe's most refined capital.",
+    "climate": "continental",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 100,
+      "hotelPerNight": 120,
+      "dailySpending": 80
+    },
+    "activities": [
+      "Schönbrunn Palace",
+      "Kunsthistorisches Museum",
+      "Opera House",
+      "Naschmarkt",
+      "Café Central",
+      "Christmas markets"
     ]
   },
   "vilnius-lithuania": {
@@ -7121,6 +7797,24 @@
       "Mizithres viewpoint",
       "Zakynthos town",
       "Marathonisi turtle island"
+    ]
+  },
+  "zanzibar-tanzania": {
+    "description": "Spice island paradise with powder-white beaches, turquoise lagoons, and Stone Town's rich history.",
+    "climate": "tropical",
+    "travelStyles": ["beach", "culture"],
+    "bestMonths": [6, 7, 8, 9, 12, 1, 2],
+    "estimatedCosts": {
+      "flightFromEurope": 700,
+      "hotelPerNight": 80,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Nungwi beach",
+      "Stone Town tour",
+      "spice tour",
+      "snorkelling",
+      "sunset dhow cruise"
     ]
   },
   "zaragoza-spain": {

@@ -6,7 +6,7 @@ import {
   toggleTravelStyle,
   TRAVEL_STYLE_OPTIONS,
 } from '@/components/TravelStyleSelector'
-import type { TravelStyle } from '@/lib/destinations'
+import type { TravelStyle } from '@/lib/types'
 
 describe('TravelStyleSelector', () => {
   it('renders all travel style options', () => {

@@ -1,3 +1,19 @@
+// Destination ids that changed when lib/destinations.ts was retired and every destination took
+// its generated id from lib/data/london-destinations.json.
+const RENAMED_DESTINATIONS = {
+  'costa-rica': 'san-jose-cr-costa-rica',
+  'dubai-uae': 'dubai-united-arab-emirates',
+  'edinburgh-uk': 'edinburgh-united-kingdom',
+  'las-vegas-usa': 'las-vegas-united-states',
+  maldives: 'male-maldives',
+  'marrakech-morocco': 'marrakesh-morocco',
+  'new-orleans-usa': 'new-orleans-united-states',
+  'new-york-usa': 'new-york-united-states',
+  singapore: 'singapore-singapore',
+  'trinidad-and-tobago': 'port-of-spain-trinidad-and-tobago',
+  'valletta-malta': 'malta-malta',
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -5,7 +21,14 @@ const nextConfig = {
   },
   async redirects() {
     // The search form now lives on the homepage; keep old /discover links working.
-    return [{ source: '/discover', destination: '/', permanent: true }]
+    return [
+      { source: '/discover', destination: '/', permanent: true },
+      ...Object.entries(RENAMED_DESTINATIONS).map(([from, to]) => ({
+        source: `/destination/${from}`,
+        destination: `/destination/${to}`,
+        permanent: true,
+      })),
+    ]
   },
   async headers() {
     return [

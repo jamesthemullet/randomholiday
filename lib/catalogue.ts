@@ -1,7 +1,6 @@
 import londonData from './data/london-destinations.json'
 import detailsData from './data/destination-details.json'
-import { destinations } from './destinations'
-import type { Destination } from './destinations'
+import type { Destination } from './types'
 
 export type LondonAirport = 'LHR' | 'LGW' | 'STN' | 'LTN' | 'LCY' | 'SEN'
 
@@ -19,7 +18,7 @@ type FactKey = 'id' | 'name' | 'country' | 'countryCode' | 'coordinates' | 'cont
 /** Facts every catalogue entry has, looked up from Wikipedia/Wikidata rather than written. */
 export type DestinationFacts = Pick<Destination, FactKey>
 
-/** Everything else about a destination, written by hand (or by the scheduled updater). */
+/** Everything else about a destination, written in destination-details.json. */
 export type DestinationDetails = Omit<Destination, FactKey>
 
 /**
@@ -39,52 +38,14 @@ const londonDestinations = londonData as LondonDestination[]
 const destinationDetails = detailsData as Record<string, Partial<DestinationDetails>>
 
 /**
- * Hand-written destination ids whose generated London counterpart has a different id. Listed
- * explicitly rather than matched by distance, which would wrongly pair New York with Newark and
- * the Amalfi Coast with Salerno. Hand-written ids not here or in the generated data are left out
- * of the catalogue.
- */
-export const HAND_WRITTEN_ALIASES: Record<string, string> = {
-  'costa-rica': 'san-jose-cr-costa-rica',
-  'dubai-uae': 'dubai-united-arab-emirates',
-  'edinburgh-uk': 'edinburgh-united-kingdom',
-  'las-vegas-usa': 'las-vegas-united-states',
-  maldives: 'male-maldives',
-  'marrakech-morocco': 'marrakesh-morocco',
-  'new-orleans-usa': 'new-orleans-united-states',
-  'new-york-usa': 'new-york-united-states',
-  singapore: 'singapore-singapore',
-  'trinidad-and-tobago': 'port-of-spain-trinidad-and-tobago',
-  'valletta-malta': 'malta-malta',
-}
-
-/**
  * Builds the catalogue from the generated London destinations, which are the source of truth for
- * where you can go from London. A hand-written destination is only included when it matches one of
- * them (keeping its own data and gaining the London route); one with no London route is left out.
- * Generated destinations without a hand-written match are added with whatever details exist.
+ * where you can go from London, merging in whatever details have been written for each.
  */
 export function buildCatalogue(
-  handWritten: Destination[],
   london: LondonDestination[],
-  details: Record<string, Partial<DestinationDetails>>,
-  aliases: Record<string, string> = HAND_WRITTEN_ALIASES
+  details: Record<string, Partial<DestinationDetails>>
 ): CatalogueEntry[] {
-  const londonById = new Map(london.map((destination) => [destination.id, destination]))
-  const matchedIds = new Set<string>()
-  const entries: CatalogueEntry[] = []
-  for (const destination of handWritten) {
-    const match = londonById.get(aliases[destination.id] ?? destination.id)
-    if (!match) continue
-    matchedIds.add(match.id)
-    entries.push({ ...destination, london: match.london })
-  }
-
-  for (const destination of london) {
-    if (matchedIds.has(destination.id)) continue
-    entries.push({ ...destination, ...details[destination.id] })
-  }
-  return entries
+  return london.map((destination) => ({ ...destination, ...details[destination.id] }))
 }
 
 /** True when an entry has every detail the recommendation engine and destination UI rely on. */
@@ -100,7 +61,7 @@ export function isPickable(entry: CatalogueEntry): entry is CatalogueEntry & Des
   )
 }
 
-export const catalogue = buildCatalogue(destinations, londonDestinations, destinationDetails)
+export const catalogue = buildCatalogue(londonDestinations, destinationDetails)
 
 /** The destinations the engine may recommend: catalogue entries with all their details. */
 export const pickableDestinations: Destination[] = catalogue.filter(isPickable)

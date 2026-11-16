@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { renderToString } from 'react-dom/server'
 import { ResultsClient } from '@/app/results/ResultsClient'
 import { departureCities } from '@/lib/departureCities'
-import { destinations } from '@/lib/destinations'
+import { pickableDestinations as destinations } from '@/lib/catalogue'
 import { pickableDestinations } from '@/lib/catalogue'
 import { getRecommendations } from '@/lib/recommendationEngine'
 

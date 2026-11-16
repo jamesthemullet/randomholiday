@@ -3,7 +3,7 @@ import { getRecommendations } from '@/lib/recommendationEngine'
 import type { RecommendationParams } from '@/lib/recommendationEngine'
 import { filterDestinations } from '@/lib/filterEngine'
 import { scoreDestinations } from '@/lib/scoringEngine'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 
 // ── Fixtures ──────────────────────────────────────────────────────────────────
 

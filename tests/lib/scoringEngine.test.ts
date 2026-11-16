@@ -9,7 +9,7 @@ import {
   DEFAULT_WEIGHTS,
 } from '@/lib/scoringEngine'
 import type { ScoreParams } from '@/lib/scoringEngine'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 
 // ── Fixtures ──────────────────────────────────────────────────────────────────
 

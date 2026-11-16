@@ -1,4 +1,4 @@
-import type { Destination } from './destinations'
+import type { Destination } from './types'
 import type { DepartureCity } from './departureCities'
 import { getRecommendations } from './recommendationEngine'
 import type { RecommendationParams } from './recommendationEngine'

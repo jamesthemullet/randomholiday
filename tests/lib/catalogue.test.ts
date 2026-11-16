@@ -4,7 +4,6 @@ import detailsData from '@/lib/data/destination-details.json'
 import {
   buildCatalogue,
   catalogue,
-  HAND_WRITTEN_ALIASES,
   isPickable,
   pickableDestinations,
   type CatalogueEntry,
@@ -12,11 +11,11 @@ import {
   type DestinationFacts,
   type LondonRoute,
 } from '@/lib/catalogue'
-import { destinations, TRAVEL_STYLES } from '@/lib/destinations'
-import type { Destination } from '@/lib/destinations'
+import { TRAVEL_STYLES } from '@/lib/types'
+import type { Destination } from '@/lib/types'
 
 const CONTINENTS = ['Europe', 'Africa', 'Asia', 'Americas', 'Oceania', 'Middle East']
-// The climate labels already used in lib/destinations.ts; add to this list deliberately.
+// The allowed climate labels; add to this list deliberately.
 const CLIMATES = [
   'cold desert',
   'continental',
@@ -57,15 +56,8 @@ function stub(
   }
 }
 
-const lisbon = destinations.find((d) => d.id === 'lisbon-portugal')!
-const lisbonDetails: DestinationDetails = {
-  description: lisbon.description,
-  climate: lisbon.climate,
-  travelStyles: lisbon.travelStyles,
-  bestMonths: lisbon.bestMonths,
-  estimatedCosts: lisbon.estimatedCosts,
-  activities: lisbon.activities,
-}
+const lisbonDetails = (detailsData as Record<string, DestinationDetails>)['lisbon-portugal']
+const lisbon: Destination = { ...stub({ id: 'lisbon-portugal', name: 'Lisbon' }), ...lisbonDetails }
 
 describe('generated London destination data', () => {
   it('has unique ids', () => {
@@ -83,11 +75,6 @@ describe('generated London destination data', () => {
     expect(d.london.direct).toBe(true)
     expect(d.london.airports.length).toBeGreaterThan(0)
     d.london.airports.forEach((airport) => expect(LONDON_AIRPORTS).toContain(airport))
-  })
-
-  it('points every hand-written alias at a generated destination', () => {
-    const ids = new Set(londonData.map((d) => d.id))
-    Object.values(HAND_WRITTEN_ALIASES).forEach((id) => expect(ids).toContain(id))
   })
 })
 
@@ -119,41 +106,15 @@ describe('isPickable', () => {
 })
 
 describe('buildCatalogue', () => {
-  it('attaches the London route to a hand-written destination with the same id', () => {
-    const [entry] = buildCatalogue([lisbon], [stub({ id: 'lisbon-portugal' })], {})
-    expect(entry).toMatchObject({
-      id: 'lisbon-portugal',
-      description: lisbon.description,
-      london: route,
-    })
-  })
-
-  it('matches a hand-written destination through an alias and drops the duplicate', () => {
-    const entries = buildCatalogue(
-      [lisbon],
-      [stub({ id: 'lisboa-portugal' })],
-      {},
-      {
-        'lisbon-portugal': 'lisboa-portugal',
-      }
-    )
-    expect(entries).toHaveLength(1)
-    expect(entries[0].london).toEqual(route)
-  })
-
-  it('leaves out a hand-written destination with no London route', () => {
-    expect(buildCatalogue([lisbon], [], {})).toEqual([])
-  })
-
-  it('adds unmatched generated destinations, merged with any details', () => {
-    const entries = buildCatalogue([], [stub()], { 'faro-portugal': lisbonDetails })
+  it('merges each generated destination with its details', () => {
+    const entries = buildCatalogue([stub()], { 'faro-portugal': lisbonDetails })
     expect(entries).toHaveLength(1)
     expect(entries[0]).toMatchObject({ id: 'faro-portugal', name: 'Faro', ...lisbonDetails })
     expect(isPickable(entries[0])).toBe(true)
   })
 
   it('leaves generated destinations without details unpickable', () => {
-    const entries = buildCatalogue([], [stub()], {})
+    const entries = buildCatalogue([stub()], {})
     expect(isPickable(entries[0])).toBe(false)
   })
 })
@@ -165,9 +126,7 @@ describe('catalogue', () => {
 
   it('only includes destinations reachable from London', () => {
     const londonIds = new Set(londonData.map((d) => d.id))
-    expect(
-      catalogue.every((d) => londonIds.has(d.id) || londonIds.has(HAND_WRITTEN_ALIASES[d.id]))
-    ).toBe(true)
+    expect(catalogue.every((d) => londonIds.has(d.id))).toBe(true)
   })
 
   it('has unique ids', () => {
@@ -180,35 +139,22 @@ describe('catalogue', () => {
     expect(pickable.every((d) => isPickable({ ...d, london: route }))).toBe(true)
   })
 
-  it('recommends every hand-written destination with a London route and every detailed generated one', () => {
+  it('recommends exactly the detailed generated destinations', () => {
     const detailed = Object.keys(detailsData).filter((id) => {
       const entry = catalogue.find((d) => d.id === id)
       return entry !== undefined && isPickable(entry)
     })
-    expect(pickableDestinations.map((d) => d.id).sort()).toEqual(
-      [
-        ...destinations
-          .map((d) => d.id)
-          .filter((id) => londonData.some((l) => l.id === (HAND_WRITTEN_ALIASES[id] ?? id))),
-        ...detailed,
-      ].sort()
-    )
+    expect(pickableDestinations.map((d) => d.id).sort()).toEqual(detailed.sort())
   })
 })
 
 describe('destination details data', () => {
   const generatedIds = new Set(londonData.map((d) => d.id))
-  const matchedIds = new Set(Object.values(HAND_WRITTEN_ALIASES))
   const details = detailsData as Record<string, Partial<DestinationDetails>>
   const entries = Object.entries(details)
 
-  it('only has details for generated destinations without a hand-written match', () => {
-    // Hand-written destinations keep their details in lib/destinations.ts, not here.
-    entries.forEach(([id]) => {
-      expect(generatedIds.has(id)).toBe(true)
-      expect(matchedIds.has(id)).toBe(false)
-      expect(destinations.some((d) => d.id === id)).toBe(false)
-    })
+  it('only has details for generated destinations', () => {
+    entries.forEach(([id]) => expect(generatedIds.has(id)).toBe(true))
   })
 
   it('has a valid, complete entry for every destination', () => {
