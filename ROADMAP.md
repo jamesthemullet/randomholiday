@@ -264,18 +264,60 @@ one seasonally.
 - [ ] Melbourne (MEL, AVV)
 - [ ] Auckland (AKL)
 
+### 10. One-stop destinations — _Acquisition, Fun_
+
+Only places with a direct London flight can be picked, which leaves out some of the most
+appealing holidays: Bali, Kyoto, Cusco, Queenstown, Siem Reap, Luang Prabang. Add destinations
+reachable with one connection, without hand-picking routes or flight times.
+
+How it works: **a hand-kept wishlist decides which places are worth adding; the route script
+checks that a connection exists.** One stop from a handful of hubs reaches thousands of airports,
+so the script can't choose by itself. But it already reads Wikipedia's "Airlines and
+destinations" tables, and the same parsing works for a hub's table. For each wishlist place it
+finds the hubs London flies to directly (Doha, Dubai, Istanbul, Singapore, Frankfurt, Amsterdam,
+Madrid, Lisbon, New York, Los Angeles, Tokyo…) that also serve the place. It keeps the one with
+the shortest total distance and writes a stub with `direct: false` and `via: ['DOH']`. The
+destination-details routine then fills it in like any other stub.
+
+The engine side builds on the flight-time filter (`estimateFlightHours` in `lib/flightTime.ts`).
+A connecting trip's time is the sum of its legs plus about 2.5h per stop, so "Up to 12h" leaves
+out Bali (~19h) and "Anywhere" includes it, with no separate "allow connections" setting.
+
+- [ ] **Route shape:** add `via?: string[]` (hub IATA codes) to `LondonRoute` and a small
+      `lib/data/hubs.json` of hub coordinates. `estimateFlightHours` sums the legs plus a layover
+      per stop. `calculateBudget` prices the flight on the total leg distance, not the straight
+      line. No behaviour change yet, because every route is still direct. Tests cover a one-stop
+      and a direct route.
+- [ ] **Script:** add `scripts/connecting-wishlist.json` (place name + its airport's Wikipedia
+      page) and a hub list. Extend `yarn data:london` to write connecting stubs alongside direct
+      ones, and to report wishlist places it couldn't connect with one stop. Seed the wishlist
+      with the 16 destinations dropped when `lib/destinations.ts` was retired (Bali, Kyoto,
+      Chiang Mai, Kathmandu, Cusco, Havana, Patagonia, Cartagena, Medellín, Queenstown, Fiji,
+      Luang Prabang, Seychelles, Bora Bora, Petra, Amalfi). Petra and Amalfi are really
+      "nearest airport + overland" (Amman, Naples), so decide whether they're aliases instead.
+- [ ] **Results label:** show "~19h · 1 stop via Doha" on the results card and in the destination
+      modal; direct trips keep "~2h 10m".
+- [ ] **Routine:** update the destination-details routine to fill connecting stubs after direct
+      ones. Also drop its references to `lib/destinations.ts` and `HAND_WRITTEN_ALIASES`.
+- [ ] **Grow the wishlist** in small PRs: Siem Reap, Hoi An (via Da Nang), Galápagos,
+      Easter Island, Tahiti, the Whitsundays, Ushuaia, Yogyakarta, Bhutan (Paro).
+
+Out of scope for now: two-stop trips (Bora Bora via Papeete, Galápagos via Quito/Guayaquil).
+They'll need a two-leg search, so the script reports them as unreachable rather than guessing.
+
 ## Mise en place — infrastructure prerequisites
 
-| Investment                                      | Unlocks                                                                      |
-| :---------------------------------------------- | :--------------------------------------------------------------------------- |
-| **Persistence layer** (Saved Trips step 1)      | Saved Trips, and any future accounts/history feature.                        |
-| **Destination pages** (feature 3)               | SEO acquisition and a linkable target for Shareable Result.                  |
-| **Engine diagnostics test** (feature 5 step 1)  | A before/after measure for every change to filtering, scoring or sampling.   |
-| **Per-city route script** (feature 8 step 1)    | Every departure city after London, one `yarn data:routes <city-id>` each.    |
-| **Pro status** (Stripe webhook → stored status) | Any Pro gate actually unlocking after checkout; needs the persistence layer. |
-| **Advisory sync** (feature 9 step 5)            | Exclusions that track FCDO advice without hand-editing; reviewed via PRs.    |
+| Investment                                      | Unlocks                                                                       |
+| :---------------------------------------------- | :---------------------------------------------------------------------------- |
+| **Persistence layer** (Saved Trips step 1)      | Saved Trips, and any future accounts/history feature.                         |
+| **Destination pages** (feature 3)               | SEO acquisition and a linkable target for Shareable Result.                   |
+| **Engine diagnostics test** (feature 5 step 1)  | A before/after measure for every change to filtering, scoring or sampling.    |
+| **Per-city route script** (feature 8 step 1)    | Every departure city after London, one `yarn data:routes <city-id>` each.     |
+| **Pro status** (Stripe webhook → stored status) | Any Pro gate actually unlocking after checkout; needs the persistence layer.  |
+| **Advisory sync** (feature 9 step 5)            | Exclusions that track FCDO advice without hand-editing; reviewed via PRs.     |
+| **Multi-leg routes** (feature 10 step 1)        | One-stop destinations, and a fairer "reachable" rule for smaller UK airports. |
 
 ---
 
 _RandomHoliday — product roadmap, 2 September 2026 (feature 5 added 17 October 2026, feature 8
-added 18 October 2026, feature 9 added 6 November 2026)_
+added 18 October 2026, feature 9 added 6 November 2026, feature 10 added 16 November 2026)_
