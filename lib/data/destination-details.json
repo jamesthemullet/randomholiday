@@ -7008,6 +7008,63 @@
       "Yangtze River cruise"
     ]
   },
+  "xi-an-people-s-republic-of-china": {
+    "description": "The ancient Silk Road capital of China, guarded by the Terracotta Army and a complete Ming city wall, with a Muslim Quarter famed for street food.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 70,
+      "dailySpending": 50
+    },
+    "activities": [
+      "Terracotta Army",
+      "Cycling the Ming City Wall",
+      "Muslim Quarter street food: roujiamo and biangbiang noodles",
+      "Big Wild Goose Pagoda",
+      "Shaanxi History Museum",
+      "Mount Huashan cliff-side trails"
+    ]
+  },
+  "xiamen-people-s-republic-of-china": {
+    "description": "A breezy Fujian port city of car-free Gulangyu Island, seafront cycling paths, Buddhist temples and nearby earthen tulou roundhouses.",
+    "climate": "humid subtropical",
+    "travelStyles": ["beach", "city", "culture"],
+    "bestMonths": [3, 4, 10, 11, 12],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 80,
+      "dailySpending": 55
+    },
+    "activities": [
+      "Gulangyu Island",
+      "Nanputuo Temple",
+      "Cycling Huandao Road along the coast",
+      "Zengcuo'an village and seafood stalls",
+      "Fujian Tulou day trip",
+      "Shazhou noodles and oyster omelettes"
+    ]
+  },
+  "yerevan-armenia": {
+    "description": "Armenia's pink-stone capital, with café-lined boulevards, the Cascade art steps and Mount Ararat on the horizon, close to ancient monasteries.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 300,
+      "hotelPerNight": 75,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Cascade Complex and Cafesjian Center",
+      "Matenadaran manuscript museum",
+      "Garni Temple and Geghard Monastery",
+      "Khor Virap with views of Mount Ararat",
+      "Vernissage weekend market",
+      "Ararat brandy factory tour"
+    ]
+  },
   "zadar-croatia": {
     "description": "A Dalmatian coastal city of Roman ruins and Venetian walls, famed for the Sea Organ, Greeting to the Sun and gateways to Kornati islands.",
     "climate": "mediterranean",
@@ -7064,6 +7121,43 @@
       "Mizithres viewpoint",
       "Zakynthos town",
       "Marathonisi turtle island"
+    ]
+  },
+  "zaragoza-spain": {
+    "description": "An Aragonese city on the Ebro, crowned by the Basílica del Pilar and the Moorish Aljafería palace, with tapas bars packed into El Tubo.",
+    "climate": "semi-arid",
+    "travelStyles": ["city", "culture"],
+    "bestMonths": [4, 5, 6, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 110,
+      "hotelPerNight": 85,
+      "dailySpending": 60
+    },
+    "activities": [
+      "Basílica del Pilar",
+      "Aljafería Palace",
+      "La Seo Cathedral",
+      "Tapas crawl in El Tubo",
+      "Goya Museum",
+      "Fiestas del Pilar in October"
+    ]
+  },
+  "zhengzhou-people-s-republic-of-china": {
+    "description": "Henan's capital on the Yellow River, a base for the kung fu monks of the Shaolin Temple and the Buddhist carvings of the Longmen Grottoes.",
+    "climate": "humid subtropical",
+    "travelStyles": ["city", "culture", "adventure"],
+    "bestMonths": [4, 5, 9, 10],
+    "estimatedCosts": {
+      "flightFromEurope": 650,
+      "hotelPerNight": 60,
+      "dailySpending": 45
+    },
+    "activities": [
+      "Shaolin Temple and Mount Song",
+      "Longmen Grottoes in Luoyang",
+      "Henan Museum",
+      "Yellow River Scenic Area",
+      "Braised noodles (huimian)"
     ]
   },
   "zurich-switzerland": {
