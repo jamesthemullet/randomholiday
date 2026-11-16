@@ -11,7 +11,7 @@ import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { encodeShareableResult } from '@/lib/shareableResult'
-import { parseTravelStyles } from '@/lib/tripQuery'
+import { parseMaxFlightHours, parseTravelStyles } from '@/lib/tripQuery'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import styles from './results.module.css'
@@ -30,19 +30,19 @@ export function ResultsClient() {
     const originId = searchParams.get('originId')
     const city = supportedDepartureCities.find((c) => c.id === originId)
     const budget = Number(searchParams.get('budget'))
-    const maxDistanceKm = Number(searchParams.get('distance'))
+    const maxFlightHours = parseMaxFlightHours(searchParams)
     const nights = Number(searchParams.get('nights'))
     const groupSize = Number(searchParams.get('groupSize'))
     const travelMonth = Number(searchParams.get('month'))
     const travelStyles = parseTravelStyles(searchParams.get('styles'))
 
-    if (!city || !budget || !maxDistanceKm || !nights || !groupSize) return null
+    if (!city || !budget || !maxFlightHours || !nights || !groupSize) return null
 
     return {
       originName: city.name,
       origin: city.coordinates,
       maxBudgetPerPerson: budget,
-      maxDistanceKm,
+      maxFlightHours,
       nights,
       groupSize,
       travelStyles,
@@ -136,7 +136,7 @@ export function ResultsClient() {
       destinationId: recommendation.destination.id,
       originId,
       maxBudgetPerPerson: filterParams.maxBudgetPerPerson,
-      maxDistanceKm: filterParams.maxDistanceKm,
+      maxFlightHours: filterParams.maxFlightHours,
       nights: filterParams.nights,
       groupSize: filterParams.groupSize,
       travelStyles: filterParams.travelStyles,

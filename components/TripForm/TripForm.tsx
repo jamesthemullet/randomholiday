@@ -37,7 +37,9 @@ export function TripForm({ initialValues = {} }: TripFormProps) {
   const [travelStyles, setTravelStyles] = useState<TravelStyle[]>(
     initialValues.travelStyles ?? defaults.travelStyles
   )
-  const [maxDistance, setMaxDistance] = useState(initialValues.maxDistance ?? defaults.maxDistance)
+  const [maxFlightHours, setMaxFlightHours] = useState(
+    initialValues.maxFlightHours ?? defaults.maxFlightHours
+  )
   const [groupSize, setGroupSize] = useState(initialValues.groupSize ?? defaults.groupSize)
   // Starts open when arriving from "Change my answers", so the previous choices are on show.
   const [isMoreOpen, setIsMoreOpen] = useState(Object.keys(initialValues).length > 0)
@@ -51,7 +53,7 @@ export function TripForm({ initialValues = {} }: TripFormProps) {
       month,
       nights,
       travelStyles,
-      maxDistance,
+      maxFlightHours,
       groupSize,
     })
     router.push(`/results?${query}`)
@@ -142,8 +144,8 @@ export function TripForm({ initialValues = {} }: TripFormProps) {
               </div>
               <TravelStyleSelector selected={travelStyles} onChange={setTravelStyles} />
               <TripScopeStep
-                maxDistance={maxDistance}
-                onMaxDistanceChange={setMaxDistance}
+                maxFlightHours={maxFlightHours}
+                onMaxFlightHoursChange={setMaxFlightHours}
                 groupSize={groupSize}
                 onGroupSizeChange={setGroupSize}
               />

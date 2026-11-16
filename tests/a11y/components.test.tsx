@@ -64,7 +64,7 @@ function makeScore(overrides: Partial<DestinationScore> = {}): DestinationScore 
     styleScore: 1,
     seasonScore: 1,
     budgetScore: 0.8,
-    distanceScore: 0.6,
+    flightTimeScore: 0.6,
     ...overrides,
   }
 }
@@ -202,8 +202,8 @@ describe('accessibility (axe)', () => {
   it('TripScopeStep has no violations', async () => {
     const { container } = render(
       <TripScopeStep
-        maxDistance={5000}
-        onMaxDistanceChange={vi.fn()}
+        maxFlightHours={5}
+        onMaxFlightHoursChange={vi.fn()}
         groupSize={2}
         onGroupSizeChange={vi.fn()}
       />

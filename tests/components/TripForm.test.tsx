@@ -78,7 +78,7 @@ describe('TripForm', () => {
     expect(params.get('budget')).toBe('1500')
     expect(params.get('nights')).toBe('7')
     expect(params.get('month')).toBe('11')
-    expect(params.get('distance')).toBe('10000')
+    expect(params.get('hours')).toBe('12')
     expect(params.get('groupSize')).toBe('2')
     expect(params.has('styles')).toBe(false)
   })
@@ -148,7 +148,7 @@ describe('TripForm', () => {
           budget: 2500,
           nights: 4,
           month: 3,
-          maxDistance: 10000,
+          maxFlightHours: 12,
           groupSize: 2,
         }}
       />

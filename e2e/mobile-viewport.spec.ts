@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test'
 // A pinned `destination` keeps the result deterministic, matching the pattern used in
 // e2e/accessibility.spec.ts.
 const resultsUrl =
-  '/results?originId=london-uk&budget=1500&distance=5000&nights=7&groupSize=2&month=6&styles=beach&destination=barcelona-spain'
+  '/results?originId=london-uk&budget=1500&hours=8&nights=7&groupSize=2&month=6&styles=beach&destination=barcelona-spain'
 
 test.use({ viewport: { width: 360, height: 740 } })
 

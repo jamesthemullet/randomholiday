@@ -2,6 +2,7 @@ import { supportedDepartureCities } from './departureCities'
 import type { DepartureCity } from './departureCities'
 import { TRAVEL_STYLES } from './destinations'
 import type { TravelStyle } from './destinations'
+import { DEFAULT_MAX_FLIGHT_HOURS, flightHoursForDistance } from './flightTime'
 import { parseNumberParam } from './queryParams'
 
 const MONTH_NAMES = [
@@ -25,7 +26,7 @@ export interface TripQuery {
   month: number
   nights: number
   travelStyles: TravelStyle[]
-  maxDistance: number
+  maxFlightHours: number
   groupSize: number
 }
 
@@ -49,7 +50,7 @@ export function getDefaultTripQuery(now: Date = new Date()): TripQuery {
     month: getNextMonth(now),
     nights: 7,
     travelStyles: [],
-    maxDistance: 10000,
+    maxFlightHours: DEFAULT_MAX_FLIGHT_HOURS,
     groupSize: 2,
   }
 }
@@ -58,7 +59,7 @@ export function buildResultsQuery(params: TripQuery): string {
   const query = new URLSearchParams({
     originId: params.city.id,
     budget: String(params.budget),
-    distance: String(params.maxDistance),
+    hours: String(params.maxFlightHours),
     nights: String(params.nights),
     groupSize: String(params.groupSize),
     month: String(params.month),
@@ -72,6 +73,17 @@ export function buildResultsQuery(params: TripQuery): string {
 function parsePositiveParam(value: string | null): number | undefined {
   const parsed = parseNumberParam(value)
   return parsed !== null && parsed > 0 ? parsed : undefined
+}
+
+/**
+ * Reads the flight-time limit from `hours`, falling back to the older `distance` (km) param so
+ * links made before the switch to flight time still give the same results.
+ */
+export function parseMaxFlightHours(params: URLSearchParams): number | undefined {
+  const hours = parsePositiveParam(params.get('hours'))
+  if (hours !== undefined) return hours
+  const distanceKm = parsePositiveParam(params.get('distance'))
+  return distanceKm === undefined ? undefined : flightHoursForDistance(distanceKm)
 }
 
 /** Splits a `styles` query param on commas and drops any entry that isn't a known TravelStyle. */
@@ -101,8 +113,8 @@ export function parseTripQuery(params: URLSearchParams): TripQueryInitialValues 
   const nights = parsePositiveParam(params.get('nights'))
   if (nights !== undefined) values.nights = nights
 
-  const maxDistance = parsePositiveParam(params.get('distance'))
-  if (maxDistance !== undefined) values.maxDistance = maxDistance
+  const maxFlightHours = parseMaxFlightHours(params)
+  if (maxFlightHours !== undefined) values.maxFlightHours = maxFlightHours
 
   const groupSize = parsePositiveParam(params.get('groupSize'))
   if (groupSize !== undefined) values.groupSize = groupSize

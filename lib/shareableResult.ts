@@ -7,8 +7,8 @@ export interface ShareableResult {
   originId: string
   /** Maximum total cost per person in GBP, as entered by the user */
   maxBudgetPerPerson: number
-  /** Maximum great-circle distance from origin in kilometres */
-  maxDistanceKm: number
+  /** Maximum estimated flight time from origin, in hours */
+  maxFlightHours: number
   /** Number of nights at the destination */
   nights: number
   /** Total number of travellers */
@@ -30,7 +30,7 @@ export function encodeShareableResult(result: ShareableResult): string {
   params.set('destination', result.destinationId)
   params.set('originId', result.originId)
   params.set('budget', String(result.maxBudgetPerPerson))
-  params.set('distance', String(result.maxDistanceKm))
+  params.set('hours', String(result.maxFlightHours))
   params.set('nights', String(result.nights))
   params.set('groupSize', String(result.groupSize))
 

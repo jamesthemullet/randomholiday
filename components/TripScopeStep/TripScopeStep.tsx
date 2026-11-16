@@ -1,19 +1,19 @@
 import React from 'react'
 import { Slider } from '@/components/Slider'
+import {
+  FLIGHT_TIME_OPTIONS,
+  formatFlightTimeLimit,
+  nearestFlightTimeOption,
+} from '@/lib/flightTime'
 import styles from './TripScopeStep.module.css'
 
 export interface TripScopeStepProps {
-  maxDistance: number
-  onMaxDistanceChange: (value: number) => void
+  maxFlightHours: number
+  onMaxFlightHoursChange: (value: number) => void
   groupSize: number
   onGroupSizeChange: (value: number) => void
-  maxDistanceLimit?: number
   minGroupSize?: number
   maxGroupSize?: number
-}
-
-export function formatDistance(value: number, max: number): string {
-  return value >= max ? 'Anywhere' : `${value.toLocaleString('en-US')} km`
 }
 
 export function clampGroupSize(value: number, min: number, max: number): number {
@@ -21,28 +21,32 @@ export function clampGroupSize(value: number, min: number, max: number): number 
 }
 
 export function TripScopeStep({
-  maxDistance,
-  onMaxDistanceChange,
+  maxFlightHours,
+  onMaxFlightHoursChange,
   groupSize,
   onGroupSizeChange,
-  maxDistanceLimit = 20000,
   minGroupSize = 1,
   maxGroupSize = 10,
 }: TripScopeStepProps) {
   const canDecrease = groupSize > minGroupSize
   const canIncrease = groupSize < maxGroupSize
+  // The slider moves between the fixed options; a limit from an older link snaps to the
+  // option it falls under.
+  const optionIndex = FLIGHT_TIME_OPTIONS.indexOf(
+    nearestFlightTimeOption(maxFlightHours) as (typeof FLIGHT_TIME_OPTIONS)[number]
+  )
 
   return (
     <div className={styles.wrapper}>
       <Slider
-        id="max-distance"
-        label="Max travel distance"
+        id="max-flight-time"
+        label="Max flight time"
         min={0}
-        max={maxDistanceLimit}
-        step={500}
-        value={maxDistance}
-        onChange={onMaxDistanceChange}
-        formatValue={(v) => formatDistance(v, maxDistanceLimit)}
+        max={FLIGHT_TIME_OPTIONS.length - 1}
+        step={1}
+        value={optionIndex}
+        onChange={(index) => onMaxFlightHoursChange(FLIGHT_TIME_OPTIONS[index])}
+        formatValue={(index) => formatFlightTimeLimit(FLIGHT_TIME_OPTIONS[index])}
       />
       <div className={styles.groupSize}>
         <span className={styles.label} id="group-size-label">
