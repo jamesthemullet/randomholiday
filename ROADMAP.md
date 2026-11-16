@@ -137,8 +137,11 @@ outbreaks and entry bans, so call it a `travelAdvisory`, not anything war-specif
       `getSafetyOverride`/`getSafetyStatus` loader in `lib/travelAdvisory.ts`, tested in
       `tests/lib/travelAdvisory.test.ts`. Not yet wired into `filterEngine.ts` — that's the next
       step.)
-- [ ] Filter `exclude` destinations out in `lib/filterEngine.ts`, alongside the 100 km rule, plus
-      tests. Update the baseline in `tests/lib/engineDiagnostics.test.ts`.
+- [x] Filter `exclude` destinations out in `lib/filterEngine.ts`, alongside the 100 km rule, plus
+      tests. Update the baseline in `tests/lib/engineDiagnostics.test.ts`. (`meetsAdvisoryFilter`/
+      `removedByAdvisory` in `lib/filterEngine.ts`, applied right after the distance filter and
+      before budget, tested in `tests/lib/filterEngine.test.ts`; no baseline change needed since
+      `lib/data/safety-overrides.json` has no `exclude` entries yet, only `warn`)
 - [ ] Show a warning badge (reusing `components/Badge`) on `warn` results, linking to the
       country's FCDO page. Use neutral wording: "FCDO advises against travel to parts of
       <country>. Check the latest advice before booking."
