@@ -56,7 +56,8 @@ describe('formatFlightTimeLimit', () => {
 describe('nearestFlightTimeOption', () => {
   it('returns the shortest option at least as long as the limit', () => {
     expect(nearestFlightTimeOption(5)).toBe(5)
-    expect(nearestFlightTimeOption(5.1)).toBe(8)
+    expect(nearestFlightTimeOption(5.1)).toBe(6)
+    expect(nearestFlightTimeOption(8.5)).toBe(10)
     expect(nearestFlightTimeOption(1)).toBe(3)
   })
 

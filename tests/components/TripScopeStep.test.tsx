@@ -32,15 +32,16 @@ describe('TripScopeStep', () => {
   it('snaps a limit between options to the option it falls under', () => {
     // An older ?distance= link can convert to any number of hours.
     render(<TripScopeStep {...defaultProps} maxFlightHours={6.75} />)
-    expect(getFlightTimeSlider()).toHaveAttribute('aria-valuetext', 'Up to 8h')
+    expect(getFlightTimeSlider()).toHaveAttribute('aria-valuetext', 'Up to 7h')
   })
 
   it('steps through the fixed options and reports hours', () => {
     const onMaxFlightHoursChange = vi.fn()
     render(<TripScopeStep {...defaultProps} onMaxFlightHoursChange={onMaxFlightHoursChange} />)
-    expect(getFlightTimeSlider()).toHaveAttribute('max', '4')
-    fireEvent.change(getFlightTimeSlider(), { target: { value: '3' } })
-    expect(onMaxFlightHoursChange).toHaveBeenCalledWith(12)
+    // 3, 4, 5, 6, 7, 8, 10, 12, Anywhere
+    expect(getFlightTimeSlider()).toHaveAttribute('max', '8')
+    fireEvent.change(getFlightTimeSlider(), { target: { value: '6' } })
+    expect(onMaxFlightHoursChange).toHaveBeenCalledWith(10)
   })
 
   it('displays the group size count with plural label', () => {

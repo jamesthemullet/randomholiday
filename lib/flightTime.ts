@@ -9,7 +9,7 @@ export const CRUISE_SPEED_KMH = 800
 /** The "Anywhere" limit: longer than any flight on Earth (the antipodes are ~25.5h away). */
 export const ANYWHERE_FLIGHT_HOURS = 30
 /** The limits offered in the search form, shortest first. */
-export const FLIGHT_TIME_OPTIONS = [3, 5, 8, 12, ANYWHERE_FLIGHT_HOURS] as const
+export const FLIGHT_TIME_OPTIONS = [3, 4, 5, 6, 7, 8, 10, 12, ANYWHERE_FLIGHT_HOURS] as const
 export const DEFAULT_MAX_FLIGHT_HOURS = 12
 
 /** Estimated time in the air for a direct flight covering `distanceKm` of great-circle distance. */
