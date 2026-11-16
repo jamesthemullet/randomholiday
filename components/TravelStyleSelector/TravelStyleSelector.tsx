@@ -1,5 +1,5 @@
 import React from 'react'
-import type { TravelStyle } from '@/lib/destinations'
+import type { TravelStyle } from '@/lib/types'
 import styles from './TravelStyleSelector.module.css'
 
 export interface TravelStyleOption {
