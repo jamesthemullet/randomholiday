@@ -1,4 +1,4 @@
-import type { Destination } from './destinations'
+import type { Destination } from './types'
 import { filterDestinations } from './filterEngine'
 import type { FilterParams, FilterResult } from './filterEngine'
 import { scoreDestinations } from './scoringEngine'

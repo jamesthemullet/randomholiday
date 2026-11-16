@@ -1,4 +1,4 @@
-import type { Destination } from './destinations'
+import type { Destination } from './types'
 
 export type FlightTier = 'short-haul' | 'medium-haul' | 'long-haul' | 'ultra-long-haul'
 

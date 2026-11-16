@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 import { calculateBudget } from '@/lib/budgetCalculator'
 import { formatGbp } from '@/lib/currency'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'

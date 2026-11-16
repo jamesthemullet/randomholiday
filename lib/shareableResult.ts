@@ -1,4 +1,4 @@
-import type { TravelStyle } from './destinations'
+import type { TravelStyle } from './types'
 
 export interface ShareableResult {
   /** id of the destination that was shown */

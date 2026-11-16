@@ -1,10 +1,10 @@
 # Destination photos
 
-Drop a photo per destination here, named after its `id` from `lib/destinations.ts`:
+Drop a photo per destination here, named after its `id` from `lib/data/london-destinations.json`:
 
 ```
 public/destinations/barcelona-spain.jpg
-public/destinations/bali-indonesia.jpg
+public/destinations/lisbon-portugal.jpg
 ```
 
 - Format: `.jpg`, landscape, ideally 1200×900 or larger.
