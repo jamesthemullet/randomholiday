@@ -1,4 +1,4 @@
-import type { Coordinates } from './destinations'
+import type { Coordinates } from './types'
 
 const EARTH_RADIUS_KM = 6371
 

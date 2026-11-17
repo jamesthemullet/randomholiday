@@ -1,7 +1,7 @@
 import { supportedDepartureCities } from './departureCities'
 import type { DepartureCity } from './departureCities'
-import { TRAVEL_STYLES } from './destinations'
-import type { TravelStyle } from './destinations'
+import { TRAVEL_STYLES } from './types'
+import type { TravelStyle } from './types'
 import { DEFAULT_MAX_FLIGHT_HOURS, flightHoursForDistance } from './flightTime'
 import { parseNumberParam } from './queryParams'
 

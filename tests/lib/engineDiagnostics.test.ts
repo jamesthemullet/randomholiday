@@ -3,7 +3,7 @@ import { runEngineDiagnostics } from '@/lib/engineDiagnostics'
 import { pickableDestinations } from '@/lib/catalogue'
 import { departureCities } from '@/lib/departureCities'
 import { DEFAULT_MAX_FLIGHT_HOURS } from '@/lib/flightTime'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 import type { DepartureCity } from '@/lib/departureCities'
 
 // ── Fixtures ──────────────────────────────────────────────────────────────────

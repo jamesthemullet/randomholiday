@@ -7,7 +7,7 @@ import type { DepartureCity } from '@/lib/departureCities'
 import { BudgetSlider } from '@/components/BudgetSlider'
 import { Slider } from '@/components/Slider'
 import { TravelStyleSelector, TRAVEL_STYLE_OPTIONS } from '@/components/TravelStyleSelector'
-import type { TravelStyle } from '@/lib/destinations'
+import type { TravelStyle } from '@/lib/types'
 import { TripScopeStep } from '@/components/TripScopeStep'
 import {
   buildResultsQuery,

@@ -1,4 +1,4 @@
-import type { Coordinates } from './destinations'
+import type { Coordinates } from './types'
 import { calculateDistance } from './distanceCalculator'
 
 /** Taxi, climb and descent on every flight, in hours. */

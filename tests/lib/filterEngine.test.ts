@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { filterDestinations, MIN_DISTANCE_KM } from '@/lib/filterEngine'
 import type { FilterParams } from '@/lib/filterEngine'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 
 vi.mock('@/lib/travelAdvisory', () => ({
   getSafetyStatus: (id: string) => (id === 'excluded-place' ? 'exclude' : 'ok'),

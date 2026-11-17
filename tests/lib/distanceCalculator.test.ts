@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { toRadians, calculateDistance } from '@/lib/distanceCalculator'
-import type { Coordinates } from '@/lib/destinations'
+import type { Coordinates } from '@/lib/types'
 
 // Well-known coordinate pairs for ground-truth checks
 const LONDON: Coordinates = { lat: 51.5074, lng: -0.1278 }

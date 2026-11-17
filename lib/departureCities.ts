@@ -1,4 +1,4 @@
-import type { Coordinates } from './destinations'
+import type { Coordinates } from './types'
 
 export interface DepartureCity {
   id: string

@@ -1,4 +1,4 @@
-import type { Coordinates, Destination, TravelStyle } from './destinations'
+import type { Coordinates, Destination, TravelStyle } from './types'
 import { calculateDistance } from './distanceCalculator'
 import { estimateFlightHours } from './flightTime'
 import { calculateBudget } from './budgetCalculator'

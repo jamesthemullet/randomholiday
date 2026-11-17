@@ -8,7 +8,7 @@ import {
   getFlapTicks,
 } from '@/components/ResultsReveal'
 import type { DestinationScore } from '@/lib/scoringEngine'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 
 function makeDestination(overrides: Partial<Destination> = {}): Destination {
   return {

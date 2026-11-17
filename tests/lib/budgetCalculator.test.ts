@@ -6,7 +6,7 @@ import {
   calculateBudget,
 } from '@/lib/budgetCalculator'
 import type { BudgetParams } from '@/lib/budgetCalculator'
-import type { Destination } from '@/lib/destinations'
+import type { Destination } from '@/lib/types'
 
 // Minimal destination stub reused across tests
 const stubDestination: Destination = {
