@@ -75,7 +75,7 @@ const OVER_BUDGET = makeDestination({
 const GENEROUS_PARAMS: RecommendationParams = {
   origin: LONDON,
   maxBudgetPerPerson: 6000,
-  maxDistanceKm: 20000,
+  maxFlightHours: 25.5,
   nights: 7,
   groupSize: 2,
 }
@@ -235,8 +235,8 @@ describe('getRecommendations', () => {
   })
 
   it('propagates validation errors from the underlying filter engine', () => {
-    expect(() => getRecommendations([PARIS], { ...GENEROUS_PARAMS, maxDistanceKm: -1 })).toThrow(
-      'maxDistanceKm must be non-negative'
+    expect(() => getRecommendations([PARIS], { ...GENEROUS_PARAMS, maxFlightHours: -1 })).toThrow(
+      'maxFlightHours must be non-negative'
     )
   })
 
@@ -261,7 +261,7 @@ describe('getRecommendations', () => {
 
     const allReported = [
       ...result.filterResult.passed,
-      ...result.filterResult.removedByDistance,
+      ...result.filterResult.removedByFlightTime,
       ...result.filterResult.removedByBudget,
       ...result.filterResult.removedByStyle,
     ].map((d) => d.id)
@@ -296,7 +296,7 @@ describe('getRecommendations', () => {
       count: 2,
       poolSize: 2,
       travelMonth: 7,
-      weights: { season: 1, style: 0, budget: 0, distance: 0 },
+      weights: { season: 1, style: 0, budget: 0, flightTime: 0 },
     })
 
     const parisScore = result.recommendations.find((r) => r.destination.id === 'paris')

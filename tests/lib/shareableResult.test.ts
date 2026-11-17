@@ -6,7 +6,7 @@ const FULL_RESULT: ShareableResult = {
   destinationId: 'barcelona-spain',
   originId: 'london-uk',
   maxBudgetPerPerson: 1500,
-  maxDistanceKm: 2000,
+  maxFlightHours: 3,
   nights: 5,
   groupSize: 2,
   travelStyles: ['beach', 'city'],
@@ -17,7 +17,7 @@ const MINIMAL_RESULT: ShareableResult = {
   destinationId: 'santorini-greece',
   originId: 'paris-france',
   maxBudgetPerPerson: 900,
-  maxDistanceKm: 1000,
+  maxFlightHours: 1.75,
   nights: 3,
   groupSize: 1,
 }
@@ -30,7 +30,7 @@ describe('encodeShareableResult', () => {
     expect(params.get('destination')).toBe('barcelona-spain')
     expect(params.get('originId')).toBe('london-uk')
     expect(params.get('budget')).toBe('1500')
-    expect(params.get('distance')).toBe('2000')
+    expect(params.get('hours')).toBe('3')
     expect(params.get('nights')).toBe('5')
     expect(params.get('groupSize')).toBe('2')
     expect(params.get('month')).toBe('6')
