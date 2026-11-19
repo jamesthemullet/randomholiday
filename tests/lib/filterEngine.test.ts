@@ -97,7 +97,7 @@ const ALL = [PARIS, NEW_YORK, TOKYO, MALAGA]
 const DEFAULT_PARAMS: FilterParams = {
   origin: LONDON,
   maxBudgetPerPerson: 5000,
-  maxDistanceKm: 15000,
+  maxFlightHours: 19.25,
   nights: 7,
   groupSize: 2,
 }
@@ -107,9 +107,9 @@ const DEFAULT_PARAMS: FilterParams = {
 describe('filterDestinations', () => {
   // ── validation ──────────────────────────────────────────────────────────────
 
-  it('throws when maxDistanceKm is negative', () => {
-    expect(() => filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: -1 })).toThrow(
-      'maxDistanceKm must be non-negative'
+  it('throws when maxFlightHours is negative', () => {
+    expect(() => filterDestinations(ALL, { ...DEFAULT_PARAMS, maxFlightHours: -1 })).toThrow(
+      'maxFlightHours must be non-negative'
     )
   })
 
@@ -136,7 +136,7 @@ describe('filterDestinations', () => {
   it('returns empty result when given an empty list', () => {
     const result = filterDestinations([], DEFAULT_PARAMS)
     expect(result.passed).toEqual([])
-    expect(result.removedByDistance).toEqual([])
+    expect(result.removedByFlightTime).toEqual([])
     expect(result.removedByAdvisory).toEqual([])
     expect(result.removedByBudget).toEqual([])
     expect(result.removedByStyle).toEqual([])
@@ -144,27 +144,27 @@ describe('filterDestinations', () => {
 
   // ── distance filter ─────────────────────────────────────────────────────────
 
-  it('removes destinations beyond maxDistanceKm', () => {
+  it('removes destinations beyond maxFlightHours', () => {
     // 2 000 km only keeps Paris (~341 km) and Malaga (~2 000 km boundary);
     // New York (~5 570) and Tokyo (~9 560) are removed.
-    const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: 2200 })
+    const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxFlightHours: 3.25 })
     const passedIds = result.passed.map((d) => d.id)
     expect(passedIds).toContain('paris')
     expect(passedIds).toContain('malaga')
-    expect(result.removedByDistance.map((d) => d.id)).toContain('new-york')
-    expect(result.removedByDistance.map((d) => d.id)).toContain('tokyo')
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('new-york')
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('tokyo')
   })
 
-  it('keeps all destinations when maxDistanceKm is very large', () => {
-    const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: 20000 })
+  it('keeps all destinations when maxFlightHours is very large', () => {
+    const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxFlightHours: 25.5 })
     expect(result.passed).toHaveLength(ALL.length)
-    expect(result.removedByDistance).toHaveLength(0)
+    expect(result.removedByFlightTime).toHaveLength(0)
   })
 
-  it('removes all destinations when maxDistanceKm is 0', () => {
-    const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxDistanceKm: 0 })
+  it('removes all destinations when maxFlightHours is 0', () => {
+    const result = filterDestinations(ALL, { ...DEFAULT_PARAMS, maxFlightHours: 0 })
     expect(result.passed).toHaveLength(0)
-    expect(result.removedByDistance).toHaveLength(ALL.length)
+    expect(result.removedByFlightTime).toHaveLength(ALL.length)
   })
 
   it('removes destinations closer than MIN_DISTANCE_KM to the origin', () => {
@@ -176,7 +176,7 @@ describe('filterDestinations', () => {
     })
     const result = filterDestinations([...ALL, brighton], DEFAULT_PARAMS)
     expect(result.passed.map((d) => d.id)).not.toContain('brighton')
-    expect(result.removedByDistance.map((d) => d.id)).toContain('brighton')
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('brighton')
   })
 
   it('keeps a destination just beyond MIN_DISTANCE_KM away', () => {
@@ -194,7 +194,7 @@ describe('filterDestinations', () => {
     const sameLocation = makeDestination({ id: 'london-itself', coordinates: { ...LONDON } })
     const result = filterDestinations([sameLocation], DEFAULT_PARAMS)
     expect(result.passed).toHaveLength(0)
-    expect(result.removedByDistance.map((d) => d.id)).toContain('london-itself')
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('london-itself')
   })
 
   // ── travel advisory filter ──────────────────────────────────────────────────
@@ -222,7 +222,7 @@ describe('filterDestinations', () => {
       coordinates: { lat: LONDON.lat + 0.01, lng: LONDON.lng },
     })
     const result = filterDestinations([excludedAndTooClose], DEFAULT_PARAMS)
-    expect(result.removedByDistance.map((d) => d.id)).toContain('excluded-place')
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('excluded-place')
     expect(result.removedByAdvisory).toHaveLength(0)
   })
 
@@ -261,13 +261,13 @@ describe('filterDestinations', () => {
   })
 
   it('budget filter runs only on destinations that passed the distance filter', () => {
-    // Tokyo is too far; ensure it only appears in removedByDistance, not removedByBudget
+    // Tokyo is too far; ensure it only appears in removedByFlightTime, not removedByBudget
     const result = filterDestinations([PARIS, TOKYO], {
       ...DEFAULT_PARAMS,
-      maxDistanceKm: 2000,
+      maxFlightHours: 3,
       maxBudgetPerPerson: 5000,
     })
-    expect(result.removedByDistance.map((d) => d.id)).toContain('tokyo')
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('tokyo')
     expect(result.removedByBudget.map((d) => d.id)).not.toContain('tokyo')
   })
 
@@ -326,24 +326,24 @@ describe('filterDestinations', () => {
     // Restrict distance so New York and Tokyo are removed first
     const result = filterDestinations(ALL, {
       ...DEFAULT_PARAMS,
-      maxDistanceKm: 2200,
+      maxFlightHours: 3.25,
       travelStyles: ['beach'],
     })
-    // New York and Tokyo should only appear in removedByDistance
-    expect(result.removedByDistance.map((d) => d.id)).toContain('new-york')
+    // New York and Tokyo should only appear in removedByFlightTime
+    expect(result.removedByFlightTime.map((d) => d.id)).toContain('new-york')
     expect(result.removedByStyle.map((d) => d.id)).not.toContain('new-york')
   })
 
   // ── combined filters ────────────────────────────────────────────────────────
 
   it('applies all three filters in sequence', () => {
-    // Distance: Tokyo (~9 560 km) passes maxDistanceKm 10 000; New York (~5 570 km) passes.
+    // Distance: Tokyo (~9 560 km) passes maxFlightHours 10 000; New York (~5 570 km) passes.
     // Budget (7n/2pax): Paris ~730, Malaga ~885, New York ~1825, Tokyo ~2340.
     //   → maxBudgetPerPerson 1200 removes New York and Tokyo; Paris and Malaga pass.
     // Style ['city']: Paris (city+culture) passes; Malaga (beach only) → removedByStyle.
     const result = filterDestinations(ALL, {
       origin: LONDON,
-      maxDistanceKm: 10000,
+      maxFlightHours: 13,
       maxBudgetPerPerson: 1200,
       nights: 7,
       groupSize: 2,

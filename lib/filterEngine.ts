@@ -1,5 +1,6 @@
 import type { Coordinates, Destination, TravelStyle } from './types'
 import { calculateDistance } from './distanceCalculator'
+import { estimateFlightHours } from './flightTime'
 import { calculateBudget } from './budgetCalculator'
 import { getSafetyStatus } from './travelAdvisory'
 
@@ -15,8 +16,8 @@ export interface FilterParams {
   origin: Coordinates
   /** Maximum total cost per person in GBP (flights + hotel + daily spending) */
   maxBudgetPerPerson: number
-  /** Maximum great-circle distance from origin in kilometres */
-  maxDistanceKm: number
+  /** Maximum estimated flight time from origin, in hours */
+  maxFlightHours: number
   /** Number of nights at the destination */
   nights: number
   /** Total number of travellers */
@@ -27,23 +28,26 @@ export interface FilterParams {
 
 export interface FilterResult {
   passed: Destination[]
-  /** Destinations removed by the distance filter */
-  removedByDistance: Destination[]
-  /** Destinations removed by the FCDO travel advisory filter (after distance filter) */
+  /** Destinations removed by the flight-time filter (too far, or too close to be a holiday) */
+  removedByFlightTime: Destination[]
+  /** Destinations removed by the FCDO travel advisory filter (after flight-time filter) */
   removedByAdvisory: Destination[]
-  /** Destinations removed by the budget filter (after distance + advisory filters) */
+  /** Destinations removed by the budget filter (after flight-time + advisory filters) */
   removedByBudget: Destination[]
-  /** Destinations removed by the travel-style filter (after distance + advisory + budget filters) */
+  /** Destinations removed by the travel-style filter (after flight-time + advisory + budget filters) */
   removedByStyle: Destination[]
 }
 
-function meetsDistanceFilter(
+function meetsFlightTimeFilter(
   destination: Destination,
   origin: Coordinates,
-  maxDistanceKm: number
+  maxFlightHours: number
 ): boolean {
   const distanceKm = calculateDistance(origin, destination.coordinates)
-  return distanceKm >= MIN_DISTANCE_KM && distanceKm <= maxDistanceKm
+  return (
+    distanceKm >= MIN_DISTANCE_KM &&
+    estimateFlightHours(origin, destination.coordinates) <= maxFlightHours
+  )
 }
 
 /** Destinations the FCDO advises against all/essential travel to are never picked. */
@@ -71,31 +75,31 @@ function meetsStyleFilter(destination: Destination, travelStyles: TravelStyle[])
  * Applies hard filters to a list of destinations and returns both the passing
  * set and the destinations removed at each stage (for diagnostics / UI hints).
  *
- * Filter order: distance → travel advisory → budget → travel style.
+ * Filter order: flight time → travel advisory → budget → travel style.
  */
 export function filterDestinations(
   destinations: Destination[],
   params: FilterParams
 ): FilterResult {
-  const { origin, maxBudgetPerPerson, maxDistanceKm, nights, groupSize, travelStyles } = params
+  const { origin, maxBudgetPerPerson, maxFlightHours, nights, groupSize, travelStyles } = params
 
-  if (maxDistanceKm < 0) throw new Error('maxDistanceKm must be non-negative')
+  if (maxFlightHours < 0) throw new Error('maxFlightHours must be non-negative')
   if (maxBudgetPerPerson < 0) throw new Error('maxBudgetPerPerson must be non-negative')
   if (nights < 0) throw new Error('nights must be non-negative')
   if (groupSize < 1) throw new Error('groupSize must be at least 1')
 
-  const removedByDistance: Destination[] = []
+  const removedByFlightTime: Destination[] = []
   const removedByAdvisory: Destination[] = []
   const removedByBudget: Destination[] = []
   const removedByStyle: Destination[] = []
 
-  const afterDistance = destinations.filter((d) => {
-    if (meetsDistanceFilter(d, origin, maxDistanceKm)) return true
-    removedByDistance.push(d)
+  const afterFlightTime = destinations.filter((d) => {
+    if (meetsFlightTimeFilter(d, origin, maxFlightHours)) return true
+    removedByFlightTime.push(d)
     return false
   })
 
-  const afterAdvisory = afterDistance.filter((d) => {
+  const afterAdvisory = afterFlightTime.filter((d) => {
     if (meetsAdvisoryFilter(d)) return true
     removedByAdvisory.push(d)
     return false
@@ -116,5 +120,5 @@ export function filterDestinations(
         })
       : afterBudget
 
-  return { passed, removedByDistance, removedByAdvisory, removedByBudget, removedByStyle }
+  return { passed, removedByFlightTime, removedByAdvisory, removedByBudget, removedByStyle }
 }

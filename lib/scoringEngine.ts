@@ -1,6 +1,7 @@
 import type { Coordinates, Destination, TravelStyle } from './types'
 import { calculateDistance } from './distanceCalculator'
 import { calculateBudget } from './budgetCalculator'
+import { flightHoursForDistance } from './flightTime'
 
 export interface ScoringWeights {
   /** Weight applied to how well the destination matches the requested travel styles */
@@ -9,16 +10,16 @@ export interface ScoringWeights {
   season: number
   /** Weight applied to how fully the trip uses the budget, so bigger budgets favour bigger trips */
   budget: number
-  /** Weight applied to how close the destination is to the origin */
-  distance: number
+  /** Weight applied to how short the flight is */
+  flightTime: number
 }
 
 export const DEFAULT_WEIGHTS: ScoringWeights = {
   style: 0.5,
   season: 0.3,
   budget: 0.2,
-  // Max distance is already a hard filter, and for a random holiday nearer isn't better.
-  distance: 0,
+  // Max flight time is already a hard filter, and for a random holiday nearer isn't better.
+  flightTime: 0,
 }
 
 export interface ScoreParams {
@@ -26,8 +27,8 @@ export interface ScoreParams {
   origin: Coordinates
   /** Maximum total cost per person in GBP (flights + hotel + daily spending) */
   maxBudgetPerPerson: number
-  /** Maximum great-circle distance from origin in kilometres */
-  maxDistanceKm: number
+  /** Maximum estimated flight time from origin, in hours */
+  maxFlightHours: number
   /** Number of nights at the destination */
   nights: number
   /** Total number of travellers */
@@ -50,8 +51,8 @@ export interface DestinationScore {
   seasonScore: number
   /** Fraction (0–1) of how closely the cost fits the budget, 0 if over budget */
   budgetScore: number
-  /** Fraction (0–1) of distance headroom remaining, 0 if beyond maxDistanceKm */
-  distanceScore: number
+  /** Fraction (0–1) of flight-time headroom remaining, 0 if beyond maxFlightHours */
+  flightTimeScore: number
 }
 
 function clamp01(value: number): number {
@@ -91,20 +92,20 @@ export function calculateBudgetScore(
   return clamp01(perPersonCost / maxBudgetPerPerson)
 }
 
-export function calculateDistanceScore(distanceKm: number, maxDistanceKm: number): number {
-  if (maxDistanceKm <= 0) return distanceKm === 0 ? 1 : 0
-  return clamp01(1 - distanceKm / maxDistanceKm)
+export function calculateFlightTimeScore(flightHours: number, maxFlightHours: number): number {
+  if (maxFlightHours <= 0) return flightHours === 0 ? 1 : 0
+  return clamp01(1 - flightHours / maxFlightHours)
 }
 
 /**
  * Produces a soft 0–100 score for a single destination, blending style match,
- * season match, budget headroom, and distance headroom by the given weights.
+ * season match, budget headroom, and flight-time headroom by the given weights.
  */
 export function scoreDestination(destination: Destination, params: ScoreParams): DestinationScore {
   const {
     origin,
     maxBudgetPerPerson,
-    maxDistanceKm,
+    maxFlightHours,
     nights,
     groupSize,
     travelStyles,
@@ -112,7 +113,7 @@ export function scoreDestination(destination: Destination, params: ScoreParams):
     weights,
   } = params
 
-  if (maxDistanceKm < 0) throw new Error('maxDistanceKm must be non-negative')
+  if (maxFlightHours < 0) throw new Error('maxFlightHours must be non-negative')
   if (maxBudgetPerPerson < 0) throw new Error('maxBudgetPerPerson must be non-negative')
   if (nights < 0) throw new Error('nights must be non-negative')
   if (groupSize < 1) throw new Error('groupSize must be at least 1')
@@ -132,16 +133,19 @@ export function scoreDestination(destination: Destination, params: ScoreParams):
     nights,
     groupSize
   )
-  const distanceScore = calculateDistanceScore(distanceKm, maxDistanceKm)
+  const flightTimeScore = calculateFlightTimeScore(
+    flightHoursForDistance(distanceKm),
+    maxFlightHours
+  )
 
   const totalScore =
     100 *
     (styleScore * resolvedWeights.style +
       seasonScore * resolvedWeights.season +
       budgetScore * resolvedWeights.budget +
-      distanceScore * resolvedWeights.distance)
+      flightTimeScore * resolvedWeights.flightTime)
 
-  return { destination, totalScore, styleScore, seasonScore, budgetScore, distanceScore }
+  return { destination, totalScore, styleScore, seasonScore, budgetScore, flightTimeScore }
 }
 
 /**

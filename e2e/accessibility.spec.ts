@@ -4,7 +4,7 @@ import AxeBuilder from '@axe-core/playwright'
 // A pinned `destination` keeps the result deterministic (bypassing the engine's weighted
 // randomisation), so both the markup and screenshots stay stable across runs.
 const resultsUrl =
-  '/results?originId=london-uk&budget=1500&distance=5000&nights=7&groupSize=2&month=6&styles=beach&destination=barcelona-spain'
+  '/results?originId=london-uk&budget=1500&hours=8&nights=7&groupSize=2&month=6&styles=beach&destination=barcelona-spain'
 
 const pages = [
   { name: 'home', path: '/' },

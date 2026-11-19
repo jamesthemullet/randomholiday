@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { runEngineDiagnostics } from '@/lib/engineDiagnostics'
 import { pickableDestinations } from '@/lib/catalogue'
 import { departureCities } from '@/lib/departureCities'
+import { DEFAULT_MAX_FLIGHT_HOURS } from '@/lib/flightTime'
 import type { Destination } from '@/lib/types'
 import type { DepartureCity } from '@/lib/departureCities'
 
@@ -50,7 +51,7 @@ const PARIS_ORIGIN: DepartureCity = {
 
 const BASE_PARAMS = {
   maxBudgetPerPerson: 1000,
-  maxDistanceKm: 10000,
+  maxFlightHours: 13,
   nights: 7,
   groupSize: 2,
 }
@@ -151,7 +152,7 @@ describe('runEngineDiagnostics', () => {
 
 /**
  * Measured 19 October 2026 against `pickableDestinations`/`departureCities` with the
- * homepage defaults (£1,500 budget, 10,000 km max distance, 7 nights, 2 people, no style
+ * homepage defaults (£1,500 budget, 12h max flight time, 7 nights, 2 people, no style
  * preference) and a fixed seed, per ROADMAP.md feature 5's analysis. Re-pinned once score-weighted
  * sampling across all passing destinations and the distance-free weights landed. These are
  * regression floors, not targets.
@@ -159,7 +160,7 @@ describe('runEngineDiagnostics', () => {
 describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
   const summary = runEngineDiagnostics(pickableDestinations, departureCities, {
     maxBudgetPerPerson: 1500,
-    maxDistanceKm: 10000,
+    maxFlightHours: DEFAULT_MAX_FLIGHT_HOURS,
     nights: 7,
     groupSize: 2,
     travelStyles: [],
@@ -168,7 +169,7 @@ describe('engine diagnostics baseline (ROADMAP.md feature 5)', () => {
 
   it('surfaces most of the catalogue across every origin', () => {
     // Every destination that passes the filters can now be drawn, so coverage only misses what
-    // the £1,500 and 10,000 km defaults rule out. The floor sits well below the measured value
+    // the £1,500 and 12h defaults rule out. The floor sits well below the measured value
     // because every far-flung or pricey destination added to the catalogue lowers coverage
     // without the engine regressing (0.8 was tripped on 10 Nov 2026 by a batch of US cities).
     expect(summary.poolCoverage).toBeGreaterThanOrEqual(0.7)

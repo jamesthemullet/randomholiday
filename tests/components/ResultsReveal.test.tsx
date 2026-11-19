@@ -36,7 +36,7 @@ function makeScore(overrides: Partial<DestinationScore> = {}): DestinationScore 
     styleScore: 1,
     seasonScore: 1,
     budgetScore: 0.8,
-    distanceScore: 0.6,
+    flightTimeScore: 0.6,
     ...overrides,
   }
 }
@@ -137,7 +137,8 @@ describe('ResultsReveal', () => {
       />
     )
     expect(screen.getByText('From').nextSibling).toHaveTextContent('London')
-    expect(screen.getByText('12,340 km')).toBeInTheDocument()
+    // 0.5h + 12,344 km at 800 km/h is about 15h 56m, shown to the nearest 5 minutes.
+    expect(screen.getByText('~15h 55m')).toBeInTheDocument()
     expect(screen.getByText('1 night')).toBeInTheDocument()
     expect(screen.getByText('£1,234')).toBeInTheDocument()
   })
@@ -217,7 +218,7 @@ describe('ResultsReveal', () => {
     expect(screen.getByRole('heading', { name: 'Nowhere fits… yet.' })).toBeInTheDocument()
     expect(
       screen.getByText(
-        'No destinations matched your search. Try adjusting your budget or distance.'
+        'No destinations matched your search. Try adjusting your budget or flight time.'
       )
     ).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Change my answers' })).toHaveAttribute('href', '/')
