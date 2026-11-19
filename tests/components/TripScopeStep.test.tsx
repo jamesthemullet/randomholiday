@@ -1,42 +1,47 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { TripScopeStep, formatDistance, clampGroupSize } from '@/components/TripScopeStep'
+import { TripScopeStep, clampGroupSize } from '@/components/TripScopeStep'
 
 describe('TripScopeStep', () => {
   const defaultProps = {
-    maxDistance: 5000,
-    onMaxDistanceChange: vi.fn(),
+    maxFlightHours: 5,
+    onMaxFlightHoursChange: vi.fn(),
     groupSize: 2,
     onGroupSizeChange: vi.fn(),
   }
 
-  it('renders the distance slider and group size stepper', () => {
+  const getFlightTimeSlider = () => screen.getByRole('slider', { name: 'Max flight time' })
+
+  it('renders the flight-time slider and group size stepper', () => {
     render(<TripScopeStep {...defaultProps} />)
-    expect(screen.getByRole('slider', { name: 'Max travel distance' })).toBeInTheDocument()
+    expect(getFlightTimeSlider()).toBeInTheDocument()
     expect(screen.getByRole('group', { name: 'Group size' })).toBeInTheDocument()
   })
 
-  it('displays the formatted distance value', () => {
-    render(<TripScopeStep {...defaultProps} maxDistance={5000} />)
-    expect(screen.getByText('5,000 km')).toBeInTheDocument()
+  it('displays the chosen flight-time limit', () => {
+    render(<TripScopeStep {...defaultProps} maxFlightHours={8} />)
+    expect(screen.getByText('Up to 8h')).toBeInTheDocument()
   })
 
-  it('displays "Anywhere" when distance is at the max limit', () => {
-    render(<TripScopeStep {...defaultProps} maxDistance={20000} maxDistanceLimit={20000} />)
-    expect(screen.getByRole('slider', { name: 'Max travel distance' })).toHaveAttribute(
-      'aria-valuetext',
-      'Anywhere'
-    )
+  it('displays "Anywhere" at the longest option', () => {
+    render(<TripScopeStep {...defaultProps} maxFlightHours={30} />)
+    expect(getFlightTimeSlider()).toHaveAttribute('aria-valuetext', 'Anywhere')
   })
 
-  it('calls onMaxDistanceChange with the numeric slider value', () => {
-    const onMaxDistanceChange = vi.fn()
-    render(<TripScopeStep {...defaultProps} onMaxDistanceChange={onMaxDistanceChange} />)
-    fireEvent.change(screen.getByRole('slider', { name: 'Max travel distance' }), {
-      target: { value: '8000' },
-    })
-    expect(onMaxDistanceChange).toHaveBeenCalledWith(8000)
+  it('snaps a limit between options to the option it falls under', () => {
+    // An older ?distance= link can convert to any number of hours.
+    render(<TripScopeStep {...defaultProps} maxFlightHours={6.75} />)
+    expect(getFlightTimeSlider()).toHaveAttribute('aria-valuetext', 'Up to 7h')
+  })
+
+  it('steps through the fixed options and reports hours', () => {
+    const onMaxFlightHoursChange = vi.fn()
+    render(<TripScopeStep {...defaultProps} onMaxFlightHoursChange={onMaxFlightHoursChange} />)
+    // 3, 4, 5, 6, 7, 8, 10, 12, Anywhere
+    expect(getFlightTimeSlider()).toHaveAttribute('max', '8')
+    fireEvent.change(getFlightTimeSlider(), { target: { value: '6' } })
+    expect(onMaxFlightHoursChange).toHaveBeenCalledWith(10)
   })
 
   it('displays the group size count with plural label', () => {
@@ -75,35 +80,9 @@ describe('TripScopeStep', () => {
     expect(screen.getByRole('button', { name: 'Increase group size' })).toBeDisabled()
   })
 
-  it('accepts a custom max distance limit and group size range', () => {
-    render(
-      <TripScopeStep
-        {...defaultProps}
-        maxDistanceLimit={10000}
-        minGroupSize={2}
-        maxGroupSize={6}
-        groupSize={2}
-      />
-    )
-    expect(screen.getByRole('slider', { name: 'Max travel distance' })).toHaveAttribute(
-      'max',
-      '10000'
-    )
+  it('accepts a custom group size range', () => {
+    render(<TripScopeStep {...defaultProps} minGroupSize={2} maxGroupSize={6} groupSize={2} />)
     expect(screen.getByRole('button', { name: 'Decrease group size' })).toBeDisabled()
-  })
-})
-
-describe('formatDistance', () => {
-  it('formats a value below max with thousands separators and unit', () => {
-    expect(formatDistance(5000, 20000)).toBe('5,000 km')
-  })
-
-  it('returns "Anywhere" when value equals max', () => {
-    expect(formatDistance(20000, 20000)).toBe('Anywhere')
-  })
-
-  it('returns "Anywhere" when value exceeds max', () => {
-    expect(formatDistance(25000, 20000)).toBe('Anywhere')
   })
 })
 

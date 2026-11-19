@@ -5,7 +5,7 @@ import {
   calculateStyleScore,
   calculateSeasonScore,
   calculateBudgetScore,
-  calculateDistanceScore,
+  calculateFlightTimeScore,
   DEFAULT_WEIGHTS,
 } from '@/lib/scoringEngine'
 import type { ScoreParams } from '@/lib/scoringEngine'
@@ -77,7 +77,7 @@ const ALL = [PARIS, TOKYO]
 const DEFAULT_PARAMS: ScoreParams = {
   origin: LONDON,
   maxBudgetPerPerson: 3000,
-  maxDistanceKm: 10000,
+  maxFlightHours: 13,
   nights: 7,
   groupSize: 2,
 }
@@ -164,36 +164,36 @@ describe('calculateBudgetScore', () => {
   })
 })
 
-// ── calculateDistanceScore ───────────────────────────────────────────────────
+// ── calculateFlightTimeScore ───────────────────────────────────────────────────
 
-describe('calculateDistanceScore', () => {
-  it('returns 0 when maxDistanceKm is 0 and distanceKm is nonzero', () => {
-    expect(calculateDistanceScore(100, 0)).toBe(0)
+describe('calculateFlightTimeScore', () => {
+  it('returns 0 when maxFlightHours is 0 and distanceKm is nonzero', () => {
+    expect(calculateFlightTimeScore(100, 0)).toBe(0)
   })
 
-  it('returns 1 when maxDistanceKm is 0 and distanceKm is 0', () => {
-    expect(calculateDistanceScore(0, 0)).toBe(1)
+  it('returns 1 when maxFlightHours is 0 and distanceKm is 0', () => {
+    expect(calculateFlightTimeScore(0, 0)).toBe(1)
   })
 
   it('returns 1 when distanceKm is 0', () => {
-    expect(calculateDistanceScore(0, 1000)).toBe(1)
+    expect(calculateFlightTimeScore(0, 1000)).toBe(1)
   })
 
   it('returns a fraction proportional to distance headroom', () => {
-    expect(calculateDistanceScore(500, 1000)).toBe(0.5)
+    expect(calculateFlightTimeScore(500, 1000)).toBe(0.5)
   })
 
-  it('returns 0 when distanceKm equals maxDistanceKm', () => {
-    expect(calculateDistanceScore(1000, 1000)).toBe(0)
+  it('returns 0 when distanceKm equals maxFlightHours', () => {
+    expect(calculateFlightTimeScore(1000, 1000)).toBe(0)
   })
 })
 
 // ── scoreDestination ─────────────────────────────────────────────────────────
 
 describe('scoreDestination', () => {
-  it('throws when maxDistanceKm is negative', () => {
-    expect(() => scoreDestination(PARIS, { ...DEFAULT_PARAMS, maxDistanceKm: -1 })).toThrow(
-      'maxDistanceKm must be non-negative'
+  it('throws when maxFlightHours is negative', () => {
+    expect(() => scoreDestination(PARIS, { ...DEFAULT_PARAMS, maxFlightHours: -1 })).toThrow(
+      'maxFlightHours must be non-negative'
     )
   })
 
@@ -231,16 +231,16 @@ describe('scoreDestination', () => {
     const result = scoreDestination(PARIS, {
       ...DEFAULT_PARAMS,
       maxBudgetPerPerson: 730,
-      maxDistanceKm: 341,
+      maxFlightHours: 0.92625,
       travelStyles: ['city'],
       travelMonth: 5,
     })
     expect(result.styleScore).toBe(1)
     expect(result.seasonScore).toBe(1)
     // At the exact budget limit the cost fits the budget perfectly (score 1),
-    // while the exact distance limit still leaves no distance headroom (score 0).
+    // while the exact flight-time limit still leaves no headroom (score 0).
     expect(result.budgetScore).toBe(1)
-    expect(result.distanceScore).toBe(0)
+    expect(result.flightTimeScore).toBe(0)
     expect(result.totalScore).toBeCloseTo(
       100 * (DEFAULT_WEIGHTS.style + DEFAULT_WEIGHTS.season + DEFAULT_WEIGHTS.budget),
       5
@@ -251,7 +251,7 @@ describe('scoreDestination', () => {
     const result = scoreDestination(PARIS, {
       ...DEFAULT_PARAMS,
       maxBudgetPerPerson: 1,
-      maxDistanceKm: 1,
+      maxFlightHours: 0.50125,
       travelStyles: ['beach'],
       travelMonth: 1,
     })
@@ -267,7 +267,7 @@ describe('scoreDestination', () => {
     const styleOnly = scoreDestination(PARIS, {
       ...DEFAULT_PARAMS,
       travelStyles: ['beach'],
-      weights: { style: 1, season: 0, budget: 0, distance: 0 },
+      weights: { style: 1, season: 0, budget: 0, flightTime: 0 },
     })
     // Paris does not match 'beach', so with 100% weight on style the score is 0
     expect(styleOnly.totalScore).toBe(0)
@@ -275,7 +275,7 @@ describe('scoreDestination', () => {
     const noStyleWeight = scoreDestination(PARIS, {
       ...DEFAULT_PARAMS,
       travelStyles: ['beach'],
-      weights: { style: 0, season: 0, budget: 0, distance: 1 },
+      weights: { style: 0, season: 0, budget: 0, flightTime: 1 },
     })
     // With style weight zeroed out, the mismatch no longer affects the score
     expect(noStyleWeight.totalScore).toBeGreaterThan(0)
@@ -300,7 +300,7 @@ describe('scoreDestinations', () => {
     const results = scoreDestinations(ALL, {
       ...DEFAULT_PARAMS,
       maxBudgetPerPerson: 3000,
-      maxDistanceKm: 10000,
+      maxFlightHours: 13,
     })
     expect(results[0]?.destination.id).toBe('tokyo')
     expect(results[1]?.destination.id).toBe('paris')

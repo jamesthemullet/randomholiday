@@ -22,7 +22,7 @@ const trip: TripQuery = {
   month: 6,
   nights: 7,
   travelStyles: ['beach', 'city'],
-  maxDistance: 10000,
+  maxFlightHours: 12,
   groupSize: 2,
 }
 
@@ -53,7 +53,7 @@ describe('getDefaultTripQuery', () => {
       month: 11,
       nights: 7,
       travelStyles: [],
-      maxDistance: 10000,
+      maxFlightHours: 12,
       groupSize: 2,
     })
   })
@@ -64,7 +64,7 @@ describe('buildResultsQuery', () => {
     const params = new URLSearchParams(buildResultsQuery(trip))
     expect(params.get('originId')).toBe('london-uk')
     expect(params.get('budget')).toBe('1500')
-    expect(params.get('distance')).toBe('10000')
+    expect(params.get('hours')).toBe('12')
     expect(params.get('nights')).toBe('7')
     expect(params.get('groupSize')).toBe('2')
     expect(params.get('month')).toBe('6')
@@ -94,11 +94,21 @@ describe('parseTripQuery', () => {
         budget: 'lots',
         month: '13',
         nights: '0',
-        distance: '-5',
+        hours: '-5',
         groupSize: 'NaN',
       })
     )
     expect(values).toEqual({})
+  })
+
+  it('reads the older distance param as the equivalent flight time', () => {
+    // 0.5h + 8,000 km at 800 km/h, so links made before the switch keep their results.
+    expect(parseTripQuery(new URLSearchParams({ distance: '8000' })).maxFlightHours).toBe(10.5)
+  })
+
+  it('prefers hours over the older distance param', () => {
+    const values = parseTripQuery(new URLSearchParams({ hours: '5', distance: '8000' }))
+    expect(values.maxFlightHours).toBe(5)
   })
 
   it('drops a known city that has no route data yet', () => {

@@ -6,6 +6,7 @@ import Link from 'next/link'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'
 import { formatGbp } from '@/lib/currency'
+import { flightHoursForDistance, formatFlightTime } from '@/lib/flightTime'
 import styles from './ResultsReveal.module.css'
 
 export interface ResultsRevealProps {
@@ -122,8 +123,8 @@ function Postcard({
   const stats = [
     originName !== undefined && { label: 'From', value: originName },
     distanceKm !== undefined && {
-      label: 'Distance',
-      value: `${(Math.round(distanceKm / 10) * 10).toLocaleString('en-US')} km`,
+      label: 'Flight',
+      value: formatFlightTime(flightHoursForDistance(distanceKm)),
     },
     nights !== undefined && {
       label: 'Trip',
@@ -293,7 +294,7 @@ export function ResultsReveal({
         <div className={styles.empty}>
           <h2 className={styles.emptyTitle}>Nowhere fits… yet.</h2>
           <p className={styles.emptyText}>
-            No destinations matched your search. Try adjusting your budget or distance.
+            No destinations matched your search. Try adjusting your budget or flight time.
           </p>
           {changeSearchHref && (
             <Link href={changeSearchHref} className={styles.primaryAction}>

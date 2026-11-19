@@ -45,7 +45,7 @@ function weightedShuffle(scored: DestinationScore[], random: () => number): Dest
 
 /**
  * Produces randomised holiday recommendations by filtering out destinations
- * that fail hard constraints (budget, distance, style), scoring the rest,
+ * that fail hard constraints (budget, flight time, style), scoring the rest,
  * then drawing at random with better scores more likely. Every destination
  * that passes the filters can be drawn, which keeps results varied across
  * repeated calls, e.g. for a "Shuffle" button, while still favouring good
