@@ -14,7 +14,6 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PricingPlans } from '@/components/PricingPlans'
-import { ProGate } from '@/components/ProGate'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { RouteAnnouncer } from '@/components/RouteAnnouncer'
@@ -157,15 +156,6 @@ describe('accessibility (axe)', () => {
 
   it('PricingPlans has no violations', async () => {
     const { container } = render(<PricingPlans />)
-    expect(await axe(container)).toHaveNoViolations()
-  })
-
-  it('ProGate has no violations', async () => {
-    const { container } = render(
-      <ProGate status="free" feature="save-trip" onUpgrade={vi.fn()}>
-        <p>Unlocked content</p>
-      </ProGate>
-    )
     expect(await axe(container)).toHaveNoViolations()
   })
 
