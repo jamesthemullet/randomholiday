@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-destination-photos.mjs && next build",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -21,6 +21,7 @@
     "e2e:ui": "playwright test --ui",
     "lighthouse": "lhci autorun",
     "data:london": "node scripts/fetch-london-destinations.mjs",
+    "data:photos": "node scripts/generate-destination-photos.mjs",
     "prepare": "husky",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
