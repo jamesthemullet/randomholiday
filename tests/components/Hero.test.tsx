@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { Hero } from '@/components/Hero'
+import { getHeroPhoto } from '@/lib/heroPhoto'
 
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: vi.fn() }),
@@ -18,9 +19,11 @@ describe('Hero', () => {
     expect(screen.getByText(/we'll surprise you with the perfect/i)).toBeInTheDocument()
   })
 
-  it('renders the background photo with alt text', () => {
+  it("renders today's background photo with matching alt text and caption", () => {
+    const { label } = getHeroPhoto(new Date())
     render(<Hero />)
-    expect(screen.getByRole('img', { name: 'Santorini, Greece' })).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: label })).toBeInTheDocument()
+    expect(screen.getByText(label, { selector: 'span' })).toBeInTheDocument()
   })
 
   it('renders the trip search form inline', () => {

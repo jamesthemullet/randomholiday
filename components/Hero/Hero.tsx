@@ -1,14 +1,17 @@
 import React, { Suspense } from 'react'
 import Image from 'next/image'
 import { TripForm, TripFormFromQuery } from '@/components/TripForm'
+import { getHeroPhoto } from '@/lib/heroPhoto'
 import styles from './Hero.module.css'
 
 export function Hero() {
+  const photo = getHeroPhoto(new Date())
+
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
       <Image
-        src="/destinations/santorini-greece.jpg"
-        alt="Santorini, Greece"
+        src={photo.src}
+        alt={photo.label}
         fill
         preload
         sizes="100vw"
@@ -33,7 +36,7 @@ export function Hero() {
         </div>
       </div>
       <span className={styles.caption} aria-hidden="true">
-        Santorini, Greece
+        {photo.label}
       </span>
     </section>
   )
