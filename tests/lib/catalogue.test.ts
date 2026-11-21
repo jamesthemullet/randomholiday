@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import londonData from '@/lib/data/london-destinations.json'
+import destinationFacts from '@/lib/data/destination-facts.json'
+import londonRoutes from '@/lib/data/routes/london.json'
 import detailsData from '@/lib/data/destination-details.json'
 import {
   buildCatalogue,
@@ -58,6 +59,14 @@ function stub(
 
 const lisbonDetails = (detailsData as Record<string, DestinationDetails>)['lisbon-portugal']
 const lisbon: Destination = { ...stub({ id: 'lisbon-portugal', name: 'Lisbon' }), ...lisbonDetails }
+
+// What lib/catalogue.ts builds internally from the two generated files: a destination's shared
+// facts joined with its London route, for every destination reachable from London.
+const londonRoutesById = new Map(londonRoutes.map((route) => [route.id, route]))
+const londonData = destinationFacts.flatMap((facts) => {
+  const route = londonRoutesById.get(facts.id)
+  return route ? [{ ...facts, london: route }] : []
+})
 
 describe('generated London destination data', () => {
   it('has unique ids', () => {
