@@ -112,8 +112,10 @@ give only 9 distinct places. Root causes are all small, contained fixes in `lib/
 - [x] Sample by score instead of uniformly in `recommendationEngine.ts`. (widened from the top 10
       to every destination that passes the filters)
       Session-level "don't show me that again" is feature 2.
-- [ ] **Content, not code.** Grow the catalogue where it's thin. Oceania has 4 of 56 destinations,
-      so Sydney, Melbourne and Auckland get only 6–9 options.
+- [x] **Content, not code.** Superseded (#285). The catalogue is now generated from London's
+      direct routes, and only UK departure cities are planned, so Sydney, Melbourne and Auckland
+      no longer need more options. Growing into places London doesn't fly to directly is feature
+      10's wishlist.
 
 ### 9. Travel advisories — _Trust_
 
