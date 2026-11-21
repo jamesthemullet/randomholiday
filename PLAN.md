@@ -78,7 +78,7 @@ Sub-steps:
 
 ## Phase 5: API Integration
 
-- [x] Flight price API route handler — `/api/flight-price`, returns a static estimate (via `estimateFlightCostPerPerson`). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
+- [x] Flight price estimate — `estimateFlightCostPerPerson` in `lib/budgetCalculator.ts`, called directly by `ResultsClient`/`DestinationDetailModal` (the standalone `/api/flight-price` route handler was removed as dead code — see AUDIT.md). No live provider wired up: Amadeus self-service was decommissioned July 2026, and the natural replacement (Duffel) doesn't cover Ryanair/Wizz Air, which matter too much for this app to accept the gap. Revisit if a provider with LCC coverage turns up.
 - [x] Destination photos — self-hosted static images in `/public/destinations/<id>.jpg`, no external API/copyright risk; falls back to a placeholder when a destination has no photo yet (photos being added manually)
 - [x] OpenWeatherMap API route handler (seasonal weather)
 - [x] Graceful fallbacks when APIs unavailable — live weather fetch now has a bounded timeout, so a hung upstream request falls back to the static estimate instead of blocking
