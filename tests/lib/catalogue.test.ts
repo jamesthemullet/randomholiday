@@ -6,6 +6,7 @@ import {
   buildCatalogue,
   catalogue,
   isPickable,
+  joinFactsAndRoutes,
   pickableDestinations,
   type CatalogueEntry,
   type DestinationDetails,
@@ -111,6 +112,19 @@ describe('isPickable', () => {
 
   it('rejects an entry with no travel styles', () => {
     expect(isPickable({ ...lisbon, london: route, travelStyles: [] })).toBe(false)
+  })
+})
+
+describe('joinFactsAndRoutes', () => {
+  it('joins a fact with its matching route', () => {
+    const facts: DestinationFacts[] = [stub()]
+    const joined = joinFactsAndRoutes(facts, [{ id: 'faro-portugal', ...route }])
+    expect(joined).toEqual([{ ...stub(), london: route }])
+  })
+
+  it('drops a fact with no route for this city', () => {
+    const facts: DestinationFacts[] = [stub()]
+    expect(joinFactsAndRoutes(facts, [])).toEqual([])
   })
 })
 

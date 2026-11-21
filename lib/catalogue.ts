@@ -37,15 +37,27 @@ type LondonDestination = DestinationFacts & { london: LondonRoute }
 // Facts are shared across cities; routes are kept one file per origin city.
 const destinationFacts = destinationFactsData as DestinationFacts[]
 const londonRoutes = londonRoutesData as (LondonRoute & { id: string })[]
-const londonRoutesById = new Map(londonRoutes.map((route) => [route.id, route]))
-const londonDestinations: LondonDestination[] = destinationFacts.flatMap((facts) => {
-  const route = londonRoutesById.get(facts.id)
-  if (!route) return []
-  const { direct, airports, airlines, seasonalOnly } = route
-  return [{ ...facts, london: { direct, airports, airlines, seasonalOnly } }]
-})
 // Hand-maintained details for generated destinations, keyed by destination id.
 const destinationDetails = detailsData as Record<string, Partial<DestinationDetails>>
+
+/**
+ * Joins shared destination facts with one city's routes, dropping any fact with no route for
+ * that city (e.g. a destination only another city's data has resolved so far).
+ */
+export function joinFactsAndRoutes(
+  facts: DestinationFacts[],
+  routes: (LondonRoute & { id: string })[]
+): LondonDestination[] {
+  const routesById = new Map(routes.map((route) => [route.id, route]))
+  return facts.flatMap((fact) => {
+    const route = routesById.get(fact.id)
+    if (!route) return []
+    const { direct, airports, airlines, seasonalOnly } = route
+    return [{ ...fact, london: { direct, airports, airlines, seasonalOnly } }]
+  })
+}
+
+const londonDestinations: LondonDestination[] = joinFactsAndRoutes(destinationFacts, londonRoutes)
 
 /**
  * Builds the catalogue from the generated London destinations, which are the source of truth for
