@@ -182,8 +182,10 @@ Let a user save a result to come back to later — the first feature that needs 
 
 Roll two or three destinations at once and compare them side by side on budget/weather/distance.
 
-- [ ] Extend `recommendationEngine.ts` to return N candidates instead of one — pure function change +
-      tests.
+- [x] Extend `recommendationEngine.ts` to return N candidates instead of one — pure function change +
+      tests. (Already in place: `count` on `RecommendationParams` in `lib/recommendationEngine.ts`
+      returns up to `count` weighted-sampled `DestinationScore`s, tested in
+      `tests/lib/recommendationEngine.test.ts`.)
 - [ ] Comparison table UI on `/results`, reusing `budgetCalculator`/`seasonalWeather`/
       `distanceCalculator` outputs already computed per candidate.
 
