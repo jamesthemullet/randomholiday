@@ -147,9 +147,12 @@ outbreaks and entry bans, so call it a `travelAdvisory`, not anything war-specif
       <country>. Check the latest advice before booking." (`components/ResultsReveal/ResultsReveal.tsx`'s
       `Postcard` now renders a `Badge` plus a link to `getFcdoUrl` from `lib/travelAdvisory.ts`
       when `getSafetyStatus` is `warn`, tested in `tests/components/ResultsReveal.test.tsx`)
-- [ ] Add a banner on `/destination/[slug]` for excluded places ("Currently excluded from picks
+- [x] Add a banner on `/destination/[slug]` for excluded places ("Currently excluded from picks
       due to FCDO travel advice"). Keep the page indexed, and drop its flight and hotel affiliate
-      links (`lib/affiliateLinks.ts`).
+      links (`lib/affiliateLinks.ts`). (`app/destination/[slug]/page.tsx` shows a danger-styled
+      banner with an FCDO link when `getSafetyStatus` is `exclude`; the page has no affiliate
+      links to drop today — `lib/affiliateLinks.ts` is only used in the destination detail modal —
+      tested in `tests/app/destination-page.test.tsx`)
 - [ ] **Infra (Mise en Place):** add a `yarn data:advisories` script that fetches each route-data
       country's alert status from the GOV.UK content API
       (`https://www.gov.uk/api/content/foreign-travel-advice/<country-slug>`) and writes
