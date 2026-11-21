@@ -6,6 +6,7 @@ import { pickableDestinations } from '@/lib/catalogue'
 import { getPosterTheme } from '@/lib/destinationImage'
 import { getMonthOptions } from '@/lib/tripQuery'
 import { getAppUrl } from '@/lib/appUrl'
+import { getFcdoUrl, getSafetyStatus } from '@/lib/travelAdvisory'
 import styles from './page.module.css'
 
 interface DestinationPageProps {
@@ -45,6 +46,8 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
   const appUrl = getAppUrl()
   const monthOptions = getMonthOptions()
   const bestMonths = destination.bestMonths.map((month) => monthOptions[month - 1].label)
+  const isExcluded = getSafetyStatus(destination.id) === 'exclude'
+  const fcdoUrl = isExcluded ? getFcdoUrl(destination.id) : undefined
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -77,6 +80,20 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
             {destination.name}, {destination.country}
           </h1>
         </div>
+
+        {isExcluded && (
+          <div className={styles.advisoryBanner}>
+            <Badge variant="danger">Excluded from picks</Badge>
+            <p className={styles.advisoryBannerText}>
+              Currently excluded from picks due to FCDO travel advice.{' '}
+              {fcdoUrl && (
+                <a href={fcdoUrl} target="_blank" rel="noopener noreferrer">
+                  Check the latest advice
+                </a>
+              )}
+            </p>
+          </div>
+        )}
 
         <div className={styles.badges}>
           {destination.travelStyles.map((style) => (

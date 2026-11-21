@@ -60,6 +60,27 @@
   margin-bottom: var(--space-6);
 }
 
+.advisoryBanner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.advisoryBannerText {
+  margin: 0;
+}
+
+.advisoryBannerText a {
+  color: var(--color-danger-text);
+  text-decoration: underline;
+}
+
 .description {
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);

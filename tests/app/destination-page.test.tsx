@@ -5,6 +5,7 @@ import DestinationPage, {
   generateStaticParams,
 } from '@/app/destination/[slug]/page'
 import { pickableDestinations } from '@/lib/catalogue'
+import { getFcdoUrl, getSafetyStatus } from '@/lib/travelAdvisory'
 
 const notFound = vi.fn(() => {
   throw new Error('NEXT_NOT_FOUND')
@@ -13,6 +14,16 @@ const notFound = vi.fn(() => {
 vi.mock('next/navigation', () => ({
   notFound: () => notFound(),
 }))
+
+vi.mock('@/lib/travelAdvisory', async () => {
+  const actual =
+    await vi.importActual<typeof import('@/lib/travelAdvisory')>('@/lib/travelAdvisory')
+  return {
+    ...actual,
+    getSafetyStatus: vi.fn(actual.getSafetyStatus),
+    getFcdoUrl: vi.fn(actual.getFcdoUrl),
+  }
+})
 
 const destination = pickableDestinations[0]
 
@@ -99,5 +110,27 @@ describe('DestinationPage', () => {
       DestinationPage({ params: Promise.resolve({ slug: 'nowhere' }) })
     ).rejects.toThrow('NEXT_NOT_FOUND')
     expect(notFound).toHaveBeenCalled()
+  })
+
+  it('shows an excluded-from-picks banner with an FCDO link for an excluded destination', async () => {
+    vi.mocked(getSafetyStatus).mockReturnValueOnce('exclude')
+    vi.mocked(getFcdoUrl).mockReturnValueOnce('https://www.gov.uk/foreign-travel-advice/somewhere')
+
+    render(await DestinationPage({ params: Promise.resolve({ slug: destination.id }) }))
+
+    expect(screen.getByText('Excluded from picks')).toBeInTheDocument()
+    expect(
+      screen.getByText(/currently excluded from picks due to fcdo travel advice/i)
+    ).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Check the latest advice' })).toHaveAttribute(
+      'href',
+      'https://www.gov.uk/foreign-travel-advice/somewhere'
+    )
+  })
+
+  it('omits the excluded-from-picks banner for a destination with no exclude override', async () => {
+    render(await DestinationPage({ params: Promise.resolve({ slug: destination.id }) }))
+
+    expect(screen.queryByText('Excluded from picks')).not.toBeInTheDocument()
   })
 })
