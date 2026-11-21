@@ -7,6 +7,8 @@ import type { DestinationScore } from '@/lib/scoringEngine'
 import { getDestinationImagePath, getPosterTheme } from '@/lib/destinationImage'
 import { formatGbp } from '@/lib/currency'
 import { flightHoursForDistance, formatFlightTime } from '@/lib/flightTime'
+import { getFcdoUrl, getSafetyStatus } from '@/lib/travelAdvisory'
+import { Badge } from '@/components/Badge'
 import styles from './ResultsReveal.module.css'
 
 export interface ResultsRevealProps {
@@ -109,6 +111,8 @@ function Postcard({
   const [imageFailed, setImageFailed] = useState(false)
   const score = Math.round(recommendation.totalScore)
   const shuffleButtonRef = useRef<HTMLButtonElement>(null)
+  const isAdvisoryWarning = getSafetyStatus(destination.id) === 'warn'
+  const fcdoUrl = isAdvisoryWarning ? getFcdoUrl(destination.id) : undefined
 
   useEffect(() => {
     if (focusShuffleRef.current) {
@@ -177,6 +181,15 @@ function Postcard({
           {destination.name}
         </h2>
         <p className={styles.country}>{destination.country}</p>
+        {fcdoUrl && (
+          <p className={styles.advisory}>
+            <Badge variant="warning">Travel advisory</Badge>
+            <a href={fcdoUrl} target="_blank" rel="noopener noreferrer" className={styles.advisoryLink}>
+              FCDO advises against travel to parts of {destination.country}. Check the latest
+              advice before booking.
+            </a>
+          </p>
+        )}
         <p className={styles.description}>{destination.description}</p>
         {destination.activities.length > 0 && (
           <ul className={styles.activities} aria-label="Things to do">

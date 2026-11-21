@@ -142,9 +142,11 @@ outbreaks and entry bans, so call it a `travelAdvisory`, not anything war-specif
       `removedByAdvisory` in `lib/filterEngine.ts`, applied right after the distance filter and
       before budget, tested in `tests/lib/filterEngine.test.ts`; no baseline change needed since
       `lib/data/safety-overrides.json` has no `exclude` entries yet, only `warn`)
-- [ ] Show a warning badge (reusing `components/Badge`) on `warn` results, linking to the
+- [x] Show a warning badge (reusing `components/Badge`) on `warn` results, linking to the
       country's FCDO page. Use neutral wording: "FCDO advises against travel to parts of
-      <country>. Check the latest advice before booking."
+      <country>. Check the latest advice before booking." (`components/ResultsReveal/ResultsReveal.tsx`'s
+      `Postcard` now renders a `Badge` plus a link to `getFcdoUrl` from `lib/travelAdvisory.ts`
+      when `getSafetyStatus` is `warn`, tested in `tests/components/ResultsReveal.test.tsx`)
 - [ ] Add a banner on `/destination/[slug]` for excluded places ("Currently excluded from picks
       due to FCDO travel advice"). Keep the page indexed, and drop its flight and hotel affiliate
       links (`lib/affiliateLinks.ts`).
