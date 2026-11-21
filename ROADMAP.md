@@ -186,7 +186,9 @@ Roll two or three destinations at once and compare them side by side on budget/w
 
 Only London can be chosen today. It's the only city in `SUPPORTED_DEPARTURE_CITY_IDS`
 (`lib/departureCities.ts`) with route data (`lib/data/london-destinations.json`, from
-`yarn data:london`). The other cities are already in `departureCities` but can't be chosen. Each
+`yarn data:london`). The other UK cities are already in `departureCities` but can't be chosen.
+Only UK departure cities are planned, because randomholiday.co.uk is for people leaving from the
+UK. Each
 city goes live as its own PR: route data only, no prices. New destinations it adds join the
 catalogue as stubs and stay unpickable until their details land in
 `lib/data/destination-details.json`.
@@ -198,9 +200,9 @@ catalogue as stubs and stay unpickable until their details land in
       several cities is stored once. London's output must match today's.
 - [ ] Make the catalogue and engine origin-aware. A destination's `london` field becomes
       `routes: Record<originId, Route>`, and `getRecommendations` only picks destinations reachable
-      from the chosen origin. Decide what counts as reachable before the smaller airports go live.
-      Inverness flies to very few places directly, so "any destination, one stop" may suit it
-      better. Also stop a city recommending itself (Edinburgh → Edinburgh).
+      from the chosen origin. "Reachable" means direct or one stop through a hub (feature 10),
+      which matters most for small airports: Inverness flies to very few places directly. Also stop
+      a city recommending itself (Edinburgh → Edinburgh).
 
 **UK first.** For each city: add its airports to the config, run `yarn data:routes <city-id>`,
 check the new stubs and the merges with existing destinations (watch for airport-named cities,
@@ -224,48 +226,6 @@ like Newark vs New York), then add the id to `SUPPORTED_DEPARTURE_CITY_IDS`.
 - [ ] Norwich (NWI)
 - [ ] Inverness (INV)
 
-**Then Europe**, same steps:
-
-- [ ] Dublin (DUB)
-- [ ] Paris (CDG, ORY, BVA)
-- [ ] Amsterdam (AMS)
-- [ ] Berlin (BER)
-- [ ] Madrid (MAD)
-- [ ] Rome (FCO, CIA)
-- [ ] Lisbon (LIS)
-- [ ] Vienna (VIE)
-- [ ] Zurich (ZRH)
-- [ ] Copenhagen (CPH)
-- [ ] Stockholm (ARN, BMA)
-- [ ] Oslo (OSL, TRF)
-- [ ] Warsaw (WAW, WMI)
-- [ ] Athens (ATH)
-
-**Then the rest of the world.** These need step 2's "reachable" rule to hold up for long-haul
-hubs. Wikipedia's destination lists for big hubs are long and get edited often, so re-run each
-one seasonally.
-
-- [ ] New York (JFK, EWR, LGA)
-- [ ] Los Angeles (LAX)
-- [ ] Chicago (ORD, MDW)
-- [ ] Toronto (YYZ)
-- [ ] Mexico City (MEX, NLU)
-- [ ] São Paulo (GRU, CGH)
-- [ ] Buenos Aires (EZE, AEP)
-- [ ] Dubai (DXB, DWC)
-- [ ] Cairo (CAI)
-- [ ] Johannesburg (JNB)
-- [ ] Nairobi (NBO)
-- [ ] Mumbai (BOM)
-- [ ] Bangkok (BKK, DMK)
-- [ ] Singapore (SIN)
-- [ ] Hong Kong (HKG)
-- [ ] Seoul (ICN, GMP)
-- [ ] Tokyo (HND, NRT)
-- [ ] Sydney (SYD)
-- [ ] Melbourne (MEL, AVV)
-- [ ] Auckland (AKL)
-
 ### 10. One-stop destinations — _Acquisition, Fun_
 
 Only places with a direct London flight can be picked, which leaves out some of the most
@@ -276,10 +236,50 @@ How it works: **a hand-kept wishlist decides which places are worth adding; the 
 checks that a connection exists.** One stop from a handful of hubs reaches thousands of airports,
 so the script can't choose by itself. But it already reads Wikipedia's "Airlines and
 destinations" tables, and the same parsing works for a hub's table. For each wishlist place it
-finds the hubs London flies to directly (Doha, Dubai, Istanbul, Singapore, Frankfurt, Amsterdam,
-Madrid, Lisbon, New York, Los Angeles, Tokyo…) that also serve the place. It keeps the one with
-the shortest total distance and writes a stub with `direct: false` and `via: ['DOH']`. The
+finds the hubs London flies to directly that also serve the place. It keeps the one with the
+shortest total distance and writes a stub with `direct: false` and `via: ['DOH']`. The
 destination-details routine then fills it in like any other stub.
+
+**Hubs.** Pick hubs for what they reach that London doesn't, not for size. A hub only counts if
+the script finds a direct London route to it, so a dead entry drops out on its own.
+
+| Hub                         | Reaches                                                        |
+| :-------------------------- | :------------------------------------------------------------- |
+| Doha (DOH), Dubai (DXB)     | Seychelles, Bali, Kathmandu, the Indian Ocean, much of Asia    |
+| Istanbul (IST)              | Central Asia, the Caucasus, Africa, Kathmandu                  |
+| Bangkok (BKK)               | Chiang Mai, Luang Prabang, Siem Reap, mainland South-East Asia |
+| Singapore (SIN)             | Bali, Yogyakarta, the rest of Indonesia, Fiji                  |
+| Delhi (DEL)                 | Kathmandu, Leh, Bhutan (Paro)                                  |
+| Addis Ababa (ADD)           | Most of Africa                                                 |
+| Nairobi (NBO)               | East Africa, Zanzibar                                          |
+| Johannesburg (JNB)          | Victoria Falls, southern Africa                                |
+| Madrid (MAD)                | Havana, Medellín, Cartagena, Latin America                     |
+| Lisbon (LIS)                | Brazil, Cape Verde, the Azores                                 |
+| Bogotá (BOG)                | Cartagena, Medellín, the rest of Colombia                      |
+| Lima (LIM)                  | Cusco. Only if London still has a direct Lima flight           |
+| Mexico City (MEX)           | Mexico, Central America                                        |
+| Miami (MIA), New York (JFK) | The Caribbean, Central America                                 |
+| Los Angeles (LAX)           | Fiji, Tahiti                                                   |
+| Tokyo (HND)                 | Japanese domestic: Okinawa, Hokkaido                           |
+
+Left out: Frankfurt, Amsterdam and Paris CDG mostly overlap with London's own routes. Auckland
+has no nonstop London flight, which is why Queenstown is two-stop. Add a hub only when a
+wishlist place needs it.
+
+**Gateways.** Some wishlist places have no useful airport of their own but sit near one that
+London flies to directly. These get `gateway: { destinationId, transfer }` instead of a
+connection search. The stub copies the gateway's route and the results show the transfer, e.g.
+"~2h 35m + ~1h 30m by road". A place is a gateway entry when all of these hold:
+
+1. It has no direct London route of its own.
+2. The gateway is already in the catalogue with a direct London route.
+3. The transfer is about 3h or less by road or rail.
+4. It's the airport people actually fly into, not just the nearest one (Amalfi uses Naples,
+   not Salerno).
+
+When a place qualifies both ways, the gateway wins over a connection, because a direct flight
+plus a short transfer is cheaper and more reliable. Decided gateways: Amalfi Coast via Naples
+(~1h 30m road), Petra via Amman (~3h road), Kyoto via Tokyo (~2h 15m Shinkansen).
 
 The engine side builds on the flight-time filter (`estimateFlightHours` in `lib/flightTime.ts`).
 A connecting trip's time is the sum of its legs plus about 2.5h per stop, so "Up to 12h" leaves
@@ -291,12 +291,13 @@ out Bali (~19h) and "Anywhere" includes it, with no separate "allow connections"
       line. No behaviour change yet, because every route is still direct. Tests cover a one-stop
       and a direct route.
 - [ ] **Script:** add `scripts/connecting-wishlist.json` (place name + its airport's Wikipedia
-      page) and a hub list. Extend `yarn data:london` to write connecting stubs alongside direct
-      ones, and to report wishlist places it couldn't connect with one stop. Seed the wishlist
-      with the 16 destinations dropped when `lib/destinations.ts` was retired (Bali, Kyoto,
-      Chiang Mai, Kathmandu, Cusco, Havana, Patagonia, Cartagena, Medellín, Queenstown, Fiji,
-      Luang Prabang, Seychelles, Bora Bora, Petra, Amalfi). Petra and Amalfi are really
-      "nearest airport + overland" (Amman, Naples), so decide whether they're aliases instead.
+      page, or a `gateway`) and the hub list above. Extend `yarn data:london` to write connecting
+      and gateway stubs alongside direct ones, and to report wishlist places it couldn't connect
+      with one stop. Seed the wishlist with the 16 destinations dropped when `lib/destinations.ts`
+      was retired (Bali, Kyoto, Chiang Mai, Kathmandu, Cusco, Havana, Patagonia, Cartagena,
+      Medellín, Queenstown, Fiji, Luang Prabang, Seychelles, Bora Bora, Petra, Amalfi), with
+      Amalfi, Petra and Kyoto as gateways. Expect Queenstown and Bora Bora in the unreachable
+      report.
 - [ ] **Results label:** show "~19h · 1 stop via Doha" on the results card and in the destination
       modal; direct trips keep "~2h 10m".
 - [ ] **Routine:** update the destination-details routine to fill connecting stubs after direct

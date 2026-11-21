@@ -6,8 +6,8 @@ import {
 } from '@/lib/departureCities'
 
 describe('departureCities database', () => {
-  it('has a set of major departure cities', () => {
-    expect(departureCities.length).toBeGreaterThanOrEqual(30)
+  it('only has UK departure cities', () => {
+    expect(departureCities.every((c) => c.country === 'United Kingdom')).toBe(true)
   })
 
   it('every city has a unique id, name, country and coordinates', () => {
@@ -34,7 +34,7 @@ describe('supportedDepartureCities', () => {
 describe('searchDepartureCities', () => {
   it('searches only supported cities by default', () => {
     expect(searchDepartureCities('')).toEqual(supportedDepartureCities)
-    expect(searchDepartureCities('Paris')).toEqual([])
+    expect(searchDepartureCities('Manchester')).toEqual([])
   })
 
   it('returns all cities for an empty query', () => {
@@ -51,8 +51,8 @@ describe('searchDepartureCities', () => {
   })
 
   it('matches by country, case-insensitively', () => {
-    const results = searchDepartureCities('FRANCE', departureCities)
-    expect(results.some((c) => c.name === 'Paris')).toBe(true)
+    const results = searchDepartureCities('UNITED KINGDOM', departureCities)
+    expect(results.some((c) => c.name === 'Manchester')).toBe(true)
   })
 
   it('returns an empty array when nothing matches', () => {
