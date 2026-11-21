@@ -4,6 +4,7 @@ import { axe } from 'jest-axe'
 import { Button } from '@/components/Button'
 import { Badge } from '@/components/Badge'
 import { Card } from '@/components/Card'
+import { CompareTable } from '@/components/CompareTable'
 import { Slider } from '@/components/Slider'
 import { Modal } from '@/components/Modal'
 import { AdSlot } from '@/components/AdSlot'
@@ -87,6 +88,21 @@ describe('accessibility (axe)', () => {
   it('Slider has no violations', async () => {
     const { container } = render(
       <Slider id="budget" label="Budget" min={0} max={1000} value={500} onChange={vi.fn()} />
+    )
+    expect(await axe(container)).toHaveNoViolations()
+  })
+
+  it('CompareTable has no violations', async () => {
+    const { container } = render(
+      <CompareTable
+        candidates={[makeScore(), makeScore({ destination: makeDestination({ id: 'rome-italy', name: 'Rome', country: 'Italy' }) })]}
+        origin={{ lat: 51.5072, lng: -0.1276 }}
+        nights={7}
+        groupSize={2}
+        travelMonth={6}
+        onChoose={vi.fn()}
+        onBack={vi.fn()}
+      />
     )
     expect(await axe(container)).toHaveNoViolations()
   })

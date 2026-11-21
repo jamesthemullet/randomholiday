@@ -276,4 +276,76 @@ describe('ResultsClient', () => {
     expect(excluded.length).toBeLessThanOrEqual(5)
     expect(new Set(excluded).size).toBe(excluded.length)
   })
+
+  it('switches to a comparison table when Compare options is clicked', async () => {
+    const user = userEvent.setup()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      hours: '25.5',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    await user.click(screen.getByRole('button', { name: 'Compare 3 options' }))
+
+    expect(screen.getByRole('heading', { name: 'Compare your options' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Spin again' })).not.toBeInTheDocument()
+  })
+
+  it('returns to the single match and keeps it when a comparison row is picked', async () => {
+    const user = userEvent.setup()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      hours: '25.5',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    await user.click(screen.getByRole('button', { name: 'Compare 3 options' }))
+    // The first columnheader is the sr-only "Stat" label above the row headers; the rest name
+    // each compared destination.
+    const [, firstDestinationHeader] = screen.getAllByRole('columnheader')
+    const firstDestinationName = pickableDestinations.find((d) =>
+      firstDestinationHeader.textContent?.includes(d.name)
+    )!.name
+
+    await user.click(screen.getAllByRole('button', { name: 'Pick this one' })[0])
+
+    expect(screen.queryByRole('heading', { name: 'Compare your options' })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Spin again' })).toBeInTheDocument()
+    expect(screen.getAllByText(firstDestinationName).length).toBeGreaterThan(0)
+  })
+
+  it('returns to the single match when Back to your match is clicked without picking', async () => {
+    const user = userEvent.setup()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      hours: '25.5',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    const shown = pickableDestinations.find((d) => screen.queryAllByText(d.name).length > 0)!
+
+    await user.click(screen.getByRole('button', { name: 'Compare 3 options' }))
+    await user.click(screen.getByRole('button', { name: 'Back to your match' }))
+
+    expect(screen.queryByRole('heading', { name: 'Compare your options' })).not.toBeInTheDocument()
+    expect(screen.getAllByText(shown.name).length).toBeGreaterThan(0)
+  })
 })

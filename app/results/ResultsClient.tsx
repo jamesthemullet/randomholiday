@@ -14,7 +14,11 @@ import { encodeShareableResult } from '@/lib/shareableResult'
 import { parseMaxFlightHours, parseTravelStyles } from '@/lib/tripQuery'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
+import { CompareTable } from '@/components/CompareTable'
 import styles from './results.module.css'
+
+/** How many candidates "Compare options" rolls at once. */
+const COMPARE_COUNT = 3
 
 const subscribeToNothing = () => () => {}
 const getClientSnapshot = () => true
@@ -104,6 +108,22 @@ export function ResultsClient() {
     setIsDetailModalOpen(true)
   }, [])
 
+  const [compareMode, setCompareMode] = useState(false)
+
+  const compareResult = useMemo(() => {
+    if (!filterParams || !isClient || !compareMode) return null
+    return getRecommendations(pickableDestinations, { ...filterParams, count: COMPARE_COUNT })
+  }, [filterParams, isClient, compareMode])
+
+  const handleChooseFromCompare = useCallback(
+    (destinationId: string) => {
+      const chosen = compareResult?.recommendations.find((r) => r.destination.id === destinationId)
+      if (chosen) setShuffledPick(chosen)
+      setCompareMode(false)
+    },
+    [compareResult]
+  )
+
   const distanceKm = useMemo(
     () =>
       filterParams && recommendation
@@ -163,17 +183,40 @@ export function ResultsClient() {
   return (
     <main id="main-content" className={styles.page}>
       <div className={styles.wrapper}>
-        <ResultsReveal
-          recommendation={recommendation}
-          isPicking={isPicking}
-          onShuffle={handleShuffle}
-          onSelect={handleSelect}
-          changeSearchHref={`/?${searchParams.toString()}`}
-          originName={filterParams.originName}
-          distanceKm={recommendation ? distanceKm : undefined}
-          nights={filterParams.nights}
-          perPersonCost={perPersonCost}
-        />
+        {!isPicking && recommendation && !compareMode && (
+          <div className={styles.compareToggle}>
+            <button
+              type="button"
+              className={styles.compareButton}
+              onClick={() => setCompareMode(true)}
+            >
+              Compare {COMPARE_COUNT} options
+            </button>
+          </div>
+        )}
+        {compareMode && compareResult ? (
+          <CompareTable
+            candidates={compareResult.recommendations}
+            origin={filterParams.origin}
+            nights={filterParams.nights}
+            groupSize={filterParams.groupSize}
+            travelMonth={filterParams.travelMonth}
+            onChoose={handleChooseFromCompare}
+            onBack={() => setCompareMode(false)}
+          />
+        ) : (
+          <ResultsReveal
+            recommendation={recommendation}
+            isPicking={isPicking}
+            onShuffle={handleShuffle}
+            onSelect={handleSelect}
+            changeSearchHref={`/?${searchParams.toString()}`}
+            originName={filterParams.originName}
+            distanceKm={recommendation ? distanceKm : undefined}
+            nights={filterParams.nights}
+            perPersonCost={perPersonCost}
+          />
+        )}
         <DestinationDetailModal
           isOpen={isDetailModalOpen}
           onClose={() => setIsDetailModalOpen(false)}
