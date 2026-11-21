@@ -20,23 +20,23 @@ describe('DepartureAutocomplete', () => {
   })
 
   it('does not show the listbox when closed', () => {
-    render(<DepartureAutocomplete {...defaultProps} value="Paris" />)
+    render(<DepartureAutocomplete {...defaultProps} value="Manchester" />)
     expect(screen.queryByRole('listbox')).not.toBeInTheDocument()
     expect(screen.getByRole('combobox')).toHaveAttribute('aria-expanded', 'false')
   })
 
   it('opens the listbox on focus and shows matching cities', () => {
-    render(<DepartureAutocomplete {...defaultProps} value="Par" />)
+    render(<DepartureAutocomplete {...defaultProps} value="Man" />)
     fireEvent.focus(screen.getByRole('combobox'))
     expect(screen.getByRole('listbox')).toBeInTheDocument()
-    expect(screen.getByText('Paris')).toBeInTheDocument()
+    expect(screen.getByText('Manchester')).toBeInTheDocument()
     expect(screen.getByRole('combobox')).toHaveAttribute('aria-expanded', 'true')
   })
 
   it('only offers cities with route data by default', () => {
-    render(<DepartureAutocomplete {...defaultProps} cities={undefined} value="Par" />)
+    render(<DepartureAutocomplete {...defaultProps} cities={undefined} value="Man" />)
     fireEvent.focus(screen.getByRole('combobox'))
-    expect(screen.queryByText('Paris')).not.toBeInTheDocument()
+    expect(screen.queryByText('Manchester')).not.toBeInTheDocument()
   })
 
   it('shows a no-results message when nothing matches', () => {
@@ -59,7 +59,7 @@ describe('DepartureAutocomplete', () => {
     render(
       <DepartureAutocomplete
         {...defaultProps}
-        value="Par"
+        value="Man"
         onChange={onChange}
         onSelect={onSelect}
       />
@@ -67,15 +67,15 @@ describe('DepartureAutocomplete', () => {
     fireEvent.focus(screen.getByRole('combobox'))
     const listbox = screen.getByRole('listbox')
     fireEvent.mouseDown(listbox)
-    fireEvent.click(screen.getByText('Paris'))
+    fireEvent.click(screen.getByText('Manchester'))
 
-    expect(onChange).toHaveBeenCalledWith('Paris')
-    expect(onSelect).toHaveBeenCalledWith(expect.objectContaining({ name: 'Paris' }))
+    expect(onChange).toHaveBeenCalledWith('Manchester')
+    expect(onSelect).toHaveBeenCalledWith(expect.objectContaining({ name: 'Manchester' }))
     expect(screen.queryByRole('listbox')).not.toBeInTheDocument()
   })
 
   it('closes the listbox on blur', () => {
-    render(<DepartureAutocomplete {...defaultProps} value="Par" />)
+    render(<DepartureAutocomplete {...defaultProps} value="Man" />)
     const input = screen.getByRole('combobox')
     fireEvent.focus(input)
     expect(screen.getByRole('listbox')).toBeInTheDocument()
@@ -84,7 +84,7 @@ describe('DepartureAutocomplete', () => {
   })
 
   it('closes the listbox on Escape', () => {
-    render(<DepartureAutocomplete {...defaultProps} value="Par" />)
+    render(<DepartureAutocomplete {...defaultProps} value="Man" />)
     const input = screen.getByRole('combobox')
     fireEvent.focus(input)
     expect(screen.getByRole('listbox')).toBeInTheDocument()

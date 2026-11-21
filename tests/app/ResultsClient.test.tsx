@@ -92,7 +92,7 @@ describe('ResultsClient', () => {
 
   it('shows no destination when departing from a city without route data', () => {
     setParams({
-      originId: 'paris-france',
+      originId: 'manchester-uk',
       budget: '1500',
       hours: '6.75',
       nights: '7',
