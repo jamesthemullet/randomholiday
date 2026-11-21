@@ -16,6 +16,8 @@ export interface SafetyOverride {
   reason: string
   /** ISO date (YYYY-MM-DD) the override was last checked against FCDO advice. */
   date: string
+  /** GOV.UK foreign travel advice country slug, e.g. 'lebanon' for gov.uk/foreign-travel-advice/lebanon. */
+  countrySlug: string
 }
 
 /**
@@ -33,4 +35,12 @@ export function getSafetyOverride(destinationId: string): SafetyOverride | undef
 /** A destination's safety status. Destinations with no override are `ok`. */
 export function getSafetyStatus(destinationId: string): SafetyStatus {
   return safetyOverrides[destinationId]?.status ?? 'ok'
+}
+
+const FCDO_BASE_URL = 'https://www.gov.uk/foreign-travel-advice'
+
+/** Link to the destination's country's FCDO travel advice page, or `undefined` when none applies. */
+export function getFcdoUrl(destinationId: string): string | undefined {
+  const override = getSafetyOverride(destinationId)
+  return override ? `${FCDO_BASE_URL}/${override.countrySlug}` : undefined
 }

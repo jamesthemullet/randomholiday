@@ -250,6 +250,33 @@ describe('ResultsReveal', () => {
     expect(screen.queryByRole('button', { name: 'See prices & book' })).not.toBeInTheDocument()
   })
 
+  it('shows a travel advisory badge and FCDO link for a destination with a seeded warning', () => {
+    render(
+      <ResultsReveal
+        recommendation={makeScore({
+          destination: makeDestination({
+            id: 'beirut-lebanon',
+            name: 'Beirut',
+            country: 'Lebanon',
+          }),
+        })}
+        onShuffle={vi.fn()}
+      />
+    )
+    expect(screen.getByText('Travel advisory')).toBeInTheDocument()
+    const link = screen.getByRole('link', {
+      name: 'FCDO advises against travel to parts of Lebanon. Check the latest advice before booking.',
+    })
+    expect(link).toHaveAttribute('href', 'https://www.gov.uk/foreign-travel-advice/lebanon')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+  })
+
+  it('omits the travel advisory badge for a destination with no safety override', () => {
+    render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(screen.queryByText('Travel advisory')).not.toBeInTheDocument()
+  })
+
   it('announces the matched destination in a live region', () => {
     render(<ResultsReveal recommendation={makeScore({ totalScore: 87.6 })} onShuffle={vi.fn()} />)
     expect(screen.getByRole('status')).toHaveTextContent('New match: Bali, Indonesia — 88% match')

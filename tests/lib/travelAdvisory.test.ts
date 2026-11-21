@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getSafetyOverride, getSafetyStatus } from '@/lib/travelAdvisory'
+import { getFcdoUrl, getSafetyOverride, getSafetyStatus } from '@/lib/travelAdvisory'
 
 describe('getSafetyOverride', () => {
   it('returns the override record for a destination with a seeded warning', () => {
@@ -29,5 +29,17 @@ describe('getSafetyStatus', () => {
 
   it('returns "ok" for an unknown destination id', () => {
     expect(getSafetyStatus('not-a-real-destination')).toBe('ok')
+  })
+})
+
+describe('getFcdoUrl', () => {
+  it('links to the GOV.UK foreign travel advice page for the override country', () => {
+    expect(getFcdoUrl('beirut-lebanon')).toBe('https://www.gov.uk/foreign-travel-advice/lebanon')
+    expect(getFcdoUrl('erbil-iraq')).toBe('https://www.gov.uk/foreign-travel-advice/iraq')
+    expect(getFcdoUrl('tel-aviv-israel')).toBe('https://www.gov.uk/foreign-travel-advice/israel')
+  })
+
+  it('returns undefined for a destination with no override', () => {
+    expect(getFcdoUrl('paris-france')).toBeUndefined()
   })
 })

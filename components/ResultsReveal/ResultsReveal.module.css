@@ -263,6 +263,24 @@
   text-wrap: pretty;
 }
 
+.advisory {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+.advisoryLink {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+
+.advisoryLink:hover {
+  color: var(--color-ocean);
+}
+
 .activities {
   display: flex;
   flex-wrap: wrap;
