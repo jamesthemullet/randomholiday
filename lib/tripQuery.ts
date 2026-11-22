@@ -36,6 +36,11 @@ export function getMonthOptions(): { value: string; label: string }[] {
   return MONTH_NAMES.map((name, index) => ({ value: String(index + 1), label: name }))
 }
 
+/** The full English name for a 1-indexed month, e.g. `getMonthName(1)` → "January". */
+export function getMonthName(month: number): string {
+  return MONTH_NAMES[month - 1]
+}
+
 /** Returns the 1-indexed month after the one `now` falls in, wrapping December to January. */
 export function getNextMonth(now: Date = new Date()): number {
   return ((now.getMonth() + 1) % 12) + 1

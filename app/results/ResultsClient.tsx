@@ -14,7 +14,11 @@ import { encodeShareableResult } from '@/lib/shareableResult'
 import { parseMaxFlightHours, parseTravelStyles } from '@/lib/tripQuery'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
+import { ComparisonTable } from '@/components/ComparisonTable'
 import styles from './results.module.css'
+
+/** How many candidates "Compare options" rolls at once. */
+const COMPARE_COUNT = 3
 
 const subscribeToNothing = () => () => {}
 const getClientSnapshot = () => true
@@ -104,6 +108,27 @@ export function ResultsClient() {
     setIsDetailModalOpen(true)
   }, [])
 
+  // undefined when not comparing; an array (possibly empty) once "Compare options" is used.
+  const [compareCandidates, setCompareCandidates] = useState<DestinationScore[] | undefined>(
+    undefined
+  )
+
+  const handleCompare = useCallback(() => {
+    if (!filterParams) return
+    setCompareCandidates(
+      getRecommendations(pickableDestinations, { ...filterParams, count: COMPARE_COUNT })
+        .recommendations
+    )
+  }, [filterParams])
+
+  const handleExitCompare = useCallback(() => setCompareCandidates(undefined), [])
+
+  const handleSelectFromCompare = useCallback((candidate: DestinationScore) => {
+    setShuffledPick(candidate)
+    setCompareCandidates(undefined)
+    setIsDetailModalOpen(true)
+  }, [])
+
   const distanceKm = useMemo(
     () =>
       filterParams && recommendation
@@ -163,17 +188,36 @@ export function ResultsClient() {
   return (
     <main id="main-content" className={styles.page}>
       <div className={styles.wrapper}>
-        <ResultsReveal
-          recommendation={recommendation}
-          isPicking={isPicking}
-          onShuffle={handleShuffle}
-          onSelect={handleSelect}
-          changeSearchHref={`/?${searchParams.toString()}`}
-          originName={filterParams.originName}
-          distanceKm={recommendation ? distanceKm : undefined}
-          nights={filterParams.nights}
-          perPersonCost={perPersonCost}
-        />
+        {compareCandidates !== undefined ? (
+          <ComparisonTable
+            candidates={compareCandidates}
+            origin={filterParams.origin}
+            nights={filterParams.nights}
+            groupSize={filterParams.groupSize}
+            travelMonth={filterParams.travelMonth}
+            onSelect={handleSelectFromCompare}
+            onBack={handleExitCompare}
+          />
+        ) : (
+          <>
+            <ResultsReveal
+              recommendation={recommendation}
+              isPicking={isPicking}
+              onShuffle={handleShuffle}
+              onSelect={handleSelect}
+              changeSearchHref={`/?${searchParams.toString()}`}
+              originName={filterParams.originName}
+              distanceKm={recommendation ? distanceKm : undefined}
+              nights={filterParams.nights}
+              perPersonCost={perPersonCost}
+            />
+            {recommendation && !isPicking && (
+              <button type="button" className={styles.compareToggle} onClick={handleCompare}>
+                Compare {COMPARE_COUNT} options
+              </button>
+            )}
+          </>
+        )}
         <DestinationDetailModal
           isOpen={isDetailModalOpen}
           onClose={() => setIsDetailModalOpen(false)}

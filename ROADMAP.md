@@ -187,8 +187,12 @@ Roll two or three destinations at once and compare them side by side on budget/w
       tests. (Already in place: `count` on `RecommendationParams` in `lib/recommendationEngine.ts`
       returns up to `count` weighted-sampled `DestinationScore`s, tested in
       `tests/lib/recommendationEngine.test.ts`.)
-- [ ] Comparison table UI on `/results`, reusing `budgetCalculator`/`seasonalWeather`/
-      `distanceCalculator` outputs already computed per candidate.
+- [x] Comparison table UI on `/results`, reusing `budgetCalculator`/`seasonalWeather`/
+      `distanceCalculator` outputs already computed per candidate. (`components/ComparisonTable/
+      ComparisonTable.tsx`, triggered by a new "Compare 3 options" toggle in
+      `app/results/ResultsClient.tsx` that rolls 3 candidates via `getRecommendations`'s `count`
+      option; tested in `tests/components/ComparisonTable.test.tsx` and
+      `tests/app/ResultsClient.test.tsx`)
 
 ### 8. More departure cities — _Acquisition_
 

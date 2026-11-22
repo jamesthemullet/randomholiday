@@ -24,6 +24,23 @@
   color: var(--color-yellow-light);
 }
 
+.compareToggle {
+  display: block;
+  margin: var(--space-4) auto 0;
+  border: 2px solid var(--color-cream);
+  border-radius: var(--radius-full);
+  background: none;
+  color: var(--color-cream);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-5);
+  cursor: pointer;
+}
+
+.compareToggle:hover {
+  background-color: rgba(255, 244, 224, 0.1);
+}
+
 @media (max-width: 640px) {
   .page {
     padding: var(--space-8) var(--space-4) var(--space-16);

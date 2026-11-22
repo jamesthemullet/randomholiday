@@ -276,4 +276,77 @@ describe('ResultsClient', () => {
     expect(excluded.length).toBeLessThanOrEqual(5)
     expect(new Set(excluded).size).toBe(excluded.length)
   })
+
+  it('shows a comparison table of several destinations when Compare options is clicked', async () => {
+    const user = userEvent.setup()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      hours: '25.5',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    await user.click(screen.getByRole('button', { name: 'Compare 3 options' }))
+
+    expect(screen.getByRole('heading', { name: /compare \d destinations?/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Back to single result' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Compare 3 options' })).not.toBeInTheDocument()
+  })
+
+  it('returns to the single result when Back to single result is clicked', async () => {
+    const user = userEvent.setup()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      hours: '25.5',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    await user.click(screen.getByRole('button', { name: 'Compare 3 options' }))
+    await user.click(screen.getByRole('button', { name: 'Back to single result' }))
+
+    expect(screen.getByRole('button', { name: 'Compare 3 options' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Back to single result' })).not.toBeInTheDocument()
+  })
+
+  it('opens the detail modal for a destination picked from the comparison table', async () => {
+    const user = userEvent.setup()
+
+    setParams({
+      originId: city.id,
+      budget: '100000',
+      hours: '25.5',
+      nights: '5',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    await user.click(screen.getByRole('button', { name: 'Compare 3 options' }))
+
+    // The first destination column, skipping the row-label corner cell.
+    const destinationHeader = screen.getAllByRole('columnheader')[1]
+    const pickedName = destinationHeader.firstChild?.textContent
+
+    const pickButtons = screen.getAllByRole('button', { name: /see prices & book/i })
+    await user.click(pickButtons[0])
+
+    // Comparing is exited and the detail modal opens for the destination that was picked.
+    expect(screen.queryByRole('button', { name: 'Back to single result' })).not.toBeInTheDocument()
+    const dialog = screen.getByRole('dialog')
+    const titleId = dialog.getAttribute('aria-labelledby')
+    expect(titleId).toBeTruthy()
+    expect(document.getElementById(titleId as string)?.textContent).toContain(pickedName)
+  })
 })

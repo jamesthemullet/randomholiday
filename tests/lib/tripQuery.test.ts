@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import {
   buildResultsQuery,
   getDefaultTripQuery,
+  getMonthName,
   getMonthOptions,
   getNextMonth,
   parseTripQuery,
@@ -32,6 +33,13 @@ describe('getMonthOptions', () => {
     expect(options).toHaveLength(12)
     expect(options[0]).toEqual({ value: '1', label: 'January' })
     expect(options[11]).toEqual({ value: '12', label: 'December' })
+  })
+})
+
+describe('getMonthName', () => {
+  it('returns the full name for a 1-indexed month', () => {
+    expect(getMonthName(1)).toBe('January')
+    expect(getMonthName(12)).toBe('December')
   })
 })
 

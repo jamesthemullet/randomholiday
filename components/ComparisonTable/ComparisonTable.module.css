@@ -1,0 +1,107 @@
+.wrapper {
+  background-color: var(--color-white);
+  border: 3px solid var(--color-ink);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-pop);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+  margin: 0 0 var(--space-4);
+}
+
+.empty {
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-4);
+}
+
+.scroll {
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.table th,
+.table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.table thead th {
+  border-bottom: 2px solid var(--color-ink);
+  font-weight: var(--font-bold);
+}
+
+.table tbody th {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.cornerCell {
+  min-width: 10rem;
+}
+
+.destCell {
+  color: var(--color-ocean-dark);
+  font-size: var(--text-lg);
+}
+
+.country {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-normal);
+  color: var(--color-text-secondary);
+}
+
+.selectButton {
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-full);
+  background-color: var(--color-yellow);
+  color: var(--color-ink);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.selectButton:hover {
+  background-color: var(--color-yellow-light);
+}
+
+.backLink {
+  background: none;
+  border: none;
+  color: var(--color-ocean);
+  font-weight: var(--font-bold);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.backLink:hover {
+  color: var(--color-ocean-light);
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    padding: var(--space-4);
+  }
+
+  .table th,
+  .table td {
+    padding: var(--space-2) var(--space-3);
+  }
+}
