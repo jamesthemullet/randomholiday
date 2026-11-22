@@ -66,3 +66,5 @@ Sequence data/logic → UI → wiring, splitting wherever a step could stand alo
 - Don't re-propose anything already in `AUDIT.md` (health fix) or `PLAN.md` (already scheduled
   build work).
 - Do not commit, push, or open a PR for `ROADMAP.md` changes unless the user explicitly asks.
+  The exception: a PR that implements a roadmap step must tick that step (`- [x]`) and fix any
+  roadmap references it makes stale, in the same PR.
