@@ -1,5 +1,5 @@
 // Destination ids that changed when lib/destinations.ts was retired and every destination took
-// its generated id from lib/data/london-destinations.json.
+// its generated id from lib/data/destination-facts.json.
 const RENAMED_DESTINATIONS = {
   'costa-rica': 'san-jose-cr-costa-rica',
   'dubai-uae': 'dubai-united-arab-emirates',
