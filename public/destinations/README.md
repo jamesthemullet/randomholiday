@@ -1,6 +1,6 @@
 # Destination photos
 
-Drop a photo per destination here, named after its `id` from `lib/data/london-destinations.json`:
+Drop a photo per destination here, named after its `id` from `lib/data/destination-facts.json`:
 
 ```
 public/destinations/barcelona-spain.jpg

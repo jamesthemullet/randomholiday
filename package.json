@@ -20,7 +20,7 @@
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
     "lighthouse": "lhci autorun",
-    "data:london": "node scripts/fetch-london-destinations.mjs",
+    "data:routes": "node scripts/fetch-route-destinations.mjs",
     "data:photos": "node scripts/generate-destination-photos.mjs",
     "prepare": "husky",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",

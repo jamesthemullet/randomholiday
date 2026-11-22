@@ -49,7 +49,7 @@ Sub-steps:
 
 ## Phase 3: Holiday Recommendation Engine ✅ COMPLETE (pure logic, /lib)
 
-- [x] ~~Destination database JSON (56 destinations across 6 continents, full TypeScript types)~~ (superseded: the static list became a generated route-data catalogue — `lib/catalogue.ts` merges `lib/data/london-destinations.json` (`yarn data:london`) with hand-written `lib/data/destination-details.json`; 154 destinations are pickable today, and the count grows as destination-detail PRs land, see ROADMAP.md)
+- [x] ~~Destination database JSON (56 destinations across 6 continents, full TypeScript types)~~ (superseded: the static list became a generated route-data catalogue — `lib/catalogue.ts` merges `lib/data/destination-facts.json` and `lib/data/routes/london.json` (`yarn data:routes london`) with hand-written `lib/data/destination-details.json`; 154 destinations are pickable today, and the count grows as destination-detail PRs land, see ROADMAP.md)
 - [x] Distance calculator (great-circle / haversine formula)
 - [x] Budget calculator (flight tiers + hotel + daily spending, 36 tests, 100% coverage)
 - [x] Filter engine (hard filters: budget, distance, travel style) — 25 tests, 100% coverage
@@ -61,7 +61,7 @@ Sub-steps:
 
 ## Phase 4: Main UI Flow
 
-*Superseded: the multi-step `/discover` wizard below was later replaced by a single-page `TripForm` on the homepage (`components/TripForm/`) — see the note after this list.*
+_Superseded: the multi-step `/discover` wizard below was later replaced by a single-page `TripForm` on the homepage (`components/TripForm/`) — see the note after this list._
 
 - [x] ~~Landing page: hero with animated globe SVG, tagline, gradient background~~ (superseded: the hero is now a photo image via `next/image`, not an animated SVG globe — `components/Hero/Hero.tsx`)
 - [x] ~~Multi-step wizard form — step 1: departure city autocomplete input~~ (superseded, see note below)
