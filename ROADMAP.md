@@ -12,7 +12,8 @@ against four jobs:
 - **Trust** — keeps users safe and the site credible
 
 Every feature is broken into a **PR sequence** — each step small enough for a human to review in
-about 15 minutes. Genuinely atomic changes are left as one PR. Tick a step off once its PR merges.
+about 15 minutes. Genuinely atomic changes are left as one PR. Tick a step off in the PR that
+implements it.
 
 ## Now (ship in weeks — reuses existing infra)
 
