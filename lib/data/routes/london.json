@@ -1,0 +1,3055 @@
+[
+  {
+    "id": "aalborg-denmark",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Norwegian Air Shuttle"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "aarhus-denmark",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "aberdeen-united-kingdom",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "abu-dhabi-united-arab-emirates",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Etihad Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "abuja-nigeria",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Peace", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "accra-ghana",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "adana-mersin-turkey",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Pegasus Airlines", "SunExpress"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "addis-ababa-ethiopia",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Ethiopian Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "agadir-morocco",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ahmedabad-india",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air India"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ajaccio-france",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "akureyri-iceland",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "alesund-norway",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Norwegian Air Shuttle"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "alghero-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "algiers-algeria",
+    "direct": true,
+    "airports": ["LHR", "STN"],
+    "airlines": ["Air Algerie", "Air Algérie"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "alicante-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": [
+      "British Airways",
+      "Jet2.com",
+      "Ryanair",
+      "TUI Airways",
+      "Vueling",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "almaty-kazakhstan",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Air Astana"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "almeria-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "amman-jordan",
+    "direct": true,
+    "airports": ["LHR", "STN"],
+    "airlines": ["British Airways", "Royal Jordanian"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "amritsar-india",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air India"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "amsterdam-netherlands",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "EasyJet", "KLM", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ancona-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ankara-turkey",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["AJet", "Pegasus Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "antalya-turkey",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": [
+      "British Airways",
+      "Corendon Airlines",
+      "Jet2.com",
+      "Pegasus Airlines",
+      "SunExpress",
+      "TUI Airways",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "antigua-antigua-and-barbuda",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ashgabat-turkmenistan",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Turkmenistan Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "asturias-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN"],
+    "airlines": ["Vueling", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "athens-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": [
+      "Aegean Airlines",
+      "British Airways",
+      "Jet2.com",
+      "Ryanair",
+      "Sky Express",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "atlanta-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Delta Air Lines", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "austin-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bacau-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Dan Air", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bahrain-bahrain",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Gulf Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "baku-azerbaijan",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Azerbaijan Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "baltimore-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bandar-seri-begawan-brunei",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Royal Brunei Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bangkok-thailand",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": [
+      "British Airways",
+      "EVA Air",
+      "Norse Atlantic Airways",
+      "Thai Airways International"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "banjul-the-gambia",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Sierra Leone", "TUI Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "barbados-barbados",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "TUI Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "barcelona-spain",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "Vueling", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bari-italy",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "basel-mulhouse-france",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bastia-france",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "beijing-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air China", "China Southern Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "beirut-lebanon",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Middle East Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "belfast-united-kingdom",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "EasyJet", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "belgrade-serbia",
+    "direct": true,
+    "airports": ["LHR", "LTN"],
+    "airlines": ["Air Serbia", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bengaluru-india",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Air India", "British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bergamo-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bergen-norway",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Norwegian Air Shuttle"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bergerac-france",
+    "direct": true,
+    "airports": ["LCY", "STN"],
+    "airlines": ["British Airways", "Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "berlin-germany",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Eurowings", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bermuda-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "beziers-france",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "biarritz-france",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bilbao-spain",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN"],
+    "airlines": ["Vueling", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "billund-denmark",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Norwegian Air Shuttle"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "boa-vista-cape-verde",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bodrum-turkey",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["AJet", "British Airways", "Jet2.com", "Ryanair", "SunExpress", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bogota-colombia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Avianca"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bologna-italy",
+    "direct": true,
+    "airports": ["LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bolzano-italy",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Sky Alps"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bordeaux-france",
+    "direct": true,
+    "airports": ["LGW", "LTN"],
+    "airlines": ["British Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "boston-united-states",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": [
+      "American Airlines",
+      "British Airways",
+      "Delta Air Lines",
+      "JetBlue",
+      "Virgin Atlantic"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "brasov-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bratislava-slovakia",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bremen-germany",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "brest-france",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "brindisi-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "brive-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "brno-czech-republic",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "brussels-belgium",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Brussels Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "bucharest-romania",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["Animawings", "British Airways", "FlyOne", "Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "budapest-hungary",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "buenos-aires-argentina",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "burgas-bulgaria",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "bydgoszcz-poland",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cagliari-italy",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["British Airways", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cairo-egypt",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "EgyptAir"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "calgary-canada",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Air Canada", "WestJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cancun-mexico",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "TUI Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cape-town-south-africa",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Norse Atlantic Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "carcassonne-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "casablanca-morocco",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["Royal Air Maroc"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "castellon-spain",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "catania-italy",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chambery-france",
+    "direct": true,
+    "airports": ["LCY", "LGW", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "changsha-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Hainan Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chania-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "charlotte-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chengdu-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air China"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chennai-india",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chicago-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines", "British Airways", "United Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chisinau-moldova",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["FlyOne", "HiSky", "SkyUp Airlines", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "chongqing-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Tianjin Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cincinnati-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cluj-napoca-romania",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "cologne-bonn-germany",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Eurowings", "Jet2.com", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "colombo-sri-lanka",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "SriLankan Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "constanta-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "copenhagen-denmark",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": [
+      "British Airways",
+      "Norwegian Air Shuttle",
+      "Ryanair",
+      "Scandinavian Airlines",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "corfu-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "cork-ireland",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["Aer Lingus", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "craiova-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dakar-senegal",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "dalaman-turkey",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": [
+      "British Airways",
+      "Jet2.com",
+      "Ryanair",
+      "SunExpress",
+      "TUI Airways",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dallas-fort-worth-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dammam-saudi-arabia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Saudia"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dar-es-salaam-tanzania",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Tanzania"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "debrecen-hungary",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "delhi-india",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Air India", "British Airways", "IndiGo", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "denver-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "United Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "derry-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Loganair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "detroit-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Delta Air Lines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dhaka-bangladesh",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Biman Bangladesh Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "djerba-tunisia",
+    "direct": true,
+    "airports": ["LGW", "LTN"],
+    "airlines": ["TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "doha-qatar",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Qatar Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dortmund-germany",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dubai-united-arab-emirates",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Emirates", "Royal Brunei Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dublin-ireland",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["Aer Lingus", "British Airways", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dubrovnik-croatia",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dundee-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Loganair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "dusseldorf-germany",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Eurowings", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "edinburgh-united-kingdom",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "EasyJet", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "eindhoven-netherlands",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "enfidha-tunisia",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["Jet2.com", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "entebbe-uganda",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Uganda Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "erbil-iraq",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["FlyErbil"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "essaouira-morocco",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "faro-portugal",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "fez-morocco",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "figari-france",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "florence-italy",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Vueling"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "forli-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "frankfurt-germany",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR"],
+    "airlines": [
+      "Air Dolomiti",
+      "British Airways",
+      "Condor",
+      "Lufthansa",
+      "Lufthansa City Airlines"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "freetown-sierra-leone",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Sierra Leone"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "friedrichshafen-germany",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "fuerteventura-spain",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "funchal-portugal",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "gaziantep-turkey",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["SunExpress"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "gdansk-poland",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "geneva-switzerland",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": [
+      "British Airways",
+      "EasyJet",
+      "Jet2.com",
+      "Swiss International Air Lines",
+      "TUI Airways",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "genoa-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "georgetown-guyana",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "gibraltar-united-kingdom",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "girona-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "giza-egypt",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "glasgow-united-kingdom",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "EasyJet", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "goa-india",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "gothenburg-sweden",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Norwegian Air Shuttle", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "gran-canaria-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "granada-spain",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "grand-cayman-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "graz-austria",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "grenada-grenada",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "grenoble-france",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "guangzhou-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["China Southern Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "guernsey-guernsey",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR"],
+    "airlines": ["Aurigny", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hahn-germany",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "haikou-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Hainan Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "halifax-canada",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Canada", "WestJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hamburg-germany",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Eurowings", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hanoi-vietnam",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Vietnam Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hanover-germany",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "harare-zimbabwe",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Zimbabwe"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "helsinki-finland",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["Finnair", "Norwegian Air Shuttle", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "heraklion-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Corendon Airlines", "Jet2.com", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "ho-chi-minh-city-vietnam",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Vietnam Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hong-kong-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Cathay Pacific"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "houston-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "United Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hurghada-egypt",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "hyderabad-india",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "iasi-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ibiza-spain",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "innsbruck-austria",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "inverness-united-kingdom",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "islamabad-pakistan",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Pakistan International Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "isle-of-man-isle-of-man",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN"],
+    "airlines": ["Loganair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "istanbul-turkey",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["AJet", "British Airways", "Pegasus Airlines", "Turkish Airlines", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ivalo-finland",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways", "TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "izmir-turkey",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Pegasus Airlines", "SunExpress", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "jeddah-saudi-arabia",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Saudia"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "jerez-de-la-frontera-spain",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Jet2.com", "TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "jersey-jersey",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "johannesburg-south-africa",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kalamata-greece",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "karlsruhe-baden-baden-germany",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "katowice-poland",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kaunas-lithuania",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kavala-greece",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Jet2.com"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "kayseri-turkey",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["SunExpress"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "kefalonia-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "kerry-ireland",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kigali-rwanda",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["RwandAir"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kilimanjaro-tanzania",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Tanzania", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kingston-jamaica",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kirkwall-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Loganair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "kittila-finland",
+    "direct": true,
+    "airports": ["LGW", "LTN"],
+    "airlines": ["TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "klagenfurt-austria",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "knock-ireland",
+    "direct": true,
+    "airports": ["LHR", "LTN", "STN"],
+    "airlines": ["Aer Lingus", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kos-greece",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "kosice-slovakia",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "krakow-poland",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kuala-lumpur-malaysia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Malaysia Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "kuusamo-finland",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways", "airBaltic"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "kuwait-city-kuwait",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Kuwait Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "la-palma-spain",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Jet2.com", "TUI Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "la-rochelle-france",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "la-romana-dominican-republic",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "lagos-nigeria",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Peace", "British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lahore-pakistan",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Pakistan International Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lamezia-terme-italy",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "TUI Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lanzarote-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "larnaca-cyprus",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "las-vegas-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "limoges-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "linz-austria",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lisbon-portugal",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "TAP Air Portugal", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ljubljana-slovenia",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "los-angeles-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines", "British Airways", "United Airlines", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lourdes-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lubeck-germany",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "lublin-poland",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "luxembourg-luxembourg",
+    "direct": true,
+    "airports": ["LCY", "LHR", "STN"],
+    "airlines": ["British Airways", "Luxair", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "luxor-egypt",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["EgyptAir", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "lyon-france",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN"],
+    "airlines": ["British Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "madrid-spain",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": [
+      "Air Europa",
+      "British Airways",
+      "Iberia",
+      "Iberia Express",
+      "Ryanair",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "malaga-spain",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": [
+      "British Airways",
+      "Jet2.com",
+      "Ryanair",
+      "TUI Airways",
+      "Vueling",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "male-maldives",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["BeOnd", "British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "malmo-sweden",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "malta-malta",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "KM Malta Airlines", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "manchester-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "marrakesh-morocco",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "marsa-alam-egypt",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "marseille-france",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "mauritius-mauritius",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Mauritius", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "melbourne-australia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Qantas"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "melbourne-orlando-united-states",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "memmingen-germany",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "menorca-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "mexico-city-mexico",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Aeroméxico", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "miami-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines", "British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "milan-italy",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "ITA Airways", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "minneapolis-saint-paul-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Delta Air Lines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "montego-bay-jamaica",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["TUI Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "montpellier-france",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "montreal-canada",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Canada", "Air Transat", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "mumbai-india",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Air India", "British Airways", "IndiGo", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "munich-germany",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Lufthansa", "Lufthansa City Airlines", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "munster-osnabruck-germany",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "murcia-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "muscat-oman",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Oman Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "mykonos-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN"],
+    "airlines": ["British Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "mytilene-greece",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Jet2.com"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "nairobi-kenya",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Kenya Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "nantes-france",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "naples-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "nashville-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "nassau-the-bahamas",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "new-orleans-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "new-york-united-states",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": [
+      "American Airlines",
+      "British Airways",
+      "Delta Air Lines",
+      "JetBlue",
+      "Norse Atlantic Airways",
+      "Virgin Atlantic"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "newark-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "United Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "newcastle-upon-tyne-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "newquay-united-kingdom",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "nice-france",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "nimes-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "nuremberg-germany",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "odz-poland",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ohrid-north-macedonia",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "olbia-italy",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "olsztyn-mazury-poland",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "orlando-united-states",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Norse Atlantic Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "osijek-croatia",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "oslo-norway",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": [
+      "British Airways",
+      "Norwegian Air Shuttle",
+      "Ryanair",
+      "Scandinavian Airlines",
+      "TUI Airways"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ostrava-czech-republic",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ottawa-canada",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Canada", "Air Transat"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "palanga-lithuania",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "palermo-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "palma-de-mallorca-spain",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "paphos-cyprus",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "paris-france",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["Air France", "British Airways", "EasyJet", "Jet2.com", "Vueling", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "parma-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "perpignan-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "perth-australia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Qantas"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "perugia-italy",
+    "direct": true,
+    "airports": ["LHR", "STN"],
+    "airlines": ["British Airways", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "pescara-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "philadelphia-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "phoenix-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "phuket-thailand",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["TUI Airways", "Virgin Atlantic"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "pisa-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "pittsburgh-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "plovdiv-bulgaria",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "podgorica-montenegro",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "poitiers-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "ponta-delgada-portugal",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "poprad-tatry-slovakia",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "port-of-spain-trinidad-and-tobago",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "portland-or-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "porto-portugal",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "TAP Air Portugal", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "poznan-poland",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "prague-czech-republic",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "preveza-lefkada-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "pristina-kosovo",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "providenciales-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "pula-croatia",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "punta-cana-dominican-republic",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways", "TUI Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "qingdao-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Beijing Capital Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rabat-morocco",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["British Airways", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "raleigh-durham-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["American Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "red-sea-saudi-arabia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["BeOnd"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "reggio-calabria-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rennes-france",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "reus-spain",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "reykjavik-iceland",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Icelandair", "Jet2.com", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rhodes-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "riga-latvia",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Norwegian Air Shuttle", "Ryanair", "airBaltic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rijeka-croatia",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "rimini-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Ryanair", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "rio-de-janeiro-brazil",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "riyadh-saudi-arabia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Riyadh Air", "Saudia"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rodez-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "rome-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "ITA Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rotterdam-the-hague-netherlands",
+    "direct": true,
+    "airports": ["LCY", "STN"],
+    "airlines": ["British Airways", "Transavia"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "rovaniemi-finland",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Norwegian Air Shuttle", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "rzeszow-poland",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sal-cape-verde",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "salen-trysil-sweden",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "salerno-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "salt-lake-city-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Delta Air Lines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "salzburg-austria",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Lufthansa", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "samos-greece",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Jet2.com", "TUI Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "san-diego-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "san-francisco-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "United Airlines", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "san-jose-cr-costa-rica",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "san-sebastian-spain",
+    "direct": true,
+    "airports": ["LCY"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "sandefjord-norway",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "santander-spain",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "santiago-de-chile-chile",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "santiago-de-compostela-spain",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["Ryanair", "Vueling"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "santorini-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "sao-paulo-brazil",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "LATAM Brasil"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sarajevo-bosnia-and-herzegovina",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "satu-mare-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "seattle-tacoma-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Alaska Airlines", "British Airways", "Delta Air Lines", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "seoul-south-korea",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Asiana Airlines", "Korean Air", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "seville-spain",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "Vueling", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "shanghai-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air China", "British Airways", "China Eastern Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "shannon-ireland",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["Aer Lingus", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sharjah-united-arab-emirates",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Arabia"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sharm-el-sheikh-egypt",
+    "direct": true,
+    "airports": ["LGW", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "shenzhen-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Shenzhen Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sibiu-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "singapore-singapore",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Qantas", "Singapore Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "skiathos-greece",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "TUI Airways", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "skopje-north-macedonia",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sofia-bulgaria",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": [
+      "British Airways",
+      "Bulgaria Air",
+      "Ryanair",
+      "TUI Airways",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "split-croatia",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": [
+      "British Airways",
+      "Croatia Airlines",
+      "Jet2.com",
+      "TUI Airways",
+      "Wizz Air",
+      "easyJet"
+    ],
+    "seasonalOnly": true
+  },
+  {
+    "id": "st-john-s-nl-canada",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["WestJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "st-kitts-saint-kitts-and-nevis",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "st-louis-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "st-lucia-saint-lucia",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "st-vincent-saint-vincent-and-the-grenadines",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "stavanger-norway",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Norwegian Air Shuttle"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "stockholm-sweden",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Norwegian Air Shuttle", "Ryanair", "Scandinavian Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "strasbourg-france",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "stuttgart-germany",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Eurowings"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "suceava-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sumburgh-united-kingdom",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Loganair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "sydney-australia",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "Qantas"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "sylhet-bangladesh",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Biman Bangladesh Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "szczecin-poland",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "taipei-taiwan",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["China Airlines", "EVA Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tallinn-estonia",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["Jet2.com", "Ryanair", "Wizz Air", "airBaltic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tampa-united-states",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tangier-morocco",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Air Arabia", "Royal Air Maroc", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "targu-mures-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tashkent-uzbekistan",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Qanot Sharq", "Uzbekistan Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tbilisi-georgia",
+    "direct": true,
+    "airports": ["LHR", "LTN"],
+    "airlines": ["British Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tel-aviv-israel",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["Arkia", "British Airways", "El Al", "Israir", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tenerife-spain",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "SEN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tetouan-morocco",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Royal Air Maroc"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "thessaloniki-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tianjin-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Tianjin Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "timisoara-romania",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tirana-albania",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tivat-montenegro",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "tobago-trinidad-and-tobago",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tokyo-japan",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["All Nippon Airways", "British Airways", "Japan Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "toronto-canada",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Canada", "Air Transat", "British Airways", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "toulon-france",
+    "direct": true,
+    "airports": ["LCY"],
+    "airlines": ["British Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "toulouse-france",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": ["British Airways", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tours-france",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "trapani-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "treviso-italy",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "trieste-italy",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "troms-norway",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN"],
+    "airlines": ["British Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "trondheim-norway",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Norwegian Air Shuttle"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "tunis-tunisia",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Nouvelair", "Tunisair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "turin-italy",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "vagar-faroe-islands",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Atlantic Airways"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "valencia-spain",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "Vueling", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "vancouver-canada",
+    "direct": true,
+    "airports": ["LGW", "LHR"],
+    "airlines": ["Air Canada", "British Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "varna-bulgaria",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "venice-italy",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Ryanair", "Wizz Air", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "verona-italy",
+    "direct": true,
+    "airports": ["LGW", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "easyJet"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "vienna-austria",
+    "direct": true,
+    "airports": ["LGW", "LHR", "STN"],
+    "airlines": [
+      "Austrian Airlines",
+      "British Airways",
+      "Jet2.com",
+      "Ryanair",
+      "TUI Airways",
+      "easyJet"
+    ],
+    "seasonalOnly": false
+  },
+  {
+    "id": "vilnius-lithuania",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "warsaw-poland",
+    "direct": true,
+    "airports": ["LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "LOT Polish Airlines", "Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "washington-united-states",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["British Airways", "United Airlines", "Virgin Atlantic"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "wroc-aw-poland",
+    "direct": true,
+    "airports": ["LTN", "STN"],
+    "airlines": ["Ryanair", "Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "wuhan-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["China Southern Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "xi-an-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["Tianjin Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "xiamen-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LHR"],
+    "airlines": ["XiamenAir"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "yerevan-armenia",
+    "direct": true,
+    "airports": ["LTN"],
+    "airlines": ["Wizz Air"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "zadar-croatia",
+    "direct": true,
+    "airports": ["LGW", "STN"],
+    "airlines": ["Ryanair", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "zagreb-croatia",
+    "direct": true,
+    "airports": ["LHR", "STN"],
+    "airlines": ["British Airways", "Croatia Airlines", "Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "zakynthos-greece",
+    "direct": true,
+    "airports": ["LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "Jet2.com", "Ryanair", "TUI Airways", "Wizz Air", "easyJet"],
+    "seasonalOnly": true
+  },
+  {
+    "id": "zanzibar-tanzania",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["Air Tanzania", "British Airways", "TUI Airways"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "zaragoza-spain",
+    "direct": true,
+    "airports": ["STN"],
+    "airlines": ["Ryanair"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "zhengzhou-people-s-republic-of-china",
+    "direct": true,
+    "airports": ["LGW"],
+    "airlines": ["China Southern Airlines"],
+    "seasonalOnly": false
+  },
+  {
+    "id": "zurich-switzerland",
+    "direct": true,
+    "airports": ["LCY", "LGW", "LHR", "LTN", "STN"],
+    "airlines": ["British Airways", "EasyJet", "Swiss International Air Lines", "easyJet"],
+    "seasonalOnly": false
+  }
+]

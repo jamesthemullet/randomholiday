@@ -1,29 +1,44 @@
-// Builds lib/data/london-destinations.json: every destination with a scheduled direct flight
-// from a London airport, with only the facts that can be looked up rather than written —
-// name, country, coordinates, continent, currency, and the London airports/airlines serving it.
+// Builds lib/data/routes/<city-id>.json: every destination with a scheduled direct flight from
+// one of a departure city's airports. Facts that are true regardless of which city you fly from
+// (name, country, coordinates, continent, currency) are looked up once and merged into the
+// shared lib/data/destination-facts.json, so a destination reachable from several cities is
+// stored once.
 //
 // Routes come from each airport's "Airlines and destinations" table on English Wikipedia
 // (CC BY-SA); country, coordinates and currency come from Wikidata (CC0).
 //
-// Usage: yarn data:london
+// Usage: yarn data:routes <city-id>
 
 /* eslint-disable no-console -- a CLI script that reports its progress */
 
-import { writeFile } from 'node:fs/promises'
+import { readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 
-const OUTPUT = fileURLToPath(new URL('../lib/data/london-destinations.json', import.meta.url))
+const FACTS_OUTPUT = fileURLToPath(new URL('../lib/data/destination-facts.json', import.meta.url))
 const USER_AGENT =
   'RandomHolidayRouteResearch/0.1 (https://github.com/jamesthemullet/randomholiday)'
 
-const LONDON_AIRPORTS = {
-  LHR: 'Heathrow Airport',
-  LGW: 'Gatwick Airport',
-  STN: 'London Stansted Airport',
-  LTN: 'Luton Airport',
-  LCY: 'London City Airport',
-  SEN: 'London Southend Airport',
+// Each departure city's airports: IATA code → the airport's English Wikipedia page.
+const CITY_AIRPORTS = {
+  london: {
+    LHR: 'Heathrow Airport',
+    LGW: 'Gatwick Airport',
+    STN: 'London Stansted Airport',
+    LTN: 'Luton Airport',
+    LCY: 'London City Airport',
+    SEN: 'London Southend Airport',
+  },
 }
+
+const cityId = process.argv[2]
+const airportsForCity = CITY_AIRPORTS[cityId]
+if (!airportsForCity) {
+  console.error(
+    `Usage: yarn data:routes <city-id>\nKnown city ids: ${Object.keys(CITY_AIRPORTS).join(', ')}`
+  )
+  process.exit(1)
+}
+const ROUTES_OUTPUT = fileURLToPath(new URL(`../lib/data/routes/${cityId}.json`, import.meta.url))
 
 // The app groups these countries as "Middle East" rather than by Wikidata's continent.
 const MIDDLE_EAST = new Set([
@@ -218,9 +233,9 @@ async function getEntities(ids) {
 }
 
 async function main() {
-  // 1. Every route from every London airport, keyed by the destination airport's article.
+  // 1. Every route from every one of the city's airports, keyed by the destination's article.
   const byArticle = new Map()
-  for (const [code, page] of Object.entries(LONDON_AIRPORTS)) {
+  for (const [code, page] of Object.entries(airportsForCity)) {
     const data = await getJson(
       `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(page)}&prop=wikitext&format=json&redirects=1`
     )
@@ -309,9 +324,9 @@ async function main() {
 
     const existing = destinations.get(id)
     if (existing) {
-      entry.airports.forEach((a) => existing.london.airports.add(a))
-      entry.airlines.forEach((a) => existing.london.airlines.add(a))
-      existing.london.seasonalOnly &&= !entry.yearRound
+      entry.airports.forEach((a) => existing.route.airports.add(a))
+      entry.airlines.forEach((a) => existing.route.airlines.add(a))
+      existing.route.seasonalOnly &&= !entry.yearRound
       continue
     }
     destinations.set(id, {
@@ -325,7 +340,7 @@ async function main() {
       },
       continent,
       currency,
-      london: {
+      route: {
         airports: new Set(entry.airports),
         airlines: new Set(entry.airlines),
         seasonalOnly: !entry.yearRound,
@@ -333,27 +348,48 @@ async function main() {
     })
   }
 
-  const output = [...destinations.values()]
-    .sort((a, b) => a.id.localeCompare(b.id))
-    .map((d) => ({
-      ...d,
-      london: {
-        direct: true,
-        airports: [...d.london.airports].sort(),
-        airlines: [...d.london.airlines].sort(),
-        seasonalOnly: d.london.seasonalOnly,
-      },
-    }))
+  const resolved = [...destinations.values()].sort((a, b) => a.id.localeCompare(b.id))
 
-  await writeFile(OUTPUT, JSON.stringify(output, null, 2) + '\n')
+  const routes = resolved.map((d) => ({
+    id: d.id,
+    direct: true,
+    airports: [...d.route.airports].sort(),
+    airlines: [...d.route.airlines].sort(),
+    seasonalOnly: d.route.seasonalOnly,
+  }))
+
+  // Facts are shared across cities, so merge into whatever's already on disk rather than
+  // overwriting destinations another city's run resolved.
+  let existingFacts = []
+  try {
+    existingFacts = JSON.parse(await readFile(FACTS_OUTPUT, 'utf8'))
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error
+  }
+  const factsById = new Map(existingFacts.map((f) => [f.id, f]))
+  for (const d of resolved) {
+    factsById.set(d.id, {
+      id: d.id,
+      name: d.name,
+      country: d.country,
+      countryCode: d.countryCode,
+      coordinates: d.coordinates,
+      continent: d.continent,
+      currency: d.currency,
+    })
+  }
+  const facts = [...factsById.values()].sort((a, b) => a.id.localeCompare(b.id))
+
+  await writeFile(FACTS_OUTPUT, JSON.stringify(facts, null, 2) + '\n')
+  await writeFile(ROUTES_OUTPUT, JSON.stringify(routes, null, 2) + '\n')
   console.log(
-    `${byArticle.size} destination airports → ${output.length} destinations written to ${OUTPUT}`
+    `${byArticle.size} destination airports → ${routes.length} destinations written to ${ROUTES_OUTPUT} (${facts.length} facts total in ${FACTS_OUTPUT})`
   )
   if (skipped.length)
     console.log(`Skipped (no Wikidata country/coordinates): ${skipped.join(', ')}`)
-  const noContinent = output.filter((d) => !d.continent).map((d) => d.name)
+  const noContinent = resolved.filter((d) => !d.continent).map((d) => d.name)
   if (noContinent.length) console.log(`No continent: ${noContinent.join(', ')}`)
-  const noCurrency = output.filter((d) => !d.currency).map((d) => d.name)
+  const noCurrency = resolved.filter((d) => !d.currency).map((d) => d.name)
   if (noCurrency.length) console.log(`No currency: ${noCurrency.join(', ')}`)
 }
 

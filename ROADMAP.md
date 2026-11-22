@@ -193,19 +193,21 @@ Roll two or three destinations at once and compare them side by side on budget/w
 ### 8. More departure cities — _Acquisition_
 
 Only London can be chosen today. It's the only city in `SUPPORTED_DEPARTURE_CITY_IDS`
-(`lib/departureCities.ts`) with route data (`lib/data/london-destinations.json`, from
-`yarn data:london`). The other UK cities are already in `departureCities` but can't be chosen.
+(`lib/departureCities.ts`) with route data (`lib/data/routes/london.json`, from
+`yarn data:routes london`). The other UK cities are already in `departureCities` but can't be
+chosen.
 Only UK departure cities are planned, because randomholiday.co.uk is for people leaving from the
 UK. Each
 city goes live as its own PR: route data only, no prices. New destinations it adds join the
 catalogue as stubs and stay unpickable until their details land in
 `lib/data/destination-details.json`.
 
-- [ ] **Infra (Mise en Place):** generalise the London script into
+- [x] **Infra (Mise en Place):** generalise the London script into
       `yarn data:routes <city-id>`. It takes a config of each city's airports (IATA code plus
       Wikipedia page) and writes `lib/data/routes/<city-id>.json`. The facts (country, coordinates,
       currency, continent) move to one shared destinations file, so a destination served from
       several cities is stored once. London's output must match today's.
+      (`scripts/fetch-route-destinations.mjs`, `lib/data/destination-facts.json`)
 - [ ] Make the catalogue and engine origin-aware. A destination's `london` field becomes
       `routes: Record<originId, Route>`, and `getRecommendations` only picks destinations reachable
       from the chosen origin. "Reachable" means direct or one stop through a hub (feature 10),
@@ -299,7 +301,7 @@ out Bali (~19h) and "Anywhere" includes it, with no separate "allow connections"
       line. No behaviour change yet, because every route is still direct. Tests cover a one-stop
       and a direct route.
 - [ ] **Script:** add `scripts/connecting-wishlist.json` (place name + its airport's Wikipedia
-      page, or a `gateway`) and the hub list above. Extend `yarn data:london` to write connecting
+      page, or a `gateway`) and the hub list above. Extend `yarn data:routes` to write connecting
       and gateway stubs alongside direct ones, and to report wishlist places it couldn't connect
       with one stop. Seed the wishlist with the 16 destinations dropped when `lib/destinations.ts`
       was retired (Bali, Kyoto, Chiang Mai, Kathmandu, Cusco, Havana, Patagonia, Cartagena,
