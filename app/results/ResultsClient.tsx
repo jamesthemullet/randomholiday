@@ -14,6 +14,7 @@ import { encodeShareableResult } from '@/lib/shareableResult'
 import { parseMaxFlightHours, parseTravelStyles } from '@/lib/tripQuery'
 import { ResultsReveal } from '@/components/ResultsReveal'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
+import { AdSlot } from '@/components/AdSlot'
 import styles from './results.module.css'
 
 const subscribeToNothing = () => () => {}
@@ -174,6 +175,7 @@ export function ResultsClient() {
           nights={filterParams.nights}
           perPersonCost={perPersonCost}
         />
+        <AdSlot format="banner" className={styles.adSlot} />
         <DestinationDetailModal
           isOpen={isDetailModalOpen}
           onClose={() => setIsDetailModalOpen(false)}
