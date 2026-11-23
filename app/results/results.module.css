@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+.adSlot {
+  margin-top: var(--space-8);
+}
+
 .empty {
   font-size: var(--text-lg);
   color: var(--color-cream);

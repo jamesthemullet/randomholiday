@@ -276,4 +276,19 @@ describe('ResultsClient', () => {
     expect(excluded.length).toBeLessThanOrEqual(5)
     expect(new Set(excluded).size).toBe(excluded.length)
   })
+
+  it('shows an ad slot for the free tier', () => {
+    setParams({
+      originId: city.id,
+      budget: '1500',
+      hours: '6.75',
+      nights: '7',
+      groupSize: '2',
+      month: '6',
+    })
+
+    render(<ResultsClient />)
+
+    expect(screen.getByRole('complementary', { name: 'Advertisement' })).toBeInTheDocument()
+  })
 })
