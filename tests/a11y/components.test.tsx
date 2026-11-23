@@ -15,6 +15,8 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { PricingPlans } from '@/components/PricingPlans'
 import { ResultsReveal } from '@/components/ResultsReveal'
+import { ComparisonTable } from '@/components/ComparisonTable'
+import type { ComparisonEntry } from '@/components/ComparisonTable'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { RouteAnnouncer } from '@/components/RouteAnnouncer'
 import { BudgetSlider } from '@/components/BudgetSlider'
@@ -161,6 +163,20 @@ describe('accessibility (axe)', () => {
 
   it('ResultsReveal has no violations', async () => {
     const { container } = render(<ResultsReveal recommendation={makeScore()} onShuffle={vi.fn()} />)
+    expect(await axe(container)).toHaveNoViolations()
+  })
+
+  it('ComparisonTable has no violations', async () => {
+    const entries: ComparisonEntry[] = [
+      makeScore({ destination: makeDestination({ id: 'bali-indonesia', name: 'Bali' }) }),
+      makeScore({ destination: makeDestination({ id: 'kyoto-japan', name: 'Kyoto', country: 'Japan' }) }),
+    ].map((recommendation) => ({
+      recommendation,
+      distanceKm: 6500,
+      perPersonCost: 1200,
+      weather: { avgHighC: 28, description: 'warm' },
+    }))
+    const { container } = render(<ComparisonTable entries={entries} originName="London" />)
     expect(await axe(container)).toHaveNoViolations()
   })
 

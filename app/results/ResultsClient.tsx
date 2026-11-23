@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useCallback, useMemo, useState, useSyncExternalStore } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { pickableDestinations } from '@/lib/catalogue'
 import { supportedDepartureCities } from '@/lib/departureCities'
@@ -10,12 +10,18 @@ import { scoreDestination } from '@/lib/scoringEngine'
 import type { DestinationScore } from '@/lib/scoringEngine'
 import { calculateDistance } from '@/lib/distanceCalculator'
 import { calculateBudget } from '@/lib/budgetCalculator'
+import { getSeasonalWeatherEstimate } from '@/lib/seasonalWeather'
 import { encodeShareableResult } from '@/lib/shareableResult'
 import { parseMaxFlightHours, parseTravelStyles } from '@/lib/tripQuery'
 import { ResultsReveal } from '@/components/ResultsReveal'
+import { ComparisonTable } from '@/components/ComparisonTable'
+import type { ComparisonEntry } from '@/components/ComparisonTable'
 import { DestinationDetailModal } from '@/components/DestinationDetailModal'
 import { AdSlot } from '@/components/AdSlot'
 import styles from './results.module.css'
+
+/** How many candidates "Compare" rolls at once. */
+const COMPARE_COUNT = 3
 
 const subscribeToNothing = () => () => {}
 const getClientSnapshot = () => true
@@ -25,6 +31,7 @@ const getServerSnapshot = () => false
 const RECENT_EXCLUSION_LIMIT = 5
 
 export function ResultsClient() {
+  const router = useRouter()
   const searchParams = useSearchParams()
 
   const filterParams = useMemo(() => {
@@ -56,6 +63,45 @@ export function ResultsClient() {
   // The random pick must only happen in the browser: the server and client would each roll a
   // different destination and fail hydration. This is false while hydrating, then true.
   const isClient = useSyncExternalStore(subscribeToNothing, getClientSnapshot, getServerSnapshot)
+
+  // A pinned share link always shows that one destination, so compare mode doesn't apply to it.
+  const compareMode = !pinnedDestinationId && searchParams.get('compare') === '1'
+
+  const comparisonEntries = useMemo((): ComparisonEntry[] | null => {
+    if (!filterParams || !compareMode || !isClient) return null
+    const month = filterParams.travelMonth ?? new Date().getMonth() + 1
+    return getRecommendations(pickableDestinations, {
+      ...filterParams,
+      count: COMPARE_COUNT,
+    }).recommendations.map((recommendation) => {
+      const entryDistanceKm = calculateDistance(
+        filterParams.origin,
+        recommendation.destination.coordinates
+      )
+      const entryPerPersonCost = calculateBudget({
+        destination: recommendation.destination,
+        distanceKm: entryDistanceKm,
+        nights: filterParams.nights,
+        groupSize: filterParams.groupSize,
+      }).perPersonCost
+      const weather = getSeasonalWeatherEstimate(
+        recommendation.destination.climate,
+        month,
+        recommendation.destination.coordinates.lat
+      )
+      return { recommendation, distanceKm: entryDistanceKm, perPersonCost: entryPerPersonCost, weather }
+    })
+  }, [filterParams, compareMode, isClient])
+
+  const handleToggleCompare = useCallback(() => {
+    const params = new URLSearchParams(searchParams.toString())
+    if (compareMode) {
+      params.delete('compare')
+    } else {
+      params.set('compare', '1')
+    }
+    router.push(`/results?${params.toString()}`)
+  }, [searchParams, compareMode, router])
 
   // A pinned destination involves no randomness, so it can render on the server too.
   const pinnedRecommendation = useMemo(() => {
@@ -164,17 +210,35 @@ export function ResultsClient() {
   return (
     <main id="main-content" className={styles.page}>
       <div className={styles.wrapper}>
-        <ResultsReveal
-          recommendation={recommendation}
-          isPicking={isPicking}
-          onShuffle={handleShuffle}
-          onSelect={handleSelect}
-          changeSearchHref={`/?${searchParams.toString()}`}
-          originName={filterParams.originName}
-          distanceKm={recommendation ? distanceKm : undefined}
-          nights={filterParams.nights}
-          perPersonCost={perPersonCost}
-        />
+        {!pinnedDestinationId && (
+          <button type="button" className={styles.compareToggle} onClick={handleToggleCompare}>
+            {compareMode ? '← Back to single pick' : `Compare ${COMPARE_COUNT} destinations`}
+          </button>
+        )}
+        {compareMode ? (
+          comparisonEntries === null ? (
+            <p className={styles.picking}>Picking your destinations…</p>
+          ) : comparisonEntries.length > 0 ? (
+            <ComparisonTable entries={comparisonEntries} originName={filterParams.originName} />
+          ) : (
+            <p className={styles.empty}>
+              No destinations matched your search to compare. Try adjusting your budget or flight
+              time.
+            </p>
+          )
+        ) : (
+          <ResultsReveal
+            recommendation={recommendation}
+            isPicking={isPicking}
+            onShuffle={handleShuffle}
+            onSelect={handleSelect}
+            changeSearchHref={`/?${searchParams.toString()}`}
+            originName={filterParams.originName}
+            distanceKm={recommendation ? distanceKm : undefined}
+            nights={filterParams.nights}
+            perPersonCost={perPersonCost}
+          />
+        )}
         <AdSlot format="banner" className={styles.adSlot} />
         <DestinationDetailModal
           isOpen={isDetailModalOpen}

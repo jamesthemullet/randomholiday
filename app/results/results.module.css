@@ -13,7 +13,25 @@
   margin-top: var(--space-8);
 }
 
-.empty {
+.compareToggle {
+  display: inline-block;
+  margin-bottom: var(--space-6);
+  padding: 0.75rem var(--space-5);
+  background-color: var(--color-white);
+  border: 3px solid var(--color-ink);
+  border-radius: var(--radius-full);
+  color: var(--color-ink);
+  font-weight: var(--font-bold);
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+
+.compareToggle:hover {
+  background-color: var(--color-yellow-light);
+}
+
+.empty,
+.picking {
   font-size: var(--text-lg);
   color: var(--color-cream);
   margin-bottom: var(--space-4);

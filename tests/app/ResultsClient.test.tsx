@@ -12,7 +12,7 @@ const city = departureCities[0]
 
 vi.mock('next/navigation', () => ({
   useSearchParams: () => mockSearchParams,
-  useRouter: () => ({ push: vi.fn() }),
+  useRouter: () => ({ push: mockPush }),
 }))
 
 vi.mock('@/lib/recommendationEngine', async (importOriginal) => {
@@ -21,6 +21,7 @@ vi.mock('@/lib/recommendationEngine', async (importOriginal) => {
 })
 
 let mockSearchParams = new URLSearchParams()
+const mockPush = vi.fn()
 
 function setParams(params: Record<string, string>) {
   mockSearchParams = new URLSearchParams(params)
@@ -290,5 +291,82 @@ describe('ResultsClient', () => {
     render(<ResultsClient />)
 
     expect(screen.getByRole('complementary', { name: 'Advertisement' })).toBeInTheDocument()
+  })
+
+  describe('compare mode', () => {
+    it('pushes a compare=1 query param when "Compare" is clicked', async () => {
+      const user = userEvent.setup()
+      mockPush.mockClear()
+      setParams({
+        originId: city.id,
+        budget: '100000',
+        hours: '25.5',
+        nights: '5',
+        groupSize: '2',
+        month: '6',
+      })
+
+      render(<ResultsClient />)
+
+      await user.click(screen.getByRole('button', { name: 'Compare 3 destinations' }))
+
+      expect(mockPush).toHaveBeenCalledWith(expect.stringContaining('compare=1'))
+    })
+
+    it('shows a comparison table instead of a single pick when compare=1 is set', () => {
+      setParams({
+        originId: city.id,
+        budget: '100000',
+        hours: '25.5',
+        nights: '5',
+        groupSize: '2',
+        month: '6',
+        compare: '1',
+      })
+
+      render(<ResultsClient />)
+
+      expect(screen.getByRole('table')).toBeInTheDocument()
+      expect(screen.getByRole('button', { name: '← Back to single pick' })).toBeInTheDocument()
+      expect(screen.queryByRole('button', { name: 'Spin again' })).not.toBeInTheDocument()
+    })
+
+    it('pushes the compare param away when toggled back off', async () => {
+      const user = userEvent.setup()
+      mockPush.mockClear()
+      setParams({
+        originId: city.id,
+        budget: '100000',
+        hours: '25.5',
+        nights: '5',
+        groupSize: '2',
+        month: '6',
+        compare: '1',
+      })
+
+      render(<ResultsClient />)
+
+      await user.click(screen.getByRole('button', { name: '← Back to single pick' }))
+
+      const pushedUrl = mockPush.mock.calls[0][0] as string
+      expect(pushedUrl).not.toContain('compare=1')
+    })
+
+    it('hides the Compare toggle for a pinned share link', () => {
+      const pinned = destinations[destinations.length - 1]
+      setParams({
+        destination: pinned.id,
+        originId: city.id,
+        budget: '100000',
+        hours: '25.5',
+        nights: '5',
+        groupSize: '2',
+        month: '6',
+      })
+
+      render(<ResultsClient />)
+
+      expect(screen.queryByRole('button', { name: /compare/i })).not.toBeInTheDocument()
+    })
   })
 })
