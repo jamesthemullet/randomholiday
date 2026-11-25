@@ -5,13 +5,14 @@ import detailsData from '@/lib/data/destination-details.json'
 import {
   buildCatalogue,
   catalogue,
+  getPickableDestinations,
   isPickable,
   joinFactsAndRoutes,
   pickableDestinations,
   type CatalogueEntry,
   type DestinationDetails,
   type DestinationFacts,
-  type LondonRoute,
+  type Route,
 } from '@/lib/catalogue'
 import { TRAVEL_STYLES } from '@/lib/types'
 import type { Destination } from '@/lib/types'
@@ -34,8 +35,9 @@ const CLIMATES = [
   'tropical',
 ]
 const LONDON_AIRPORTS = ['LHR', 'LGW', 'STN', 'LTN', 'LCY', 'SEN']
+const LONDON_ORIGIN = 'london-uk'
 
-const route: LondonRoute = {
+const route: Route = {
   direct: true,
   airports: ['LHR'],
   airlines: ['BA'],
@@ -44,7 +46,7 @@ const route: LondonRoute = {
 
 function stub(
   overrides: Partial<DestinationFacts> = {}
-): DestinationFacts & { london: LondonRoute } {
+): DestinationFacts & { routes: Record<string, Route> } {
   return {
     id: 'faro-portugal',
     name: 'Faro',
@@ -53,7 +55,7 @@ function stub(
     coordinates: { lat: 37.0144, lng: -7.9659 },
     continent: 'Europe',
     currency: 'EUR',
-    london: route,
+    routes: { [LONDON_ORIGIN]: route },
     ...overrides,
   }
 }
@@ -66,7 +68,7 @@ const lisbon: Destination = { ...stub({ id: 'lisbon-portugal', name: 'Lisbon' })
 const londonRoutesById = new Map(londonRoutes.map((route) => [route.id, route]))
 const londonData = destinationFacts.flatMap((facts) => {
   const route = londonRoutesById.get(facts.id)
-  return route ? [{ ...facts, london: route }] : []
+  return route ? [{ ...facts, routes: { [LONDON_ORIGIN]: route } }] : []
 })
 
 describe('generated London destination data', () => {
@@ -82,15 +84,16 @@ describe('generated London destination data', () => {
     expect(CONTINENTS).toContain(d.continent)
     expect(Math.abs(d.coordinates.lat)).toBeLessThanOrEqual(90)
     expect(Math.abs(d.coordinates.lng)).toBeLessThanOrEqual(180)
-    expect(d.london.direct).toBe(true)
-    expect(d.london.airports.length).toBeGreaterThan(0)
-    d.london.airports.forEach((airport) => expect(LONDON_AIRPORTS).toContain(airport))
+    const londonRoute = d.routes[LONDON_ORIGIN]
+    expect(londonRoute.direct).toBe(true)
+    expect(londonRoute.airports.length).toBeGreaterThan(0)
+    londonRoute.airports.forEach((airport) => expect(LONDON_AIRPORTS).toContain(airport))
   })
 })
 
 describe('isPickable', () => {
   it('accepts a destination with every detail', () => {
-    expect(isPickable({ ...lisbon, london: route })).toBe(true)
+    expect(isPickable({ ...lisbon, routes: { [LONDON_ORIGIN]: route } })).toBe(true)
   })
 
   it('rejects a generated destination with no details', () => {
@@ -105,26 +108,40 @@ describe('isPickable', () => {
     'climate',
     'activities',
   ] as const)('rejects an entry missing %s', (field) => {
-    const entry: CatalogueEntry = { ...lisbon, london: route }
+    const entry: CatalogueEntry = { ...lisbon, routes: { [LONDON_ORIGIN]: route } }
     delete entry[field]
     expect(isPickable(entry)).toBe(false)
   })
 
   it('rejects an entry with no travel styles', () => {
-    expect(isPickable({ ...lisbon, london: route, travelStyles: [] })).toBe(false)
+    expect(isPickable({ ...lisbon, routes: { [LONDON_ORIGIN]: route }, travelStyles: [] })).toBe(
+      false
+    )
   })
 })
 
 describe('joinFactsAndRoutes', () => {
-  it('joins a fact with its matching route', () => {
+  it('joins a fact with its matching route, keyed by origin city', () => {
     const facts: DestinationFacts[] = [stub()]
-    const joined = joinFactsAndRoutes(facts, [{ id: 'faro-portugal', ...route }])
-    expect(joined).toEqual([{ ...stub(), london: route }])
+    const joined = joinFactsAndRoutes(facts, { [LONDON_ORIGIN]: [{ id: 'faro-portugal', ...route }] })
+    expect(joined).toEqual([{ ...stub(), routes: { [LONDON_ORIGIN]: route } }])
   })
 
-  it('drops a fact with no route for this city', () => {
+  it('merges routes from several origin cities for the same destination', () => {
     const facts: DestinationFacts[] = [stub()]
-    expect(joinFactsAndRoutes(facts, [])).toEqual([])
+    const otherRoute: Route = { ...route, airports: ['MAN'] }
+    const joined = joinFactsAndRoutes(facts, {
+      [LONDON_ORIGIN]: [{ id: 'faro-portugal', ...route }],
+      'manchester-uk': [{ id: 'faro-portugal', ...otherRoute }],
+    })
+    expect(joined).toEqual([
+      { ...stub(), routes: { [LONDON_ORIGIN]: route, 'manchester-uk': otherRoute } },
+    ])
+  })
+
+  it('drops a fact with no route from any origin', () => {
+    const facts: DestinationFacts[] = [stub()]
+    expect(joinFactsAndRoutes(facts, { [LONDON_ORIGIN]: [] })).toEqual([])
   })
 })
 
@@ -159,7 +176,9 @@ describe('catalogue', () => {
 
   it('only recommends complete destinations', () => {
     const pickable: Destination[] = pickableDestinations
-    expect(pickable.every((d) => isPickable({ ...d, london: route }))).toBe(true)
+    expect(pickable.every((d) => isPickable({ ...d, routes: { [LONDON_ORIGIN]: route } }))).toBe(
+      true
+    )
   })
 
   it('recommends exactly the detailed generated destinations', () => {
@@ -168,6 +187,18 @@ describe('catalogue', () => {
       return entry !== undefined && isPickable(entry)
     })
     expect(pickableDestinations.map((d) => d.id).sort()).toEqual(detailed.sort())
+  })
+})
+
+describe('getPickableDestinations', () => {
+  it('returns exactly pickableDestinations for the only origin with route data', () => {
+    expect(getPickableDestinations(LONDON_ORIGIN).map((d) => d.id).sort()).toEqual(
+      pickableDestinations.map((d) => d.id).sort()
+    )
+  })
+
+  it('returns nothing for an origin with no route data', () => {
+    expect(getPickableDestinations('manchester-uk')).toEqual([])
   })
 })
 

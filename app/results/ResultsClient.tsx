@@ -3,7 +3,7 @@
 import React, { useCallback, useMemo, useState, useSyncExternalStore } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { pickableDestinations } from '@/lib/catalogue'
+import { getPickableDestinations } from '@/lib/catalogue'
 import { supportedDepartureCities } from '@/lib/departureCities'
 import { getRecommendations } from '@/lib/recommendationEngine'
 import { scoreDestination } from '@/lib/scoringEngine'
@@ -40,6 +40,7 @@ export function ResultsClient() {
     if (!city || !budget || !maxFlightHours || !nights || !groupSize) return null
 
     return {
+      originId: city.id,
       originName: city.name,
       origin: city.coordinates,
       maxBudgetPerPerson: budget,
@@ -51,6 +52,12 @@ export function ResultsClient() {
     }
   }, [searchParams])
 
+  // Only destinations reachable from the chosen origin can ever be recommended from it.
+  const destinations = useMemo(
+    () => (filterParams ? getPickableDestinations(filterParams.originId) : []),
+    [filterParams]
+  )
+
   const pinnedDestinationId = searchParams.get('destination')
 
   // The random pick must only happen in the browser: the server and client would each roll a
@@ -60,14 +67,14 @@ export function ResultsClient() {
   // A pinned destination involves no randomness, so it can render on the server too.
   const pinnedRecommendation = useMemo(() => {
     if (!filterParams || !pinnedDestinationId) return null
-    const pinnedDestination = pickableDestinations.find((d) => d.id === pinnedDestinationId)
+    const pinnedDestination = destinations.find((d) => d.id === pinnedDestinationId)
     return pinnedDestination ? scoreDestination(pinnedDestination, filterParams) : null
-  }, [filterParams, pinnedDestinationId])
+  }, [filterParams, pinnedDestinationId, destinations])
 
   const initialPick = useMemo(() => {
     if (!filterParams || pinnedRecommendation || !isClient) return null
-    return getRecommendations(pickableDestinations, filterParams).recommendations[0] ?? null
-  }, [filterParams, pinnedRecommendation, isClient])
+    return getRecommendations(destinations, filterParams).recommendations[0] ?? null
+  }, [filterParams, pinnedRecommendation, isClient, destinations])
 
   // undefined until the user shuffles; null means a shuffle found nothing.
   const [shuffledPick, setShuffledPick] = useState<DestinationScore | null | undefined>(undefined)
@@ -94,12 +101,12 @@ export function ResultsClient() {
   const handleShuffle = useCallback(() => {
     if (!filterParams) return
     setShuffledPick(
-      getRecommendations(pickableDestinations, {
+      getRecommendations(destinations, {
         ...filterParams,
         excludeDestinationIds: recentlyShown.ids,
       }).recommendations[0] ?? null
     )
-  }, [filterParams, recentlyShown.ids])
+  }, [filterParams, recentlyShown.ids, destinations])
 
   const handleSelect = useCallback(() => {
     setIsDetailModalOpen(true)

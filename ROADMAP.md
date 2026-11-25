@@ -197,11 +197,16 @@ catalogue as stubs and stay unpickable until their details land in
       currency, continent) move to one shared destinations file, so a destination served from
       several cities is stored once. London's output must match today's.
       (`scripts/fetch-route-destinations.mjs`, `lib/data/destination-facts.json`)
-- [ ] Make the catalogue and engine origin-aware. A destination's `london` field becomes
+- [x] Make the catalogue and engine origin-aware. A destination's `london` field becomes
       `routes: Record<originId, Route>`, and `getRecommendations` only picks destinations reachable
       from the chosen origin. "Reachable" means direct or one stop through a hub (feature 10),
       which matters most for small airports: Inverness flies to very few places directly. Also stop
-      a city recommending itself (Edinburgh → Edinburgh).
+      a city recommending itself (Edinburgh → Edinburgh). (`routes` on `CatalogueEntry` in
+      `lib/catalogue.ts`, keyed by departure city id; `getPickableDestinations(originId)` filters to
+      destinations with a route from that origin, and `app/results/ResultsClient.tsx` now calls it
+      instead of the global `pickableDestinations`. One-stop reachability is feature 10; a city
+      recommending itself was already excluded by `filterEngine.ts`'s `MIN_DISTANCE_KM`, which
+      applies per-origin regardless of city. Tested in `tests/lib/catalogue.test.ts`.)
 
 **UK first.** For each city: add its airports to the config, run `yarn data:routes <city-id>`,
 check the new stubs and the merges with existing destinations (watch for airport-named cities,
