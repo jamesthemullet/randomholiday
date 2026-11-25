@@ -1,0 +1,20 @@
+{
+  "DOH": { "name": "Doha", "coordinates": { "lat": 25.2731, "lng": 51.608 } },
+  "DXB": { "name": "Dubai", "coordinates": { "lat": 25.2532, "lng": 55.3657 } },
+  "IST": { "name": "Istanbul", "coordinates": { "lat": 41.2753, "lng": 28.7519 } },
+  "BKK": { "name": "Bangkok", "coordinates": { "lat": 13.69, "lng": 100.7501 } },
+  "SIN": { "name": "Singapore", "coordinates": { "lat": 1.3644, "lng": 103.9915 } },
+  "DEL": { "name": "Delhi", "coordinates": { "lat": 28.5562, "lng": 77.1 } },
+  "ADD": { "name": "Addis Ababa", "coordinates": { "lat": 8.9779, "lng": 38.7993 } },
+  "NBO": { "name": "Nairobi", "coordinates": { "lat": -1.3192, "lng": 36.9278 } },
+  "JNB": { "name": "Johannesburg", "coordinates": { "lat": -26.1392, "lng": 28.246 } },
+  "MAD": { "name": "Madrid", "coordinates": { "lat": 40.4983, "lng": -3.5676 } },
+  "LIS": { "name": "Lisbon", "coordinates": { "lat": 38.7813, "lng": -9.1359 } },
+  "BOG": { "name": "Bogotá", "coordinates": { "lat": 4.7016, "lng": -74.1469 } },
+  "LIM": { "name": "Lima", "coordinates": { "lat": -12.0219, "lng": -77.1143 } },
+  "MEX": { "name": "Mexico City", "coordinates": { "lat": 19.4363, "lng": -99.0721 } },
+  "MIA": { "name": "Miami", "coordinates": { "lat": 25.7959, "lng": -80.287 } },
+  "JFK": { "name": "New York", "coordinates": { "lat": 40.6413, "lng": -73.7781 } },
+  "LAX": { "name": "Los Angeles", "coordinates": { "lat": 33.9416, "lng": -118.4085 } },
+  "HND": { "name": "Tokyo", "coordinates": { "lat": 35.5494, "lng": 139.7798 } }
+}

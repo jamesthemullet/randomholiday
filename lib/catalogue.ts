@@ -7,12 +7,18 @@ import type { Destination } from './types'
 export type Airport = string
 
 export interface Route {
-  /** False when the trip needs a connection; the connecting airport isn't recorded yet. */
+  /** False when the trip needs a connection. */
   direct: boolean
   airports: Airport[]
   airlines: string[]
   /** True when every route to this destination from this origin is seasonal. */
   seasonalOnly: boolean
+  /**
+   * Hub IATA codes (`lib/data/hubs.json`) a connecting route passes through, in order. Absent
+   * for a direct route. Added by ROADMAP.md feature 10; no generated route sets it yet, so every
+   * route today is still `direct: true` with no `via`.
+   */
+  via?: Airport[]
 }
 
 type FactKey = 'id' | 'name' | 'country' | 'countryCode' | 'coordinates' | 'continent' | 'currency'
@@ -64,9 +70,9 @@ export function joinFactsAndRoutes(
 ): GeneratedDestination[] {
   const routesById = new Map<string, RoutesByOrigin>()
   for (const [originId, cityRoutes] of Object.entries(routesByOriginCity)) {
-    for (const { id, direct, airports, airlines, seasonalOnly } of cityRoutes) {
+    for (const { id, direct, airports, airlines, seasonalOnly, via } of cityRoutes) {
       const existing = routesById.get(id) ?? {}
-      existing[originId] = { direct, airports, airlines, seasonalOnly }
+      existing[originId] = { direct, airports, airlines, seasonalOnly, ...(via ? { via } : {}) }
       routesById.set(id, existing)
     }
   }

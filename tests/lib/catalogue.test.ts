@@ -123,7 +123,9 @@ describe('isPickable', () => {
 describe('joinFactsAndRoutes', () => {
   it('joins a fact with its matching route, keyed by origin city', () => {
     const facts: DestinationFacts[] = [stub()]
-    const joined = joinFactsAndRoutes(facts, { [LONDON_ORIGIN]: [{ id: 'faro-portugal', ...route }] })
+    const joined = joinFactsAndRoutes(facts, {
+      [LONDON_ORIGIN]: [{ id: 'faro-portugal', ...route }],
+    })
     expect(joined).toEqual([{ ...stub(), routes: { [LONDON_ORIGIN]: route } }])
   })
 
@@ -142,6 +144,21 @@ describe('joinFactsAndRoutes', () => {
   it('drops a fact with no route from any origin', () => {
     const facts: DestinationFacts[] = [stub()]
     expect(joinFactsAndRoutes(facts, { [LONDON_ORIGIN]: [] })).toEqual([])
+  })
+
+  it("carries a connecting route's via hubs through, and omits via for a direct route", () => {
+    const facts: DestinationFacts[] = [stub()]
+    const connectingRoute: Route = { ...route, direct: false, via: ['DOH'] }
+    const joined = joinFactsAndRoutes(facts, {
+      [LONDON_ORIGIN]: [{ id: 'faro-portugal', ...connectingRoute }],
+    })
+    expect(joined).toEqual([{ ...stub(), routes: { [LONDON_ORIGIN]: connectingRoute } }])
+    expect(joined[0].routes[LONDON_ORIGIN]?.via).toEqual(['DOH'])
+
+    const directJoined = joinFactsAndRoutes(facts, {
+      [LONDON_ORIGIN]: [{ id: 'faro-portugal', ...route }],
+    })
+    expect(directJoined[0].routes[LONDON_ORIGIN]?.via).toBeUndefined()
   })
 })
 
@@ -192,9 +209,11 @@ describe('catalogue', () => {
 
 describe('getPickableDestinations', () => {
   it('returns exactly pickableDestinations for the only origin with route data', () => {
-    expect(getPickableDestinations(LONDON_ORIGIN).map((d) => d.id).sort()).toEqual(
-      pickableDestinations.map((d) => d.id).sort()
-    )
+    expect(
+      getPickableDestinations(LONDON_ORIGIN)
+        .map((d) => d.id)
+        .sort()
+    ).toEqual(pickableDestinations.map((d) => d.id).sort())
   })
 
   it('returns nothing for an origin with no route data', () => {

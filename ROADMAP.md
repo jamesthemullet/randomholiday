@@ -289,11 +289,16 @@ The engine side builds on the flight-time filter (`estimateFlightHours` in `lib/
 A connecting trip's time is the sum of its legs plus about 2.5h per stop, so "Up to 12h" leaves
 out Bali (~19h) and "Anywhere" includes it, with no separate "allow connections" setting.
 
-- [ ] **Route shape:** add `via?: string[]` (hub IATA codes) to `LondonRoute` and a small
+- [x] **Route shape:** add `via?: string[]` (hub IATA codes) to `LondonRoute` and a small
       `lib/data/hubs.json` of hub coordinates. `estimateFlightHours` sums the legs plus a layover
       per stop. `calculateBudget` prices the flight on the total leg distance, not the straight
       line. No behaviour change yet, because every route is still direct. Tests cover a one-stop
-      and a direct route.
+      and a direct route. (`via` added to `Route` in `lib/catalogue.ts`; `lib/data/hubs.json` +
+      `lib/hubs.ts` loader, tested in `tests/lib/hubs.test.ts`; `totalLegDistanceKm` and the
+      optional `viaHubs` param on `estimateFlightHours` in `lib/flightTime.ts`, tested in
+      `tests/lib/flightTime.test.ts`; `calculateBudget`'s `distanceKm` doc comment in
+      `lib/budgetCalculator.ts` updated to say it's the total leg distance. No existing call site
+      passes `via`/`viaHubs` yet, so behaviour is unchanged.)
 - [ ] **Script:** add `scripts/connecting-wishlist.json` (place name + its airport's Wikipedia
       page, or a `gateway`) and the hub list above. Extend `yarn data:routes` to write connecting
       and gateway stubs alongside direct ones, and to report wishlist places it couldn't connect
