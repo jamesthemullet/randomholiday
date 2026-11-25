@@ -179,17 +179,6 @@ Let a user save a result to come back to later — the first feature that needs 
 - [ ] Save/unsave action on `/results`, storing the result's encoded state from feature 1.
 - [ ] A "saved trips" list page.
 
-### 7. Compare mode — _Engagement, Fun_
-
-Roll two or three destinations at once and compare them side by side on budget/weather/distance.
-
-- [x] Extend `recommendationEngine.ts` to return N candidates instead of one — pure function change +
-      tests. (Already in place: `count` on `RecommendationParams` in `lib/recommendationEngine.ts`
-      returns up to `count` weighted-sampled `DestinationScore`s, tested in
-      `tests/lib/recommendationEngine.test.ts`.)
-- [ ] Comparison table UI on `/results`, reusing `budgetCalculator`/`seasonalWeather`/
-      `distanceCalculator` outputs already computed per candidate.
-
 ### 8. More departure cities — _Acquisition_
 
 Only London can be chosen today. It's the only city in `SUPPORTED_DEPARTURE_CITY_IDS`
