@@ -5,6 +5,8 @@ import { calculateDistance } from './distanceCalculator'
 export const FLIGHT_OVERHEAD_HOURS = 0.5
 /** Typical airliner cruising speed over the ground, in km/h. */
 export const CRUISE_SPEED_KMH = 800
+/** Time added per stop on a connecting route: the layover, not just taxi/climb/descent. */
+export const LAYOVER_HOURS = 2.5
 
 /** The "Anywhere" limit: longer than any flight on Earth (the antipodes are ~25.5h away). */
 export const ANYWHERE_FLIGHT_HOURS = 30
@@ -18,12 +20,34 @@ export function flightHoursForDistance(distanceKm: number): number {
 }
 
 /**
- * Estimated flight time from origin to destination. Every route is direct for now; when
- * connecting routes exist this becomes the sum of each leg plus a layover per stop, and callers
- * don't change.
+ * Total distance of a trip's legs: origin → each hub in order → destination. Equal to the
+ * great-circle distance for a direct trip (no hubs), and always at least as long as it for a
+ * connecting one, since a detour through a hub is never shorter than flying straight there.
  */
-export function estimateFlightHours(origin: Coordinates, destination: Coordinates): number {
-  return flightHoursForDistance(calculateDistance(origin, destination))
+export function totalLegDistanceKm(
+  origin: Coordinates,
+  destination: Coordinates,
+  viaHubs: Coordinates[] = []
+): number {
+  const legs = [origin, ...viaHubs, destination]
+  let total = 0
+  for (let i = 0; i + 1 < legs.length; i++) total += calculateDistance(legs[i], legs[i + 1])
+  return total
+}
+
+/**
+ * Estimated flight time from origin to destination, optionally via one or more hubs (ROADMAP.md
+ * feature 10). A direct trip (no hubs, the default) behaves exactly as before: the great-circle
+ * distance's flight time. A connecting trip sums each leg's flight time and adds `LAYOVER_HOURS`
+ * per stop.
+ */
+export function estimateFlightHours(
+  origin: Coordinates,
+  destination: Coordinates,
+  viaHubs: Coordinates[] = []
+): number {
+  const legsHours = flightHoursForDistance(totalLegDistanceKm(origin, destination, viaHubs))
+  return legsHours + viaHubs.length * LAYOVER_HOURS
 }
 
 /** "~2h 10m", rounded to the nearest 5 minutes. */

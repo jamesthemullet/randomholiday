@@ -4,7 +4,11 @@ export type FlightTier = 'short-haul' | 'medium-haul' | 'long-haul' | 'ultra-lon
 
 export interface BudgetParams {
   destination: Destination
-  /** Great-circle distance from origin to destination in kilometres */
+  /**
+   * Total leg distance from origin to destination in kilometres — the sum of each hop for a
+   * connecting route (`lib/flightTime.ts`'s `totalLegDistanceKm`), equal to the great-circle
+   * distance for a direct one.
+   */
   distanceKm: number
   /** Number of nights at the destination */
   nights: number
